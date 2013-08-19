@@ -1,0 +1,50 @@
+
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>cpio</Name>
+	<Homepage>http://www.gnu.org</Homepage>
+    <Packager>
+        <Name>Ikey Doherty</Name>
+        <Email>ikey@solusos.com</Email>
+	</Packager>
+    <Summary>a program to manage archives of files</Summary>
+	<Description>GNU cpio -- a program to manage archives of files GNU cpio is a tool for creating and extracting archives, or copying files from one place to another.  It handles a number of cpio formats as well as reading and writing tar files.</Description>
+	<License>GPLv3+</License>
+	<Archive sha1sum="6f1934b0079dc1e85ddff89cabdf01adb3a74abb" type="tarbz2">http://ftp.gnu.org/pub/gnu/cpio/cpio-2.11.tar.bz2</Archive>
+  </Source>
+
+  <Package>
+    <Name>cpio</Name>
+	<Files>
+		<Path fileType="executable">/bin</Path>
+		<Path fileType="info">/usr/share/info</Path>
+		<Path fileType="man">/usr/share/man</Path>
+		<Path fileType="localedata">/usr/share/locale</Path>
+		<Path fileType="data">/tmp</Path>
+	</Files>
+	<RuntimeDependencies>
+		<Dependency>tar</Dependency>
+	</RuntimeDependencies>
+  </Package>
+  
+  <History>
+    <Update release="2">
+		<Date>03-28-2013</Date>
+		<Version>2.11</Version>
+		<Comment>Use rawInstall due to missing binary</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+		   
+    <Update release="1">
+		<Date>03-13-2013</Date>
+		<Version>2.11</Version>
+		<Comment>Add cpio to repositories</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>

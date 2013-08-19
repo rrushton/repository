@@ -1,0 +1,29 @@
+From 63fd52af524ecdee291a63d559ccf71ac1cc9739 Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey@solusos.com>
+Date: Sat, 10 Aug 2013 13:26:36 +0100
+Subject: [PATCH] Apply SolusOS defaults and branding
+
+---
+ defaults/defaults |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/defaults/defaults b/defaults/defaults
+index 6db210a..0446610 100644
+--- a/defaults/defaults
++++ b/defaults/defaults
+@@ -49,10 +49,10 @@ snap_resist=false
+ snap_to_border=true
+ snap_to_windows=false
+ snap_width=10
+-theme=Default
++theme=Bluebird
+ tile_on_move=true
+ title_alignment=center
+-title_font=Sans Bold 9
++title_font=Droid Sans Bold 9
+ title_horizontal_offset=0
+ title_shadow_active=false
+ title_shadow_inactive=false
+-- 
+1.7.10.4
+

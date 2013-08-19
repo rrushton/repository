@@ -1,0 +1,234 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>webkitgtk</Name>
+		<Homepage>http://webkitgtk.org</Homepage>
+		<Packager>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Packager>
+		<Summary>Web rendering engine</Summary>
+		<Description>The WebKitGTK+ package is the port of the portable web rendering engine WebKit to the GTK+ platform.</Description>
+		<License>GPLv2+</License>
+		<Archive sha1sum="733ca23157eb8dd072d57becf325799c00bde630" type="tarxz">http://webkitgtk.org/releases/webkitgtk-1.10.2.tar.xz</Archive>
+		
+		<Patches>
+			<Patch level="1">webkitgtk-1.10.2-fix_librt_linking-1.patch</Patch>
+		</Patches>
+
+        <BuildDependencies>
+        <Dependency>zlib-devel</Dependency>
+        <Dependency>libcairo-devel</Dependency>
+        <Dependency>harfbuzz-devel</Dependency>
+        <Dependency>libxcursor-devel</Dependency>
+        <Dependency>libxcb-devel</Dependency>
+        <Dependency>libxau-devel</Dependency>
+        <Dependency>libxdmcp-devel</Dependency>
+        <Dependency>libxi-devel</Dependency>
+        <Dependency>libpcre-devel</Dependency>
+        <Dependency>gdk-pixbuf-devel</Dependency>
+        <Dependency>libxinerama-devel</Dependency>
+        <Dependency>libpng-devel</Dependency>
+        <Dependency>libxext-devel</Dependency>
+        <Dependency>libxrandr-devel</Dependency>
+        <Dependency>pixman-devel</Dependency>
+        <Dependency>libffi-devel</Dependency>
+        <Dependency>pango-devel</Dependency>
+        <Dependency>libxfixes-devel</Dependency>
+        <Dependency>libx11-devel</Dependency>
+        <Dependency>libxrender-devel</Dependency>
+        <Dependency>glib2-devel</Dependency>
+
+        <Dependency>libxtst-devel</Dependency>
+        <Dependency>libxpm-devel</Dependency>
+        <Dependency>libxi-devel</Dependency>
+        <Dependency>libx11-devel</Dependency>
+        <Dependency>libxrender-devel</Dependency>
+        <Dependency>libxres-devel</Dependency>
+        <Dependency>libxcomposite-devel</Dependency>
+        <Dependency>libxscrnsaver-devel</Dependency>
+        <Dependency>libxxf86dga-devel</Dependency>
+        <Dependency>libxau-devel</Dependency>
+        <Dependency>libxfont-devel</Dependency>
+        <Dependency>libxrandr-devel</Dependency>
+        <Dependency>libxdamage-devel</Dependency>
+        <Dependency>libxfixes-devel</Dependency>
+        <Dependency>libxmu-devel</Dependency>
+        <Dependency>libxvmc-devel</Dependency>
+        <Dependency>libxklavier-devel</Dependency>
+        <Dependency>libxft-devel</Dependency>
+        <Dependency>libxxf86vm-devel</Dependency>
+        <Dependency>libxinerama-devel</Dependency>
+        <Dependency>libxkbfile-devel</Dependency>
+        <Dependency>libxslt-devel</Dependency>
+        <Dependency>libxcursor-devel</Dependency>
+        <Dependency>libxml2-devel</Dependency>
+        <Dependency>libxext-devel</Dependency>
+        <Dependency>libxt-devel</Dependency>
+        <Dependency>libxv-devel</Dependency>
+        <Dependency>libxcb-devel</Dependency>
+        <Dependency>libxdmcp-devel</Dependency>
+        <Dependency>libxaw-devel</Dependency>
+        <Dependency>libxaw3d-devel</Dependency>
+        <Dependency>libatk-devel</Dependency>
+        <Dependency>at-spi2-atk-devel</Dependency>
+        <Dependency>libsoup-devel</Dependency>
+        <Dependency>libgeoclue-devel</Dependency>
+        <Dependency>gstreamer-1.0-plugins-base-devel</Dependency>
+        <Dependency>gstreamer-1.0-devel</Dependency>
+        <Dependency>ruby</Dependency>
+        <Dependency>libjpeg-turbo-devel</Dependency>
+        
+        <Dependency>libgtk-3-devel</Dependency>
+        <Dependency>libgtk-2-devel</Dependency>
+        <Dependency>gsettings-desktop-schemas</Dependency>
+        <Dependency>bigreqsproto</Dependency>
+        <Dependency>compositeproto</Dependency>
+        <Dependency>damageproto</Dependency>
+        <Dependency>dmxproto</Dependency>
+        <Dependency>dri2proto</Dependency>
+        <Dependency>fixesproto</Dependency>
+        <Dependency>fontsproto</Dependency>
+        <Dependency>glproto</Dependency>
+        <Dependency>inputproto</Dependency>
+        <Dependency>kbproto</Dependency>
+        <Dependency>randrproto</Dependency>
+        <Dependency>recordproto</Dependency>
+        <Dependency>renderproto</Dependency>
+        <Dependency>resourceproto</Dependency>
+        <Dependency>scrnsaverproto</Dependency>
+        <Dependency>videoproto</Dependency>
+        <Dependency>xcb-proto</Dependency>
+        <Dependency>xcmiscproto</Dependency>
+        <Dependency>xextproto</Dependency>
+        <Dependency>xf86bigfontproto</Dependency>
+        <Dependency>xf86dgaproto</Dependency>
+        <Dependency>xf86driproto</Dependency>
+        <Dependency>xf86vidmodeproto</Dependency>
+        <Dependency>xineramaproto</Dependency>
+        <Dependency>xproto</Dependency>
+        <Dependency>sqlite3-devel</Dependency>
+        <Dependency>libsm-devel</Dependency>
+        <Dependency>libice-devel</Dependency>
+        <Dependency>libicu-devel</Dependency>
+        <Dependency>mesalib-devel</Dependency>
+        <Dependency>libdrm-devel</Dependency>
+        </BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>libwebkit-gtk</Name>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/lib/WebKitGTK</Path>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>.
+            <Path fileType="data">/usr/share/webkitgtk-3.0</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+        <RuntimeDependencies>
+            <!-- NEED TO REDO THESE //-->
+            <Dependency>mesalib</Dependency>
+            <Dependency>libgeoclue</Dependency>
+            <Dependency>gstreamer-1.0</Dependency>
+            <Dependency>gstreamer-1.0-plugins-base</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>libxcursor</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>libicu</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>libxi</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxinerama</Dependency>
+            <Dependency>libatk</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libxdamage</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libxrandr</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libgtk-2</Dependency>
+            <Dependency>libgtk-3</Dependency>
+            <Dependency>libxfixes</Dependency>
+            <Dependency>at-spi2</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libxcomposite</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libsm</Dependency>
+            <Dependency>at-spi2-atk</Dependency>
+        
+        </RuntimeDependencies>
+        <Replaces>
+            <Package>webkitgtk</Package>
+        </Replaces>
+	</Package>
+
+	<Package>
+		<Name>libwebkit-gtk-devel</Name>
+        <Summary>Development files for libwebkitgtk</Summary>
+        <Description>Development files for libwebkitgtk</Description>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libwebkit-gtk</Dependency>
+        </RuntimeDependencies>
+	</Package>
+
+	<Package>
+		<Name>libwebkit-gtk-docs</Name>
+        <Summary>API Documentation for libwebkitgtk</Summary>
+        <Description>API Documentation for libwebkitgtk</Description>
+		<Files>
+			<Path fileType="header">/usr/share/gtk-doc</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libwebkit-gtk</Dependency>
+        </RuntimeDependencies>
+	</Package>
+        
+	<History>
+		<Update release="3">
+			<Date>06-07-2013</Date>
+			<Version>1.10.2</Version>
+			<Comment>Update deps</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+        
+		<Update release="2">
+			<Date>05-25-2013</Date>
+			<Version>1.10.2</Version>
+			<Comment>Rename to libwebkit-gtk, split -devel and -docs</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+                
+		<Update release="1">
+			<Date>04-15-2013</Date>
+			<Version>1.10.2</Version>
+			<Comment>Add webkitgtk to repositories</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

@@ -1,0 +1,150 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>vte</Name>
+        <Homepage>http://www.gnome.org/</Homepage>
+		<Packager>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Packager>
+		<Summary>The VTE package contains a termcap file implementation for terminal emulators.</Summary>
+		<Description>The VTE package contains a termcap file implementation for terminal emulators.</Description>
+		<License>GPLv2+</License>
+		<Archive sha1sum="e393ff91e431b6faf0661259fb7635c6e5a64875" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/vte/0.34/vte-0.34.6.tar.xz</Archive>
+        
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>harfbuzz-devel</Dependency>
+            <Dependency>libxcursor-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libicu-devel</Dependency>
+            <Dependency>libxi-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libice-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libxinerama-devel</Dependency>
+            <Dependency>libatk-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libxdamage-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>libxrandr-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency fromRelease="10">libgtk-3-devel</Dependency>
+            <Dependency>libxfixes-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libxcomposite-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libsm-devel</Dependency>
+            <Dependency>at-spi2-atk-devel</Dependency>
+        </BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>libvte</Name>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/lib/vte</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0</Path>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>libxcursor</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>libicu</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>libxi</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxinerama</Dependency>
+            <Dependency>libatk</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libxdamage</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libxrandr</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency fromRelease="10">libgtk-3</Dependency>
+            <Dependency>libxfixes</Dependency>
+            <Dependency>at-spi2</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libxcomposite</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libsm</Dependency>
+            <Dependency>at-spi2-atk</Dependency>
+        </RuntimeDependencies>
+	</Package>
+
+	<Package>
+		<Name>libvte-devel</Name>
+        <Summary>Development files for libvte</Summary>
+        <Description>Development files for libvte</Description>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libvte</Dependency>
+        </RuntimeDependencies>
+	</Package>
+
+	<Package>
+		<Name>libvte-docs</Name>
+        <Summary>API Documentation for libvte</Summary>
+        <Description>API Documentation for libvte</Description>
+		<Files>
+			<Path fileType="doc">/usr/share/gtk-doc</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libvte-devel</Dependency>
+        </RuntimeDependencies>
+	</Package>
+    
+	<History>
+		<Update release="2">
+			<Date>06-19-2013</Date>
+			<Version>0.34.6</Version>
+			<Comment>Upgrade to 0.34.6 as part of the GNOME3.8 migration</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+        
+		<Update release="1">
+			<Date>06-06-2013</Date>
+			<Version>0.34.2</Version>
+			<Comment>Add vte to repositories</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

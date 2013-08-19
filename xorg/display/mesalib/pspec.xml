@@ -1,0 +1,201 @@
+
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>mesalib</Name>
+    <Homepage>http://mesa3d.org/</Homepage>
+    <Packager>
+        <Name>Ikey Doherty</Name>
+        <Email>ikey@solusos.com</Email>
+    </Packager>
+    <Summary> Mesa is an OpenGL compatible 3D graphics library.</Summary>
+    <Description>Mesa is an OpenGL compatible 3D graphics library.</Description>
+    <License>MIT</License>
+    <Archive sha1sum="45a97de17c9b3e75ce16b1b4f39cf2c14055fc24" type="tarbz2">ftp://ftp.freedesktop.org/pub/mesa/9.1.1/MesaLib-9.1.1.tar.bz2</Archive>
+
+    <Patches>
+		<!-- Add the official demos -->
+		<Patch level="1">MesaLib-9.1.1-add_xdemos-1.patch</Patch>
+    </Patches>
+    
+    <BuildDependencies>
+        <Dependency>wayland-devel</Dependency>
+		<Dependency>libdrm-devel</Dependency>
+		<Dependency>makedepend</Dependency>
+		<Dependency>expat</Dependency>
+		<Dependency>libxml2-devel</Dependency>
+		
+		<Dependency>llvm-devel</Dependency>
+		
+		<Package>libdmx-devel</Package>
+		<Package>libfontenc-devel</Package>
+		<Package>libfs-devel</Package>
+		<Package>libice-devel</Package>
+		<Package>libpciaccess-devel</Package>
+		<Package>libsm-devel</Package>
+		<Package>libx11-devel</Package>
+		<Package>libxau-devel</Package>
+		<Package>libxaw-devel</Package>
+		<Package>libxcb-devel</Package>
+		<Package>libxcomposite-devel</Package>
+		<Package>libxcursor-devel</Package>
+		<Package>libxdamage-devel</Package>
+		<Package>libxdmcp-devel</Package>
+		<Package>libxext-devel</Package>
+		<Package>libxfixes-devel</Package>
+		<Package>libxfont-devel</Package>
+		<Package>libxft-devel</Package>
+		<Package>libxi-devel</Package>
+		<Package>libxinerama-devel</Package>
+		<Package>libxkbfile-devel</Package>
+		<Package>libxmu-devel</Package>
+		<Package>libxpm-devel</Package>
+		<Package>libxrandr-devel</Package>
+		<Package>libxrender-devel</Package>
+		<Package>libxres-devel</Package>
+		<Package>libxscrnsaver-devel</Package>
+		<Package>libxt-devel</Package>
+		<Package>libxtst-devel</Package>
+		<Package>libxv-devel</Package>
+		<Package>libxvmc-devel</Package>
+		<Package>libxxf86dga-devel</Package>
+		<Package>libxxf86vm-devel</Package>		
+        
+        <Dependency>bigreqsproto</Dependency>
+        <Dependency>compositeproto</Dependency>
+        <Dependency>damageproto</Dependency>
+        <Dependency>dmxproto</Dependency>
+        <Dependency>dri2proto</Dependency>
+        <Dependency>fixesproto</Dependency>
+        <Dependency>fontsproto</Dependency>
+        <Dependency>glproto</Dependency>
+        <Dependency>inputproto</Dependency>
+        <Dependency>kbproto</Dependency>
+        <Dependency>randrproto</Dependency>
+        <Dependency>recordproto</Dependency>
+        <Dependency>renderproto</Dependency>
+        <Dependency>resourceproto</Dependency>
+        <Dependency>scrnsaverproto</Dependency>
+        <Dependency>videoproto</Dependency>
+        <Dependency>xcb-proto</Dependency>
+        <Dependency>xcmiscproto</Dependency>
+        <Dependency>xextproto</Dependency>
+        <Dependency>xf86bigfontproto</Dependency>
+        <Dependency>xf86dgaproto</Dependency>
+        <Dependency>xf86driproto</Dependency>
+        <Dependency>xf86vidmodeproto</Dependency>
+        <Dependency>xineramaproto</Dependency>
+        <Dependency>xproto</Dependency>
+        
+    </BuildDependencies>
+    
+    </Source>
+
+  <Package>
+    <Name>mesalib</Name>
+    <Files>
+		<Path fileType="library">/usr/lib/lib*.so*</Path>
+		<Path fileType="library">/usr/lib/dri/*.so*</Path>
+		<Path fileType="library">/usr/lib/egl/*.so*</Path>
+		<Path fileType="library">/usr/lib/gallium-pipe/*.so*</Path>
+		<Path fileType="library">/usr/lib/gbm/*.so*</Path>
+		<Path fileType="config">/etc</Path>
+	</Files>
+	<RuntimeDependencies>
+		<Package>libxml2</Package>
+		<Package>libdrm</Package>
+		<Package>expat</Package>
+		
+		<Package>llvm</Package>
+		
+		<Package>libdmx</Package>
+		<Package>libfontenc</Package>
+		<Package>libfs</Package>
+		<Package>libice</Package>
+		<Package>libpciaccess</Package>
+		<Package>libsm</Package>
+		<Package>libx11</Package>
+		<Package>libxau</Package>
+		<Package>libxaw</Package>
+		<Package>libxcb</Package>
+		<Package>libxcomposite</Package>
+		<Package>libxcursor</Package>
+		<Package>libxdamage</Package>
+		<Package>libxdmcp</Package>
+		<Package>libxext</Package>
+		<Package>libxfixes</Package>
+		<Package>libxfont</Package>
+		<Package>libxft</Package>
+		<Package>libxi</Package>
+		<Package>libxinerama</Package>
+		<Package>libxkbfile</Package>
+		<Package>libxmu</Package>
+		<Package>libxpm</Package>
+		<Package>libxrandr</Package>
+		<Package>libxrender</Package>
+		<Package>libxres</Package>
+		<Package>libxscrnsaver</Package>
+		<Package>libxt</Package>
+		<Package>libxtst</Package>
+		<Package>libxv</Package>
+		<Package>libxvmc</Package>
+		<Package>libxxf86dga</Package>
+		<Package>libxxf86vm</Package>
+	</RuntimeDependencies>
+  </Package>
+
+  <Package>
+    <Name>mesalib-devel</Name>
+    <Summary>Development files for mesalib</Summary>
+    <Description>Development files for mesalib</Description>
+    <Files>
+		<Path fileType="header">/usr/include</Path>
+		<Path fileType="data">/usr/lib/pkgconfig</Path>
+	</Files>
+	<RuntimeDependencies>
+		<Dependency release="current">mesalib</Dependency>
+	</RuntimeDependencies>
+  </Package>
+ 
+   <Package>
+    <Name>mesalib-demos</Name>
+    <Summary>Demontration of mesalib</Summary>
+    <Description>Simple demos used to test whether the X.Org installation is functioning correctly</Description>
+    <Files>
+		<Path fileType="executable">/usr/bin</Path>
+		<Path fileType="man">/usr/share/man</Path>
+	</Files>
+	<RuntimeDependencies>
+		<Dependency release="current">mesalib</Dependency>
+	</RuntimeDependencies>
+  </Package>
+       
+  <History>
+    <Update release="3">
+		<Date>06-24-2013</Date>
+		<Version>9.1.1</Version>
+		<Comment>Add Wayland support</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+    
+    <Update release="2">
+		<Date>03-27-2013</Date>
+		<Version>9.1.1</Version>
+		<Comment>Split -devel and -demos packages</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+		  
+    <Update release="1">
+		<Date>03-27-2013</Date>
+		<Version>9.1.1</Version>
+		<Comment>Add mesalib to repositories</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>
+    

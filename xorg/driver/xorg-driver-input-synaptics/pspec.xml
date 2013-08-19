@@ -1,0 +1,65 @@
+
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>xorg-driver-input-synaptics</Name>
+    <Packager>
+        <Name>Ikey Doherty</Name>
+        <Email>ikey@solusos.com</Email>
+    </Packager>
+    <Summary>Support for touchpads</Summary>
+    <Description>The Xorg Synaptics Driver package contains the X.Org Input Driver, support programs and SDK for Synaptics touchpads. Even though the evdev driver can handle touchpads very well, this driver is required if you want to use advanced features like multi tapping, scrolling with touchpad, turning the touchpad off while typing, etc.</Description>
+    <License>GPLv2+</License>
+    <Archive sha1sum="2aaeca3abef245ade1435bcf87bbad6116e8e319" type="tarbz2">http://xorg.freedesktop.org/releases/individual/driver/xf86-input-synaptics-1.6.3.tar.bz2</Archive>
+    
+    <BuildDependencies>
+		<Dependency>mtdev-devel</Dependency>
+    </BuildDependencies>
+   
+    </Source>
+
+  <Package>
+    <Name>xorg-driver-input-synaptics</Name>
+    <Files>
+		<Path fileType="executable">/usr/bin</Path>
+		<Path fileType="config">/usr/share/X11</Path>
+		<Path fileType="library">/usr/lib/xorg</Path>
+		<Path fileType="man">/usr/share/man</Path>
+	</Files>
+	<RuntimeDependencies>
+		<Dependency>mtdev</Dependency>
+	</RuntimeDependencies>
+  </Package>
+ 
+   <Package>
+    <Name>xorg-driver-input-synaptics-devel</Name>
+    <Files>
+		<Path fileType="header">/usr/include</Path>
+		<Path fileType="data">/usr/lib/pkgconfig</Path>
+	</Files>
+	<RuntimeDependencies>
+		<Dependency release="2">xorg-driver-input-synaptics</Dependency>
+	</RuntimeDependencies>
+  </Package>
+   
+  <History>
+    <Update release="2">
+		<Date>03-28-2013</Date>
+		<Version>1.6.3</Version>
+		<Comment>Split -devel package</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+		  
+    <Update release="1">
+		<Date>03-28-2013</Date>
+		<Version>1.6.3</Version>
+		<Comment>Add xorg-driver-input-synaptics to repositories</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>
+    

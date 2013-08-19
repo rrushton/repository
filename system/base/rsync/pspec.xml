@@ -1,0 +1,42 @@
+
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>rsync</Name>
+    <Homepage>http://rsync.samba.org/</Homepage>
+    <Packager>
+        <Name>SolusOS Developers</Name>
+        <Email>dev@solusos.com</Email>
+    </Packager>
+    <Summary>rsync (remote file sync)</Summary>
+	<Description>rsync is a replacement for rcp that has many more features.  It uses the "rsync algorithm" which provides a very fast method for bringing remote files into sync.  It does this by sending just the differences in the files across the link, without requiring that both sets of files are present at one of the ends of the link beforehand.
+
+rsync was written by Andrew Tridgell and Paul Mackerras.</Description>
+    <License>GPLv3+</License>
+	<Archive sha1sum="c64c8341984aea647506eb504496999fd968ddfc" type="targz">http://rsync.samba.org/ftp/rsync/src/rsync-3.0.9.tar.gz</Archive>
+    </Source>
+
+  <Package>
+    <Name>rsync</Name>
+	<Files>
+		<Path fileType="executable">/usr/bin</Path>
+		<Path fileType="man">/usr/share/man</Path>
+	</Files>
+	<RuntimeDependencies>
+		<Dependency>popt</Dependency>
+	</RuntimeDependencies>
+  </Package>
+  
+  <History> 
+    <Update release="1">
+		<Date>03-09-2013</Date>
+		<Version>3.0.9</Version>
+		<Comment>Add rsync to repositories</Comment>
+		<Name>Justin Krehel</Name>
+		<Email>justin@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>
+    

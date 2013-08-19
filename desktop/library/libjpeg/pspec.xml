@@ -1,0 +1,50 @@
+
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>libjpeg</Name>
+    <Homepage>http://www.ijg.org/</Homepage>
+    <Packager>
+        <Name>Matias Linares</Name>
+        <Email>matiaslina@gmail.com</Email>
+    </Packager>
+    <Summary>Libjpeg is a widely used C library for reading and writing JPEG image files.</Summary>
+	<Description>Independent JPEG Group's JPEG runtime library (version 6.2)
+ The Independent JPEG Group's JPEG library is a library for handling JPEG files.</Description>
+    <License>GPLv2</License>
+    <Archive sha1sum="724987e7690ca3d74d6ab7c1f1b6854e88ca204b" type="targz">http://www.ijg.org/files/jpegsrc.v9.tar.gz</Archive>
+    </Source>
+
+  <Package>
+    <Name>libjpeg</Name>
+    <Files>
+		<Path fileType="executable">/usr/bin</Path>
+		<Path fileType="library">/usr/lib</Path>
+		<Path fileType="man">/usr/share/man</Path>
+		<Path fileType="doc">/usr/share/doc</Path>
+	</Files>
+  </Package>
+
+  <Package>
+	  <Name>libjpeg-devel</Name>
+	  <Summary>Development files for libjpeg</Summary>
+	  <RuntimeDependencies>
+		  <Dependency release="current">libjpeg</Dependency>
+	  </RuntimeDependencies>
+	  <Files>
+		  <Path fileType="header">/usr/include</Path>
+	  </Files>
+  </Package>
+  
+  <History>
+    <Update release="1">
+		<Date>03-22-2013</Date>
+		<Version>9</Version>
+		<Comment>First release</Comment>
+		<Name>Matias Linares</Name>
+		<Email>matiaslina@gmail.com</Email>
+	</Update>
+  </History>
+		
+</PISI>

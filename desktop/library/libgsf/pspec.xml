@@ -1,0 +1,61 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libgsf</Name>
+        <Homepage>http://projects.gnome.org/libgsf/</Homepage>
+        <Packager>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Packager>
+        <Summary>Library providing I/O for structured file formats</Summary>
+        <Description>libgsf contains the lbrary used for providing an extensible input/output abstraction layer for structure file formats within GNOME.</Description>
+        <License>LGPLv2.1</License>
+        <Archive sha1sum="53aee5be12e512a565167b2e663d12d65b5db8d9" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/libgsf/1.14/libgsf-1.14.26.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libgsf</Name>
+        <RuntimeDependencies>
+            <Dependency>libxml2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/libgsf*.so*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/thumbnailers</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libgsf-devel</Name>
+        <Summary>Development and documentation files for libgsf</Summary>
+        <Description>Development and documentation files for libgsf</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libgsf</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>06-24-2013</Date>
+            <Version>1.14.26</Version>
+            <Comment>Add libgsf to repositories</Comment>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Update>
+    </History>  
+</PISI>
+    

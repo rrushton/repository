@@ -1,0 +1,114 @@
+diff -ruNb a/schemas/org.gnome.desktop.background.gschema.xml.in.in b/schemas/org.gnome.desktop.background.gschema.xml.in.in
+--- a/schemas/org.gnome.desktop.background.gschema.xml.in.in	2012-11-13 10:29:19.000000000 +0000
++++ b/schemas/org.gnome.desktop.background.gschema.xml.in.in	2013-06-15 23:12:03.646160009 +0100
+@@ -15,7 +15,7 @@
+       </_description>
+     </key>
+     <key name="picture-uri" type="s">
+-      <default>'file://@datadir@/themes/Adwaita/backgrounds/adwaita-timed.xml'</default>
++      <default>'file://@datadir@/backgrounds/Euphoria.png'</default>
+       <_summary>Picture URI</_summary>
+       <_description>
+         URI to use for the background image. Not that the backend only supports
+@@ -53,7 +53,7 @@
+       </_description>
+     </key>
+     <key name="show-desktop-icons" type="b">
+-      <default>false</default>
++      <default>true</default>
+       <_summary>Have file manager handle the desktop</_summary>
+       <_description>
+         If set to true, then file manager will draw the icons on the desktop.
+diff -ruNb a/schemas/org.gnome.desktop.interface.gschema.xml.in.in b/schemas/org.gnome.desktop.interface.gschema.xml.in.in
+--- a/schemas/org.gnome.desktop.interface.gschema.xml.in.in	2011-09-03 03:24:43.000000000 +0100
++++ b/schemas/org.gnome.desktop.interface.gschema.xml.in.in	2013-06-15 23:38:42.069433414 +0100
+@@ -39,14 +39,14 @@
+       </_description>
+     </key>
+     <key name="menus-have-icons" type="b">
+-      <default>false</default>
++      <default>true</default>
+       <_summary>Menus Have Icons</_summary>
+       <_description>
+         Whether menus may display an icon next to a menu entry.
+       </_description>
+     </key>
+     <key name="buttons-have-icons" type="b">
+-      <default>false</default>
++      <default>true</default>
+       <_summary>Buttons Have Icons</_summary>
+       <_description>
+         Whether buttons may display an icon in addition to the button text.
+@@ -97,14 +97,14 @@
+       </_description>
+     </key>
+     <key name="icon-theme" type="s">
+-      <default>'gnome'</default>
++      <default>'elementary'</default>
+       <_summary>Icon Theme</_summary>
+       <_description>
+         Icon theme to use for the panel, nautilus etc.
+       </_description>
+     </key>
+     <key name="gtk-theme" type="s">
+-      <default>'Adwaita'</default>
++      <default>'MediterraneanLightDarkest'</default>
+       <_summary>Gtk+ Theme</_summary>
+       <_description>
+         Basename of the default theme used by gtk+.
+@@ -118,7 +118,7 @@
+       </_description>
+     </key>
+     <key name="font-name" type="s">
+-      <default>'Cantarell 11'</default>
++      <default>'Droid Sans 10'</default>
+       <_summary>Default font</_summary>
+       <_description>
+         Name of the default font used by gtk+.
+@@ -154,14 +154,14 @@
+       </_description>
+     </key>
+     <key name="document-font-name" type="s">
+-      <default>'Sans 11'</default>
++      <default>'Droid Sans 10'</default>
+       <_summary>Document font</_summary>
+       <_description>
+         Name of the default font used for reading documents.
+       </_description>
+     </key>
+     <key name="monospace-font-name" type="s">
+-      <default>'Monospace 11'</default>
++      <default>'Droid Sans Mono 10'</default>
+       <_summary>Monospace font</_summary>
+       <_description>
+         Name of a monospaced (fixed-width) font for use in locations like
+diff -ruNb a/schemas/org.gnome.desktop.wm.preferences.gschema.xml.in.in b/schemas/org.gnome.desktop.wm.preferences.gschema.xml.in.in
+--- a/schemas/org.gnome.desktop.wm.preferences.gschema.xml.in.in	2012-04-26 02:09:10.000000000 +0100
++++ b/schemas/org.gnome.desktop.wm.preferences.gschema.xml.in.in	2013-06-15 23:39:13.838198930 +0100
+@@ -188,7 +188,7 @@
+       </_description>
+     </key>
+     <key name="theme" type="s">
+-      <default>'Adwaita'</default>
++      <default>'MediterraneanLightDarkest'</default>
+       <_summary>Current theme</_summary>
+       <_description>
+         The theme determines the appearance of window borders, titlebar,
+@@ -196,7 +196,7 @@
+       </_description>
+     </key>
+     <key name="titlebar-uses-system-font" type="b">
+-      <default>false</default>
++      <default>true</default>
+       <_summary>Use standard system font in window titles</_summary>
+       <_description>
+         If true, ignore the titlebar-font option, and use the standard
+@@ -204,7 +204,7 @@
+       </_description>
+     </key>
+     <key name="titlebar-font" type="s">
+-      <default>'Cantarell Bold 11'</default>
++      <default>'Droid Sans 10'</default>
+       <_summary>Window title font</_summary>
+       <_description>
+         A font description string describing a font for window titlebars.

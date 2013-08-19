@@ -1,0 +1,38 @@
+
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>xtrans</Name>
+    <Packager>
+        <Name>Ikey Doherty</Name>
+        <Email>ikey@solusos.com</Email>
+    </Packager>
+    <Summary>X Network Transport Base Code</Summary>
+    <Description>xtrans is a library of code that is shared among various X packages to handle network protocol transport in a modular fashion, allowing a single place to add new transport types.  It is used by the X server, libX11, libICE, the X font server, and related components.</Description>
+    <License>GPLv3+</License>
+    <Archive sha1sum="b6ed421edf577816f6e641e1846dc0bff337676c" type="tarbz2">mirrors://xorg/individual/lib/xtrans-1.2.7.tar.bz2</Archive>
+    </Source>
+
+  <Package>
+    <Name>xtrans</Name>
+    <Files>
+		<Path fileType="header">/usr/include</Path>
+		<Path fileType="data">/usr/share/pkgconfig</Path>
+		<Path fileType="data">/usr/share/aclocal</Path>
+		<Path fileType="doc">/usr/share/doc</Path>
+	</Files>
+  </Package>
+  
+  <History>
+    <Update release="1">
+		<Date>03-11-2013</Date>
+		<Version>1.2.7</Version>
+		<Comment>Add xtrans to repositories</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>
+    

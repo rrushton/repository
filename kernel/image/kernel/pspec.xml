@@ -1,0 +1,153 @@
+
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>kernel</Name>
+    <Packager>
+        <Name>Ikey Doherty</Name>
+        <Email>ikey@solusos.com</Email>
+    </Packager>
+    <Summary>Linux Kernel</Summary>
+    <Description>This package contains the binary image of the Linux kernel, required to use the operating system</Description>
+    <License>GPLv3+</License>
+    <Archive sha1sum="fc6603d89bc012c83225f9289abae7dfe24915a6" type="tarbz2">https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.10.6.tar.bz2</Archive>
+	<AdditionalFiles>
+		<AdditionalFile target="configs/kernel-i686-config">configs/kernel-i686-config</AdditionalFile>
+		<AdditionalFile permission="0755" target="generate-module-list">scripts/generate-module-list</AdditionalFile>
+		<AdditionalFile permission="0755" target="apply_patches">scripts/apply_patches</AdditionalFile>
+		<AdditionalFile permission="0755" target="create_quilt_tree">scripts/create_quilt_tree</AdditionalFile>
+		<AdditionalFile permission="0755" target="kcooker-rebase">scripts/kcooker-rebase</AdditionalFile>
+		<AdditionalFile permission="0755" target="update_configs">scripts/update_configs</AdditionalFile>
+	</AdditionalFiles>
+	
+	<BuildDependencies>
+		<Dependency>cpio</Dependency>
+        <Dependency>bc</Dependency>
+        <Dependency>perl</Dependency>
+	</BuildDependencies>
+
+    </Source>
+
+  <Package>
+    <Name>kernel</Name>
+    <Files>
+		<Path fileType="executable">/boot</Path>
+		<Path fileType="config">/etc</Path>
+	</Files>
+	<Provides>
+		<COMAR script="package.py">System.Package</COMAR>
+	</Provides>
+  </Package>
+  
+  <Package>
+    <Name>kernel-libc-devel</Name>
+    <Summary>klibc headers</Summary>
+    <Description>Kernel's libc headers</Description>
+    <Files>
+		<Path fileType="header">/usr/include</Path>
+	</Files>
+	<PartOf>system.devel</PartOf>
+  </Package>
+ 
+   <Package>
+    <Name>kernel-headers</Name>
+    <Summary>Headers required to build modules</Summary>
+    <Description>Header files used to build modules, such as video drivers</Description>
+    <Files>
+		<Path fileType="header">/usr/src/linux-headers*</Path>
+	</Files>
+	<PartOf>kernel.devel</PartOf>
+  </Package>
+
+  <Package>
+    <Name>kernel-modules</Name>
+    <Summary>Modules required to use functions of the computer</Summary>
+    <Description>Modules required by the kernel to utilitse the many parts of the computer</Description>
+    <Files>
+		<Path fileType="library">/lib/modules</Path>
+	</Files>
+	<RuntimeDependencies>
+		<Dependency release="current">kernel</Dependency>
+	</RuntimeDependencies>
+  </Package>
+     
+  <History>
+    <Update release="9">
+		<Date>08-13-2013</Date>
+		<Version>3.10.6</Version>
+		<Comment>Disable nvidiafb and uvesafb, to allow nouveau to work correctly</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+
+    <Update release="8">
+		<Date>08-12-2013</Date>
+		<Version>3.10.6</Version>
+		<Comment>Upgrade to latest stable upstream version.
+* Drop ck1 patchset
+* Drop overlayfs
+</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+
+    <Update release="7">
+		<Date>08-07-2013</Date>
+		<Version>3.9.4</Version>
+		<Comment>Build iso9660 and device-mapper modules into kernel image</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+
+    <Update release="6">
+		<Date>05-25-2013</Date>
+		<Version>3.9.4</Version>
+		<Comment>Update kernel to latest stable version</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+    
+    <Update release="5">
+		<Date>03-28-2013</Date>
+		<Version>3.8.2</Version>
+		<Comment>Move kernel-libc-devel back into system.devel</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+
+    <Update release="4">
+		<Date>03-28-2013</Date>
+		<Version>3.8.2</Version>
+		<Comment>Apply the ck1 patchset, as well as adding OverlayFS</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+		  
+    <Update release="3">
+		<Date>03-15-2013</Date>
+		<Version>3.8.2</Version>
+		<Comment>Fix deps</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+	
+    <Update release="2">
+		<Date>03-13-2013</Date>
+		<Version>3.8.2</Version>
+		<Comment>Split packages</Comment>
+		<Name>SolusOS Developers</Name>
+		<Email>dev@solusos.com</Email>
+	</Update>
+		  
+    <Update release="1">
+		<Date>03-13-2013</Date>
+		<Version>3.8.2</Version>
+		<Comment>Add kernel to repositories</Comment>
+		<Name>SolusOS Developers</Name>
+		<Email>dev@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>
+    

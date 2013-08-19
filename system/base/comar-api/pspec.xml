@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>comar-api</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Summary>Utility functions for Comar scripts</Summary>
+        <Description>Generic utility library for common Comar script operations.</Description>
+        <Archive sha1sum="80afa9f07cd15b9042cce9c1b8f1c4dcd457c552" type="targz">http://ng.solusos.com/sources/comar-api-2.4.9.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">add-stopdependencies.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>comar-api</Name>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/pardus</Path>
+	    <Path fileType="library">/usr/lib/python2.7</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>05-24-2013</Date>
+            <Version>2.4.9</Version>
+            <Comment>Fix date for pisi</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+                
+        <Update release="1">
+            <Date>2013-16-03</Date>
+            <Version>2.4.9</Version>
+            <Comment>Add comar-api to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+</PISI>

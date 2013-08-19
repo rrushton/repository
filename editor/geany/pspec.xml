@@ -1,0 +1,60 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+        <Name>geany</Name>
+        <Homepage>http://www.geany.org</Homepage>
+		<Packager>
+			<Name>Justin Krehel</Name>
+			<Email>justin@solusos.com</Email>
+		</Packager>
+		<Summary>Small and lightweight integrated development environment in GTK2</Summary>
+		<Description>Geany is a small and lightweight integrated development environment written in GTK2, designed to be fast and require minimal dependencies. It has syntax highlighting, code folding, autocomplete, a build system, and a plugin system.</Description>
+		<License>GPLv2</License>
+        <Archive sha1sum="b4813a897320b8158cb73fea0c4e2cead07adbc2" type="targz">http://download.geany.org/geany-1.23.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libgtk-2-devel</Dependency>
+        </BuildDependencies>
+	</Source>
+
+	<Package>
+        <Name>geany</Name>
+        <RuntimeDependencies>
+            <Dependency>libgtk-2</Dependency>
+        </RuntimeDependencies>
+		<Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/geany</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/geany</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+		</Files>
+	</Package>
+
+    <Package>
+        <Name>geany-devel</Name>
+        <Summary>Development files for geany</Summary>
+        <Description>Development files for geany</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">geany</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+	<History>
+		<Update release="1">
+			<Date>06-18-2013</Date>
+			<Version>1.23.1</Version>
+			<Comment>Add geany to repositories</Comment>
+			<Name>Justin Krehel</Name>
+			<Email>justin@solusos.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

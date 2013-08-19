@@ -1,0 +1,53 @@
+
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>coreutils</Name>
+    <Packager>
+        <Name>SolusOS Developers</Name>
+        <Email>dev@solusos.com</Email>
+    </Packager>
+    <Summary>GNU core utilities</Summary>
+    <Description> This package contains the basic file, shell and text manipulation
+ utilities which are expected to exist on every operating system.
+
+ Specifically, this package includes:
+ arch base64 basename cat chcon chgrp chmod chown chroot cksum comm cp
+ csplit cut date dd df dir dircolors dirname du echo env expand expr
+ factor false flock fmt fold groups head hostid id install join link ln
+ logname ls md5sum mkdir mkfifo mknod mktemp mv nice nl nohup nproc od
+ paste pathchk pinky pr printenv printf ptx pwd readlink rm rmdir runcon
+ sha*sum seq shred sleep sort split stat stty sum sync tac tail tee test
+ timeout touch tr true truncate tsort tty uname unexpand uniq unlink
+ users vdir wc who whoami yes
+</Description>
+    <License>GPLv3+</License>
+    <Archive sha1sum="3fba93c72fab62f3742fe50957d3a86d4cd08176" type="tarxz">http://ftp.gnu.org/gnu/coreutils/coreutils-8.21.tar.xz</Archive>
+    <Patches>
+		<Patch level="1">coreutils-8.21-i18n-1.patch</Patch>
+    </Patches>
+    
+    <SupportsClang>true</SupportsClang>
+    </Source>
+
+  <Package>
+    <Name>coreutils</Name>
+    <Files>
+		<Path fileType="*">/</Path>
+	</Files>
+  </Package>
+  
+  <History> 
+	
+    <Update release="1">
+		<Date>03-09-2013</Date>
+		<Version>8.21</Version>
+		<Comment>Add coreutils to repositories</Comment>
+		<Name>SolusOS Developers</Name>
+		<Email>dev@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>
+    

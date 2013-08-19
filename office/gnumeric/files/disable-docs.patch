@@ -1,0 +1,12 @@
+diff -ruNb a/Makefile.in b/Makefile.in
+--- a/Makefile.in	2013-04-13 15:47:07.000000000 +0000
++++ b/Makefile.in	2013-06-25 23:31:32.425617185 +0000
+@@ -386,7 +386,7 @@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-SUBDIRS = . po po-functions src plugins icons @COMPONENT_DIR@ templates doc tools schemas test
++SUBDIRS = . po po-functions src plugins icons @COMPONENT_DIR@ templates tools schemas test
+ XML_I18N_XML_KIND = --pass-through
+ change_logs = ChangeLog \
+ 	OChangeLog-1999-07-09 \

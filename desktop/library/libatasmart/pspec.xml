@@ -1,0 +1,55 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>libatasmart</Name>
+        <Homepage>http://0pointer.de</Homepage>
+		<Packager>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Packager>
+		<Summary>Disk reporting library</Summary>
+		<Description>The libatasmart package is a disk reporting library. It only supports a subset of the ATA S.M.A.R.T. functionality.</Description>
+		<License>GPLv2+</License>
+		<Archive sha1sum="0d0745b6bd2e5b9461d15966b5daac6c98302de8" type="tarxz">http://0pointer.de/public/libatasmart-0.19.tar.xz</Archive>
+        
+        <BuildDependencies>
+            <Dependency>systemd-devel</Dependency>
+            <Dependency>vala</Dependency>
+        </BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>libatasmart</Name>
+		<Files>
+			<Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>libatasmart-devel</Name>
+        <Summary>Development files for libatasmart</Summary>
+        <Description>Development files for libatasmart</Description>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/vala</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libatasmart</Dependency>
+        </RuntimeDependencies>
+	</Package>
+    
+	<History>
+		<Update release="1">
+			<Date>06-13-2013</Date>
+			<Version>0.19</Version>
+			<Comment>Add libatasmart to repositories</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

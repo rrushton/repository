@@ -1,0 +1,23 @@
+# HG changeset patch
+# Parent 1105d98887ee2494bbac3af3b452ccb305c2ae29
+Fix homepage
+
+diff -r 1105d98887ee backends/pisi/pisiBackend.py
+--- a/backends/pisi/pisiBackend.py	Mon Jun 10 23:18:35 2013 +0100
++++ b/backends/pisi/pisiBackend.py	Mon Jun 10 23:48:04 2013 +0100
+@@ -134,12 +134,14 @@
+                 group = self.groups[pkg.partOf]
+             else:
+                 group = GROUP_UNKNOWN
++                
++            homepage = pkg.source.homepage if pkg.source.homepage is not None else ''
+ 
+             self.details(pkg_id,
+                             ",".join (pkg.license),
+                             group,
+                             pkg.description,
+-                            pkg.packageURI,
++                            homepage,
+                             pkg.packageSize)
+         else:
+             self.error(ERROR_PACKAGE_NOT_FOUND, "Package was not found")

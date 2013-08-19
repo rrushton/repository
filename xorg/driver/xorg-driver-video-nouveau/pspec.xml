@@ -1,0 +1,53 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>xorg-driver-video-nouveau</Name>
+		<Packager>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Packager>
+		<Summary>Alternative video driver for NVIDIA graphics cards</Summary>
+		<Description>The Xorg Nouveau Driver package contains the X.Org Video Driver for NVidia Cards including RIVA TNT, RIVA TNT2, GeForce 256, QUADRO, GeForce2, QUADRO2, GeForce3, QUADRO DDC, nForce, nForce2, GeForce4, QUADRO4, GeForce FX, QUADRO FX, GeForce 6XXX and GeForce 7xxx chipsets.</Description>
+		<License>GPLv2+</License>
+		<Archive sha1sum="93b5bc69010ab51561622f834daf8eadc5d56a6e" type="tarbz2">http://xorg.freedesktop.org/archive/individual/driver/xf86-video-nouveau-1.0.9.tar.bz2</Archive>
+        
+        <BuildDependencies>
+            <Dependency releaseFrom="4">xorg-server-devel</Dependency>
+            <Dependency>libxfont-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libpciaccess-devel</Dependency>
+            <Dependency>libdrm-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>libnettle-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libfontenc-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+        </BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>xorg-driver-video-nouveau</Name>
+		<Files>
+			<Path fileType="library">/usr/lib/xorg</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="4">xorg-server</Dependency>
+        </RuntimeDependencies>
+	</Package>
+  
+	<History>        
+		<Update release="1">
+			<Date>08-13-2013</Date>
+			<Version>1.0.9</Version>
+			<Comment>Add xorg-driver-video-nouveau to repositories</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

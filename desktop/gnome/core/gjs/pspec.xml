@@ -1,0 +1,81 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>gjs</Name>
+        <Homepage>https://live.gnome.org/Gjs</Homepage>
+		<Packager>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Packager>
+		<Summary>GNOME JavaScript bindings</Summary>
+		<Description>GNOME JavaScript bindings</Description>
+		<License>GPLv2+</License>
+		<Archive sha1sum="bd83389a4ee8b31a1d7e639645db364474edde24" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gjs/1.34/gjs-1.34.0.tar.xz</Archive>
+        
+        <BuildDependencies>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>spidermonkey-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libnspr-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>libgjs</Name>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/gjs-1.0</Path>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="data">/usr/share/gjs-1.0</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency>gobject-introspection</Dependency>
+            <Dependency>spidermonkey</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libnspr</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+	</Package>
+
+	<Package>
+		<Name>libgjs-devel</Name>
+        <Summary>Development files for libgjs</Summary>
+        <Description>Development files for libgjs</Description>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib/gjs/girepository-1.0</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libgjs</Dependency>
+        </RuntimeDependencies>
+	</Package>
+      
+	<History>
+		<Update release="2">
+			<Date>05-30-2013</Date>
+			<Version>1.34.0</Version>
+			<Comment>Add missing dependency for libgjs-devel</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+                
+		<Update release="1">
+			<Date>05-30-2013</Date>
+			<Version>1.34.0</Version>
+			<Comment>Add gjs to repositories</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

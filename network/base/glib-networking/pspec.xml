@@ -1,0 +1,77 @@
+
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>glib-networking</Name>
+    <Homepage>http://www.gnome.org</Homepage>
+    <Packager>
+        <Name>Ikey Doherty</Name>
+        <Email>ikey@solusos.com</Email>
+    </Packager>
+    <Summary>The GLib Networking package contains Network related gio modules for GLib.</Summary>
+    <Description>The GLib Networking package contains Network related gio modules for GLib.</Description>
+    <License>GPLv2+</License>
+    <Archive sha1sum="3c99bc502bf1ecfe2beca5824bb1888ac50b4b19" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/glib-networking/2.37/glib-networking-2.37.2.tar.xz</Archive>
+    
+    <BuildDependencies>
+		<Dependency>libp11-kit-devel</Dependency>
+		<Dependency>libgnutls-devel</Dependency>
+		<Dependency>zlib-devel</Dependency>
+		<Dependency>libtasn1-devel</Dependency>
+		<Dependency>libnettle-devel</Dependency>
+		<Dependency>libpcre-devel</Dependency>
+		<Dependency>glib2-devel</Dependency>
+    </BuildDependencies>
+    
+    </Source>
+
+  <Package>
+    <Name>glib-networking</Name>
+    <Files>
+		<Path fileType="library">/usr/lib/gio/modules</Path>
+		<Path fileType="doc">/usr/share/doc</Path>
+		<Path fileType="localedata">/usr/share/locale</Path>
+	</Files>
+	<RuntimeDependencies>
+		<Dependency>gmp</Dependency>
+		<Dependency>libp11-kit</Dependency>
+		<Dependency>libgnutls</Dependency>
+		<Dependency>zlib</Dependency>
+		<Dependency>libtasn1</Dependency>
+		<Dependency>libnettle</Dependency>
+		<Dependency>libpcre</Dependency>
+		<Dependency>glib2</Dependency>
+		<Dependency>libhogweed</Dependency>
+	</RuntimeDependencies>
+  </Package>
+
+  
+  <History>
+    <Update release="3">
+		<Date>06-26-2013</Date>
+		<Version>2.37.2</Version>
+		<Comment>Upgrade to latest version</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+    
+    <Update release="2">
+		<Date>04-14-2013</Date>
+		<Version>2.35.8</Version>
+		<Comment>Add build and runtime dependencies</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+		  
+    <Update release="1">
+		<Date>04-14-2013</Date>
+		<Version>2.35.8</Version>
+		<Comment>Add glib-networking to repositories</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>
+    

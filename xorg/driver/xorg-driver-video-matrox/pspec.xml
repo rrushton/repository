@@ -1,0 +1,53 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>xorg-driver-video-matrox</Name>
+		<Packager>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Packager>
+		<Summary>Matrox Video Driver</Summary>
+		<Description>The Xorg MGA Driver package contains the X.Org Video Driver for Matrox video cards including Millennium G2xx, G4xx, G5xx, Millennium II and Mystique G200 chipsets.</Description>
+		<License>GPLv2+</License>
+		<Archive sha1sum="030e097dc435b17f603c64e46f7b655a185a075b" type="tarbz2">http://xorg.freedesktop.org/archive/individual/driver/xf86-video-mga-1.6.2.tar.bz2</Archive>
+        
+        <BuildDependencies>
+            <Dependency releaseFrom="4">xorg-server-devel</Dependency>
+            <Dependency>libxfont-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libpciaccess-devel</Dependency>
+            <Dependency>libdrm-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>libnettle-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libfontenc-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+        </BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>xorg-driver-video-matrox</Name>
+		<Files>
+			<Path fileType="library">/usr/lib/xorg</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="4">xorg-server</Dependency>
+        </RuntimeDependencies>
+	</Package>
+  
+	<History>        
+		<Update release="1">
+			<Date>08-13-2013</Date>
+			<Version>1.6.2</Version>
+			<Comment>Add xorg-driver-video-matrox to repositories</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

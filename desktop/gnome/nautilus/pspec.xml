@@ -1,0 +1,179 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>nautilus</Name>
+        <Homepage>https://live.gnome.org/Nautilus</Homepage>
+		<Packager>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Packager>
+		<Summary>The file manager of the GNOME desktop</Summary>
+		<Description>The file manager of the GNOME desktop</Description>
+		<License>GPLv2+</License>
+		<Archive sha1sum="6045875a35821420d00b881f55e88a68fee56b63" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/nautilus/3.9/nautilus-3.9.3.tar.xz</Archive>
+        
+        <BuildDependencies>
+            <Dependency>shared-mime-info</Dependency>
+            <Dependency>libexif-devel</Dependency>
+            <Dependency>libexempi-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>harfbuzz-devel</Dependency>
+            <Dependency>libxcursor-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libicu-devel</Dependency>
+            <Dependency>libxi-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libice-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libxinerama-devel</Dependency>
+            <Dependency>libatk-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libxdamage-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>libxrandr-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency versionFrom="3.9.6">libgtk-3-devel</Dependency>
+            <Dependency>libxfixes-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libxcomposite-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libsm-devel</Dependency>
+            <Dependency>at-spi2-atk-devel</Dependency>
+        </BuildDependencies>
+        
+	</Source>
+
+	<Package>
+		<Name>nautilus</Name>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0</Path>
+            <Path fileType="data">/usr/lib/nautilus</Path>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="data">/usr/share/GConf</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/mime</Path>
+            <Path fileType="data">/usr/share/nautilus</Path>
+            <Path fileType="data">/etc/xdg/autostart</Path>
+            <Path fileType="data">/usr/share/gnome-shell</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency>libexempi</Dependency>
+            <Dependency>libexif</Dependency>
+            <Dependency>shared-mime-info</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>libxcursor</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>libicu</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>libxi</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxinerama</Dependency>
+            <Dependency>libatk</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libxdamage</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libxrandr</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency versionFrom="3.9.6">libgtk-3</Dependency>
+            <Dependency>libxfixes</Dependency>
+            <Dependency>at-spi2</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libxcomposite</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libsm</Dependency>
+            <Dependency>at-spi2-atk</Dependency>
+        </RuntimeDependencies>
+	</Package>
+
+	<Package>
+		<Name>nautilus-devel</Name>
+        <Summary>Development files for Nautilus</Summary>
+        <Description>Development files for Nautilus</Description>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">nautilus</Dependency>
+        </RuntimeDependencies>
+	</Package>
+    
+	<Package>
+		<Name>nautilus-docs</Name>
+        <Summary>API Documentation for Nautilus</Summary>
+        <Description>API Documentation for Nautilus</Description>
+		<Files>
+			<Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">nautilus-devel</Dependency>
+        </RuntimeDependencies>
+	</Package>
+        
+	<History>
+		<Update release="4">
+			<Date>06-26-2013</Date>
+			<Version>3.9.3</Version>
+			<Comment>Upgrade to 3.9.3 as part of GNOME3.9 migration</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+        
+		<Update release="3">
+			<Date>06-19-2013</Date>
+			<Version>3.8.2</Version>
+			<Comment>Upgrade to 3.8.2 as part of GNOME3.8 migration</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+        
+		<Update release="2">
+			<Date>06-06-2013</Date>
+			<Version>3.6.3</Version>
+			<Comment>Fix dependencies</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+        
+		<Update release="1">
+			<Date>06-06-2013</Date>
+			<Version>3.6.3</Version>
+			<Comment>Add nautilus to repositories</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

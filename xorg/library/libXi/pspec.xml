@@ -1,0 +1,75 @@
+
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>libxi</Name>
+    <Packager>
+        <Name>Ikey Doherty</Name>
+        <Email>ikey@solusos.com</Email>
+    </Packager>
+    <Summary>X Input Extension Library</Summary>
+    <Description>libXi provides an X Window System client interface to the XINPUT extension to the X protocol. The Input extension allows setup and configuration of multiple input devices, and will soon allow hotplugging of input devices; to be added and removed on the fly.</Description>
+    <License>GPLv3+</License>
+    <Archive sha1sum="ac00cf9790648c17815860b10c9a6abbe32bb175" type="tarbz2">mirrors://xorg/individual/lib/libXi-1.6.2.tar.bz2</Archive>
+    
+    <BuildDependencies>
+        <Dependency>libx11-devel</Dependency>
+        <Dependency>xinput</Dependency>
+        <Dependency>inputproto</Dependency>
+    </BuildDependencies>
+    </Source>
+
+  <Package>
+    <Name>libxi</Name>
+    <Files>
+		<Path fileType="library">/usr/lib/lib*so*</Path>
+		<Path fileType="man">/usr/share/man</Path>
+		<Path fileType="doc">/usr/share/doc</Path>
+	</Files>
+  </Package>
+
+  <Package>
+    <Name>libxi-devel</Name>
+    <Summary>Development files for libxi</Summary>
+    <Description>Development files for libxi</Description>
+    <Files>
+		<Path fileType="header">/usr/include</Path>
+		<Path fileType="library">/usr/lib/*.a</Path>
+		<Path fileType="data">/usr/lib/pkgconfig</Path>
+	</Files>
+	<RuntimeDependencies>
+		<Dependency release="current">libxi</Dependency>
+        <Dependency>inputproto</Dependency>
+        <Dependency>xinput</Dependency>
+	</RuntimeDependencies>
+  </Package>
+    
+  <History>
+    <Update release="3">
+		<Date>06-05-2013</Date>
+		<Version>1.6.2</Version>
+		<Comment>Update dependencies</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+	
+    <Update release="2">
+		<Date>03-17-2013</Date>
+		<Version>1.6.2</Version>
+		<Comment>Split -devel package</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+	
+    <Update release="1">
+		<Date>03-12-2013</Date>
+		<Version>1.6.2</Version>
+		<Comment>Add libxi to repositories</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>
+    

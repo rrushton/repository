@@ -1,0 +1,112 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>ibus</Name>
+        <Homepage>http://code.google.com/p/ibus/</Homepage>
+		<Packager>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Packager>
+		<Summary>Intelligent Input Bus</Summary>
+		<Description>IBus is an Intelligent Input Bus. It is a new input framework for Linux OS. It provides full featured and user friendly input method user interface.</Description>
+		<License>GPLv2+</License>
+		<Archive sha1sum="a7e1695731b4c954fa8897d091e6dda64e08b28c" type="targz">http://ibus.googlecode.com/files/ibus-1.5.2.tar.gz</Archive>
+        
+        <BuildDependencies>
+            <Dependency>libgtk-3-devel</Dependency>
+            <Dependency>libgtk-2-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>libxi-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>dconf-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libatk-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+        </BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>ibus</Name>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+            <Path fileType="config">/etc/dconf</Path>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="executable">/usr/lib/ibus</Path>
+            <Path fileType="data">/usr/share/GConf</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/bash-completion</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/share/glib-2.0/schemas</Path>
+            <Path fileType="data">/usr/share/ibus</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0</Path>
+            <Path fileType="library">/usr/lib/gtk-2.0</Path>
+            <Path fileType="library">/usr/lib/gtk-3.0</Path>
+            <Path fileType="library">/usr/lib/python*</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency>libgtk-3</Dependency>
+            <Dependency>libgtk-2</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>libxi</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>dconf</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>libatk</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libx11</Dependency>
+        </RuntimeDependencies>
+	</Package>
+
+	<Package>
+		<Name>ibus-devel</Name>
+        <Summary>Development files for ibus</Summary>
+        <Description>Development files for ibus</Description>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/vala/vapi</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency release="current">ibus</Dependency>
+        </RuntimeDependencies>
+	</Package>
+    
+	<Package>
+		<Name>ibus-docs</Name>
+        <Summary>API Documentation for ibus</Summary>
+        <Description>API Documentation for ibus</Description>
+		<Files>
+			<Path fileType="doc">/usr/share/gtk-doc</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency release="current">ibus-devel</Dependency>
+        </RuntimeDependencies>
+	</Package>
+    
+	<History>
+		<Update release="1">
+			<Date>06-05-2013</Date>
+			<Version>1.5.2</Version>
+			<Comment>Add ibus to repositories</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

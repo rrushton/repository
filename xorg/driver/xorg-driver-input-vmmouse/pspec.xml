@@ -1,0 +1,45 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>xf86-input-vmmouse</Name>
+		<Packager>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Packager>
+		<Summary>VMMouse input driver</Summary>
+		<Description>The Xorg VMMouse Driver package contains the VMMouse input driver for the Xorg X server. The VMMouse driver enables support for the special VMMouse protocol that is provided by VMware virtual machines to give absolute pointer positioning.</Description>
+		<License>GPLv2+</License>
+		<Archive sha1sum="0fa67d2ca9b2b26d32b93cc030fc3ea28964fe81" type="tarbz2">ftp://ftp.x.org/pub/individual/driver/xf86-input-vmmouse-13.0.0.tar.bz2</Archive>
+        
+        <BuildDependencies>
+            <Dependency>xorg-server-devel</Dependency>
+        </BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>xorg-driver-input-vmmouse</Name>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/xorg/modules</Path>
+            <Path fileType="data">/usr/share/X11</Path>
+            <Path fileType="data">/lib/udev</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency>xorg-server</Dependency>
+        </RuntimeDependencies>
+	</Package>
+  
+	<History>
+		<Update release="1">
+			<Date>06-05-2013</Date>
+			<Version>13.0.0</Version>
+			<Comment>Add xf86-input-vmmouse to repositories</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

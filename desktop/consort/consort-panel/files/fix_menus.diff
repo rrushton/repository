@@ -1,0 +1,64 @@
+diff -ruNb a/consort-panel/menu.c b/consort-panel/menu.c
+--- a/consort-panel/menu.c	2013-06-07 17:39:06.000000000 +0100
++++ b/consort-panel/menu.c	2013-06-20 18:37:17.569034306 +0100
+@@ -1401,7 +1401,7 @@
+ {
+ 	GtkWidget *main_menu;
+ 
+-	main_menu = create_applications_menu ("applications.menu", NULL, TRUE);
++	main_menu = create_applications_menu ("gnome-applications.menu", NULL, TRUE);
+ 
+ 	g_object_set_data (G_OBJECT (main_menu), "menu_panel", panel);
+ 	/* FIXME need to update the panel on parent_set */
+diff -ruNb a/consort-panel/panel-addto.c b/consort-panel/panel-addto.c
+--- a/consort-panel/panel-addto.c	2013-06-07 17:39:06.000000000 +0100
++++ b/consort-panel/panel-addto.c	2013-06-20 18:38:42.752420126 +0100
+@@ -666,7 +666,7 @@
+ 				    G_TYPE_POINTER,
+ 				    G_TYPE_STRING);
+ 
+-	tree = gmenu_tree_new ("applications.menu", GMENU_TREE_FLAGS_SORT_DISPLAY_NAME);
++	tree = gmenu_tree_new ("gnome-applications.menu", GMENU_TREE_FLAGS_SORT_DISPLAY_NAME);
+ 
+ 	if (!gmenu_tree_load_sync (tree, NULL)) {
+ 		g_object_unref (tree);
+diff -ruNb a/consort-panel/panel-menu-bar.c b/consort-panel/panel-menu-bar.c
+--- a/consort-panel/panel-menu-bar.c	2013-06-07 17:39:06.000000000 +0100
++++ b/consort-panel/panel-menu-bar.c	2013-06-20 18:37:17.563034135 +0100
+@@ -140,13 +140,13 @@
+ 
+ 	// Setup Preferences menu
+ 	prefs_item = panel_image_menu_item_new ();
+-	menubar->priv->prefs_menu = create_applications_menu ("applications.menu", "/System/Preferences", TRUE);
++	menubar->priv->prefs_menu = create_applications_menu ("gnome-applications.menu", "/System/Preferences", TRUE);
+ 	gtk_menu_item_set_submenu (GTK_MENU_ITEM (prefs_item),
+ 				   menubar->priv->prefs_menu);
+ 
+ 	// Setup Administration menu
+ 	admin_item = panel_image_menu_item_new ();
+-	menubar->priv->admin_menu = create_applications_menu ("applications.menu", "/System/Administration", TRUE);
++	menubar->priv->admin_menu = create_applications_menu ("gnome-applications.menu", "/System/Administration", TRUE);
+ 	gtk_menu_item_set_submenu (GTK_MENU_ITEM (admin_item),
+ 				   menubar->priv->admin_menu);
+ 
+@@ -187,7 +187,7 @@
+ 	menubar->priv->info = NULL;
+ 
+ 	/** Build the Applications menu */
+-	menubar->priv->applications_menu = create_applications_menu ("applications.menu", NULL, TRUE);
++	menubar->priv->applications_menu = create_applications_menu ("gnome-applications.menu", NULL, TRUE);
+ 
+ 	menubar->priv->applications_item = panel_image_menu_item_new ();
+ 	gtk_menu_item_set_label (GTK_MENU_ITEM (menubar->priv->applications_item),
+diff -ruNb a/consort-panel/panel-run-dialog.c b/consort-panel/panel-run-dialog.c
+--- a/consort-panel/panel-run-dialog.c	2013-06-07 17:39:06.000000000 +0100
++++ b/consort-panel/panel-run-dialog.c	2013-06-20 18:37:17.576034505 +0100
+@@ -906,7 +906,7 @@
+ 	GMenuTreeDirectory *root;
+ 	GSList             *retval;
+ 
+-	tree = gmenu_tree_new ("applications.menu", GMENU_TREE_FLAGS_SORT_DISPLAY_NAME);
++	tree = gmenu_tree_new ("gnome-applications.menu", GMENU_TREE_FLAGS_SORT_DISPLAY_NAME);
+ 
+ 	if (!gmenu_tree_load_sync (tree, NULL))
+ 		return NULL;

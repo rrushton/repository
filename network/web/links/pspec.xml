@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>links</Name>
+        <Homepage>http://links.twibright.com/</Homepage>
+        <Packager>
+            <Name>Matias Linares</Name>
+            <Email>matiaslina@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Summary>Lightweight console-mode web browser</Summary>
+        <Description>Links is a lynx-like character mode browser. It includes support for rendering tables and frames, features background downloads, can display colors and has many other features.</Description>
+        <Archive sha1sum="1e362a7e27078d630edf5868145a46247cda8cc3" type="tarbz2">http://links.twibright.com/download/links-2.7.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libtiff-devel</Dependency>
+        </BuildDependencies>    
+    </Source>
+    
+    <Package>
+        <Name>links</Name>
+        <RuntimeDependencies>
+            <Dependency>libpng</Dependency>
+            <Dependency>gpm</Dependency>
+            <Dependency>libtiff</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    
+    
+    <History>
+		<Update release="2">
+			<Date>05-24-2013</Date>
+			<Version>2.7</Version>
+			<Comment>Fix date for pisi</Comment>
+			<Name>Matias Linares</Name>
+			<Email>matiaslina@gmail.com</Email>
+		</Update>
+        
+		<Update release="2">
+			<Date>2013-04-20</Date>
+			<Version>2.7</Version>
+			<Comment>Fixed missing dependency (libtiff)</Comment>
+			<Name>Matias Linares</Name>
+			<Email>matiaslina@gmail.com</Email>
+		</Update>
+        
+        <Update release="1">
+            <Date>2013-04-13</Date>
+            <Version>2.7</Version>
+            <Comment>First release</Comment>
+            <Name>Matias Linares</Name>
+            <Email>matiaslina@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

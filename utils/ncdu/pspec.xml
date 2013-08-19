@@ -1,0 +1,42 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+        <Name>ncdu</Name>
+        <Homepage>http://dev.yorhel.nl/ncdu</Homepage>
+		<Packager>
+			<Name>Justin Krehel</Name>
+			<Email>justin@solusos.com</Email>
+		</Packager>
+		<Summary>Disk usage analyzer with ncurses interface</Summary>
+		<Description>ncdu is a disk usage analyzer with an ncurses interface, aimed to be run on a remote server over SSH. It is therefore designed to be fast, simple, and easy to use.</Description>
+		<License>MIT</License>
+        <Archive sha1sum="cf3b5fbb5b69cbae5425bfff2660ac3d8224a605" type="targz">http://dev.yorhel.nl/download/ncdu-1.10.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>ncurses-devel</Dependency>
+        </BuildDependencies>
+	</Source>
+
+	<Package>
+        <Name>ncdu</Name>
+        <RuntimeDependencies>
+            <Dependency>ncurses</Dependency>
+        </RuntimeDependencies>
+		<Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+		</Files>
+	</Package>
+  
+	<History>
+		<Update release="1">
+			<Date>06-16-2013</Date>
+			<Version>1.10</Version>
+			<Comment>Add ncdu to repositories</Comment>
+			<Name>Justin Krehel</Name>
+			<Email>justin@solusos.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

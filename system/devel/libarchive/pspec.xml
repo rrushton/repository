@@ -1,0 +1,76 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libarchive</Name>
+        <Homepage>http://www.libarchive.org/</Homepage>
+        <Packager>
+            <Name>Matias Linares</Name>
+            <Email>matiaslina@gmail.com</Email>
+        </Packager>
+        <Summary>Library for reading and writing streaming archives</Summary>
+        <Description>The libarchive library provides a flexible interface for reading and writing archives in
+     various formats such as tar and cpio.</Description>
+        <License>BSD</License>
+        <Archive sha1sum="6a991777ecb0f890be931cec4aec856d1a195489" type="targz">http://www.libarchive.org/downloads/libarchive-3.1.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>attr-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>acl-devel</Dependency>
+            <Dependency>xz-devel</Dependency>
+            <Dependency>libnettle-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libarchive</Name>
+        <RuntimeDependencies>
+            <Dependency>bzip2</Dependency>
+            <Dependency>attr</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>acl</Dependency>
+            <Dependency>xz</Dependency>
+            <Dependency>libnettle</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc/libarchive</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libarchive-devel</Name>
+        <Summary>Development files of libarchive</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libarchive</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+     
+    <History>                
+        <Update release="2">
+            <Date>05-24-2013</Date>
+            <Version>3.1.2</Version>
+            <Comment>Bump: Force rebuild to resolve dynamic linking</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+                
+        <Update release="1">
+            <Date>04-08-2013</Date>
+            <Version>3.1.2</Version>
+            <Comment>First release</Comment>
+            <Name>Matias Linares</Name>
+            <Email>matiaslina@gmail.com</Email>
+        </Update>
+    </History>
+		
+</PISI>
+

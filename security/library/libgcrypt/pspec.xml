@@ -1,0 +1,55 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>libgcrypt</Name>
+    <Packager>
+        <Name>Justin Krehel</Name>
+        <Email>justin@solusos.com</Email>
+    </Packager>
+    <Summary>GNU's basic cryptographic library</Summary>
+	<Description> Libgcrypt is GNU's basic cryptographic library."</Description>
+	<License>GPLv3</License>
+	<Archive sha1sum="8b60a26b7eae1a727d58932d6b1efeb5716648ed" type="tarbz2">ftp://ftp.gnupg.org/gcrypt/libgcrypt/libgcrypt-1.5.1.tar.bz2</Archive>
+	<BuildDependencies>
+		<Dependency>libgpg-error</Dependency>
+	</BuildDependencies>
+  </Source>
+
+  <Package>
+	<Name>libgcrypt</Name>
+	<RuntimeDependencies>
+		<Dependency>libgpg-error</Dependency>
+	</RuntimeDependencies>
+    <Files>
+		<Path fileType="executable">/usr/bin</Path>
+		<Path fileType="library">/usr/lib/libgcrypt*.so*</Path>
+		<Path fileType="data">/usr/share/aclocal</Path>
+		<Path fileType="info">/usr/share/info</Path>
+		<Path fileType="doc">/usr/share/doc</Path>
+	</Files>
+  </Package>
+
+  <Package>
+  	<Name>libgcrypt-devel</Name>
+  	<Summary>Development files for libgcrypt</Summary>
+  	<Description>Development files for libgcrypt</Description>
+  	<Files>	
+  		<Path fileType="header">/usr/include</Path>
+  	</Files>
+  	<RuntimeDependencies>
+  		<Dependency release="1">libgcrypt</Dependency>
+  	</RuntimeDependencies>
+  </Package>
+  
+  <History>
+    <Update release="1">
+		<Date>03-30-2013</Date>
+		<Version>1.5.1</Version>
+		<Comment>Added libgcrypt to repositories</Comment>
+		<Name>Justin Krehel</Name>
+		<Email>justin@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>

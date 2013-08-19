@@ -1,0 +1,85 @@
+diff -ruNbB a/gcc/Makefile.in b/gcc/Makefile.in
+--- a/gcc/Makefile.in	2012-08-06 15:34:27.000000000 +0100
++++ b/gcc/Makefile.in	2013-03-25 21:38:44.272092269 +0000
+@@ -4188,7 +4188,7 @@
+ 	      gcc_dir=`${PWD_COMMAND}` ; \
+ 	      export TARGET_MACHINE srcdir SHELL MACRO_LIST && \
+ 	      cd $(build_objdir)/fixincludes && \
+-	      $(SHELL) ./fixinc.sh "$${gcc_dir}/$${fix_dir}" \
++	      $(SHELL) -c true "$${gcc_dir}/$${fix_dir}" \
+ 	        $(SYSTEM_HEADER_DIR) $(OTHER_FIXINCLUDES_DIRS) ); \
+ 	    rm -f $${fix_dir}/syslimits.h; \
+ 	    if [ -f $${fix_dir}/limits.h ]; then \
+diff -ruNbB a/libffi/include/Makefile.in b/libffi/include/Makefile.in
+--- a/libffi/include/Makefile.in	2010-04-02 19:18:06.000000000 +0100
++++ b/libffi/include/Makefile.in	2013-03-25 21:38:44.245091727 +0000
+@@ -413,7 +413,7 @@
+ 
+ info-am:
+ 
+-install-data-am: install-toollibffiHEADERS
++install-data-am:
+ 
+ install-dvi: install-dvi-am
+ 
+diff -ruNbB a/libffi/Makefile.in b/libffi/Makefile.in
+--- a/libffi/Makefile.in	2012-09-20 08:23:55.000000000 +0100
++++ b/libffi/Makefile.in	2013-03-25 21:38:44.241091647 +0000
+@@ -1371,9 +1371,9 @@
+ 	for dir in "$(DESTDIR)$(toolexeclibdir)"; do \
+ 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
+ 	done
+-install: install-recursive
+-install-exec: install-exec-recursive
+-install-data: install-data-recursive
++install:
++install-exec:
++install-data:
+ uninstall: uninstall-recursive
+ 
+ install-am: all-am
+@@ -1456,27 +1456,27 @@
+ 
+ install-data-am:
+ 
+-install-dvi: install-dvi-recursive
++install-dvi:
+ 
+ install-dvi-am:
+ 
+ install-exec-am: install-multi install-toolexeclibLTLIBRARIES
+ 
+-install-html: install-html-recursive
++install-html:
+ 
+ install-html-am:
+ 
+-install-info: install-info-recursive
++install-info:
+ 
+ install-info-am:
+ 
+ install-man:
+ 
+-install-pdf: install-pdf-recursive
++install-pdf:
+ 
+ install-pdf-am:
+ 
+-install-ps: install-ps-recursive
++install-ps:
+ 
+ install-ps-am:
+ 
+diff -ruNbB a/libiberty/Makefile.in b/libiberty/Makefile.in
+--- a/libiberty/Makefile.in	2012-08-06 15:34:27.000000000 +0100
++++ b/libiberty/Makefile.in	2013-03-25 21:38:44.253091888 +0000
+@@ -342,7 +342,7 @@
+ @MAINT@	echo stamp > stamp-functions
+ 
+ INSTALL_DEST = @INSTALL_DEST@
+-install: install_to_$(INSTALL_DEST) install-subdir
++install: install-subdir
+ install-strip: install
+ 
+ .PHONY: install install-strip

@@ -1,0 +1,81 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gnumeric</Name>
+        <Homepage>https://projects.gnome.org/gnumeric/</Homepage>
+        <Packager>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Packager>
+        <Summary>GNOME Desktop spreadsheet application aiming for speed and lightness</Summary>
+        <Description>Gnumeric is a spreadsheet application that aims to be fast and light, quite offering all the facilities of other spreadsheet applications including formulas, functions, charting, and the ability to save and read multiple formats.</Description>
+        <License>GPLv2+</License>
+        <License>GPLv3+</License>
+        <Archive sha1sum="716b4f4e87996ff9e55505479fbee0e26b1fa96d" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/gnumeric/1.12/gnumeric-1.12.2.tar.xz</Archive>
+        <Patches>
+            <Patch level="1">disable-docs.patch</Patch>
+        </Patches>
+        <BuildDependencies>
+            <Dependency>libgoffice-devel</Dependency>
+            <Dependency>libgtk-2-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libgsf-devel</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>fribidi-devel</Dependency>
+            <Dependency>python-gobject-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gnumeric</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/gnumeric</Path>
+            <Path fileType="library">/usr/lib/goffice</Path>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/glib*</Path>
+            <Path fileType="data">/usr/share/gnome</Path>
+            <Path fileType="data">/usr/share/gnumeric</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>libgoffice</Dependency>
+            <Dependency>libgtk-2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libgsf</Dependency>
+            <Dependency>fribidi</Dependency>
+            <Dependency>python-gobject</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>gnumeric-devel</Name>
+        <Summary>Development files for gnumeric</Summary>
+        <Description>Development files for gnumeric</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">gnumeric</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>06-24-2013</Date>
+            <Version>1.12.2</Version>
+            <Comment>Add gnumeric to repositories</Comment>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Update>
+    </History>  
+</PISI>
+    

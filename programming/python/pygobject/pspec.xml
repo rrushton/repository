@@ -1,0 +1,89 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>pygobject</Name>
+        <Homepage>https://live.gnome.org/PyGObject</Homepage>
+		<Packager>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Packager>
+		<Summary>Python GObject bindings</Summary>
+		<Description>PyGObject provides Python 2 bindings to the GObject class from GLib.</Description>
+		<License>GPLv2+</License>
+		<Archive sha1sum="abf695f16d36a36e72f713016a92eab0646d37a2" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/pygobject/3.4/pygobject-3.4.2.tar.xz</Archive>
+        
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>python-gobject</Name>
+		<Files>
+			<Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/python2*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libsm</Dependency>
+        </RuntimeDependencies>
+	</Package>
+
+	<Package>
+		<Name>python-gobject-devel</Name>
+        <Summary>Development files for python-gobject</Summary>
+        <Description>Development files for python-gobject</Description>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency release="current">python-gobject</Dependency>
+        </RuntimeDependencies>
+	</Package>
+      
+	<History>
+		<Update release="1">
+			<Date>05-30-2013</Date>
+			<Version>3.4.2</Version>
+			<Comment>Add pygobject to repositories</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

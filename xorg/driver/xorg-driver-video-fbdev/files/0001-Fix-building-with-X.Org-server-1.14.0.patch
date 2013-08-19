@@ -1,0 +1,32 @@
+From de0354a4b9570bffc147c694b1d5d484e72e4753 Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey@solusos.com>
+Date: Tue, 13 Aug 2013 17:19:53 +0100
+Subject: [PATCH] Fix building with X.Org server 1.14.0
+
+---
+ src/fbdev.c |    2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/src/fbdev.c b/src/fbdev.c
+index cd7ebc5..f5a7378 100644
+--- a/src/fbdev.c
++++ b/src/fbdev.c
+@@ -14,7 +14,6 @@
+ #include "xf86_OSproc.h"
+ 
+ #include "mipointer.h"
+-#include "mibstore.h"
+ #include "micmap.h"
+ #include "colormapst.h"
+ #include "xf86cmap.h"
+@@ -845,7 +844,6 @@ FBDevScreenInit(SCREEN_INIT_ARGS_DECL)
+ 	}
+ 
+ 	xf86SetBlackWhitePixels(pScreen);
+-	miInitializeBackingStore(pScreen);
+ 	xf86SetBackingStore(pScreen);
+ 
+ 	/* software cursor */
+-- 
+1.7.10.4
+

@@ -1,0 +1,101 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>libgdata</Name>
+		<Packager>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Packager>
+		<Summary>Add summary</Summary>
+		<Description>Add description</Description>
+		<License>GPLv2+</License>
+		<Archive sha1sum="c7e9b3c55a7d30e2ca4bce960e78f29fd46cfdc6" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/libgdata/0.13/libgdata-0.13.2.tar.xz</Archive>
+        
+        <BuildDependencies>
+            <Dependency>liboauth-devel</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+            <Dependency>libp11-kit-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>libgnome-keyring-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>xz-devel</Dependency>
+            <Dependency>sqlite3-devel</Dependency>
+            <Dependency>gcr-devel</Dependency>
+            <Dependency>gnome-online-accounts-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>curl-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+        </BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>libgdata</Name>
+		<Files>
+			<Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency>liboauth</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>libp11-kit</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>libgnome-keyring</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>libgpg-error</Dependency>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency>xz</Dependency>
+            <Dependency>sqlite3</Dependency>
+            <Dependency>gcr</Dependency>
+            <Dependency>gnome-online-accounts</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>curl</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libpcre</Dependency>
+        </RuntimeDependencies>
+	</Package>
+
+	<Package>
+		<Name>libgdata-devel</Name>
+        <Summary>Development files for libgdata</Summary>
+        <Description>Development files for libgdata</Description>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libgdata</Dependency>
+        </RuntimeDependencies>
+	</Package>
+
+	<Package>
+		<Name>libgdata-docs</Name>
+        <Summary>API Documentation for libgdata</Summary>
+        <Description>API Documentation for libgdata</Description>
+		<Files>
+			<Path fileType="doc">/usr/share/gtk-doc</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libgdata</Dependency>
+        </RuntimeDependencies>
+	</Package>
+          
+	<History>
+		<Update release="1">
+			<Date>05-25-2013</Date>
+			<Version>0.13.2</Version>
+			<Comment>Add libgdata to repositories</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

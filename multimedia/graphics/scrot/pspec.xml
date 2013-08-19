@@ -1,0 +1,44 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>scrot</Name>
+		<Homepage>http://freecode.com/projects/scrot</Homepage>
+		<Packager>
+			<Name>Matias Linares</Name>
+			<Email>matiaslina@gmail.com</Email>
+		</Packager>
+		<Summary>scrot (SCReen shOT) is a simple commandline screen capture utility</Summary>
+		<Description>scrot (SCReen shOT) is a simple commandline screen capture utility that uses imlib2 to grab and save images. Multiple image formats are supported through imlib2's dynamic saver modules.</Description>
+		<License>BSD</License>
+		<Archive sha1sum="674fcb4860f1dcfa02cde7d82414e1e1c731aa75" type="targz">http://linuxbrit.co.uk/downloads/scrot-0.8.tar.gz</Archive>
+		<BuildDependencies>
+			<Dependency>imlib2-devel</Dependency>
+			<Dependency>giblib-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>scrot</Name>
+		<RuntimeDependencies>
+			<Dependency>imlib2</Dependency>
+			<Dependency>giblib</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+			<Path fileType="man">/usr/share/man</Path>
+		</Files>
+	</Package>
+  
+	<History>
+		<Update release="1">
+			<Date>06-09-2013</Date>
+			<Version>0.8</Version>
+			<Comment>Add scrot to repositories</Comment>
+			<Name>Matias Linares</Name>
+			<Email>matiaslina@gmail.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

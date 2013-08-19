@@ -1,0 +1,84 @@
+
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>pekwm</Name>
+	<Homepage>http://www.pekwm.org</Homepage>
+    <Packager>
+        <Name>Justin Krehel</Name>
+        <Email>justin@solusos.com</Email>
+	</Packager>
+	<Summary>pekwm (lightweight and configurable window manager)</Summary>
+	<Description> pekwm is a window manager that once was based on aewm++ but has now evolved enough that it no longer resembles aewm++. It has an expanded feature set included window grouping, autoproperties, xinerama, and more.</Description>
+	<License>GPLv2</License>
+	<Archive sha1sum="d066b87e8a5d5209763ec1f20e01a9fd6df9370b" type="tarbz2">http://www.pekwm.org/projects/pekwm/files/pekwm-0.1.16.tar.bz2</Archive>
+	<BuildDependencies>
+		<Dependency>libxft-devel</Dependency>
+		<Dependency>libjpeg-turbo-devel</Dependency>
+		<Dependency>libx11-devel</Dependency>
+		<Dependency>zlib-devel</Dependency>
+		<Dependency>libxdmcp-devel</Dependency>
+		<Dependency>libxpm-devel</Dependency>
+		<Dependency>libxinerama-devel</Dependency>
+		<Dependency>libxcb-devel</Dependency>
+		<Dependency>libxrender-devel</Dependency>
+		<Dependency>libpng-devel</Dependency>
+		<Dependency>libxext-devel</Dependency>
+		<Dependency>libxrandr-devel</Dependency>
+		<Dependency>libxau-devel</Dependency>
+	</BuildDependencies>
+  </Source>
+
+  <Package>
+    <Name>pekwm</Name>
+	<RuntimeDependencies>
+		<Dependency>bzip2</Dependency>
+		<Dependency>libxft</Dependency>
+		<Dependency>freetype2</Dependency>
+		<Dependency>libjpeg-turbo</Dependency>
+		<Dependency>libx11</Dependency>
+		<Dependency>fontconfig</Dependency>
+		<Dependency>libstdc++</Dependency>
+		<Dependency>zlib</Dependency>
+		<Dependency>libxdmcp</Dependency>
+		<Dependency>libxpm</Dependency>
+		<Dependency>libxinerama</Dependency>
+		<Dependency>libxcb</Dependency>
+		<Dependency>libxrender</Dependency>
+		<Dependency>libpng</Dependency>
+		<Dependency>libgcc</Dependency>
+		<Dependency>libxext</Dependency>
+		<Dependency>expat</Dependency>
+		<Dependency>libxrandr</Dependency>
+		<Dependency>libxau</Dependency>
+	</RuntimeDependencies>
+	<Files>
+		<Path fileType="config">/etc/pekwm</Path>
+		<Path fileType="executable">/usr/bin</Path>
+		<Path fileType="man">/usr/share/man</Path>
+		<Path fileType="data">/usr/share/pekwm/scripts</Path>
+		<Path fileType="data">/usr/share/pekwm/themes</Path>
+		<Path fileType="doc">/usr/share/doc</Path>
+	</Files>
+  </Package>
+
+  <History>
+    <Update release="2">
+		<Date>04-07-2013</Date>
+		<Version>0.1.16</Version>
+		<Comment>Add binary dependencies</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+		  
+    <Update release="1">
+		<Date>03-29-2013</Date>
+		<Version>0.1.16</Version>
+		<Comment>Add pekwm to repositories</Comment>
+		<Name>Justin Krehel</Name>
+		<Email>justin@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>

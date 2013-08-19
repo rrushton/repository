@@ -1,0 +1,83 @@
+
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>vala</Name>
+	<Homepage>https://live.gnome.org/Vala</Homepage>
+    <Packager>
+        <Name>Ikey Doherty</Name>
+        <Email>ikey@solusos.com</Email>
+	</Packager>
+	<Summary>Compiler for the GObject type system</Summary>
+	<Description> Vala is a new programming language that aims to bring modern programming language features to GNOME developers without imposing any additional runtime requirements and without using a different ABI compared to applications and libraries written in C. </Description>
+	<License>GPLv3+</License>
+	<Archive sha1sum="6a453140ccc252a3d46d110ab03da005885754f7" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/vala/0.20/vala-0.20.1.tar.xz</Archive>
+	
+	<BuildDependencies>
+		<Dependency>libpcre-devel</Dependency>
+		<Dependency>glib2-devel</Dependency>	
+	</BuildDependencies>
+  </Source>
+
+  <Package>
+    <Name>vala</Name>
+	<Files>
+		<Path fileType="executable">/usr/bin</Path>
+		<Path fileType="header">/usr/include</Path>
+		<Path fileType="library">/usr/lib/lib*.so*</Path>
+		<Path fileType="data">/usr/lib/pkgconfig</Path>
+		<Path fileType="data">/usr/share/pkgconfig</Path>		
+		<Path fileType="data">/usr/lib/vala-0.20</Path>
+		<Path fileType="data">/usr/share/aclocal</Path>
+		<Path fileType="data">/usr/share/vala-0.20</Path>
+		<Path fileType="data">/usr/share/vala</Path>
+		<Path fileType="man">/usr/share/man</Path>
+		<Path fileType="doc">/usr/share/doc</Path>
+	</Files>
+	<RuntimeDependencies>
+		<Dependency>libpcre</Dependency>
+		<Dependency>glib2</Dependency>		
+	</RuntimeDependencies>
+  </Package>
+
+  <Package>
+    <Name>vala-docs</Name>
+    <Summary>Documentation for Vala</Summary>
+    <Description>Documentation for Vala</Description>
+	<Files>
+		<Path fileType="doc">/usr/share/devhelp</Path>
+	</Files>
+	<RuntimeDependencies>
+		<Dependency release="current">vala</Dependency>
+	</RuntimeDependencies>
+  </Package>
+  
+  
+  <History>
+    <Update release="3">
+		<Date>04-10-2013</Date>
+		<Version>0.20.1</Version>
+		<Comment>Add build and runtime dependencies</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+		  
+    <Update release="2">
+		<Date>04-10-2013</Date>
+		<Version>0.20.1</Version>
+		<Comment>Split the documentation package</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+		   
+    <Update release="1">
+		<Date>04-10-2013</Date>
+		<Version>0.20.1</Version>
+		<Comment>Add vala to repositories</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>

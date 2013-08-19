@@ -1,0 +1,41 @@
+
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>gmp</Name>
+    <Homepage>http://gnu.org/</Homepage>
+    <Packager>
+        <Name>Ikey Doherty</Name>
+        <Email>ikey@solusos.com</Email>
+    </Packager>
+    <Summary>The GMP package contains math libraries. These have useful functions for arbitrary precision arithmetic. </Summary>
+    <Description>The GMP package contains math libraries. These have useful functions for arbitrary precision arithmetic.</Description>
+    <License>GPLv3+</License>
+    <Archive sha1sum="cc272972435b1b7fccabf5797095ef75a181bad1" type="tarxz">http://ftp.gnu.org/gnu/gmp/gmp-5.1.1.tar.xz</Archive>
+    
+    </Source>
+
+  <Package>
+    <Name>gmp</Name>
+    <Files>
+		<Path fileType="header">/usr/include</Path>
+		<Path fileType="library">/usr/lib/lib*.so*</Path>
+		<Path fileType="library">/usr/lib/*.a</Path>
+		<Path fileType="doc">/usr/share/doc</Path>
+		<Path fileType="info">/usr/share/info</Path>
+	</Files>
+  </Package>
+      
+  <History>
+    <Update release="1">
+		<Date>03-25-2013</Date>
+		<Version>5.1.1</Version>
+		<Comment>Add gmp to repositories</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>
+    

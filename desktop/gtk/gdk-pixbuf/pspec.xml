@@ -1,0 +1,121 @@
+
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>gdk-pixbuf</Name>
+	<Homepage>http://www.gnome.org</Homepage>
+    <Packager>
+        <Name>Ikey Doherty</Name>
+        <Email>ikey@solusos.com</Email>
+	</Packager>
+	<Summary>GNOME toolkit for image loading and pixel buffer manipulation</Summary>
+	<Description>The Gdk Pixbuf is a toolkit for image loading and pixel buffer manipulation. It is used by GTK+ 2 and GTK+ 3 to load and manipulate images.</Description>
+	<License>GPLv3+</License>
+	<Archive sha1sum="c1e2b5e7ca5281543f327d805e0b5d5d0c08a6db" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gdk-pixbuf/2.28/gdk-pixbuf-2.28.0.tar.xz</Archive>
+	
+	<BuildDependencies>
+		<Dependency>libtiff-devel</Dependency>
+		<Dependency>libjpeg-turbo-devel</Dependency>
+		<Dependency>zlib-devel</Dependency>
+		<Dependency>libpng-devel</Dependency>
+		<Dependency>libpcre-devel</Dependency>
+		<Dependency>glib2-devel</Dependency>		
+	</BuildDependencies>
+  </Source>
+
+  <Package>
+    <Name>gdk-pixbuf</Name>
+	<Files>
+		<Path fileType="executable">/usr/bin</Path>
+		<Path fileType="library">/usr/lib/gdk-pixbuf-2.0</Path>
+		<Path fileType="library">/usr/lib/lib*.so*</Path>
+		<Path fileType="data">/usr/share/gir-1.0</Path>
+		<Path fileType="locale">/usr/share/locale</Path>
+		<Path fileType="man">/usr/share/man</Path>
+	</Files>
+	<Provides>
+		<COMAR script="package.py">System.Package</COMAR>
+        <COMAR script="packageHandler.py">System.PackageHandler</COMAR>
+	</Provides>
+	<RuntimeDependencies>
+		<Dependency>libtiff</Dependency>
+		<Dependency>libjpeg-turbo</Dependency>
+		<Dependency>zlib</Dependency>
+		<Dependency>libpng</Dependency>
+		<Dependency>libpcre</Dependency>
+		<Dependency>glib2</Dependency>
+	</RuntimeDependencies>
+  </Package>
+
+  <Package>
+    <Name>gdk-pixbuf-devel</Name>
+    <Summary>Development files for gdk-pixbuf</Summary>    
+    <Description>Development files for gdk-pixbuf</Description>
+	<Files>
+		<Path fileType="header">/usr/include</Path>
+		<Path fileType="data">/usr/lib/girepository-1.0</Path>
+		<Path fileType="data">/usr/lib/pkgconfig</Path>
+	</Files>
+	<RuntimeDependencies>
+		<Dependency release="current">gdk-pixbuf</Dependency>
+	</RuntimeDependencies>
+  </Package>
+
+  <Package>
+    <Name>gdk-pixbuf-docs</Name>
+    <Summary>Documentation for gdk-pixbuf</Summary>
+    <Description>Documentation for gdk-pixbuf</Description>
+	<Files>
+		<Path fileType="doc">/usr/share/doc</Path>
+		<Path fileType="doc">/usr/share/gtk-doc</Path>
+	</Files>
+	<RuntimeDependencies>
+		<Dependency release="current">gdk-pixbuf-devel</Dependency>
+	</RuntimeDependencies>
+  </Package>  
+  
+    
+  <History>
+    <Update release="5">
+		<Date>06-05-2013</Date>
+		<Version>2.28.0</Version>
+		<Comment>Add script to update known loaders</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+    
+    <Update release="4">
+		<Date>04-07-2013</Date>
+		<Version>2.28.0</Version>
+		<Comment>Add binary dependencies</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+		  
+    <Update release="3">
+		<Date>04-07-2013</Date>
+		<Version>2.28.0</Version>
+		<Comment>Add a postInstall to update known loaders</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+		  
+    <Update release="2">
+		<Date>04-07-2013</Date>
+		<Version>2.28.0</Version>
+		<Comment>Split -devel and -docs</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+		  		  
+    <Update release="1">
+		<Date>04-07-2013</Date>
+		<Version>2.28.0</Version>
+		<Comment>Add gdk-pixbuf to repositories</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>

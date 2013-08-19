@@ -1,0 +1,119 @@
+
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>gsettings-desktop-schemas</Name>
+    <Homepage>https://www.gnome.org</Homepage>
+    <Packager>
+        <Name>Ikey Doherty</Name>
+        <Email>ikey@solusos.com</Email>
+    </Packager>
+    <Summary>The GSettings Desktop Schemas package contains a collection of GSettings schemas for settings shared by various components of a GNOME Desktop.</Summary>
+    <Description>The GSettings Desktop Schemas package contains a collection of GSettings schemas for settings shared by various components of a GNOME Desktop.</Description>
+    <License>GPLv3+</License>
+    <Archive sha1sum="5dbd91704583378c64df5ff99424c5961fa9a9bc" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gsettings-desktop-schemas/3.9/gsettings-desktop-schemas-3.9.3.tar.xz</Archive>
+    
+    <Patches>
+        <!-- SolusOS specific branding, etc. //-->
+        <!--<Patch level="1">solusos_branding.patch</Patch>//-->
+    </Patches>
+    
+    </Source>
+
+  <Package>
+    <Name>gsettings-desktop-schemas</Name>
+    <Files>
+		<Path fileType="data">/usr/share/GConf/gsettings</Path>
+		<Path fileType="data">/usr/share/glib-2.0/schemas</Path>
+		<Path fileType="localedata">/usr/share/locale</Path>
+		<Path fileType="data">/usr/share/gir-1.0</Path>
+		<Path fileType="data">/usr/lib/girepository-1.0</Path>
+		<Path fileType="doc">/usr/share/doc</Path>
+	</Files>
+    <RuntimeDependencies>
+        <Dependency>dconf</Dependency>
+    </RuntimeDependencies>
+  </Package>
+
+  <Package>
+    <Name>gsettings-desktop-schemas-devel</Name>
+    <Summary>Development files for gsettings-desktop-schemas</Summary>
+    <Description>Development files for gsettings-desktop-schemas</Description>
+    <Files>
+		<Path fileType="header">/usr/include</Path>
+		<Path fileType="data">/usr/share/pkgconfig</Path>
+	</Files>
+	<RuntimeDependencies>
+		<Dependency release="current">gsettings-desktop-schemas</Dependency>
+	</RuntimeDependencies>
+  </Package>      
+        
+  <History>
+    <Update release="8">
+		<Date>08-13-2013</Date>
+		<Version>3.9.3</Version>
+		<Comment>Require dconf in dependencies</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+
+    <Update release="7">
+		<Date>06-26-2013</Date>
+		<Version>3.9.3</Version>
+		<Comment>Upgrade to 3.9.3 as part of GNOME 3.9 migration</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+    
+    <Update release="6">
+		<Date>06-19-2013</Date>
+		<Version>3.8.2</Version>
+		<Comment>Upgrade to 3.8.2 as part of GNOME 3.8 migration</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+    
+    <Update release="5">
+		<Date>06-15-2013</Date>
+		<Version>3.6.1</Version>
+		<Comment>Further branding fixes</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+    
+    <Update release="4">
+		<Date>06-15-2013</Date>
+		<Version>3.6.1</Version>
+		<Comment>Set default themes, etc.</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+    
+    <Update release="3">
+		<Date>05-06-2013</Date>
+		<Version>3.6.1</Version>
+		<Comment>Apply SolusOS branding</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+    
+    <Update release="2">
+		<Date>04-13-2013</Date>
+		<Version>3.6.1</Version>
+		<Comment>Split -devel package</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+		  
+    <Update release="1">
+		<Date>04-13-2013</Date>
+		<Version>3.6.1</Version>
+		<Comment>Add gsettings-desktop-schemas to repositories</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>
+    

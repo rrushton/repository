@@ -1,0 +1,77 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>json-glib</Name>
+        <Homepage>https://live.gnome.org/JsonGlib</Homepage>
+		<Packager>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Packager>
+		<Summary>JSON GLib Package</Summary>
+		<Description>The JSON GLib package is a library providing serialization and deserialization support for the JavaScript Object Notation (JSON) format described by RFC 4627.</Description>
+		<License>GPLv2+</License>
+		<Archive sha1sum="9e0af8625586fc2e70e12b4beae31b120cff5090" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/json-glib/0.16/json-glib-0.16.0.tar.xz</Archive>
+        
+        <BuildDependencies>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+        </BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>libjson-glib</Name>
+		<Files>
+			<Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency>libffi</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libpcre</Dependency>
+        </RuntimeDependencies>
+	</Package>
+
+	<Package>
+		<Name>libjson-glib-devel</Name>
+        <Summary>Development files for libjson-glib</Summary>
+        <Description>Development files for libjson-glib</Description>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libjson-glib</Dependency>
+        </RuntimeDependencies>
+	</Package>
+
+	<Package>
+		<Name>libjson-glib-docs</Name>
+        <Summary>API Documentation for libjson-glib</Summary>
+        <Description>API Documentation for libjson-glib</Description>
+		<Files>
+			<Path fileType="header">/usr/share/gtk-doc</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libjson-glib</Dependency>
+        </RuntimeDependencies>
+	</Package>
+          
+	<History>
+		<Update release="1">
+			<Date>05-25-2013</Date>
+			<Version>0.16.0</Version>
+			<Comment>Add json-glib to repositories</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

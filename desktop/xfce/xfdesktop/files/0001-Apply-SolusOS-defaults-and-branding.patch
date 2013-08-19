@@ -1,0 +1,29 @@
+From c76aed6fb900e5059206c4d8192ab7581bce7727 Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey@solusos.com>
+Date: Sat, 10 Aug 2013 16:01:54 +0100
+Subject: [PATCH] Apply SolusOS defaults and branding
+
+---
+ common/xfdesktop-common.h |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/common/xfdesktop-common.h b/common/xfdesktop-common.h
+index df767f0..00a9f44 100644
+--- a/common/xfdesktop-common.h
++++ b/common/xfdesktop-common.h
+@@ -32,10 +32,10 @@
+ #include <X11/Xlib.h>
+ 
+ #define XFDESKTOP_CHANNEL        "xfce4-desktop"
+-#define DEFAULT_BACKDROP         DATADIR "/backgrounds/xfce/xfce-blue.jpg"
++#define DEFAULT_BACKDROP         DATADIR "/backgrounds/Euphoria.png"
+ #define DEFAULT_BACKDROP_LIST    "xfce4/desktop/backdrop.list"
+ #define DEFAULT_ICON_FONT_SIZE   12
+-#define DEFAULT_ICON_SIZE        32
++#define DEFAULT_ICON_SIZE        48
+ #define ITHEME_FLAGS             (GTK_ICON_LOOKUP_USE_BUILTIN \
+                                   | GTK_ICON_LOOKUP_GENERIC_FALLBACK \
+                                   | GTK_ICON_LOOKUP_FORCE_SIZE)
+-- 
+1.7.10.4
+

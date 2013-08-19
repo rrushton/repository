@@ -1,0 +1,58 @@
+
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>libfs</Name>
+    <Packager>
+        <Name>Ikey Doherty</Name>
+        <Email>ikey@solusos.com</Email>
+    </Packager>
+    <Summary>X Font Service client library</Summary>
+    <Description>This library is used by clients of X Font Servers (xfs), such as xfsinfo, xfslsfonts, and the X servers themselves.</Description>
+    <License>GPLv3+</License>
+    <Archive sha1sum="f114f32f60eb84d3e1d0e6f0dfe7679b07e91295" type="tarbz2">mirrors://xorg/individual/lib/libFS-1.0.4.tar.bz2</Archive>
+    </Source>
+
+  <Package>
+    <Name>libfs</Name>
+    <Files>
+		<Path fileType="library">/usr/lib/lib*so*</Path>
+		<Path fileType="doc">/usr/share/doc</Path> 
+	</Files>
+  </Package>
+
+  <Package>
+    <Name>libfs-devel</Name>
+    <Summary>Development files for libfs</Summary>
+    <Description>Development files for libfs</Description>
+    <Files>
+		<Path fileType="header">/usr/include</Path>
+		<Path fileType="library">/usr/lib/*.a</Path>
+		<Path fileType="data">/usr/lib/pkgconfig  </Path>
+	</Files>
+	<RuntimeDependencies>
+		<Dependency release="2">libfs</Dependency>
+	</RuntimeDependencies>
+  </Package>
+    
+  <History>
+    <Update release="2">
+		<Date>03-17-2013</Date>
+		<Version>1.0.4</Version>
+		<Comment>Split -devel package</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+	
+    <Update release="1">
+		<Date>03-11-2013</Date>
+		<Version>1.0.4</Version>
+		<Comment>Add libfs to repositories</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>
+    

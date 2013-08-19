@@ -1,0 +1,49 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>wayland</Name>
+		<Packager>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Packager>
+		<Summary>Wayland is intended as a simpler replacement for X, easier to develop and maintain.</Summary>
+		<Description>Wayland is a protocol for a compositor to talk to its clients as well as a C library implementation of that protocol. The compositor can be a standalone display server running on Linux kernel modesetting and evdev input devices, an X application, or a wayland client itself. The clients can be traditional applications, X servers (rootless or fullscreen) or other display servers.</Description>
+		<License>MIT</License>
+		<Archive sha1sum="70cb0517d4a200b46572f868846e42162011ee87" type="tarxz">http://wayland.freedesktop.org/releases/wayland-1.1.0.tar.xz</Archive>
+	</Source>
+
+	<Package>
+		<Name>wayland</Name>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>wayland-devel</Name>
+        <Summary>Development files for wayland</Summary>
+        <Description>Development files for wayland</Description>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency release="current">wayland</Dependency>
+        </RuntimeDependencies>
+	</Package>
+      
+	<History>
+		<Update release="1">
+			<Date>06-24-2013</Date>
+			<Version>1.1.0</Version>
+			<Comment>Add wayland to repositories</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

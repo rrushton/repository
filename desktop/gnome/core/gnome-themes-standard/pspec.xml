@@ -1,0 +1,138 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>gnome-themes-standard</Name>
+		<Packager>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Packager>
+		<Summary>The Standard GNOME3 Themes Package</Summary>
+		<Description>The GNOME Themes Standard package contains various components of the default GNOME 3 theme.</Description>
+		<License>GPLv2+</License>
+		<Archive sha1sum="c7318d77636e9bc8546af77cf9355a1c27db6538" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-themes-standard/3.9/gnome-themes-standard-3.9.3.tar.xz</Archive>
+        
+        <BuildDependencies>
+            <Dependency versionFrom="3.9.6">libgtk-3-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>harfbuzz-devel</Dependency>
+            <Dependency>libxcursor-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libicu-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>libxi-devel</Dependency>
+            <Dependency>librsvg-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libxinerama-devel</Dependency>
+            <Dependency>libatk-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>libxrandr-devel</Dependency>
+            <Dependency>libxdamage-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>libgtk-2-devel</Dependency>
+            <Dependency>libxfixes-devel</Dependency>
+            <Dependency>xz-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libxcomposite-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libsm-devel</Dependency>
+            <Dependency>at-spi2-atk-devel</Dependency>
+        </BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>gnome-themes-standard</Name>
+		<Files>
+			<Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="library">/usr/lib/gtk-2.0</Path>
+            <Path fileType="library">/usr/lib/gtk-3.0</Path>
+            <Path fileType="data">/usr/share/gnome-background-properties</Path>
+            <Path fileType="data">/usr/share/icons/Adwaita</Path>
+            <Path fileType="data">/usr/share/icons/HighContrast</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/themes</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency versionFrom="3.9.6">libgtk-3</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>libxcursor</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>libicu</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>libxi</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>librsvg</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxinerama</Dependency>
+            <Dependency>libatk</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libxrandr</Dependency>
+            <Dependency>libxdamage</Dependency>
+            <Dependency>libcroco</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>libgtk-2</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>libxfixes</Dependency>
+            <Dependency>xz</Dependency>
+            <Dependency>at-spi2</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libxcomposite</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libsm</Dependency>
+            <Dependency>at-spi2-atk</Dependency>
+        </RuntimeDependencies>
+	</Package>
+  
+	<History>
+		<Update release="3">
+			<Date>06-25-2013</Date>
+			<Version>3.9.3</Version>
+			<Comment>Upgrade to 3.9.3 as part of GNOME3.9 migration</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+        
+		<Update release="2">
+			<Date>06-19-2013</Date>
+			<Version>3.8.1</Version>
+			<Comment>Upgrade to 3.8.1 as part of GNOME3.8 migration</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+        
+		<Update release="1">
+			<Date>06-05-2013</Date>
+			<Version>3.6.5</Version>
+			<Comment>Add gnome-themes-standard to repositories</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

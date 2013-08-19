@@ -1,0 +1,107 @@
+
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>libsoup</Name>
+    <Homepage>https://live.gnome.org/LibSoup</Homepage>
+    <Packager>
+        <Name>Ikey Doherty</Name>
+        <Email>ikey@solusos.com</Email>
+    </Packager>
+    <Summary>GNOME HTTP client/server library</Summary>
+    <Description>The libsoup is HTTP client/server library for GNOME. It uses GObject and the GLib main loop to integrate with GNOME applications and it also has asynchronous API for use in threaded applications.</Description>
+    <License>GPLv3+</License>
+    <Archive sha1sum="8d2a660879c4cf00379ceab04c3e479dedd1405c" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/libsoup/2.42/libsoup-2.42.2.tar.xz</Archive>
+    
+    <IsA>library</IsA>
+    
+    <BuildDependencies>
+		<Dependency>libxml2-devel</Dependency>
+		<Dependency>zlib-devel</Dependency>
+		<Dependency>xz-devel</Dependency>
+		<Dependency>libpcre-devel</Dependency>
+		<Dependency>glib2-devel</Dependency>
+    </BuildDependencies>
+    </Source>
+
+  <Package>
+    <Name>libsoup</Name>
+    <Files>
+		<Path fileType="library">/usr/lib/lib*.so*</Path>
+		<Path fileType="doc">/usr/share/doc</Path>
+		<Path fileType="data">/usr/share/gir-1.0</Path>
+		<Path fileType="data">/usr/lib/girepository-1.0</Path>
+		<Path fileType="localedata">/usr/share/locale</Path>
+	</Files>
+	<RuntimeDependencies>
+		<Dependency>libxml2</Dependency>
+		<Dependency>glib-networking</Dependency>
+		<Dependency>zlib</Dependency>
+		<Dependency>xz</Dependency>
+		<Dependency>libpcre</Dependency>
+		<Dependency>glib2</Dependency>
+	</RuntimeDependencies>
+  </Package>
+
+  <Package>
+    <Name>libsoup-devel</Name>
+    <Summary>Development files for libsoup</Summary>
+    <Description>Development files for libsoup</Description>
+    <Files>
+		<Path fileType="header">/usr/include</Path>
+		<Path fileType="data">/usr/lib/pkgconfig</Path>
+	</Files>
+	<RuntimeDependencies>
+		<Dependency release="current">libsoup</Dependency>
+	</RuntimeDependencies>
+  </Package> 
+
+  <Package>
+    <Name>libsoup-docs</Name>
+    <Summary>API Documentation for libsoup</Summary>
+    <Description>API Documentation for libsoup</Description>
+    <Files>
+		<Path fileType="doc">/usr/share/gtk-doc</Path>
+	</Files>
+	<RuntimeDependencies>
+		<Dependency release="current">libsoup-devel</Dependency>
+	</RuntimeDependencies>
+  </Package> 
+        
+  <History>
+    <Update release="4">
+		<Date>06-19-2013</Date>
+		<Version>2.42.2</Version>
+		<Comment>Upgrade to 2.42.2 as part of GNOME3.8 migration</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+    
+    <Update release="3">
+		<Date>04-14-2013</Date>
+		<Version>2.40.3</Version>
+		<Comment>Add build and runtime dependencies</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+		  
+    <Update release="2">
+		<Date>04-14-2013</Date>
+		<Version>2.40.3</Version>
+		<Comment>Split -devel and -docs packages</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+		  
+    <Update release="1">
+		<Date>04-14-2013</Date>
+		<Version>2.40.3</Version>
+		<Comment>Add libsoup to repositories</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>
+    

@@ -1,0 +1,49 @@
+
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>mutt</Name>
+	<Homepage>http://www.mutt.org</Homepage>
+    <Packager>
+        <Name>Justin Krehek</Name>
+        <Email>justin@solusos.com</Email>
+	</Packager>
+	<Summary>Mutt (Small, powerful text based email client)</Summary>
+	<Description> Mutt is a small but powerful text-based mail client for Unix operating systems. It was originally based on ELM, and was written by Michael Elkins.</Description>
+	<License>GPLv2</License>
+	<Archive sha1sum="a8475f2618ce5d5d33bff85c0affdf21ab1d76b9" type="targz">http://sourceforge.net/projects/mutt/files/mutt-dev/mutt-1.5.21.tar.gz</Archive>
+	<BuildDependencies>
+		<Dependency>ncurses-devel</Dependency>
+		<Dependency>gpgme</Dependency>
+		<Dependency>gnupg</Dependency>
+	</BuildDependencies>
+  </Source>
+
+  <Package>
+    <Name>mutt</Name>
+	<Files>
+		<Path fileType="config">/etc/mutt</Path>
+		<Path fileType="executable">/usr/bin</Path>
+		<Path fileType="doc">/usr/share/doc/mutt</Path>
+		<Path fileType="localedata">/usr/share/locale</Path>
+		<Path fileType="man">/usr/share/man</Path>
+	</Files>
+	<RuntimeDependencies>
+		<Dependency>ncurses</Dependency>
+		<Dependency>gnupg</Dependency>
+	</RuntimeDependencies>
+  </Package>
+
+  
+  <History> 
+    <Update release="1">
+		<Date>03-24-2013</Date>
+		<Version>1.5.21</Version>
+		<Comment>Add mutt to repositories</Comment>
+		<Name>Justin Krehel</Name>
+		<Email>justin@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>

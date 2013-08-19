@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>libxfce4util</Name>
+		<Packager>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Packager>
+		<Summary>Basic function library for XFCE</Summary>
+		<Description>This package contains libxfce4util4, the basic utility function library for Xfce4. If you intend to run Xfce4, you need this library.</Description>
+		<License>GPLv2+</License>
+		<Archive sha1sum="c6d702e3974b7dff55fd95c926ffbf62e8a96bc8" type="tarbz2">http://archive.xfce.org/xfce/4.10/src/libxfce4util-4.10.0.tar.bz2</Archive>
+
+        <BuildDependencies>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>libxfce4util</Name>
+		<Files>
+			<Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="executable">/usr/sbin/xfce4-kiosk-query</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency>libpcre</Dependency>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+	</Package>
+
+	<Package>
+		<Name>libxfce4util-devel</Name>
+        <Summary>Development files for libxfce4util</Summary>
+        <Description>Development files for libxfce4util</Description>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libxfce4util</Dependency>
+        </RuntimeDependencies>
+	</Package>
+
+	<Package>
+		<Name>libxfce4util-docs</Name>
+        <Summary>API Documentation for libxfce4util</Summary>
+        <Description>API Documentation for libxfce4util</Description>
+		<Files>
+			<Path fileType="doc">/usr/share/gtk-doc</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libxfce4util-devel</Dependency>
+        </RuntimeDependencies>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>08-06-2013</Date>
+			<Version>4.10.0</Version>
+			<Comment>Add libxfce4util to repositories</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+	</History>
+</PISI>

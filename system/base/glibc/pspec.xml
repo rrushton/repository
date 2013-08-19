@@ -1,0 +1,37 @@
+
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>glibc</Name>
+    <Packager>
+        <Name>Ikey Doherty</Name>
+        <Email>ikey@solusos.com</Email>
+    </Packager>
+    <Summary>This package contains the GNU C libraries and header files</Summary>
+    <Description>This package contains the GNU C libraries and header files.  The GNU C library was written originally by Roland McGrath, and is currently maintained by Ulrich Drepper.  Some parts of the library were contributed or worked on by other people. You'll need this package to compile programs.
+    </Description>
+    <License>GPLv3+</License>
+    <Archive sha1sum="e210daf1d5d6d6da7bf216fbaad4922bd642952b" type="tarxz">http://ftp.gnu.org/gnu/glibc/glibc-2.17.tar.xz</Archive>
+    
+    </Source>
+
+  <Package>
+    <Name>glibc</Name>
+    <Files>
+        <!-- TODO: Fill out paths and split packages //-->
+		<Path fileType="*">/</Path>
+	</Files>
+  </Package>
+  
+  <History>
+    <Update release="1">
+		<Date>03-09-2013</Date>
+		<Version>2.17</Version>
+		<Comment>Initial addition to repo</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>

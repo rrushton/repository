@@ -1,0 +1,43 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>gpgme</Name>
+    <Packager>
+        <Name>Justin Krehel</Name>
+        <Email>justin@solusos.com</Email>
+    </Packager>
+    <Summary>language library in C for cryptography support</Summary>
+	<Description>GPGME (GnuPG Made Easy) is a C language library that allows to add support for cryptography to a program. It is designed to make access to public key crypto engines like GnuPG or GpgSM easier for applications. GPGME provides a high-level crypto API for encryption, decryption, signing, signature verification and key management.</Description>
+	<License>GPLv3</License>
+	<Archive sha1sum="897e36c1d3f6595d69fb37c820aaa162daa0e369" type="tarbz2">ftp://ftp.gnupg.org/gcrypt/gpgme/gpgme-1.4.0.tar.bz2</Archive>
+	<BuildDependencies>
+		<Dependency>gnupg</Dependency>
+		<Dependency>libassuan</Dependency>
+		<Dependency>libgpg-error</Dependency>
+	</BuildDependencies>
+    </Source>
+
+  <Package>
+    <Name>gpgme</Name>
+    <Files>
+		<Path fileType="executable">/usr/bin</Path>
+		<Path fileType="header">/usr/include</Path>
+		<Path fileType="library">/usr/lib</Path>
+		<Path fileType="data">/usr/share/aclocal</Path>
+		<Path fileType="data">/usr/share/common-lisp</Path>
+		<Path fileType="info">/usr/share/info</Path>
+	</Files>
+  </Package>
+  
+  <History>
+    <Update release="1">
+		<Date>03-24-2013</Date>
+		<Version>1.4.0</Version>
+		<Comment>Added gpgme to the repository</Comment>
+		<Name>Justin Krehel</Name>
+		<Email>justin@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>

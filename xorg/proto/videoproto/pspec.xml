@@ -1,0 +1,37 @@
+
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>videoproto</Name>
+    <Packager>
+        <Name>Ikey Doherty</Name>
+        <Email>ikey@solusos.com</Email>
+    </Packager>
+    <Summary>X Video Extension</Summary>
+    <Description>This extension provides a protocol for a video output mechanism, mainly to rescale video playback in the video controller hardware.</Description>
+    <License>GPLv3+</License>
+    <Archive sha1sum="bb8b366687a7f345e3a8697bac516cb436cbf4b2" type="tarbz2">mirrors://xorg/individual/proto/videoproto-2.3.1.tar.bz2</Archive>
+    </Source>
+
+  <Package>
+    <Name>videoproto</Name>
+    <Files>
+		<Path fileType="header">/usr/include</Path>
+		<Path fileType="header">/usr/lib/pkgconfig</Path>
+		<Path fileType="doc">/usr/share/doc</Path>
+	</Files>
+  </Package>
+  
+  <History>
+    <Update release="1">
+		<Date>03-09-2013</Date>
+		<Version>2.3.1</Version>
+		<Comment>Add videoproto to repositories</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>
+    

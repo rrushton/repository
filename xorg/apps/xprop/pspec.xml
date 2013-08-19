@@ -1,0 +1,33 @@
+<PISI>
+  <Source>
+    <Name>xprop</Name>
+    <Packager>
+        <Name>Ikey Doherty</Name>
+        <Email>ikey@solusos.com</Email>
+    </Packager>
+    <Summary>X.Org Applications: xprop</Summary>
+    <Description>X.Org Applications: xprop</Description>
+    <License>GPLv3+</License>
+    <Archive sha1sum="d531be0f5f2b7758216ea4d7890f88c42c5fa3fd" type="tarbz2">http://xorg.freedesktop.org/releases/individual/app/xprop-1.2.1.tar.bz2</Archive>
+    </Source>
+
+  <Package>
+    <Name>xprop</Name>
+    <Files>
+		<Path fileType="executable">/usr/bin</Path>
+		<Path fileType="man">/usr/share/man</Path>
+	</Files>
+  </Package>
+      
+  <History>
+	
+    <Update release="1">
+		<Date>03-20-2013</Date>
+		<Version>1.2.1</Version>
+		<Comment>Add xprop to repositories</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+  </History>
+
+</PISI>

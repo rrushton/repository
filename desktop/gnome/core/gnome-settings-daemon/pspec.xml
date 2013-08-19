@@ -1,0 +1,212 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>gnome-settings-daemon</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+		<Packager>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Packager>
+		<Summary>Daemon handling the GNOME session settings</Summary>
+		<Description>This package contains the daemon which is responsible for setting the various parameters of a GNOME session and the applications that run under it.</Description>
+		<License>GPLv2+</License>
+		<Archive sha1sum="55c7235eefb6ee54a3fa95b5e5a2d411bfd7627d" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-settings-daemon/3.9/gnome-settings-daemon-3.9.3.tar.xz</Archive>
+        
+        <Patches>
+            <Patch level="1">font_fixes.patch</Patch>
+        </Patches>
+        
+        <BuildDependencies>
+            <Dependency>cups-devel</Dependency>
+            <Dependency>recordproto</Dependency>
+            <Dependency>libflac-devel</Dependency>
+            <Dependency>xorg-driver-input-wacom-devel</Dependency>
+            <Dependency>packagekit-devel</Dependency>
+            <Dependency>colord-devel</Dependency>
+            <Dependency>liblcms2-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>json-c-devel</Dependency>
+            <Dependency>ibus-devel</Dependency>
+            <Dependency>harfbuzz-devel</Dependency>
+            <Dependency>libxcursor-devel</Dependency>
+            <Dependency>libxtst-devel</Dependency>
+            <Dependency>libnspr-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libicu-devel</Dependency>
+            <Dependency>systemd-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>libnss-devel</Dependency>
+            <Dependency>libxi-devel</Dependency>
+            <Dependency versionFrom="3.9.1.1">libgnome-desktop-devel</Dependency>
+            <Dependency>libxfixes-devel</Dependency>
+            <Dependency>libice-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libxinerama-devel</Dependency>
+            <Dependency>libatk-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>libxrandr-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>libwacom-devel</Dependency>
+            <Dependency>sqlite3-devel</Dependency>
+            <Dependency>libogg-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency versionFrom="3.9.6">libgtk-3-devel</Dependency>
+            <Dependency>libsndfile-devel</Dependency>
+            <Dependency>libxdamage-devel</Dependency>
+            <Dependency>attr-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>libcanberra-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>pulseaudio-devel</Dependency>
+            <Dependency>libxkbfile-devel</Dependency>
+            <Dependency>libxcomposite-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency>upower-devel</Dependency>
+            <Dependency>libvorbis-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libsm-devel</Dependency>
+            <Dependency>at-spi2-atk-devel</Dependency>        
+        </BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>gnome-settings-daemon</Name>
+		<Files>
+			<Path fileType="library">/usr/lib/gnome-settings-daemon-3.0</Path>
+            <Path fileType="executable">/usr/lib/gnome-settings-daemon</Path>
+            <Path fileType="data">/usr/share/GConf</Path>
+            <Path fileType="data">/usr/share/glib-2.0/schemas</Path>
+            <Path fileType="data">/usr/share/gnome-settings-daemon-3.0</Path>
+            <Path fileType="data">/usr/share/gnome-settings-daemon</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/polkit-1</Path>
+            <Path fileType="data">/etc/xdg</Path>
+            <Path fileType="config">/etc/gnome-settings-daemon</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency>cups</Dependency>
+            <Dependency>packagekit</Dependency>
+            <Dependency>colord</Dependency>
+            <Dependency>liblcms2</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>json-c</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>ibus</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>libxcursor</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>libxtst</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libnspr</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libtool</Dependency>
+            <Dependency>dbus-glib</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>libicu</Dependency>
+            <Dependency>systemd</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>libnss</Dependency>
+            <Dependency>libxi</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency versionFrom="3.9.1.1">libgnome-desktop</Dependency>
+            <Dependency>libxfixes</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxinerama</Dependency>
+            <Dependency>libatk</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libxrandr</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>libcap2</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libwacom</Dependency>
+            <Dependency>sqlite3</Dependency>
+            <Dependency>libogg</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency versionFrom="3.9.6">libgtk-3</Dependency>
+            <Dependency>libsndfile</Dependency>
+            <Dependency>libxdamage</Dependency>
+            <Dependency>attr</Dependency>
+            <Dependency>at-spi2</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>pulseaudio</Dependency>
+            <Dependency>libxkbfile</Dependency>
+            <Dependency>libxcomposite</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>upower</Dependency>
+            <Dependency>libvorbis</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libsm</Dependency>
+            <Dependency>at-spi2-atk</Dependency>
+        </RuntimeDependencies>
+	</Package>
+
+	<Package>
+		<Name>gnome-settings-daemon-devel</Name>
+        <Summary>Development files for gnome-settings-daemon</Summary>
+        <Description>Development files for gnome-settings-daemon</Description>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency release="current">gnome-settings-daemon</Dependency>
+        </RuntimeDependencies>
+	</Package>
+      
+	<History>
+		<Update release="4">
+			<Date>06-26-2013</Date>
+			<Version>3.9.3</Version>
+			<Comment>Upgrade to 3.9.3 as part of the GNOME3.9 migration</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+        
+		<Update release="3">
+			<Date>06-19-2013</Date>
+			<Version>3.8.3</Version>
+			<Comment>Upgrade to 3.8.3 as part of the GNOME3.8 migration</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+        
+		<Update release="2">
+			<Date>06-11-2013</Date>
+			<Version>3.6.4</Version>
+			<Comment>Add PackageKit support, fix default RGBA/font values</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+        
+		<Update release="1">
+			<Date>06-05-2013</Date>
+			<Version>3.6.4</Version>
+			<Comment>Add gnome-settings-daemon to repositories</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

@@ -1,0 +1,120 @@
+
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>llvm</Name>
+    <Homepage>http://llvm.org/</Homepage>
+    <Packager>
+        <Name>Ikey Doherty</Name>
+        <Email>ikey@solusos.com</Email>
+    </Packager>
+    <Summary>Low Level Virtual Machine (Reusable compiler and toolchains</Summary>
+    <Description>The LLVM package contains a collection of modular and reusable compiler and toolchain technologies. The Low Level Virtual Machine (LLVM) Core libraries provide a modern source and target-independent optimizer, along with code generation support for many popular CPUs (as well as some less common ones!). These libraries are built around a well specified code representation known as the LLVM intermediate representation ("LLVM IR"). </Description>
+    <License>NCSA</License>
+    <Archive sha1sum="42d139ab4c9f0c539c60f5ac07486e9d30fc1280" type="targz">http://llvm.org/releases/3.2/llvm-3.2.src.tar.gz</Archive>
+    <Archive sha1sum="b0515298c4088aa294edc08806bd671f8819f870" target="llvm-3.2.src/tools" type="targz">http://llvm.org/releases/3.2/clang-3.2.src.tar.gz</Archive>
+    <Archive sha1sum="718c0249a00e928f8bba32c84771da998ea4d42f" target="llvm-3.2.src/projects" type="targz">http://llvm.org/releases/3.2/compiler-rt-3.2.src.tar.gz</Archive>
+    
+    <AdditionalFiles>
+		<AdditionalFile target="fix_darwin_issue.patch">fix_darwin_issue.patch</AdditionalFile>
+    </AdditionalFiles>
+    <Patches>
+		<Patch level="1">llvm-3.2-blfs_paths-1.patch</Patch>
+		<Patch level="1">R600-Mesa-9.1.patch</Patch>
+		<Patch level="1">llvm-3.2-r600_fixes-1.patch</Patch>
+    </Patches>
+    </Source>
+
+  <Package>
+    <Name>llvm</Name>
+    <Files>
+		<Path fileType="executable">/usr/bin/bugpoint</Path>
+		<Path fileType="executable">/usr/bin/c-index-test</Path>
+		<Path fileType="executable">/usr/bin/ll*</Path>
+		<Path fileType="executable">/usr/bin/macho-dump</Path>
+		<Path fileType="executable">/usr/bin/opt</Path>
+		<Path fileType="library">/usr/lib/llvm/*.so*</Path>
+		<Path fileType="library">/usr/lib/libLLVM*.so*</Path>
+	</Files>
+  </Package>
+
+  <Package>
+    <Name>llvm-devel</Name>
+    <Summary>Development files for LLVM</Summary>
+    <Description>Development files required to build applications using LLVM</Description>
+    <Files>
+		<Path fileType="header">/usr/include/llvm*</Path>
+		<Path fileType="library">/usr/lib/llvm/*.a</Path>
+	</Files>
+	<RuntimeDependencies>
+		<Dependency release="current">llvm</Dependency>
+	</RuntimeDependencies>
+  </Package>
+
+  <Package>
+    <Name>llvm-docs</Name>
+    <Summary>API Documentation for LLVM</Summary>
+    <Description>API Documentation for developers wishing to use the LLVM libraries</Description>
+    <Files>
+		<Path fileType="doc">/usr/share/doc/llvm</Path>
+	</Files>
+	<RuntimeDependencies>
+		<Dependency release="current">llvm</Dependency>
+	</RuntimeDependencies>
+  </Package>
+    
+  <Package>
+    <Name>clang</Name>
+    <Summary>Clang provide a new C, C++, Objective C and Objective C++ front-ends and runtime libraries for the LLVM.</Summary>
+    <Description>Clang provide a new C, C++, Objective C and Objective C++ front-ends and runtime libraries for the LLVM.</Description>
+    <Files>
+		<Path fileType="header">/usr/bin/clang*</Path>
+		<Path fileType="header">/usr/lib/clang/</Path>
+		<Path fileType="man">/usr/share/man</Path>
+	</Files>
+	<RuntimeDependencies>
+		<Dependency release="current">llvm</Dependency>
+	</RuntimeDependencies>
+  </Package>
+
+  <Package>
+    <Name>clang-devel</Name>
+    <Summary>Development files for Clang</Summary>
+    <Description>Development files for developers wishing to build applications using Clang</Description>
+    <Files>
+		<Path fileType="header">/usr/include/clang*</Path>
+	</Files>
+	<RuntimeDependencies>
+		<Dependency release="current">clang</Dependency>
+	</RuntimeDependencies>
+  </Package>
+      
+  <History>
+    <Update release="3">
+		<Date>05-26-2013</Date>
+		<Version>3.2</Version>
+		<Comment>Move llvm/clang out of system.devel</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+          
+    <Update release="2">
+		<Date>03-25-2013</Date>
+		<Version>3.2</Version>
+		<Comment>Split into *devel and clang* packages</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+	
+    <Update release="1">
+		<Date>03-20-2013</Date>
+		<Version>3.2</Version>
+		<Comment>Add llvm to repositories</Comment>
+		<Name>SolusOS Developers</Name>
+		<Email>dev@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>
+    

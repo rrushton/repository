@@ -1,0 +1,43 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>diffstat</Name>
+        <Homepage>http://invisible-island.net/diffstat/</Homepage>
+        <Packager>
+            <Name>Matias Linares</Name>
+            <Email>matiaslina@gmail.com</Email>
+        </Packager>
+        <Summary>diffstat reads the output of diff and displays a histogram of the insertions, deletions, and modifications per-file.</Summary>
+        <Description>diffstat reads the output of diff and displays a histogram of the insertions, deletions, and modifications per-file. It is useful for reviewing large, complex patch files.</Description>
+        <License>GPLv2</License>
+
+        <Archive sha1sum="034c3a72e5d06f5433cdba8c1b6d25146dd699d1" type="targz">http://invisible-island.net/datafiles/release/diffstat.tar.gz</Archive>
+        <BuildDependencies>
+            <!-- The configure check this dependencies -->
+            <Dependency>xz</Dependency>
+            <Dependency>gzip</Dependency>
+            <Dependency>bzip2</Dependency>
+        </BuildDependencies>
+
+    </Source>
+
+    <Package>
+        <Name>diffstat</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+  <History>
+      <Update release="1">
+          <Date>04-04-2013</Date>
+          <Version>1.56</Version>
+          <Comment>First release</Comment>
+          <Name>Matias Linares</Name>
+          <Email>matiaslina@gmail.com</Email>
+      </Update>
+  </History>
+
+</PISI>

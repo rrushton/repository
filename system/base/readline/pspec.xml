@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>readline</Name>
+        <Homepage>http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html</Homepage>
+        <Packager>
+            <Name>SolusOS Developers</Name>
+            <Email>dev@solusos.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Another cute console display library</Summary>
+        <Description>The GNU Readline library provides a set of functions for use by applications that allow users to edit command lines as they are typed in. Both Emacs and vi editing modes are available. The Readline library includes additional functions to maintain a list of previously-entered command lines, to recall and perhaps reedit those lines, and perform csh-like history expansion on previous commands.</Description>
+        <Archive sha1sum="a9761cd9c3da485eb354175fcc2fe35856bc43ac" type="targz">http://ftp.gnu.org/gnu/readline/readline-6.2.tar.gz</Archive>
+        <Patches>
+            <!-- Official patches ftp://ftp.cwru.edu/pub/bash/readline-6.2-patches/ -->
+            <Patch>readline62-001</Patch>
+            <Patch>readline62-002</Patch>
+            <Patch>readline62-003</Patch>
+            <Patch>readline62-004</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>readline</Name>
+        <Files>
+            <Path fileType="*">/</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>03-09-2013</Date>
+            <Version>6.2.004</Version>
+            <Comment>Add to repos</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+</PISI>
+
+

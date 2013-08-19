@@ -1,0 +1,45 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>mc</Name>
+    <Packager>
+        <Name>Justin Krehel</Name>
+        <Email>justin@solusos.com</Email>
+    </Packager>
+    <Summary>GNU midnight commander (ncurses based file manager)</Summary>
+	<Description>GNU Midnight Commander is a visual file manager that allows full file management using the terminal and utilizing ncurses. It allows standard features such as copying, moving, deleting, editing, and searching files.</Description>
+	<License>GPLv2</License>
+	<Archive sha1sum="5f1b1881735911da3e8ea765de48bdc8226abead" type="tarxz">http://www.midnight-commander.org/downloads/mc-4.8.7.tar.xz</Archive>
+	<BuildDependencies>
+		<Dependency>ncurses-devel</Dependency>
+		<Dependency>gpm-devel</Dependency>
+	</BuildDependencies>
+  </Source>
+
+  <Package>
+    <Name>mc</Name>
+    <Files>
+		<Path fileType="config">/etc/mc</Path>
+		<Path fileType="executable">/usr/bin</Path>
+		<Path fileType="executable">/usr/libexec/mc</Path>
+		<Path fileType="executable">/usr/libexec/mc/ext.d</Path>
+		<Path fileType="data">/usr/libexec/mc/extfs.d</Path>
+		<Path fileType="executable">/usr/libexec/mc/fish</Path>
+		<Path fileType="localedata">/usr/share/locale</Path>
+		<Path fileType="man">/usr/share/man</Path>
+		<Path fileType="data">/usr/share/mc</Path>
+	</Files>
+  </Package>
+  
+  <History>
+    <Update release="1">
+		<Date>03-21-2013</Date>
+		<Version>4.8.7</Version>
+		<Comment>Added mc to repositories</Comment>
+		<Name>Justin Krehel</Name>
+		<Email>justin@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>

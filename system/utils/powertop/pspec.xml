@@ -1,0 +1,45 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>powertop</Name>
+        <Packager>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Packager>
+        <Summary>Add summary</Summary>
+        <Description>Add description</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="0bb26b38a87f45cdb61acc8dc233e4391220c8b4" type="targz">http://01.org/powertop/sites/default/files/downloads/powertop-2.3.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libnl-devel</Dependency>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>pciutils-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>powertop</Name>
+        <RuntimeDependencies>
+            <Dependency>libnl</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>pciutils</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+  
+    <History>
+        <Update release="1">
+            <Date>05-25-2013</Date>
+            <Version>2.3</Version>
+            <Comment>Add powertop to repositories</Comment>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Update>
+    </History>  
+</PISI>
+    

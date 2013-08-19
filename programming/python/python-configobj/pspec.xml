@@ -1,0 +1,35 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+        <Name>python-configobj</Name>
+        <Homepage>http://pypi.python.org/pypi/configobj/</Homepage>
+		<Packager>
+			<Name>Justin Krehel</Name>
+			<Email>justin@solusos.com</Email>
+		</Packager>
+		<Summary>ini config file reader and writer in Python</Summary>
+		<Description>ConfigObj is a simple but powerful config file reader and writer: an ini file round tripper. Its main feature is that it is very easy to use, with a straightforward programmer's interface and a simple syntax for config files.</Description>
+		<License>BSD</License>
+		<Archive sha1sum="e5813f2d2fddf62174e5c52c734686f7be8f82e2" type="targz">https://pypi.python.org/packages/source/c/configobj/configobj-4.7.2.tar.gz</Archive>
+	</Source>
+
+	<Package>
+		<Name>python-configobj</Name>
+		<Files>
+            <Path fileType="data">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+  
+	<History>
+		<Update release="1">
+			<Date>06-20-2013</Date>
+			<Version>4.7.2</Version>
+			<Comment>Add python-configobj to repositories</Comment>
+			<Name>Justin Krehel</Name>
+			<Email>justin@solusos.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

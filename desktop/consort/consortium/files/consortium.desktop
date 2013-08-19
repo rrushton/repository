@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Consortium Window Manager
+Comment=Consortium Window Manager
+Exec=/usr/bin/consortium
+Terminal=false
+Type=Application
+Categories=
+NoDisplay=true
+OnlyShowIn=GNOME;XFCE;Unity;

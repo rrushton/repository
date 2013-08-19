@@ -1,0 +1,72 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>xf86-input-wacom</Name>
+		<Packager>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Packager>
+		<Summary>Input driver for Wacom/Wacom-like tablets</Summary>
+		<Description>The Xorg Wacom Driver package contains the X.Org X11 driver for Wacom and Wacom-like tablets. It is not required to use a Wacom tablet, the xf86-input-evdev driver can handle these devices without problems.</Description>
+		<License>GPLv2+</License>
+		<Archive sha1sum="7b82547a44b97357f9a3eb87515a26b3cab4ce58" type="tarbz2">http://downloads.sourceforge.net/linuxwacom/xf86-input-wacom-0.20.0.tar.bz2</Archive>
+        
+        <BuildDependencies>
+            <Dependency>xorg-server-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>libxi-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libxinerama-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>libxrandr-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+        </BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>xorg-driver-input-wacom</Name>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/xorg/modules</Path>
+            <Path fileType="data">/usr/share/X11</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>libxi</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>libxinerama</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libxrandr</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>xorg-server</Dependency>
+        </RuntimeDependencies>
+	</Package>
+
+	<Package>
+		<Name>xorg-driver-input-wacom-devel</Name>
+        <Summary>Development files for xorg-driver-input-wacom</Summary>
+        <Description>Development files for xorg-driver-input-wacom</Description>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+		</Files>
+	</Package>
+      
+	<History>
+		<Update release="1">
+			<Date>06-05-2013</Date>
+			<Version>0.20.0</Version>
+			<Comment>Add xf86-input-wacom to repositories</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

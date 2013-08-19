@@ -1,0 +1,155 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>pisi</Name>
+        <Homepage>http://www.solusos.com/</Homepage>
+        <Packager>
+            <Name>SolusOS Developers</Name>
+            <Email>dev@solusos.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>PISI is the package management system of Pardus</Summary>
+        <Description>PISI is a modern package management system implemented in Python. Some of its main features are: package sources are written in XML and python, implements all functions through a simple-to-use API, integrates low-level and high-level package management features.</Description>
+        <Archive sha1sum="63255a16754408a825df39b177a29fe16235b47e" type="tarxz">http://solusos.com/sources/pisi-3.0.tar.xz</Archive>
+        <AdditionalFiles>
+            <AdditionalFile permission="0644" target="pisi.conf-i686">pisi.conf-i686</AdditionalFile>
+            <AdditionalFile permission="0644" target="pisi.conf-x86_64">pisi.conf-x86_64</AdditionalFile>
+        </AdditionalFiles>
+        
+        <Patches>
+            <!-- Packages such as aspell-nb have non ascii filenames, causing
+                 build to fail. This patch allows us to work with all kinds of funky
+                 filenames //-->
+            <Patch level="1">fix_non_ascii_filenames.patch</Patch>
+            
+            <!-- Accept different date formats, allowing list-newest to work //-->
+            <Patch level="1">accept_different_date_formats.patch</Patch>
+            
+            <!-- Allow takeback when using a binman repository //-->
+            <Patch level="1">binman_history_support.patch</Patch>
+            
+            <!-- Add support for WAF build system //-->
+            <Patch level="1">waftools.patch</Patch>
+        </Patches>
+        <BuildDependencies>
+			<Dependency>python</Dependency>
+			<Dependency>db5</Dependency>
+			<Dependency>piksemel</Dependency>
+			<Dependency>python-urlgrabber</Dependency>
+			<Dependency>python-pycurl</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>pisi</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="library">/usr/lib/python*</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="config">/etc/pisi</Path>
+            <Path fileType="data">/usr/share/mime/packages</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/pisi/mirrors.conf">mirrors.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/pisi/sandbox.conf">sandbox.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/mime/packages/pisi.xml">pisi.xml</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <COMAR script="package.py">System.Package</COMAR>
+            <COMAR script="manager.py">System.Manager</COMAR>
+        </Provides>
+        <RuntimeDependencies>
+			<Dependency>python</Dependency>
+			<Dependency>db5</Dependency>
+			<Dependency>piksemel</Dependency>
+			<Dependency>python-urlgrabber</Dependency>
+			<Dependency>python-pycurl</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="10">
+            <Date>05-30-2013</Date>
+            <Version>3.0</Version>
+            <Comment>Add support for WAF builds via new ActionsAPI: waftools</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="9">
+            <Date>05-26-2013</Date>
+            <Version>3.0</Version>
+            <Comment>Support binman repos in history takeback operations (rollback upgrade)</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+                
+        <Update release="8">
+            <Date>05-24-2013</Date>
+            <Version>3.0</Version>
+            <Comment>Allow multiple date formats to ensure list-newest works</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+                
+        <Update release="7">
+            <Date>05-24-2013</Date>
+            <Version>3.0</Version>
+            <Comment>Testing patch for non-ascii filenames</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+                
+        <Update release="6">
+            <Date>04-04-2013</Date>
+            <Version>3.0</Version>
+            <Comment>We've now taken ownership of PiSi, using version 3.0 with all imported patches and clang support</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        		
+        <Update release="5">
+            <Date>03-30-2013</Date>
+            <Version>2.4</Version>
+            <Comment>Add clang extension</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        		
+        <Update release="4">
+            <Date>2013-14-03</Date>
+            <Version>2.4</Version>
+            <Comment>Fix dependencies</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="3">
+            <Date>2013-14-03</Date>
+            <Version>2.4</Version>
+            <Comment>Include dependencies</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="2">
+            <Date>2013-13-03</Date>
+            <Version>2.4</Version>
+            <Comment>Patch libmagic wrapper use</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>2013-13-03</Date>
+            <Version>2.4</Version>
+            <Comment>First release.</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+</PISI>

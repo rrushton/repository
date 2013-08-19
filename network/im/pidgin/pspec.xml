@@ -1,0 +1,244 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>pidgin</Name>
+		<Homepage>http://www.pidgin.im</Homepage>
+		<Packager>
+			<Name>Justin Krehel</Name>
+			<Email>justin@solusos.com</Email>
+		</Packager>
+		<Summary>Graphical multi-protocol IM client</Summary>
+		<Description>Pidgin is a graphical multi-protocol IM client that runs on Microsoft Windows and Unixes. It is written in C and uses Glib and GTK+. It also provides libpurple, a library used for developing IM programs.</Description>
+		<License>GPLv2+</License>
+		<Archive sha1sum="01bc06e3a5712dded3ad4a4913ada12a3cd01e15" type="tarbz2">http://sourceforge.net/projects/pidgin/files/Pidgin/2.10.7/pidgin-2.10.7.tar.bz2</Archive>
+        
+        <BuildDependencies>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>harfbuzz-devel</Dependency>
+            <Dependency>libatk-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>libgtk-2-devel</Dependency>
+            <Dependency>libice-devel</Dependency>
+            <Dependency>libnspr-devel</Dependency>
+            <Dependency>libnss-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libsm-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency>libxscrnsaver-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>sqlite3-devel</Dependency>
+            <Dependency>tcl-devel</Dependency>
+            <Dependency>tk-devel</Dependency>
+            <Dependency>xz-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>network-manager-devel</Dependency>
+        </BuildDependencies>
+	</Source>
+
+	<Package>
+        <Name>libpurple</Name>
+        <Description>Core IM libraries</Description>
+        <Summary>libpurple is intended to be the core of an IM program. Programs are written using this library as the backend for chat programs. Pidgin is the GTK+ frontend, and Finch is the ncurses / command line frontend.</Summary>
+		<Files>
+            <Path fileType="library">/usr/lib/libpurple*.so*</Path>
+            <Path fileType="library">/usr/lib/purple-2</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/purple</Path>
+            <Path fileType="data">/usr/share/sounds</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>xz</Dependency>
+            <Dependency>tcl</Dependency>
+            <Dependency>libnspr</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>dbus-glib</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>libnss</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>perl</Dependency>
+            <Dependency>tk</Dependency>
+            <Dependency>sqlite3</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>libxft</Dependency>
+            <Dependency>libxscrnsaver</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <Package>
+        <Name>libpurple-devel</Name>
+        <Summary>Development files for libpurple</Summary>
+        <Description>Development files for libpurple</Description>
+        <Files>
+            <Path fileType="executable">/usr/bin/purple*</Path>
+            <Path fileType="header">/usr/include/libpurple</Path>
+            <Path fileType="data">/usr/lib/pkgconfig/purple*</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libpurple</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <Package>
+        <Name>finch</Name>
+        <Summary>Finch is the command line client part of Pidgin</Summary>
+        <Description>Finch is a command line chat client that ships with Pidgin.</Description>
+        <Files>    
+            <Path fileType="executable">/usr/bin/finch</Path>
+            <Path fileType="library">/usr/lib/finch</Path>
+            <Path fileType="library">/usr/lib/libgnt*.so*</Path>
+            <Path fileType="library">/usr/lib/gnt</Path>
+            <Path fileType="man">/usr/share/man/man1/finch*</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libpurple</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <Package>
+        <Name>finch-devel</Name>
+        <Summary>Development files for finch</Summary>
+        <Description>Development files for finch</Description>
+        <Files>    
+            <Path fileType="header">/usr/include/gnt</Path>
+            <Path fileType="header">/usr/include/finch</Path>
+            <Path fileType="data">/usr/lib/pkgconfig/gnt*</Path>
+            <Path fileType="data">/usr/lib/pkgconfig/finch*</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">finch</Dependency>
+            <Dependency release="current">libpurple</Dependency>
+            <Dependency release="current">libpurple-devel</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>pidgin</Name>
+        <Summary>Graphical multi-protocol IM client</Summary>
+        <Description>Pidgin is a graphical multi-protocol IM client that runs on Microsoft Windows and Unixes. It is written in C and uses Glib and GTK+. It also provides libpurple, a library used for developing IM programs.</Description>
+        <Files>    
+            <Path fileType="executable">/usr/bin/pidgin</Path>
+            <Path fileType="library">/usr/lib/pidgin</Path>
+            <Path fileType="data">/usr/share/pixmaps/pidgin</Path>
+            <Path fileType="data">/usr/share/icons/hicolor</Path>
+            <Path fileType="data">/etc/gconf/schemas/</Path>
+            <Path fileType="data">/usr/share/applications/pidgin.desktop</Path>
+            <Path fileType="man">/usr/share/man/man1/pidgin.1</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>libxml2</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>libxcursor</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency release="current">libpurple</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>libicu</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>libxscrnsaver</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxinerama</Dependency>
+            <Dependency>libatk</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libxdamage</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libxrandr</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>libgtk-2</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>libxfixes</Dependency>
+            <Dependency>xz</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>dbus-glib</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libxcomposite</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libsm</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>pidgin-devel</Name>
+        <Summary>Development files for Pidgin</Summary>
+        <Description>Development files for Pidgin</Description>
+        <Files>    
+            <Path fileType="header">/usr/include/pidgin</Path>
+            <Path fileType="data">/usr/lib/pkgconfig/pidgin.pc</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">pidgin</Dependency>
+        </RuntimeDependencies>
+    </Package>
+            
+    <History>
+        <Update release="4">
+            <Date>05-30-2013</Date>
+            <Version>2.10.7</Version>
+            <Comment>Depend on new libcairo* packages</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+                
+        <Update release="3">
+            <Date>05-21-2013</Date>
+            <Version>2.10.7</Version>
+            <Comment>Complete dependencies and add pidgin, pidgin-devel</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+                
+        <Update release="2">
+            <Date>04-27-2013</Date>
+            <Version>2.10.7</Version>
+            <Comment>Filled in file paths</Comment>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Update>
+    
+		<Update release="1">
+			<Date>04-19-2013</Date>
+			<Version>2.10.7</Version>
+			<Comment>Add pidgin to repositories</Comment>
+			<Name>Justin Krehel</Name>
+			<Email>justin@solusos.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

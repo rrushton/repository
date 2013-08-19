@@ -1,0 +1,48 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>json-c</Name>
+		<Packager>
+			<Name>Justin Krehel</Name>
+			<Email>justin@solusos.com</Email>
+		</Packager>
+		<Summary>JSON implementation in C</Summary>
+		<Description>JSON-C implements a reference counting object model that allows you to easily construct JSON objects in C, output them as JSON formatted strings and parse JSON formatted strings back into the C representation of JSON objects.</Description>
+		<License>MIT</License>
+		<Archive sha1sum="5d0377d2cc4a1af324d5aeb5b63032d1d026aacd" type="targz">https://s3.amazonaws.com/json-c_releases/releases/json-c-0.11.tar.gz</Archive>
+	</Source>
+
+	<Package>
+		<Name>json-c</Name>
+		<Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/libjson*.so*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+    <Package>
+        <Name>json-c-devel</Name>
+        <Summary>Development files for json-c</Summary>
+        <Description>Development files for json-c</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">json-c</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+	<History>
+		<Update release="1">
+			<Date>05-30-2013</Date>
+			<Version>0.11</Version>
+			<Comment>Add json-c to repositories</Comment>
+			<Name>Justin Krehel</Name>
+			<Email>justin@solusos.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

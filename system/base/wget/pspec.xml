@@ -1,0 +1,51 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>wget</Name>
+        <Homepage>http://www.gnu.org/software/wget/</Homepage>
+		<Packager>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Packager>
+		<Summary>retrieves files from the web</Summary>
+		<Description>GNU Wget is a free software package for retrieving files using HTTP, HTTPS and FTP, the most widely-used Internet protocols. It is a non-interactive commandline tool, so it may easily be called from scripts, cron jobs, terminals without X-Windows support, etc.</Description>
+		<License>GPLv2+</License>
+		<Archive sha1sum="cfa0906e6f72c1c902c29b52d140c22ecdcd617e" type="tarxz">http://ftp.gnu.org/gnu/wget/wget-1.14.tar.xz</Archive>
+        
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+        </BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>wget</Name>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="config">/etc</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency>util-linux</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>libpcre</Dependency>
+        </RuntimeDependencies>
+	</Package>
+  
+	<History>
+		<Update release="1">
+			<Date>06-02-2013</Date>
+			<Version>1.14</Version>
+			<Comment>Add wget to repositories</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

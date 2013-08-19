@@ -1,0 +1,33 @@
+<PISI>
+  <Source>
+    <Name>xdpyinfo</Name>
+    <Packager>
+        <Name>Ikey Doherty</Name>
+        <Email>ikey@solusos.com</Email>
+    </Packager>
+    <Summary>X.Org Applications: xdpyinfo</Summary>
+    <Description>X.Org Applications: xdpyinfo</Description>
+    <License>GPLv3+</License>
+    <Archive sha1sum="39936ff600434614d3ee53038d814246a03f4acf" type="tarbz2">http://xorg.freedesktop.org/releases/individual/app/xdpyinfo-1.3.0.tar.bz2</Archive>
+    </Source>
+
+  <Package>
+    <Name>xdpyinfo</Name>
+    <Files>
+		<Path fileType="executable">/usr/bin</Path>
+		<Path fileType="man">/usr/share/man</Path>
+	</Files>
+  </Package>
+      
+  <History>
+	
+    <Update release="1">
+		<Date>03-20-2013</Date>
+		<Version>1.3.0</Version>
+		<Comment>Add xdpyinfo to repositories</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+  </History>
+
+</PISI>

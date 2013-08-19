@@ -1,0 +1,194 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>PackageKit</Name>
+        <Homepage>http://www.packagekit.org/</Homepage>
+		<Packager>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Packager>
+		<Summary>D-Bus abstraction layer that allows the session user to manage packages in a secure way using a cross-distro, cross-architecture API.</Summary>
+		<Description>PackageKit is a system designed to make installing and updating software on your computer easier. The primary design goal is to unify all the software graphical tools used in different distributions, and use some of the latest technology like PolicyKit to make the process suck less.</Description>
+		<License>GPLv2+</License>
+		<Archive sha1sum="d69ee5f4429b6b315f259712adc43e0b081e4f5b" type="tarxz">http://www.packagekit.org/releases/PackageKit-0.8.9.tar.xz</Archive>
+        
+        <Patches>
+            <!-- Written by moi, official backend in packagekit gitorious repo //-->
+            <Patch level="1">basic_pisi_fixes</Patch>
+            <Patch level="1">take_mapping_from_file</Patch>
+            <Patch level="1">progress_feedback</Patch>
+            <Patch level="1">update_details</Patch>
+            <Patch level="1">download_packages</Patch>
+            <Patch level="1">simulated_support</Patch>
+            <Patch level="1">pending_fixes</Patch>
+            <Patch level="1">multipackage_handling</Patch>
+            <Patch level="1">homepage_fixes</Patch>
+        </Patches>
+        
+        <BuildDependencies>
+            <Dependency>libgtk-3-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>harfbuzz-devel</Dependency>
+            <Dependency>libxcursor-devel</Dependency>
+            <Dependency>xz-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>acl-devel</Dependency>
+            <Dependency>libgtk-2-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libicu-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>libxi-devel</Dependency>
+            <Dependency>libice-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libxinerama-devel</Dependency>
+            <Dependency>libatk-devel</Dependency>
+            <Dependency>sqlite3-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>libxrandr-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>systemd-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libxdamage-devel</Dependency>
+            <Dependency>attr-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libarchive-devel</Dependency>
+            <Dependency>libxcomposite-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libsm-devel</Dependency>
+            <Dependency>libxfixes-devel</Dependency>
+            <Dependency>at-spi2-atk-devel</Dependency>
+        </BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>packagekit</Name>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/lib/PackageKit</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="data">/etc</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0</Path>
+            <Path fileType="library">/usr/lib/gtk-2.0</Path>
+            <Path fileType="library">/usr/lib/gtk-3.0</Path>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/packagekit-backend</Path>
+            <Path fileType="library">/usr/lib/packagekit-plugins</Path>
+            <Path fileType="data">/usr/lib/gnome-settings-daemon-3.0</Path>
+            <Path fileType="data">/usr/lib/python*</Path>
+            <Path fileType="data">/usr/lib/systemd</Path>
+            <Path fileType="data">/usr/share/PackageKit</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/share/mime</Path>
+            <Path fileType="data">/usr/share/polkit-1</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="config">/var</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency>libgtk-3</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>libxcursor</Dependency>
+            <Dependency>xz</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>acl</Dependency>
+            <Dependency>libgtk-2</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>libicu</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>libxi</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxinerama</Dependency>
+            <Dependency>libnettle</Dependency>
+            <Dependency>libatk</Dependency>
+            <Dependency>sqlite3</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libxrandr</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>systemd</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>libxdamage</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>at-spi2</Dependency>
+            <Dependency>attr</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libarchive</Dependency>
+            <Dependency>libxcomposite</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libsm</Dependency>
+            <Dependency>libxfixes</Dependency>
+            <Dependency>at-spi2-atk</Dependency>
+        </RuntimeDependencies>
+        <AdditionalFiles>
+            <AdditionalFile permission="0644" target="/etc/PackageKit/pisi.conf">pisi.conf</AdditionalFile>
+        </AdditionalFiles>
+	</Package>
+
+	<Package>
+		<Name>packagekit-devel</Name>
+        <Summary>Development files for packagekit</Summary>
+        <Description>Development files for packagekit</Description>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency release="current">packagekit</Dependency>
+        </RuntimeDependencies>
+	</Package>
+
+	<Package>
+		<Name>packagekit-docs</Name>
+        <Summary>API Documentation for packagekit</Summary>
+        <Description>API Documentation for packagekit</Description>
+		<Files>
+			<Path fileType="doc">/usr/share/gtk-doc</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency release="current">packagekit-devel</Dependency>
+        </RuntimeDependencies>
+	</Package>
+          
+	<History>
+		<Update release="2">
+			<Date>06-11-2013</Date>
+			<Version>0.8.9</Version>
+			<Comment>Rework patches direct from Git</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+        
+		<Update release="1">
+			<Date>06-11-2013</Date>
+			<Version>0.8.9</Version>
+			<Comment>Add PackageKit to repositories</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

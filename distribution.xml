@@ -1,0 +1,33 @@
+<PISI>
+	<SourceName>SolusOS</SourceName>
+	<Version>2</Version>
+	<Description xml:lang="en">Official SolusOS Repository</Description>
+	<Type>main</Type>
+	<BinaryName>SolusOS</BinaryName>
+	
+	<Obsoletes>
+		<!-- Replaced by libpcre -->
+		<Package>pcre</Package>
+		<!-- Replaced by libpcre-devel -->
+		<Package>pcre-devel</Package>
+        
+        <!-- Replaced by libwebkit-gtk -->
+        <Package>webkitgtk</Package>
+        
+        <!-- Replaced by libcairo -->
+        <Package>cairo</Package>
+        
+        <!-- Replaced by libcairo-devel -->
+        <Package>cairo-devel</Package>
+        
+        <!-- Replaced by xorg-driver-video-cirrus -->
+        <Package>xorg-video-driver-cirrus</Package>
+
+        <!-- Replaced by gtkspell3-devel -->
+        <Package>gtkspell-devel</Package>
+
+        <!-- Replaced by gtkspell3-docs -->
+        <Package>gtkspell-docs</Package>
+	</Obsoletes>
+	
+</PISI>

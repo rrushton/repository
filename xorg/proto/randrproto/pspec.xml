@@ -1,0 +1,37 @@
+
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>randrproto</Name>
+    <Packager>
+        <Name>Ikey Doherty</Name>
+        <Email>ikey@solusos.com</Email>
+    </Packager>
+    <Summary>X Resize and Rotate Extension (RandR)</Summary>
+    <Description>This extension defines a protocol for clients to dynamically change X screens, so as to resize, rotate and reflect the root window of a screen.</Description>
+    <License>GPLv3+</License>
+    <Archive sha1sum="65d2fc4440adf1557cde2b36901a3de21ab189c1" type="tarbz2">mirrors://xorg/individual/proto/randrproto-1.4.0.tar.bz2</Archive>
+    </Source>
+
+  <Package>
+    <Name>randrproto</Name>
+    <Files>
+		<Path fileType="header">/usr/include</Path>
+		<Path fileType="header">/usr/lib/pkgconfig</Path>
+		<Path fileType="doc">/usr/share/doc</Path>
+	</Files>
+  </Package>
+  
+  <History>
+    <Update release="1">
+		<Date>03-09-2013</Date>
+		<Version>1.4.0</Version>
+		<Comment>Add randrproto to repositories</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>
+    

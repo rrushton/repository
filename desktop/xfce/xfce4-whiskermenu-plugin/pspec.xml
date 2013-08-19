@@ -1,0 +1,133 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>xfce4-whiskermenu-plugin</Name>
+        <Homepage>http://gottcode.org/xfce4-whiskermenu-plugin/</Homepage>
+		<Packager>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Packager>
+		<Summary>Alternative Xfce application menu</Summary>
+		<Description>Whisker Menu is an alternative to the Xfce application menu that tries to make finding and launching applications easier.</Description>
+		<License>GPLv2</License>
+		<Archive sha1sum="0f7e2b049791773feda5b54979e86f8b5e01e641" type="targz">https://github.com/gottcode/xfce4-whiskermenu-plugin/archive/v1.1.1.tar.gz</Archive>
+
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libxfce4ui-devel</Dependency>
+            <Dependency>harfbuzz-devel</Dependency>
+            <Dependency>libxcursor-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libicu-devel</Dependency>
+            <Dependency>libgarcon-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libice-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libxinerama-devel</Dependency>
+            <Dependency>libatk-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libxdamage-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>libxrandr-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>libxfce4util-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>libgtk-2-devel</Dependency>
+            <Dependency>xfce4-panel-devel</Dependency>
+            <Dependency>libxfixes-devel</Dependency>
+            <Dependency>libstartup-notification-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>exo-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libxcomposite-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libsm-devel</Dependency>
+        </BuildDependencies>
+
+        <Patches>
+            <Patch level="1">0001-Apply-SolusOS-default-branding.patch</Patch>
+        </Patches>
+	</Source>
+
+	<Package>
+		<Name>xfce4-whiskermenu-plugin</Name>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/xfce4/panel/plugins</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/xfce4/panel</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>libxfce4ui</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>libxcursor</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>xcb-util</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>libicu</Dependency>
+            <Dependency>libgarcon</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxinerama</Dependency>
+            <Dependency>libatk</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libxdamage</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libxrandr</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libxfce4util</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>libgtk-2</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>xfce4-panel</Dependency>
+            <Dependency>libxfixes</Dependency>
+            <Dependency>libstartup-notification</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>exo</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libxcomposite</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libsm</Dependency>
+
+            <Dependency releaseFrom="2">solusos-artwork</Dependency>
+        </RuntimeDependencies>
+	</Package>
+  
+	<History>
+		<Update release="2">
+			<Date>08-10-2013</Date>
+			<Version>1.1.1</Version>
+			<Comment>Use SolusOS default branding/settings</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+
+		<Update release="1">
+			<Date>08-08-2013</Date>
+			<Version>1.1.1</Version>
+			<Comment>Add xfce4-whiskermenu-plugin to repositories</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

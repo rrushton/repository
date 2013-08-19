@@ -1,0 +1,12 @@
+diff -ruNb a/src/org.consort.consortium.gschema.xml.in b/src/org.consort.consortium.gschema.xml.in
+--- a/src/org.consort.consortium.gschema.xml.in	2013-06-07 15:59:07.000000000 +0100
++++ b/src/org.consort.consortium.gschema.xml.in	2013-06-15 23:42:17.235478722 +0100
+@@ -3,7 +3,7 @@
+   <schema id="org.consort.consortium" path="/org/consort/consortium/"
+           gettext-domain="@GETTEXT_PACKAGE@">
+     <key name="compositing-manager" type="b">
+-      <default>false</default>
++      <default>true</default>
+       <_summary>Compositing Manager</_summary>
+       <_description>
+         Determines whether Consortium is a compositing manager.

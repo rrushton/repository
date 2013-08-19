@@ -1,0 +1,30 @@
+--- irssi.conf.orig	2013-03-30 00:46:34.347996726 -0400
++++ irssi.conf	2013-03-30 01:31:13.480996407 -0400
+@@ -1,4 +1,5 @@
+ servers = (
++  { address = "irc.solusos.com"; chatnet = "SolusOS"; port = "6697"; use_ssl = "yes"; autoconnect = "yes"; },
+   { address = "eu.irc6.net"; chatnet = "IRCnet"; port = "6667"; },
+   { address = "open.ircnet.net"; chatnet = "IRCnet"; port = "6667"; },
+   { address = "irc.efnet.org"; chatnet = "EFNet"; port = "6667"; },
+@@ -14,6 +15,12 @@
+ );
+ 
+ chatnets = {
++  SolusOS = {
++    type = "IRC";
++    max_kicks = "3";
++    max_msgs = "3";
++    max_whois = "5";
++  };
+   IRCnet = {
+     type = "IRC";
+     max_kicks = "4";
+@@ -79,6 +86,8 @@
+ };
+ 
+ channels = (
++  { name = "#solusos"; chatnet = "solusos"; autojoin = "Yes"; },
++  { name = "#solusos-offtopic"; chatnet = "solusos"; autojoin = "Yes"; },
+   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
+   { name = "silc"; chatnet = "silc"; autojoin = "No"; }
+ );

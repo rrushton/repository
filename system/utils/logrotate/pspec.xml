@@ -1,0 +1,37 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>logrotate</Name>
+    <Homepage>https://fedorahosted.org/releases/l/o/logrotate</Homepage>
+    <Packager>
+        <Name>SolusOS Developers</Name>
+        <Email>dev@solusos.com</Email>
+    </Packager>
+    <Summary>Rotates, compresses, removes and emails system log files</Summary>
+    <Description>logrotate is designed to ease administration of systems that generate large numbers of log files. It allows automatic rotation, compression, removal, and emailing of log files.</Description>
+    <License>GPLv2</License>
+    <Archive sha1sum="b920f9664a2c930f1ccdabc0db4f31f67cf95661" type="targz">http://fedorahosted.org/releases/l/o/logrotate/logrotate-3.7.9.tar.gz</Archive>
+    </Source>
+
+  <Package>
+    <Name>logrotate</Name>
+    <Files>
+    	<Path fileType="config">/etc</Path>
+		<Path fileType="executable">/usr/sbin</Path>
+		<Path fileType="doc">/usr/share/doc</Path>
+		<Path fileType="man">/usr/share/man</Path>
+	</Files>
+  </Package>
+  
+  <History>
+    <Update release="1">
+		<Date>03-15-2013</Date>
+		<Version>3.7.9</Version>
+		<Comment>First release</Comment>
+		<Name>SolusOS Developers</Name>
+		<Email>dev@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>

@@ -1,0 +1,85 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>tumbler</Name>
+        <Homepage>http://www.xfce.org</Homepage>
+		<Packager>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Packager>
+		<Summary>XFCE thumbnail generation service</Summary>
+		<Description>The Tumbler package contains a D-Bus thumbnailing service based on the thumbnail management D-Bus specification. This is useful for generating thumbnail images of files.</Description>
+		<License>GPLv2+</License>
+		<Archive sha1sum="50953e05c6889f60de6cdf9f6dd4dba5633f8b75" type="tarbz2">http://archive.xfce.org/xfce/4.10/src/tumbler-0.1.25.tar.bz2</Archive>
+
+        <BuildDependencies>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>tumbler</Name>
+		<Files>
+			<Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/tumbler-1/plugins</Path>
+            <Path fileType="executable">/usr/lib/tumbler-1/tumblerd</Path>
+            <Path fileType="data">/usr/share/dbus-1/services</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency>dbus</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>dbus-glib</Dependency>
+        </RuntimeDependencies>
+	</Package>
+
+	<Package>
+		<Name>tumbler-devel</Name>
+        <Summary>Development files for tumbler</Summary>
+        <Description>Development files for tumbler</Description>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency release="current">tumbler</Dependency>
+        </RuntimeDependencies>
+	</Package>
+
+	<Package>
+		<Name>tumbler-docs</Name>
+        <Summary>API Documentation for tumbler</Summary>
+        <Description>API Documentation for tumbler</Description>
+		<Files>
+			<Path fileType="doc">/usr/share/gtk-doc</Path>
+		</Files>
+        <RuntimeDependencies>
+            <Dependency release="current">tumbler-devel</Dependency>
+        </RuntimeDependencies>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>08-07-2013</Date>
+			<Version>0.1.25</Version>
+			<Comment>Add tumbler to repositories</Comment>
+			<Name>Ikey Doherty</Name>
+			<Email>ikey@solusos.com</Email>
+		</Update>
+	</History>	
+</PISI>
+    

@@ -1,0 +1,75 @@
+
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>pam</Name>
+    <Packager>
+        <Name>SolusOS Developers</Name>
+        <Email>dev@solusos.com</Email>
+    </Packager>
+    <Summary>Pluggable Authentication Modules library</Summary>
+    <Description>The Linux PAM package contains Pluggable Authentication Modules used to enable the local system administrator to choose how applications authenticate users. </Description>
+    <License>GPLv3+</License>
+    <Archive sha1sum="7a95061499bac787c16bb7f7083a139f3abc15d2" type="tarbz2">http://linux-pam.org/library/Linux-PAM-1.1.6.tar.bz2</Archive>
+    
+    <Patches>
+		<!-- Fedora patch: Fix destdir's for /etc/security* -->
+		<Patch level="1">Linux-PAM-1.1.6-destdir.patch</Patch>
+    </Patches>
+    
+    </Source>
+
+  <Package>
+    <Name>pam</Name>
+    <Files>
+		<Path fileType="config">/etc</Path>
+		<Path fileType="library">/lib</Path>
+		<Path fileType="executable">/sbin</Path>
+		<Path fileType="doc">/usr/share/doc</Path>
+		<Path fileType="localedata">/usr/share/locale</Path>
+		<Path fileType="man">/usr/share/man</Path>
+	</Files>
+  </Package>
+
+  <Package>
+    <Name>pam-devel</Name>
+    <Summary>Development files for PAM</Summary>
+    <Description>Development files required to build applications using PAM</Description>
+    <Files>
+		<Path fileType="header">/usr/include</Path>
+	</Files>
+	<RuntimeDependencies>
+		<Dependency release="3">pam</Dependency>
+	</RuntimeDependencies>
+	<PartOf>system.devel</PartOf>
+  </Package>
+    
+  <History>
+    <Update release="3">
+		<Date>04-03-2013</Date>
+		<Version>1.1.6</Version>
+		<Comment>Import Fedora patch to fix destdir</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+		   
+    <Update release="2">
+		<Date>03-06-2013</Date>
+		<Version>1.1.6</Version>
+		<Comment>Split -devel package</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+	
+    <Update release="1">
+		<Date>03-09-2013</Date>
+		<Version>1.1.6</Version>
+		<Comment>Add pam to repositories</Comment>
+		<Name>SolusOS Developers</Name>
+		<Email>dev@solusos.com</Email>
+	</Update>
+  </History>
+		
+</PISI>
+    
