@@ -1,4 +1,5 @@
 {
   "project_id" : "packages",
-  "conduit_uri" : "http://inf.solusos.com/"
+  "conduit_uri" : "http://inf.solusos.com/",
+  "lint.engine" : "ComprehensiveLintEngine"
 }
