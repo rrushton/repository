@@ -73,6 +73,14 @@
   </Package>
      
   <History>
+    <Update release="10">
+		<Date>08-19-2013</Date>
+		<Version>3.10.6</Version>
+		<Comment>Enable atheros support</Comment>
+		<Name>Ikey Doherty</Name>
+		<Email>ikey@solusos.com</Email>
+	</Update>
+
     <Update release="9">
 		<Date>08-13-2013</Date>
 		<Version>3.10.6</Version>
