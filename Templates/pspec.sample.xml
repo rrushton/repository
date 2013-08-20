@@ -1,33 +1,33 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>%(PackageName)s</Name>
-		<Packager>
-			<Name>%(PackagerName)s</Name>
-			<Email>%(PackagerEmail)s</Email>
-		</Packager>
-		<Summary>%(Summary)s</Summary>
-		<Description>%(Description)s</Description>
-		<License>%(License)s</License>
-		<Archive sha1sum="%(HashSum)s" type="%(ArchiveType)s">%(ArchiveURI)s</Archive>
-	</Source>
+    <Source>
+        <Name>%(PackageName)s</Name>
+        <Packager>
+            <Name>%(PackagerName)s</Name>
+            <Email>%(PackagerEmail)s</Email>
+        </Packager>
+        <Summary>%(Summary)s</Summary>
+        <Description>%(Description)s</Description>
+        <License>%(License)s</License>
+        <Archive sha1sum="%(HashSum)s" type="%(ArchiveType)s">%(ArchiveURI)s</Archive>
+    </Source>
 
-	<Package>
-		<Name>%(PackageName)s</Name>
-		<Files>
-			<Path fileType="*">/</Path>
-		</Files>
-	</Package>
-  
-	<History>
-		<Update release="1">
-			<Date>%(Date)s</Date>
-			<Version>%(Version)s</Version>
-			<Comment>Add %(PackageName)s to repositories</Comment>
-			<Name>%(PackagerName)s</Name>
-			<Email>%(PackagerEmail)s</Email>
-		</Update>
-	</History>	
+    <Package>
+        <Name>%(PackageName)s</Name>
+        <Files>
+            <Path fileType="*">/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>%(Date)s</Date>
+            <Version>%(Version)s</Version>
+            <Comment>Add %(PackageName)s to repositories</Comment>
+            <Name>%(PackagerName)s</Name>
+            <Email>%(PackagerEmail)s</Email>
+        </Update>
+    </History>	
 </PISI>
     

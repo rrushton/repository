@@ -1,4 +1,3 @@
-
 #!/usr/bin/python
 
 # Created For SolusOS
@@ -7,13 +6,14 @@ from pisi.actionsapi import shelltools, get, perlmodules, pisitools
 
 
 def setup():
-    perlmodules.configure ()
-					
+    perlmodules.configure()
+
+
 def build():
-    perlmodules.make ()
-	
+    perlmodules.make()
+
+
 def install():
-    perlmodules.install ()
+    perlmodules.install()
 
     #EXTRADOCS#
-
