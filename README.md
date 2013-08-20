@@ -2,4 +2,5 @@
 
 Please help us by doing code-reviews and audits on our server.
 
-Our code-review is handled on http://inf.solusos.com
+Want to get started? Check http://inf.solusos.com/w/quick_start/ for
+a real quick how-to on SolusOS contribution
