@@ -11,7 +11,7 @@ def setup():
                           --docdir=/usr/share/doc/sudo \
                           --with-all-insults \
                           --with-env-editor ")
-						  
+						
 def build():
 	autotools.make ()
 	

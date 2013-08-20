@@ -12,7 +12,7 @@ def setup():
 						  --libexecdir=/usr/lib \
 						  --with-package-name=\"GStreamer 1.0.6 SolusOS\" \
 						   --with-package-origin=http://www.solusos.com")
-						  
+						
 def build():
 	autotools.make ()
 	

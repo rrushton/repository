@@ -10,7 +10,7 @@ WorkDir = "icu"
 def setup():
 	shelltools.cd ("source")
 	autotools.configure ("--prefix=/usr")
-						  
+						
 def build():
 	shelltools.cd ("source")
 	autotools.make ()

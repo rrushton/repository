@@ -10,7 +10,7 @@ shelltools.export ("HOME", get.workDIR())
 def setup():
     autotools.configure ("--disable-static \
                           --with-pam-dir=/lib/security")
-						  
+						
 def build():
 	autotools.make ()
 	

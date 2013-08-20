@@ -16,10 +16,10 @@ def postInstall(fromVersion, fromRelease, toVersion, toRelease):
         os.system ("useradd -d %s -r -s /bin/false -u %d -g %d %s -c \"%s\"" % (OUR_HOME, OUR_ID, OUR_ID, OUR_NAME, OUR_DESC))
     except:
         pass
-        
+
     if not os.path.exists (HOST_KEY):
         os.system ("/usr/bin/ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key")
-    
+
 
 def postRemove():
     try:

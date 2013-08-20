@@ -11,7 +11,7 @@ def setup():
 	# as we want all of the tools linked to libbz2
 	autotools.make ("-f Makefile-libbz2_so")
 	autotools.make ("clean")
-					  
+					
 def build():
 	autotools.make()
 	

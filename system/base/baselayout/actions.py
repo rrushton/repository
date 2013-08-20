@@ -25,7 +25,7 @@ def install():
     do_chmod("/proc", 0555)
     do_chmod("/sys", 0755)
     do_chmod("/home", 0755)
-    
+
     pisitools.dosym ("/proc/self/mounts", "/etc/mtab")
 
     # Write out a default .profile.. temporary

@@ -8,7 +8,7 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 def setup():
 	autotools.configure ("--docdir=/usr/share/doc/gperf-3.0.4")
-						  
+						
 def build():
 	autotools.make ()
 	

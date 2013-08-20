@@ -10,7 +10,7 @@ def setup():
 	autotools.configure ("--prefix=/usr\
 						  --sysconfdir=/etc\
 						  --disable-static")
-						  
+						
 def build():
 	autotools.make ()
 	

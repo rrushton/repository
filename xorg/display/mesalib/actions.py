@@ -27,7 +27,7 @@ def setup():
                           --enable-shared-glapi \
 						  --with-egl-platforms=\"drm,x11,wayland\" \
 						  --with-gallium-drivers=\"nouveau,r300,r600,radeonsi,svga,swrast\" ")
-						  
+						
 def build():
 	autotools.make ()
 	

@@ -10,7 +10,7 @@ def setup():
 	autotools.configure ("--prefix=/usr\
 						  --sysconfdir=/etc\
 						  --enable-utf8")
-						  
+						
 def build():
 	autotools.make ()
 	

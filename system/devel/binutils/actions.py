@@ -15,7 +15,7 @@ def setup():
 	shelltools.makedirs (BuildDir)
 	
 	shelltools.cd (BuildDir)
-	# Configure 
+	# Configure
 	shelltools.system ("../binutils-2.23.1/configure --prefix=/usr --enable-lto --enable-gold")
 	
 def build():

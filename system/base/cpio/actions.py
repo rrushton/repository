@@ -13,7 +13,7 @@ def setup():
 						 --libexecdir=/tmp\
 						 --enable-mt\
 						 --with-rmt=/usr/sbin/rmt")
-					  
+					
 def build():
 	autotools.make()
 	

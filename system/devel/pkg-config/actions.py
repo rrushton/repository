@@ -12,14 +12,14 @@ def setup():
 		m_tuple = "i386-linux-gnu"
 	else:
 		m_tuple = " x86_64-linux-gnu"
-		 
+		
 	pcDirs = "/usr/local/lib/%(MULTIARCH)s/pkgconfig:/usr/local/lib/pkgconfig:/usr/local/share/pkgconfig:/usr/lib/%(MULTIARCH)s/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig" % { 'MULTIARCH' : m_tuple }
 	autotools.configure("--prefix=/usr \
 						 --docdir=/usr/share/doc/pkg-config \
 						 --with-internal-glib \
 						 --with-pc-path=%s\
 						 --disable-host-tool" % pcDirs)
-					  
+					
 def build():
 	autotools.make()
 	

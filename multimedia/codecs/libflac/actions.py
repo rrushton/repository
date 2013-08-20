@@ -12,7 +12,7 @@ def setup():
 						  --enable-sse \
 						  --disable-doxygen-docs \
 						  --disable-dependency-tracking")
-						  
+						
 def build():
 	autotools.make ()
 	

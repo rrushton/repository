@@ -12,7 +12,7 @@ def setup():
     autotools.configure ("--disable-static \
                           --disable-man-pages \
                           --libexecdir=/usr/lib/upower")
-						  
+						
 def build():
 	autotools.make ()
 	

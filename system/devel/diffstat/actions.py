@@ -1,4 +1,4 @@
- 
+
 #!/usr/bin/python
 
 # Created for SolusOS

@@ -12,7 +12,7 @@ def setup():
                           --with-system-ffi")
 def build():
     autotools.make ()
-    
+
 def install():
     autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
     pisitools.remove ("/usr/bin/2to3")

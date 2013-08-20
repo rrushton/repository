@@ -15,7 +15,7 @@ def setup():
                   --enable-dbm       \
                   --disable-static   \
                   --enable-cxx")
-						  
+						
 def build():
 	os.chdir (BuildDir)
 	autotools.make ()

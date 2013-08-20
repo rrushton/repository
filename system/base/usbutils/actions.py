@@ -10,7 +10,7 @@ def setup():
 	# Reconf to rebuild against a newer libtool
 	autotools.autoreconf("--force --install --symlink")
 	autotools.configure("--disable-zlib --datadir=/usr/share/hwids")
-					  
+					
 def build():
 	autotools.make()
 	

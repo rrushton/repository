@@ -11,7 +11,7 @@ def setup():
 						  --sysconfdir=/etc \
 						  --docdir=/usr/share/doc/Linux-PAM-1.1.6 \
 						  --disable-nis")
-						  
+						
 def build():
 	autotools.make ()
 	

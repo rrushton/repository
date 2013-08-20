@@ -11,7 +11,7 @@ WorkDir = "."
 FontDir = "/usr/share/fonts/truetype/droid/"
 
 def install():
-    
+
     for i in glob.glob ("*.ttf"):
         pisitools.insinto (FontDir, i)
         		

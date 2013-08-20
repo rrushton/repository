@@ -9,7 +9,7 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 def setup():
 	autotools.rawConfigure("--prefix=/usr \
 							--bindir=/bin")
-					  
+					
 def build():
 	autotools.make()
 	

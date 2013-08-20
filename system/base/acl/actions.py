@@ -8,7 +8,7 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 def setup():
     autotools.rawConfigure ("--prefix=%(ROOT)s --bindir=%(ROOT)s/bin --libdir=%(ROOT)s/lib --libexecdir=%(ROOT)s/lib --includedir=%(ROOT)s/usr/include --datadir=%(ROOT)s/usr/share --mandir=%(ROOT)s/usr/share/man" % { 'ROOT': get.installDIR()} )
-						  
+						
 def build():
 	autotools.make ()
 	

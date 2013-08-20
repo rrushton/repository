@@ -12,7 +12,7 @@ def setup():
                           --enable-python2 \
                           --enable-gjs \
                           --enable-gtk ")
-						  
+						
 def build():
 	autotools.make ()
 	

@@ -11,7 +11,7 @@ def setup():
     autotools.configure ("--disable-static \
                           --libexecdir=/usr/lib/gnome-online-accounts \
                           --disable-documentation")
-						  
+						
 def build():
 	autotools.make ()
 	

@@ -6,14 +6,14 @@
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 shelltools.export ("HOME", get.workDIR())
-    
+
 def build_config ():
     cflags = get.CFLAGS().replace ("-ggdb3","")
     cxxflags = get.CXXFLAGS().replace ("-gddb3", "")
     shelltools.export ("CFLAGS", cflags)
     shelltools.export ("CXXFLAGS", cxxflags)
-    
-       
+
+
 def setup():
     shelltools.system ("sed -i '/gtkdoc --rebase/s:^:# :' GNUmakefile.*")
     if not get.canClang(): build_config ()
@@ -24,7 +24,7 @@ def setup():
                           --enable-introspection \
                           --disable-gtk-doc-html")
     shelltools.system ("sed -i '/gtkdoc --rebase/s:^:# :' GNUmakefile.*")
-						  
+						
 def build():
     if not get.canClang(): build_config ()
     autotools.make ()

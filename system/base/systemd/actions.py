@@ -16,7 +16,7 @@ def setup():
                           --with-sysvinit-path=/etc/init.d \
                           --with-firmware-path=/lib/firmware \
                           --with-pamlibdir=/lib/security")
-						  
+						
 def build():
 	autotools.make ()
 	
@@ -27,7 +27,7 @@ def install():
     pisitools.dosym ("/usr/bin/udevadm", "/sbin/udevadm")
     pisitools.dosym ("/usr/lib/systemd/systemd-udevd", "/lib/udev/udevd")
     pisitools.dosym ("/usr/lib/libudev.so", "/usr/lib/libudev.so.0")
-    
+
     # Final tweaks ^^
     pisitools.dosym ("/usr/lib/systemd/systemd", "/bin/systemd")
     pisitools.dosym ("/usr/lib/systemd/systemd", "/sbin/init")

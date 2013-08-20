@@ -14,7 +14,7 @@ def setup():
 						  --with-pkgconfigdir=/usr/lib/pkgconfig \
 						  --enable-libipq                        \
 						  --enable-devel")
-						  
+						
 def build():
 	autotools.make ()
 	

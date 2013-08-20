@@ -10,10 +10,10 @@ def setup():
                           --enable-python-bindings \
                           --enable-pam \
                           --with-securedir=/lib/security")
-    
+
 def build():
     autotools.make ()
-    
+
 def install():
     autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
 

@@ -11,7 +11,7 @@ def setup():
 						  --disable-static\
 						  --disable-docs\
 						  --docdir=/usr/share/doc/fontconfig-2.10.2")
-						  
+						
 def build():
 	autotools.make ()
 	

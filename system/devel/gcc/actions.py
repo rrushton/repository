@@ -55,7 +55,7 @@ def setup():
 						
 	# Print the summary
 	shelltools.system ("%s/contrib/test_summary" % GccDir)
-						  
+						
 def build():
 	exportMultiVars ()
 	shelltools.cd (BuildDir)

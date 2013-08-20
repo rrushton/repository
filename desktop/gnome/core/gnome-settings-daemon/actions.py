@@ -12,7 +12,7 @@ def setup():
                           --libexecdir=/usr/lib/gnome-settings-daemon \
                           --enable-packagekit \
                           --enable-systemd")
-						  
+						
 def build():
 	autotools.make ()
 	

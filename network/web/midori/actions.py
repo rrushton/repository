@@ -13,7 +13,7 @@ def setup():
 							 --disable-unique \
 							 --enable-addons \
 							 --enable-gtk3")
-						  
+						
 def build():
 	#autotools.make ()
 	shelltools.system("make")

@@ -10,7 +10,7 @@ shelltools.export ("HOME", get.workDIR())
 def setup():
     autotools.configure ("--disable-static \
                           --libexecdir=/usr/lib/gedit")
-						  
+						
 def build():
 	autotools.make ()
 	

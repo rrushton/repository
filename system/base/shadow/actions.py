@@ -10,7 +10,7 @@ def setup():
 	pisitools.dosed ("etc/login.defs", "ENCRYPT_METHOD DES", "ENCRYPT_METHOD SHA512")
 	pisitools.dosed ("etc/login.defs", "/var/spool/mail", "/var/mail")
 	autotools.configure("--prefix=/usr --sysconfdir=/etc")
-					  
+					
 def build():
 	autotools.make()
 	

@@ -16,7 +16,7 @@ def setup():
                           --enable-network-manager \
                           --disable-gtk-doc \
                           --libexecdir=/usr/lib/consort-panel")
-						  
+						
 def build():
 	autotools.make ()
 	

@@ -13,7 +13,7 @@ def setup():
 						  --localstatedir=/var \
 						  --libexecdir=/usr/lib/accountsservice \
 						  --disable-static")
-						  
+						
 def build():
 	autotools.make ()
 	

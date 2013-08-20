@@ -9,7 +9,7 @@ def setup():
 	autotools.rawConfigure ("--prefix=/usr\
 							 --disable-documentation\
 							 --sysconfdir=/etc")
-						  
+						
 def build():
 	autotools.make ()
 	

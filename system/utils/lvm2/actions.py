@@ -13,7 +13,7 @@ def setup():
 						  --enable-pkgconfig  \
 						  --enable-dmeventd   \
 						  --disable-udev_sync")
-						  
+						
 def build():
 	autotools.make ()
 

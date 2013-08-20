@@ -9,7 +9,7 @@ shelltools.export("HOME", get.installDIR())
 
 def setup():
     autotools.configure("--disable-static")
-						  
+						
 def build():
     autotools.make()
 	

@@ -8,7 +8,7 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 def setup():
 	shelltools.export ("HOME", get.workDIR())
 	autotools.configure ("--disable-static")
-						  
+						
 def build():
 	shelltools.export ("HOME", get.workDIR())
 	autotools.make ()

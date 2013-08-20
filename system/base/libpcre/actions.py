@@ -13,7 +13,7 @@ def setup():
 							--enable-unicode-properties \
 							--enable-pcregrep-libz \
 							--enable-pcregrep-libbz2")
-					  
+					
 def build():
 	autotools.make()
 	

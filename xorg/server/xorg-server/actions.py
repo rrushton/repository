@@ -11,7 +11,7 @@ def setup():
 						  --enable-install-setuid\
 						  --prefix=/usr\
 						  --disable-static")
-						  
+						
 def build():
 	autotools.make ()
 	

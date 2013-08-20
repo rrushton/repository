@@ -28,7 +28,7 @@ def setup():
 						  --disable-debug-runtime    \
 						  --disable-expensive-checks \
 						  --enable-experimental-targets=R600")
-						  
+						
 def build():
 	autotools.make ()
 	

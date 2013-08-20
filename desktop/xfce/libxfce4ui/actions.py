@@ -9,7 +9,7 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 def setup():
     autotools.configure ("--enable-startup-notification \
                           --with-vendor-info=SolusOS")
-						  
+						
 def build():
 	autotools.make ()
 	

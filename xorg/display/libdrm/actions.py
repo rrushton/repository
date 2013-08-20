@@ -12,7 +12,7 @@ def setup():
 	
 	autotools.autoreconf ("-fi")
 	autotools.configure ("--disable-static --enable-udev --prefix=/usr")
-						  
+						
 def build():
 	autotools.make ()
 	

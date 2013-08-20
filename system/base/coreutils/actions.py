@@ -18,7 +18,7 @@ def setup():
             --libexecdir=/usr/lib \
             --enable-largefile \
             --enable-no-install-program=kill,uptime")
-						  
+						
 def build():
 	autotools.make ()
 	

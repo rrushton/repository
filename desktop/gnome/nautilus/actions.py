@@ -12,7 +12,7 @@ def setup():
                           --disable-static \
                           --disable-packagekit \
                           --libexecdir=/usr/lib/nautilus")
-						  
+						
 def build():
 	autotools.make ()
 	

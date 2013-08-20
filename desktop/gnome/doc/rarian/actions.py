@@ -9,7 +9,7 @@ def setup():
 	autotools.configure ("--prefix=/usr \
 						  --localstatedir=/var \
 						  --disable-static")
-						  
+						
 def build():
 	autotools.make ()
 	

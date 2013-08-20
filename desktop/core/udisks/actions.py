@@ -12,7 +12,7 @@ def setup():
                           --disable-man \
                           --enable-introspection \
                           --with-udevdir=/lib/udev")
-						  
+						
 def build():
 	autotools.make ()
 	

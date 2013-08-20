@@ -10,7 +10,7 @@ def setup():
 	autotools.configure ("--enable-ogg \
 						  --enable-sse \
 						  --disable-static")
-						  
+						
 def build():
 	autotools.make ()
 	

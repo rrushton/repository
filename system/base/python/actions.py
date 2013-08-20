@@ -11,7 +11,7 @@ def setup():
 	autotools.autoreconf ("-vfi")
 	autotools.configure ("--prefix=/usr\
 						  --enable-shared")
-						  
+						
 def build():
 	autotools.make ()
 	

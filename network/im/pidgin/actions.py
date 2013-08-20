@@ -17,7 +17,7 @@ def setup():
                          --disable-gstreamer \
                          --disable-schemas-install \
                          --disable-avahi")
-						  
+						
 def build():
     autotools.make()
 	

@@ -13,7 +13,7 @@ def setup():
 						  --with-curses\
 						  --enable-history\
 						  --with-installed-readline")
-						  
+						
 def build():
 	autotools.make ()
 	

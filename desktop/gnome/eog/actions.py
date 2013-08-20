@@ -9,7 +9,7 @@ shelltools.export ("HOME", get.workDIR())
 
 def setup():
 	autotools.configure ()
-						  
+						
 def build():
 	autotools.make ()
 	

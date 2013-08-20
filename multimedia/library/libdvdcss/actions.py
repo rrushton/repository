@@ -8,6 +8,6 @@ def setup():
 
 def build():
         autotools.make()
-        
+
 def install():
         autotools.install()

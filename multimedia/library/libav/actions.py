@@ -16,7 +16,7 @@ def setup():
 			   --enable-libspeex \
 			   --enable-zlib"
 	autotools.rawConfigure (options)
-						  
+						
 def build():
 	autotools.make ()
 	

@@ -10,7 +10,7 @@ def setup():
 	autotools.rawConfigure("--prefix=/usr \
 							--with-awk=/usr/bin/awk \
 							--with-gnu-ld \
-							--without-x") 
+							--without-x")
 
 def build():
 	autotools.make()

@@ -8,7 +8,7 @@ def setup():
 				--datarootdir=/usr/share/cgames")
 def build():
         autotools.make()
-        
+
 def install():
         autotools.install()
 	

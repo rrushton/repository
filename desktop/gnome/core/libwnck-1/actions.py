@@ -10,7 +10,7 @@ shelltools.export ("HOME", get.workDIR())
 def setup():
     autotools.configure ("--disable-static \
                           --program-suffix=-1")
-						  
+						
 def build():
 	autotools.make ("GETTEXT_PACKAGE=libwnck-1")
 	

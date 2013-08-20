@@ -12,7 +12,7 @@ def setup():
                           --libexecdir=/usr/lib/evolution-data-server \
                           --enable-vala-bindings \
                           --disable-uoa")
-						  
+						
 def build():
 	autotools.make ()
 	

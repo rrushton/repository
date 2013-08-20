@@ -9,7 +9,7 @@ def updateIconThemes (filepath):
         path = xmlfile.getTagData ("Path")
         if "/share/icons/" in path:
             theme_dir = path.split("/")[4]
-            os.system ("/usr/bin/gtk-update-icon-cache -ft \"/usr/share/icons/%s\"" % theme_dir) 
+            os.system ("/usr/bin/gtk-update-icon-cache -ft \"/usr/share/icons/%s\"" % theme_dir)
             break
 
 def setupPackage (metapath, filepath):

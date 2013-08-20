@@ -11,7 +11,7 @@ shelltools.export ("HOME", get.workDIR())
 def setup():
 	autotools.configure ("--disable-static\
 						  --enable-locations-compression")
-						  
+						
 def build():
 	autotools.make ()
 	

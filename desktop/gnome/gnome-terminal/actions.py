@@ -9,7 +9,7 @@ shelltools.export ("HOME", get.workDIR())
 
 def setup():
     autotools.configure ("--libexecdir=/usr/lib/gnome-terminal ")
-						  
+						
 def build():
 	autotools.make ()
 	

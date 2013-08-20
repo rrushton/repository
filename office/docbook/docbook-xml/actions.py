@@ -13,7 +13,7 @@ def create_catalog (targ):
 	system ("xmlcatalog --noout --create %s" % targ)
 
 def insert_into_catalog (type_name, dtd_name, dtd_location, catalog_file):
-	''' Insert DTD into the catalog '''    
+	''' Insert DTD into the catalog '''
 	vars_map = { 'TypeName': type_name,\
 				 'DtdName': dtd_name,\
 				 'DtdLocation': dtd_location,\
@@ -40,7 +40,7 @@ def install():
 	public_dtds ["-//OASIS//DTD DocBook XML CALS Table Model V4.5//EN"] = "file:///usr/share/xml/docbook/xml-dtd-4.5/calstblx.dtd"
 	public_dtds ["-//OASIS//DTD XML Exchange Table Model 19990315//EN"] = "file:///usr/share/xml/docbook/xml-dtd-4.5/soextblx.dtd"
 	public_dtds ["-//OASIS//ELEMENTS DocBook XML Information Pool V4.5//EN"] = "file:///usr/share/xml/docbook/xml-dtd-4.5/dbpoolx.mod"
-	public_dtds ["-//OASIS//ELEMENTS DocBook XML Document Hierarchy V4.5//EN"] = "file:///usr/share/xml/docbook/xml-dtd-4.5/dbhierx.mod" 
+	public_dtds ["-//OASIS//ELEMENTS DocBook XML Document Hierarchy V4.5//EN"] = "file:///usr/share/xml/docbook/xml-dtd-4.5/dbhierx.mod"
 	public_dtds ["-//OASIS//ELEMENTS DocBook XML HTML Tables V4.5//EN" ] = "file:///usr/share/xml/docbook/xml-dtd-4.5/htmltblx.mod"
 	public_dtds ["-//OASIS//ENTITIES DocBook XML Notations V4.5//EN"] = "file:///usr/share/xml/docbook/xml-dtd-4.5/dbnotnx.mod"
 	public_dtds ["-//OASIS//ENTITIES DocBook XML Character Entities V4.5//EN"] = "file:///usr/share/xml/docbook/xml-dtd-4.5/dbcentx.mod"

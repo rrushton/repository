@@ -35,7 +35,7 @@ def install():
 
     # Install nss-config and nss.pc
     pisitools.insinto("/usr/lib/pkgconfig", "dist/Linux*/lib/pkgconfig/nss.pc", sym=False)
-    
+
     for lib in ["libfreebl3.so", "libnssutil3.so", "libnss3.so", "libsmime3.so", "libnssckbi.so"\
 				"libsmime3.so", "libsoftokn3.so", "libnssdbm3.so", "libssl3.so", "libnsssysinit.so"]:
 		pisitools.dosym ("/usr/lib/nss/%s" % lib, "/usr/lib/%s" % lib)

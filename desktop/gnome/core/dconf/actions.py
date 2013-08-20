@@ -13,7 +13,7 @@ def setup():
 						  --libexecdir=/usr/lib/dconf \
 						  --disable-man \
 						  --disable-static")
-						  
+						
 def build():
 	autotools.make ()
 	

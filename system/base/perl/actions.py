@@ -11,14 +11,14 @@ def setup():
 						-e \"s|INCLUDE\s*= ./zlib-src|INCLUDE    = /usr/include|\" \
 						-e \"s|LIB\s*= ./zlib-src|LIB        = /usr/lib|\"         \
 						cpan/Compress-Raw-Zlib/config.in")
-    
+
 	shelltools.system ("./Configure -des -Dprefix=/usr\
 					   -Dvendorprefix=/usr           \
 					   -Dman1dir=/usr/share/man/man1 \
 					   -Dman3dir=/usr/share/man/man3 \
 					   -Dpager=\"/usr/bin/less -isR\"  \
 					   -Duseshrplib")
-						  
+						
 def build():
 	autotools.make ()
 	

@@ -14,7 +14,7 @@ def setup():
 						  --dbdir=/run\
 						  --sysconfdir=/etc\
 						  --with-rootprefix=/")
-						  
+						
 def build():
 	autotools.make ()
 	

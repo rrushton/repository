@@ -19,7 +19,7 @@ def setup():
 						  --disable-gtk-doc-html \
 						  --disable-man-pages \
 						  --disable-static")
-						  
+						
 def build():
 	shelltools.export ("HOME", get.workDIR())	
 	autotools.make ()

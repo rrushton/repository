@@ -12,7 +12,7 @@ def setup():
                           --enable-systemd \
                           --disable-documentation \
                           --libexecdir=/usr/lib/gnome-control-center")
-						  
+						
 def build():
 	autotools.make ()
 	

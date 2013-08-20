@@ -9,13 +9,13 @@ shelltools.export ("HOME", get.workDIR())
 
 def setup():
     shelltools.system ("sed -i -e 's:getgroups:lightdm_&:' tests/src/libsystem.c")
-    
+
     autotools.configure ("--enable-introspection \
                           --enable-liblightdm-gobject \
                           --disable-static \
                           --libexecdir=/usr/lib/lightdm \
                           --with-greeter-session=lightdm-gtk-greeter")
-						  
+						
 def build():
 	autotools.make ()
 	

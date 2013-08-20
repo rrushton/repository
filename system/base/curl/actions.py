@@ -16,7 +16,7 @@ def setup():
                           --without-gnutls \
                           --enable-libcurl-option \
                           --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt")
-						  
+						
 def build():
 	autotools.make ()
 	

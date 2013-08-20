@@ -26,7 +26,7 @@ def setup():
 						  --with-x \
 						  --disable-rpath \
 						  --disable-static")
-						  
+						
 def build():
 	autotools.make ()
 	

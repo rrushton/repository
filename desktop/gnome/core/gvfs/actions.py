@@ -10,7 +10,7 @@ def setup():
     autotools.configure ("--disable-gphoto2 \
                           --disable-documentation \
                           --libexecdir=/usr/lib/gvfs")
-						  
+						
 def build():
 	autotools.make ()
 	

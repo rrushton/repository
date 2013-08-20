@@ -14,14 +14,14 @@ def setup():
 						  --disable-static\
 						  --disable-skill\
 						  --disable-kill")
-						  
+						
 def build():
 	autotools.make ()
 	
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 	
-	# Move libraries into lib 
+	# Move libraries into lib
 	pisitools.domove ("/usr/lib/libprocps.so*", "/lib")
 	
 	# Symlink back to /usr

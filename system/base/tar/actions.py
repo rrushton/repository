@@ -11,7 +11,7 @@ def setup():
 	# Fix glibc 2.17 issue
 	os.system ("sed -i -e '/gets is a/d' gnu/stdio.in.h")
 	autotools.configure ("--disable-static --libexecdir=/usr/sbin --bindir=/bin")
-					  
+					
 def build():
 	autotools.make()
 	

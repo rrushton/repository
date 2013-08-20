@@ -8,7 +8,7 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 def setup():
 	autotools.rawConfigure ("--bindir=/bin\
 							 --mandir=/usr/share/man")
-						  
+						
 def build():
 	autotools.make ()
 	

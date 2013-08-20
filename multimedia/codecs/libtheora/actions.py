@@ -10,7 +10,7 @@ def setup():
 	autotools.configure ("--disable-static \
 						  --disable-sdltest \
 						  --disable-examples")
-						  
+						
 def build():
 	autotools.make ()
 	

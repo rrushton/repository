@@ -12,7 +12,7 @@ def setup():
                           --disable-static \
                           --with-udevrulesdir \
                           --libexecdir=/usr/lib/colord")
-						  
+						
 def build():
 	autotools.make ()
 	

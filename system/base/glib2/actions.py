@@ -9,7 +9,7 @@ def setup():
     autotools.autoreconf ("-vfi")
     autotools.configure ("--prefix=/usr\
                           --with-pcre=system")
-						  
+						
 def build():
 	autotools.make ()
 	

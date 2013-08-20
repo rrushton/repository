@@ -13,7 +13,7 @@ def setup():
             --disable-manpages  \
             --with-xz           \
             --with-zlib")
-					  
+					
 def build():
 	autotools.make()
 	

@@ -14,7 +14,7 @@ def setup():
             --with-console-auth-dir=/run/console/\
             --with-systemdsystemunitdir=/usr/lib/systemd/system\
             --disable-static")
-						  
+						
 def build():
 	autotools.make ()
 	

@@ -13,6 +13,6 @@ def build():
 
 def install():
     autotools.rawInstall("DESTDIR=\%s" % get.installDIR())
-    
-    pisitools.dosym("/usr/bin/gmake","/usr/bin/make")    
+
+    pisitools.dosym("/usr/bin/gmake","/usr/bin/make")
     pisitools.dodoc("README","AUTHORS")

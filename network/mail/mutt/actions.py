@@ -16,7 +16,7 @@ def setup():
 						 --enable-hcache \
 						 --with-curses \
 						 --with-regex \
-						 --with-ssl") 
+						 --with-ssl")
 
 def build():
 	autotools.make()

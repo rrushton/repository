@@ -17,7 +17,7 @@ def setup():
 	autotools.configure ("--prefix=/usr\
 						 --with-mozilla\
 						 --with-pthreads")
-					  
+					
 def build():
 	os.chdir (BuildDir)
 	autotools.make()

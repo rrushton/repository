@@ -6,7 +6,7 @@
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 WorkDir = "zip30"
-	  
+	
 def build():
 	autotools.make ("-f unix/Makefile generic_gcc")
 	

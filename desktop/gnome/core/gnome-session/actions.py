@@ -11,7 +11,7 @@ def setup():
                           --libexecdir=/usr/lib/gnome-session \
                           --enable-systemd \
                           --disable-docbook-docs")
-						  
+						
 def build():
 	autotools.make ()
 	

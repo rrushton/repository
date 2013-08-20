@@ -11,7 +11,7 @@ def setup():
 	autotools.configure ("--disable-static \
 						  --with-package-name=\"GStreamer Base Plugins 1.0.6 SolusOS\" \
 						  --with-package-origin=\"http://www.solusos.com\"")
-						  
+						
 def build():
 	autotools.make ()
 	

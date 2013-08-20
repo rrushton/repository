@@ -11,7 +11,7 @@ def setup():
     cflags += " -D_FILE_OFFSET_BITS=64"
     shelltools.export ("CFLAGS", cflags)
     autotools.configure("--prefix=/usr --disable-static")
-					  
+					
 def build():
 	autotools.make()
 	

@@ -124,7 +124,7 @@ def install():
     # Nscd needs this to work
     pisitools.dodir("/var/run/nscd")
     pisitools.dodir("/var/db/nscd")
-    
+
     if shelltools.isDirectory("%s/usr/share/zoneinfo" % get.installDIR()):
         pisitools.removeDir("/usr/share/zoneinfo")
 

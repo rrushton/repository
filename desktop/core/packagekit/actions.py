@@ -16,7 +16,7 @@ def setup():
                           --disable-static \
                           --libexecdir=/usr/lib/PackageKit \
                           --enable-systemd ")
-						  
+						
 def build():
 	autotools.make ()
 	

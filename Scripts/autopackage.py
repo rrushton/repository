@@ -43,7 +43,7 @@ class AutoPackage:
 		self.email = self.config["Packager"]["Email"]
 		self.packager_name = self.config["Packager"]["Name"]
 		
-		# Templates 
+		# Templates
 		us = os.path.dirname(os.path.abspath(__file__))
 		base_dir = "/".join (us.split ("/")[:-1])
 		self.template_dir = os.path.join (base_dir, "Templates")
@@ -80,7 +80,7 @@ class AutoPackage:
 		# Package name, including hyphens
 		self.package_name = "-".join(path.split("-")[:-1])
 		self.compile_type = None
-        
+
 		print "Package: %s\nVersion: %s" % (self.package_name, self.version_string)
 		print "SHA1 Sum: %s" % self.sha1sum
 		
@@ -124,8 +124,8 @@ class AutoPackage:
 				if "Makefile.PL" in file:
 					# This is a perl module
 					self.compile_type = PERL_MODULES
-                    
-		if self.compile_type == GNOMEY: 
+
+		if self.compile_type == GNOMEY:
 			print "This package utilises g-ir-scanner, a specific actions.py will be used"
 						
 		# Clean up on aisle 3

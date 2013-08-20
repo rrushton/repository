@@ -13,7 +13,7 @@ def setup():
 						  --libexecdir=/usr/lib/GConf \
 						  --disable-orbit \
 						  --disable-static")
-						  
+						
 def build():
 	autotools.make ()
 	

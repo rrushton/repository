@@ -10,7 +10,7 @@ shelltools.export ("HOME", get.workDIR())
 def setup():
     autotools.configure ("--disable-static \
                           --libexecdir=/usr/lib/network-manager")
-						  
+						
 def build():
 	autotools.make ()
 	

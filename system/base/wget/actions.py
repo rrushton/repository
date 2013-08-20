@@ -8,7 +8,7 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 def setup():
 	autotools.configure ("--with-ssl=openssl")
-						  
+						
 def build():
 	autotools.make ()
 	

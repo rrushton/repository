@@ -16,10 +16,10 @@ def build():
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-    
+
     # Remove some empty directories.
     os.removedirs("%s/usr/bin" % get.installDIR())
     os.removedirs("%s/usr/share/man/man1" % get.installDIR())
-    
+
     pisitools.dodoc ("README", "NEWS", "COPYING")
 

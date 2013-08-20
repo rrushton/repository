@@ -11,7 +11,7 @@ def setup():
     autotools.configure ("--disable-static \
                           --libexecdir=/usr/lib/GnomeDesktop \
                           --with-gnome-distributor=SolusOS")
-						  
+						
 def build():
 	autotools.make ()
 	

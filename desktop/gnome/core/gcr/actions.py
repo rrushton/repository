@@ -12,7 +12,7 @@ def setup():
 	autotools.configure ("--disable-static\
 						  --libexecdir=/usr/lib/gnome-keyring\
 						  --sysconfdir=/etc")
-						  
+						
 def build():
 	autotools.make ()
 	

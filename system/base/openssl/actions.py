@@ -11,7 +11,7 @@ def setup():
 						--openssldir=/etc/ssl\
 						shared\
 						zlib-dynamic")
-						  
+						
 def build():
 	autotools.make ("-j1")
 	

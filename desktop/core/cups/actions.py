@@ -17,7 +17,7 @@ def setup():
                           --enable-acl \
                           --enable-dbus \
                           --enable-libpaper ")
-						  
+						
 def build():
 	autotools.make ()
 	
@@ -26,5 +26,5 @@ def install():
 
     pisitools.removeDir ("/usr/share/cups/banners")
     pisitools.removeDir ("/usr/share/cups/data/testprint")
-    
+
     shelltools.echo ("%s/etc/cups/client.conf" % get.installDIR(), "ServerName /var/run/cups/cups.sock")

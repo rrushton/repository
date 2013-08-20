@@ -11,7 +11,7 @@ def setup():
 	autotools.configure ("--disable-static \
 			      --enable-maintainer-flags=no \
 			      --enable-introspection=yes")
-						  
+						
 def build():
 	autotools.make ()
 	

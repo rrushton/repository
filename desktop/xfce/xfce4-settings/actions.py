@@ -14,7 +14,7 @@ def setup():
                           --enable-gio-unix \
                           --enable-libxklavier \
                           --enable-xcursor")
-						  
+						
 def build():
 	autotools.make ()
 	

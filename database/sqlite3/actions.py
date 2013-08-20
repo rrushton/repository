@@ -10,9 +10,9 @@ def setup():
             -DSQLITE_ENABLE_COLUMN_METADATA=1     \
             -DSQLITE_ENABLE_UNLOCK_NOTIFY=1       \
             -DSQLITE_SECURE_DELETE=1")
-         
+
 	autotools.rawConfigure ("--prefix=/usr --disable-static")
-						  
+						
 def build():
 	autotools.make ()
 	

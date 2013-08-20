@@ -11,7 +11,7 @@ def setup():
 	autotools.autoreconf ("-fi")
 	autotools.configure ("--enable-xinput\
 						  --docdir=/usr/share/doc/libxcb-1.9")
-						  
+						
 def build():
 	autotools.make ()
 	

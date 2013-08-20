@@ -14,8 +14,8 @@ def setup():
                          --enable-gio \
                          --without-evolution-data-server \
                          --without-goffice")
-                         
-						  
+
+						
 def build():
 	autotools.make()
 	

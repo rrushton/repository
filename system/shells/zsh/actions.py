@@ -10,7 +10,7 @@ def setup():
 	autotools.configure("--enable-pcre \
 						 --bindir=/bin \
 						 --with-tcsetpgrp")
-						  
+						
 def build():
 	autotools.make()
 	

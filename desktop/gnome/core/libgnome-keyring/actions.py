@@ -10,7 +10,7 @@ shelltools.export ("HOME", get.workDIR())
 
 def setup():
 	autotools.configure ("--disable-static")
-						  
+						
 def build():
 	autotools.make ()
 	

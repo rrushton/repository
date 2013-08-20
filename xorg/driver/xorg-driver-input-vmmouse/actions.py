@@ -11,7 +11,7 @@ def setup():
                           --with-udev-rules-dir=/lib/udev/rules.d \
                           --without-hal-callouts-dir \
                           --without-hal-fdi-dir ")
-						  
+						
 def build():
 	autotools.make ()
 	

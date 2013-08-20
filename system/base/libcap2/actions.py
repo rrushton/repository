@@ -6,7 +6,7 @@
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
-					  
+					
 def build():
 	autotools.make()
 	
