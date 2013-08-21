@@ -92,7 +92,7 @@ if __name__ == "__main__":
 	print "\n[ XML Dependencies ]"
 	print "<RuntimeDependencies>"
 	for dep in dependsOn:
-		print "\t<Dependency>%s</Dependency>" % dep
+		print "    <Dependency>%s</Dependency>" % dep
 	print "</RuntimeDependencies>"
 	
 	# Suggest build dependencies
@@ -102,7 +102,7 @@ if __name__ == "__main__":
 		package = "%s-devel" % dep
 		try:
 			subject = pisi.api.info_name (package, True)
-			print "\t<Dependency>%s</Dependency>" % package
+			print "    <Dependency>%s</Dependency>" % package
 		except:
-			print "\t<!-- Info: no %s package - consider splitting -->" % package
+			print "    <!-- Info: no %s package - consider splitting -->" % package
 	print "</BuildDependencies>"
