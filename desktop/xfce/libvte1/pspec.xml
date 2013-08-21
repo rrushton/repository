@@ -1,0 +1,132 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libvte1</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>Terminal emulator widget library for GTK+ 2</Summary>
+        <Description>Vte is a library (libvte) implementing a terminal emulator widget for GTK+ 2, and a minimal demonstration application (vte) that uses libvte. </Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="b0af0701ef9d6c7ede9c578366b12a70ac47ab66" type="tarxz">ftp://ftp.gnome.org/pub/gnome/sources/vte/0.28/vte-0.28.2.tar.xz</Archive>
+
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>harfbuzz-devel</Dependency>
+            <Dependency>libxcursor-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libicu-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>libice-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libxinerama-devel</Dependency>
+            <Dependency>libatk-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>libxrandr-devel</Dependency>
+            <Dependency>libxdamage-devel</Dependency>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>libgtk-2-devel</Dependency>
+            <Dependency>libxfixes-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libxcomposite-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libsm-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libvte1</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="executable">/usr/libexec/gnome-pty-helper</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/vte</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>libxcursor</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>libicu</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxinerama</Dependency>
+            <Dependency>libatk</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libxrandr</Dependency>
+            <Dependency>libxdamage</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>libgtk-2</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>libxfixes</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libxcomposite</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libsm</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>libvte1-devel</Name>
+        <Summary>Development files for libvte1</Summary>
+        <Description>Development files for libvte1</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libvte1</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>libvte1-docs</Name>
+        <Summary>API Documentation for libvte1</Summary>
+        <Description>API Documentation for libvte1</Description>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libvte1-devel</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>08-21-2013</Date>
+            <Version>0.28.2</Version>
+            <Comment>Add libvte1 to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>	
+</PISI>
