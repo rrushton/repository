@@ -6238,7 +6238,7 @@ extension.  Library and server implementations are separate.</Description>
             <Description xml:lang="en">The International Components for Unicode (ICU) package is a mature, widely used set of C/C++ libraries providing Unicode and Globalization support for software applications. ICU is widely portable and gives applications the same results on all platforms.</Description>
             <Archive type="tarbz2" sha1sum="c1a0dc10bfa99104e5fe2e1bdcb85072150abf8b">http://www.freedesktop.org/software/harfbuzz/release/harfbuzz-0.9.13.tar.bz2</Archive>
             <BuildDependencies>
-                <Dependency>libicu-devel</Dependency>
+                <Dependency releaseFrom="2">libicu-devel</Dependency>
                 <Dependency>fontconfig</Dependency>
             </BuildDependencies>
             <SourceURI>xorg/fonts/harfbuzz/pspec.xml</SourceURI>
@@ -6246,7 +6246,7 @@ extension.  Library and server implementations are separate.</Description>
         <Package>
             <Name>harfbuzz</Name>
             <RuntimeDependencies>
-                <Dependency>libicu</Dependency>
+                <Dependency releaseFrom="2">libicu</Dependency>
                 <Dependency>fontconfig</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -6259,7 +6259,7 @@ extension.  Library and server implementations are separate.</Description>
             <Summary xml:lang="en">Development files for harfbuzz</Summary>
             <Description xml:lang="en">Development files for harfbuzz</Description>
             <RuntimeDependencies>
-                <Dependency>harfbuzz</Dependency>
+                <Dependency releaseFrom="2">harfbuzz</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -9845,7 +9845,7 @@ believes in you...</Description>
                 <Dependency>libxdmcp-devel</Dependency>
                 <Dependency>libffi-devel</Dependency>
                 <Dependency>pango-devel</Dependency>
-                <Dependency>libgtk-3-devel</Dependency>
+                <Dependency releaseFrom="10">libgtk-3-devel</Dependency>
                 <Dependency>libxfixes-devel</Dependency>
                 <Dependency>libcairo-devel</Dependency>
                 <Dependency>dbus-devel</Dependency>
@@ -9889,7 +9889,7 @@ believes in you...</Description>
                 <Dependency>libxdmcp</Dependency>
                 <Dependency>libffi</Dependency>
                 <Dependency>pango</Dependency>
-                <Dependency>libgtk-3</Dependency>
+                <Dependency releaseFrom="10">libgtk-3</Dependency>
                 <Dependency>libxfixes</Dependency>
                 <Dependency>at-spi2</Dependency>
                 <Dependency>freetype2</Dependency>
@@ -10656,7 +10656,7 @@ believes in you...</Description>
                 <Dependency>libxdmcp-devel</Dependency>
                 <Dependency>libffi-devel</Dependency>
                 <Dependency>pango-devel</Dependency>
-                <Dependency>libgtk-3-devel</Dependency>
+                <Dependency releaseFrom="10">libgtk-3-devel</Dependency>
                 <Dependency>libxfixes-devel</Dependency>
                 <Dependency>libcairo-devel</Dependency>
                 <Dependency>dbus-devel</Dependency>
@@ -10705,7 +10705,7 @@ believes in you...</Description>
                 <Dependency>libxdmcp</Dependency>
                 <Dependency>libffi</Dependency>
                 <Dependency>pango</Dependency>
-                <Dependency>libgtk-3</Dependency>
+                <Dependency releaseFrom="10">libgtk-3</Dependency>
                 <Dependency>libxfixes</Dependency>
                 <Dependency>libstdc++</Dependency>
                 <Dependency>at-spi2</Dependency>
@@ -11325,7 +11325,7 @@ believes in you...</Description>
                 <Dependency>libgnome-menus-devel</Dependency>
                 <Dependency>gconf-devel</Dependency>
                 <Dependency>pango-devel</Dependency>
-                <Dependency>libgtk-3-devel</Dependency>
+                <Dependency releaseFrom="10">libgtk-3-devel</Dependency>
                 <Dependency>libxfixes-devel</Dependency>
                 <Dependency>libcairo-devel</Dependency>
                 <Dependency>dbus-devel</Dependency>
@@ -11383,7 +11383,7 @@ believes in you...</Description>
                 <Dependency>libgnome-menus</Dependency>
                 <Dependency>gconf</Dependency>
                 <Dependency>pango</Dependency>
-                <Dependency>libgtk-3</Dependency>
+                <Dependency releaseFrom="10">libgtk-3</Dependency>
                 <Dependency>libxfixes</Dependency>
                 <Dependency>at-spi2</Dependency>
                 <Dependency>freetype2</Dependency>
@@ -12362,6 +12362,133 @@ believes in you...</Description>
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>libvte1</Name>
+            <Homepage>http://www.gnome.org</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.xfce</PartOf>
+            <Summary xml:lang="en">Terminal emulator widget library for GTK+ 2</Summary>
+            <Description xml:lang="en">Vte is a library (libvte) implementing a terminal emulator widget for GTK+ 2, and a minimal demonstration application (vte) that uses libvte.</Description>
+            <Archive type="tarxz" sha1sum="b0af0701ef9d6c7ede9c578366b12a70ac47ab66">ftp://ftp.gnome.org/pub/gnome/sources/vte/0.28/vte-0.28.2.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>libxcursor-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+                <Dependency>libicu-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>libice-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libxinerama-devel</Dependency>
+                <Dependency>libatk-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>libxrandr-devel</Dependency>
+                <Dependency>libxdamage-devel</Dependency>
+                <Dependency>ncurses-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>libgtk-2-devel</Dependency>
+                <Dependency>libxfixes-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>libxcomposite-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libsm-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/libvte1/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libvte1</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libxcursor</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>libicu</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxinerama</Dependency>
+                <Dependency>libatk</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>libxrandr</Dependency>
+                <Dependency>libxdamage</Dependency>
+                <Dependency>ncurses</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>libgtk-2</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>libxfixes</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>libxcomposite</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libsm</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="executable">/usr/libexec/gnome-pty-helper</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/vte</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libvte1-devel</Name>
+            <Summary xml:lang="en">Development files for libvte1</Summary>
+            <Description xml:lang="en">Development files for libvte1</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">libvte1</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libvte1-docs</Name>
+            <Summary xml:lang="en">API Documentation for libvte1</Summary>
+            <Description xml:lang="en">API Documentation for libvte1</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">libvte1-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>08-21-2013</Date>
+                <Version>0.28.2</Version>
+                <Comment>Add libvte1 to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>thunar-volman</Name>
             <Homepage>http://www.xfce.org</Homepage>
             <Packager>
@@ -13314,6 +13441,120 @@ believes in you...</Description>
                 <Date>08-07-2013</Date>
                 <Version>0.1.25</Version>
                 <Comment>Add tumbler to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-terminal</Name>
+            <Homepage>http://docs.xfce.org/apps/terminal/start</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.xfce</PartOf>
+            <Summary xml:lang="en">Terminal emulator application for the Xfce Desktop</Summary>
+            <Description xml:lang="en">Terminal emulator application for the Xfce Desktop</Description>
+            <Archive type="tarbz2" sha1sum="bb90b6b414932147d71c735472b1dcab14c6e899">http://archive.xfce.org/src/apps/xfce4-terminal/0.6/xfce4-terminal-0.6.2.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>libxcursor-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+                <Dependency>libicu-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libice-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libxinerama-devel</Dependency>
+                <Dependency>libatk-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libxdamage-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>libxrandr-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+                <Dependency>ncurses-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>libgtk-2-devel</Dependency>
+                <Dependency>libxfixes-devel</Dependency>
+                <Dependency>libstartup-notification-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>libxcomposite-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libsm-devel</Dependency>
+                <Dependency>libvte1-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/xfce4-terminal/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-terminal</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libxcursor</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>xcb-util</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>libicu</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxinerama</Dependency>
+                <Dependency>libatk</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libxdamage</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>libxrandr</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>ncurses</Dependency>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>libgtk-2</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>libxfixes</Dependency>
+                <Dependency>libstartup-notification</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>libxcomposite</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libsm</Dependency>
+                <Dependency>libvte1</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/xfce4/terminal</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/gnome-control-center/default-apps</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>08-21-2013</Date>
+                <Version>0.6.2</Version>
+                <Comment>Add xfce4-terminal to repositories</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
@@ -15477,7 +15718,7 @@ believes in you...</Description>
                 <Dependency>libnotify-devel</Dependency>
                 <Dependency>libffi-devel</Dependency>
                 <Dependency>pango-devel</Dependency>
-                <Dependency>libgtk-3-devel</Dependency>
+                <Dependency releaseFrom="10">libgtk-3-devel</Dependency>
                 <Dependency>libxfixes-devel</Dependency>
                 <Dependency>attr-devel</Dependency>
                 <Dependency>libcairo-devel</Dependency>
@@ -15531,7 +15772,7 @@ believes in you...</Description>
                 <Dependency>libnotify</Dependency>
                 <Dependency>libffi</Dependency>
                 <Dependency>pango</Dependency>
-                <Dependency>libgtk-3</Dependency>
+                <Dependency releaseFrom="10">libgtk-3</Dependency>
                 <Dependency>libxfixes</Dependency>
                 <Dependency>attr</Dependency>
                 <Dependency>libstdc++</Dependency>
@@ -16366,7 +16607,7 @@ believes in you...</Description>
                 <Dependency>pixman-devel</Dependency>
                 <Dependency>sqlite3-devel</Dependency>
                 <Dependency>pango-devel</Dependency>
-                <Dependency>libgtk-3-devel</Dependency>
+                <Dependency releaseFrom="10">libgtk-3-devel</Dependency>
                 <Dependency>libxfixes-devel</Dependency>
                 <Dependency>libxext-devel</Dependency>
                 <Dependency>libcairo-devel</Dependency>
@@ -16413,7 +16654,7 @@ believes in you...</Description>
                 <Dependency>pixman</Dependency>
                 <Dependency>sqlite3</Dependency>
                 <Dependency>pango</Dependency>
-                <Dependency>libgtk-3</Dependency>
+                <Dependency releaseFrom="10">libgtk-3</Dependency>
                 <Dependency>libxfixes</Dependency>
                 <Dependency>util-linux</Dependency>
                 <Dependency>libstdc++</Dependency>
@@ -17184,7 +17425,7 @@ believes in you...</Description>
                 <Dependency>libxdmcp-devel</Dependency>
                 <Dependency>libffi-devel</Dependency>
                 <Dependency>pango-devel</Dependency>
-                <Dependency>libgtk-3-devel</Dependency>
+                <Dependency releaseFrom="10">libgtk-3-devel</Dependency>
                 <Dependency>libxfixes-devel</Dependency>
                 <Dependency>libcairo-devel</Dependency>
                 <Dependency>dbus-devel</Dependency>
@@ -17228,7 +17469,7 @@ believes in you...</Description>
                 <Dependency>libxdmcp</Dependency>
                 <Dependency>libffi</Dependency>
                 <Dependency>pango</Dependency>
-                <Dependency>libgtk-3</Dependency>
+                <Dependency releaseFrom="10">libgtk-3</Dependency>
                 <Dependency>libxfixes</Dependency>
                 <Dependency>libstdc++</Dependency>
                 <Dependency>at-spi2</Dependency>
@@ -17305,7 +17546,7 @@ believes in you...</Description>
             <Description xml:lang="en">he Gcr package contains libraries used for displaying certificates and accessing key stores. It also provides the viewer for crypto files on the GNOME Desktop.</Description>
             <Archive type="tarxz" sha1sum="241acff88075bb6a8f7ee199c0e31ce6c768806e">http://ftp.gnome.org/pub/gnome/sources/gcr/3.8/gcr-3.8.2.tar.xz</Archive>
             <BuildDependencies>
-                <Dependency>libgtk-3-devel</Dependency>
+                <Dependency releaseFrom="10">libgtk-3-devel</Dependency>
                 <Dependency>libp11-kit-devel</Dependency>
                 <Dependency>libcairo-devel</Dependency>
                 <Dependency>zlib-devel</Dependency>
@@ -17322,7 +17563,7 @@ believes in you...</Description>
         <Package>
             <Name>gcr</Name>
             <RuntimeDependencies>
-                <Dependency>libgtk-3</Dependency>
+                <Dependency releaseFrom="10">libgtk-3</Dependency>
                 <Dependency>libp11-kit</Dependency>
                 <Dependency>libcairo</Dependency>
                 <Dependency>zlib</Dependency>
@@ -18351,7 +18592,7 @@ believes in you...</Description>
             <Archive type="tarxz" sha1sum="39c5149f18c1fc24f96e1338bfad01519a5110a5">http://ftp.gnome.org/pub/gnome/sources/gnome-icon-theme-symbolic/3.8/gnome-icon-theme-symbolic-3.8.3.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>libgtk-2-devel</Dependency>
-                <Dependency>libgtk-3-devel</Dependency>
+                <Dependency releaseFrom="10">libgtk-3-devel</Dependency>
                 <Dependency>icon-naming-utils</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/gnome/core/gnome-icon-theme-symbolic/pspec.xml</SourceURI>
@@ -20091,7 +20332,7 @@ believes in you...</Description>
                 <Dependency>libffi</Dependency>
                 <Dependency>libgcc</Dependency>
                 <Dependency>libxcb</Dependency>
-                <Dependency>libvte</Dependency>
+                <Dependency releaseFrom="2">libvte</Dependency>
                 <Dependency>libxau</Dependency>
                 <Dependency>libicu</Dependency>
                 <Dependency>bzip2</Dependency>
@@ -35895,14 +36136,14 @@ Remove polkit-devel from system.devel</Comment>
             <BuildDependencies>
                 <Dependency>glib2-devel</Dependency>
                 <Dependency>expat</Dependency>
-                <Dependency>dbus-devel</Dependency>
+                <Dependency releaseFrom="3">dbus-devel</Dependency>
             </BuildDependencies>
             <SourceURI>system/base/dbus-glib/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>dbus-glib</Name>
             <RuntimeDependencies>
-                <Dependency>dbus</Dependency>
+                <Dependency releaseFrom="3">dbus</Dependency>
                 <Dependency>expat</Dependency>
             </RuntimeDependencies>
             <Files>
