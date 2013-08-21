@@ -1,17 +1,17 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>gnome-packagekit</Name>
+    <Source>
+        <Name>gnome-packagekit</Name>
         <Homepage>http://www.packagekit.org</Homepage>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>GNOME PackageKit Frontend</Summary>
-		<Description>GNOME PackageKit Frontend</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="7f3a02f0fc79f0d3444f105116dd83ff8221862b" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-packagekit/3.8/gnome-packagekit-3.8.2.tar.xz</Archive>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>GNOME PackageKit Frontend</Summary>
+        <Description>GNOME PackageKit Frontend</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="7f3a02f0fc79f0d3444f105116dd83ff8221862b" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-packagekit/3.8/gnome-packagekit-3.8.2.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency>itstool</Dependency>
@@ -57,12 +57,12 @@
             <Dependency>libsm-devel</Dependency>
             <Dependency>at-spi2-atk-devel</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>gnome-packagekit</Name>
-		<Files>
-			<Path fileType="executable">/usr/bin</Path>
+    </Source>
+    
+    <Package>
+        <Name>gnome-packagekit</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="data">/usr/lib/python*</Path>
             <Path fileType="data">/usr/share/GConf</Path>
             <Path fileType="data">/usr/share/applications</Path>
@@ -73,7 +73,7 @@
             <Path fileType="data">/usr/share/help</Path>
             <Path fileType="data">/usr/share/icons</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency>zlib</Dependency>
             <Dependency>libxml2</Dependency>
@@ -127,24 +127,25 @@
             <Dependency>libsm</Dependency>
             <Dependency>at-spi2-atk</Dependency>
         </RuntimeDependencies>
-	</Package>
-  
-	<History>
-		<Update release="2">
-			<Date>06-19-2013</Date>
-			<Version>3.8.2</Version>
-			<Comment>Upgrade to 3.8.2 as part of the GNOME3.8 migration</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-        
-		<Update release="1">
-			<Date>06-11-2013</Date>
-			<Version>3.6.2</Version>
-			<Comment>Add gnome-packagekit to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+    </Package>
     
+    <History>
+        <Update release="2">
+            <Date>06-19-2013</Date>
+            <Version>3.8.2</Version>
+            <Comment>Upgrade to 3.8.2 as part of the GNOME3.8 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>06-11-2013</Date>
+            <Version>3.6.2</Version>
+            <Comment>Add gnome-packagekit to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

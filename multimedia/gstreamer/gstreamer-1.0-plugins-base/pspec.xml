@@ -1,96 +1,97 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>gstreamer-1.0-plugins-base</Name>
-		<Homepage>http://gstreamer.freedesktop.org</Homepage>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>GStreamer base plug-ins and elements</Summary>
-		<Description>The GStreamer Base Plug-ins is a well-groomed and well-maintained collection of GStreamer plug-ins and elements, spanning the range of possible types of elements one would want to write for GStreamer. You will need at least one of Good, Bad, Ugly or Libav plugins for GStreamer applications to function properly.</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="8cf49dded9c44cd1f1a742bfadaeb7fb83dc5979" type="tarxz">http://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.0.6.tar.xz</Archive>
-		
-		<BuildDependencies>
-			<Dependency>zlib-devel</Dependency>
-			<Dependency>libpcre-devel</Dependency>
-			<Dependency>glib2-devel</Dependency>
-			<Dependency>gstreamer-1.0-devel</Dependency>
-		</BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>gstreamer-1.0-plugins-base</Name>
-		<Files>
-			<Path fileType="executable">/usr/bin</Path>
-			<Path fileType="library">/usr/lib/gstreamer-1.0</Path>
-			<Path fileType="library">/usr/lib/lib*.so*</Path>
-			<Path fileType="data">/usr/share/gir-1.0</Path>
-			<Path fileType="doc">/usr/share/doc</Path>
-			<Path fileType="data">/usr/share/gst-plugins-base</Path>
-			<Path fileType="localedata">/usr/share/locale</Path>
-			<Path fileType="man">/usr/share/man</Path>
-		</Files>
-		<RuntimeDependencies>
-			<Dependency>zlib</Dependency>
-			<Dependency>libpcre</Dependency>
-			<Dependency>glib2</Dependency>
-			<Dependency>gstreamer-1.0</Dependency>
-		</RuntimeDependencies>
-	</Package>
-
-	<Package>
-		<Name>gstreamer-1.0-plugins-base-devel</Name>
-		<Summary>Development files for gstreamer-1.0-plugins-base</Summary>
-		<Description>Development files for gstreamer-1.0-plugins-base</Description>
-		<Files>
-			<Path fileType="header">/usr/include</Path>
-			<Path fileType="data">/usr/lib/girepository-1.0</Path>
-			<Path fileType="data">/usr/lib/pkgconfig</Path>
-		</Files>
-		<RuntimeDependencies>
-			<Dependency release="current">gstreamer-1.0-plugins-base</Dependency>
-		</RuntimeDependencies>
-	</Package>
-
-	<Package>
-		<Name>gstreamer-1.0-plugins-base-docs</Name>
-		<Summary>API Documentation for gstreamer-1.0-plugins-base</Summary>
-		<Description>API Documentation for gstreamer-1.0-plugins-base</Description>
-		<Files>
-			<Path fileType="doc">/usr/share/gtk-doc</Path>
-		</Files>
-		<RuntimeDependencies>
-			<Dependency release="current">gstreamer-1.0-plugins-base-devel</Dependency>
-		</RuntimeDependencies>
-	</Package>
-		  
-	<History>
-		<Update release="3">
-			<Date>04-15-2013</Date>
-			<Version>1.0.6</Version>
-			<Comment>Add runtime and build dependencies</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-				
-		<Update release="2">
-			<Date>04-15-2013</Date>
-			<Version>1.0.6</Version>
-			<Comment>Split -devel and -docs</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-				
-		<Update release="1">
-			<Date>04-15-2013</Date>
-			<Version>1.0.6</Version>
-			<Comment>Add gstreamer-1.0-plugins-base to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+    <Source>
+        <Name>gstreamer-1.0-plugins-base</Name>
+        <Homepage>http://gstreamer.freedesktop.org</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>GStreamer base plug-ins and elements</Summary>
+        <Description>The GStreamer Base Plug-ins is a well-groomed and well-maintained collection of GStreamer plug-ins and elements, spanning the range of possible types of elements one would want to write for GStreamer. You will need at least one of Good, Bad, Ugly or Libav plugins for GStreamer applications to function properly.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="8cf49dded9c44cd1f1a742bfadaeb7fb83dc5979" type="tarxz">http://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.0.6.tar.xz</Archive>
+        
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>gstreamer-1.0-devel</Dependency>
+        </BuildDependencies>
+    </Source>
     
+    <Package>
+        <Name>gstreamer-1.0-plugins-base</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/gstreamer-1.0</Path>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/gst-plugins-base</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>gstreamer-1.0</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <Package>
+        <Name>gstreamer-1.0-plugins-base-devel</Name>
+        <Summary>Development files for gstreamer-1.0-plugins-base</Summary>
+        <Description>Development files for gstreamer-1.0-plugins-base</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">gstreamer-1.0-plugins-base</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <Package>
+        <Name>gstreamer-1.0-plugins-base-docs</Name>
+        <Summary>API Documentation for gstreamer-1.0-plugins-base</Summary>
+        <Description>API Documentation for gstreamer-1.0-plugins-base</Description>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">gstreamer-1.0-plugins-base-devel</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <History>
+        <Update release="3">
+            <Date>04-15-2013</Date>
+            <Version>1.0.6</Version>
+            <Comment>Add runtime and build dependencies</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="2">
+            <Date>04-15-2013</Date>
+            <Version>1.0.6</Version>
+            <Comment>Split -devel and -docs</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>04-15-2013</Date>
+            <Version>1.0.6</Version>
+            <Comment>Add gstreamer-1.0-plugins-base to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

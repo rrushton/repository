@@ -1,17 +1,17 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>upower</Name>
+    <Source>
+        <Name>upower</Name>
         <Homepage>http://upower.freedesktop.org/</Homepage>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>UPower is an abstraction for enumerating power devices, listening to device events and querying history and statistics.</Summary>
-		<Description>UPower is an abstraction for enumerating power devices, listening to device events and querying history and statistics.</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="960ce9b3feaabf743c1070ec260e761176c0411e" type="tarxz">http://upower.freedesktop.org/releases/upower-0.9.20.tar.xz</Archive>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>UPower is an abstraction for enumerating power devices, listening to device events and querying history and statistics.</Summary>
+        <Description>UPower is an abstraction for enumerating power devices, listening to device events and querying history and statistics.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="960ce9b3feaabf743c1070ec260e761176c0411e" type="tarxz">http://upower.freedesktop.org/releases/upower-0.9.20.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency>dbus-devel</Dependency>
@@ -21,12 +21,12 @@
             <Dependency>libpcre-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>upower</Name>
-		<Files>
-			<Path fileType="executable">/usr/bin</Path>
+    </Source>
+    
+    <Package>
+        <Name>upower</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="executable">/usr/lib/upower</Path>
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
             <Path fileType="library">/usr/lib/lib*.so*</Path>
@@ -40,7 +40,7 @@
             <Path fileType="config" permanent="true">/var/lib/upower</Path>
             <Path fileType="data">/lib/udev/rules.d</Path>
             <Path fileType="data">/etc/dbus-1</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency>dbus</Dependency>
             <Dependency>zlib</Dependency>
@@ -51,29 +51,30 @@
             <Dependency>glibc</Dependency>
             <Dependency>dbus-glib</Dependency>
         </RuntimeDependencies>
-	</Package>
-
-	<Package>
-		<Name>upower-devel</Name>
+    </Package>
+    
+    <Package>
+        <Name>upower-devel</Name>
         <Summary>Development files for upower</Summary>
         <Description>Development files for upower</Description>
-		<Files>
-			<Path fileType="header">/usr/include</Path>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency release="current">upower</Dependency>
         </RuntimeDependencies>
-	</Package>
+    </Package>
     
-	<History>
-		<Update release="1">
-			<Date>06-05-2013</Date>
-			<Version>0.9.20</Version>
-			<Comment>Add upower to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
+    <History>
+        <Update release="1">
+            <Date>06-05-2013</Date>
+            <Version>0.9.20</Version>
+            <Comment>Add upower to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
 </PISI>
-    
+

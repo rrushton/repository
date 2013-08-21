@@ -1,17 +1,17 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>librest</Name>
+    <Source>
+        <Name>librest</Name>
         <Homepage>https://live.gnome.org/Librest</Homepage>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>RESTful API library</Summary>
-		<Description>librest was designed to make it easier to access web services that claim to be "RESTful". It includes convenience wrappers for libsoup and libxml to ease remote use of the RESTful API.</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="c1b7be3afed247252e2a15b1f6510707cf9ceca4" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/rest/0.7/rest-0.7.90.tar.xz</Archive>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>RESTful API library</Summary>
+        <Description>librest was designed to make it easier to access web services that claim to be "RESTful". It includes convenience wrappers for libsoup and libxml to ease remote use of the RESTful API.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="c1b7be3afed247252e2a15b1f6510707cf9ceca4" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/rest/0.7/rest-0.7.90.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency>libsoup-devel</Dependency>
@@ -26,16 +26,16 @@
             <Dependency>dbus-devel</Dependency>
         </BuildDependencies>
         
-	</Source>
-
-	<Package>
-		<Name>librest</Name>
-		<Files>
-			<Path fileType="library">/usr/lib</Path>
+    </Source>
+    
+    <Package>
+        <Name>librest</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-		</Files>
-            <RuntimeDependencies>
+        </Files>
+        <RuntimeDependencies>
             <Dependency>libsoup</Dependency>
             <Dependency>libgnome-keyring</Dependency>
             <Dependency>libxml2</Dependency>
@@ -49,43 +49,44 @@
             <Dependency>glib2</Dependency>
             <Dependency>dbus</Dependency>
         </RuntimeDependencies>
-	</Package>
-
-	<Package>
-		<Name>librest-devel</Name>
+    </Package>
+    
+    <Package>
+        <Name>librest-devel</Name>
         <Summary>Development files for librest</Summary>
         <Description>Development files for librest</Description>
-		<Files>
-			<Path fileType="header">/usr/include</Path>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency release="current">librest</Dependency>
         </RuntimeDependencies>
-	</Package>
-
-
-	<Package>
-		<Name>librest-docs</Name>
+    </Package>
+    
+    
+    <Package>
+        <Name>librest-docs</Name>
         <Summary>API Documentation for librest</Summary>
         <Description>API Documentation for librest</Description>
-		<Files>
-			<Path fileType="doc">/usr/share/gtk-doc</Path>
-		</Files>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
         <RuntimeDependencies>
             <Dependency release="current">librest</Dependency>
         </RuntimeDependencies>
-	</Package>
-          
-	<History>
-		<Update release="1">
-			<Date>05-25-2013</Date>
-			<Version>0.7.90</Version>
-			<Comment>Add rest to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+    </Package>
     
+    <History>
+        <Update release="1">
+            <Date>05-25-2013</Date>
+            <Version>0.7.90</Version>
+            <Comment>Add rest to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

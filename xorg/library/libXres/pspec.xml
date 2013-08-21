@@ -1,72 +1,72 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-  <Source>
-    <Name>libxres</Name>
-    <Packager>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-    </Packager>
-    <Summary>X11 Resource extension library</Summary>
-    <Description>libXRes provides an X Window System client interface to the Resource extension to the X protocol. The Resource extension allows for X clients to see and monitor the X resource usage of various clients (pixmaps, et al).</Description>
-    <License>GPLv3+</License>
-    <Archive sha1sum="31a9b7d4f7a978de36c6f1c867dced29bfe7ef0f" type="tarbz2">mirrors://xorg/individual/lib/libXres-1.0.6.tar.bz2</Archive>
-    
-    <BuildDependencies>
-        <Dependency>resourceproto</Dependency>
-        <Dependency>xproto</Dependency>
-    </BuildDependencies>
+    <Source>
+        <Name>libxres</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>X11 Resource extension library</Summary>
+        <Description>libXRes provides an X Window System client interface to the Resource extension to the X protocol. The Resource extension allows for X clients to see and monitor the X resource usage of various clients (pixmaps, et al).</Description>
+        <License>GPLv3+</License>
+        <Archive sha1sum="31a9b7d4f7a978de36c6f1c867dced29bfe7ef0f" type="tarbz2">mirrors://xorg/individual/lib/libXres-1.0.6.tar.bz2</Archive>
+        
+        <BuildDependencies>
+            <Dependency>resourceproto</Dependency>
+            <Dependency>xproto</Dependency>
+        </BuildDependencies>
     </Source>
-
-  <Package>
-    <Name>libxres</Name>
-    <Files>
-		<Path fileType="library">/usr/lib/lib*so*</Path>
-		<Path fileType="man">/usr/share/man</Path>
-	</Files>
-  </Package>
-
-  <Package>
-   	<Name>libxres-devel</Name>
-   	<Summary>Development files for libxres</Summary>
-	<Description>Development files for libxres</Description>
-   	<Files>
-   		<Path fileType="header">/usr/include</Path>
-   		<Path fileType="library">/usr/lib/*.a</Path>
-   		<Path fileType="data">/usr/lib/pkgconfig</Path>
-   	</Files>
-    <RuntimeDependencies>
-        <Dependency release="current">libxres</Dependency>
-        <Dependency>resourceproto</Dependency>
-        <Dependency>xproto</Dependency>
-    </RuntimeDependencies>
-   </Package>
-
-   <History>
-   	<Update release="3">
-   		<Date>05-24-2013</Date>
-   		<Version>1.0.6</Version>
-   		<Comment>Fix dependency on protocol headers</Comment>
-   		<Name>Ikey Doherty</Name>
-   		<Email>ikey@solusos.com</Email>
-   	</Update>
-           
-   	<Update release="2">
-   		<Date>03-18-2013</Date>
-   		<Version>1.0.6</Version>
-   		<Comment>Split -devel package</Comment>
-   		<Name>Ikey Doherty</Name>
-   		<Email>ikey@solusos.com</Email>
-   	</Update>
-   
-    <Update release="1">
-		<Date>03-12-2013</Date>
-		<Version>1.0.6</Version>
-		<Comment>Add libxres to repositories</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-  </History>
-		
-</PISI>
     
+    <Package>
+        <Name>libxres</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/lib*so*</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>libxres-devel</Name>
+        <Summary>Development files for libxres</Summary>
+        <Description>Development files for libxres</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/*.a</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libxres</Dependency>
+            <Dependency>resourceproto</Dependency>
+            <Dependency>xproto</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <History>
+        <Update release="3">
+            <Date>05-24-2013</Date>
+            <Version>1.0.6</Version>
+            <Comment>Fix dependency on protocol headers</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="2">
+            <Date>03-18-2013</Date>
+            <Version>1.0.6</Version>
+            <Comment>Split -devel package</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>03-12-2013</Date>
+            <Version>1.0.6</Version>
+            <Comment>Add libxres to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    
+</PISI>
+

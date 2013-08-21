@@ -1,21 +1,21 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>glamor-egl</Name>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>GL-based rendering acceleration library for X</Summary>
-		<Description>The Glamor EGL package contains a GL-based rendering acceleration library for X server</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="97276590a10078c943226ca567f945da130f6468" type="tarxz">http://anduin.linuxfromscratch.org/sources/other/glamor-egl-0.5.0.tar.xz</Archive>
-
+    <Source>
+        <Name>glamor-egl</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>GL-based rendering acceleration library for X</Summary>
+        <Description>The Glamor EGL package contains a GL-based rendering acceleration library for X server</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="97276590a10078c943226ca567f945da130f6468" type="tarxz">http://anduin.linuxfromscratch.org/sources/other/glamor-egl-0.5.0.tar.xz</Archive>
+        
         <Patches>
             <Patch level="1">glamor-egl-0.5.0-fixes-1.patch</Patch>
         </Patches>
-
+        
         <BuildDependencies>
             <Dependency>util-macros</Dependency>
             <Dependency releaseFrom="4">xorg-server-devel</Dependency>
@@ -31,42 +31,43 @@
             <Dependency>libfontenc-devel</Dependency>
             <Dependency>pixman-devel</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>glamor-egl</Name>
-		<Files>
-			<Path fileType="library">/usr/lib/lib*.so*</Path>
+    </Source>
+    
+    <Package>
+        <Name>glamor-egl</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
             <Path fileType="library">/usr/lib/xorg/modules</Path>
             <Path fileType="data">/usr/share/X11/xorg.conf.d</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency releaseFrom="4">xorg-server</Dependency>
         </RuntimeDependencies>
-	</Package>
-
-	<Package>
-		<Name>glamor-egl-devel</Name>
+    </Package>
+    
+    <Package>
+        <Name>glamor-egl-devel</Name>
         <Summary>Development files for glamor-egl</Summary>
         <Description>Development files for glamor-egl</Description>
-		<Files>
-			<Path fileType="header">/usr/include</Path>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency release="current">glamor-egl</Dependency>
         </RuntimeDependencies>
-	</Package>
-
-	<History>
-		<Update release="1">
-			<Date>08-13-2013</Date>
-			<Version>0.5.0</Version>
-			<Comment>Add glamor-egl to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+    </Package>
     
+    <History>
+        <Update release="1">
+            <Date>08-13-2013</Date>
+            <Version>0.5.0</Version>
+            <Comment>Add glamor-egl to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

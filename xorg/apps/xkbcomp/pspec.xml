@@ -1,34 +1,34 @@
 <PISI>
-  <Source>
-    <Name>xkbcomp</Name>
-    <Packager>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-    </Packager>
-    <Summary>X.Org Applications: xkbcomp</Summary>
-    <Description>X.Org Applications: xkbcomp</Description>
-    <License>GPLv3+</License>
-    <Archive sha1sum="695d2f2824884d9e54aa1419282ae167fdea163b" type="tarbz2">http://xorg.freedesktop.org/releases/individual/app/xkbcomp-1.2.4.tar.bz2</Archive>
+    <Source>
+        <Name>xkbcomp</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>X.Org Applications: xkbcomp</Summary>
+        <Description>X.Org Applications: xkbcomp</Description>
+        <License>GPLv3+</License>
+        <Archive sha1sum="695d2f2824884d9e54aa1419282ae167fdea163b" type="tarbz2">http://xorg.freedesktop.org/releases/individual/app/xkbcomp-1.2.4.tar.bz2</Archive>
     </Source>
-
-  <Package>
-    <Name>xkbcomp</Name>
-    <Files>
-		<Path fileType="executable">/usr/bin</Path>
-		<Path fileType="man">/usr/share/man</Path>
-		<Path fileType="data">/usr/lib/pkgconfig</Path>
-	</Files>
-  </Package>
-      
-  <History>
-	
-    <Update release="1">
-		<Date>03-20-2013</Date>
-		<Version>1.2.4</Version>
-		<Comment>Add xkbcomp to repositories</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-  </History>
-
+    
+    <Package>
+        <Name>xkbcomp</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        
+        <Update release="1">
+            <Date>03-20-2013</Date>
+            <Version>1.2.4</Version>
+            <Comment>Add xkbcomp to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    
 </PISI>

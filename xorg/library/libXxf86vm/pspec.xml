@@ -1,75 +1,75 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-  <Source>
-    <Name>libxxf86vm</Name>
-    <Packager>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-    </Packager>
-    <Summary>X11 XFree86 video mode extension library</Summary>
-    <Description>libXxf86vm provides an interface to the XFree86-VidModeExtension extension, which allows client applications to get and set video mode timings in extensive detail.  It is used by the xvidtune program in particular.</Description>
-    <License>GPLv3+</License>
-    <Archive sha1sum="57bbf3bb69a49f6a6dec515813394a383f85502f" type="tarbz2">mirrors://xorg/individual/lib/libXxf86vm-1.1.2.tar.bz2</Archive>
-    
-    <BuildDependencies>
-        <Dependency>xf86vidmodeproto</Dependency>
-        <Dependency>xf86driproto</Dependency>
-        <Dependency>xproto</Dependency>
-    </BuildDependencies>
-    
+    <Source>
+        <Name>libxxf86vm</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>X11 XFree86 video mode extension library</Summary>
+        <Description>libXxf86vm provides an interface to the XFree86-VidModeExtension extension, which allows client applications to get and set video mode timings in extensive detail.  It is used by the xvidtune program in particular.</Description>
+        <License>GPLv3+</License>
+        <Archive sha1sum="57bbf3bb69a49f6a6dec515813394a383f85502f" type="tarbz2">mirrors://xorg/individual/lib/libXxf86vm-1.1.2.tar.bz2</Archive>
+        
+        <BuildDependencies>
+            <Dependency>xf86vidmodeproto</Dependency>
+            <Dependency>xf86driproto</Dependency>
+            <Dependency>xproto</Dependency>
+        </BuildDependencies>
+        
     </Source>
-
-  <Package>
-    <Name>libxxf86vm</Name>
-    <Files>
-		<Path fileType="library">/usr/lib/lib*so*</Path>
-		<Path fileType="man">/usr/share/man</Path>
-	</Files>
-  </Package>
-
-  <Package>
-  	<Name>libxxf86vm-devel</Name>
-  	<Summary>Development files for libxxf86vm</Summary>
-  	<Description>Development files for libxxfm86</Description>
-  	<Files>	
-  		<Path fileType="header">/usr/include</Path>
-  		<Path fileType="library">/usr/lib/*.a</Path>
-  		<Path fileType="data">/usr/lib/pkgconfig</Path>
-  	</Files>
-  	<RuntimeDependencies>
-  		<Dependency release="current">libxxf86vm</Dependency>
-        <Dependency>xf86vidmodeproto</Dependency>
-        <Dependency>xf86driproto</Dependency>
-        <Dependency>xproto</Dependency>
-  	</RuntimeDependencies>
-  </Package>
-
-  <History>
-  	<Update release="3">
-  		<Date>05-24-2013</Date>
-  		<Version>1.1.12</Version>
-  		<Comment>Fix dependency on protocol headers</Comment>
-  		<Name>Ikey Doherty</Name>
-  		<Email>ikey@solusos.com</Email>
-  	</Update>
-          
-  	<Update release="2">
-  		<Date>03-18-2013</Date>
-  		<Version>1.1.12</Version>
-  		<Comment>Split -devel package</Comment>
-  		<Name>Justin Krehel</Name>
-  		<Email>justin@solusos.com</Email>
-  	</Update>
-  
-    <Update release="1">
-		<Date>03-12-2013</Date>
-		<Version>1.1.2</Version>
-		<Comment>Add libxxf86vm to repositories</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-  </History>
-		
-</PISI>
     
+    <Package>
+        <Name>libxxf86vm</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/lib*so*</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>libxxf86vm-devel</Name>
+        <Summary>Development files for libxxf86vm</Summary>
+        <Description>Development files for libxxfm86</Description>
+        <Files>	
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/*.a</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libxxf86vm</Dependency>
+            <Dependency>xf86vidmodeproto</Dependency>
+            <Dependency>xf86driproto</Dependency>
+            <Dependency>xproto</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <History>
+        <Update release="3">
+            <Date>05-24-2013</Date>
+            <Version>1.1.12</Version>
+            <Comment>Fix dependency on protocol headers</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="2">
+            <Date>03-18-2013</Date>
+            <Version>1.1.12</Version>
+            <Comment>Split -devel package</Comment>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>03-12-2013</Date>
+            <Version>1.1.2</Version>
+            <Comment>Add libxxf86vm to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    
+</PISI>
+

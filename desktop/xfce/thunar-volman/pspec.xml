@@ -1,18 +1,18 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>thunar-volman</Name>
+    <Source>
+        <Name>thunar-volman</Name>
         <Homepage>http://www.xfce.org</Homepage>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>Thunar Volume Manager</Summary>
-		<Description>The Thunar Volume Manager is an extension for the Thunar file manager, which enables automatic management of removable drives and media.</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="2e62c9b0bec5c164e9c632671c81966c4220823c" type="tarbz2">http://archive.xfce.org/xfce/4.10/src/thunar-volman-0.8.0.tar.bz2</Archive>
-
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>Thunar Volume Manager</Summary>
+        <Description>The Thunar Volume Manager is an extension for the Thunar file manager, which enables automatic management of removable drives and media.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="2e62c9b0bec5c164e9c632671c81966c4220823c" type="tarbz2">http://archive.xfce.org/xfce/4.10/src/thunar-volman-0.8.0.tar.bz2</Archive>
+        
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>libxfce4ui-devel</Dependency>
@@ -50,17 +50,17 @@
             <Dependency>glib2-devel</Dependency>
             <Dependency>libsm-devel</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>thunar-volman</Name>
-		<Files>
-			<Path fileType="executable">/usr/bin</Path>
+    </Source>
+    
+    <Package>
+        <Name>thunar-volman</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="data">/usr/share/applications</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/icons</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency>zlib</Dependency>
             <Dependency>expat</Dependency>
@@ -108,16 +108,17 @@
             <Dependency>glib2</Dependency>
             <Dependency>libsm</Dependency>
         </RuntimeDependencies>
-	</Package>
-  
-	<History>
-		<Update release="1">
-			<Date>08-07-2013</Date>
-			<Version>0.8.0</Version>
-			<Comment>Add thunar-volman to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+    </Package>
     
+    <History>
+        <Update release="1">
+            <Date>08-07-2013</Date>
+            <Version>0.8.0</Version>
+            <Comment>Add thunar-volman to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

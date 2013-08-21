@@ -1,29 +1,29 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>php</Name>
-		<Homepage>http://www.php.net</Homepage>
-		<Packager>
-			<Name>Justin Krehel</Name>
-			<Email>justin@solusos.com</Email>
-		</Packager>
-		<Summary>PHP Programming Language</Summary>
-		<Description>PHP is a general-purpose scripting language that is widely used in web development and can be embedded into HTML.</Description>
-		<License>PHP</License>
-		<Archive sha1sum="e7a9e798821fa186ae297392353be8f1d3de6edd" type="targz">http://www.php.net/distributions/php-5.4.16.tar.gz</Archive>
-	</Source>
-
-	<Package>
-		<Name>php</Name>
-		<Files>
+    <Source>
+        <Name>php</Name>
+        <Homepage>http://www.php.net</Homepage>
+        <Packager>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Packager>
+        <Summary>PHP Programming Language</Summary>
+        <Description>PHP is a general-purpose scripting language that is widely used in web development and can be embedded into HTML.</Description>
+        <License>PHP</License>
+        <Archive sha1sum="e7a9e798821fa186ae297392353be8f1d3de6edd" type="targz">http://www.php.net/distributions/php-5.4.16.tar.gz</Archive>
+    </Source>
+    
+    <Package>
+        <Name>php</Name>
+        <Files>
             <Path fileType="executable">/usr/bin</Path>
             <!--Needs split, lazy for now so it doesn't break the repo -->
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
-		</Files>
-	</Package>
+        </Files>
+    </Package>
     
     <Package>
         <Name>php-devel</Name>
@@ -36,15 +36,16 @@
             <Dependency release="current">php</Dependency>
         </RuntimeDependencies>
     </Package>
-
-	<History>
-		<Update release="1">
-			<Date>06-11-2013</Date>
-			<Version>5.4.16</Version>
-			<Comment>Add php to repositories</Comment>
-			<Name>Justin Krehel</Name>
-			<Email>justin@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
     
+    <History>
+        <Update release="1">
+            <Date>06-11-2013</Date>
+            <Version>5.4.16</Version>
+            <Comment>Add php to repositories</Comment>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

@@ -1,17 +1,17 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>gvfs</Name>
+    <Source>
+        <Name>gvfs</Name>
         <Homepage>http://www.gnome.org</Homepage>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>Userspace virtual filesyste,</Summary>
-		<Description>The Gvfs package is a userspace virtual filesystem designed to work with the I/O abstractions of GLib's GIO library.</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="689cd53cfd15059003b501ce39303733467a63cd" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gvfs/1.17/gvfs-1.17.2.tar.xz</Archive>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>Userspace virtual filesyste,</Summary>
+        <Description>The Gvfs package is a userspace virtual filesystem designed to work with the I/O abstractions of GLib's GIO library.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="689cd53cfd15059003b501ce39303733467a63cd" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gvfs/1.17/gvfs-1.17.2.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency>systemd-devel</Dependency>
@@ -24,12 +24,12 @@
             <Dependency>glib2-devel</Dependency>
             <Dependency>libgcrypt-devel</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>gvfs</Name>
-		<Files>
-			<Path fileType="executable">/usr/bin</Path>
+    </Source>
+    
+    <Package>
+        <Name>gvfs</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib/gio/modules</Path>
             <Path fileType="executable">/usr/lib/gvfs</Path>
             <Path fileType="library">/usr/lib/lib*.so*</Path>
@@ -40,7 +40,7 @@
             <Path fileType="data">/usr/share/gvfs</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency>systemd</Dependency>
             <Dependency>udisks</Dependency>
@@ -53,36 +53,37 @@
             <Dependency>glib2</Dependency>
             <Dependency>libgcrypt</Dependency>
         </RuntimeDependencies>
-	</Package>
-
-	<Package>
-		<Name>gvfs-devel</Name>
+    </Package>
+    
+    <Package>
+        <Name>gvfs-devel</Name>
         <Summary>Development files for gvfs</Summary>
         <Description>Development files for gvfs</Description>
-		<Files>
-			<Path fileType="header">/usr/include</Path>
-		</Files>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
         <RuntimeDependencies>
             <Dependency release="current">gvfs</Dependency>
         </RuntimeDependencies>
-	</Package>
-      
-	<History>
-		<Update release="2">
-			<Date>06-26-2013</Date>
-			<Version>1.17.2</Version>
-			<Comment>Upgrade to latest version</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-        
-		<Update release="1">
-			<Date>06-13-2013</Date>
-			<Version>1.14.2</Version>
-			<Comment>Add gvfs to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+    </Package>
     
+    <History>
+        <Update release="2">
+            <Date>06-26-2013</Date>
+            <Version>1.17.2</Version>
+            <Comment>Upgrade to latest version</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>06-13-2013</Date>
+            <Version>1.14.2</Version>
+            <Comment>Add gvfs to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

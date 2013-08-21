@@ -1,16 +1,16 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>xorg-driver-video-openchrome</Name>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>OpenChrome Video Driver</Summary>
-		<Description>The Xorg OpenChrome Driver package contains the X.Org Video Driver for Via integrated video cards including Unichrome, Unichrome Pro and Chrome9 series.</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="1f7b23d4ed53417eda5c6730486b36812f469295" type="tarbz2">http://xorg.freedesktop.org/archive/individual/driver/xf86-video-openchrome-0.3.3.tar.bz2</Archive>
+    <Source>
+        <Name>xorg-driver-video-openchrome</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>OpenChrome Video Driver</Summary>
+        <Description>The Xorg OpenChrome Driver package contains the X.Org Video Driver for Via integrated video cards including Unichrome, Unichrome Pro and Chrome9 series.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="1f7b23d4ed53417eda5c6730486b36812f469295" type="tarbz2">http://xorg.freedesktop.org/archive/individual/driver/xf86-video-openchrome-0.3.3.tar.bz2</Archive>
         
         <BuildDependencies>
             <Dependency releaseFrom="4">xorg-server-devel</Dependency>
@@ -26,29 +26,30 @@
             <Dependency>libfontenc-devel</Dependency>
             <Dependency>pixman-devel</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>xorg-driver-video-openchrome</Name>
-		<Files>
-			<Path fileType="library">/usr/lib/xorg</Path>
+    </Source>
+    
+    <Package>
+        <Name>xorg-driver-video-openchrome</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/xorg</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="library">/usr/lib/lib*.so*</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency releaseFrom="4">xorg-server</Dependency>
         </RuntimeDependencies>
-	</Package>
-  
-	<History>        
-		<Update release="1">
-			<Date>08-13-2013</Date>
-			<Version>0.3.3</Version>
-			<Comment>Add xorg-driver-video-openchrome to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+    </Package>
     
+    <History>        
+        <Update release="1">
+            <Date>08-13-2013</Date>
+            <Version>0.3.3</Version>
+            <Comment>Add xorg-driver-video-openchrome to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

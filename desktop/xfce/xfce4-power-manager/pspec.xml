@@ -1,17 +1,17 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>xfce4-power-manager</Name>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>Xfce power manager</Summary>
-		<Description>The Xfce4 Power Manager is a power manager for the Xfce desktop, Xfce power manager manages the power sources on the computer and the devices that can be controlled to reduce their power consumption (such as LCD brightness level, monitor sleep, CPU frequency scaling). In addition, Xfce4 Power Manager provides a set of freedesktop-compliant DBus interfaces to inform other applications about current power level so that they can adjust their power consumption.</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="7efb0ceb37a6d69bd4d0e80d7206161dcf46657a" type="tarbz2">http://archive.xfce.org/xfce/4.10/src/xfce4-power-manager-1.2.0.tar.bz2</Archive>
-
+    <Source>
+        <Name>xfce4-power-manager</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>Xfce power manager</Summary>
+        <Description>The Xfce4 Power Manager is a power manager for the Xfce desktop, Xfce power manager manages the power sources on the computer and the devices that can be controlled to reduce their power consumption (such as LCD brightness level, monitor sleep, CPU frequency scaling). In addition, Xfce4 Power Manager provides a set of freedesktop-compliant DBus interfaces to inform other applications about current power level so that they can adjust their power consumption.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="7efb0ceb37a6d69bd4d0e80d7206161dcf46657a" type="tarbz2">http://archive.xfce.org/xfce/4.10/src/xfce4-power-manager-1.2.0.tar.bz2</Archive>
+        
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>libxfce4ui-devel</Dependency>
@@ -48,12 +48,12 @@
             <Dependency>glib2-devel</Dependency>
             <Dependency>libsm-devel</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>xfce4-power-manager</Name>
-		<Files>
-			<Path fileType="executable">/usr/bin</Path>
+    </Source>
+    
+    <Package>
+        <Name>xfce4-power-manager</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="executable">/usr/lib/xfce4/panel-plugins</Path>
             <Path fileType="executable">/usr/sbin</Path>
             <Path fileType="data">/usr/share/applications</Path>
@@ -64,7 +64,7 @@
             <Path fileType="data">/usr/share/polkit-1/actions</Path>
             <Path fileType="data">/usr/share/xfce4</Path>
             <Path fileType="data">/etc/xdg/autostart</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency>zlib</Dependency>
             <Dependency>expat</Dependency>
@@ -111,16 +111,17 @@
             <Dependency>glib2</Dependency>
             <Dependency>libsm</Dependency>
         </RuntimeDependencies>
-	</Package>
-  
-	<History>
-		<Update release="1">
-			<Date>08-07-2013</Date>
-			<Version>1.2.0</Version>
-			<Comment>Add xfce4-power-manager to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+    </Package>
     
+    <History>
+        <Update release="1">
+            <Date>08-07-2013</Date>
+            <Version>1.2.0</Version>
+            <Comment>Add xfce4-power-manager to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

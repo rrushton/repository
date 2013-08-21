@@ -1,16 +1,16 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
+    <Source>
         <Name>hexchat</Name>
         <Homepage>http://hexchat.org/</Homepage>
-		<Packager>
-			<Name>Justin Krehel</Name>
-			<Email>justin@solusos.com</Email>
-		</Packager>
-		<Summary>IRC Client based on XChat</Summary>
-		<Description>HexChat is an IRC client based on XChat that is updated regularly. It allows for connection to multiple servers, private conversations, and file transfers. It is the default IRC client in SolusOS.</Description>
-		<License>GPLv2</License>
+        <Packager>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Packager>
+        <Summary>IRC Client based on XChat</Summary>
+        <Description>HexChat is an IRC client based on XChat that is updated regularly. It allows for connection to multiple servers, private conversations, and file transfers. It is the default IRC client in SolusOS.</Description>
+        <License>GPLv2</License>
         <Archive sha1sum="feebfd12816b35d5aeb1ffcff48772ca3c17e2ef" type="tarxz">http://dl.hexchat.org/hexchat/hexchat-2.9.5.tar.xz</Archive>
         <Patches>
             <Patch level="1">add-solusos-server.patch</Patch>
@@ -26,9 +26,9 @@
             <Dependency>gtkspell3-devel</Dependency>
             <Dependency>pango-devel</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
+    </Source>
+    
+    <Package>
         <Name>hexchat</Name>
         <RuntimeDependencies>
             <Dependency>glib2</Dependency>
@@ -42,7 +42,7 @@
             <Dependency>gtkspell3</Dependency>
             <Dependency>pango</Dependency>
         </RuntimeDependencies>
-		<Files>
+        <Files>
             <Path fileType="config">/etc</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="header">/usr/include</Path>
@@ -53,10 +53,10 @@
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-		</Files>
-	</Package>
-  
-	<History>
+        </Files>
+    </Package>
+    
+    <History>
         <Update release="2">
             <Date>06-19-2013</Date>
             <Version>2.9.5</Version>
@@ -64,14 +64,15 @@
             <Name>Justin Krehel</Name>
             <Email>justin@solusos.com</Email>
         </Update>
-
-		<Update release="1">
-			<Date>06-17-2013</Date>
-			<Version>2.9.5</Version>
-			<Comment>Add hexchat to repositories</Comment>
-			<Name>Justin Krehel</Name>
-			<Email>justin@solusos.com</Email>
-		</Update>
-	</History>	
+        
+        <Update release="1">
+            <Date>06-17-2013</Date>
+            <Version>2.9.5</Version>
+            <Comment>Add hexchat to repositories</Comment>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Update>
+    </History>
+    	
 </PISI>
-    
+

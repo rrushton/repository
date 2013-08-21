@@ -1,16 +1,16 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>network-manager-applet</Name>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>NetworkManager Applet</Summary>
-		<Description>NetworkManager applet and GTK3 libraries</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="91120d2305711aff39d36ee52920f9af66648c3c" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/network-manager-applet/0.9/network-manager-applet-0.9.8.2.tar.xz</Archive>
+    <Source>
+        <Name>network-manager-applet</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>NetworkManager Applet</Summary>
+        <Description>NetworkManager applet and GTK3 libraries</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="91120d2305711aff39d36ee52920f9af66648c3c" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/network-manager-applet/0.9/network-manager-applet-0.9.8.2.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency versionFrom="2.37.2">glib-networking</Dependency>
@@ -51,12 +51,12 @@
             <Dependency>at-spi2-atk-devel</Dependency>
             <Dependency>libsecret-devel</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>network-manager-applet</Name>
-		<Files>
-			<Path fileType="executable">/usr/bin</Path>
+    </Source>
+    
+    <Package>
+        <Name>network-manager-applet</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib/lib*.so*</Path>
             <Path fileType="library">/usr/lib/network-manager</Path>
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
@@ -71,7 +71,7 @@
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="data">/etc/xdg</Path>
             <Path fileType="data">/usr/share/libnm-gtk</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency versionFrom="2.37.2">glib-networking</Dependency>
             <Dependency>zlib</Dependency>
@@ -125,45 +125,46 @@
             <Dependency>at-spi2-atk</Dependency>
             <Dependency>libsecret</Dependency>
         </RuntimeDependencies>
-	</Package>
-
-	<Package>
-		<Name>network-manager-applet-devel</Name>
+    </Package>
+    
+    <Package>
+        <Name>network-manager-applet-devel</Name>
         <Summary>Development files for network-manager-applet</Summary>
         <Description>Development files for network-manager-applet</Description>
-		<Files>
-			<Path fileType="header">/usr/include</Path>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency release="current">network-manager-applet</Dependency>
         </RuntimeDependencies>
-	</Package>
+    </Package>
     
-	<History>
-		<Update release="3">
-			<Date>08-13-2013</Date>
-			<Version>0.9.8.2</Version>
-			<Comment>Add libsecret to dependencies</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-
-		<Update release="2">
-			<Date>06-26-2013</Date>
-			<Version>0.9.8.2</Version>
-			<Comment>Upgrade to latest version</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
+    <History>
+        <Update release="3">
+            <Date>08-13-2013</Date>
+            <Version>0.9.8.2</Version>
+            <Comment>Add libsecret to dependencies</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
         
-		<Update release="1">
-			<Date>06-06-2013</Date>
-			<Version>0.9.8.0</Version>
-			<Comment>Add network-manager-applet to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
+        <Update release="2">
+            <Date>06-26-2013</Date>
+            <Version>0.9.8.2</Version>
+            <Comment>Upgrade to latest version</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>06-06-2013</Date>
+            <Version>0.9.8.0</Version>
+            <Comment>Add network-manager-applet to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
 </PISI>
-    
+

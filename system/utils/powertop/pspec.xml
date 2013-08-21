@@ -17,7 +17,7 @@
             <Dependency>pciutils-devel</Dependency>
         </BuildDependencies>
     </Source>
-
+    
     <Package>
         <Name>powertop</Name>
         <RuntimeDependencies>
@@ -31,7 +31,7 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-  
+    
     <History>
         <Update release="1">
             <Date>05-25-2013</Date>
@@ -40,6 +40,7 @@
             <Name>Justin Krehel</Name>
             <Email>justin@solusos.com</Email>
         </Update>
-    </History>  
+    </History>
+     
 </PISI>
-    
+

@@ -1,46 +1,47 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>gtk-theme-bluebird</Name>
+    <Source>
+        <Name>gtk-theme-bluebird</Name>
         <Homepage>http://shimmerproject.org/project/bluebird/</Homepage>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>GTK Theme Suite - Bluebird</Summary>
-		<Description>GTK Theme Suite - Bluebird</Description>
-		<License>GPLv2</License>
-		<Archive sha1sum="9e7d6eb28316646d10234b87f3d5031e1c346e03" type="targz">https://github.com/shimmerproject/Bluebird/archive/v0.8.tar.gz</Archive>
-	</Source>
-
-	<Package>
-		<Name>gtk-theme-bluebird</Name>
-		<Files>
-			<Path fileType="data">/usr/share/themes</Path>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>GTK Theme Suite - Bluebird</Summary>
+        <Description>GTK Theme Suite - Bluebird</Description>
+        <License>GPLv2</License>
+        <Archive sha1sum="9e7d6eb28316646d10234b87f3d5031e1c346e03" type="targz">https://github.com/shimmerproject/Bluebird/archive/v0.8.tar.gz</Archive>
+    </Source>
+    
+    <Package>
+        <Name>gtk-theme-bluebird</Name>
+        <Files>
+            <Path fileType="data">/usr/share/themes</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency>gtk2-engine-murrine</Dependency>
         </RuntimeDependencies>
-	</Package>
-  
-	<History>
-		<Update release="2">
-			<Date>08-08-2013</Date>
-			<Version>0.8</Version>
-			<Comment>Add dependency on gtk2-engine-murrine</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-
-		<Update release="1">
-			<Date>08-07-2013</Date>
-			<Version>0.8</Version>
-			<Comment>Add gtk-theme-bluebird to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+    </Package>
     
+    <History>
+        <Update release="2">
+            <Date>08-08-2013</Date>
+            <Version>0.8</Version>
+            <Comment>Add dependency on gtk2-engine-murrine</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>08-07-2013</Date>
+            <Version>0.8</Version>
+            <Comment>Add gtk-theme-bluebird to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

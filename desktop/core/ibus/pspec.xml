@@ -1,17 +1,17 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>ibus</Name>
+    <Source>
+        <Name>ibus</Name>
         <Homepage>http://code.google.com/p/ibus/</Homepage>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>Intelligent Input Bus</Summary>
-		<Description>IBus is an Intelligent Input Bus. It is a new input framework for Linux OS. It provides full featured and user friendly input method user interface.</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="a7e1695731b4c954fa8897d091e6dda64e08b28c" type="targz">http://ibus.googlecode.com/files/ibus-1.5.2.tar.gz</Archive>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>Intelligent Input Bus</Summary>
+        <Description>IBus is an Intelligent Input Bus. It is a new input framework for Linux OS. It provides full featured and user friendly input method user interface.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="a7e1695731b4c954fa8897d091e6dda64e08b28c" type="targz">http://ibus.googlecode.com/files/ibus-1.5.2.tar.gz</Archive>
         
         <BuildDependencies>
             <Dependency>libgtk-3-devel</Dependency>
@@ -29,12 +29,12 @@
             <Dependency>pango-devel</Dependency>
             <Dependency>libx11-devel</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>ibus</Name>
-		<Files>
-			<Path fileType="executable">/usr/bin</Path>
+    </Source>
+    
+    <Package>
+        <Name>ibus</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="config">/etc/dconf</Path>
             <Path fileType="library">/usr/lib/lib*.so*</Path>
             <Path fileType="executable">/usr/lib/ibus</Path>
@@ -51,7 +51,7 @@
             <Path fileType="library">/usr/lib/gtk-2.0</Path>
             <Path fileType="library">/usr/lib/gtk-3.0</Path>
             <Path fileType="library">/usr/lib/python*</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency>libgtk-3</Dependency>
             <Dependency>libgtk-2</Dependency>
@@ -71,42 +71,43 @@
             <Dependency>pango</Dependency>
             <Dependency>libx11</Dependency>
         </RuntimeDependencies>
-	</Package>
-
-	<Package>
-		<Name>ibus-devel</Name>
+    </Package>
+    
+    <Package>
+        <Name>ibus-devel</Name>
         <Summary>Development files for ibus</Summary>
         <Description>Development files for ibus</Description>
-		<Files>
-			<Path fileType="header">/usr/include</Path>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="data">/usr/share/vala/vapi</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency release="current">ibus</Dependency>
         </RuntimeDependencies>
-	</Package>
+    </Package>
     
-	<Package>
-		<Name>ibus-docs</Name>
+    <Package>
+        <Name>ibus-docs</Name>
         <Summary>API Documentation for ibus</Summary>
         <Description>API Documentation for ibus</Description>
-		<Files>
-			<Path fileType="doc">/usr/share/gtk-doc</Path>
-		</Files>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
         <RuntimeDependencies>
             <Dependency release="current">ibus-devel</Dependency>
         </RuntimeDependencies>
-	</Package>
+    </Package>
     
-	<History>
-		<Update release="1">
-			<Date>06-05-2013</Date>
-			<Version>1.5.2</Version>
-			<Comment>Add ibus to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
+    <History>
+        <Update release="1">
+            <Date>06-05-2013</Date>
+            <Version>1.5.2</Version>
+            <Comment>Add ibus to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
 </PISI>
-    
+

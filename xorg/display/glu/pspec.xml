@@ -1,89 +1,89 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-  <Source>
-    <Name>glu</Name>
-    <Packager>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-    </Packager>
-    <Summary>Mesa OpenGL Utility Library</Summary>
-    <Description>Mesa OpenGL Utility Library</Description>
-    <License>SGI-B</License>
-    <Archive sha1sum="6c547b7c7d5dc0f169f96f1826d44799129bb0aa" type="targz">ftp://ftp.freedesktop.org/pub/mesa/glu/glu-9.0.0.tar.gz</Archive>
-    
-    <BuildDependencies>
-		<Dependency>libxdmcp-devel</Dependency>
-		<Dependency>mesalib-devel</Dependency>
-		<Dependency>libx11-devel</Dependency>
-		<Dependency>libdrm-devel</Dependency>
-		<Dependency>libxcb-devel</Dependency>
-		<Dependency>libxdamage-devel</Dependency>
-		<Dependency>libxext-devel</Dependency>
-		<Dependency>libxfixes-devel</Dependency>
-		<Dependency>libxxf86vm-devel</Dependency>
-		<Dependency>libxau-devel</Dependency>
-    </BuildDependencies>
+    <Source>
+        <Name>glu</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>Mesa OpenGL Utility Library</Summary>
+        <Description>Mesa OpenGL Utility Library</Description>
+        <License>SGI-B</License>
+        <Archive sha1sum="6c547b7c7d5dc0f169f96f1826d44799129bb0aa" type="targz">ftp://ftp.freedesktop.org/pub/mesa/glu/glu-9.0.0.tar.gz</Archive>
+        
+        <BuildDependencies>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>mesalib-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libdrm-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libxdamage-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>libxfixes-devel</Dependency>
+            <Dependency>libxxf86vm-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+        </BuildDependencies>
     </Source>
-
-  <Package>
-    <Name>libglu</Name>
-    <Files>
-		<Path fileType="library">/usr/lib/lib*.so*</Path>
-	</Files>
-	<RuntimeDependencies>
-		<Dependency>libxdmcp</Dependency>
-		<Dependency>mesalib</Dependency>
-		<Dependency>libx11</Dependency>
-		<Dependency>libstdc++</Dependency>
-		<Dependency>libdrm</Dependency>
-		<Dependency>libgcc</Dependency>
-		<Dependency>libxcb</Dependency>
-		<Dependency>libxdamage</Dependency>
-		<Dependency>libxext</Dependency>
-		<Dependency>libxfixes</Dependency>
-		<Dependency>libxxf86vm</Dependency>
-		<Dependency>libxau</Dependency>
-	</RuntimeDependencies>
-  </Package>
-
-  <Package>
-    <Name>libglu-devel</Name>
-    <Files>
-		<Path fileType="header">/usr/include</Path>
-		<Path fileType="data">/usr/lib/pkgconfig</Path>
-	</Files>
-	<RuntimeDependencies>
-		<Dependency release="3">libglu</Dependency>
-	</RuntimeDependencies>
-  </Package>
     
-  <History>
-
-    <Update release="3">
-		<Date>03-28-2013</Date>
-		<Version>9.0.0</Version>
-		<Comment>Finish dependencies</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-	
-    <Update release="2">
-		<Date>03-27-2013</Date>
-		<Version>9.0.0</Version>
-		<Comment>Split -devel</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-		
-    <Update release="1">
-		<Date>03-27-2013</Date>
-		<Version>9.0.0</Version>
-		<Comment>Add glu to repositories</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-  </History>
-		
+    <Package>
+        <Name>libglu</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>mesalib</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>libdrm</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libxdamage</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libxfixes</Dependency>
+            <Dependency>libxxf86vm</Dependency>
+            <Dependency>libxau</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <Package>
+        <Name>libglu-devel</Name>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="3">libglu</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <History>
+        
+        <Update release="3">
+            <Date>03-28-2013</Date>
+            <Version>9.0.0</Version>
+            <Comment>Finish dependencies</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="2">
+            <Date>03-27-2013</Date>
+            <Version>9.0.0</Version>
+            <Comment>Split -devel</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>03-27-2013</Date>
+            <Version>9.0.0</Version>
+            <Comment>Add glu to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    
 </PISI>
-    
+

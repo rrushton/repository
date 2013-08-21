@@ -1,45 +1,45 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-  <Source>
-    <Name>gnupg</Name>
-    <Packager>
-        <Name>Justin Krehel</Name>
-        <Email>justin@solusos.com</Email>
-    </Packager>
-    <Summary> Complete and free implementation of OpenPGP</Summary>
-	<Description> GnuPG is a complete and free implementation of OpenPGP standard as defined by RFC4880. It allows encryption and signing of data and communications, a key management system, and access modules for public key directories.</Description>
-	<License>GPLv3</License>
-	<Archive sha1sum="9f2696f3b61cb771053db599e884952c80d2a6e7" type="targz">ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-1.4.13.tar.gz</Archive>
-	<BuildDependencies>
-		<Dependency>ncurses-devel</Dependency>
-	</BuildDependencies>
+    <Source>
+        <Name>gnupg</Name>
+        <Packager>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Packager>
+        <Summary> Complete and free implementation of OpenPGP</Summary>
+        <Description> GnuPG is a complete and free implementation of OpenPGP standard as defined by RFC4880. It allows encryption and signing of data and communications, a key management system, and access modules for public key directories.</Description>
+        <License>GPLv3</License>
+        <Archive sha1sum="9f2696f3b61cb771053db599e884952c80d2a6e7" type="targz">ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-1.4.13.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>ncurses-devel</Dependency>
+        </BuildDependencies>
     </Source>
-
-  <Package>
-    <Name>gnupg</Name>
-    <Files>
-		<Path fileType="executable">/usr/bin</Path>
-		<Path fileType="library">/usr/libexec/gnupg</Path>
-		<Path fileType="doc">/usr/share/doc</Path>
-		<Path fileType="info">/usr/share/info</Path>
-		<Path fileType="localedata">/usr/share/locale</Path>
-		<Path fileType="man">/usr/share/man</Path>
-		<Path fileType="config">/usr/share/gnupg</Path>
-	</Files>
-	<RuntimeDependencies>
-		<Dependency>ncurses</Dependency>
-	</RuntimeDependencies>
-  </Package>
-  
-  <History>
-    <Update release="1">
-		<Date>03-24-2013</Date>
-		<Version>1.4.13</Version>
-		<Comment>Add gnupg to the repositories</Comment>
-		<Name>Justin Krehel</Name>
-		<Email>justin@solusos.com</Email>
-	</Update>
-  </History>
-		
+    
+    <Package>
+        <Name>gnupg</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/libexec/gnupg</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="config">/usr/share/gnupg</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>ncurses</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>03-24-2013</Date>
+            <Version>1.4.13</Version>
+            <Comment>Add gnupg to the repositories</Comment>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Update>
+    </History>
+    
 </PISI>

@@ -1,16 +1,16 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>metacity</Name>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>GTK+ Window Manager</Summary>
-		<Description>Boring window manager for the adult in you. Many window managers are like Marshmallow Froot Loops; Metacity is like Cheerios.</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="7b5b20e84ffb86290955a726af946a78b7a45e26" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/metacity/2.34/metacity-2.34.13.tar.xz</Archive>
+    <Source>
+        <Name>metacity</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>GTK+ Window Manager</Summary>
+        <Description>Boring window manager for the adult in you. Many window managers are like Marshmallow Froot Loops; Metacity is like Cheerios.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="7b5b20e84ffb86290955a726af946a78b7a45e26" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/metacity/2.34/metacity-2.34.13.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
@@ -44,12 +44,12 @@
             <Dependency>glib2-devel</Dependency>
             <Dependency>libsm-devel</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>metacity</Name>
-		<Files>
-			<Path fileType="executable">/usr/bin</Path>
+    </Source>
+    
+    <Package>
+        <Name>metacity</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib/lib*.so*</Path>
             <Path fileType="data">/usr/share/GConf</Path>
             <Path fileType="doc">/usr/share/doc</Path>
@@ -62,7 +62,7 @@
             <Path fileType="data">/usr/share/applications</Path>
             <Path fileType="data">/usr/share/gnome</Path>
             <Path fileType="man">/usr/share/man</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency>zlib</Dependency>
             <Dependency>expat</Dependency>
@@ -104,29 +104,30 @@
             <Dependency>glib2</Dependency>
             <Dependency>libsm</Dependency>
         </RuntimeDependencies>
-	</Package>
-
-	<Package>
-		<Name>metacity-devel</Name>
+    </Package>
+    
+    <Package>
+        <Name>metacity-devel</Name>
         <Summary>Development files for metacity</Summary>
         <Description>Development files for metacity</Description>
-		<Files>
-			<Path fileType="library">/usr/include</Path>
+        <Files>
+            <Path fileType="library">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency release="current">metacity</Dependency>
         </RuntimeDependencies>
-	</Package>
+    </Package>
     
-	<History>
-		<Update release="1">
-			<Date>06-05-2013</Date>
-			<Version>2.34.13</Version>
-			<Comment>Add metacity to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
+    <History>
+        <Update release="1">
+            <Date>06-05-2013</Date>
+            <Version>2.34.13</Version>
+            <Comment>Add metacity to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
 </PISI>
-    
+

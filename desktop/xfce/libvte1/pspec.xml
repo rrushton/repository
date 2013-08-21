@@ -12,7 +12,7 @@
         <Description>Vte is a library (libvte) implementing a terminal emulator widget for GTK+ 2, and a minimal demonstration application (vte) that uses libvte. </Description>
         <License>GPLv2+</License>
         <Archive sha1sum="b0af0701ef9d6c7ede9c578366b12a70ac47ab66" type="tarxz">ftp://ftp.gnome.org/pub/gnome/sources/vte/0.28/vte-0.28.2.tar.xz</Archive>
-
+        
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>harfbuzz-devel</Dependency>
@@ -44,7 +44,7 @@
             <Dependency>libsm-devel</Dependency>
         </BuildDependencies>
     </Source>
-
+    
     <Package>
         <Name>libvte1</Name>
         <Files>
@@ -94,7 +94,7 @@
             <Dependency>libsm</Dependency>
         </RuntimeDependencies>
     </Package>
-
+    
     <Package>
         <Name>libvte1-devel</Name>
         <Summary>Development files for libvte1</Summary>
@@ -107,7 +107,7 @@
             <Dependency release="current">libvte1</Dependency>
         </RuntimeDependencies>
     </Package>
-
+    
     <Package>
         <Name>libvte1-docs</Name>
         <Summary>API Documentation for libvte1</Summary>
@@ -119,7 +119,7 @@
             <Dependency release="current">libvte1-devel</Dependency>
         </RuntimeDependencies>
     </Package>
-
+    
     <History>
         <Update release="1">
             <Date>08-21-2013</Date>
@@ -128,5 +128,6 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-    </History>	
+    </History>
+    	
 </PISI>

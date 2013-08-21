@@ -13,7 +13,7 @@
         <License>GPLv2</License>
         <Archive sha1sum="431bc92195f27673bfdd2be67ce0f58338da8d3b" type="tarbz2">http://dvdnav.mplayerhq.hu/releases/libdvdread-4.2.0.tar.bz2</Archive>
     </Source>
-
+    
     <Package>
         <Name>libdvdread</Name>
         <Files>
@@ -37,22 +37,22 @@
     </Package>
     
     <History>
-         <Update release="3">
-             <Date>05-05-2013</Date>
-             <Version>4.2.0</Version>
-             <Comment>Add missing doc entry</Comment>
-             <Name>Ikey Doherty</Name>
-             <Email>ikey@solusos.com</Email>
-         </Update>
-         		
-         <Update release="2">
-             <Date>04-24-2013</Date>
-             <Version>4.2.0</Version>
-             <Comment>Split -devel package</Comment>
-             <Name>Justin Krehel</Name>
-             <Email>justin@solusos.com</Email>
-         </Update>
-     
+        <Update release="3">
+            <Date>05-05-2013</Date>
+            <Version>4.2.0</Version>
+            <Comment>Add missing doc entry</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="2">
+            <Date>04-24-2013</Date>
+            <Version>4.2.0</Version>
+            <Comment>Split -devel package</Comment>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Update>
+        
         <Update release="1">
             <Date>04-22-2013</Date>
             <Version>4.2.0</Version>
@@ -60,5 +60,6 @@
             <Name>Kim Vande Walle</Name>
             <Email>vande.walle.k@gmail.com</Email>
         </Update>
-    </History>  
+    </History>
+     
 </PISI>

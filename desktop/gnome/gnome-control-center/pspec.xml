@@ -1,16 +1,16 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>gnome-control-center</Name>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>The GNOME Control Center</Summary>
-		<Description>The GNOME Control Center</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="8a92efe97e41157b97dc80a70f57ffd465ff595f" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-control-center/3.9/gnome-control-center-3.9.3.tar.xz</Archive>
+    <Source>
+        <Name>gnome-control-center</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>The GNOME Control Center</Summary>
+        <Description>The GNOME Control Center</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="8a92efe97e41157b97dc80a70f57ffd465ff595f" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-control-center/3.9/gnome-control-center-3.9.3.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency>accountsservice-devel</Dependency>
@@ -99,12 +99,12 @@
             <Dependency>libgeoclue-devel</Dependency>
             <Dependency>at-spi2-devel</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>gnome-control-center</Name>
-		<Files>
-			<Path fileType="executable">/usr/bin</Path>
+    </Source>
+    
+    <Package>
+        <Name>gnome-control-center</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib/control-center-1</Path>
             <Path fileType="executable">/usr/lib/gnome-control-center</Path>
             <Path fileType="data">/etc/xdg/autostart</Path>
@@ -122,7 +122,7 @@
             <Path fileType="data">/usr/share/gnome-shell</Path>
             <Path fileType="data">/usr/share/dbus-1</Path>
             <Path fileType="data">/usr/share/bash-completion</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency>accountsservice</Dependency>
             <Dependency>libcolord-gtk</Dependency>
@@ -224,32 +224,33 @@
             <Dependency>librest</Dependency>
             <Dependency>mesalib-demos</Dependency>
         </RuntimeDependencies>
-	</Package>
-  
-	<History>
-		<Update release="3">
-			<Date>06-26-2013</Date>
-			<Version>3.9.3</Version>
-			<Comment>Upgrade to 3.9.3 as part of the GNOME3.9 migration</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-
-		<Update release="2">
-			<Date>06-19-2013</Date>
-			<Version>3.8.3</Version>
-			<Comment>Upgrade to 3.8.3 as part of the GNOME3.8 migration</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-        
-		<Update release="1">
-			<Date>06-16-2013</Date>
-			<Version>3.6.3</Version>
-			<Comment>Add gnome-control-center to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+    </Package>
     
+    <History>
+        <Update release="3">
+            <Date>06-26-2013</Date>
+            <Version>3.9.3</Version>
+            <Comment>Upgrade to 3.9.3 as part of the GNOME3.9 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="2">
+            <Date>06-19-2013</Date>
+            <Version>3.8.3</Version>
+            <Comment>Upgrade to 3.8.3 as part of the GNOME3.8 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>06-16-2013</Date>
+            <Version>3.6.3</Version>
+            <Comment>Add gnome-control-center to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

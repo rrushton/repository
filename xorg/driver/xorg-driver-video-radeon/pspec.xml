@@ -1,16 +1,16 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>xorg-driver-video-radeon</Name>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>Open source Radeon Video Driver</Summary>
-		<Description>The Xorg ATI Driver package contains the X.Org Video Driver for ATI Radeon video cards including all chipsets ranging from R100 to R900 and the newer RAxx chipsets.</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="f94730e5ffc5f75fa3126579bed0222fe8330653" type="tarbz2">http://xorg.freedesktop.org/archive/individual/driver/xf86-video-ati-7.1.0.tar.bz2</Archive>
+    <Source>
+        <Name>xorg-driver-video-radeon</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>Open source Radeon Video Driver</Summary>
+        <Description>The Xorg ATI Driver package contains the X.Org Video Driver for ATI Radeon video cards including all chipsets ranging from R100 to R900 and the newer RAxx chipsets.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="f94730e5ffc5f75fa3126579bed0222fe8330653" type="tarbz2">http://xorg.freedesktop.org/archive/individual/driver/xf86-video-ati-7.1.0.tar.bz2</Archive>
         
         <BuildDependencies>
             <Dependency releaseFrom="4">xorg-server-devel</Dependency>
@@ -27,29 +27,30 @@
             <Dependency>pixman-devel</Dependency>
             <Dependency>glamor-egl-devel</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>xorg-driver-video-radeon</Name>
-		<Files>
-			<Path fileType="library">/usr/lib/xorg</Path>
+    </Source>
+    
+    <Package>
+        <Name>xorg-driver-video-radeon</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/xorg</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency releaseFrom="4">xorg-server</Dependency>
             <Dependency>glamor-egl</Dependency>
         </RuntimeDependencies>
-	</Package>
-  
-	<History>        
-		<Update release="1">
-			<Date>08-13-2013</Date>
-			<Version>7.1.0</Version>
-			<Comment>Add xorg-driver-video-radeon to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+    </Package>
     
+    <History>        
+        <Update release="1">
+            <Date>08-13-2013</Date>
+            <Version>7.1.0</Version>
+            <Comment>Add xorg-driver-video-radeon to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

@@ -1,54 +1,55 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>libunistring</Name>
-		<Homepage>http://www.gnu.org/software/libunistring</Homepage>
-		<Packager>
-			<Name>Justin Krehel</Name>
-			<Email>justin@solusos.com</Email>
-		</Packager>
-		<Summary>Library for manipulating Unicode strings</Summary>
-		<Description>libunistring is a GNU library that provides functions for manipulating Unicdoe strings and for manipulating C strings according to the Unicode standard.</Description>
-		<License>GPLv3+</License>
-		<License>LGPLV3+</License>
-		<Archive sha1sum="e1ea13c24a30bc93932d19eb5ad0704a618506dd" type="targz">http://ftp.gnu.org/gnu/libunistring/libunistring-0.9.3.tar.gz</Archive>
-	</Source>
-
-	<Package>
-		<Name>libunistring</Name>
-		<Files>
-			<Path fileType="library">/usr/lib</Path>
-			<Path fileType="info">/usr/share/info</Path>
-			<Path fileType="doc">/usr/share/doc/libunistring/ChangeLog</Path>
-			<Path fileType="doc">/usr/share/doc/libunistring/BUGS</Path>
-			<Path fileType="doc">/usr/share/doc/libunistring/AUTHORS</Path>
-			<Path fileType="doc">/usr/share/doc/libunistring/THANKS</Path>
-			<Path fileType="doc">/usr/share/doc/libunistring/README</Path>
-			<Path fileType="doc">/usr/share/doc/libunistring/COPYING*</Path>
-		</Files>
-	</Package>
-
+    <Source>
+        <Name>libunistring</Name>
+        <Homepage>http://www.gnu.org/software/libunistring</Homepage>
+        <Packager>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Packager>
+        <Summary>Library for manipulating Unicode strings</Summary>
+        <Description>libunistring is a GNU library that provides functions for manipulating Unicdoe strings and for manipulating C strings according to the Unicode standard.</Description>
+        <License>GPLv3+</License>
+        <License>LGPLV3+</License>
+        <Archive sha1sum="e1ea13c24a30bc93932d19eb5ad0704a618506dd" type="targz">http://ftp.gnu.org/gnu/libunistring/libunistring-0.9.3.tar.gz</Archive>
+    </Source>
+    
     <Package>
-    	<Name>libunistring-devel</Name>
-    	<Summary>Development files for libunistring</Summary>
-    	<Description>Development files for libunistring</Description>
-    	<Files>	
-			<Path fileType="header">/usr/include</Path>
-			<Path fileType="doc">/usr/share/doc/libunistring/libunistring*</Path>
-    	</Files>
-    	<RuntimeDependencies>
-    		<Dependency release="current">libunistring</Dependency>
-    	</RuntimeDependencies>
+        <Name>libunistring</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="doc">/usr/share/doc/libunistring/ChangeLog</Path>
+            <Path fileType="doc">/usr/share/doc/libunistring/BUGS</Path>
+            <Path fileType="doc">/usr/share/doc/libunistring/AUTHORS</Path>
+            <Path fileType="doc">/usr/share/doc/libunistring/THANKS</Path>
+            <Path fileType="doc">/usr/share/doc/libunistring/README</Path>
+            <Path fileType="doc">/usr/share/doc/libunistring/COPYING*</Path>
+        </Files>
     </Package>
     
-	<History>
-		<Update release="1">
-			<Date>04-21-2013</Date>
-			<Version>0.9.3</Version>
-			<Comment>Add libunistring to repositories</Comment>
-			<Name>Justin Krehel</Name>
-			<Email>justin@solusos.com</Email>
-		</Update>
-	</History>	
+    <Package>
+        <Name>libunistring-devel</Name>
+        <Summary>Development files for libunistring</Summary>
+        <Description>Development files for libunistring</Description>
+        <Files>	
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="doc">/usr/share/doc/libunistring/libunistring*</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libunistring</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>04-21-2013</Date>
+            <Version>0.9.3</Version>
+            <Comment>Add libunistring to repositories</Comment>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Update>
+    </History>
+    	
 </PISI>

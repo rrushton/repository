@@ -1,42 +1,42 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-  <Source>
-    <Name>file</Name>
-	<Homepage>http://www.darwinsys.com/file</Homepage>
-    <Packager>
-        <Name>Justin Krehel</Name>
-        <Email>justin@solusos.com</Email>
-	</Packager>
-    <Summary>file (file type guesser)</Summary>
-	<Description> file is a command used to guess the "file type" of a file.  It reads the content to determine the data.</Description>
-	<Archive sha1sum="927651df90ead6b3e036e243109137c7d42c4fb6" type="targz">ftp://ftp.astron.com/pub/file/file-5.13.tar.gz</Archive>
-	<License>BSD</License>
-	<Patches>
-		<Patch level="0">change-dest-for-mgc-file.patch</Patch>
-	</Patches>
-  </Source>
-
-  <Package>
-    <Name>file</Name>
-	<Files>
-		<Path fileType="data">/usr/share</Path>
-		<Path fileType="executable">/usr/bin</Path>
-		<Path fileType="header">/usr/include</Path>
-		<Path fileType="library">/usr/lib</Path>
-		<Path fileType="library">/lib</Path>
-		<Path fileType="man">/usr/share/man</Path>
-	</Files>
-  </Package>
-  
-  <History> 
-    <Update release="1">
-		<Date>03-11-2013</Date>
-		<Version>5.13</Version>
-		<Comment>Add file to repositories</Comment>
-		<Name>Justin Krehel</Name>
-		<Email>justin@solusos.com</Email>
-	</Update>
-  </History>
-		
+    <Source>
+        <Name>file</Name>
+        <Homepage>http://www.darwinsys.com/file</Homepage>
+        <Packager>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Packager>
+        <Summary>file (file type guesser)</Summary>
+        <Description> file is a command used to guess the "file type" of a file.  It reads the content to determine the data.</Description>
+        <Archive sha1sum="927651df90ead6b3e036e243109137c7d42c4fb6" type="targz">ftp://ftp.astron.com/pub/file/file-5.13.tar.gz</Archive>
+        <License>BSD</License>
+        <Patches>
+            <Patch level="0">change-dest-for-mgc-file.patch</Patch>
+        </Patches>
+    </Source>
+    
+    <Package>
+        <Name>file</Name>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    
+    <History> 
+        <Update release="1">
+            <Date>03-11-2013</Date>
+            <Version>5.13</Version>
+            <Comment>Add file to repositories</Comment>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Update>
+    </History>
+    
 </PISI>

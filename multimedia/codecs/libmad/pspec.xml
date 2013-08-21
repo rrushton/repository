@@ -1,51 +1,52 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>libmad</Name>
-		<Homepage>http://www.underbit.com/products/mad/</Homepage>
-		<Packager>
-			<Name>Matias Linares</Name>
-			<Email>matiaslina@gmail.com</Email>
-		</Packager>
-		<Summary> high-quality MPEG audio decoder</Summary>
-		<Description>high-quality MPEG audio decoder. It currently supports MPEG-1 and the MPEG-2 extension to lower sampling frequencies, as well as the de facto MPEG 2.5 format. All three audio layers — Layer I, Layer II, and Layer III (i.e. MP3) — are fully implemented.</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="cac19cd00e1a907f3150cc040ccc077783496d76" type="targz">http://ufpr.dl.sourceforge.net/project/mad/libmad/0.15.1b/libmad-0.15.1b.tar.gz</Archive>
-		<Patches>
-			<!-- Some unrecongized flags there. -->
-			<Patch level="1">libmad-cflags.patch</Patch>
-		</Patches>
-	</Source>
-
-	<Package>
-		<Name>libmad</Name>
-		<Files>
-			<Path fileType="library">/usr/lib</Path>
-			<Path fileType="doc">/usr/share/doc</Path>
-		</Files>
-	</Package>
-	
-	<Package>
-		<Name>libmad-devel</Name>
-		<Summary>Development files for libmad</Summary>
-		<RuntimeDependencies>
-			<Dependency release="current">libmad</Dependency>
-		</RuntimeDependencies>
-		<Files>
-			<Path fileType="header">/usr/include</Path>
-		</Files>
-	</Package>
-	
-  
-	<History>
-		<Update release="1">
-			<Date>05-31-2013</Date>
-			<Version>0.15.1b</Version>
-			<Comment>Add libmad to repositories</Comment>
-			<Name>Matias Linares</Name>
-			<Email>matiaslina@gmail.com</Email>
-		</Update>
-	</History>	
-</PISI>
+    <Source>
+        <Name>libmad</Name>
+        <Homepage>http://www.underbit.com/products/mad/</Homepage>
+        <Packager>
+            <Name>Matias Linares</Name>
+            <Email>matiaslina@gmail.com</Email>
+        </Packager>
+        <Summary> high-quality MPEG audio decoder</Summary>
+        <Description>high-quality MPEG audio decoder. It currently supports MPEG-1 and the MPEG-2 extension to lower sampling frequencies, as well as the de facto MPEG 2.5 format. All three audio layers — Layer I, Layer II, and Layer III (i.e. MP3) — are fully implemented.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="cac19cd00e1a907f3150cc040ccc077783496d76" type="targz">http://ufpr.dl.sourceforge.net/project/mad/libmad/0.15.1b/libmad-0.15.1b.tar.gz</Archive>
+        <Patches>
+            <!-- Some unrecongized flags there. -->
+            <Patch level="1">libmad-cflags.patch</Patch>
+        </Patches>
+    </Source>
     
+    <Package>
+        <Name>libmad</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>libmad-devel</Name>
+        <Summary>Development files for libmad</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libmad</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    
+    
+    <History>
+        <Update release="1">
+            <Date>05-31-2013</Date>
+            <Version>0.15.1b</Version>
+            <Comment>Add libmad to repositories</Comment>
+            <Name>Matias Linares</Name>
+            <Email>matiaslina@gmail.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

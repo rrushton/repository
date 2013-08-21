@@ -1,42 +1,43 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
+    <Source>
         <Name>numpy</Name>
         <Homepage>http://www.numpy.org</Homepage>
-		<Packager>
-			<Name>Justin Krehel</Name>
-			<Email>justin@solusos.com</Email>
-		</Packager>
-		<Summary>array processing for numbers, strings, records, and objects in Python</Summary>
-		<Description>NumPy is an array-processing package for Python designed to efficiently manipulate large multi-dimensional arrays of arbitrary records without the sacrifice of speed. It is built on the Numeric code base.</Description>
-		<License>BSD</License>
+        <Packager>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Packager>
+        <Summary>array processing for numbers, strings, records, and objects in Python</Summary>
+        <Description>NumPy is an array-processing package for Python designed to efficiently manipulate large multi-dimensional arrays of arbitrary records without the sacrifice of speed. It is built on the Numeric code base.</Description>
+        <License>BSD</License>
         <Archive sha1sum="11d878214d11a25e05a24f6b27e2b838815a2588" type="targz">http://sourceforge.net/projects/numpy/files/NumPy/1.7.1/numpy-1.7.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
+    </Source>
+    
+    <Package>
         <Name>numpy</Name>
         <RuntimeDependencies>
             <Dependency>python</Dependency>
         </RuntimeDependencies>
-		<Files>
+        <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="data">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-		</Files>
-	</Package>
-  
-	<History>
-		<Update release="1">
-			<Date>04-24-2013</Date>
-			<Version>1.7.1</Version>
-			<Comment>Add numpy to repositories</Comment>
-			<Name>Justin Krehel</Name>
-			<Email>justin@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+        </Files>
+    </Package>
     
+    <History>
+        <Update release="1">
+            <Date>04-24-2013</Date>
+            <Version>1.7.1</Version>
+            <Comment>Add numpy to repositories</Comment>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

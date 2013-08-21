@@ -1,16 +1,16 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>xorg-driver-video-intel</Name>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>Intel Video Driver</Summary>
-		<Description>The Xorg Intel Driver package contains the X.Org Video Driver for Intel integrated video cards including 8xx, 9xx, Gxx, Qxx and HD graphics processors (SandyBridge, IvyBridge and Haswell).</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="238bd3cbf6e8f471280a163fc47efa8cc5501da4" type="tarbz2">http://xorg.freedesktop.org/archive/individual/driver/xf86-video-intel-2.21.14.tar.bz2</Archive>
+    <Source>
+        <Name>xorg-driver-video-intel</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>Intel Video Driver</Summary>
+        <Description>The Xorg Intel Driver package contains the X.Org Video Driver for Intel integrated video cards including 8xx, 9xx, Gxx, Qxx and HD graphics processors (SandyBridge, IvyBridge and Haswell).</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="238bd3cbf6e8f471280a163fc47efa8cc5501da4" type="tarbz2">http://xorg.freedesktop.org/archive/individual/driver/xf86-video-intel-2.21.14.tar.bz2</Archive>
         
         <BuildDependencies>
             <Dependency releaseFrom="4">xorg-server-devel</Dependency>
@@ -26,28 +26,29 @@
             <Dependency>libfontenc-devel</Dependency>
             <Dependency>pixman-devel</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>xorg-driver-video-intel</Name>
-		<Files>
-			<Path fileType="library">/usr/lib/xorg</Path>
+    </Source>
+    
+    <Package>
+        <Name>xorg-driver-video-intel</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/xorg</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency releaseFrom="4">xorg-server</Dependency>
         </RuntimeDependencies>
-	</Package>
-  
-	<History>        
-		<Update release="1">
-			<Date>08-13-2013</Date>
-			<Version>2.21.14</Version>
-			<Comment>Add xorg-driver-video-intel to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+    </Package>
     
+    <History>        
+        <Update release="1">
+            <Date>08-13-2013</Date>
+            <Version>2.21.14</Version>
+            <Comment>Add xorg-driver-video-intel to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

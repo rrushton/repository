@@ -1,16 +1,16 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
+    <Source>
         <Name>dar</Name>
         <Homepage>http://dar.linux.free.fr</Homepage>
-		<Packager>
-			<Name>Justin Krehel</Name>
-			<Email>justin@solusos.com</Email>
-		</Packager>
-		<Summary>Disk ARchive</Summary>
-		<Description>dar is a shell command that backs up directory trees and files, taking care of hard links, Extended Attributes, sparse files, MacOS's file forks, any inode type (including Solaris Door inodes), etc.</Description>
-		<License>GPLv2</License>
+        <Packager>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Packager>
+        <Summary>Disk ARchive</Summary>
+        <Description>dar is a shell command that backs up directory trees and files, taking care of hard links, Extended Attributes, sparse files, MacOS's file forks, any inode type (including Solaris Door inodes), etc.</Description>
+        <License>GPLv2</License>
         <Archive sha1sum="bf02ba10bfcd2ad959017706f167fc390aafe932" type="targz">http://prdownloads.sourceforge.net/project/dar/dar/2.4.10/dar-2.4.10.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>lzo-devel</Dependency>
@@ -18,9 +18,9 @@
             <Dependency>bzip2</Dependency>
             <Dependency>gzip</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
+    </Source>
+    
+    <Package>
         <Name>dar</Name>
         <RuntimeDependencies>
             <Dependency>lzo</Dependency>
@@ -28,15 +28,15 @@
             <Dependency>bzip2</Dependency>
             <Dependency>gzip</Dependency>
         </RuntimeDependencies>
-		<Files>
+        <Files>
             <Path fileType="config">/etc/darrc</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib/lib*.so*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="man">/usr/share/man</Path>
-		</Files>
-	</Package>
+        </Files>
+    </Package>
     
     <Package>
         <Name>dar-devel</Name>
@@ -59,14 +59,15 @@
             <Name>Justin Krehel</Name>
             <Email>justin@solusos.com</Email>
         </Update>
-
-		<Update release="1">
-			<Date>06-16-2013</Date>
-			<Version>2.4.10</Version>
-			<Comment>Add dar to repositories</Comment>
-			<Name>Justin Krehel</Name>
-			<Email>justin@solusos.com</Email>
-		</Update>
-	</History>	
+        
+        <Update release="1">
+            <Date>06-16-2013</Date>
+            <Version>2.4.10</Version>
+            <Comment>Add dar to repositories</Comment>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Update>
+    </History>
+    	
 </PISI>
-    
+

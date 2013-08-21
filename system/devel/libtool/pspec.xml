@@ -1,23 +1,23 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>libtool</Name>
+    <Source>
+        <Name>libtool</Name>
         <Homepage>http://www.gnu.org/software/libtool</Homepage>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>Generic library support script</Summary>
-		<Description>The Libtool package contains the GNU generic library support script. It wraps the complexity of using shared libraries in a consistent, portable interface.</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="a5a44aa791c8b93cbe1c2f839368cd3de5f5f3e1" type="tarxz">http://ftp.gnu.org/gnu/libtool/libtool-2.4.tar.xz</Archive>
-	</Source>
-
-	<Package>
-		<Name>libtool</Name>
-		<Files>
-			<Path fileType="executable">/usr/bin</Path>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>Generic library support script</Summary>
+        <Description>The Libtool package contains the GNU generic library support script. It wraps the complexity of using shared libraries in a consistent, portable interface.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="a5a44aa791c8b93cbe1c2f839368cd3de5f5f3e1" type="tarxz">http://ftp.gnu.org/gnu/libtool/libtool-2.4.tar.xz</Archive>
+    </Source>
+    
+    <Package>
+        <Name>libtool</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/lib*.so*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
@@ -25,17 +25,18 @@
             <Path fileType="info">/usr/share/info</Path>
             <Path fileType="data">/usr/share/libtool</Path>
             <Path fileType="man">/usr/share/man</Path>
-		</Files>
-	</Package>
-  
-	<History>
-		<Update release="1">
-			<Date>05-24-2013</Date>
-			<Version>2.4</Version>
-			<Comment>Add libtool to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+        </Files>
+    </Package>
     
+    <History>
+        <Update release="1">
+            <Date>05-24-2013</Date>
+            <Version>2.4</Version>
+            <Comment>Add libtool to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

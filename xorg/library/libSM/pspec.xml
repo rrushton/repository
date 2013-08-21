@@ -1,57 +1,57 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-  <Source>
-    <Name>libsm</Name>
-    <Packager>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-    </Packager>
-    <Summary>X Session Management Library</Summary>
-    <Description>This package provides the main interface to the X11 Session Management library, which allows for applications to both manage sessions, and make use of session managers to save and restore their state for later use.</Description>
-    <License>GPLv3+</License>
-    <Archive sha1sum="8d354a165e330022ffd3606aba562b8c8154213d" type="tarbz2">mirrors://xorg/individual/lib/libSM-1.2.1.tar.bz2</Archive>
+    <Source>
+        <Name>libsm</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>X Session Management Library</Summary>
+        <Description>This package provides the main interface to the X11 Session Management library, which allows for applications to both manage sessions, and make use of session managers to save and restore their state for later use.</Description>
+        <License>GPLv3+</License>
+        <Archive sha1sum="8d354a165e330022ffd3606aba562b8c8154213d" type="tarbz2">mirrors://xorg/individual/lib/libSM-1.2.1.tar.bz2</Archive>
     </Source>
-
-  <Package>
-    <Name>libsm</Name>
-    <Files>
-		<Path fileType="library">/usr/lib/lib*so*</Path>
-		<Path fileType="doc">/usr/share/doc</Path> 
-	</Files>
-  </Package>
-
-  <Package>
-    <Name>libsm-devel</Name>
-    <Summary>Development files for libsm</Summary>
-    <Description>Development files for libsm</Description>
-    <Files>
-		<Path fileType="header">/usr/include</Path>
-		<Path fileType="library">/usr/lib/*.a</Path>
-		<Path fileType="data">/usr/lib/pkgconfig  </Path>
-	</Files>
-	<RuntimeDependencies>
-		<Dependency release="2">libsm</Dependency>
-	</RuntimeDependencies>
-  </Package>
     
-  <History>
-    <Update release="2">
-		<Date>03-17-2013</Date>
-		<Version>1.2.1</Version>
-		<Comment>Split -devel package</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-	
-    <Update release="1">
-		<Date>03-11-2013</Date>
-		<Version>1.2.1</Version>
-		<Comment>Add libsm to repositories</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-  </History>
-		
+    <Package>
+        <Name>libsm</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/lib*so*</Path>
+            <Path fileType="doc">/usr/share/doc</Path> 
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>libsm-devel</Name>
+        <Summary>Development files for libsm</Summary>
+        <Description>Development files for libsm</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/*.a</Path>
+            <Path fileType="data">/usr/lib/pkgconfig  </Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="2">libsm</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <History>
+        <Update release="2">
+            <Date>03-17-2013</Date>
+            <Version>1.2.1</Version>
+            <Comment>Split -devel package</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>03-11-2013</Date>
+            <Version>1.2.1</Version>
+            <Comment>Add libsm to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    
 </PISI>
-    
+

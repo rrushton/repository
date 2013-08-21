@@ -1,47 +1,48 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>libxkbcommon</Name>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>xkbcommon is a library to handle keyboard description</Summary>
-		<Description>xkbcommon is a library to handle keyboard descriptions, including loading them from disk, parsing them and handling their state. It's mainly meant for client toolkits, window systems, and other system applications; currently that includes Wayland, kmscon, GTK+, Qt, Clutter, and more. Despite the name, it isn't actually used by anything X11 (yet).</Description>
-		<License>MIT</License>
-		<Archive sha1sum="f885f3b89eb25ea32b5c9dfa69e5ea44118c829e" type="tarxz">http://xkbcommon.org/download/libxkbcommon-0.3.1.tar.xz</Archive>
-	</Source>
-
-	<Package>
-		<Name>libxkbcommon</Name>
-		<Files>
-			<Path fileType="library">/usr/lib/lib*.so*</Path>
+    <Source>
+        <Name>libxkbcommon</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>xkbcommon is a library to handle keyboard description</Summary>
+        <Description>xkbcommon is a library to handle keyboard descriptions, including loading them from disk, parsing them and handling their state. It's mainly meant for client toolkits, window systems, and other system applications; currently that includes Wayland, kmscon, GTK+, Qt, Clutter, and more. Despite the name, it isn't actually used by anything X11 (yet).</Description>
+        <License>MIT</License>
+        <Archive sha1sum="f885f3b89eb25ea32b5c9dfa69e5ea44118c829e" type="tarxz">http://xkbcommon.org/download/libxkbcommon-0.3.1.tar.xz</Archive>
+    </Source>
+    
+    <Package>
+        <Name>libxkbcommon</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-		</Files>
-	</Package>
-
-	<Package>
-		<Name>libxkbcommon-devel</Name>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>libxkbcommon-devel</Name>
         <Summary>Development files for libxkbcommon</Summary>
         <Description>Development files for libxkbcommon</Description>
-		<Files>
-			<Path fileType="header">/usr/include</Path>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency release="current">libxkbcommon</Dependency>
         </RuntimeDependencies>
-	</Package>
-      
-	<History>
-		<Update release="1">
-			<Date>06-24-2013</Date>
-			<Version>0.3.1</Version>
-			<Comment>Add libxkbcommon to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+    </Package>
     
+    <History>
+        <Update release="1">
+            <Date>06-24-2013</Date>
+            <Version>0.3.1</Version>
+            <Comment>Add libxkbcommon to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

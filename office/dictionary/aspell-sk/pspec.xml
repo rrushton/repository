@@ -1,15 +1,15 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
+    <Source>
         <Name>aspell-sk</Name>
         <Homepage>http://ftp.gnu.org/gnu/aspell/dict/0index.html</Homepage>
-		<Packager>
-			<Name>Justin Krehel</Name>
-			<Email>justin@solusos.com</Email>
-		</Packager>
-		<Summary>Aspell Dictionary for Slovak</Summary>
-		<Description>Aspell dictionary for Slovak</Description>
+        <Packager>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Packager>
+        <Summary>Aspell Dictionary for Slovak</Summary>
+        <Description>Aspell dictionary for Slovak</Description>
         <License>GPLv2</License>
         <License>MPL-1.1</License>
         <License>LGPLv1.2</License>
@@ -17,26 +17,27 @@
         <BuildDependencies>
             <Dependency>aspell</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
+    </Source>
+    
+    <Package>
         <Name>aspell-sk</Name>
         <RuntimeDependencies>
             <Dependency>aspell</Dependency>
         </RuntimeDependencies>
-		<Files>
+        <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-		</Files>
-	</Package>
-  
-	<History>
-		<Update release="1">
-			<Date>05-06-2013</Date>
-			<Version>2.01</Version>
-			<Comment>Add aspell-sk to repositories</Comment>
-			<Name>Justin Krehel</Name>
-			<Email>justin@solusos.com</Email>
-		</Update>
-	</History>	
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>05-06-2013</Date>
+            <Version>2.01</Version>
+            <Comment>Add aspell-sk to repositories</Comment>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Update>
+    </History>
+    	
 </PISI>

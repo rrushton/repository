@@ -1,18 +1,18 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>gtk-engine-xfce</Name>
+    <Source>
+        <Name>gtk-engine-xfce</Name>
         <Homepage>http://www.xfce.org</Homepage>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>XFCE themes and libraries for GTK2 and GTK3</Summary>
-		<Description>The GTK Xfce Engine package contains several GTK+ 2 and GTK+ 3 themes and libraries needed to display them. This is useful for customising the appearance of your Xfce desktop.</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="bc35a26fc3723908e264234f12e384175779d18c" type="tarbz2">http://archive.xfce.org/xfce/4.10/src/gtk-xfce-engine-3.0.0.tar.bz2</Archive>
-
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>XFCE themes and libraries for GTK2 and GTK3</Summary>
+        <Description>The GTK Xfce Engine package contains several GTK+ 2 and GTK+ 3 themes and libraries needed to display them. This is useful for customising the appearance of your Xfce desktop.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="bc35a26fc3723908e264234f12e384175779d18c" type="tarbz2">http://archive.xfce.org/xfce/4.10/src/gtk-xfce-engine-3.0.0.tar.bz2</Archive>
+        
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>harfbuzz-devel</Dependency>
@@ -49,16 +49,16 @@
             <Dependency>at-spi2-atk-devel</Dependency>
             <Dependency>libxkbcommon-devel</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>gtk-engine-xfce</Name>
-		<Files>
-			<Path fileType="library">/usr/lib/gtk-2.0</Path>
+    </Source>
+    
+    <Package>
+        <Name>gtk-engine-xfce</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/gtk-2.0</Path>
             <Path fileType="library">/usr/lib/gtk-3.0</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/themes</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency>zlib</Dependency>
             <Dependency>expat</Dependency>
@@ -103,16 +103,17 @@
             <Dependency>at-spi2-atk</Dependency>
             <Dependency>libxkbcommon</Dependency>
         </RuntimeDependencies>
-	</Package>
-  
-	<History>
-		<Update release="1">
-			<Date>08-07-2013</Date>
-			<Version>3.0.0</Version>
-			<Comment>Add gtk-xfce-engine to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+    </Package>
     
+    <History>
+        <Update release="1">
+            <Date>08-07-2013</Date>
+            <Version>3.0.0</Version>
+            <Comment>Add gtk-xfce-engine to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

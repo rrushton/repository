@@ -1,63 +1,63 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-  <Source>
-    <Name>at-spi2</Name>
-	<Homepage>http://www.gnome.org</Homepage>
-    <Packager>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-	</Packager>
-	<Summary>Accessibility toolkit</Summary>
-	<Description> ATK provides the set of accessibility interfaces that are implemented by other toolkits and applications. Using the ATK interfaces, accessibility tools have full access to view and control running applications.</Description>
-	<License>GPLv3+</License>
-	<Archive sha1sum="473e149b24bee3bbdf3ff3bf828461b19c2f5058" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/at-spi2-core/2.6/at-spi2-core-2.6.3.tar.xz</Archive>
-  </Source>
-
-  <Package>
-    <Name>at-spi2</Name>
-	<Files>
-		<Path fileType="executable">/usr/lib/at-spi2/core</Path>
-		<Path fileType="library">/usr/lib/lib*.so*</Path>
-		<Path fileType="config">/etc</Path>
-		<Path fileType="data">/usr/share/dbus-1</Path>
-		<Path fileType="localedata">/usr/share/locale</Path>
-	</Files>
-  </Package>
-
-  <Package>
-    <Name>at-spi2-devel</Name>
-    <Sumary>Development files for at-spi2</Sumary>
-    <Description>Development files for at-spi2</Description>
-	<Files>
-		<Path fileType="header">/usr/include</Path>
-		<Path fileType="data">/usr/lib/pkgconfig</Path>
-		<Path fileType="data">/usr/share/gir-1.0</Path>
-		<Path fileType="data">/usr/lib/girepository-1.0</Path>
-		<Path fileType="doc">/usr/share/gtk-doc</Path>
-	</Files>
-	<RuntimeDependencies>
-		<Dependency>at-spi2</Dependency>
-	</RuntimeDependencies>
-  </Package>
-  
+    <Source>
+        <Name>at-spi2</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>Accessibility toolkit</Summary>
+        <Description> ATK provides the set of accessibility interfaces that are implemented by other toolkits and applications. Using the ATK interfaces, accessibility tools have full access to view and control running applications.</Description>
+        <License>GPLv3+</License>
+        <Archive sha1sum="473e149b24bee3bbdf3ff3bf828461b19c2f5058" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/at-spi2-core/2.6/at-spi2-core-2.6.3.tar.xz</Archive>
+    </Source>
     
-  <History>
-    <Update release="2">
-		<Date>02-04-2013</Date>
-		<Version>2.6.3</Version>
-		<Comment>Split -devel</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-		  
-    <Update release="1">
-		<Date>02-04-2013</Date>
-		<Version>2.6.3</Version>
-		<Comment>Add at-spi2 to repositories</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-  </History>
-		
+    <Package>
+        <Name>at-spi2</Name>
+        <Files>
+            <Path fileType="executable">/usr/lib/at-spi2/core</Path>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>at-spi2-devel</Name>
+        <Sumary>Development files for at-spi2</Sumary>
+        <Description>Development files for at-spi2</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>at-spi2</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    
+    <History>
+        <Update release="2">
+            <Date>02-04-2013</Date>
+            <Version>2.6.3</Version>
+            <Comment>Split -devel</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>02-04-2013</Date>
+            <Version>2.6.3</Version>
+            <Comment>Add at-spi2 to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    
 </PISI>

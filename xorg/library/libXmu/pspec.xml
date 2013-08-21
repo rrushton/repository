@@ -1,57 +1,57 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-  <Source>
-    <Name>libxmu</Name>
-    <Packager>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-    </Packager>
-    <Summary>X11 miscellaneous utility library</Summary>
-    <Description>This library contains miscellaneous utilities and is not part of the Xlib standard.  It contains routines which only use public interfaces so that it may be layered on top of any proprietary implementation of Xlib or Xt</Description>
-    <License>GPLv3+</License>
-    <Archive sha1sum="3e280aa927d78c05f94db6c7ae606f7ad132b495" type="tarbz2">mirrors://xorg/individual/lib/libXmu-1.1.1.tar.bz2</Archive>
+    <Source>
+        <Name>libxmu</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>X11 miscellaneous utility library</Summary>
+        <Description>This library contains miscellaneous utilities and is not part of the Xlib standard.  It contains routines which only use public interfaces so that it may be layered on top of any proprietary implementation of Xlib or Xt</Description>
+        <License>GPLv3+</License>
+        <Archive sha1sum="3e280aa927d78c05f94db6c7ae606f7ad132b495" type="tarbz2">mirrors://xorg/individual/lib/libXmu-1.1.1.tar.bz2</Archive>
     </Source>
-
-  <Package>
-    <Name>libxmu</Name>
-    <Files>
-		<Path fileType="library">/usr/lib/lib*so*</Path>
-		<Path fileType="doc">/usr/share/doc</Path>
-	</Files>
-  </Package>
-
-  <Package>
-    <Name>libxmu-devel</Name>
-    <Summary>Development files for libxmu</Summary>
-    <Description>Development files for libxmu</Description>
-    <Files>
-		<Path fileType="header">/usr/include</Path>
-		<Path fileType="library">/usr/lib/*.a</Path>
-		<Path fileType="data">/usr/lib/pkgconfig</Path>
-	</Files>
-	<RuntimeDependencies>
-		<Dependency release="2">libxmu</Dependency>
-	</RuntimeDependencies>
-  </Package>
     
-  <History>
-    <Update release="2">
-		<Date>03-17-2013</Date>
-		<Version>1.1.1</Version>
-		<Comment>Split -devel package</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-	
-    <Update release="1">
-		<Date>03-11-2013</Date>
-		<Version>1.1.1</Version>
-		<Comment>Add libxmu to repositories</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-  </History>
-		
+    <Package>
+        <Name>libxmu</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/lib*so*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>libxmu-devel</Name>
+        <Summary>Development files for libxmu</Summary>
+        <Description>Development files for libxmu</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/*.a</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="2">libxmu</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <History>
+        <Update release="2">
+            <Date>03-17-2013</Date>
+            <Version>1.1.1</Version>
+            <Comment>Split -devel package</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>03-11-2013</Date>
+            <Version>1.1.1</Version>
+            <Comment>Add libxmu to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    
 </PISI>
-    
+

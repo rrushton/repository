@@ -1,57 +1,57 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-  <Source>
-    <Name>libxau</Name>
-    <Packager>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-    </Packager>
-    <Summary>X Authorization Protocol library</Summary>
-    <Description>The libXau package contains a library implementing the X11 Authorization Protocol. This is useful for restricting client access to the display. </Description>
-    <License>GPLv3+</License>
-    <Archive sha1sum="29c47207fd246425b906f525b2220235ce4cd0f6" type="tarbz2">mirrors://xorg/individual/lib/libXau-1.0.7.tar.bz2</Archive>
+    <Source>
+        <Name>libxau</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>X Authorization Protocol library</Summary>
+        <Description>The libXau package contains a library implementing the X11 Authorization Protocol. This is useful for restricting client access to the display. </Description>
+        <License>GPLv3+</License>
+        <Archive sha1sum="29c47207fd246425b906f525b2220235ce4cd0f6" type="tarbz2">mirrors://xorg/individual/lib/libXau-1.0.7.tar.bz2</Archive>
     </Source>
-
-  <Package>
-    <Name>libxau</Name>
-    <Files>
-		<Path fileType="library">/usr/lib</Path>
-		<Path fileType="doc">/usr/share/doc</Path>
-		<Path fileType="man">/usr/share/man</Path>
-	</Files>
-  </Package>
-
-  <Package>
-    <Name>libxau-devel</Name>
-    <Summary>Development files for libxau</Summary>
-    <Description>Development files for libxau</Description>
-    <Files>
-		<Path fileType="header">/usr/include</Path>
-		<Path fileType="header">/usr/lib/pkgconfig</Path>
-	</Files>
-	<RuntimeDependencies>
-		<Dependency release="2">libxau</Dependency>
-	</RuntimeDependencies>
-  </Package>
     
-  <History>
-    <Update release="2">
-		<Date>03-17-2013</Date>
-		<Version>1.0.7</Version>
-		<Comment>Split -devel package</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-	
-    <Update release="1">
-		<Date>03-09-2013</Date>
-		<Version>1.0.7</Version>
-		<Comment>Add libxau to repositories</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-  </History>
-		
+    <Package>
+        <Name>libxau</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>libxau-devel</Name>
+        <Summary>Development files for libxau</Summary>
+        <Description>Development files for libxau</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="header">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="2">libxau</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <History>
+        <Update release="2">
+            <Date>03-17-2013</Date>
+            <Version>1.0.7</Version>
+            <Comment>Split -devel package</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>03-09-2013</Date>
+            <Version>1.0.7</Version>
+            <Comment>Add libxau to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    
 </PISI>
-    
+

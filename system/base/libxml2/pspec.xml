@@ -1,75 +1,75 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-  <Source>
-    <Name>libxml2</Name>
-    <Packager>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-    </Packager>
-    <Summary>GNOME XML Library</Summary>
-    <Description>The libxml2 package contains libraries and utilities used for parsing XML files.</Description>
-    <License>GPLv3+</License>
-    <Archive sha1sum="a43d7c0a8e463ac5a7846254f2a732a9af146fab" type="targz">http://xmlsoft.org/sources/libxml2-2.9.0.tar.gz</Archive>
+    <Source>
+        <Name>libxml2</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>GNOME XML Library</Summary>
+        <Description>The libxml2 package contains libraries and utilities used for parsing XML files.</Description>
+        <License>GPLv3+</License>
+        <Archive sha1sum="a43d7c0a8e463ac5a7846254f2a732a9af146fab" type="targz">http://xmlsoft.org/sources/libxml2-2.9.0.tar.gz</Archive>
     </Source>
-
-  <Package>
-    <Name>libxml2</Name>
-    <Files>
-		<Path fileType="executable">/usr/bin</Path>
-		<Path fileType="library">/usr/lib/lib*so*</Path>
-		<Path fileType="data">/usr/lib/*.sh</Path>
-		<Path fileType="doc">/usr/share/doc</Path>
-		<Path fileType="man">/usr/share/man</Path>
-		<Path fileType="library">/usr/lib/python*</Path>
-	</Files>
-	<AdditionalFiles>
-		<!-- Shell script enabling us to rebuild the XML catalog //-->
-		<AdditionalFile owner="root" permission="0755" target="/usr/bin/build-docbook-catalog">buildDocBookCatalog</AdditionalFile>
-	</AdditionalFiles>
-	<Provides>
-		<COMAR script="packageHandler.py">System.PackageHandler</COMAR>
-	</Provides>
-  </Package>
-
-  <Package>
-    <Name>libxml2-devel</Name>
-    <Files>
-		<Path fileType="header">/usr/include</Path>
-		<Path fileType="data">/usr/share/aclocal</Path>
-		<Path fileType="data">/usr/lib/pkgconfig</Path>
-		<Path fileType="doc">/usr/share/gtk-doc</Path>
-	</Files>
-	<RuntimeDependencies>
-		<Dependency release="current">libxml2</Dependency>
-	</RuntimeDependencies>
-  </Package>
     
-  <History>
-    <Update release="3">
-		<Date>04-13-2013</Date>
-		<Version>2.9.0</Version>
-		<Comment>Add trigger to rebuild the docbook catalog when anything is installed to /usr/share/xml</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-		  
-    <Update release="2">
-		<Date>04-13-2013</Date>
-		<Version>2.9.0</Version>
-		<Comment>Add the build-docbook-catalog helper</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-		  
-    <Update release="1">
-		<Date>03-11-2013</Date>
-		<Version>2.9.0</Version>
-		<Comment>Add libxml2 to repositories</Comment>
-		<Name>SolusOS Developers</Name>
-		<Email>dev@solusos.com</Email>
-	</Update>
-  </History>
-		
+    <Package>
+        <Name>libxml2</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/lib*so*</Path>
+            <Path fileType="data">/usr/lib/*.sh</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="library">/usr/lib/python*</Path>
+        </Files>
+        <AdditionalFiles>
+            <!-- Shell script enabling us to rebuild the XML catalog //-->
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/build-docbook-catalog">buildDocBookCatalog</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <COMAR script="packageHandler.py">System.PackageHandler</COMAR>
+        </Provides>
+    </Package>
+    
+    <Package>
+        <Name>libxml2-devel</Name>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libxml2</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <History>
+        <Update release="3">
+            <Date>04-13-2013</Date>
+            <Version>2.9.0</Version>
+            <Comment>Add trigger to rebuild the docbook catalog when anything is installed to /usr/share/xml</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="2">
+            <Date>04-13-2013</Date>
+            <Version>2.9.0</Version>
+            <Comment>Add the build-docbook-catalog helper</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>03-11-2013</Date>
+            <Version>2.9.0</Version>
+            <Comment>Add libxml2 to repositories</Comment>
+            <Name>SolusOS Developers</Name>
+            <Email>dev@solusos.com</Email>
+        </Update>
+    </History>
+    
 </PISI>
-    
+

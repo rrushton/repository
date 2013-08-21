@@ -1,92 +1,92 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-  <Source>
-    <Name>git</Name>
-    <Packager>
-        <Name>SolusOS Developers</Name>
-        <Email>dev@solusos.com</Email>
-    </Packager>
-    <Summary>fast, scalable, distributed revision control system </Summary>
-    <Description>fast, scalable, distributed revision control system</Description>
-    <License>LGPLv2+</License>
-    <Archive sha1sum="4a6585dd81a542e7803e5f54a5c85b1c1a5869aa" type="targz">http://git-core.googlecode.com/files/git-1.8.3.2.tar.gz</Archive>
-    <BuildDependencies>
-        <Dependency>zlib-devel</Dependency>
-        <Dependency>openssl-devel</Dependency>
-    </BuildDependencies>
+    <Source>
+        <Name>git</Name>
+        <Packager>
+            <Name>SolusOS Developers</Name>
+            <Email>dev@solusos.com</Email>
+        </Packager>
+        <Summary>fast, scalable, distributed revision control system </Summary>
+        <Description>fast, scalable, distributed revision control system</Description>
+        <License>LGPLv2+</License>
+        <Archive sha1sum="4a6585dd81a542e7803e5f54a5c85b1c1a5869aa" type="targz">http://git-core.googlecode.com/files/git-1.8.3.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+        </BuildDependencies>
     </Source>
-
-  <Package>
-    <Name>git</Name>
-    <Files>
-        <Path fileType="executable">/usr/bin</Path>
-        <Path fileType="library">/usr/lib/git-core</Path>
-        <Path fileType="data">/usr/lib/perl5</Path>
-        <Path fileType="data">/usr/lib/python*</Path>
-        <Path fileType="doc">/usr/share/doc</Path>
-        <Path fileType="data">/usr/share/git-core</Path>
-        <Path fileType="data">/usr/share/git-gui</Path>
-        <Path fileType="localedata">/usr/share/gitk</Path>
-        <Path fileType="data">/usr/share/gitweb</Path>
-        <Path fileType="localedata">/usr/share/locale</Path>
-        <Path fileType="man">/usr/share/man</Path>
-    </Files>
-    <RuntimeDependencies>
-        <Dependency>zlib</Dependency>
-        <Dependency>openssl</Dependency>
-    </RuntimeDependencies>
-  </Package>
-  
-  <History>
-    <Update release="6">
-        <Date>07-14-2013</Date>
-        <Version>1.8.3.2</Version>
-        <Comment>Bump version from 1.8.3 to 1.8.3.2</Comment>
-        <Name>Justin Krehel</Name>
-        <Email>justin@solusos.com</Email>
-    </Update>
-
-    <Update release="5">
-        <Date>06-08-2013</Date>
-        <Version>1.8.3</Version>
-        <Comment>Bump version to 1.8.3 from 1.8.2.3</Comment>
-        <Name>Justin Krehel</Name>
-        <Email>justin@solusos.com</Email>
-    </Update>
-
-    <Update release="4">
-        <Date>05-31-2013</Date>
-        <Version>1.8.2.3</Version>
-        <Comment>Move into programming.tools</Comment>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-    </Update>
     
-    <Update release="3">
-        <Date>04-03-2013</Date>
-        <Version>1.8.2.3</Version>
-        <Comment>Update to latest stable version</Comment>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-    </Update>
-          
-    <Update release="2">
-        <Date>04-03-2013</Date>
-        <Version>1.8.1.5</Version>
-        <Comment>Use rawInstall to prevent sandbox violation</Comment>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-    </Update>
-           
-    <Update release="1">
-        <Date>03-12-2013</Date>
-        <Version>1.8.1.5</Version>
-        <Comment>Add git to repositories</Comment>
-        <Name>SolusOS Developers</Name>
-        <Email>dev@solusos.com</Email>
-    </Update>
-  </History>
+    <Package>
+        <Name>git</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/git-core</Path>
+            <Path fileType="data">/usr/lib/perl5</Path>
+            <Path fileType="data">/usr/lib/python*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/git-core</Path>
+            <Path fileType="data">/usr/share/git-gui</Path>
+            <Path fileType="localedata">/usr/share/gitk</Path>
+            <Path fileType="data">/usr/share/gitweb</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>openssl</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <History>
+        <Update release="6">
+            <Date>07-14-2013</Date>
+            <Version>1.8.3.2</Version>
+            <Comment>Bump version from 1.8.3 to 1.8.3.2</Comment>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Update>
         
-</PISI>
+        <Update release="5">
+            <Date>06-08-2013</Date>
+            <Version>1.8.3</Version>
+            <Comment>Bump version to 1.8.3 from 1.8.2.3</Comment>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Update>
+        
+        <Update release="4">
+            <Date>05-31-2013</Date>
+            <Version>1.8.2.3</Version>
+            <Comment>Move into programming.tools</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="3">
+            <Date>04-03-2013</Date>
+            <Version>1.8.2.3</Version>
+            <Comment>Update to latest stable version</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="2">
+            <Date>04-03-2013</Date>
+            <Version>1.8.1.5</Version>
+            <Comment>Use rawInstall to prevent sandbox violation</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>03-12-2013</Date>
+            <Version>1.8.1.5</Version>
+            <Comment>Add git to repositories</Comment>
+            <Name>SolusOS Developers</Name>
+            <Email>dev@solusos.com</Email>
+        </Update>
+    </History>
     
+</PISI>
+

@@ -12,7 +12,7 @@
         <Description>Terminal emulator application for the Xfce Desktop</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="bb90b6b414932147d71c735472b1dcab14c6e899" type="tarbz2">http://archive.xfce.org/src/apps/xfce4-terminal/0.6/xfce4-terminal-0.6.2.tar.bz2</Archive>
-
+        
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>libxfce4ui-devel</Dependency>
@@ -48,7 +48,7 @@
             <Dependency>libvte1-devel</Dependency>
         </BuildDependencies>
     </Source>
-
+    
     <Package>
         <Name>xfce4-terminal</Name>
         <Files>
@@ -104,7 +104,7 @@
             <Dependency>libvte1</Dependency>
         </RuntimeDependencies>
     </Package>
-
+    
     <History>
         <Update release="1">
             <Date>08-21-2013</Date>
@@ -113,5 +113,6 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-    </History>	
+    </History>
+    	
 </PISI>

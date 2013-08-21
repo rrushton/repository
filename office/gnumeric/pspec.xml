@@ -26,7 +26,7 @@
             <Dependency>python-gobject-devel</Dependency>
         </BuildDependencies>
     </Source>
-
+    
     <Package>
         <Name>gnumeric</Name>
         <Files>
@@ -54,7 +54,7 @@
             <Dependency>python-gobject</Dependency>
         </RuntimeDependencies>
     </Package>
-
+    
     <Package>
         <Name>gnumeric-devel</Name>
         <Summary>Development files for gnumeric</Summary>
@@ -67,7 +67,7 @@
             <Dependency release="current">gnumeric</Dependency>
         </RuntimeDependencies>
     </Package>
-
+    
     <History>
         <Update release="1">
             <Date>06-24-2013</Date>
@@ -76,6 +76,7 @@
             <Name>Justin Krehel</Name>
             <Email>justin@solusos.com</Email>
         </Update>
-    </History>  
+    </History>
+     
 </PISI>
-    
+

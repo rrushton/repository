@@ -1,39 +1,40 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>virtualenv</Name>
-		<Homepage>http://www.virtualenv.org</Homepage>
-		<Packager>
-			<Name>Justin Krehel</Name>
-			<Email>justin@solusos.com</Email>
-		</Packager>
-		<Summary>Tool to create isolated Python environments</Summary>
-		<Description>virtualenv is a tool to create isolated python environments, allowing for easier management of versions and dependencies in Python applications. Versions from 1.9+ contain pip in the environment, a tool for installing and managing Python packages.</Description>
-		<License>MIT</License>
-		<Archive sha1sum="b7d1704ec186a71c2fff1706896ecd294b708a55" type="targz">http://pypi.python.org/packages/source/v/virtualenv/virtualenv-1.9.1.tar.gz</Archive>
-	</Source>
-
-	<Package>
-		<Name>virtualenv</Name>
-		<RuntimeDependencies>
-			<Dependency>python</Dependency>
-		</RuntimeDependencies>
-		<Files>
-			<Path fileType="executable">/usr/bin</Path>
-			<Path fileType="data">/usr/lib</Path>
-			<Path fileType="doc">/usr/share/doc</Path>
-		</Files>
-	</Package>
-  
-	<History>
-		<Update release="1">
-			<Date>04-21-2013</Date>
-			<Version>1.9.1</Version>
-			<Comment>Add virtualenv to repositories</Comment>
-			<Name>Justin Krehel</Name>
-			<Email>justin@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+    <Source>
+        <Name>virtualenv</Name>
+        <Homepage>http://www.virtualenv.org</Homepage>
+        <Packager>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Packager>
+        <Summary>Tool to create isolated Python environments</Summary>
+        <Description>virtualenv is a tool to create isolated python environments, allowing for easier management of versions and dependencies in Python applications. Versions from 1.9+ contain pip in the environment, a tool for installing and managing Python packages.</Description>
+        <License>MIT</License>
+        <Archive sha1sum="b7d1704ec186a71c2fff1706896ecd294b708a55" type="targz">http://pypi.python.org/packages/source/v/virtualenv/virtualenv-1.9.1.tar.gz</Archive>
+    </Source>
     
+    <Package>
+        <Name>virtualenv</Name>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>04-21-2013</Date>
+            <Version>1.9.1</Version>
+            <Comment>Add virtualenv to repositories</Comment>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

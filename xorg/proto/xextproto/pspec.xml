@@ -1,36 +1,36 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-  <Source>
-    <Name>xextproto</Name>
-    <Packager>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-    </Packager>
-    <Summary>X Protocol Extensions</Summary>
-    <Description>Various other X Protocol Extensions.</Description>
-    <License>GPLv3+</License>
-    <Archive sha1sum="f969e02009adf2d51fd1ba4583a859984728a461" type="tarbz2">mirrors://xorg/individual/proto/xextproto-7.2.1.tar.bz2</Archive>
+    <Source>
+        <Name>xextproto</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>X Protocol Extensions</Summary>
+        <Description>Various other X Protocol Extensions.</Description>
+        <License>GPLv3+</License>
+        <Archive sha1sum="f969e02009adf2d51fd1ba4583a859984728a461" type="tarbz2">mirrors://xorg/individual/proto/xextproto-7.2.1.tar.bz2</Archive>
     </Source>
-
-  <Package>
-    <Name>xextproto</Name>
-    <Files>
-		<Path fileType="header">/usr/include</Path>
-		<Path fileType="header">/usr/lib/pkgconfig</Path>
-		<Path fileType="doc">/usr/share/doc</Path>
-	</Files>
-  </Package>
-  
-  <History>
-    <Update release="1">
-		<Date>03-09-2013</Date>
-		<Version>7.2.1</Version>
-		<Comment>Add xextproto to repositories</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-  </History>
-		
-</PISI>
     
+    <Package>
+        <Name>xextproto</Name>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="header">/usr/lib/pkgconfig</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>03-09-2013</Date>
+            <Version>7.2.1</Version>
+            <Comment>Add xextproto to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    
+</PISI>
+

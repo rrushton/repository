@@ -1,18 +1,18 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>xfce4-session</Name>
+    <Source>
+        <Name>xfce4-session</Name>
         <Homepage>http://www.xfce.org</Homepage>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>XFCE Session Manager</Summary>
-		<Description>Xfce4 Session is a session manager for Xfce. Its task is to save the state of your desktop (opened applications and their location) and restore it during a next startup. You can create several different sessions and choose one of them on startup.</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="a956b67816fb06c50990c604d0a09c402b20302c" type="tarbz2">http://archive.xfce.org/xfce/4.10/src/xfce4-session-4.10.0.tar.bz2</Archive>
-
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>XFCE Session Manager</Summary>
+        <Description>Xfce4 Session is a session manager for Xfce. Its task is to save the state of your desktop (opened applications and their location) and restore it during a next startup. You can create several different sessions and choose one of them on startup.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="a956b67816fb06c50990c604d0a09c402b20302c" type="tarbz2">http://archive.xfce.org/xfce/4.10/src/xfce4-session-4.10.0.tar.bz2</Archive>
+        
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>libxfce4ui-devel</Dependency>
@@ -49,12 +49,12 @@
             <Dependency>libgnome-keyring-devel</Dependency>
             <Dependency>iceauth</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>xfce4-session</Name>
-		<Files>
-			<Path fileType="executable">/usr/bin</Path>
+    </Source>
+    
+    <Package>
+        <Name>xfce4-session</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib/lib*.so*</Path>
             <Path fileType="library">/usr/lib/xfce4</Path>
             <Path fileType="data">/usr/share/applications</Path>
@@ -65,7 +65,7 @@
             <Path fileType="data">/usr/share/themes</Path>
             <Path fileType="data">/usr/share/xsessions</Path>
             <Path fileType="data">/etc/xdg</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency>zlib</Dependency>
             <Dependency>expat</Dependency>
@@ -112,37 +112,38 @@
             <Dependency>libgnome-keyring</Dependency>
             <Dependency>iceauth</Dependency>
         </RuntimeDependencies>
-	</Package>
-
-	<Package>
-		<Name>xfce4-session-devel</Name>
+    </Package>
+    
+    <Package>
+        <Name>xfce4-session-devel</Name>
         <Summary>Development files for xfce4-session</Summary>
         <Description>Development files for xfce4-session</Description>
-		<Files>
-			<Path fileType="header">/usr/include</Path>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency release="current">xfce4-session</Dependency>
         </RuntimeDependencies>
-	</Package>
+    </Package>
     
-	<History>
-		<Update release="2">
-			<Date>08-13-2013</Date>
-			<Version>4.10.0</Version>
-			<Comment>Add missing libgnome-keyring dependency</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-
-		<Update release="1">
-			<Date>08-06-2013</Date>
-			<Version>4.10.0</Version>
-			<Comment>Add xfce4-session to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
+    <History>
+        <Update release="2">
+            <Date>08-13-2013</Date>
+            <Version>4.10.0</Version>
+            <Comment>Add missing libgnome-keyring dependency</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>08-06-2013</Date>
+            <Version>4.10.0</Version>
+            <Comment>Add xfce4-session to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
 </PISI>
-    
+

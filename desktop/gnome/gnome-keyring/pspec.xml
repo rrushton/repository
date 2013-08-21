@@ -1,18 +1,18 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>gnome-keyring</Name>
+    <Source>
+        <Name>gnome-keyring</Name>
         <Homepage>http://www.gnome.org</Homepage>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>GNOME passwords daemon</Summary>
-		<Description>The GNOME Keyring package contains a daemon that keeps passwords and other secrets for users.</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="3f0f49f55052be64a66040fce1d59b426c25d50b" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-keyring/3.9/gnome-keyring-3.9.1.tar.xz</Archive>
-
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>GNOME passwords daemon</Summary>
+        <Description>The GNOME Keyring package contains a daemon that keeps passwords and other secrets for users.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="3f0f49f55052be64a66040fce1d59b426c25d50b" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-keyring/3.9/gnome-keyring-3.9.1.tar.xz</Archive>
+        
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>harfbuzz-devel</Dependency>
@@ -51,12 +51,12 @@
             <Dependency>libsm-devel</Dependency>
             <Dependency>at-spi2-atk-devel</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>gnome-keyring</Name>
-		<Files>
-			<Path fileType="executable">/usr/bin</Path>
+    </Source>
+    
+    <Package>
+        <Name>gnome-keyring</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/lib/security</Path>
             <Path fileType="library">/usr/lib/gnome-keyring</Path>
             <Path fileType="library">/usr/lib/pkcs11</Path>
@@ -67,7 +67,7 @@
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/etc/xdg/autostart</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency>zlib</Dependency>
             <Dependency>expat</Dependency>
@@ -116,16 +116,17 @@
             <Dependency>libsm</Dependency>
             <Dependency>at-spi2-atk</Dependency>
         </RuntimeDependencies>
-	</Package>
-  
-	<History>
-		<Update release="1">
-			<Date>08-14-2013</Date>
-			<Version>3.9.1</Version>
-			<Comment>Add gnome-keyring to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+    </Package>
     
+    <History>
+        <Update release="1">
+            <Date>08-14-2013</Date>
+            <Version>3.9.1</Version>
+            <Comment>Add gnome-keyring to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

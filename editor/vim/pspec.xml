@@ -1,75 +1,75 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-  <Source>
-    <Name>vim</Name>
-    <Homepage>http://www.vim.org/</Homepage>
-    <Packager>
-        <Name>Matias Linares</Name>
-        <Email>matiaslina@gmail.com</Email>
-    </Packager>
-    <Summary>Vi IMproved, an advanced text editor</Summary>
-    <Description>Vim, which stands for Vi IMproved, is an open-source, multiplatform text editor extended from vi. It was first released by Bram Moolenaar in 1991. Since then, numerous features have been added to Vim, many of which are helpful in editing program source code.</Description>
-    <License>GPLv2</License>
-    <Archive sha1sum="46faa96c5fab639899b1c655c23d8755b62f036f" type="tarbz2">http://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2</Archive>
-    
-    <BuildDependencies>
-		<Dependency>libxdmcp-devel</Dependency>
-		<Dependency>attr-devel</Dependency>
-		<Dependency>ncurses-devel</Dependency>
-		<Dependency>libx11-devel</Dependency>
-		<Dependency>libice-devel</Dependency>
-		<Dependency>libxt-devel</Dependency>
-		<Dependency>libxcb-devel</Dependency>
-		<Dependency>libsm-devel</Dependency>
-		<Dependency>libxau-devel</Dependency>		
-    </BuildDependencies>
+    <Source>
+        <Name>vim</Name>
+        <Homepage>http://www.vim.org/</Homepage>
+        <Packager>
+            <Name>Matias Linares</Name>
+            <Email>matiaslina@gmail.com</Email>
+        </Packager>
+        <Summary>Vi IMproved, an advanced text editor</Summary>
+        <Description>Vim, which stands for Vi IMproved, is an open-source, multiplatform text editor extended from vi. It was first released by Bram Moolenaar in 1991. Since then, numerous features have been added to Vim, many of which are helpful in editing program source code.</Description>
+        <License>GPLv2</License>
+        <Archive sha1sum="46faa96c5fab639899b1c655c23d8755b62f036f" type="tarbz2">http://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2</Archive>
+        
+        <BuildDependencies>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>attr-devel</Dependency>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libice-devel</Dependency>
+            <Dependency>libxt-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libsm-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>		
+        </BuildDependencies>
     </Source>
-
-  <Package>
-    <Name>vim</Name>
-    <Files>
-		<Path fileType="executable">/usr/bin</Path>
-		<Path fileType="man">/usr/share/man</Path>
-		<Path fileType="doc">/usr/share/doc</Path>
-		<Path fileType="data">/usr/share/vim</Path>
-		<Path fileType="config">/etc/vim</Path>
-	</Files>
-	<AdditionalFiles>
-		<AdditionalFile owner="root" permission="0640" target="/etc/vim/vimrc">vimrc</AdditionalFile>
-		<AdditionalFile owner="root" permission="0640" target="/etc/vim/vimrc.tiny">vimrc.tiny</AdditionalFile>
-	</AdditionalFiles>
-	<RuntimeDependencies>
-		<Dependency>libxdmcp</Dependency>
-		<Dependency>attr</Dependency>
-		<Dependency>ncurses</Dependency>
-		<Dependency>libx11</Dependency>
-		<Dependency>acl</Dependency>
-		<Dependency>libice</Dependency>
-		<Dependency>libxt</Dependency>
-		<Dependency>libxcb</Dependency>
-		<Dependency>util-linux</Dependency>
-		<Dependency>libsm</Dependency>
-		<Dependency>libxau</Dependency>		
-	</RuntimeDependencies>
-  </Package>
-  
-  <History>
-    <Update release="2">
-		<Date>04-07-2013</Date>
-		<Version>7.3</Version>
-		<Comment>Add binary dependencies</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-		  
-    <Update release="1">
-		<Date>03-16-2013</Date>
-		<Version>7.3</Version>
-		<Comment>First release</Comment>
-		<Name>Matias Linares</Name>
-		<Email>matiaslina@gmail.com</Email>
-	</Update>
-  </History>
-		
+    
+    <Package>
+        <Name>vim</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/vim</Path>
+            <Path fileType="config">/etc/vim</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0640" target="/etc/vim/vimrc">vimrc</AdditionalFile>
+            <AdditionalFile owner="root" permission="0640" target="/etc/vim/vimrc.tiny">vimrc.tiny</AdditionalFile>
+        </AdditionalFiles>
+        <RuntimeDependencies>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>attr</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>acl</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>libxt</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>libsm</Dependency>
+            <Dependency>libxau</Dependency>		
+        </RuntimeDependencies>
+    </Package>
+    
+    <History>
+        <Update release="2">
+            <Date>04-07-2013</Date>
+            <Version>7.3</Version>
+            <Comment>Add binary dependencies</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>03-16-2013</Date>
+            <Version>7.3</Version>
+            <Comment>First release</Comment>
+            <Name>Matias Linares</Name>
+            <Email>matiaslina@gmail.com</Email>
+        </Update>
+    </History>
+    
 </PISI>

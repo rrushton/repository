@@ -1,50 +1,51 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>gnome-icon-theme-symbolic</Name>
+    <Source>
+        <Name>gnome-icon-theme-symbolic</Name>
         <Homepage>http://www.gnome.org</Homepage>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>Symbolic icon theme for GNOME</Summary>
-		<Description>The GNOME Icon Theme Symbolic package contains symbolic icons for the default GNOME icon theme.</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="39c5149f18c1fc24f96e1338bfad01519a5110a5" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-icon-theme-symbolic/3.8/gnome-icon-theme-symbolic-3.8.3.tar.xz</Archive>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>Symbolic icon theme for GNOME</Summary>
+        <Description>The GNOME Icon Theme Symbolic package contains symbolic icons for the default GNOME icon theme.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="39c5149f18c1fc24f96e1338bfad01519a5110a5" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-icon-theme-symbolic/3.8/gnome-icon-theme-symbolic-3.8.3.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency>libgtk-2-devel</Dependency>
             <Dependency releaseFrom="10">libgtk-3-devel</Dependency>
             <Dependency>icon-naming-utils</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>gnome-icon-theme-symbolic</Name>
-		<Files>
-			<Path fileType="doc">/usr/share/doc</Path>
+    </Source>
+    
+    <Package>
+        <Name>gnome-icon-theme-symbolic</Name>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/icons/gnome</Path>
             <Path fileType="data">/usr/share/pkgconfig</Path>
-		</Files>
-	</Package>
-  
-	<History>
-		<Update release="2">
-			<Date>06-19-2013</Date>
-			<Version>3.8.3</Version>
-			<Comment>Upgrade to 3.8.3 as part of GNOME3.8 migration</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-        
-		<Update release="1">
-			<Date>06-05-2013</Date>
-			<Version>3.6.2</Version>
-			<Comment>Add gnome-icon-theme-symbolic to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+        </Files>
+    </Package>
     
+    <History>
+        <Update release="2">
+            <Date>06-19-2013</Date>
+            <Version>3.8.3</Version>
+            <Comment>Upgrade to 3.8.3 as part of GNOME3.8 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>06-05-2013</Date>
+            <Version>3.6.2</Version>
+            <Comment>Add gnome-icon-theme-symbolic to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

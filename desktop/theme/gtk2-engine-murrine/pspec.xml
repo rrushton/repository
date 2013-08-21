@@ -1,16 +1,16 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>gtk2-engine-murrine</Name>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>Murrine Engine for GTK2 Themes</Summary>
-		<Description>Murrine Engine for GTK2 Themes</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="ddaca56b6e10736838572014ae9d20b814242615" type="tarxz">https://launchpad.net/ubuntu/+archive/primary/+files/gtk2-engines-murrine_0.98.2.orig.tar.xz</Archive>
+    <Source>
+        <Name>gtk2-engine-murrine</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>Murrine Engine for GTK2 Themes</Summary>
+        <Description>Murrine Engine for GTK2 Themes</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="ddaca56b6e10736838572014ae9d20b814242615" type="tarxz">https://launchpad.net/ubuntu/+archive/primary/+files/gtk2-engines-murrine_0.98.2.orig.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
@@ -41,15 +41,15 @@
             <Dependency>glib2-devel</Dependency>
             <Dependency>libsm-devel</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>gtk2-engine-murrine</Name>
-		<Files>
-			<Path fileType="library">/usr/lib/gtk-2.0/2.10.0/engines</Path>
+    </Source>
+    
+    <Package>
+        <Name>gtk2-engine-murrine</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/gtk-2.0/2.10.0/engines</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/gtk-engines</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency>zlib</Dependency>
             <Dependency>expat</Dependency>
@@ -87,16 +87,17 @@
             <Dependency>glib2</Dependency>
             <Dependency>libsm</Dependency>
         </RuntimeDependencies>
-	</Package>
-  
-	<History>
-		<Update release="1">
-			<Date>06-18-2013</Date>
-			<Version>0.98.2</Version>
-			<Comment>Add gtk2-engine-murrine to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+    </Package>
     
+    <History>
+        <Update release="1">
+            <Date>06-18-2013</Date>
+            <Version>0.98.2</Version>
+            <Comment>Add gtk2-engine-murrine to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

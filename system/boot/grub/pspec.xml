@@ -1,58 +1,59 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-  <Source>
-    <Name>grub2</Name>
-    <Homepage>http://www.gnu.org/software/grub/</Homepage>
-    <Packager>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-    </Packager>
-    <Summary>GRUB Boot Loader</Summary>
-    <Description>GRUB Boot Loader</Description>
-    <License>GPLv3+</License>
-    <Archive sha1sum="274d91e96b56a5b9dd0a07accff69dbb6dfb596b" type="tarxz">ftp://ftp.gnu.org/gnu/grub/grub-2.00.tar.xz</Archive>
-    <Patches>
-		<Patch level="1">grub2-fix-build-error-on-flex.patch</Patch>
-    </Patches>
+    <Source>
+        <Name>grub2</Name>
+        <Homepage>http://www.gnu.org/software/grub/</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>GRUB Boot Loader</Summary>
+        <Description>GRUB Boot Loader</Description>
+        <License>GPLv3+</License>
+        <Archive sha1sum="274d91e96b56a5b9dd0a07accff69dbb6dfb596b" type="tarxz">ftp://ftp.gnu.org/gnu/grub/grub-2.00.tar.xz</Archive>
+        <Patches>
+            <Patch level="1">grub2-fix-build-error-on-flex.patch</Patch>
+        </Patches>
     </Source>
-
-  <Package>
-    <Name>grub2</Name>
-    <Files>
-		<Path fileType="executable">/usr/bin</Path>
-        <Path fileType="executable">/usr/sbin</Path>
-        <Path fileType="library">/usr/lib/grub</Path>
-        <Path fileType="data">/usr/share/grub</Path>
-        <Path fileType="localedata">/usr/share/locale</Path>
-        <Path fileType="info">/usr/share/info</Path>
-        <Path fileType="data">/etc/grub.d</Path>
-        <Path fileType="data">/etc/bash_completion.d</Path>
-	</Files>
-    <AdditionalFiles>
-        <AdditionalFile target="/usr/sbin/update-grub" permission="0755">update-grub</AdditionalFile>
-        <AdditionalFile target="/usr/sbin/update-grub2" permission="0755">update-grub2</AdditionalFile>
-    </AdditionalFiles>
-  </Package>
-  
-  <History>
-    <Update release="2">
-		<Date>08-16-2013</Date>
-		<Version>2.0</Version>
-		<Comment>Add the stock update-grub2 script to grub2 package
-Bug-SolusOS: FS#32</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-
-    <Update release="1">
-		<Date>03-20-2013</Date>
-		<Version>2.0</Version>
-		<Comment>Add grub2 to repositories</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-  </History>
-		
-</PISI>
     
+    <Package>
+        <Name>grub2</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="library">/usr/lib/grub</Path>
+            <Path fileType="data">/usr/share/grub</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="data">/etc/grub.d</Path>
+            <Path fileType="data">/etc/bash_completion.d</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/sbin/update-grub" permission="0755">update-grub</AdditionalFile>
+            <AdditionalFile target="/usr/sbin/update-grub2" permission="0755">update-grub2</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+    
+    <History>
+        <Update release="2">
+            <Date>08-16-2013</Date>
+            <Version>2.0</Version>
+            <Comment>Add the stock update-grub2 script to grub2 package
+                Bug-SolusOS: FS#32
+            </Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>03-20-2013</Date>
+            <Version>2.0</Version>
+            <Comment>Add grub2 to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    
+</PISI>
+

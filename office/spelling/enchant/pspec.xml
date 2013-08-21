@@ -1,30 +1,30 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
+    <Source>
         <Name>enchant</Name>
         <Homepage>http://www.abisource.com/projects/enchant</Homepage>
-		<Packager>
-			<Name>Justin Krehel</Name>
-			<Email>justin@solusos.com</Email>
-		</Packager>
-		<Summary>Spell check library wrapper program</Summary>
-		<Description>Enchant is a library wrapper program that allows the use of mulitple spell checker backends at the same time.</Description>
-		<License>LGPL2.1</License>
-		<Archive sha1sum="321f9cf0abfa1937401676ce60976d8779c39536" type="targz">http://www.abisource.com/downloads/enchant/1.6.0/enchant-1.6.0.tar.gz</Archive>
-	</Source>
-
-	<Package>
-		<Name>enchant</Name>
-		<Files>
+        <Packager>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Packager>
+        <Summary>Spell check library wrapper program</Summary>
+        <Description>Enchant is a library wrapper program that allows the use of mulitple spell checker backends at the same time.</Description>
+        <License>LGPL2.1</License>
+        <Archive sha1sum="321f9cf0abfa1937401676ce60976d8779c39536" type="targz">http://www.abisource.com/downloads/enchant/1.6.0/enchant-1.6.0.tar.gz</Archive>
+    </Source>
+    
+    <Package>
+        <Name>enchant</Name>
+        <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib/enchant</Path>
             <Path fileType="library">/usr/lib/lib*.so*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/enchant</Path>
             <Path fileType="man">/usr/share/man</Path>
-		</Files>
-	</Package>
+        </Files>
+    </Package>
     <Package>
         <Name>enchant-devel</Name>
         <Summary>Development files for enchant</Summary>
@@ -38,14 +38,15 @@
         </RuntimeDependencies>
     </Package>
     
-	<History>
-		<Update release="1">
-			<Date>04-27-2013</Date>
-			<Version>1.6.0</Version>
-			<Comment>Add enchant to repositories</Comment>
-			<Name>Justin Krehel</Name>
-			<Email>justin@solusos.com</Email>
-		</Update>
-	</History>	
+    <History>
+        <Update release="1">
+            <Date>04-27-2013</Date>
+            <Version>1.6.0</Version>
+            <Comment>Add enchant to repositories</Comment>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Update>
+    </History>
+    	
 </PISI>
-    
+

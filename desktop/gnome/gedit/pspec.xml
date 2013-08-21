@@ -1,17 +1,17 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>gedit</Name>
+    <Source>
+        <Name>gedit</Name>
         <Homepage>http://projects.gnome.org/gedit/</Homepage>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>The official text editor of the GNOME desktop</Summary>
-		<Description>While aiming at simplicity and ease of use, gedit is a powerful general purpose text editor.</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="ac696fedc13560c34161c967fcc29e09c663038d" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gedit/3.9/gedit-3.9.2.tar.xz</Archive>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>The official text editor of the GNOME desktop</Summary>
+        <Description>While aiming at simplicity and ease of use, gedit is a powerful general purpose text editor.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="ac696fedc13560c34161c967fcc29e09c663038d" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gedit/3.9/gedit-3.9.2.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency>python3-devel</Dependency>
@@ -52,12 +52,12 @@
             <Dependency>libsm-devel</Dependency>
             <Dependency>at-spi2-atk-devel</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>gedit</Name>
-		<Files>
-			<Path fileType="executable">/usr/bin</Path>
+    </Source>
+    
+    <Package>
+        <Name>gedit</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib/gedit</Path>
             <Path fileType="data">/usr/share/applications</Path>
             <Path fileType="data">/usr/share/gedit</Path>
@@ -69,7 +69,7 @@
             <Path fileType="data">/usr/share/glib-2.0</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/help</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency>python3-devel</Dependency>
             <Dependency>zlib</Dependency>
@@ -118,57 +118,58 @@
             <Dependency>libsm</Dependency>
             <Dependency>at-spi2-atk</Dependency>
         </RuntimeDependencies>
-	</Package>
-
-	<Package>
-		<Name>gedit-devel</Name>
+    </Package>
+    
+    <Package>
+        <Name>gedit-devel</Name>
         <Summary>Development files for gedit</Summary>
         <Description>Development files for gedit</Description>
-		<Files>
-			<Path fileType="header">/usr/include</Path>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency release="current">gedit</Dependency>
         </RuntimeDependencies>
-	</Package>
-
-	<Package>
-		<Name>gedit-docs</Name>
+    </Package>
+    
+    <Package>
+        <Name>gedit-docs</Name>
         <Summary>API Documentation for gedit</Summary>
         <Description>API Documentation for gedit</Description>
-		<Files>
-			<Path fileType="doc">/usr/share/gtk-doc</Path>
-		</Files>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
         <RuntimeDependencies>
             <Dependency release="current">gedit-devel</Dependency>
         </RuntimeDependencies>
-	</Package>
+    </Package>
     
-	<History>
-		<Update release="3">
-			<Date>06-26-2013</Date>
-			<Version>3.9.2</Version>
-			<Comment>Upgrade to 3.9.2 as part of GNOME3.9 migration</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
+    <History>
+        <Update release="3">
+            <Date>06-26-2013</Date>
+            <Version>3.9.2</Version>
+            <Comment>Upgrade to 3.9.2 as part of GNOME3.9 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
         
-		<Update release="2">
-			<Date>06-20-2013</Date>
-			<Version>3.8.2</Version>
-			<Comment>Rebuild against GNOME 3.8</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
+        <Update release="2">
+            <Date>06-20-2013</Date>
+            <Version>3.8.2</Version>
+            <Comment>Rebuild against GNOME 3.8</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
         
-		<Update release="1">
-			<Date>06-06-2013</Date>
-			<Version>3.6.2</Version>
-			<Comment>Add gedit to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
+        <Update release="1">
+            <Date>06-06-2013</Date>
+            <Version>3.6.2</Version>
+            <Comment>Add gedit to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
 </PISI>
-    
+

@@ -1,17 +1,17 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>zenity</Name>
+    <Source>
+        <Name>zenity</Name>
         <Homepage>https://live.gnome.org/Zenity</Homepage>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>A tool that allows you to display GTK dialog boxes in commandline and shell scripts</Summary>
-		<Description>A tool that allows you to display GTK dialog boxes in commandline and shell scripts.</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="ce31d3aa4aeb24c45a91a4238c3e9218de5c2b93" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/zenity/3.6/zenity-3.6.0.tar.xz</Archive>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>A tool that allows you to display GTK dialog boxes in commandline and shell scripts</Summary>
+        <Description>A tool that allows you to display GTK dialog boxes in commandline and shell scripts.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="ce31d3aa4aeb24c45a91a4238c3e9218de5c2b93" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/zenity/3.6/zenity-3.6.0.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
@@ -46,18 +46,18 @@
             <Dependency>libsm-devel</Dependency>
             <Dependency>at-spi2-atk-devel</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>zenity</Name>
-		<Files>
-			<Path fileType="executable">/usr/bin</Path>
+    </Source>
+    
+    <Package>
+        <Name>zenity</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/help</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="data">/usr/share/zenity</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency>zlib</Dependency>
             <Dependency>expat</Dependency>
@@ -99,16 +99,17 @@
             <Dependency>libsm</Dependency>
             <Dependency>at-spi2-atk</Dependency>
         </RuntimeDependencies>
-	</Package>
-  
-	<History>
-		<Update release="1">
-			<Date>06-05-2013</Date>
-			<Version>3.6.0</Version>
-			<Comment>Add zenity to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+    </Package>
     
+    <History>
+        <Update release="1">
+            <Date>06-05-2013</Date>
+            <Version>3.6.0</Version>
+            <Comment>Add zenity to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

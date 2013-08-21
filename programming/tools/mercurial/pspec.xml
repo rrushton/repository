@@ -13,7 +13,7 @@
         <License>GPLv2+</License>
         <Archive sha1sum="b158d2cb9ac9c5f45330555a42a3aa4cdf04dd1d" type="targz">http://mercurial.selenic.com/release/mercurial-2.6.tar.gz</Archive>
     </Source>
-
+    
     <Package>
         <Name>mercurial</Name>
         <Files>
@@ -22,7 +22,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-  
+    
     <History>
         <Update release="1">
             <Date>05-11-2013</Date>
@@ -31,6 +31,7 @@
             <Name>Justin Krehel</Name>
             <Email>justin@solusos.com</Email>
         </Update>
-    </History>  
+    </History>
+     
 </PISI>
-    
+

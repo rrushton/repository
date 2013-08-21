@@ -1,64 +1,65 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>geoclue</Name>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>GeoInformation service</Summary>
-		<Description>GeoClue is a modular geoinformation service built on top of the D-Bus messaging system. The goal of the GeoClue project is to make creating location-aware applications as simple as possible.</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="32958b36e679c9fb9b35b25d29c43d5ae6a0be27" type="targz">http://people.freedesktop.org/~hadess/geoclue-0.12.99.tar.gz</Archive>
-	</Source>
-
-	<Package>
-		<Name>libgeoclue</Name>
-		<Files>
-			<Path fileType="library">/usr/lib/lib*.so*</Path>
-			<Path fileType="library">/usr/lib/geoclue</Path>
-			<Path fileType="data">/usr/share/GConf</Path>
-			<Path fileType="doc">/usr/share/doc</Path>
-			<Path fileType="data">/usr/share/geoclue-providers</Path>
-			<Path fileType="data">/usr/share/glib-2.0</Path>
-			<Path fileType="data">/usr/share/dbus-1/</Path>
-		</Files>
-	</Package>
-
-	<Package>
-		<Name>libgeoclue-devel</Name>
-		<Summary>Development files for geoclue</Summary>
-		<Description>Development files for geoclue</Description>
-		<Files>
-			<Path fileType="header">/usr/include</Path>
-			<Path fileType="data">/usr/lib/pkgconfig</Path>
-		</Files>
-		<RuntimeDependencies>
-			<Dependency release="current">libgeoclue</Dependency>
-		</RuntimeDependencies>
-	</Package>
-
-	<Package>
-		<Name>libgeoclue-docs</Name>
-		<Summary>API Documentation for geoclue</Summary>
-		<Description>API Documentation for geoclue</Description>
-		<Files>
-			<Path fileType="header">/usr/share/gtk-doc</Path>
-		</Files>
-		<RuntimeDependencies>
-			<Dependency release="current">libgeoclue</Dependency>
-		</RuntimeDependencies>
-	</Package>
-		  
-	<History>
-		<Update release="1">
-			<Date>05-06-2013</Date>
-			<Version>0.12.99</Version>
-			<Comment>Add geoclue to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+    <Source>
+        <Name>geoclue</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>GeoInformation service</Summary>
+        <Description>GeoClue is a modular geoinformation service built on top of the D-Bus messaging system. The goal of the GeoClue project is to make creating location-aware applications as simple as possible.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="32958b36e679c9fb9b35b25d29c43d5ae6a0be27" type="targz">http://people.freedesktop.org/~hadess/geoclue-0.12.99.tar.gz</Archive>
+    </Source>
     
+    <Package>
+        <Name>libgeoclue</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/geoclue</Path>
+            <Path fileType="data">/usr/share/GConf</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/geoclue-providers</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/dbus-1/</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>libgeoclue-devel</Name>
+        <Summary>Development files for geoclue</Summary>
+        <Description>Development files for geoclue</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libgeoclue</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <Package>
+        <Name>libgeoclue-docs</Name>
+        <Summary>API Documentation for geoclue</Summary>
+        <Description>API Documentation for geoclue</Description>
+        <Files>
+            <Path fileType="header">/usr/share/gtk-doc</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libgeoclue</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>05-06-2013</Date>
+            <Version>0.12.99</Version>
+            <Comment>Add geoclue to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

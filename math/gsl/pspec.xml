@@ -13,7 +13,7 @@
         <License>GPLv3</License>
         <Archive sha1sum="d914f84b39a5274b0a589d9b83a66f44cd17ca8e" type="targz">http://ftp.gnu.org/gnu/gsl/gsl-1.15.tar.gz</Archive>
     </Source>
-
+    
     <Package>
         <Name>gsl</Name>
         <Files>
@@ -21,7 +21,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-
+    
     <Package>
         <Name>gsl-devel</Name>
         <Summary>Development files for gsl</Summary>
@@ -47,6 +47,7 @@
             <Name>Justin Krehel</Name>
             <Email>justin@solusos.com</Email>
         </Update>
-    </History>  
+    </History>
+     
 </PISI>
-    
+

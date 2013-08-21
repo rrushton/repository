@@ -1,18 +1,18 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>libwnck-1</Name>
+    <Source>
+        <Name>libwnck-1</Name>
         <Homepage>http://www.gnome.org/</Homepage>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>The libwnck package contains a Window Navigator Construction Kit.</Summary>
-		<Description>The libwnck package contains a Window Navigator Construction Kit.</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="9283c0efe0c5c44135c9015cfbfd518a877e4d2e" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/libwnck/2.30/libwnck-2.30.7.tar.xz</Archive>
-
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>The libwnck package contains a Window Navigator Construction Kit.</Summary>
+        <Description>The libwnck package contains a Window Navigator Construction Kit.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="9283c0efe0c5c44135c9015cfbfd518a877e4d2e" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/libwnck/2.30/libwnck-2.30.7.tar.xz</Archive>
+        
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>harfbuzz-devel</Dependency>
@@ -44,18 +44,18 @@
             <Dependency>glib2-devel</Dependency>
             <Dependency>libsm-devel</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>libwnck-1</Name>
-		<Files>
-			<Path fileType="executable">/usr/bin</Path>
+    </Source>
+    
+    <Package>
+        <Name>libwnck-1</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib/lib*.so*</Path>
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency>zlib</Dependency>
             <Dependency>expat</Dependency>
@@ -96,41 +96,42 @@
             <Dependency>glib2</Dependency>
             <Dependency>libsm</Dependency>
         </RuntimeDependencies>
-	</Package>
-
-	<Package>
-		<Name>libwnck-1-devel</Name>
+    </Package>
+    
+    <Package>
+        <Name>libwnck-1-devel</Name>
         <Summary>Development files for libwnck-1</Summary>
         <Description>Development files for libwnck-1</Description>
-		<Files>
-			<Path fileType="header">/usr/include</Path>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency release="current">libwnck-1</Dependency>
         </RuntimeDependencies>
-	</Package>
-
-	<Package>
-		<Name>libwnck-1-docs</Name>
+    </Package>
+    
+    <Package>
+        <Name>libwnck-1-docs</Name>
         <Summary>API Documentation for libwnck-1</Summary>
         <Description>API Documentation for libwnck-1</Description>
-		<Files>
-			<Path fileType="doc">/usr/share/gtk-doc</Path>
-		</Files>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
         <RuntimeDependencies>
             <Dependency release="current">libwnck-1-devel</Dependency>
         </RuntimeDependencies>
-	</Package>
-
-	<History>
-		<Update release="1">
-			<Date>08-06-2013</Date>
-			<Version>2.30.7</Version>
-			<Comment>Add libwnck to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+    </Package>
     
+    <History>
+        <Update release="1">
+            <Date>08-06-2013</Date>
+            <Version>2.30.7</Version>
+            <Comment>Add libwnck to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

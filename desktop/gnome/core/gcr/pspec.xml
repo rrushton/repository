@@ -1,138 +1,139 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-  <Source>
-    <Name>gcr</Name>
-    <Homepage>https://live.gnome.org/gcr</Homepage>
-    <Packager>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-    </Packager>
-    <Summary>The Gcr package contains libraries used for displaying certificates and accessing key stores. It also provides the viewer for crypto files on the GNOME Desktop.</Summary>
-    <Description> he Gcr package contains libraries used for displaying certificates and accessing key stores. It also provides the viewer for crypto files on the GNOME Desktop.</Description>
-    <License>GPLv3+</License>
-    <Archive sha1sum="241acff88075bb6a8f7ee199c0e31ce6c768806e" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gcr/3.8/gcr-3.8.2.tar.xz</Archive>
-    
-    <BuildDependencies>
-		<Dependency releaseFrom="10">libgtk-3-devel</Dependency>
-		<Dependency>libp11-kit-devel</Dependency>
-		<Dependency>libcairo-devel</Dependency>
-		<Dependency>zlib-devel</Dependency>
-		<Dependency>gdk-pixbuf-devel</Dependency>
-		<Dependency>libatk-devel</Dependency>
-		<Dependency>libpcre-devel</Dependency>
-		<Dependency>glib2-devel</Dependency>
-		<Dependency>pango-devel</Dependency>
-        <Dependency>libtasn1-bin</Dependency>
-        <Dependency>libtasn1-devel</Dependency>
-    </BuildDependencies>
+    <Source>
+        <Name>gcr</Name>
+        <Homepage>https://live.gnome.org/gcr</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>The Gcr package contains libraries used for displaying certificates and accessing key stores. It also provides the viewer for crypto files on the GNOME Desktop.</Summary>
+        <Description> he Gcr package contains libraries used for displaying certificates and accessing key stores. It also provides the viewer for crypto files on the GNOME Desktop.</Description>
+        <License>GPLv3+</License>
+        <Archive sha1sum="241acff88075bb6a8f7ee199c0e31ce6c768806e" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gcr/3.8/gcr-3.8.2.tar.xz</Archive>
+        
+        <BuildDependencies>
+            <Dependency releaseFrom="10">libgtk-3-devel</Dependency>
+            <Dependency>libp11-kit-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libatk-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libtasn1-bin</Dependency>
+            <Dependency>libtasn1-devel</Dependency>
+        </BuildDependencies>
     </Source>
-
-  <Package>
-    <Name>gcr</Name>
-    <Files>
-		<Path fileType="library">/usr/lib/lib*.so*</Path>
-		<Path fileType="executable">/usr/bin</Path>
-		<Path fileType="executable">/usr/lib/gnome-keyring</Path>
-		<Path fileType="data">/usr/share/applications</Path>
-		<Path fileType="data">/usr/share/icons</Path>
-		<Path fileType="data">/usr/share/dbus-1/services</Path>
-		<Path fileType="data">/usr/share/gcr-3</Path>
-		<Path fileType="doc">/usr/share/doc</Path>
-		<Path fileType="data">/usr/share/gir-1.0</Path>
-		<Path fileType="data">/usr/share/glib-2.0/schemas</Path>
-		<Path fileType="data">/usr/share/GConf</Path>
-		<Path fileType="localedata">/usr/share/locale</Path>
-		<Path fileType="data">/usr/share/mime</Path>
-		<Path fileType="data">/usr/lib/girepository-1.0</Path>
-	</Files>
-	<RuntimeDependencies>
-		<Dependency releaseFrom="10">libgtk-3</Dependency>
-		<Dependency>libp11-kit</Dependency>
-		<Dependency>libcairo</Dependency>
-		<Dependency>zlib</Dependency>
-		<Dependency>gdk-pixbuf</Dependency>
-		<Dependency>libatk</Dependency>
-		<Dependency>libpcre</Dependency>
-		<Dependency>glib2</Dependency>
-		<Dependency>pango</Dependency>
-	</RuntimeDependencies>
-  </Package>    
-
-  <Package>
-    <Name>gcr-devel</Name>
-    <Summary>Development files for gcr</Summary>
-    <Description>Development files for gcr</Description>
-    <Files>
-		<Path fileType="header">/usr/include</Path>
-		<Path fileType="executable">/usr/lib/pkgconfig</Path>
-	</Files>
-	<RuntimeDependencies>
-		<Dependency release="current">gcr</Dependency>
-	</RuntimeDependencies>
-  </Package>
-
-  <Package>
-    <Name>gcr-docs</Name>
-    <Summary>API Documentation for gcr</Summary>
-    <Description>API Documentation for gcr</Description>
-    <Files>
-		<Path fileType="doc">/usr/share/gtk-doc</Path>
-	</Files>
-	<RuntimeDependencies>
-		<Dependency release="current">gcr-devel</Dependency>
-	</RuntimeDependencies>
-  </Package>
-            
-  <History>
-    <Update release="6">
-		<Date>06-19-2013</Date>
-		<Version>3.8.2</Version>
-		<Comment>Upgrade to 3.8.2 as part of GNOME3.8 migration</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
     
-    <Update release="5">
-		<Date>05-30-2013</Date>
-		<Version>3.6.2</Version>
-		<Comment>Depend on new libcairo* packages</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-          
-    <Update release="4">
-		<Date>04-13-2013</Date>
-		<Version>3.6.2</Version>
-		<Comment>Add binary and runtime dependencies</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-		  
-    <Update release="3">
-		<Date>04-13-2013</Date>
-		<Version>3.6.2</Version>
-		<Comment>Split -devel and -docs</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-		  
-    <Update release="2">
-		<Date>04-13-2013</Date>
-		<Version>3.6.2</Version>
-		<Comment>Import 00git_gobject_gi_name.patch, correct the FTB</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-		  	   		   
-    <Update release="1">
-		<Date>04-13-2013</Date>
-		<Version>3.6.2</Version>
-		<Comment>Add gcr to repositories</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-  </History>
-		
+    <Package>
+        <Name>gcr</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/lib/gnome-keyring</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/dbus-1/services</Path>
+            <Path fileType="data">/usr/share/gcr-3</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/share/glib-2.0/schemas</Path>
+            <Path fileType="data">/usr/share/GConf</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/mime</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="10">libgtk-3</Dependency>
+            <Dependency>libp11-kit</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libatk</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>pango</Dependency>
+        </RuntimeDependencies>
+    </Package>
+     
+    
+    <Package>
+        <Name>gcr-devel</Name>
+        <Summary>Development files for gcr</Summary>
+        <Description>Development files for gcr</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="executable">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">gcr</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <Package>
+        <Name>gcr-docs</Name>
+        <Summary>API Documentation for gcr</Summary>
+        <Description>API Documentation for gcr</Description>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">gcr-devel</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <History>
+        <Update release="6">
+            <Date>06-19-2013</Date>
+            <Version>3.8.2</Version>
+            <Comment>Upgrade to 3.8.2 as part of GNOME3.8 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="5">
+            <Date>05-30-2013</Date>
+            <Version>3.6.2</Version>
+            <Comment>Depend on new libcairo* packages</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="4">
+            <Date>04-13-2013</Date>
+            <Version>3.6.2</Version>
+            <Comment>Add binary and runtime dependencies</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="3">
+            <Date>04-13-2013</Date>
+            <Version>3.6.2</Version>
+            <Comment>Split -devel and -docs</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="2">
+            <Date>04-13-2013</Date>
+            <Version>3.6.2</Version>
+            <Comment>Import 00git_gobject_gi_name.patch, correct the FTB</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>04-13-2013</Date>
+            <Version>3.6.2</Version>
+            <Comment>Add gcr to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    
 </PISI>
-    
+

@@ -1,17 +1,17 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>udisks</Name>
+    <Source>
+        <Name>udisks</Name>
         <Homepage>http://www.freedesktop.org/wiki/Software/udisks/</Homepage>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>Daemon, tools and libraries to access disks and storage devices</Summary>
-		<Description>The UDisks package provides a daemon, tools and libraries to access and manipulate disks and storage devices.</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="09b6dcab5ccda04c85f4ed7ea7426897898d15af" type="tarbz2">http://udisks.freedesktop.org/releases/udisks-2.1.0.tar.bz2</Archive>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>Daemon, tools and libraries to access disks and storage devices</Summary>
+        <Description>The UDisks package provides a daemon, tools and libraries to access and manipulate disks and storage devices.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="09b6dcab5ccda04c85f4ed7ea7426897898d15af" type="tarbz2">http://udisks.freedesktop.org/releases/udisks-2.1.0.tar.bz2</Archive>
         
         <BuildDependencies>
             <Dependency>libatasmart-devel</Dependency>
@@ -21,12 +21,12 @@
             <Dependency>libpcre-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>udisks</Name>
-		<Files>
-			<Path fileType="data">/etc/dbus-1</Path>
+    </Source>
+    
+    <Package>
+        <Name>udisks</Name>
+        <Files>
+            <Path fileType="data">/etc/dbus-1</Path>
             <Path fileType="config">/etc/udisks2</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib/lib*.so*</Path>
@@ -42,7 +42,7 @@
             <Path fileType="data">/usr/share/dbus-1</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency>glibc</Dependency>
             <Dependency>zlib</Dependency>
@@ -52,41 +52,42 @@
             <Dependency>glib2</Dependency>
             <Dependency>libatasmart</Dependency>
         </RuntimeDependencies>
-	</Package>
-
-	<Package>
-		<Name>udisks-devel</Name>
+    </Package>
+    
+    <Package>
+        <Name>udisks-devel</Name>
         <Summary>Development files for udisks</Summary>
         <Description>Development files for udisks</Description>
-		<Files>
-			<Path fileType="include">/usr/include</Path>
+        <Files>
+            <Path fileType="include">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency release="current">udisks</Dependency>
         </RuntimeDependencies>
-	</Package>
-
-	<Package>
-		<Name>udisks-docs</Name>
+    </Package>
+    
+    <Package>
+        <Name>udisks-docs</Name>
         <Summary>API Documentation for udisks</Summary>
         <Description>API Documentation for udisks</Description>
-		<Files>
-			<Path fileType="doc">/usr/share/gtk-doc</Path>
-		</Files>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
         <RuntimeDependencies>
             <Dependency release="current">udisks-devel</Dependency>
         </RuntimeDependencies>
-	</Package>
-          
-	<History>
-		<Update release="1">
-			<Date>06-13-2013</Date>
-			<Version>2.1.0</Version>
-			<Comment>Add udisks to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+    </Package>
     
+    <History>
+        <Update release="1">
+            <Date>06-13-2013</Date>
+            <Version>2.1.0</Version>
+            <Comment>Add udisks to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

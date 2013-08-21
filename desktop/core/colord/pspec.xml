@@ -1,16 +1,16 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>colord</Name>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>Add summary</Summary>
-		<Description>Add description</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="a01547080f0905dacca37c5ded3886431144a36a" type="tarxz">http://www.freedesktop.org/software/colord/releases/colord-1.0.0.tar.xz</Archive>
+    <Source>
+        <Name>colord</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>Add summary</Summary>
+        <Description>Add description</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="a01547080f0905dacca37c5ded3886431144a36a" type="tarxz">http://www.freedesktop.org/software/colord/releases/colord-1.0.0.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency>systemd-devel</Dependency>
@@ -23,12 +23,12 @@
             <Dependency>libpcre-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>colord</Name>
-		<Files>
-			<Path fileType="executable">/usr/bin</Path>
+    </Source>
+    
+    <Package>
+        <Name>colord</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib/colord-plugins</Path>
             <Path fileType="library">/usr/lib/colord-sensors</Path>
             <Path fileType="executable">/usr/lib/colord</Path>
@@ -46,7 +46,7 @@
             <Path fileType="data">/usr/share/dbus-1</Path>
             <Path fileType="config">/etc/colord.conf</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency>systemd</Dependency>
             <Dependency>liblcms2</Dependency>
@@ -60,29 +60,30 @@
             <Dependency>libpcre</Dependency>
             <Dependency>glib2</Dependency>
         </RuntimeDependencies>
-	</Package>
-
-	<Package>
-		<Name>colord-devel</Name>
+    </Package>
+    
+    <Package>
+        <Name>colord-devel</Name>
         <Summary>Development files for colord</Summary>
         <Description>Development files for colord</Description>
-		<Files>
-			<Path fileType="header">/usr/include</Path>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency release="current">colord</Dependency>
         </RuntimeDependencies>
-	</Package>
+    </Package>
     
-	<History>
-		<Update release="1">
-			<Date>06-05-2013</Date>
-			<Version>1.0.0</Version>
-			<Comment>Add colord to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
+    <History>
+        <Update release="1">
+            <Date>06-05-2013</Date>
+            <Version>1.0.0</Version>
+            <Comment>Add colord to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
 </PISI>
-    
+

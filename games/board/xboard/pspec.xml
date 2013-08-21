@@ -45,7 +45,7 @@
             <Dependency>libsm-devel</Dependency>
         </BuildDependencies>
     </Source>
-
+    
     <Package>
         <Name>xboard</Name>
         <RuntimeDependencies>
@@ -84,7 +84,7 @@
             <Dependency>glib2</Dependency>
             <Dependency>libsm</Dependency>
         </RuntimeDependencies>
-
+        
         <Files>
             <Path fileType="config">/etc</Path>
             <Path fileType="executable">/usr/bin</Path>
@@ -98,7 +98,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-  
+    
     <History>
         <Update release="4">
             <Date>05-30-2013</Date>
@@ -107,7 +107,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-                
+        
         <Update release="3">
             <Date>05-22-2013</Date>
             <Version>4.7.0</Version>
@@ -115,7 +115,7 @@
             <Name>Justin Krehel</Name>
             <Email>justin@solusos.com</Email>
         </Update>
-                
+        
         <Update release="2">
             <Date>04-22-2013</Date>
             <Version>4.7.0</Version>
@@ -123,7 +123,7 @@
             <Name>Justin Krehel</Name>
             <Email>justin@solusos.com</Email>
         </Update>
-
+        
         <Update release="1">
             <Date>04-22-2013</Date>
             <Version>4.7.0</Version>
@@ -131,5 +131,6 @@
             <Name>Kim Vande Walle</Name>
             <Email>vande.walle.k@gmail.com</Email>
         </Update>
-    </History>  
+    </History>
+     
 </PISI>

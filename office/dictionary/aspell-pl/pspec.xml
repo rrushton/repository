@@ -19,7 +19,7 @@
             <Dependency>aspell</Dependency>
         </BuildDependencies>
     </Source>
-
+    
     <Package>
         <Name>aspell-pl</Name>
         <RuntimeDependencies>
@@ -30,7 +30,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-  
+    
     <History>
         <Update release="1">
             <Date>04-30-2013</Date>
@@ -39,5 +39,6 @@
             <Name>Justin Krehel</Name>
             <Email>justin@solusos.com</Email>
         </Update>
-    </History>  
+    </History>
+     
 </PISI>

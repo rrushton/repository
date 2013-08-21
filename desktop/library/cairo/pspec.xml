@@ -1,113 +1,114 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-  <Source>
-    <Name>cairo</Name>
-	<Homepage>http://www.cairographics.org</Homepage>
-    <Packager>
-        <Name>Justin Krehel</Name>
-        <Email>justin@solusos.com</Email>
-	</Packager>
-	<Summary>cairo (2D graphics library)</Summary>
-	<Description> Cairo is a 2D graphics library with support for multiple output devices such as X, Quartz, Win32, image buffers, PS, PDF, and SVG.</Description>
-	<License>LGPL</License>
-	<Archive sha1sum="9106ab09b2e7b9f90521b18dd4a7e9577eba6c15" type="tarxz">http://cairographics.org/releases/cairo-1.12.14.tar.xz</Archive>
-	<BuildDependencies>
-		<Dependency>zlib-devel</Dependency>
-		<Dependency>libx11-devel</Dependency>
-		<Dependency>libxau-devel</Dependency>
-		<Dependency>libxdmcp-devel</Dependency>
-		<Dependency>libxrender-devel</Dependency>
-		<Dependency>libxcb-devel</Dependency>
-		<Dependency>libpng-devel</Dependency>
-		<Dependency>libxext-devel</Dependency>
-		<Dependency>pixman-devel</Dependency>
-	</BuildDependencies>	
-  </Source>
-
-  <Package>
-    <Name>libcairo</Name>
-	<Files>
-		<Path fileType="executable">/usr/bin</Path>
-		<Path fileType="library">/usr/lib/libcairo*.so*</Path>
-		<Path fileType="library">/usr/lib/cairo/libcairo*.so*</Path>
-	</Files>
-	<RuntimeDependencies>
-		<Dependency>bzip2</Dependency>
-		<Dependency>zlib</Dependency>
-		<Dependency>freetype2</Dependency>
-		<Dependency>libx11</Dependency>
-		<Dependency>libxau</Dependency>
-		<Dependency>fontconfig</Dependency>
-		<Dependency>libxdmcp</Dependency>
-		<Dependency>libxrender</Dependency>
-		<Dependency>libxcb</Dependency>
-		<Dependency>libpng</Dependency>
-		<Dependency>libxext</Dependency>
-		<Dependency>expat</Dependency>
-		<Dependency>pixman</Dependency>		
-	</RuntimeDependencies>
-    <Replaces>
-        <Package>cairo</Package>
-    </Replaces>
-  </Package>
-
-  <Package>
-  	<Name>libcairo-devel</Name>
-  	<Summary>Development files for cairo</Summary>
-  	<Description>Development files for cairo</Description>
-  	<Files>	
-  		<Path fileType="header">/usr/include</Path>
-  		<Path fileType="library">/usr/lib/*.a</Path>
-		<Path fileType="data">/usr/lib/pkgconfig</Path>
-		<Path fileType="doc">/usr/share/gtk-doc</Path>
-  	</Files>
-  	<RuntimeDependencies>
-  		<Dependency release="current">libcairo</Dependency>
-        <Dependency>pixman-devel</Dependency>
-        <Dependency>libpng-devel</Dependency>
-        <Dependency>libxcb-devel</Dependency>
-        <Dependency>libxau-devel</Dependency>
-        <Dependency>libxrender-devel</Dependency>
-        <Dependency>libxext-devel</Dependency>
-	</RuntimeDependencies>
-    <Replaces>
-        <Package>cairo-devel</Package>
-    </Replaces>
-  </Package>
-  
-  <History>
- 	<Update release="4">
- 		<Date>05-30-2013</Date>
- 		<Version>1.12.14</Version>
- 		<Comment>Rename to libcairo*, add dependencies for -devel chain</Comment>
- 		<Name>Ikey Doherty</Name>
- 		<Email>ikey@solusos.com</Email>
- 	</Update>
-          
- 	<Update release="3">
- 		<Date>04-07-2013</Date>
- 		<Version>1.12.14</Version>
- 		<Comment>Add binary dependencies</Comment>
- 		<Name>Ikey Doherty</Name>
- 		<Email>ikey@solusos.com</Email>
- 	</Update>
- 		  
- 	<Update release="2">
- 		<Date>03-21-2013</Date>
- 		<Version>1.12.14</Version>
- 		<Comment>Split -devel package</Comment>
- 		<Name>Justin Krehel</Name>
- 		<Email>justin@solusos.com</Email>
- 	</Update>
- 
-    <Update release="1">
-		<Date>03-21-2013</Date>
-		<Version>1.12.14</Version>
-		<Comment>Add cairo to repositories</Comment>
-		<Name>Justin Krehel</Name>
-		<Email>justin@solusos.com</Email>
-	</Update>
-  </History>
-		
+    <Source>
+        <Name>cairo</Name>
+        <Homepage>http://www.cairographics.org</Homepage>
+        <Packager>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Packager>
+        <Summary>cairo (2D graphics library)</Summary>
+        <Description> Cairo is a 2D graphics library with support for multiple output devices such as X, Quartz, Win32, image buffers, PS, PDF, and SVG.</Description>
+        <License>LGPL</License>
+        <Archive sha1sum="9106ab09b2e7b9f90521b18dd4a7e9577eba6c15" type="tarxz">http://cairographics.org/releases/cairo-1.12.14.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+        </BuildDependencies>
+        	
+    </Source>
+    
+    <Package>
+        <Name>libcairo</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/libcairo*.so*</Path>
+            <Path fileType="library">/usr/lib/cairo/libcairo*.so*</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>bzip2</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>pixman</Dependency>		
+        </RuntimeDependencies>
+        <Replaces>
+            <Package>cairo</Package>
+        </Replaces>
+    </Package>
+    
+    <Package>
+        <Name>libcairo-devel</Name>
+        <Summary>Development files for cairo</Summary>
+        <Description>Development files for cairo</Description>
+        <Files>	
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/*.a</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libcairo</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+        </RuntimeDependencies>
+        <Replaces>
+            <Package>cairo-devel</Package>
+        </Replaces>
+    </Package>
+    
+    <History>
+        <Update release="4">
+            <Date>05-30-2013</Date>
+            <Version>1.12.14</Version>
+            <Comment>Rename to libcairo*, add dependencies for -devel chain</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="3">
+            <Date>04-07-2013</Date>
+            <Version>1.12.14</Version>
+            <Comment>Add binary dependencies</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="2">
+            <Date>03-21-2013</Date>
+            <Version>1.12.14</Version>
+            <Comment>Split -devel package</Comment>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>03-21-2013</Date>
+            <Version>1.12.14</Version>
+            <Comment>Add cairo to repositories</Comment>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Update>
+    </History>
+    
 </PISI>

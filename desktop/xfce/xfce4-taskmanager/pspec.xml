@@ -12,7 +12,7 @@
         <Description>Graphical task manager for the Xfce Desktop</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="835e408bdb7c0d53f63448e6a0d1a0eeb1e7b358" type="tarbz2">http://archive.xfce.org/src/apps/xfce4-taskmanager/1.0/xfce4-taskmanager-1.0.0.tar.bz2</Archive>
-
+        
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>harfbuzz-devel</Dependency>
@@ -46,7 +46,7 @@
             <Dependency>libsm-devel</Dependency>
         </BuildDependencies>
     </Source>
-
+    
     <Package>
         <Name>xfce4-taskmanager</Name>
         <Files>
@@ -97,7 +97,7 @@
             <Dependency>libsm</Dependency>
         </RuntimeDependencies>
     </Package>
-
+    
     <History>
         <Update release="1">
             <Date>08-20-2013</Date>
@@ -106,6 +106,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-    </History>	
+    </History>
+    	
 </PISI>
-    
+

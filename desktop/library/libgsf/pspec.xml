@@ -18,7 +18,7 @@
             <Dependency>libxml2-devel</Dependency>
         </BuildDependencies>
     </Source>
-
+    
     <Package>
         <Name>libgsf</Name>
         <RuntimeDependencies>
@@ -33,7 +33,7 @@
             <Path fileType="data">/usr/share/thumbnailers</Path>
         </Files>
     </Package>
-
+    
     <Package>
         <Name>libgsf-devel</Name>
         <Summary>Development and documentation files for libgsf</Summary>
@@ -47,7 +47,7 @@
             <Dependency release="current">libgsf</Dependency>
         </RuntimeDependencies>
     </Package>
-
+    
     <History>
         <Update release="1">
             <Date>06-24-2013</Date>
@@ -56,6 +56,7 @@
             <Name>Justin Krehel</Name>
             <Email>justin@solusos.com</Email>
         </Update>
-    </History>  
+    </History>
+     
 </PISI>
-    
+

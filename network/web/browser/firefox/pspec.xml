@@ -1,22 +1,22 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>firefox</Name>
+    <Source>
+        <Name>firefox</Name>
         <Homepage>http://www.mozilla.org</Homepage>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>Firefox web browser</Summary>
-		<Description>Firefox web browser</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="db2d5b028b6ea95b5f006b46e153f50f7a52bf80" type="tarbz2">http://releases.mozilla.org/pub/mozilla.org/firefox/releases/22.0/source/firefox-22.0.source.tar.bz2</Archive>
-
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>Firefox web browser</Summary>
+        <Description>Firefox web browser</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="db2d5b028b6ea95b5f006b46e153f50f7a52bf80" type="tarbz2">http://releases.mozilla.org/pub/mozilla.org/firefox/releases/22.0/source/firefox-22.0.source.tar.bz2</Archive>
+        
         <AdditionalFiles>
             <AdditionalFile target="mozconfig">config</AdditionalFile>
         </AdditionalFiles>
-
+        
         <!-- Temporary //-->
         <BuildDependencies>
             <Dependency>libevent-devel</Dependency>
@@ -26,24 +26,25 @@
             <Dependency>yasm</Dependency>
             <Dependency>alsa-lib-devel</Dependency>
         </BuildDependencies>
-
-	</Source>
-
-	<Package>
-		<Name>firefox</Name>
-		<Files>
-			<Path fileType="*">/</Path>
-		</Files>
-	</Package>
-  
-	<History>
-		<Update release="1">
-			<Date>08-10-2013</Date>
-			<Version>22.0</Version>
-			<Comment>Add firefox to repositories - TESTING ONLY</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+        
+    </Source>
     
+    <Package>
+        <Name>firefox</Name>
+        <Files>
+            <Path fileType="*">/</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>08-10-2013</Date>
+            <Version>22.0</Version>
+            <Comment>Add firefox to repositories - TESTING ONLY</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

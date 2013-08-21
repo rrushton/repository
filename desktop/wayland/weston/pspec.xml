@@ -1,16 +1,16 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>weston</Name>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>Add summary</Summary>
-		<Description>Add description</Description>
-		<License>MIT</License>
-		<Archive sha1sum="5239afe177dadbded3c0018b55dd1045be5f84b2" type="tarxz">http://wayland.freedesktop.org/releases/weston-1.1.1.tar.xz</Archive>
+    <Source>
+        <Name>weston</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>Add summary</Summary>
+        <Description>Add description</Description>
+        <License>MIT</License>
+        <Archive sha1sum="5239afe177dadbded3c0018b55dd1045be5f84b2" type="tarxz">http://wayland.freedesktop.org/releases/weston-1.1.1.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency>libx11-devel</Dependency>
@@ -36,18 +36,18 @@
             <Dependency>libsm-devel</Dependency>
             <Dependency>libxkbcommon-devel</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>weston</Name>
-		<Files>
-			<Path fileType="executable">/usr/bin</Path>
+    </Source>
+    
+    <Package>
+        <Name>weston</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib/weston</Path>
             <Path fileType="executable">/usr/libexec</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="data">/usr/share/weston</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency>libx11</Dependency>
             <Dependency>mesalib</Dependency>
@@ -78,29 +78,30 @@
             <Dependency>libsm</Dependency>
             <Dependency>libxkbcommon</Dependency>
         </RuntimeDependencies>
-	</Package>
-
-	<Package>
-		<Name>weston-devel</Name>
+    </Package>
+    
+    <Package>
+        <Name>weston-devel</Name>
         <Summary>Development files for weston</Summary>
         <Description>Development files for weston</Description>
-		<Files>
-			<Path fileType="header">/usr/include</Path>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency release="current">weston</Dependency>
         </RuntimeDependencies>
-	</Package>
-      
-	<History>
-		<Update release="1">
-			<Date>06-24-2013</Date>
-			<Version>1.1.1</Version>
-			<Comment>Add weston to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+    </Package>
     
+    <History>
+        <Update release="1">
+            <Date>06-24-2013</Date>
+            <Version>1.1.1</Version>
+            <Comment>Add weston to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

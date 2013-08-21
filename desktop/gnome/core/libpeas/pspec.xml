@@ -1,16 +1,16 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>libpeas</Name>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>Add summary</Summary>
-		<Description>Add description</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="282d3bb1b26a26efc0ba429467de03de2a71a4ff" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/libpeas/1.8/libpeas-1.8.0.tar.xz</Archive>
+    <Source>
+        <Name>libpeas</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>Add summary</Summary>
+        <Description>Add description</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="282d3bb1b26a26efc0ba429467de03de2a71a4ff" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/libpeas/1.8/libpeas-1.8.0.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency>python-gobject-devel</Dependency>
@@ -47,12 +47,12 @@
             <Dependency>glib2-devel</Dependency>
             <Dependency>libsm-devel</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>libpeas</Name>
-		<Files>
-			<Path fileType="executable">/usr/bin</Path>
+    </Source>
+    
+    <Package>
+        <Name>libpeas</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib/lib*.so*</Path>
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
@@ -60,7 +60,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="data">/usr/share/icons</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency>libgjs</Dependency>
             <Dependency>libx11</Dependency>
@@ -104,41 +104,42 @@
             <Dependency>libsm</Dependency>
             <Dependency>at-spi2-atk</Dependency>
         </RuntimeDependencies>
-	</Package>
-
-	<Package>
-		<Name>libpeas-devel</Name>
+    </Package>
+    
+    <Package>
+        <Name>libpeas-devel</Name>
         <Summary>Development files for libpeas</Summary>
         <Description>Development files for libpeas</Description>
-		<Files>
-			<Path fileType="header">/usr/include</Path>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency release="current">libpeas</Dependency>
         </RuntimeDependencies>
-	</Package>
-
-	<Package>
-		<Name>libpeas-docs</Name>
+    </Package>
+    
+    <Package>
+        <Name>libpeas-docs</Name>
         <Summary>API Documentation for libpeas</Summary>
         <Description>API Documentation for libpeas</Description>
-		<Files>
-			<Path fileType="header">/usr/share/gtk-doc</Path>
-		</Files>
+        <Files>
+            <Path fileType="header">/usr/share/gtk-doc</Path>
+        </Files>
         <RuntimeDependencies>
             <Dependency release="current">libpeas-devel</Dependency>
         </RuntimeDependencies>
-	</Package>
+    </Package>
     
-	<History>
-		<Update release="1">
-			<Date>06-06-2013</Date>
-			<Version>1.8.0</Version>
-			<Comment>Add libpeas to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
+    <History>
+        <Update release="1">
+            <Date>06-06-2013</Date>
+            <Version>1.8.0</Version>
+            <Comment>Add libpeas to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
 </PISI>
-    
+

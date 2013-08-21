@@ -1,388 +1,391 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-  <Source>
-    <Name>gtk3</Name>
-	<Homepage>http://www.gnome.org</Homepage>
-    <Packager>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-	</Packager>
-	<Summary>The GTK+ 3 package contains the libraries used for creating graphical user interfaces for applications.</Summary>
-	<Description>The GTK+ 3 package contains the libraries used for creating graphical user interfaces for applications. </Description>
-	<License>GPLv3+</License>
-	<Archive sha1sum="0970e6610b0df7e0e4fb0dac1f647a344d6295c5" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gtk+/3.9/gtk+-3.9.6.tar.xz</Archive>
-	
-	<BuildDependencies>
-        <Dependency versionFrom="1.37.1">gobject-introspection-devel</Dependency>
-        <Dependency>wayland-devel</Dependency>
-		<Dependency>zlib-devel</Dependency>
-		<Dependency>libcairo-devel</Dependency>
-		<Dependency>harfbuzz-devel</Dependency>
-		<Dependency>libxcursor-devel</Dependency>
-		<Dependency>libxcb-devel</Dependency>
-		<Dependency>libxau-devel</Dependency>
-		<Dependency>libicu-devel</Dependency>
-		<Dependency>libxdmcp-devel</Dependency>
-		<Dependency>libxi-devel</Dependency>
-		<Dependency>libpcre-devel</Dependency>
-		<Dependency>gdk-pixbuf-devel</Dependency>
-		<Dependency>libxinerama-devel</Dependency>
-		<Dependency>libpng-devel</Dependency>
-		<Dependency>libxdamage-devel</Dependency>
-		<Dependency>libxext-devel</Dependency>
-		<Dependency>libxrandr-devel</Dependency>
-		<Dependency>pixman-devel</Dependency>
-		<Dependency>pango-devel</Dependency>
-		<Dependency>libxfixes-devel</Dependency>
-		<Dependency>libx11-devel</Dependency>
-		<Dependency>libxcomposite-devel</Dependency>
-		<Dependency>libxrender-devel</Dependency>
-		<Dependency versionFrom="2.37.3">glib2-devel</Dependency>		
-        <Dependency>libgtk-2</Dependency>
-        <Dependency releaseFrom="3">libatk-devel</Dependency>
-        <Dependency>at-spi2-atk-devel</Dependency>
-        <Dependency>at-spi2</Dependency>
-        <Dependency>libxi-devel</Dependency>
-        <Dependency>xinput</Dependency>
-	</BuildDependencies>
-    
-    <Patches>
-        <!-- Expose missing function in gdk_wayland library //-->
-        <Patch level="1">expose_custom_surface.patch</Patch>
-    </Patches>
-  </Source>
-
-  <Package>
-    <Name>libgtk-3</Name>
-	<Files>
-		<Path fileType="executable">/usr/bin/gtk-*</Path>
-		<Path fileType="library">/usr/lib/gtk-3.0</Path>
-		<Path fileType="data">/usr/lib/girepository-1.0</Path>
-		<Path fileType="library">/usr/lib/lib*.so*</Path>
-		<Path fileType="data">/usr/share/gir-1.0</Path>
-		<Path fileType="data">/usr/share/glib-2.0</Path>
-		<Path fileType="data">/usr/share/gtk-3.0/gtkbuilder.rng</Path>
-		<Path fileType="locale">/usr/share/locale</Path>
-		<Path fileType="man">/usr/share/man</Path>
-		<Path fileType="data">/usr/share/themes</Path>
-		<Path fileType="config">/etc/gtk-3.0</Path>
-	</Files>
-	<Provides>
-		<COMAR script="package.py">System.Package</COMAR>
-	</Provides>
-	<RuntimeDependencies>
-        <Dependency versionFrom="1.37.1">gobject-introspection</Dependency>
-        <Dependency>libxkbcommon</Dependency>
-        <Dependency>wayland</Dependency>
-		<Dependency>zlib</Dependency>
-		<Dependency>libcairo</Dependency>
-		<Dependency>expat</Dependency>
-		<Dependency>harfbuzz</Dependency>
-		<Dependency>libxcursor</Dependency>
-		<Dependency>libstdc++</Dependency>
-		<Dependency>libgcc</Dependency>
-		<Dependency>libxcb</Dependency>
-		<Dependency>libxau</Dependency>
-		<Dependency>libicu</Dependency>
-		<Dependency>bzip2</Dependency>
-		<Dependency>libxdmcp</Dependency>
-		<Dependency>libxi</Dependency>
-		<Dependency>libpcre</Dependency>
-		<Dependency>fontconfig</Dependency>
-		<Dependency>gdk-pixbuf</Dependency>
-		<Dependency>libxinerama</Dependency>
-		<Dependency>libpng</Dependency>
-		<Dependency>libxdamage</Dependency>
-		<Dependency>libxext</Dependency>
-		<Dependency>libxrandr</Dependency>
-		<Dependency>pixman</Dependency>
-		<Dependency>pango</Dependency>
-		<Dependency>libxfixes</Dependency>
-		<Dependency>freetype2</Dependency>
-		<Dependency>libx11</Dependency>
-		<Dependency>libxcomposite</Dependency>
-		<Dependency>libxrender</Dependency>
-        <Dependency versionFrom="2.37.3">glib2</Dependency>
-        <Dependency releaseFrom="3">libatk</Dependency>
-        <Dependency>at-spi2-atk</Dependency>
-        <Dependency>at-spi2</Dependency>
-	</RuntimeDependencies>
-	
-  </Package>
-
-  <Package>
-    <Name>libgtk-3-devel</Name>
-    <Summary>Development files for libgtk-3</Summary>
-    <Description>Development files for libgtk-3</Description>
-	<Files>
-		<Path fileType="header">/usr/include</Path>
-		<Path fileType="data">/usr/lib/pkgconfig</Path>
-		<Path fileType="data">/usr/share/aclocal</Path>
-	</Files>
-	<RuntimeDependencies>
-		<Dependency release="current">libgtk-3</Dependency>
+    <Source>
+        <Name>gtk3</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>The GTK+ 3 package contains the libraries used for creating graphical user interfaces for applications.</Summary>
+        <Description>The GTK+ 3 package contains the libraries used for creating graphical user interfaces for applications. </Description>
+        <License>GPLv3+</License>
+        <Archive sha1sum="0970e6610b0df7e0e4fb0dac1f647a344d6295c5" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gtk+/3.9/gtk+-3.9.6.tar.xz</Archive>
         
-		<Dependency>zlib-devel</Dependency>
-		<Dependency>libcairo-devel</Dependency>
-		<Dependency>harfbuzz-devel</Dependency>
-		<Dependency>libxcursor-devel</Dependency>
-		<Dependency>libxcb-devel</Dependency>
-		<Dependency>libxau-devel</Dependency>
-		<Dependency>libicu-devel</Dependency>
-		<Dependency>libxdmcp-devel</Dependency>
-		<Dependency>libxi-devel</Dependency>
-		<Dependency>libpcre-devel</Dependency>
-		<Dependency>gdk-pixbuf-devel</Dependency>
-		<Dependency>libxinerama-devel</Dependency>
-		<Dependency>libpng-devel</Dependency>
-		<Dependency>libxdamage-devel</Dependency>
-		<Dependency>libxext-devel</Dependency>
-		<Dependency>libxrandr-devel</Dependency>
-		<Dependency>pixman-devel</Dependency>
-		<Dependency>pango-devel</Dependency>
-		<Dependency>libxfixes-devel</Dependency>
-		<Dependency>libx11-devel</Dependency>
-		<Dependency>libxcomposite-devel</Dependency>
-		<Dependency>libxrender-devel</Dependency>
-        <Dependency>libatk-devel</Dependency>
-        <Dependency>at-spi2-atk-devel</Dependency>
+        <BuildDependencies>
+            <Dependency versionFrom="1.37.1">gobject-introspection-devel</Dependency>
+            <Dependency>wayland-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>harfbuzz-devel</Dependency>
+            <Dependency>libxcursor-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libicu-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>libxi-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libxinerama-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libxdamage-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>libxrandr-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libxfixes-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libxcomposite-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency versionFrom="2.37.3">glib2-devel</Dependency>		
+            <Dependency>libgtk-2</Dependency>
+            <Dependency releaseFrom="3">libatk-devel</Dependency>
+            <Dependency>at-spi2-atk-devel</Dependency>
+            <Dependency>at-spi2</Dependency>
+            <Dependency>libxi-devel</Dependency>
+            <Dependency>xinput</Dependency>
+        </BuildDependencies>
         
-	</RuntimeDependencies>
-  </Package>
+        <Patches>
+            <!-- Expose missing function in gdk_wayland library //-->
+            <Patch level="1">expose_custom_surface.patch</Patch>
+        </Patches>
+    </Source>
     
-  <Package>
-    <Name>libgtk-3-docs</Name>
-    <Summary>API Documentation for libgtk-3</Summary>
-    <Description>API Documentation for libgtk-3</Description>
-	<Files>
-		<Path fileType="doc">/usr/share/doc</Path>
-		<Path fileType="doc">/usr/share/gtk-doc</Path>
-	</Files>
-	<RuntimeDependencies>
-		<Dependency release="current">libgtk-3</Dependency>
-	</RuntimeDependencies>	
-  </Package>
-
-  <Package>
-    <Name>gtk3-demo</Name>
-    <Summary>Demonstration of GTK3</Summary>
-    <Description>Demonstration of GTK3</Description>
-    <IsA>app:gui</IsA>
-	<Files>
-		<Path fileType="executable">/usr/bin/gtk3-demo*</Path>
-		<Path fileType="data">/usr/share/gtk-3.0/demo</Path>
-	</Files>
-	<RuntimeDependencies>
-		<Dependency>zlib</Dependency>
-		<Dependency>libcairo</Dependency>
-		<Dependency>expat</Dependency>
-		<Dependency>harfbuzz</Dependency>
-		<Dependency>libxcursor</Dependency>
-		<Dependency>libstdc++</Dependency>
-		<Dependency>util-linux</Dependency>
-		<Dependency>libgcc</Dependency>
-		<Dependency>libxcb</Dependency>
-		<Dependency>libxau</Dependency>
-		<Dependency>libicu</Dependency>
-		<Dependency>bzip2</Dependency>
-		<Dependency>libxdmcp</Dependency>
-		<Dependency>libxi</Dependency>
-		<Dependency>libpcre</Dependency>
-		<Dependency>fontconfig</Dependency>
-		<Dependency>libice</Dependency>
-		<Dependency>gdk-pixbuf</Dependency>
-		<Dependency>libxinerama</Dependency>
-		<Dependency>libatk</Dependency>
-		<Dependency>libpng</Dependency>
-		<Dependency>libxdamage</Dependency>
-		<Dependency>libxext</Dependency>
-		<Dependency>libxrandr</Dependency>
-		<Dependency>pixman</Dependency>
-		<Dependency>pango</Dependency>
-		<Dependency release="current">libgtk-3</Dependency>
-		<Dependency>libxfixes</Dependency>
-		<Dependency>at-spi2</Dependency>
-		<Dependency>freetype2</Dependency>
-		<Dependency>dbus</Dependency>
-		<Dependency>libx11</Dependency>
-		<Dependency>libxcomposite</Dependency>
-		<Dependency>libxrender</Dependency>
-		<Dependency>glib2</Dependency>
-		<Dependency>libsm</Dependency>
-		<Dependency>at-spi2-atk</Dependency>
-	</RuntimeDependencies>	
-  </Package>
-
-  <Package>
-    <Name>the-widget-factory-3</Name>
-    <Summary>The Widget Factory for GTK3</Summary>
-    <Description>The Widget Factory for GTK3</Description>
-    <IsA>app:gui</IsA>
-	<Files>
-		<Path fileType="executable">/usr/bin/gtk3-widget-factory</Path>
-	</Files>
-	<RuntimeDependencies>
-		<Dependency>zlib</Dependency>
-		<Dependency>libcairo</Dependency>
-		<Dependency>expat</Dependency>
-		<Dependency>harfbuzz</Dependency>
-		<Dependency>libxcursor</Dependency>
-		<Dependency>libstdc++</Dependency>
-		<Dependency>util-linux</Dependency>
-		<Dependency>libgcc</Dependency>
-		<Dependency>libxcb</Dependency>
-		<Dependency>libxau</Dependency>
-		<Dependency>libicu</Dependency>
-		<Dependency>bzip2</Dependency>
-		<Dependency>libxdmcp</Dependency>
-		<Dependency>libxi</Dependency>
-		<Dependency>libpcre</Dependency>
-		<Dependency>fontconfig</Dependency>
-		<Dependency>libice</Dependency>
-		<Dependency>gdk-pixbuf</Dependency>
-		<Dependency>libxinerama</Dependency>
-		<Dependency>libatk</Dependency>
-		<Dependency>libpng</Dependency>
-		<Dependency>libxdamage</Dependency>
-		<Dependency>libxext</Dependency>
-		<Dependency>libxrandr</Dependency>
-		<Dependency>pixman</Dependency>
-		<Dependency>pango</Dependency>
-		<Dependency release="current">libgtk-3</Dependency>
-		<Dependency>libxfixes</Dependency>
-		<Dependency>at-spi2</Dependency>
-		<Dependency>freetype2</Dependency>
-		<Dependency>dbus</Dependency>
-		<Dependency>libx11</Dependency>
-		<Dependency>libxcomposite</Dependency>
-		<Dependency>libxrender</Dependency>
-		<Dependency>glib2</Dependency>
-		<Dependency>libsm</Dependency>
-		<Dependency>at-spi2-atk</Dependency>
-	</RuntimeDependencies>	
-  </Package>
-          
-  <History>
-    <Update release="15">
-        <Date>08-08-2013</Date>
-        <Version>3.9.6</Version>
-        <Comment>Remove dependency on packagekit</Comment>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-    </Update>
-
-    <Update release="14">
-        <Date>07-05-2013</Date>
-        <Version>3.9.6</Version>
-        <Comment>Patch gdkwayland headers to export all functions</Comment>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-    </Update>
+    <Package>
+        <Name>libgtk-3</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin/gtk-*</Path>
+            <Path fileType="library">/usr/lib/gtk-3.0</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0</Path>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/gtk-3.0/gtkbuilder.rng</Path>
+            <Path fileType="locale">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/themes</Path>
+            <Path fileType="config">/etc/gtk-3.0</Path>
+        </Files>
+        <Provides>
+            <COMAR script="package.py">System.Package</COMAR>
+        </Provides>
+        <RuntimeDependencies>
+            <Dependency versionFrom="1.37.1">gobject-introspection</Dependency>
+            <Dependency>libxkbcommon</Dependency>
+            <Dependency>wayland</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>libxcursor</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>libicu</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>libxi</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxinerama</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libxdamage</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libxrandr</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libxfixes</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libxcomposite</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency versionFrom="2.37.3">glib2</Dependency>
+            <Dependency releaseFrom="3">libatk</Dependency>
+            <Dependency>at-spi2-atk</Dependency>
+            <Dependency>at-spi2</Dependency>
+        </RuntimeDependencies>
+        
+    </Package>
     
-    <Update release="13">
-        <Date>06-24-2013</Date>
-        <Version>3.9.6</Version>
-        <Comment>Upgrade to 3.9.6 as part of GNOME3.8 migration</Comment>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-    </Update>
+    <Package>
+        <Name>libgtk-3-devel</Name>
+        <Summary>Development files for libgtk-3</Summary>
+        <Description>Development files for libgtk-3</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libgtk-3</Dependency>
+            
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>harfbuzz-devel</Dependency>
+            <Dependency>libxcursor-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libicu-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>libxi-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libxinerama-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libxdamage-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>libxrandr-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libxfixes-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libxcomposite-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency>libatk-devel</Dependency>
+            <Dependency>at-spi2-atk-devel</Dependency>
+            
+        </RuntimeDependencies>
+    </Package>
     
-    <Update release="12">
-        <Date>06-24-2013</Date>
-        <Version>3.8.2</Version>
-        <Comment>Add missing runtime dep</Comment>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-    </Update>
+    <Package>
+        <Name>libgtk-3-docs</Name>
+        <Summary>API Documentation for libgtk-3</Summary>
+        <Description>API Documentation for libgtk-3</Description>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libgtk-3</Dependency>
+        </RuntimeDependencies>
+        	
+    </Package>
     
-    <Update release="11">
-        <Date>06-24-2013</Date>
-        <Version>3.8.2</Version>
-        <Comment>Add Wayland support</Comment>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-    </Update>
+    <Package>
+        <Name>gtk3-demo</Name>
+        <Summary>Demonstration of GTK3</Summary>
+        <Description>Demonstration of GTK3</Description>
+        <IsA>app:gui</IsA>
+        <Files>
+            <Path fileType="executable">/usr/bin/gtk3-demo*</Path>
+            <Path fileType="data">/usr/share/gtk-3.0/demo</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>libxcursor</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>libicu</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>libxi</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxinerama</Dependency>
+            <Dependency>libatk</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libxdamage</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libxrandr</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency release="current">libgtk-3</Dependency>
+            <Dependency>libxfixes</Dependency>
+            <Dependency>at-spi2</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libxcomposite</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libsm</Dependency>
+            <Dependency>at-spi2-atk</Dependency>
+        </RuntimeDependencies>
+        	
+    </Package>
     
-    <Update release="10">
-        <Date>06-19-2013</Date>
-        <Version>3.8.2</Version>
-        <Comment>Update to 3.8.2 release</Comment>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-    </Update>
+    <Package>
+        <Name>the-widget-factory-3</Name>
+        <Summary>The Widget Factory for GTK3</Summary>
+        <Description>The Widget Factory for GTK3</Description>
+        <IsA>app:gui</IsA>
+        <Files>
+            <Path fileType="executable">/usr/bin/gtk3-widget-factory</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>libxcursor</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>libicu</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>libxi</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxinerama</Dependency>
+            <Dependency>libatk</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libxdamage</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libxrandr</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency release="current">libgtk-3</Dependency>
+            <Dependency>libxfixes</Dependency>
+            <Dependency>at-spi2</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libxcomposite</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libsm</Dependency>
+            <Dependency>at-spi2-atk</Dependency>
+        </RuntimeDependencies>
+        	
+    </Package>
     
-    <Update release="9">
-        <Date>05-31-2013</Date>
-        <Version>3.6.4</Version>
-        <Comment>Add missing deps</Comment>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-    </Update>
+    <History>
+        <Update release="15">
+            <Date>08-08-2013</Date>
+            <Version>3.9.6</Version>
+            <Comment>Remove dependency on packagekit</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="14">
+            <Date>07-05-2013</Date>
+            <Version>3.9.6</Version>
+            <Comment>Patch gdkwayland headers to export all functions</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="13">
+            <Date>06-24-2013</Date>
+            <Version>3.9.6</Version>
+            <Comment>Upgrade to 3.9.6 as part of GNOME3.8 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="12">
+            <Date>06-24-2013</Date>
+            <Version>3.8.2</Version>
+            <Comment>Add missing runtime dep</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="11">
+            <Date>06-24-2013</Date>
+            <Version>3.8.2</Version>
+            <Comment>Add Wayland support</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="10">
+            <Date>06-19-2013</Date>
+            <Version>3.8.2</Version>
+            <Comment>Update to 3.8.2 release</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="9">
+            <Date>05-31-2013</Date>
+            <Version>3.6.4</Version>
+            <Comment>Add missing deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="8">
+            <Date>05-30-2013</Date>
+            <Version>3.6.4</Version>
+            <Comment>Depend on new libcairo* packages</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="7">
+            <Date>04-27-2013</Date>
+            <Version>3.6.4</Version>
+            <Comment>Added libatk and at-spi2 build dependencies</Comment>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Update>
+        
+        <Update release="6">
+            <Date>04-08-2013</Date>
+            <Version>3.6.4</Version>
+            <Comment>Add binary dependencies for gtk3-demo and the-widget-factory-3</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="5">
+            <Date>04-08-2013</Date>
+            <Version>3.6.4</Version>
+            <Comment>Depend on gtk2, allowing both to co-exist peacefully</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="4">
+            <Date>04-07-2013</Date>
+            <Version>3.6.4</Version>
+            <Comment>Add binary dependencies</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="3">
+            <Date>04-07-2013</Date>
+            <Version>3.6.4</Version>
+            <Comment>Add postInstall to update the immodules cache</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="2">
+            <Date>04-07-2013</Date>
+            <Version>3.6.4</Version>
+            <Comment>Split multiple packages</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>04-07-2013</Date>
+            <Version>3.6.4</Version>
+            <Comment>Add gtk3 to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
     
-    <Update release="8">
-        <Date>05-30-2013</Date>
-        <Version>3.6.4</Version>
-        <Comment>Depend on new libcairo* packages</Comment>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-    </Update>
-          
-    <Update release="7">
-        <Date>04-27-2013</Date>
-        <Version>3.6.4</Version>
-        <Comment>Added libatk and at-spi2 build dependencies</Comment>
-        <Name>Justin Krehel</Name>
-        <Email>justin@solusos.com</Email>
-    </Update>
-  
-    <Update release="6">
-		<Date>04-08-2013</Date>
-		<Version>3.6.4</Version>
-		<Comment>Add binary dependencies for gtk3-demo and the-widget-factory-3</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-		  
-    <Update release="5">
-		<Date>04-08-2013</Date>
-		<Version>3.6.4</Version>
-		<Comment>Depend on gtk2, allowing both to co-exist peacefully</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-		  
-    <Update release="4">
-		<Date>04-07-2013</Date>
-		<Version>3.6.4</Version>
-		<Comment>Add binary dependencies</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-		  
-    <Update release="3">
-		<Date>04-07-2013</Date>
-		<Version>3.6.4</Version>
-		<Comment>Add postInstall to update the immodules cache</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-		  
-    <Update release="2">
-		<Date>04-07-2013</Date>
-		<Version>3.6.4</Version>
-		<Comment>Split multiple packages</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-		  		  		  
-    <Update release="1">
-		<Date>04-07-2013</Date>
-		<Version>3.6.4</Version>
-		<Comment>Add gtk3 to repositories</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-  </History>
-		
 </PISI>

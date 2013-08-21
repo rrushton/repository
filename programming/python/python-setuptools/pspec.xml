@@ -1,37 +1,38 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
+    <Source>
         <Name>python-setuptools</Name>
         <Homepage>https://pypi.python.org/pypi/setuptools</Homepage>
-		<Packager>
-			<Name>Justin Krehel</Name>
-			<Email>justin@solusos.com</Email>
-		</Packager>
-		<Summary>Easily download, build, install, upgrade, and uninstall Python packages</Summary>
-		<Description>Setuptools allows the easy download, build, install, upgrade, and uninstallation of Python packages.</Description>
+        <Packager>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Packager>
+        <Summary>Easily download, build, install, upgrade, and uninstall Python packages</Summary>
+        <Description>Setuptools allows the easy download, build, install, upgrade, and uninstallation of Python packages.</Description>
         <License>PSF</License>
         <License>ZPL</License>
-		<Archive sha1sum="1586a68e44940b124cdb34347fda23fb035714ff" type="targz">https://pypi.python.org/packages/source/s/setuptools/setuptools-0.7.4.tar.gz</Archive>
-	</Source>
-
-	<Package>
-		<Name>python-setuptools</Name>
-		<Files>
+        <Archive sha1sum="1586a68e44940b124cdb34347fda23fb035714ff" type="targz">https://pypi.python.org/packages/source/s/setuptools/setuptools-0.7.4.tar.gz</Archive>
+    </Source>
+    
+    <Package>
+        <Name>python-setuptools</Name>
+        <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="data">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-		</Files>
-	</Package>
-  
-	<History>
-		<Update release="1">
-			<Date>06-20-2013</Date>
-			<Version>0.7.4</Version>
-			<Comment>Add python-setuptools to repositories</Comment>
-			<Name>Justin Krehel</Name>
-			<Email>justin@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+        </Files>
+    </Package>
     
+    <History>
+        <Update release="1">
+            <Date>06-20-2013</Date>
+            <Version>0.7.4</Version>
+            <Comment>Add python-setuptools to repositories</Comment>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

@@ -1,71 +1,72 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-  <Source>
-	<Name>libxaw3d</Name>
-	<Homepage>http://www.x.org</Homepage>
-    <Packager>
-        <Name>Brad Kita</Name>
-        <Email>radbatik@gmail.com</Email>
-    </Packager>
-    <Summary>General-purpose replacement for the Athena toolkit.</Summary>
-    <Description>Xaw3d is a general-purpose replacement for the Athena toolkit which adds a 3D appearance and support for XPM images.</Description>
-    <License>MIT</License>
-	<Archive sha1sum="922dd4908cc8130d2976cbb52329783f8d6716de" type="targz">http://xorg.freedesktop.org/archive/individual/lib/libXaw3d-1.6.tar.gz</Archive>
-	<BuildDependencies>
-		<Dependency>libxcb-devel</Dependency>
-		<Dependency>libxau-devel</Dependency>
-		<Dependency>libxdmcp-devel</Dependency>
-		<Dependency>libxt-devel</Dependency>
-		<Dependency>libice-devel</Dependency>
-		<Dependency>libsm-devel</Dependency>
-		<Dependency>libxmu-devel</Dependency>
-		<Dependency>libxext-devel</Dependency>
-		<Dependency>libx11-devel</Dependency>
-		<Dependency>util-linux</Dependency>
-	</BuildDependencies>
-  </Source>
-  <Package>
-	<Name>libxaw3d</Name>
-	<RuntimeDependencies>
-		<Dependency>libxext</Dependency>
-		<Dependency>libxmu</Dependency>
-		<Dependency>libxau</Dependency>
-		<Dependency>libice</Dependency>
-		<Dependency>libxdmcp</Dependency>
-		<Dependency>libxt</Dependency>
-		<Dependency>libxcb</Dependency>
-		<Dependency>libsm</Dependency>
-		<Dependency>libx11</Dependency>
-		<Dependency>util-linux</Dependency>
-	</RuntimeDependencies>
-    <Files>
-		<Path fileType="library">/usr/lib/lib*.so*</Path>
-		<Path fileType="doc">/usr/share/doc</Path>
-    </Files>
-  </Package>
-
-  <Package>
-    <Name>libxaw3d-devel</Name>
-    <Summary>Development files for libxaw3d</Summary>
-    <Description>Development files for libxaw3d</Description>
-    <Files>
-		<Path fileType="header">/usr/include</Path>
-		<Path fileType="library">/usr/lib/*.a</Path>
-		<Path fileType="data">/usr/lib/pkgconfig</Path>
-	</Files>
-	<RuntimeDependencies>
-		<Dependency release="1">libxaw3d</Dependency>
-	</RuntimeDependencies>
-  </Package>
+    <Source>
+        <Name>libxaw3d</Name>
+        <Homepage>http://www.x.org</Homepage>
+        <Packager>
+            <Name>Brad Kita</Name>
+            <Email>radbatik@gmail.com</Email>
+        </Packager>
+        <Summary>General-purpose replacement for the Athena toolkit.</Summary>
+        <Description>Xaw3d is a general-purpose replacement for the Athena toolkit which adds a 3D appearance and support for XPM images.</Description>
+        <License>MIT</License>
+        <Archive sha1sum="922dd4908cc8130d2976cbb52329783f8d6716de" type="targz">http://xorg.freedesktop.org/archive/individual/lib/libXaw3d-1.6.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>libxt-devel</Dependency>
+            <Dependency>libice-devel</Dependency>
+            <Dependency>libsm-devel</Dependency>
+            <Dependency>libxmu-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>util-linux</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>libxaw3d</Name>
+        <RuntimeDependencies>
+            <Dependency>libxext</Dependency>
+            <Dependency>libxmu</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>libxt</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libsm</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>util-linux</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
     
-  <History>
-    <Update release="1">
-		<Date>04-09-2013</Date>
-		<Version>1.6</Version>
-		<Comment>Add libxaw3d and libxaw3d-devel to repositories</Comment>
-		<Name>Brad Kita</Name>
-		<Email>radbatik@gmail.com</Email>
-	</Update>
-  </History>		
+    <Package>
+        <Name>libxaw3d-devel</Name>
+        <Summary>Development files for libxaw3d</Summary>
+        <Description>Development files for libxaw3d</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/*.a</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="1">libxaw3d</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>04-09-2013</Date>
+            <Version>1.6</Version>
+            <Comment>Add libxaw3d and libxaw3d-devel to repositories</Comment>
+            <Name>Brad Kita</Name>
+            <Email>radbatik@gmail.com</Email>
+        </Update>
+    </History>
+    	
 </PISI>

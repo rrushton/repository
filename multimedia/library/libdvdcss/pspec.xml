@@ -13,7 +13,7 @@
         <License>GPLv2</License>
         <Archive sha1sum="1a4a5e55c7529da46386c1c333340eee2c325a77" type="tarbz2">http://download.videolan.org/pub/libdvdcss/last/libdvdcss-1.2.13.tar.bz2</Archive>
     </Source>
-
+    
     <Package>
         <Name>libdvdcss</Name>
         <Files>
@@ -23,7 +23,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-  
+    
     <History>
         <Update release="1">
             <Date>04-22-2013</Date>
@@ -32,5 +32,6 @@
             <Name>Kim Vande Walle</Name>
             <Email>vande.walle.k@gmail.com</Email>
         </Update>
-    </History>  
+    </History>
+     
 </PISI>

@@ -13,7 +13,7 @@
         <License>GPLv2+</License>
         <Archive sha1sum="f10e193bc18096ee82dd923a424df2b086f95c4c" type="targz">http://launchpad.net/bzr/2.6/2.6b2/+download/bzr-2.6b2.tar.gz</Archive>
     </Source>
-
+    
     <Package>
         <Name>bzr</Name>
         <Files>
@@ -23,7 +23,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-  
+    
     <History>
         <Update release="1">
             <Date>04-28-2013</Date>
@@ -32,6 +32,7 @@
             <Name>Justin Krehel</Name>
             <Email>justin@solusos.com</Email>
         </Update>
-    </History>  
+    </History>
+     
 </PISI>
-    
+

@@ -13,7 +13,7 @@
         <Description>Elementary is an good alternative to the icon themes with the right size of icons and perfect panel icons.</Description>
         <Archive sha1sum="7fa3bf104543ebf22b330e5d4725ba24c145f254" type="targz">http://launchpad.net/elementaryicons/2.0/2.7.1/+download/elementary-icon-theme-2.7.1.tar.gz</Archive>
     </Source>
-
+    
     <Package>
         <Name>elementary-icon-theme</Name>
         <Files>
@@ -23,7 +23,7 @@
             <Dependency>gnome-icon-theme</Dependency>
         </RuntimeDependencies>
     </Package>
-
+    
     <History>
         <Update release="2">
             <Date>08-13-2013</Date>
@@ -32,7 +32,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-
+        
         <Update release="1">
             <Date>2012-10-12</Date>
             <Version>2.7.1</Version>

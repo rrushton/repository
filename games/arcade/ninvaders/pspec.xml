@@ -10,8 +10,9 @@
         </Packager>
         <Summary>A space invaders-like game using ncurses</Summary>
         <Description>A space invaders-like game using ncurses. Right now you are earth's only hope to save
-it from alien invaders from space. Make your job, and make it good, mankind
-believes in you...</Description>
+            it from alien invaders from space. Make your job, and make it good, mankind
+            believes in you...
+        </Description>
         <License>GPLv2</License>
         
         <Archive sha1sum="5ab825694b108cbfa988377ca216188fa9a76e89" type="targz">http://ufpr.dl.sourceforge.net/project/ninvaders/ninvaders/0.1.1/ninvaders-0.1.1.tar.gz</Archive>
@@ -20,7 +21,7 @@ believes in you...</Description>
             <Dependency>ncurses-devel</Dependency>
         </BuildDependencies>
     </Source>
-
+    
     <Package>
         <Name>ninvaders</Name>
         <RuntimeDependencies>
@@ -31,7 +32,7 @@ believes in you...</Description>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-
+    
     <History>
         <Update release="1">
             <Date>04-05-2013</Date>
@@ -41,6 +42,6 @@ believes in you...</Description>
             <Email>matiaslina@gmail.com</Email>
         </Update>
     </History>
-		
+    
 </PISI>
 

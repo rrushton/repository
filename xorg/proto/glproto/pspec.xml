@@ -1,36 +1,36 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-  <Source>
-    <Name>glproto</Name>
-    <Packager>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-    </Packager>
-    <Summary>OpenGL Extension to the X Window System</Summary>
-    <Description>This extension defines a protocol for the client to send 3D rendering commands to the X server</Description>
-    <License>GPLv3+</License>
-    <Archive sha1sum="6f1a971c6c6da3daf860ff2888fa0eae347479b0" type="tarbz2">mirrors://xorg/individual/proto/glproto-1.4.16.tar.bz2</Archive>
+    <Source>
+        <Name>glproto</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>OpenGL Extension to the X Window System</Summary>
+        <Description>This extension defines a protocol for the client to send 3D rendering commands to the X server</Description>
+        <License>GPLv3+</License>
+        <Archive sha1sum="6f1a971c6c6da3daf860ff2888fa0eae347479b0" type="tarbz2">mirrors://xorg/individual/proto/glproto-1.4.16.tar.bz2</Archive>
     </Source>
-
-  <Package>
-    <Name>glproto</Name>
-    <Files>
-		<Path fileType="header">/usr/include</Path>
-		<Path fileType="header">/usr/lib/pkgconfig</Path>
-		<Path fileType="doc">/usr/share/doc</Path>
-	</Files>
-  </Package>
-  
-  <History>
-    <Update release="1">
-		<Date>03-09-2013</Date>
-		<Version>1.4.16</Version>
-		<Comment>Add glproto to repositories</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-  </History>
-		
-</PISI>
     
+    <Package>
+        <Name>glproto</Name>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="header">/usr/lib/pkgconfig</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>03-09-2013</Date>
+            <Version>1.4.16</Version>
+            <Comment>Add glproto to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    
+</PISI>
+

@@ -1,89 +1,89 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-  <Source>
-    <Name>libp11-kit</Name>
-    <Homepage>http://p11-glue.freedesktop.org/p11-kit.html</Homepage>
-    <Packager>
-        <Name>Ikey Doherty</Name>
-        <Email>ikey@solusos.com</Email>
-    </Packager>
-    <Summary>The p11-kit package Provides a way to load and enumerate PKCS #11 (a Cryptographic Token Interface Standard) modules.</Summary>
-    <Description>The p11-kit package Provides a way to load and enumerate PKCS #11 (a Cryptographic Token Interface Standard) modules.</Description>
-    <License>GPLv2+</License>
-    <IsA>library</IsA>
-    <Archive sha1sum="a7f038223ecbdd59f5fafb142f6aa89d4061e460" type="targz">http://p11-glue.freedesktop.org/releases/p11-kit-0.15.2.tar.gz</Archive>
+    <Source>
+        <Name>libp11-kit</Name>
+        <Homepage>http://p11-glue.freedesktop.org/p11-kit.html</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>The p11-kit package Provides a way to load and enumerate PKCS #11 (a Cryptographic Token Interface Standard) modules.</Summary>
+        <Description>The p11-kit package Provides a way to load and enumerate PKCS #11 (a Cryptographic Token Interface Standard) modules.</Description>
+        <License>GPLv2+</License>
+        <IsA>library</IsA>
+        <Archive sha1sum="a7f038223ecbdd59f5fafb142f6aa89d4061e460" type="targz">http://p11-glue.freedesktop.org/releases/p11-kit-0.15.2.tar.gz</Archive>
+        
+        <BuildDependencies>
+            <Dependency>libtasn1-devel</Dependency>		
+        </BuildDependencies>
+    </Source>
     
-    <BuildDependencies>
-		<Dependency>libtasn1-devel</Dependency>		
-    </BuildDependencies>
-  </Source>
-
-  <Package>
-    <Name>libp11-kit</Name>
-    <Files>
-		<Path fileType="library">/usr/lib/*.so*</Path>
-		<Path fileType="executable">/usr/bin</Path>
-		<Path fileType="config">/etc/pkcs11</Path>
-		<Path fileType="doc">/usr/share/doc</Path>
-		<Path fileType="data">/usr/share/p11-kit</Path>.
-		<Path fileType="library">/usr/lib/pkcs11</Path>
-	</Files>
-	<RuntimeDependencies>
-		<Dependency>libtasn1</Dependency>		
-	</RuntimeDependencies>
-  </Package>
-
-  <Package>
-    <Name>libp11-kit-devel</Name>
-    <Summary>Development files for libp11-kit</Summary>
-    <Description>Development files for libp11-kit</Description>
-    <Files>
-		<Path fileType="header">/usr/include</Path>
-		<Path fileType="data">/usr/lib/pkgconfig</Path>
-	</Files>
-	<RuntimeDependencies>
-		<Dependency release="current">libp11-kit</Dependency>
-	</RuntimeDependencies>
-  </Package>
-
-  <Package>
-    <Name>libp11-kit-docs</Name>
-    <Summary>API Documentation for libp11-kit</Summary>
-    <Description>API Documentation for libp11-kit</Description>
-    <Files>
-		<Path fileType="doc">/usr/share/gtk-doc</Path>
-	</Files>
-	<RuntimeDependencies>
-		<Dependency release="current">libp11-kit-devel</Dependency>
-	</RuntimeDependencies>
-  </Package>
-            
-  <History>
-    <Update release="3">
-		<Date>04-13-2013</Date>
-		<Version>0.15.2</Version>
-		<Comment>Add libtasn1 to build and runtime dependencies</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-		  
-    <Update release="2">
-		<Date>04-13-2013</Date>
-		<Version>0.15.2</Version>
-		<Comment>Split packages</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-		    
-    <Update release="1">
-		<Date>04-13-2013</Date>
-		<Version>0.15.2</Version>
-		<Comment>Add p11-kit to repositories</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
-  </History>
-		
+    <Package>
+        <Name>libp11-kit</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/*.so*</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="config">/etc/pkcs11</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/p11-kit</Path>.
+            <Path fileType="library">/usr/lib/pkcs11</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>libtasn1</Dependency>		
+        </RuntimeDependencies>
+    </Package>
+    
+    <Package>
+        <Name>libp11-kit-devel</Name>
+        <Summary>Development files for libp11-kit</Summary>
+        <Description>Development files for libp11-kit</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libp11-kit</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <Package>
+        <Name>libp11-kit-docs</Name>
+        <Summary>API Documentation for libp11-kit</Summary>
+        <Description>API Documentation for libp11-kit</Description>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libp11-kit-devel</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <History>
+        <Update release="3">
+            <Date>04-13-2013</Date>
+            <Version>0.15.2</Version>
+            <Comment>Add libtasn1 to build and runtime dependencies</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="2">
+            <Date>04-13-2013</Date>
+            <Version>0.15.2</Version>
+            <Comment>Split packages</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>04-13-2013</Date>
+            <Version>0.15.2</Version>
+            <Comment>Add p11-kit to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    
 </PISI>
-    
+

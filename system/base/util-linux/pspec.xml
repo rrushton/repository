@@ -1,47 +1,47 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-  <Source>
-    <Name>util-linux</Name>
-	<Homepage>http://freecode.com/projects/util-linux</Homepage>
-    <Packager>
-        <Name>SolusOS Developers</Name>
-        <Email>dev@solusos.com</Email>
-	</Packager>
-    <Summary>util-linux (Essential Linux utilties)</Summary>
-	<Description> Util-linux is a suite of essential tools for any Linux system, such as chsh, kill, cfdisk, mkfs, mount, and more.</Description>
-	<License>GPLv3+</License>
-	<License>GPLv2+</License>
-	<License>GPLv2</License>
-	<License>LGPLv2+</License>
-	<License>BSD</License>
-	<License>public-domain</License>
-	<Archive sha1sum="55cf73d58f568266354898fab9e5d54518c1efab" type="targz">http://www.kernel.org/pub/linux/utils/util-linux/v2.22/util-linux-2.22.2.tar.gz</Archive>
-  </Source>
-
-  <Package>
-    <Name>util-linux</Name>
-	<Files>
-		<Path fileType="*">/</Path>
-	</Files>
-  </Package>
-  
-  <History>
-    <Update release="2">
-		<Date>06-27-2013</Date>
-		<Version>3.0.16</Version>
-		<Comment>Add symlinks in /usr/bin for udisks</Comment>
-		<Name>Ikey Doherty</Name>
-		<Email>ikey@solusos.com</Email>
-	</Update>
+    <Source>
+        <Name>util-linux</Name>
+        <Homepage>http://freecode.com/projects/util-linux</Homepage>
+        <Packager>
+            <Name>SolusOS Developers</Name>
+            <Email>dev@solusos.com</Email>
+        </Packager>
+        <Summary>util-linux (Essential Linux utilties)</Summary>
+        <Description> Util-linux is a suite of essential tools for any Linux system, such as chsh, kill, cfdisk, mkfs, mount, and more.</Description>
+        <License>GPLv3+</License>
+        <License>GPLv2+</License>
+        <License>GPLv2</License>
+        <License>LGPLv2+</License>
+        <License>BSD</License>
+        <License>public-domain</License>
+        <Archive sha1sum="55cf73d58f568266354898fab9e5d54518c1efab" type="targz">http://www.kernel.org/pub/linux/utils/util-linux/v2.22/util-linux-2.22.2.tar.gz</Archive>
+    </Source>
     
-    <Update release="1">
-		<Date>03-11-2013</Date>
-		<Version>3.0.16</Version>
-		<Comment>Add util-linux to repositories</Comment>
-		<Name>Justin Krehel</Name>
-		<Email>justin@solusos.com</Email>
-	</Update>
-  </History>
-		
+    <Package>
+        <Name>util-linux</Name>
+        <Files>
+            <Path fileType="*">/</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="2">
+            <Date>06-27-2013</Date>
+            <Version>3.0.16</Version>
+            <Comment>Add symlinks in /usr/bin for udisks</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>03-11-2013</Date>
+            <Version>3.0.16</Version>
+            <Comment>Add util-linux to repositories</Comment>
+            <Name>Justin Krehel</Name>
+            <Email>justin@solusos.com</Email>
+        </Update>
+    </History>
+    
 </PISI>

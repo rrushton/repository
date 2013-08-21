@@ -1,61 +1,62 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>gnome-icon-theme</Name>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>GNOME Icon Theme</Summary>
-		<Description>The GNOME Icon Theme package contains an assortment of non-scalable icons of different sizes and themes. </Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="9448caeb86282f51cb022ef5351dd0b653c4f6b7" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-icon-theme/3.8/gnome-icon-theme-3.8.2.tar.xz</Archive>
+    <Source>
+        <Name>gnome-icon-theme</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>GNOME Icon Theme</Summary>
+        <Description>The GNOME Icon Theme package contains an assortment of non-scalable icons of different sizes and themes. </Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="9448caeb86282f51cb022ef5351dd0b653c4f6b7" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-icon-theme/3.8/gnome-icon-theme-3.8.2.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency>libgtk-2-devel</Dependency>
             <Dependency releaseFrom="10">libgtk-3-devel</Dependency>
             <Dependency>icon-naming-utils</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>gnome-icon-theme</Name>
-		<Files>
-			<Path fileType="doc">/usr/share/doc</Path>
+    </Source>
+    
+    <Package>
+        <Name>gnome-icon-theme</Name>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/icons/gnome</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="data">/usr/share/pkgconfig</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency>hicolor-icon-theme</Dependency>
         </RuntimeDependencies>
-	</Package>
-  
-	<History>
-		<Update release="3">
-			<Date>08-13-2013</Date>
-			<Version>3.8.2</Version>
-			<Comment>Add hicolor-icon-theme to dependencies</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-
-		<Update release="2">
-			<Date>06-19-2013</Date>
-			<Version>3.8.2</Version>
-			<Comment>Upgrade to 3.8.2 as part of GNOME 3.8 migration</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-        
-		<Update release="1">
-			<Date>06-05-2013</Date>
-			<Version>3.6.2</Version>
-			<Comment>Add gnome-icon-theme to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+    </Package>
     
+    <History>
+        <Update release="3">
+            <Date>08-13-2013</Date>
+            <Version>3.8.2</Version>
+            <Comment>Add hicolor-icon-theme to dependencies</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="2">
+            <Date>06-19-2013</Date>
+            <Version>3.8.2</Version>
+            <Comment>Upgrade to 3.8.2 as part of GNOME 3.8 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+        
+        <Update release="1">
+            <Date>06-05-2013</Date>
+            <Version>3.6.2</Version>
+            <Comment>Add gnome-icon-theme to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+

@@ -1,18 +1,18 @@
 <?xml version="1.0" ?> 
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
-	<Source>
-		<Name>xfce4-appfinder</Name>
+    <Source>
+        <Name>xfce4-appfinder</Name>
         <Homepage>http://www.xfce.org</Homepage>
-		<Packager>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Packager>
-		<Summary>Xfce application launcher</Summary>
-		<Description>Xfce4 Appfinder is a tool to find and launch installed applications by searching the .desktop files installed on your system.</Description>
-		<License>GPLv2+</License>
-		<Archive sha1sum="f34bfb2809ab679f4df46ed1d712ab5a35d44b9b" type="tarbz2">http://archive.xfce.org/xfce/4.10/src/xfce4-appfinder-4.10.0.tar.bz2</Archive>
-
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>Xfce application launcher</Summary>
+        <Description>Xfce4 Appfinder is a tool to find and launch installed applications by searching the .desktop files installed on your system.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="f34bfb2809ab679f4df46ed1d712ab5a35d44b9b" type="tarbz2">http://archive.xfce.org/xfce/4.10/src/xfce4-appfinder-4.10.0.tar.bz2</Archive>
+        
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>libxfce4ui-devel</Dependency>
@@ -48,16 +48,16 @@
             <Dependency>glib2-devel</Dependency>
             <Dependency>libsm-devel</Dependency>
         </BuildDependencies>
-	</Source>
-
-	<Package>
-		<Name>xfce4-appfinder</Name>
-		<Files>
-			<Path fileType="executable">/usr/bin</Path>
+    </Source>
+    
+    <Package>
+        <Name>xfce4-appfinder</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="data">/usr/share/applications</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
-		</Files>
+        </Files>
         <RuntimeDependencies>
             <Dependency>zlib</Dependency>
             <Dependency>expat</Dependency>
@@ -103,16 +103,17 @@
             <Dependency>glib2</Dependency>
             <Dependency>libsm</Dependency>
         </RuntimeDependencies>
-	</Package>
-  
-	<History>
-		<Update release="1">
-			<Date>08-07-2013</Date>
-			<Version>4.10.0</Version>
-			<Comment>Add xfce4-appfinder to repositories</Comment>
-			<Name>Ikey Doherty</Name>
-			<Email>ikey@solusos.com</Email>
-		</Update>
-	</History>	
-</PISI>
+    </Package>
     
+    <History>
+        <Update release="1">
+            <Date>08-07-2013</Date>
+            <Version>4.10.0</Version>
+            <Comment>Add xfce4-appfinder to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+    	
+</PISI>
+
