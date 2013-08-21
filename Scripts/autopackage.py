@@ -173,7 +173,7 @@ class AutoPackage:
 			sample_actions = os.path.join (self.template_dir, "actions.perlmodules.sample.py")
 		doc_str = ""
 		if len(self.doc_files) > 0:
-			doc_str = "pisitools.dodoc ("
+			doc_str = "pisitools.dodoc("
 			for doc in self.doc_files:
 				if doc == self.doc_files[-1]:
 					doc_str += "\"%s\"" % doc

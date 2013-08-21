@@ -2,7 +2,7 @@
 
 # Created For SolusOS
 
-from pisi.actionsapi import shelltools, get, autotools, pisitools
+from pisi.actionsapi import get, autotools, pisitools
 
 
 def setup():
@@ -16,4 +16,4 @@ def build():
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    pisitools.dodoc ("AUTHORS", "ChangeLog", "COPYING")
+    pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING")
