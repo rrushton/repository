@@ -49,7 +49,7 @@
             <Dependency>libgnome-menus-devel</Dependency>
             <Dependency>gconf-devel</Dependency>
             <Dependency>pango-devel</Dependency>
-            <Dependency fromRelease="10">libgtk-3-devel</Dependency>
+            <Dependency releaseFrom="10">libgtk-3-devel</Dependency>
             <Dependency>libxfixes-devel</Dependency>
             <Dependency>libcairo-devel</Dependency>
             <Dependency>dbus-devel</Dependency>
@@ -120,7 +120,7 @@
             <Dependency>libgnome-menus</Dependency>
             <Dependency>gconf</Dependency>
             <Dependency>pango</Dependency>
-            <Dependency fromRelease="10">libgtk-3</Dependency>
+            <Dependency releaseFrom="10">libgtk-3</Dependency>
             <Dependency>libxfixes</Dependency>
             <Dependency>at-spi2</Dependency>
             <Dependency>freetype2</Dependency>

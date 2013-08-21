@@ -76,7 +76,7 @@
             <Dependency>libffi</Dependency>
             <Dependency>libgcc</Dependency>
             <Dependency>libxcb</Dependency>
-            <Dependency fromRelease="2">libvte</Dependency>
+            <Dependency releaseFrom="2">libvte</Dependency>
             <Dependency>libxau</Dependency>
             <Dependency>libicu</Dependency>
             <Dependency>bzip2</Dependency>

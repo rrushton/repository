@@ -15,7 +15,7 @@
     <BuildDependencies>
 		<Dependency>glib2-devel</Dependency>
 		<Dependency>expat</Dependency>
-		<Dependency fromRelease="3">dbus-devel</Dependency>
+		<Dependency releaseFrom="3">dbus-devel</Dependency>
     </BuildDependencies>
     </Source>
 
@@ -32,7 +32,7 @@
 		<Path fileType="header">/usr/include</Path>
 	</Files>
 	<RuntimeDependencies>
-		<Dependency fromRelease="3">dbus</Dependency>
+		<Dependency releaseFrom="3">dbus</Dependency>
 		<Dependency>expat</Dependency>
 	</RuntimeDependencies>
   </Package>

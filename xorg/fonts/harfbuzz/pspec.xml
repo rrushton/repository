@@ -13,7 +13,7 @@
     <Archive sha1sum="c1a0dc10bfa99104e5fe2e1bdcb85072150abf8b" type="tarbz2">http://www.freedesktop.org/software/harfbuzz/release/harfbuzz-0.9.13.tar.bz2</Archive>
     
     <BuildDependencies>
-		<Dependency fromRelease="2">libicu-devel</Dependency>
+		<Dependency releaseFrom="2">libicu-devel</Dependency>
 		<Dependency>fontconfig</Dependency>
     </BuildDependencies>
     </Source>
@@ -25,7 +25,7 @@
 		<Path fileType="library">/usr/lib/lib*.so*</Path>
 	</Files>
 	<RuntimeDependencies>
-		<Dependency fromRelease="2">libicu</Dependency>
+		<Dependency releaseFrom="2">libicu</Dependency>
 		<Dependency>fontconfig</Dependency>
 	</RuntimeDependencies>
   </Package>
@@ -39,7 +39,7 @@
 		<Path fileType="data">/usr/lib/pkgconfig</Path>
 	</Files>
 	<RuntimeDependencies>
-		<Dependency fromRelease="2">harfbuzz</Dependency>
+		<Dependency releaseFrom="2">harfbuzz</Dependency>
 	</RuntimeDependencies>
   </Package>
       

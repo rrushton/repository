@@ -15,7 +15,7 @@
         
         <BuildDependencies>
             <Dependency>libgtk-2-devel</Dependency>
-            <Dependency fromRelease="10">libgtk-3-devel</Dependency>
+            <Dependency releaseFrom="10">libgtk-3-devel</Dependency>
             <Dependency>icon-naming-utils</Dependency>
         </BuildDependencies>
 	</Source>

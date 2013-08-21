@@ -14,7 +14,7 @@
     <Archive sha1sum="241acff88075bb6a8f7ee199c0e31ce6c768806e" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gcr/3.8/gcr-3.8.2.tar.xz</Archive>
     
     <BuildDependencies>
-		<Dependency fromRelease="10">libgtk-3-devel</Dependency>
+		<Dependency releaseFrom="10">libgtk-3-devel</Dependency>
 		<Dependency>libp11-kit-devel</Dependency>
 		<Dependency>libcairo-devel</Dependency>
 		<Dependency>zlib-devel</Dependency>
@@ -47,7 +47,7 @@
 		<Path fileType="data">/usr/lib/girepository-1.0</Path>
 	</Files>
 	<RuntimeDependencies>
-		<Dependency fromRelease="10">libgtk-3</Dependency>
+		<Dependency releaseFrom="10">libgtk-3</Dependency>
 		<Dependency>libp11-kit</Dependency>
 		<Dependency>libcairo</Dependency>
 		<Dependency>zlib</Dependency>

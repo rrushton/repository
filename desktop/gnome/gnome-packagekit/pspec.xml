@@ -44,7 +44,7 @@
             <Dependency>libnotify-devel</Dependency>
             <Dependency>libffi-devel</Dependency>
             <Dependency>pango-devel</Dependency>
-            <Dependency fromRelease="10">libgtk-3-devel</Dependency>
+            <Dependency releaseFrom="10">libgtk-3-devel</Dependency>
             <Dependency>libxfixes-devel</Dependency>
             <Dependency>attr-devel</Dependency>
             <Dependency>libcairo-devel</Dependency>
@@ -111,7 +111,7 @@
             <Dependency>libnotify</Dependency>
             <Dependency>libffi</Dependency>
             <Dependency>pango</Dependency>
-            <Dependency fromRelease="10">libgtk-3</Dependency>
+            <Dependency releaseFrom="10">libgtk-3</Dependency>
             <Dependency>libxfixes</Dependency>
             <Dependency>attr</Dependency>
             <Dependency>libstdc++</Dependency>

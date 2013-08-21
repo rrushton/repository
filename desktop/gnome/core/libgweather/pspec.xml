@@ -40,7 +40,7 @@
 		<Dependency>pixman-devel</Dependency>
 		<Dependency>sqlite3-devel</Dependency>
 		<Dependency>pango-devel</Dependency>
-		<Dependency fromRelease="10">libgtk-3-devel</Dependency>
+		<Dependency releaseFrom="10">libgtk-3-devel</Dependency>
 		<Dependency>libxfixes-devel</Dependency>
 		<Dependency>libxext-devel</Dependency>
 		<Dependency>libcairo-devel</Dependency>
@@ -98,7 +98,7 @@
 		<Dependency>pixman</Dependency>
 		<Dependency>sqlite3</Dependency>
 		<Dependency>pango</Dependency>
-		<Dependency fromRelease="10">libgtk-3</Dependency>
+		<Dependency releaseFrom="10">libgtk-3</Dependency>
 		<Dependency>libxfixes</Dependency>
 		<Dependency>util-linux</Dependency>
 		<Dependency>libstdc++</Dependency>
