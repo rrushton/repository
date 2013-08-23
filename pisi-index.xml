@@ -32758,14 +32758,14 @@ The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does
             <Name>inxi</Name>
             <Homepage>http://code.google.com/p/inxi/</Homepage>
             <Packager>
-                <Name>SolusOS Developers</Name>
-                <Email>dev@solusos.com</Email>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
             </Packager>
             <License>GPLv3+</License>
             <PartOf>system.utils</PartOf>
             <Summary xml:lang="en">System info script for irc (forked from infobash by locsmif)</Summary>
             <Description xml:lang="en">Inxi is a system information script can display all kinds of things about your hardware and software to users in an IRC (Internet Relay Chat) chatroom. It runs with the /exec command in most irc clients and also /cmd with konversation and /inxi in quassel.</Description>
-            <Archive type="binary" sha1sum="e4750edd3bf555915dff9a0d8af53601158d30b7">http://inxi.googlecode.com/svn/trunk/inxi</Archive>
+            <Archive type="binary" sha1sum="3055c2c4c61d4efd9d66c44adb874f6536973842">http://ng.solusos.com/sources/inxi</Archive>
             <SourceURI>system/utils/inxi/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -32774,12 +32774,23 @@ The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does
                 <Dependency>pciutils</Dependency>
                 <Dependency>gawk</Dependency>
                 <Dependency>procps-ng</Dependency>
+                <Dependency>xdpyinfo</Dependency>
+                <Dependency>xrandr</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>08-24-2013</Date>
+                <Version>1.9.14</Version>
+                <Comment>Fix dependencies, and update to 1.9.14
+            
+Bug-SolusOS: T6</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="3">
                 <Date>03-16-2013</Date>
                 <Version>1.8.45</Version>
