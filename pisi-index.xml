@@ -2621,7 +2621,7 @@
             <PartOf>xorg.proto</PartOf>
             <Summary xml:lang="en">Distributed Multihead X (DMX) Extension</Summary>
             <Description xml:lang="en">This extension defines a protocol for clients to access a front-end proxy
-X server that controls multiple back-end X servers making up a large display.</Description>
+            X server that controls multiple back-end X servers making up a large display.</Description>
             <Archive type="tarbz2" sha1sum="3b8b273b8ef3d8dbab998df9ec1dddf99edf4d91">mirrors://xorg/individual/proto/dmxproto-2.3.1.tar.bz2</Archive>
             <SourceURI>xorg/proto/dmxproto/pspec.xml</SourceURI>
         </Source>
@@ -3013,7 +3013,7 @@ X server that controls multiple back-end X servers making up a large display.</D
             <PartOf>xorg.proto</PartOf>
             <Summary xml:lang="en">Composite Extension</Summary>
             <Description xml:lang="en">This package contains header files and documentation for the composite
-extension.  Library and server implementations are separate.</Description>
+            extension.  Library and server implementations are separate.</Description>
             <Archive type="tarbz2" sha1sum="aa7b5abcfd5bbfad7cb681ce89dc1d6e381e3044">mirrors://xorg/individual/proto/compositeproto-0.4.2.tar.bz2</Archive>
             <SourceURI>xorg/proto/compositeproto/pspec.xml</SourceURI>
         </Source>
@@ -8180,10 +8180,10 @@ extension.  Library and server implementations are separate.</Description>
             <PartOf>security</PartOf>
             <Summary xml:lang="en">The GnuTLS package contains libraries and userspace tools which provide a secure layer over a reliable transport layer</Summary>
             <Description xml:lang="en">The GnuTLS package contains libraries and userspace tools which provide a secure layer over a reliable transport layer. Currently the GnuTLS library implements the proposed standards by the IETF&apos;s TLS working group. Quoting from the TLS protocol specification:
-
-“The TLS protocol provides communications privacy over the Internet. The protocol allows client/server applications to communicate in a way that is designed to prevent eavesdropping, tampering, or message forgery.”
-
-GnuTLS provides support for TLS 1.1, TLS 1.0 and SSL 3.0 protocols, TLS extensions, including server name and max record size. Additionally, the library supports authentication using the SRP protocol, X.509 certificates and OpenPGP keys, along with support for the TLS Pre-Shared-Keys (PSK) extension, the Inner Application (TLS/IA) extension and X.509 and OpenPGP certificate handling.</Description>
+            
+            “The TLS protocol provides communications privacy over the Internet. The protocol allows client/server applications to communicate in a way that is designed to prevent eavesdropping, tampering, or message forgery.”
+            
+            GnuTLS provides support for TLS 1.1, TLS 1.0 and SSL 3.0 protocols, TLS extensions, including server name and max record size. Additionally, the library supports authentication using the SRP protocol, X.509 certificates and OpenPGP keys, along with support for the TLS Pre-Shared-Keys (PSK) extension, the Inner Application (TLS/IA) extension and X.509 and OpenPGP certificate handling.</Description>
             <Archive type="tarxz" sha1sum="1097644b0e58754217c4f9edbdf68e9f7aa7e08d">ftp://ftp.gnutls.org/gcrypt/gnutls/v3.1/gnutls-3.1.10.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>libp11-kit-devel</Dependency>
@@ -8439,8 +8439,8 @@ GnuTLS provides support for TLS 1.1, TLS 1.0 and SSL 3.0 protocols, TLS extensio
             <PartOf>games.arcade</PartOf>
             <Summary xml:lang="en">A space invaders-like game using ncurses</Summary>
             <Description xml:lang="en">A space invaders-like game using ncurses. Right now you are earth&apos;s only hope to save
-it from alien invaders from space. Make your job, and make it good, mankind
-believes in you...</Description>
+            it from alien invaders from space. Make your job, and make it good, mankind
+            believes in you...</Description>
             <Archive type="targz" sha1sum="5ab825694b108cbfa988377ca216188fa9a76e89">http://ufpr.dl.sourceforge.net/project/ninvaders/ninvaders/0.1.1/ninvaders-0.1.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>ncurses-devel</Dependency>
@@ -9777,7 +9777,7 @@ believes in you...</Description>
             <PartOf>desktop.library</PartOf>
             <Summary xml:lang="en">Libjpeg is a widely used C library for reading and writing JPEG image files.</Summary>
             <Description xml:lang="en">Independent JPEG Group&apos;s JPEG runtime library (version 6.2)
- The Independent JPEG Group&apos;s JPEG library is a library for handling JPEG files.</Description>
+            The Independent JPEG Group&apos;s JPEG library is a library for handling JPEG files.</Description>
             <Archive type="targz" sha1sum="724987e7690ca3d74d6ab7c1f1b6854e88ca204b">http://www.ijg.org/files/jpegsrc.v9.tar.gz</Archive>
             <SourceURI>desktop/library/libjpeg/pspec.xml</SourceURI>
         </Source>
@@ -24350,7 +24350,7 @@ believes in you...</Description>
                 <Date>08-20-2013</Date>
                 <Version>3.10.6</Version>
                 <Comment>Force depmod for specific version in kernel package
-Bug-SolusOS: D3</Comment>
+                Bug-SolusOS: D3</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
@@ -24372,8 +24372,8 @@ Bug-SolusOS: D3</Comment>
                 <Date>08-12-2013</Date>
                 <Version>3.10.6</Version>
                 <Comment>Upgrade to latest stable upstream version.
-* Drop ck1 patchset
-* Drop overlayfs</Comment>
+                * Drop ck1 patchset
+                * Drop overlayfs</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
@@ -29521,8 +29521,8 @@ Bug-SolusOS: D3</Comment>
                 <Date>05-21-2013</Date>
                 <Version>0.9.8.0</Version>
                 <Comment>Completed package:
-* Add all runtime and build-dependencies
-* Split -devel package</Comment>
+                * Add all runtime and build-dependencies
+                * Split -devel package</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
@@ -33322,11 +33322,11 @@ Bug-SolusOS: D3</Comment>
             <License>GPLv3+</License>
             <PartOf>system.base</PartOf>
             <Summary xml:lang="en">The ncurses library routines are a terminal-independent method of
- updating character screens with reasonable optimization.</Summary>
+            updating character screens with reasonable optimization.</Summary>
             <Description xml:lang="en">The ncurses library routines are a terminal-independent method of
- updating character screens with reasonable optimization.
- This package contains the shared libraries necessary to run programs
- compiled with ncurses.</Description>
+            updating character screens with reasonable optimization.
+            This package contains the shared libraries necessary to run programs
+            compiled with ncurses.</Description>
             <Archive type="targz" sha1sum="3e042e5f2c7223bffdaac9646a533b8c758b65b5">http://ftp.gnu.org/gnu/ncurses/ncurses-5.9.tar.gz</Archive>
             <SourceURI>system/base/ncurses/pspec.xml</SourceURI>
         </Source>
@@ -34974,17 +34974,17 @@ Bug-SolusOS: D3</Comment>
             <PartOf>system.base</PartOf>
             <Summary xml:lang="en">GNU core utilities</Summary>
             <Description xml:lang="en">This package contains the basic file, shell and text manipulation
- utilities which are expected to exist on every operating system.
-
- Specifically, this package includes:
- arch base64 basename cat chcon chgrp chmod chown chroot cksum comm cp
- csplit cut date dd df dir dircolors dirname du echo env expand expr
- factor false flock fmt fold groups head hostid id install join link ln
- logname ls md5sum mkdir mkfifo mknod mktemp mv nice nl nohup nproc od
- paste pathchk pinky pr printenv printf ptx pwd readlink rm rmdir runcon
- sha*sum seq shred sleep sort split stat stty sum sync tac tail tee test
- timeout touch tr true truncate tsort tty uname unexpand uniq unlink
- users vdir wc who whoami yes</Description>
+            utilities which are expected to exist on every operating system.
+            
+            Specifically, this package includes:
+            arch base64 basename cat chcon chgrp chmod chown chroot cksum comm cp
+            csplit cut date dd df dir dircolors dirname du echo env expand expr
+            factor false flock fmt fold groups head hostid id install join link ln
+            logname ls md5sum mkdir mkfifo mknod mktemp mv nice nl nohup nproc od
+            paste pathchk pinky pr printenv printf ptx pwd readlink rm rmdir runcon
+            sha*sum seq shred sleep sort split stat stty sum sync tac tail tee test
+            timeout touch tr true truncate tsort tty uname unexpand uniq unlink
+            users vdir wc who whoami yes</Description>
             <Archive type="tarxz" sha1sum="3fba93c72fab62f3742fe50957d3a86d4cd08176">http://ftp.gnu.org/gnu/coreutils/coreutils-8.21.tar.xz</Archive>
             <SupportsClang>true</SupportsClang>
             <Patches>
@@ -35123,8 +35123,8 @@ Bug-SolusOS: D3</Comment>
                 <Date>08-13-2013</Date>
                 <Version>0.110</Version>
                 <Comment>Manage our own user via comar
-Include /var/empty home directory
-Remove polkit-devel from system.devel</Comment>
+                Include /var/empty home directory
+                Remove polkit-devel from system.devel</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
@@ -36379,10 +36379,10 @@ Remove polkit-devel from system.devel</Comment>
                 <Date>08-13-2013</Date>
                 <Version>1.5</Version>
                 <Comment>Update to 1.5
-Remove static files from /etc/
-Only add statics if they don&apos;t exist
-Add /home directory
-Remove static groups</Comment>
+                Remove static files from /etc/
+                Only add statics if they don&apos;t exist
+                Add /home directory
+                Remove static groups</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
@@ -36605,8 +36605,8 @@ Remove static groups</Comment>
             <PartOf>system.base</PartOf>
             <Summary xml:lang="en">rsync (remote file sync)</Summary>
             <Description xml:lang="en">rsync is a replacement for rcp that has many more features.  It uses the &quot;rsync algorithm&quot; which provides a very fast method for bringing remote files into sync.  It does this by sending just the differences in the files across the link, without requiring that both sets of files are present at one of the ends of the link beforehand.
-
-rsync was written by Andrew Tridgell and Paul Mackerras.</Description>
+            
+            rsync was written by Andrew Tridgell and Paul Mackerras.</Description>
             <Archive type="targz" sha1sum="c64c8341984aea647506eb504496999fd968ddfc">http://rsync.samba.org/ftp/rsync/src/rsync-3.0.9.tar.gz</Archive>
             <SourceURI>system/base/rsync/pspec.xml</SourceURI>
         </Source>
@@ -36783,10 +36783,10 @@ rsync was written by Andrew Tridgell and Paul Mackerras.</Description>
             <PartOf>system.base</PartOf>
             <Summary xml:lang="en">inotify-tools is a C library and a set of command-line programs for Linux providing a simple interface to inotify.</Summary>
             <Description xml:lang="en">command-line programs providing a simple interface to inotify. inotify-tools is a set of command-line programs for Linux providing a simple  interface to inotify. These programs can be used to monitor and act upon filesystem events. inotify-tools consists of two utilities: 
-
-	inotifywait simply blocks for inotify events, making it appropriate for use in shell scripts. 
- 
-	inotifywatch collects filesystem usage statistics and outputs counts of each inotify event.</Description>
+            
+            inotifywait simply blocks for inotify events, making it appropriate for use in shell scripts. 
+            
+            inotifywatch collects filesystem usage statistics and outputs counts of each inotify event.</Description>
             <Archive type="targz" sha1sum="0446706d54ca4ae42e076505f5904995ca970c1c">http://cloud.github.com/downloads/rvoicilas/inotify-tools/inotify-tools-3.14.tar.gz</Archive>
             <SourceURI>system/base/inotify-tools/pspec.xml</SourceURI>
         </Source>
@@ -37661,6 +37661,7 @@ rsync was written by Andrew Tridgell and Paul Mackerras.</Description>
     <SpecFile>
         <Source>
             <Name>glibc</Name>
+            <Homepage>http://www.gnu.org/software/libc/</Homepage>
             <Packager>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
@@ -37670,15 +37671,56 @@ rsync was written by Andrew Tridgell and Paul Mackerras.</Description>
             <Summary xml:lang="en">This package contains the GNU C libraries and header files</Summary>
             <Description xml:lang="en">This package contains the GNU C libraries and header files.  The GNU C library was written originally by Roland McGrath, and is currently maintained by Ulrich Drepper.  Some parts of the library were contributed or worked on by other people. You&apos;ll need this package to compile programs.</Description>
             <Archive type="tarxz" sha1sum="e210daf1d5d6d6da7bf216fbaad4922bd642952b">http://ftp.gnu.org/gnu/glibc/glibc-2.17.tar.xz</Archive>
+            <Patches>
+                <Patch level="1">security/cve-2013-0242.patch</Patch>
+                <Patch level="1">security/cve-2013-1914.patch</Patch>
+            </Patches>
             <SourceURI>system/base/glibc/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>glibc</Name>
             <Files>
-                <Path fileType="*">/</Path>
+                <Path fileType="library">/lib</Path>
+                <Path fileType="executable">/sbin</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/sbin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="info">/usr/share/info</Path>
+                <Path fileType="data">/usr/share/i18n/charmaps</Path>
+                <Path fileType="data">/var/db</Path>
+                <Path fileType="data">/var/run</Path>
+                <Path fileType="data">/etc/rpc</Path>
+                <Path fileType="localedata">/usr/share/i18n/locales</Path>
+                <Path fileType="locale">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>glibc-devel</Name>
+            <Summary xml:lang="en">Development files for glibc</Summary>
+            <Description xml:lang="en">Development files for glibc</Description>
+            <PartOf>system.devel</PartOf>
+            <RuntimeDependencies>
+                <Dependency release="2">glibc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2" type="security">
+                <Date>08-23-2013</Date>
+                <Version>2.17</Version>
+                <Comment>* CVE-2013-0242:
+ Buffer overflow in the extend_buffers function in the regular expression matcher (posix/regexec.c) in glibc, possibly 2.17 and earlier, allows context-dependent attackers to cause a denial of service (memory corruption and crash) via crafted multibyte characters.
+* CVE-2013-1914:
+ Stack-based buffer overflow in the getaddrinfo function in sysdeps/posix/getaddrinfo.c in GNU C Library (aka glibc or libc6) 2.17 and earlier allows remote attackers to cause a denial of service (crash) via a (1) hostname or (2) IP address that triggers a large number of domain conversion results.</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+                <Requires>
+                    <Action package="glibc">systemRestart</Action>
+                </Requires>
+            </Update>
             <Update release="1">
                 <Date>03-09-2013</Date>
                 <Version>2.17</Version>
@@ -37822,14 +37864,14 @@ rsync was written by Andrew Tridgell and Paul Mackerras.</Description>
             <PartOf>system.base</PartOf>
             <Summary xml:lang="en">Creates &quot;shell archives&quot; (or shar files) which are in text format and can be mailed.</Summary>
             <Description xml:lang="en">&apos;shar&apos; makes so-called shell archives out of many files, preparing
- them for transmission by electronic mail services.  `unshar&apos; helps
- unpacking shell archives after reception.  Other related utility
- programs help with other tasks.
- .
- &apos;uuencode&apos; prepares a file for transmission over an electronic
- channel which ignores or otherwise mangles the eight bit (high
- order bit) of bytes.  &apos;uudecode&apos; does the converse transformation.
-Homepage:</Description>
+            them for transmission by electronic mail services.  `unshar&apos; helps
+            unpacking shell archives after reception.  Other related utility
+            programs help with other tasks.
+            .
+            &apos;uuencode&apos; prepares a file for transmission over an electronic
+            channel which ignores or otherwise mangles the eight bit (high
+            order bit) of bytes.  &apos;uudecode&apos; does the converse transformation.
+            Homepage:</Description>
             <Archive type="tarxz" sha1sum="50582fcededd1891c47ec1caa98491e280950cbd">http://ftp.gnu.org/gnu/sharutils/sharutils-4.13.3.tar.xz</Archive>
             <SourceURI>system/base/sharutils/pspec.xml</SourceURI>
         </Source>
@@ -37892,7 +37934,7 @@ Homepage:</Description>
                 <Date>08-16-2013</Date>
                 <Version>2.0</Version>
                 <Comment>Add the stock update-grub2 script to grub2 package
-Bug-SolusOS: FS#32</Comment>
+                Bug-SolusOS: FS#32</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
@@ -37949,7 +37991,7 @@ Bug-SolusOS: FS#32</Comment>
                 <Date>08-20-2013</Date>
                 <Version>029</Version>
                 <Comment>Fix postInstall operations, provide package handler for upgrades Needs Review
-Bug-SolusOS: T2</Comment>
+                Bug-SolusOS: T2</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
@@ -37957,7 +37999,7 @@ Bug-SolusOS: T2</Comment>
                 <Date>08-16-2013</Date>
                 <Version>029</Version>
                 <Comment>Automatically update GRUB2 post image creation
-Bug-SolusOS: FS#32</Comment>
+                Bug-SolusOS: FS#32</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
@@ -38096,8 +38138,8 @@ Bug-SolusOS: FS#32</Comment>
             <PartOf>system.devel</PartOf>
             <Summary xml:lang="en">Scripts for working with series of patches</Summary>
             <Description xml:lang="en">Quilt allows you to easily manage large numbers of patches by keeping
-    track of the changes each patch makes. Patches can be applied,
-    un-applied, refreshed, and more.</Description>
+            track of the changes each patch makes. Patches can be applied,
+            un-applied, refreshed, and more.</Description>
             <Archive type="targz" sha1sum="c93c79598c55ba288f60babcc74a9fc9b04404b6">http://download.savannah.gnu.org/releases/quilt/quilt-0.60.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>diffstat</Dependency>
@@ -38606,7 +38648,7 @@ Bug-SolusOS: FS#32</Comment>
             <PartOf>system.devel</PartOf>
             <Summary xml:lang="en">Library for reading and writing streaming archives</Summary>
             <Description xml:lang="en">The libarchive library provides a flexible interface for reading and writing archives in
-     various formats such as tar and cpio.</Description>
+            various formats such as tar and cpio.</Description>
             <Archive type="targz" sha1sum="6a991777ecb0f890be931cec4aec856d1a195489">http://www.libarchive.org/downloads/libarchive-3.1.2.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>attr-devel</Dependency>
