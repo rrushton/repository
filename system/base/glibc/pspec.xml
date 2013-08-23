@@ -3,6 +3,7 @@
 <PISI>
     <Source>
         <Name>glibc</Name>
+        <Homepage>http://www.gnu.org/software/libc/</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
@@ -12,18 +13,66 @@
         </Description>
         <License>GPLv3+</License>
         <Archive sha1sum="e210daf1d5d6d6da7bf216fbaad4922bd642952b" type="tarxz">http://ftp.gnu.org/gnu/glibc/glibc-2.17.tar.xz</Archive>
+
+        <Patches>
+            <!-- Security patches here //-->
+            <Patch level="1">security/cve-2013-0242.patch</Patch><!-- http://www.cvedetails.com/cve/CVE-2013-0242/ //-->
+            <Patch level="1">security/cve-2013-1914.patch</Patch><!-- http://www.cvedetails.com/cve/CVE-2013-1914/ //-->
+        </Patches>
         
     </Source>
     
     <Package>
         <Name>glibc</Name>
         <Files>
-            <!-- TODO: Fill out paths and split packages //-->
-            <Path fileType="*">/</Path>
+            <Path fileType="library">/lib</Path>
+            <Path fileType="executable">/sbin</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="data">/usr/share/i18n/charmaps</Path>
+            <Path fileType="data">/var/db</Path>
+            <Path fileType="data">/var/run</Path>
+            <Path fileType="data">/etc/rpc</Path>
+
+            <!-- Consider splitting into locale packages in near future, very heavy //-->
+            <Path fileType="localedata">/usr/share/i18n/locales</Path>
+            <Path fileType="locale">/usr/share/locale</Path>
         </Files>
+    </Package>
+
+    <Package>
+        <Name>glibc-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for glibc</Summary>
+        <Description>Development files for glibc</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">glibc</Dependency>
+        </RuntimeDependencies>
     </Package>
     
     <History>
+        <Update release="2" type="security">
+            <Date>08-23-2013</Date>
+            <Version>2.17</Version>
+            <Comment>
+* CVE-2013-0242:
+ Buffer overflow in the extend_buffers function in the regular expression matcher (posix/regexec.c) in glibc, possibly 2.17 and earlier, allows context-dependent attackers to cause a denial of service (memory corruption and crash) via crafted multibyte characters.
+* CVE-2013-1914:
+ Stack-based buffer overflow in the getaddrinfo function in sysdeps/posix/getaddrinfo.c in GNU C Library (aka glibc or libc6) 2.17 and earlier allows remote attackers to cause a denial of service (crash) via a (1) hostname or (2) IP address that triggers a large number of domain conversion results.
+</Comment>
+            <Requires>
+                <Action package="glibc">systemRestart</Action>
+            </Requires>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>03-09-2013</Date>
             <Version>2.17</Version>

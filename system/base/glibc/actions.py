@@ -12,20 +12,26 @@ import os
 
 WorkDir = "glibc-2.17"
 
-defaultflags = "-O3 -g -U_FORTIFY_SOURCE -fno-strict-aliasing -fomit-frame-pointer -mno-tls-direct-seg-refs"
-sysflags = "-mtune=generic -march=x86-64" if get.ARCH() == "x86_64" else "-mtune=atom -march=i686"
+defaultflags = "-O3 -g -U_FORTIFY_SOURCE -fno-strict-aliasing \
+                -fomit-frame-pointer -mno-tls-direct-seg-refs"
+
+
+sysflags = "-mtune=generic -march=x86-64" if get.ARCH() == "x86_64" \
+           else "-mtune=atom -march=i686"
 
 multibuild = (get.ARCH() == "x86_64")
 pkgworkdir = "%s/%s" % (get.workDIR(), WorkDir)
-		
-config = {"system": {
-                "multi": False,
-                "extraconfig": "--build=%s " % (get.HOST()),
-                "coreflags":   "",
-                "libdir":      "lib",
-                "buildflags":  "%s %s" % (sysflags, defaultflags),
-                "builddir":    "%s/build" % pkgworkdir
-            }
+
+config = {
+    "system":
+    {
+        "multi": False,
+        "extraconfig": "--build=%s " % (get.HOST()),
+        "coreflags": "",
+        "libdir": "lib",
+        "buildflags": "%s %s" % (sysflags, defaultflags),
+        "builddir": "%s/build" % pkgworkdir
+    }
 }
 
 ldconf32bit = """/lib32
@@ -34,11 +40,10 @@ ldconf32bit = """/lib32
 #/usr/local/lib32
 
 
-		
 def set_variables(cfg):
-    shelltools.export("LANGUAGE","C")
-    shelltools.export("LANG","C")
-    shelltools.export("LC_ALL","C")
+    shelltools.export("LANGUAGE", "C")
+    shelltools.export("LANG", "C")
+    shelltools.export("LC_ALL", "C")
 
     shelltools.export("CC", "gcc %s" % cfg["coreflags"])
     shelltools.export("CXX", "g++ %s" % cfg["coreflags"])
@@ -73,11 +78,13 @@ def libcSetup(cfg):
                        --enable-obsolete-rpc \
                        %s " % cfg["extraconfig"])
 
+
 def libcBuild(cfg):
     set_variables(cfg)
 
     shelltools.cd(cfg["builddir"])
     autotools.make()
+
 
 def libcInstall(cfg):
     # not to bork locale/zone stuff
@@ -91,7 +98,6 @@ def libcInstall(cfg):
     pisitools.dosym("libbsd-compat.a", "/usr/%s/libbsd.a" % cfg["libdir"])
 
 
-
 ### real actions start here ###
 def setup():
     libcSetup(config["system"])
@@ -100,12 +106,14 @@ def setup():
 def build():
     libcBuild(config["system"])
 
+
 def install():
     libcInstall(config["system"])
 
     # localedata can be shared between archs
     shelltools.cd(config["system"]["builddir"])
-    autotools.rawInstall("install_root=%s localedata/install-locales" % get.installDIR())
+    autotools.rawInstall("install_root=%s localedata/install-locales"
+                         % get.installDIR())
 
     # now we do generic stuff
     shelltools.cd(pkgworkdir)
@@ -115,7 +123,8 @@ def install():
         pisitools.remove("/etc/ld.so.cache")
 
     # It previously has 0755 perms which was killing things
-    shelltools.chmod("%s/usr/%s/misc/pt_chown" % (get.installDIR(), config["system"]["libdir"]), 04711)
+    shelltools.chmod("%s/usr/%s/misc/pt_chown" % (get.installDIR(),
+                     config["system"]["libdir"]), 04711)
 
     # Prevent overwriting of the /etc/localtime symlink
     if shelltools.isFile("%s/etc/localtime" % get.installDIR()):
@@ -128,11 +137,9 @@ def install():
     if shelltools.isDirectory("%s/usr/share/zoneinfo" % get.installDIR()):
         pisitools.removeDir("/usr/share/zoneinfo")
 
-    #while bootstrapping whole system zic should not be removed. timezone package does not build without it. # 2013
     for i in ["zdump"]:
         if shelltools.isFile("%s/usr/sbin/%s" % (get.installDIR(), i)):
             pisitools.remove("/usr/sbin/%s" % i)
 
-
-    pisitools.dodoc("BUGS", "ChangeLog*", "CONFORMANCE", "NAMESPACE", "NEWS", "PROJECTS", "README*", "LICENSES")
-
+    pisitools.dodoc("BUGS", "ChangeLog*", "CONFORMANCE", "NAMESPACE", "NEWS",
+                    "PROJECTS", "README*", "LICENSES")
