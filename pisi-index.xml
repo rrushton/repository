@@ -37272,8 +37272,8 @@
         <Source>
             <Name>python</Name>
             <Packager>
-                <Name>SolusOS Developers</Name>
-                <Email>dev@solusos.com</Email>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
             </Packager>
             <License>PSF</License>
             <PartOf>system.base</PartOf>
@@ -37283,6 +37283,7 @@
             <Patches>
                 <Patch level="1">Python-2.7.1-berkeley-db-5.3.patch</Patch>
                 <Patch level="1">Python-2.7.1-berkeley-db-5.3-2.patch</Patch>
+                <Patch level="1">security/cve-2013-4238.patch</Patch>
             </Patches>
             <SourceURI>system/base/python/pspec.xml</SourceURI>
         </Source>
@@ -37298,6 +37299,14 @@
             </Files>
         </Package>
         <History>
+            <Update release="2" type="security">
+                <Date>08-23-2013</Date>
+                <Version>2.7.3</Version>
+                <Comment>- CVE-2013-4238
+The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does not properly handle a &apos;\0&apos; character in a domain name in the Subject Alternative Name field of an X.509 certificate, which allows man-in-the-middle attackers to spoof arbitrary SSL servers via a crafted certificate issued by a legitimate Certification Authority, a related issue to CVE-2009-2408.</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="1">
                 <Date>03-12-2013</Date>
                 <Version>2.7.3</Version>
