@@ -166,7 +166,7 @@ def main():
     for package in packages:
         spec = os.path.join(packages[package], "pspec.xml")
         pkg, version = parse_pspec(spec)
-        our_packages[pkg] = version
+        our_packages[pkg] = (version,packages[package])
 
     vdb = NVDCVEDB()
     vdb.check_installation()
@@ -177,11 +177,14 @@ def main():
     reports = 0
     for vulnerability in vdb.vulnerabilities:
         if vulnerability.product in our_packages:
-            package = our_packages[vulnerability.product]
+            package,basedir = our_packages[vulnerability.product]
             for applicable in vulnerability.affected_versions:
                 if LooseVersion(applicable) == LooseVersion(package):
-                    reports += 1
-                    print_report(vulnerability)
+                    # Check we haven't already patched this
+                    patch = os.path.join(basedir, "files/security/%s.patch" % vulnerability.cve_id.lower())
+                    if not os.path.exists(patch):
+                        reports += 1
+                        print_report(vulnerability)
 
     print "Discovered %d potentially insecure packages" % reports
 
