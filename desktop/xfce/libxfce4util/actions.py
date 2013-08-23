@@ -1,18 +1,19 @@
-
 #!/usr/bin/python
 
 # Created For SolusOS
 
-from pisi.actionsapi import shelltools, get, autotools, pisitools
+from pisi.actionsapi import autotools, pisitools
 
 
 def setup():
-	autotools.configure ()
+    autotools.configure()
+
 
 def build():
-	autotools.make ()
+    autotools.make()
+
 
 def install():
-	autotools.install ()
+    autotools.install()
 
-	pisitools.dodoc ("AUTHORS", "ChangeLog", "COPYING")
+    pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING")

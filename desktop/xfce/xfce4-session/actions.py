@@ -1,21 +1,19 @@
-
 #!/usr/bin/python
 
 # Created For SolusOS
 
-from pisi.actionsapi import shelltools, get, autotools, pisitools
+from pisi.actionsapi import get, autotools, pisitools
 
 
 def setup():
-	autotools.configure ("--enable-libgnome-keyring")
-						
-def build():
-	autotools.make ()
-	
-def install():
-	autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
-	
-	pisitools.dodoc ("AUTHORS", "ChangeLog", "BUGS", "COPYING")
-	
-	
+    autotools.configure("--enable-libgnome-keyring")
 
+
+def build():
+    autotools.make()
+
+
+def install():
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+
+    pisitools.dodoc("AUTHORS", "ChangeLog", "BUGS", "COPYING")
