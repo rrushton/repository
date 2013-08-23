@@ -10,7 +10,7 @@
         <Summary>GNU's basic cryptographic library</Summary>
         <Description> Libgcrypt is GNU's basic cryptographic library."</Description>
         <License>GPLv3</License>
-        <Archive sha1sum="8b60a26b7eae1a727d58932d6b1efeb5716648ed" type="tarbz2">ftp://ftp.gnupg.org/gcrypt/libgcrypt/libgcrypt-1.5.1.tar.bz2</Archive>
+        <Archive sha1sum="2c6553cc17f2a1616d512d6870fe95edf6b0e26e" type="tarbz2">ftp://ftp.gnupg.org/gcrypt/libgcrypt/libgcrypt-1.5.3.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>libgpg-error</Dependency>
         </BuildDependencies>
@@ -38,11 +38,21 @@
             <Path fileType="header">/usr/include</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency release="1">libgcrypt</Dependency>
+            <Dependency release="current">libgcrypt</Dependency>
         </RuntimeDependencies>
     </Package>
     
     <History>
+        <Update release="2" type="security">
+            <Date>08-23-2013</Date>
+            <Version>1.5.3</Version>
+            <Comment> - CVE-2013-4242
+
+GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possibly other products, allows local users to obtain private RSA keys via a cache side-channel attack involving the L3 cache, aka Flush+Reload.</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>03-30-2013</Date>
             <Version>1.5.1</Version>

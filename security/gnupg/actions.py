@@ -2,16 +2,17 @@
 
 # Created for SolusOS
 
-from pisi.actionsapi import autotools, get, shelltools, pisitools
+from pisi.actionsapi import autotools, get, pisitools
+
 
 def setup():
-	autotools.configure()
+    autotools.configure("--libexecdir=/usr/lib/GnuPG")
+
 
 def build():
-	autotools.make()
+    autotools.make()
+
 
 def install():
-	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-	pisitools.dodoc("AUTHORS", "BUGS", "COPYING", "ChangeLog", "NEWS",
-					"PROJECTS", "README", "THANKS", "TODO", "VERSION")
-	pisitools.domove("/usr/share/gnupg/FAQ", "/usr/share/doc/")
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    pisitools.dodoc("AUTHORS", "COPYING")
