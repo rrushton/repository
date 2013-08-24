@@ -29926,6 +29926,48 @@ Bug-SolusOS: T7</Comment>
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>firefox</Name>
+            <Homepage>http://www.mozilla.org</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>browser</PartOf>
+            <Summary xml:lang="en">Firefox web browser</Summary>
+            <Description xml:lang="en">Firefox web browser</Description>
+            <Archive type="tarbz2" sha1sum="db2d5b028b6ea95b5f006b46e153f50f7a52bf80">http://releases.mozilla.org/pub/mozilla.org/firefox/releases/22.0/source/firefox-22.0.source.tar.bz2</Archive>
+            <AdditionalFiles>
+                <AdditionalFile target="mozconfig">config</AdditionalFile>
+            </AdditionalFiles>
+            <BuildDependencies>
+                <Dependency>libevent-devel</Dependency>
+                <Dependency>libgtk-2-devel</Dependency>
+                <Dependency>libgtk-3-devel</Dependency>
+                <Dependency>gconf-devel</Dependency>
+                <Dependency>yasm</Dependency>
+                <Dependency>alsa-lib-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>network/web/browser/firefox/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>firefox</Name>
+            <Files>
+                <Path fileType="*">/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>08-10-2013</Date>
+                <Version>22.0</Version>
+                <Comment>Add firefox to repositories - TESTING ONLY</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>midori</Name>
             <Homepage>http://www.twotoasts.de/index.php/midori/</Homepage>
             <Packager>
