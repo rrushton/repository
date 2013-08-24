@@ -34039,6 +34039,13 @@ Bug-SolusOS: T6</Comment>
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="5">
+                <Date>08-24-2013</Date>
+                <Version>4.1.5.1</Version>
+                <Comment>Enable nullok for logins</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="4">
                 <Date>08-24-2013</Date>
                 <Version>4.1.5.1</Version>
@@ -36607,6 +36614,7 @@ Bug-SolusOS: T6</Comment>
                 <Path fileType="data">/usr/share/xml/fontconfig</Path>
                 <Path fileType="data">/var/cache/fontconfig</Path>
                 <Path fileType="config">/etc/fonts</Path>
+                <Path fileType="config">/etc/fontconfig/local.conf</Path>
                 <Path fileType="header">/usr/include</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
             </Files>
@@ -36614,8 +36622,18 @@ Bug-SolusOS: T6</Comment>
                 <COMAR script="packageHandler.py">System.PackageHandler</COMAR>
                 <COMAR script="package.py">System.Package</COMAR>
             </Provides>
+            <AdditionalFiles>
+                <AdditionalFile target="/etc/fontconfig/local.conf">local.conf</AdditionalFile>
+            </AdditionalFiles>
         </Package>
         <History>
+            <Update release="5">
+                <Date>08-24-2013</Date>
+                <Version>2.10.91</Version>
+                <Comment>Set default monospace font to Droid Sans Mono size 10</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="4">
                 <Date>08-08-2013</Date>
                 <Version>2.10.91</Version>
@@ -38053,7 +38071,7 @@ Bug-SolusOS: T6</Comment>
             <Description xml:lang="en">Development files required to build applications using PAM</Description>
             <PartOf>system.devel</PartOf>
             <RuntimeDependencies>
-                <Dependency release="3">pam</Dependency>
+                <Dependency release="4">pam</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
