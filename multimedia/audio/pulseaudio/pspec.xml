@@ -73,7 +73,7 @@
     </Package>
     
     <History>
-        <Update release="2">
+        <Update release="3">
             <Date>06-11-2013</Date>
             <Version>4.0</Version>
             <Comment>Rebuild for ALSA support
