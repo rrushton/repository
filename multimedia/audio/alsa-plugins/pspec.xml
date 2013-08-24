@@ -1,0 +1,76 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>alsa-plugins</Name>
+        <Homepage>http://www.alsa-project.org/main/index.php/Main_Page</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>Plugins for various sound servers</Summary>
+        <Description>Plugins to enable various sound servers</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="a04da303d3f70005f6ce472bbab6ecac1072a558" type="tarbz2">http://alsa.cybermirror.org/plugins/alsa-plugins-1.0.27.tar.bz2</Archive>
+
+        <BuildDependencies>
+            <Dependency>libsndfile-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>attr-devel</Dependency>
+            <Dependency>json-c-devel</Dependency>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>pulseaudio-devel</Dependency>
+            <Dependency>libice-devel</Dependency>
+            <Dependency>libxtst-devel</Dependency>
+            <Dependency>libogg-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libxi-devel</Dependency>
+            <Dependency>libvorbis-devel</Dependency>
+            <Dependency>libsm-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>alsa-plugins</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/alsa-lib</Path>
+            <Path fileType="data">/usr/share/alsa/alsa.conf.d</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>libsndfile</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>attr</Dependency>
+            <Dependency>json-c</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>pulseaudio</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>libcap2</Dependency>
+            <Dependency>libxtst</Dependency>
+            <Dependency>libogg</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libxi</Dependency>
+            <Dependency>libvorbis</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>libsm</Dependency>
+            <Dependency>libxau</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>08-24-2013</Date>
+            <Version>1.0.27</Version>
+            <Comment>Add alsa-plugins to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>	
+</PISI>
