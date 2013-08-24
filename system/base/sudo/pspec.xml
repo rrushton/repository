@@ -44,6 +44,14 @@
     </Package>
     
     <History>
+        <Update release="5">
+            <Date>08-24-2013</Date>
+            <Version>1.8.6</Version>
+            <Comment>Set the default path for sudo users</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="4">
             <Date>08-24-2013</Date>
             <Version>1.8.6</Version>
