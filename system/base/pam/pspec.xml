@@ -44,7 +44,7 @@
             <Path fileType="header">/usr/include</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency release="3">pam</Dependency>
+            <Dependency release="current">pam</Dependency>
         </RuntimeDependencies>
         <PartOf>system.devel</PartOf>
     </Package>
