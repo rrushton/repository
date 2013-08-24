@@ -9200,6 +9200,100 @@ GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possi
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>cairomm</Name>
+            <Homepage>http://cairographics.org</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.library</PartOf>
+            <Summary xml:lang="en">C++ bindings to Cairo</Summary>
+            <Description xml:lang="en">C++ bindings to Cairo</Description>
+            <Archive type="targz" sha1sum="f08bf8a331067f0d1e876523f07238fba6b26b99">http://cairographics.org/releases/cairomm-1.10.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+                <Dependency>libice-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>libsigc++-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>libsm-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/library/cairomm/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libcairomm</Name>
+            <RuntimeDependencies>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>libsigc++</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>libsm</Dependency>
+                <Dependency>pixman</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="doc">/usr/share/doc/cairomm</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libcairomm-devel</Name>
+            <Summary xml:lang="en">Development files for libcairomm</Summary>
+            <Description xml:lang="en">Development files for libcairomm</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">libcairomm</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="header">/usr/lib/cairomm-1.0/include</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libcairomm-docs</Name>
+            <Summary xml:lang="en">API Documentation for libcairomm</Summary>
+            <Description xml:lang="en">API Documentation for libcairomm</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">libcairomm-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/devhelp</Path>
+                <Path fileType="doc">/usr/share/doc/cairomm-1.0</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>08-24-2013</Date>
+                <Version>1.10.0</Version>
+                <Comment>Add cairomm to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>libcanberra</Name>
             <Homepage>http://0pointer.de/lennart/projects/libcanberra/</Homepage>
             <Packager>
@@ -19181,6 +19275,78 @@ GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possi
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>glibmm</Name>
+            <Homepage>http://www.gnome.org</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.gnome.core</PartOf>
+            <Summary xml:lang="en">C++ bindings to GLib</Summary>
+            <Description xml:lang="en">C++ bindings to GLib</Description>
+            <Archive type="tarxz" sha1sum="72dbf3da2742bc57bfc2ce360b4c413c4ab3698e">ftp://ftp.gnome.org/pub/gnome/sources/glibmm/2.37/glibmm-2.37.4.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>libsigc++-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/core/glibmm/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>glibmm</Name>
+            <RuntimeDependencies>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>libsigc++</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>glib2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="doc">/usr/share/doc/glibmm</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>glibmm-devel</Name>
+            <Summary xml:lang="en">Development files for glibmm</Summary>
+            <Description xml:lang="en">Development files for glibmm</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">glibmm</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/lib/giomm-2.4</Path>
+                <Path fileType="data">/usr/lib/glibmm-2.4</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>glibmm-docs</Name>
+            <Summary xml:lang="en">API Documentation for glibmm</Summary>
+            <Description xml:lang="en">API Documentation for glibmm</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">glibmm-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/devhelp</Path>
+                <Path fileType="doc">/usr/share/doc/glibmm-2.4</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>08-24-2013</Date>
+                <Version>2.37.4</Version>
+                <Comment>Add glibmm to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>libgtop</Name>
             <Homepage>http://www.gnome.org</Homepage>
             <Packager>
@@ -19680,6 +19846,67 @@ GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possi
                 <Date>06-05-2013</Date>
                 <Version>3.6.3</Version>
                 <Comment>Add gnome-desktop to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libsigc++</Name>
+            <Homepage>http://www.gnome.org</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.gnome.core</PartOf>
+            <Summary xml:lang="en">The libsigc++ package implements a typesafe callback system for standard C++.</Summary>
+            <Description xml:lang="en">The libsigc++ package implements a typesafe callback system for standard C++.</Description>
+            <Archive type="tarxz" sha1sum="6d23b44ab37b4f908c850c3d9898e42da54a0d8d">http://ftp.gnome.org/pub/gnome/sources/libsigc++/2.3/libsigc++-2.3.1.tar.xz</Archive>
+            <SourceURI>desktop/gnome/core/libsigc++/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libsigc++</Name>
+            <RuntimeDependencies>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="doc">/usr/share/doc/libsigc++</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libsigc++-devel</Name>
+            <Summary xml:lang="en">Development files for libsigc++</Summary>
+            <Description xml:lang="en">Development files for libsigc++</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">libsigc++</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="header">/usr/lib/sigc++-2.0/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libsigc++-docs</Name>
+            <Summary xml:lang="en">API Documentation for libsigc++</Summary>
+            <Description xml:lang="en">API Documentation for libsigc++</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">libsigc++</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/libsigc++-2.0</Path>
+                <Path fileType="doc">/usr/share/devhelp</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>08-24-2013</Date>
+                <Version>2.3.1</Version>
+                <Comment>Add libsigc++ to repositories</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
@@ -21560,6 +21787,87 @@ GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possi
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>atkmm</Name>
+            <Homepage>http://www.gnome.org</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.gtk</PartOf>
+            <Summary xml:lang="en">C++ bindings to atk</Summary>
+            <Description xml:lang="en">C++ bindings to atk</Description>
+            <Archive type="tarxz" sha1sum="c3273aa7b84fb163b0ad5bd3ee26b9d1cd4976bb">http://ftp.gnome.org/pub/gnome/sources/atkmm/2.22/atkmm-2.22.7.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>glibmm-devel</Dependency>
+                <Dependency>libatk-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>libsigc++-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gtk/atkmm/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libatkmm</Name>
+            <RuntimeDependencies>
+                <Dependency>glibmm</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libatk</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>libsigc++</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>glib2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="doc">/usr/share/doc/atkmm</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libatkmm-devel</Name>
+            <Summary xml:lang="en">Development files for libatkmm</Summary>
+            <Description xml:lang="en">Development files for libatkmm</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">libatkmm</Dependency>
+                <Dependency>glibmm-devel</Dependency>
+                <Dependency>libatk-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>libsigc++-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/lib/atkmm-1.6</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libatkmm-docs</Name>
+            <Summary xml:lang="en">API Documentation for libatkmm</Summary>
+            <Description xml:lang="en">API Documentation for libatkmm</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">libatkmm-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/devhelp</Path>
+                <Path fileType="doc">/usr/share/doc/atkmm-1.6</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>08-24-2013</Date>
+                <Version>2.22.7</Version>
+                <Comment>Add atkmm to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>at-spi2-atk</Name>
             <Homepage>http://www.gnome.org</Homepage>
             <Packager>
@@ -21727,6 +22035,137 @@ GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possi
                 <Date>02-04-2013</Date>
                 <Version>2.6.3</Version>
                 <Comment>Add at-spi2 to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>pangomm</Name>
+            <Homepage>http://www.gnome.org</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.gtk</PartOf>
+            <Summary xml:lang="en">C++ binding to pango</Summary>
+            <Description xml:lang="en">C++ binding to pango</Description>
+            <Archive type="tarxz" sha1sum="15d89717a390a0c78c01871190c8febd29dad684">http://ftp.gnome.org/pub/gnome/sources/pangomm/2.34/pangomm-2.34.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+                <Dependency>libicu-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>libice-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+                <Dependency>libcairomm-devel</Dependency>
+                <Dependency>glibmm-devel</Dependency>
+                <Dependency>libsigc++-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libsm-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gtk/pangomm/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>pangomm</Name>
+            <RuntimeDependencies>
+                <Dependency>libx11</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>libicu</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>libcairomm</Dependency>
+                <Dependency>glibmm</Dependency>
+                <Dependency>libsigc++</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libsm</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="doc">/usr/share/doc/pangomm</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>pangomm-devel</Name>
+            <Summary xml:lang="en">Development files for pangomm</Summary>
+            <Description xml:lang="en">Development files for pangomm</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">pangomm</Dependency>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+                <Dependency>libicu-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>libice-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+                <Dependency>libcairomm-devel</Dependency>
+                <Dependency>glibmm-devel</Dependency>
+                <Dependency>libsigc++-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libsm-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/lib/pangomm-1.4/</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>pangomm-docs</Name>
+            <Summary xml:lang="en">API Documentation for pangomm</Summary>
+            <Description xml:lang="en">API Documentation for pangomm</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">pangomm-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/devhelp</Path>
+                <Path fileType="doc">/usr/share/doc/pangomm-1.4</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>08-24-2013</Date>
+                <Version>2.34.0</Version>
+                <Comment>Add pangomm to repositories</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
@@ -22009,6 +22448,171 @@ GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possi
                 <Comment>Add pango to repositories</Comment>
                 <Name>Justin Krehel</Name>
                 <Email>justin@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gtk2mm</Name>
+            <Homepage>http://www.gnome.org</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.gtk</PartOf>
+            <Summary xml:lang="en">C++ bindings to GTK2</Summary>
+            <Description xml:lang="en">C++ bindings to GTK2</Description>
+            <Archive type="tarxz" sha1sum="e99866b0cb5a0d7387a7cef79253177310020b3d">http://ftp.gnome.org/pub/gnome/sources/gtkmm/2.24/gtkmm-2.24.4.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>libxcursor-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+                <Dependency>libicu-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libice-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libxinerama-devel</Dependency>
+                <Dependency>libatk-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libxdamage-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>libxrandr-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+                <Dependency>libcairomm-devel</Dependency>
+                <Dependency>glibmm-devel</Dependency>
+                <Dependency>libsigc++-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>libgtk-2-devel</Dependency>
+                <Dependency>libxfixes-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>libxcomposite-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>pangomm-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libsm-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gtk/gtk2mm/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libgtkmm-2</Name>
+            <RuntimeDependencies>
+                <Dependency>libx11</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libxcursor</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>libicu</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxinerama</Dependency>
+                <Dependency>libatk</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libxdamage</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>libxrandr</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>libcairomm</Dependency>
+                <Dependency>glibmm</Dependency>
+                <Dependency>libsigc++</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>libgtk-2</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>libxfixes</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>libxcomposite</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>pangomm</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libsm</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="doc">/usr/share/doc/gtkmm</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libgtkmm-2-devel</Name>
+            <Summary xml:lang="en">Development files for libgtkmm-2</Summary>
+            <Description xml:lang="en">Development files for libgtkmm-2</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">libgtkmm-2</Dependency>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>libxcursor-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+                <Dependency>libicu-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libice-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libxinerama-devel</Dependency>
+                <Dependency>libatk-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libxdamage-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>libxrandr-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+                <Dependency>libcairomm-devel</Dependency>
+                <Dependency>glibmm-devel</Dependency>
+                <Dependency>libsigc++-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>libgtk-2-devel</Dependency>
+                <Dependency>libxfixes-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>libxcomposite-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>pangomm-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libsm-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/lib/gtkmm-2.4</Path>
+                <Path fileType="header">/usr/lib/gdkmm-2.4</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libgtkmm-2-docs</Name>
+            <Summary xml:lang="en">API Documentation for libgtkmm-2</Summary>
+            <Description xml:lang="en">API Documentation for libgtkmm-2</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">libgtkmm-2-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/devhelp</Path>
+                <Path fileType="doc">/usr/share/doc/gtkmm-2.4</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>08-24-2013</Date>
+                <Version>2.24.4</Version>
+                <Comment>Add gtkmm to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -29140,48 +29744,6 @@ GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possi
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>firefox</Name>
-            <Homepage>http://www.mozilla.org</Homepage>
-            <Packager>
-                <Name>Ikey Doherty</Name>
-                <Email>ikey@solusos.com</Email>
-            </Packager>
-            <License>GPLv2+</License>
-            <PartOf>browser</PartOf>
-            <Summary xml:lang="en">Firefox web browser</Summary>
-            <Description xml:lang="en">Firefox web browser</Description>
-            <Archive type="tarbz2" sha1sum="db2d5b028b6ea95b5f006b46e153f50f7a52bf80">http://releases.mozilla.org/pub/mozilla.org/firefox/releases/22.0/source/firefox-22.0.source.tar.bz2</Archive>
-            <AdditionalFiles>
-                <AdditionalFile target="mozconfig">config</AdditionalFile>
-            </AdditionalFiles>
-            <BuildDependencies>
-                <Dependency>libevent-devel</Dependency>
-                <Dependency>libgtk-2-devel</Dependency>
-                <Dependency>libgtk-3-devel</Dependency>
-                <Dependency>gconf-devel</Dependency>
-                <Dependency>yasm</Dependency>
-                <Dependency>alsa-lib-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>network/web/browser/firefox/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>firefox</Name>
-            <Files>
-                <Path fileType="*">/</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>08-10-2013</Date>
-                <Version>22.0</Version>
-                <Comment>Add firefox to repositories - TESTING ONLY</Comment>
-                <Name>Ikey Doherty</Name>
-                <Email>ikey@solusos.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>midori</Name>
             <Homepage>http://www.twotoasts.de/index.php/midori/</Homepage>
             <Packager>
@@ -31838,51 +32400,6 @@ GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possi
                 <Date>04-21-2013</Date>
                 <Version>1.9.1</Version>
                 <Comment>Add virtualenv to repositories</Comment>
-                <Name>Justin Krehel</Name>
-                <Email>justin@solusos.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>php</Name>
-            <Homepage>http://www.php.net</Homepage>
-            <Packager>
-                <Name>Justin Krehel</Name>
-                <Email>justin@solusos.com</Email>
-            </Packager>
-            <License>PHP</License>
-            <PartOf>programming</PartOf>
-            <Summary xml:lang="en">PHP Programming Language</Summary>
-            <Description xml:lang="en">PHP is a general-purpose scripting language that is widely used in web development and can be embedded into HTML.</Description>
-            <Archive type="targz" sha1sum="e7a9e798821fa186ae297392353be8f1d3de6edd">http://www.php.net/distributions/php-5.4.16.tar.gz</Archive>
-            <SourceURI>programming/php/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>php</Name>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="man">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>php-devel</Name>
-            <Summary xml:lang="en">Development files for php</Summary>
-            <Description xml:lang="en">Development files for php</Description>
-            <RuntimeDependencies>
-                <Dependency release="1">php</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="header">/usr/include</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>06-11-2013</Date>
-                <Version>5.4.16</Version>
-                <Comment>Add php to repositories</Comment>
                 <Name>Justin Krehel</Name>
                 <Email>justin@solusos.com</Email>
             </Update>
