@@ -25250,13 +25250,20 @@ Bug-SolusOS: T7</Comment>
             <Summary xml:lang="en">Modules required to use functions of the computer</Summary>
             <Description xml:lang="en">Modules required by the kernel to utilitse the many parts of the computer</Description>
             <RuntimeDependencies>
-                <Dependency release="11">kernel</Dependency>
+                <Dependency release="12">kernel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/lib/modules</Path>
             </Files>
         </Package>
         <History>
+            <Update release="12">
+                <Date>08-24-2013</Date>
+                <Version>3.10.6</Version>
+                <Comment>Fix comar script</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="11">
                 <Date>08-20-2013</Date>
                 <Version>3.10.6</Version>
@@ -34032,6 +34039,13 @@ Bug-SolusOS: T6</Comment>
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="4">
+                <Date>08-24-2013</Date>
+                <Version>4.1.5.1</Version>
+                <Comment>Enable chpasswd tool for livecd creation</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="3">
                 <Date>06-05-2013</Date>
                 <Version>4.1.5.1</Version>
@@ -34142,6 +34156,13 @@ Bug-SolusOS: T6</Comment>
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="4">
+                <Date>08-24-2013</Date>
+                <Version>1.8.6</Version>
+                <Comment>Change sudo group to #27, avoid conflicts</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="3">
                 <Date>08-13-2013</Date>
                 <Version>1.8.6</Version>
@@ -38011,6 +38032,7 @@ Bug-SolusOS: T6</Comment>
             <Archive type="tarbz2" sha1sum="7a95061499bac787c16bb7f7083a139f3abc15d2">http://linux-pam.org/library/Linux-PAM-1.1.6.tar.bz2</Archive>
             <Patches>
                 <Patch level="1">Linux-PAM-1.1.6-destdir.patch</Patch>
+                <Patch level="1">pam_unix_enable_nullok.patch</Patch>
             </Patches>
             <SourceURI>system/base/pam/pspec.xml</SourceURI>
         </Source>
@@ -38038,6 +38060,13 @@ Bug-SolusOS: T6</Comment>
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>08-24-2013</Date>
+                <Version>1.1.6</Version>
+                <Comment>Fix nullok handling in pam_unix.so</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="3">
                 <Date>04-03-2013</Date>
                 <Version>1.1.6</Version>
