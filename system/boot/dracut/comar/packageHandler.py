@@ -14,9 +14,10 @@ def updateInitrd(filepath):
             cmd = "dracut -f --kver %s" % version
             os.system(cmd)
 
-        # Determine whether to actually update grub or not.
-        if os.path.exists("/proc/cmdline"):
-            os.system("/usr/sbin/update-grub")
+            # Determine whether to actually update grub or not.
+            if os.path.exists("/proc/cmdline"):
+                os.system("/usr/sbin/update-grub")
+            break
 
 
 def setupPackage(metapath, filepath):
