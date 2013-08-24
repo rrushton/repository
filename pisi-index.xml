@@ -32648,7 +32648,7 @@ The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does
             <PartOf>system.utils</PartOf>
             <Summary xml:lang="en">The LVM2 package is a package that manages logical partitions. It allows spanning of file systems across multiple physical disks and disk partitions and provides for dynamic growing or shrinking of logical partitions.</Summary>
             <Description xml:lang="en">The LVM2 package is a package that manages logical partitions. It allows spanning of file systems across multiple physical disks and disk partitions and provides for dynamic growing or shrinking of logical partitions.</Description>
-            <Archive type="targz" sha1sum="90a1f3cc3fb9d1c47cc94a9cf58dddacecc26e57">ftp://sources.redhat.com/pub/lvm2/LVM2.2.02.99.tgz</Archive>
+            <Archive type="targz" sha1sum="90a1f3cc3fb9d1c47cc94a9cf58dddacecc26e57">ftp://sources.redhat.com/pub/lvm2/releases/LVM2.2.02.99.tgz</Archive>
             <BuildDependencies>
                 <Dependency>systemd-devel</Dependency>
             </BuildDependencies>
@@ -32671,7 +32671,7 @@ The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does
             <Summary xml:lang="en">Development files for lvm2 and device-mapper</Summary>
             <Description xml:lang="en">Development files for lvm2 and device-mapper</Description>
             <RuntimeDependencies>
-                <Dependency release="4">llvm</Dependency>
+                <Dependency release="5">lvm2</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -32679,6 +32679,13 @@ The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does
             </Files>
         </Package>
         <History>
+            <Update release="5">
+                <Date>08-24-2013</Date>
+                <Version>2.02.99</Version>
+                <Comment>Fix dependency on lvm2</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="4">
                 <Date>08-08-2013</Date>
                 <Version>2.02.99</Version>
@@ -39410,6 +39417,111 @@ The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does
                 <Comment>Add sqlite3 to repositories</Comment>
                 <Name>SolusOS Developers</Name>
                 <Email>dev@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python-parted</Name>
+            <Homepage>https://fedorahosted.org/pyparted/</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">Python bindings to libparted</Summary>
+            <Description xml:lang="en">Python bindings to libparted</Description>
+            <Archive type="targz" sha1sum="6189818baa0b1e9edf199eeced5242891534a700">https://fedorahosted.org/releases/p/y/pyparted/pyparted-3.10.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>libparted-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>hardware/disk/pyparted/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-parted</Name>
+            <RuntimeDependencies>
+                <Dependency>libparted</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/python*/site-packages</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>08-24-2013</Date>
+                <Version>3.10</Version>
+                <Comment>Add pyparted to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>parted</Name>
+            <Homepage>https://www.gnu.org/software/parted/</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">Disk partitioning and partition resizing tool.</Summary>
+            <Description xml:lang="en">Disk partitioning and partition resizing tool.</Description>
+            <Archive type="tarxz" sha1sum="4f006d29451f7cfbf6131efdb0148e7f386ebc8f">http://ftp.gnu.org/gnu/parted/parted-3.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency releaseFrom="5">lvm2-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>hardware/disk/parted/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>parted</Name>
+            <RuntimeDependencies>
+                <Dependency release="1">libparted</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/sbin/parted</Path>
+                <Path fileType="info">/usr/share/info</Path>
+                <Path fileType="man">/usr/share/man/man8/parted.8</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libparted</Name>
+            <Summary xml:lang="en">Disk partitioning and partition resizing tool - shared libraries</Summary>
+            <Description xml:lang="en">Disk partitioning and partition resizing tool - shard libraries</Description>
+            <RuntimeDependencies>
+                <Dependency>util-linux</Dependency>
+                <Dependency releaseFrom="5">lvm2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="executable">/usr/sbin/partprobe</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man/man8/partprobe.8</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libparted-devel</Name>
+            <Summary xml:lang="en">Development files for libparted</Summary>
+            <Description xml:lang="en">Development files for libparted</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">libparted</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>08-24-2013</Date>
+                <Version>3.1</Version>
+                <Comment>Add parted to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
             </Update>
         </History>
     </SpecFile>
