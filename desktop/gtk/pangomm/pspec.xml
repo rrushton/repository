@@ -1,0 +1,137 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>pangomm</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>C++ binding to pango</Summary>
+        <Description>C++ binding to pango</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="15d89717a390a0c78c01871190c8febd29dad684" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/pangomm/2.34/pangomm-2.34.0.tar.xz</Archive>
+
+        <BuildDependencies>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>harfbuzz-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libicu-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>libice-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>libcairomm-devel</Dependency>
+            <Dependency>glibmm-devel</Dependency>
+            <Dependency>libsigc++-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libsm-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>pangomm</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="doc">/usr/share/doc/pangomm</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>libx11</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>libicu</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>libcairomm</Dependency>
+            <Dependency>glibmm</Dependency>
+            <Dependency>libsigc++</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libsm</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>pangomm-devel</Name>
+        <Summary>Development files for pangomm</Summary>
+        <Description>Development files for pangomm</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib/pangomm-1.4/</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">pangomm</Dependency>
+
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>harfbuzz-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libicu-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>libice-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>libcairomm-devel</Dependency>
+            <Dependency>glibmm-devel</Dependency>
+            <Dependency>libsigc++-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libsm-devel</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>pangomm-docs</Name>
+        <Summary>API Documentation for pangomm</Summary>
+        <Description>API Documentation for pangomm</Description>
+        <Files>
+            <Path fileType="doc">/usr/share/devhelp</Path>
+            <Path fileType="doc">/usr/share/doc/pangomm-1.4</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">pangomm-devel</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>08-24-2013</Date>
+            <Version>2.34.0</Version>
+            <Comment>Add pangomm to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>	
+</PISI>
