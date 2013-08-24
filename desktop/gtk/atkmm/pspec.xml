@@ -1,0 +1,87 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>atkmm</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>C++ bindings to atk</Summary>
+        <Description>C++ bindings to atk</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="c3273aa7b84fb163b0ad5bd3ee26b9d1cd4976bb" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/atkmm/2.22/atkmm-2.22.7.tar.xz</Archive>
+
+        <BuildDependencies>
+            <Dependency>glibmm-devel</Dependency>
+            <Dependency>libatk-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>libsigc++-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libatkmm</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="doc">/usr/share/doc/atkmm</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>glibmm</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libatk</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>libsigc++</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>libatkmm-devel</Name>
+        <Summary>Development files for libatkmm</Summary>
+        <Description>Development files for libatkmm</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib/atkmm-1.6</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libatkmm</Dependency>
+
+            <Dependency>glibmm-devel</Dependency>
+            <Dependency>libatk-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>libsigc++-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>libatkmm-docs</Name>
+        <Summary>API Documentation for libatkmm</Summary>
+        <Description>API Documentation for libatkmm</Description>
+        <Files>
+            <Path fileType="doc">/usr/share/devhelp</Path>
+            <Path fileType="doc">/usr/share/doc/atkmm-1.6</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libatkmm-devel</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>08-24-2013</Date>
+            <Version>2.22.7</Version>
+            <Comment>Add atkmm to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>	
+</PISI>
