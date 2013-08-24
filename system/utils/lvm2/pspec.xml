@@ -10,7 +10,7 @@
         <Summary> The LVM2 package is a package that manages logical partitions. It allows spanning of file systems across multiple physical disks and disk partitions and provides for dynamic growing or shrinking of logical partitions.</Summary>
         <Description>The LVM2 package is a package that manages logical partitions. It allows spanning of file systems across multiple physical disks and disk partitions and provides for dynamic growing or shrinking of logical partitions. </Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="90a1f3cc3fb9d1c47cc94a9cf58dddacecc26e57"  type="targz">ftp://sources.redhat.com/pub/lvm2/LVM2.2.02.99.tgz</Archive>
+        <Archive sha1sum="90a1f3cc3fb9d1c47cc94a9cf58dddacecc26e57"  type="targz">ftp://sources.redhat.com/pub/lvm2/releases/LVM2.2.02.99.tgz</Archive>
         
         <BuildDependencies>
             <Dependency>systemd-devel</Dependency>
