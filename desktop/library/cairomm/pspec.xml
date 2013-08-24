@@ -1,0 +1,99 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>cairomm</Name>
+        <Homepage>http://cairographics.org</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>C++ bindings to Cairo</Summary>
+        <Description>C++ bindings to Cairo</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="f08bf8a331067f0d1e876523f07238fba6b26b99" type="targz">http://cairographics.org/releases/cairomm-1.10.0.tar.gz</Archive>
+
+        <BuildDependencies>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libice-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>libsigc++-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>libsm-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libcairomm</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="doc">/usr/share/doc/cairomm</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>libsigc++</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libsm</Dependency>
+            <Dependency>pixman</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>libcairomm-devel</Name>
+        <Summary>Development files for libcairomm</Summary>
+        <Description>Development files for libcairomm</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/lib/cairomm-1.0/include</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libcairomm</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>libcairomm-docs</Name>
+        <Summary>API Documentation for libcairomm</Summary>
+        <Description>API Documentation for libcairomm</Description>
+        <Files>
+            <Path fileType="doc">/usr/share/devhelp</Path>
+            <Path fileType="doc">/usr/share/doc/cairomm-1.0</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libcairomm-devel</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>08-24-2013</Date>
+            <Version>1.10.0</Version>
+            <Comment>Add cairomm to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>	
+</PISI>
