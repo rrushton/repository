@@ -2,7 +2,7 @@
 
 import os, re
 
-OUR_ID = 1002
+OUR_ID = 28
 OUR_NAME = "sudo"
 
 def postInstall(fromVersion, fromRelease, toVersion, toRelease):
