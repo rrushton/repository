@@ -53,7 +53,7 @@
         <Name>libgtkmm-2</Name>
         <Files>
             <Path fileType="library">/usr/lib/lib*.so*</Path>
-            <Path fileType="doc">/usr/share/doc/gtkmm</Path>
+            <Path fileType="doc">/usr/share/doc/gtk2mm</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency>libx11</Dependency>
