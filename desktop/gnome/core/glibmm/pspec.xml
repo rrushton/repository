@@ -1,0 +1,77 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>glibmm</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>C++ bindings to GLib</Summary>
+        <Description>C++ bindings to GLib</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="72dbf3da2742bc57bfc2ce360b4c413c4ab3698e" type="tarxz">ftp://ftp.gnome.org/pub/gnome/sources/glibmm/2.37/glibmm-2.37.4.tar.xz</Archive>
+
+        <BuildDependencies>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>libsigc++-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>glibmm</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="doc">/usr/share/doc/glibmm</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>libsigc++</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+   <Package>
+        <Name>glibmm-devel</Name>
+        <Summary>Development files for glibmm</Summary>
+        <Description>Development files for glibmm</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib/giomm-2.4</Path>
+            <Path fileType="data">/usr/lib/glibmm-2.4</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">glibmm</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+  <Package>
+        <Name>glibmm-docs</Name>
+        <Summary>API Documentation for glibmm</Summary>
+        <Description>API Documentation for glibmm</Description>
+        <Files>
+            <Path fileType="doc">/usr/share/devhelp</Path>
+            <Path fileType="doc">/usr/share/doc/glibmm-2.4</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">glibmm-devel</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>08-24-2013</Date>
+            <Version>2.37.4</Version>
+            <Comment>Add glibmm to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>	
+</PISI>
