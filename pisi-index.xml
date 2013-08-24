@@ -24117,7 +24117,7 @@ GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possi
             <PartOf>multimedia.audio</PartOf>
             <Summary xml:lang="en">The ALSA Sound Interface</Summary>
             <Description xml:lang="en">The ALSA Library package contains the ALSA library used by programs (including ALSA Utilities) requiring access to the ALSA sound interface.</Description>
-            <Archive type="tarbz2" sha1sum="a110aa9230fc93c4bef776d255df2fac9ffd9e7a">http://alsa.cybermirror.org/lib/alsa-lib-1.0.27.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="9cd50f4b5f07d5e7213dd1277b8673e677804cf8">http://alsa.cybermirror.org/lib/alsa-lib-1.0.27.2.tar.bz2</Archive>
             <SourceURI>multimedia/audio/alsa-lib/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -24135,7 +24135,7 @@ GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possi
             <Summary xml:lang="en">Development files for alsa-lib</Summary>
             <Description xml:lang="en">Development files for alsa-lib</Description>
             <RuntimeDependencies>
-                <Dependency release="2">alsa-lib</Dependency>
+                <Dependency release="3">alsa-lib</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -24144,6 +24144,13 @@ GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possi
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>08-24-2013</Date>
+                <Version>1.0.27.2</Version>
+                <Comment>Latest upstream version</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="2">
                 <Date>04-15-2013</Date>
                 <Version>1.0.27</Version>
@@ -24238,6 +24245,160 @@ GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possi
                 <Date>06-05-2013</Date>
                 <Version>4.0</Version>
                 <Comment>Add pulseaudio to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>alsa-utils</Name>
+            <Homepage>http://www.alsa-project.org</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>multimedia.audio</PartOf>
+            <Summary xml:lang="en">Various utilities which are useful for controlling your sound card</Summary>
+            <Description xml:lang="en">Various utilities which are useful for controlling your sound card</Description>
+            <Archive type="tarbz2" sha1sum="dfec4691dde6b2cee292bbd10f0f368158713e8f">http://alsa.cybermirror.org/utils/alsa-utils-1.0.27.2.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>ncurses-devel</Dependency>
+                <Dependency>alsa-lib-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/audio/alsa-utils/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>alsa-utils</Name>
+            <RuntimeDependencies>
+                <Dependency>ncurses</Dependency>
+                <Dependency>alsa-lib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/sbin</Path>
+                <Path fileType="data">/usr/share/alsa</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/sounds</Path>
+                <Path fileType="data">/usr/lib/systemd/system</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/lib/udev/rules.d</Path>
+                <Path fileType="data">/var/lib/alsa</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>08-24-2013</Date>
+                <Version>1.0.27.2</Version>
+                <Comment>Add alsa-utils to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>alsa-plugins</Name>
+            <Homepage>http://www.alsa-project.org/main/index.php/Main_Page</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>multimedia.audio</PartOf>
+            <Summary xml:lang="en">Plugins for various sound servers</Summary>
+            <Description xml:lang="en">Plugins to enable various sound servers</Description>
+            <Archive type="tarbz2" sha1sum="a04da303d3f70005f6ce472bbab6ecac1072a558">http://alsa.cybermirror.org/plugins/alsa-plugins-1.0.27.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>libsndfile-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>attr-devel</Dependency>
+                <Dependency>json-c-devel</Dependency>
+                <Dependency>alsa-lib-devel</Dependency>
+                <Dependency>dbus-devel</Dependency>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>pulseaudio-devel</Dependency>
+                <Dependency>libice-devel</Dependency>
+                <Dependency>libxtst-devel</Dependency>
+                <Dependency>libogg-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>libxi-devel</Dependency>
+                <Dependency>libvorbis-devel</Dependency>
+                <Dependency>libsm-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/audio/alsa-plugins/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>alsa-plugins</Name>
+            <RuntimeDependencies>
+                <Dependency>libsndfile</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>attr</Dependency>
+                <Dependency>json-c</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>pulseaudio</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>libcap2</Dependency>
+                <Dependency>libxtst</Dependency>
+                <Dependency>libogg</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>libxi</Dependency>
+                <Dependency>libvorbis</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>libsm</Dependency>
+                <Dependency>libxau</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/alsa-lib</Path>
+                <Path fileType="data">/usr/share/alsa/alsa.conf.d</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>08-24-2013</Date>
+                <Version>1.0.27</Version>
+                <Comment>Add alsa-plugins to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>alsa-firmware</Name>
+            <Homepage>http://www.alsa-project.org</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>multimedia.audio</PartOf>
+            <Summary xml:lang="en">ALSA Firmware for certain sound cards</Summary>
+            <Description xml:lang="en">ALSA Firmware for certain sound cards</Description>
+            <Archive type="tarbz2" sha1sum="91782f07e492f58ce4746a76a66914497fc654fe">http://alsa.cybermirror.org/firmware/alsa-firmware-1.0.27.tar.bz2</Archive>
+            <SourceURI>multimedia/audio/alsa-firmware/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>alsa-firmware</Name>
+            <Files>
+                <Path fileType="library">/lib/firmware</Path>
+                <Path fileType="library">/usr/share/alsa/firmware</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>08-24-2013</Date>
+                <Version>1.0.27</Version>
+                <Comment>Add alsa-firmware to repositories</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
@@ -40037,6 +40198,124 @@ The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does
                 <Date>08-24-2013</Date>
                 <Version>3.1</Version>
                 <Comment>Add parted to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gparted</Name>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">GParted is a free graphical disk partition editor</Summary>
+            <Description xml:lang="en">GNOME Partition Editor for creating, reorganizing, and deleting disk partitions. It uses libparted from the parted project to detect and manipulate partition tables. Optional file system tools permit managing file systems not included in libparted.</Description>
+            <Archive type="tarbz2" sha1sum="c71225a6ac3caf05df21d3a38489e465bdac424c">http://sourceforge.net/projects/gparted/files/gparted/gparted-0.16.1/gparted-0.16.1.tar.bz2/download</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>lvm2-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>libxcursor-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>libgtk-2-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+                <Dependency>libicu-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>libgtkmm-2-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libice-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libxinerama-devel</Dependency>
+                <Dependency>libatk-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libxdamage-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>libxrandr-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+                <Dependency>libcairomm-devel</Dependency>
+                <Dependency>glibmm-devel</Dependency>
+                <Dependency>libsigc++-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libxfixes-devel</Dependency>
+                <Dependency>libatkmm-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>libparted-devel</Dependency>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>libxcomposite-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>pangomm-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libsm-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>hardware/disk/gparted/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gparted</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>lvm2</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libxcursor</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>libgtk-2</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>libicu</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>libgtkmm-2</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxinerama</Dependency>
+                <Dependency>libatk</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libxdamage</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>libxrandr</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>libcairomm</Dependency>
+                <Dependency>glibmm</Dependency>
+                <Dependency>libsigc++</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>libxfixes</Dependency>
+                <Dependency>libatkmm</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>libparted</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>libxcomposite</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>pangomm</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libsm</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/sbin</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/icons/hicolor</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>08-24-2013</Date>
+                <Version>0.16.1</Version>
+                <Comment>Add gparted to repositories</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
