@@ -1,0 +1,121 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gparted</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>GParted is a free graphical disk partition editor</Summary>
+        <Description>GNOME Partition Editor for creating, reorganizing, and deleting disk partitions. It uses libparted from the parted project to detect and manipulate partition tables. Optional file system tools permit managing file systems not included in libparted.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="c71225a6ac3caf05df21d3a38489e465bdac424c" type="tarbz2">http://sourceforge.net/projects/gparted/files/gparted/gparted-0.16.1/gparted-0.16.1.tar.bz2/download</Archive>
+
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>lvm2-devel</Dependency>
+            <Dependency>harfbuzz-devel</Dependency>
+            <Dependency>libxcursor-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libgtk-2-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libicu-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>libgtkmm-2-devel</Dependency>
+            <Dependency>glibc-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libice-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libxinerama-devel</Dependency>
+            <Dependency>libatk-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libxdamage-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>libxrandr-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>libcairomm-devel</Dependency>
+            <Dependency>glibmm-devel</Dependency>
+            <Dependency>libsigc++-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libxfixes-devel</Dependency>
+            <Dependency>libatkmm-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>libparted-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libxcomposite-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency>pangomm-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libsm-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gparted</Name>
+        <Files>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/icons/hicolor</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>lvm2</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>libxcursor</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libgtk-2</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>libicu</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>libgtkmm-2</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxinerama</Dependency>
+            <Dependency>libatk</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libxdamage</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libxrandr</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>libcairomm</Dependency>
+            <Dependency>glibmm</Dependency>
+            <Dependency>libsigc++</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>libxfixes</Dependency>
+            <Dependency>libatkmm</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>libparted</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libxcomposite</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>pangomm</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libsm</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>08-24-2013</Date>
+            <Version>0.16.1</Version>
+            <Comment>Add gparted to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>	
+</PISI>
