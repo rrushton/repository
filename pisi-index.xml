@@ -34163,6 +34163,13 @@ Bug-SolusOS: T6</Comment>
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="5">
+                <Date>08-24-2013</Date>
+                <Version>1.8.6</Version>
+                <Comment>Set the default path for sudo users</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="4">
                 <Date>08-24-2013</Date>
                 <Version>1.8.6</Version>
@@ -36614,7 +36621,6 @@ Bug-SolusOS: T6</Comment>
                 <Path fileType="data">/usr/share/xml/fontconfig</Path>
                 <Path fileType="data">/var/cache/fontconfig</Path>
                 <Path fileType="config">/etc/fonts</Path>
-                <Path fileType="config">/etc/fontconfig/local.conf</Path>
                 <Path fileType="header">/usr/include</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
             </Files>
@@ -36623,10 +36629,17 @@ Bug-SolusOS: T6</Comment>
                 <COMAR script="package.py">System.Package</COMAR>
             </Provides>
             <AdditionalFiles>
-                <AdditionalFile target="/etc/fontconfig/local.conf">local.conf</AdditionalFile>
+                <AdditionalFile target="/etc/fonts/local.conf">local.conf</AdditionalFile>
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="6">
+                <Date>08-24-2013</Date>
+                <Version>2.10.91</Version>
+                <Comment>Fix release 5 by placing file in correct directory</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="5">
                 <Date>08-24-2013</Date>
                 <Version>2.10.91</Version>
