@@ -9,6 +9,6 @@ account   include     system-account
 session   include     system-session
 
 # Always permit for authentication updates
-password  required    pam_permit.so
+password  required    pam_unix.so sha512 shadow nullok
 
 # End /etc/pam.d/chpasswd
