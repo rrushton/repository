@@ -1,0 +1,65 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libsigc++</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>The libsigc++ package implements a typesafe callback system for standard C++.</Summary>
+        <Description>The libsigc++ package implements a typesafe callback system for standard C++.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="6d23b44ab37b4f908c850c3d9898e42da54a0d8d" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/libsigc++/2.3/libsigc++-2.3.1.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>libsigc++</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="doc">/usr/share/doc/libsigc++</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>libsigc++-devel</Name>
+        <Summary>Development files for libsigc++</Summary>
+        <Description>Development files for libsigc++</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="header">/usr/lib/sigc++-2.0/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libsigc++</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>libsigc++-docs</Name>
+        <Summary>API Documentation for libsigc++</Summary>
+        <Description>API Documentation for libsigc++</Description>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/libsigc++-2.0</Path>
+            <Path fileType="doc">/usr/share/devhelp</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libsigc++</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>08-24-2013</Date>
+            <Version>2.3.1</Version>
+            <Comment>Add libsigc++ to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>	
+</PISI>
