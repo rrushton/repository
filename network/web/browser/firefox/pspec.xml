@@ -10,37 +10,79 @@
         </Packager>
         <Summary>Firefox web browser</Summary>
         <Description>Firefox web browser</Description>
-        <License>GPLv2+</License>
-        <Archive sha1sum="db2d5b028b6ea95b5f006b46e153f50f7a52bf80" type="tarbz2">http://releases.mozilla.org/pub/mozilla.org/firefox/releases/22.0/source/firefox-22.0.source.tar.bz2</Archive>
-        
-        <AdditionalFiles>
-            <AdditionalFile target="mozconfig">config</AdditionalFile>
-        </AdditionalFiles>
-        
-        <!-- Temporary //-->
-        <BuildDependencies>
-            <Dependency>libevent-devel</Dependency>
-            <Dependency>libgtk-2-devel</Dependency>
-            <Dependency>libgtk-3-devel</Dependency>
-            <Dependency>gconf-devel</Dependency>
-            <Dependency>yasm</Dependency>
-            <Dependency>alsa-lib-devel</Dependency>
-        </BuildDependencies>
-        
+        <License>MPL-1.1</License>
+        <Archive sha1sum="a2eab7e7ffcb7a02c0a4baed9f7eda3ccbe60d62" type="tarbz2">http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/23.0.1/linux-i686/en-US/firefox-23.0.1.tar.bz2</Archive>
+
+        <!-- NO BUILD DEPENDENCIES.
+             Note we're not currently building from source, but rather using the firefox prebuilt tarball
+             from Mozilla directly. This somewhat complicates packaging ethos for us, but currently it
+             is *not possible to build Firefox from source using a 32-bit toolchain*, even if the hosting
+             system/kernel are 64-bit (i.e. via chroot)
+             Until we have 64-bit SolusOS ready, things will have to remain this way, and when we have
+             64-bit SolusOS we'll actually be cross-building Firefox. Exceptions ftw. //-->
     </Source>
     
     <Package>
         <Name>firefox</Name>
         <Files>
-            <Path fileType="*">/</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/opt/firefox</Path>
+            <Path fileType="data">/usr/share/applications</Path>
         </Files>
+        <AdditionalFiles>
+            <AdditionalFile permission="0755" target="/usr/bin/firefox">sh-launcher</AdditionalFile>
+            <AdditionalFile permission="0644" target="/usr/share/applications/firefox.desktop">firefox.desktop</AdditionalFile>
+        </AdditionalFiles>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>libxcursor</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libnspr</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>dbus-glib</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>libicu</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>libnss</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxt</Dependency>
+            <Dependency>libxinerama</Dependency>
+            <Dependency>libatk</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libxdamage</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libxrandr</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>libgtk-2</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>libxfixes</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libxcomposite</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libsm</Dependency>
+        </RuntimeDependencies>
     </Package>
     
     <History>
         <Update release="1">
-            <Date>08-10-2013</Date>
-            <Version>22.0</Version>
-            <Comment>Add firefox to repositories - TESTING ONLY</Comment>
+            <Date>08-25-2013</Date>
+            <Version>23.0.1</Version>
+            <Comment>Add firefox to repositories - Mozilla prebuilt</Comment>
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
