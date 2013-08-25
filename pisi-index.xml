@@ -23299,6 +23299,13 @@ GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possi
             </Provides>
         </Package>
         <History>
+            <Update release="3">
+                <Date>08-25-2013</Date>
+                <Version>0.12</Version>
+                <Comment>Improve packageHandler to correctly recreate theme caches</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="2">
                 <Date>06-19-2013</Date>
                 <Version>0.12</Version>
@@ -29932,35 +29939,73 @@ Bug-SolusOS: T7</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Packager>
-            <License>GPLv2+</License>
+            <License>MPL-1.1</License>
             <PartOf>browser</PartOf>
             <Summary xml:lang="en">Firefox web browser</Summary>
             <Description xml:lang="en">Firefox web browser</Description>
-            <Archive type="tarbz2" sha1sum="db2d5b028b6ea95b5f006b46e153f50f7a52bf80">http://releases.mozilla.org/pub/mozilla.org/firefox/releases/22.0/source/firefox-22.0.source.tar.bz2</Archive>
-            <AdditionalFiles>
-                <AdditionalFile target="mozconfig">config</AdditionalFile>
-            </AdditionalFiles>
-            <BuildDependencies>
-                <Dependency>libevent-devel</Dependency>
-                <Dependency>libgtk-2-devel</Dependency>
-                <Dependency>libgtk-3-devel</Dependency>
-                <Dependency>gconf-devel</Dependency>
-                <Dependency>yasm</Dependency>
-                <Dependency>alsa-lib-devel</Dependency>
-            </BuildDependencies>
+            <Archive type="tarbz2" sha1sum="a2eab7e7ffcb7a02c0a4baed9f7eda3ccbe60d62">http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/23.0.1/linux-i686/en-US/firefox-23.0.1.tar.bz2</Archive>
             <SourceURI>network/web/browser/firefox/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>firefox</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libxcursor</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libnspr</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>dbus-glib</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>libicu</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>libnss</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxt</Dependency>
+                <Dependency>libxinerama</Dependency>
+                <Dependency>libatk</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libxdamage</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>libxrandr</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>libgtk-2</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>libxfixes</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>libxcomposite</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libsm</Dependency>
+            </RuntimeDependencies>
             <Files>
-                <Path fileType="*">/</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/opt/firefox</Path>
+                <Path fileType="data">/usr/share/applications</Path>
             </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/bin/firefox" permission="0755">sh-launcher</AdditionalFile>
+                <AdditionalFile target="/usr/share/applications/firefox.desktop" permission="0644">firefox.desktop</AdditionalFile>
+            </AdditionalFiles>
         </Package>
         <History>
             <Update release="1">
-                <Date>08-10-2013</Date>
-                <Version>22.0</Version>
-                <Comment>Add firefox to repositories - TESTING ONLY</Comment>
+                <Date>08-25-2013</Date>
+                <Version>23.0.1</Version>
+                <Comment>Add firefox to repositories - Mozilla prebuilt</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
