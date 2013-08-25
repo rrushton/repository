@@ -10997,6 +10997,83 @@ GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possi
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>flash-player-nonfree</Name>
+            <Homepage>http://www.adobe.com</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>AdobeFlash-12.2.202.297</License>
+            <PartOf>desktop.web</PartOf>
+            <Summary xml:lang="en">Adobe Flash Player</Summary>
+            <Description xml:lang="en">The Adobe Flash Player enables rich content in web browsers, and is in use on many websites across the world. Note that this package provides the last released Linux plugin, which will no longer be updated by Adobe. Newer versions are available in Google Chrome via the Pepper Plugin.
+
+By using this package, you accept the terms and conditions set in the end-user license agreement: http://www.adobe.com/products/eulas/players/flash/</Description>
+            <Archive type="targz" sha1sum="cf86001e5362b4e226e3c24031e47b35ad491147">http://fpdownload.macromedia.com/get/flashplayer/pdc/11.2.202.297/install_flash_player_11_linux.i386.tar.gz</Archive>
+            <SourceURI>desktop/web/flash-player-nonfree/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>flash-player-nonfree</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libxcursor</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libnspr</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>libicu</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>libnss</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxt</Dependency>
+                <Dependency>libxinerama</Dependency>
+                <Dependency>libatk</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>libxrandr</Dependency>
+                <Dependency>libxdamage</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>libgtk-2</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>libxfixes</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>libxcomposite</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libsm</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/mozilla/plugins</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/icons/hicolor</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>08-25-2013</Date>
+                <Version>11.2.202.297</Version>
+                <Comment>Add flash-player-nonfree to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>geoclue</Name>
             <Packager>
                 <Name>Ikey Doherty</Name>
