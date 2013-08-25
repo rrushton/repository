@@ -12665,6 +12665,135 @@ By using this package, you accept the terms and conditions set in the end-user l
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>xfce4-mixer</Name>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.xfce</PartOf>
+            <Summary xml:lang="en">Volume mixer application for the Xfce Desktop</Summary>
+            <Description xml:lang="en">Volume mixer application for the Xfce Desktop</Description>
+            <Archive type="tarbz2" sha1sum="8d2fda90f293603496bd23426486315ccf8d06f9">http://archive.xfce.org/src/apps/xfce4-mixer/4.10/xfce4-mixer-4.10.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>libxcursor-devel</Dependency>
+                <Dependency>xz-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+                <Dependency>libicu-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libice-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libxinerama-devel</Dependency>
+                <Dependency>libatk-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libxdamage-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>libxrandr-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+                <Dependency>gstreamer-0.10-devel</Dependency>
+                <Dependency>libunique-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>libgtk-2-devel</Dependency>
+                <Dependency>xfce4-panel-devel</Dependency>
+                <Dependency>libxfixes-devel</Dependency>
+                <Dependency>libstartup-notification-devel</Dependency>
+                <Dependency>gstreamer-0.10-plugins-base-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>dbus-devel</Dependency>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>libxcomposite-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>xfconf-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libsm-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/xfce4-mixer/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-mixer</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libxcursor</Dependency>
+                <Dependency>xz</Dependency>
+                <Dependency>xcb-util</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>dbus-glib</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>libicu</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxinerama</Dependency>
+                <Dependency>libatk</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libxdamage</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>libxrandr</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>gstreamer-0.10</Dependency>
+                <Dependency>libunique</Dependency>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>libgtk-2</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>libxfixes</Dependency>
+                <Dependency>libstartup-notification</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>gstreamer-0.10-plugins-base</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>libxcomposite</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>xfconf</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libsm</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/xfce4/panel/plugins</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/xfce4-mixer</Path>
+                <Path fileType="data">/usr/share/xfce4/panel/plugins</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>08-25-2013</Date>
+                <Version>4.10.0</Version>
+                <Comment>Add xfce4-mixer to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>libvte1</Name>
             <Homepage>http://www.gnome.org</Homepage>
             <Packager>
@@ -24950,6 +25079,172 @@ Bug-SolusOS: T7</Comment>
                 <Date>04-15-2013</Date>
                 <Version>1.0.6</Version>
                 <Comment>Add gstreamer-1.0-plugins-base to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gstreamer-0.10-plugins-base</Name>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>multimedia.gstreamer</PartOf>
+            <Summary xml:lang="en">GStreamer 0.10 plugins</Summary>
+            <Description xml:lang="en">The GStreamer Base Plug-ins is a well-groomed and well-maintained collection of GStreamer plug-ins and elements, spanning the range of possible types of elements one would want to write for GStreamer. It also contains helper libraries and base classes useful for writing elements. A wide range of video and audio decoders, encoders, and filters are included.</Description>
+            <Archive type="tarxz" sha1sum="2c4b34245107395bc9103649bb2af1c1088a3f7c">http://ftp.gnome.org/pub/gnome/sources/gst-plugins-base/0.10/gst-plugins-base-0.10.36.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>gstreamer-0.10-devel</Dependency>
+                <Dependency>xz-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libogg-devel</Dependency>
+                <Dependency>libtheora-devel</Dependency>
+                <Dependency>libvorbis-devel</Dependency>
+                <Dependency>alsa-lib-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/gstreamer/gstreamer-0.10-plugins-base/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gstreamer-0.10-plugins-base</Name>
+            <RuntimeDependencies>
+                <Dependency>libxml2</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>gstreamer-0.10</Dependency>
+                <Dependency>xz</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libogg</Dependency>
+                <Dependency>libtheora</Dependency>
+                <Dependency>libvorbis</Dependency>
+                <Dependency>alsa-lib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="library">/usr/lib/gstreamer-0.10</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
+                <Path fileType="data">/usr/share/gst-plugins-base/license-translations.dict</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gstreamer-0.10-plugins-base-devel</Name>
+            <Summary xml:lang="en">Development files for gstreamer-0.10.plugins-base</Summary>
+            <Description xml:lang="en">Development files for gstreamer-0.10.plugins-base</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">gstreamer-0.10-plugins-base</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gstreamer-0.10-plugins-base-docs</Name>
+            <Summary xml:lang="en">API Documentation for gstreamer-0.10.plugins-base</Summary>
+            <Description xml:lang="en">API Documentation for gstreamer-0.10.plugins-base</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">gstreamer-0.10-plugins-base-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>08-25-2013</Date>
+                <Version>0.10.36</Version>
+                <Comment>Add gstreamer-0.10-plugins-base to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gstreamer-0.10</Name>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>multimedia.gstreamer</PartOf>
+            <Summary xml:lang="en">Streaming media framework</Summary>
+            <Description xml:lang="en">GStreamer is a streaming media framework that enables applications to share a common set of plugins for things like video encoding and decoding, audio encoding and decoding, audio and video filters, audio visualisation, web streaming and anything else that streams in real-time or otherwise.</Description>
+            <Archive type="tarxz" sha1sum="27931b00eb5d50bc477e32e2dda7440f4179e7ac">ftp://ftp.gnome.org/pub/gnome/sources/gstreamer/0.10/gstreamer-0.10.36.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>xz-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/gstreamer/gstreamer-0.10/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gstreamer-0.10</Name>
+            <RuntimeDependencies>
+                <Dependency>libxml2</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>xz</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>glib2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="executable">/usr/lib/gstreamer-0.10</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gstreamer-0.10-devel</Name>
+            <Summary xml:lang="en">Development files for gstreamer-0.10</Summary>
+            <Description xml:lang="en">Development files for gstreamer-0.10</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">gstreamer-0.10</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/share/aclocal</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gstreamer-0.10-docs</Name>
+            <Summary xml:lang="en">API Documentation for gstreamer-0.10</Summary>
+            <Description xml:lang="en">API Documentation for gstreamer-0.10</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">gstreamer-0.10-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>08-25-2013</Date>
+                <Version>0.10.36</Version>
+                <Comment>Add gstreamer to repositories</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
