@@ -4,7 +4,7 @@
 
 from pisi.actionsapi import pisitools
 
-WorkDir = "MediterraneanNight-2.02"
+WorkDir = "MediterraneanNight-2.03"
 	
 def install():
     for theme in ["MediterraneanDark", "MediterraneanDarkest", "MediterraneanGrayDark", \
