@@ -23375,7 +23375,7 @@ By using this package, you accept the terms and conditions set in the end-user l
             <PartOf>desktop.theme</PartOf>
             <Summary xml:lang="en">GTK Theme Collection by Rafa Cobreros</Summary>
             <Description xml:lang="en">GTK Theme Collection by Rafa Cobreros</Description>
-            <Archive type="targz" sha1sum="a479e0f2f38d615f326149db93edd445b9b4d06e">http://ppa.launchpad.net/webupd8team/themes/ubuntu/pool/main/m/mediterraneannight-gtk-theme/mediterraneannight-gtk-theme_2.02-1~webupd8~qr.tar.gz</Archive>
+            <Archive type="targz" sha1sum="1ba2e9146c893d65a4376c2e48701e565e85051c">http://ppa.launchpad.net/webupd8team/themes/ubuntu/pool/main/m/mediterraneannight-gtk-theme/mediterraneannight-gtk-theme_2.03-1~webupd8~qrs.tar.gz</Archive>
             <SourceURI>desktop/theme/gnome-themes-mediterranean/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -23385,6 +23385,19 @@ By using this package, you accept the terms and conditions set in the end-user l
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>08-28-2013</Date>
+                <Version>2.03</Version>
+                <Comment>Maintenace release:
+- Full support gnome 3.6.x and gnome 3.8.x
+- Fixed: Nautilus Desktop and gnome-shell-3.8.x
+(unity + nautilus desktop + gnome 3.8.x still bad, my impression is that it is a problem between unity and nautilus-3.8.x)
+- Fixed: GtkSwich looks bad on menus
+- Fixed: Epiphany-3.8.x progressbar loading page
+- Other minor cosmetic fixes</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="1">
                 <Date>06-15-2013</Date>
                 <Version>2.02</Version>
