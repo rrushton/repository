@@ -9804,6 +9804,134 @@ GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possi
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>timezonemap</Name>
+            <Homepage>https://launchpad.net/timezonemap</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.library</PartOf>
+            <Summary xml:lang="en">GTK+3 timezone map widget</Summary>
+            <Description xml:lang="en">GTK+3 timezone map widget</Description>
+            <Archive type="targz" sha1sum="b0703c6fc946df4834be08bf08036a3eaacd846d">http://archive.ubuntu.com/ubuntu/pool/main/libt/libtimezonemap/libtimezonemap_0.4.0.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>libxcursor-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>libjson-glib-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+                <Dependency>libicu-devel</Dependency>
+                <Dependency>wayland-devel</Dependency>
+                <Dependency>libxi-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libice-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libxinerama-devel</Dependency>
+                <Dependency>libatk-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libxdamage-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>libxrandr-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libgtk-3-devel</Dependency>
+                <Dependency>libxfixes-devel</Dependency>
+                <Dependency>at-spi2-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>dbus-devel</Dependency>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>libxcomposite-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libsm-devel</Dependency>
+                <Dependency>at-spi2-atk-devel</Dependency>
+                <Dependency>libxkbcommon-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/library/libtimezonemap/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libtimezonemap</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libxcursor</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>libjson-glib</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>libicu</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>wayland</Dependency>
+                <Dependency>libxi</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxinerama</Dependency>
+                <Dependency>libatk</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libxdamage</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>libxrandr</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libgtk-3</Dependency>
+                <Dependency>libxfixes</Dependency>
+                <Dependency>at-spi2</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>libxcomposite</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libsm</Dependency>
+                <Dependency>at-spi2-atk</Dependency>
+                <Dependency>libxkbcommon</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/libtimezonemap</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libtimezonemap-devel</Name>
+            <Summary xml:lang="en">Development files for libtimezonemap</Summary>
+            <Description xml:lang="en">Development files for libtimezonemap</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">libtimezonemap</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>08-29-2013</Date>
+                <Version>0.4.0.1</Version>
+                <Comment>Add  to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>librsvg</Name>
             <Homepage>http://www.live.gnome.org/LibRsvg</Homepage>
             <Packager>
@@ -30328,7 +30456,7 @@ Bug-SolusOS: T7</Comment>
             <PartOf>browser</PartOf>
             <Summary xml:lang="en">Firefox web browser</Summary>
             <Description xml:lang="en">Firefox web browser</Description>
-            <Archive type="tarbz2" sha1sum="a2eab7e7ffcb7a02c0a4baed9f7eda3ccbe60d62">http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/23.0.1/linux-i686/en-US/firefox-23.0.1.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="7e020f0d7263eb794873cc0a4bbd1ba69e6755b2">http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/24.0b7/linux-i686/en-US/firefox-24.0b7.tar.bz2</Archive>
             <SourceURI>network/web/browser/firefox/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -30387,6 +30515,13 @@ Bug-SolusOS: T7</Comment>
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="2">
+                <Date>08-30-2013</Date>
+                <Version>24.0_beta7</Version>
+                <Comment>Update to Firefox 24.0b7</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="1">
                 <Date>08-25-2013</Date>
                 <Version>23.0.1</Version>
