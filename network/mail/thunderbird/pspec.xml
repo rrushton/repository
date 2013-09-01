@@ -1,0 +1,81 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>thunderbird</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>Thunderbird email client</Summary>
+        <Description>Thunderbird email client</Description>
+        <License>MPL-1.1</License>
+        <Archive sha1sum="4aea18b5bed2dd013a6daa2cfe8aa302571c4fcd" type="tarbz2">http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/17.0.8/linux-i686/en-US/thunderbird-17.0.8.tar.bz2</Archive>
+    </Source>
+
+    <Package>
+        <Name>thunderbird</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/opt/thunderbird</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile permission="0755" target="/usr/bin/thunderbird">sh-launcher</AdditionalFile>
+            <AdditionalFile permission="0644" target="/usr/share/applications/thunderbird.desktop">thunderbird.desktop</AdditionalFile>
+        </AdditionalFiles>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>libxcursor</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libnspr</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>dbus-glib</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>libicu</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>libnss</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxt</Dependency>
+            <Dependency>libxinerama</Dependency>
+            <Dependency>libatk</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libxrandr</Dependency>
+            <Dependency>libxdamage</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>libgtk-2</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>libxfixes</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libxcomposite</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libsm</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>09-01-2013</Date>
+            <Version>17.0.8</Version>
+            <Comment>Add thunderbird to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>	
+</PISI>
