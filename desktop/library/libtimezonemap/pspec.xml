@@ -50,6 +50,10 @@
             <Dependency>at-spi2-atk-devel</Dependency>
             <Dependency>libxkbcommon-devel</Dependency>
         </BuildDependencies>
+
+        <Patches>
+            <Patch level="1">0001-Disable-test-program-segfault.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
