@@ -22,11 +22,20 @@
             <Path fileType="data">/usr/share/GeoIP</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile target="/usr/share/GeoIP/GeoIP.dat">GeoIP.dat</AdditionalFile>
+            <AdditionalFile target="/usr/share/GeoIP/Country.dat">Country.dat</AdditionalFile>
+            <AdditionalFile target="/usr/share/GeoIP/City.dat">City.dat</AdditionalFile>
         </AdditionalFiles>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>09-02-2013</Date>
+            <Version>0.2.7</Version>
+            <Comment>Add City database, rename Country database</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>09-02-2013</Date>
             <Version>0.2.7</Version>
