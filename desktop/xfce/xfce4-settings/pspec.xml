@@ -124,14 +124,18 @@
             <Dependency>glib2</Dependency>
             <Dependency>libsm</Dependency>
             <Dependency>libcanberra</Dependency>
-            
-            <!-- Branding dependencies //-->
-            <Dependency>elementary-icon-theme</Dependency>
-            <Dependency>gtk-theme-bluebird</Dependency>
         </RuntimeDependencies>
     </Package>
     
     <History>
+       <Update release="3">
+            <Date>09-03-2013</Date>
+            <Version>4.10.0</Version>
+            <Comment>New dark branding</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>08-08-2013</Date>
             <Version>4.10.0</Version>
