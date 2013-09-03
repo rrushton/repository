@@ -25949,13 +25949,20 @@ Bug-SolusOS: T7</Comment>
             <Summary xml:lang="en">Modules required to use functions of the computer</Summary>
             <Description xml:lang="en">Modules required by the kernel to utilitse the many parts of the computer</Description>
             <RuntimeDependencies>
-                <Dependency release="13">kernel</Dependency>
+                <Dependency release="14">kernel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/lib/modules</Path>
             </Files>
         </Package>
         <History>
+            <Update release="14">
+                <Date>09-03-2013</Date>
+                <Version>3.11.0</Version>
+                <Comment>Fix version to 3.11.0 for modules</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="13">
                 <Date>09-03-2013</Date>
                 <Version>3.11</Version>
