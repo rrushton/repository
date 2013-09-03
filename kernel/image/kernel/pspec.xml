@@ -24,6 +24,7 @@
             <Dependency>cpio</Dependency>
             <Dependency>bc</Dependency>
             <Dependency>perl</Dependency>
+            <Dependency>lz4</Dependency>
         </BuildDependencies>
         
     </Source>
