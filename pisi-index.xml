@@ -23462,7 +23462,7 @@ By using this package, you accept the terms and conditions set in the end-user l
                 <Name>Matias Linares</Name>
                 <Email>matiaslina@gmail.com</Email>
             </Packager>
-            <License>GPL</License>
+            <License>GPLv2+</License>
             <PartOf>desktop.theme</PartOf>
             <Summary xml:lang="en">Elementary is an good alternative to the icon themes</Summary>
             <Description xml:lang="en">Elementary is an good alternative to the icon themes with the right size of icons and perfect panel icons.</Description>
@@ -23550,14 +23550,11 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">Official SolusOS artwork</Summary>
             <Description xml:lang="en">Official SolusOS artwork</Description>
             <Archive type="tarxz" sha1sum="4e05dac058d3392927a750c9f8ba1787a40bb269">http://ng.solusos.com/sources/solusos-artwork-2.0.tar.xz</Archive>
-            <Archive type="tarbz2" sha1sum="71c9921cc94327f073e29605e9aaba33d44b67e6" target="solusos-artwork-2.0">https://bitbucket.org/solusos/solusos-branding/get/v0.1.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="e62499a2ae4715bd960fa50bcac059118c1eb773" target="solusos-artwork-2.0">https://bitbucket.org/solusos/solusos-branding/get/v0.2.tar.bz2</Archive>
             <SourceURI>desktop/theme/solusos-artwork/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>solusos-artwork</Name>
-            <RuntimeDependencies>
-                <Dependency>gtk3-engine-unico</Dependency>
-            </RuntimeDependencies>
             <Files>
                 <Path fileType="data">/usr/share/backgrounds</Path>
                 <Path fileType="data">/usr/share/gnome-background-properties</Path>
@@ -23569,11 +23566,23 @@ By using this package, you accept the terms and conditions set in the end-user l
         </Package>
         <Package>
             <Name>solusos-branding</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3-engine-unico</Dependency>
+                <Dependency>faenza-icon-theme</Dependency>
+            </RuntimeDependencies>
             <Files>
                 <Path fileType="data">/usr/share/themes</Path>
+                <Path fileType="data">/usr/share/icons</Path>
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>09-03-2013</Date>
+                <Version>2.0.1</Version>
+                <Comment>Add SolusOS icon theme to solusos-branding, and include xfwm4 fixes</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="3">
                 <Date>09-03-2013</Date>
                 <Version>2.0</Version>
@@ -23684,6 +23693,41 @@ By using this package, you accept the terms and conditions set in the end-user l
                 <Date>06-05-2013</Date>
                 <Version>0.12</Version>
                 <Comment>Add hicolor-icon-theme to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>faenza-icon-theme</Name>
+            <Homepage>http://tiheum.deviantart.com/art/Faenza-Icons-173323228</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.theme</PartOf>
+            <Summary xml:lang="en">A colourful squared icon set with monochrome status icons</Summary>
+            <Description xml:lang="en">This icon theme for Gnome provides monochromatic icons for panels, toolbars and buttons and colourful squared icons for devices, applications, folder, files and Gnome menu items. Four themes are included to fit with light or dark themes/panels.</Description>
+            <Archive type="zip" sha1sum="dfc6cc2ec6f6ecfbef0e436007cee75054043adc">http://faenza-icon-theme.googlecode.com/files/faenza-icon-theme_1.3.zip</Archive>
+            <SourceURI>desktop/theme/faenza-icon-theme/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>faenza-icon-theme</Name>
+            <RuntimeDependencies>
+                <Dependency>hicolor-icon-theme</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>09-03-2013</Date>
+                <Version>1.3</Version>
+                <Comment>Added faenza-icon-theme to repository</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
@@ -30386,62 +30430,6 @@ Bug-SolusOS: T7</Comment>
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>links</Name>
-            <Homepage>http://links.twibright.com/</Homepage>
-            <Packager>
-                <Name>Matias Linares</Name>
-                <Email>matiaslina@gmail.com</Email>
-            </Packager>
-            <License>GPLv2</License>
-            <PartOf>network.web</PartOf>
-            <Summary xml:lang="en">Lightweight console-mode web browser</Summary>
-            <Description xml:lang="en">Links is a lynx-like character mode browser. It includes support for rendering tables and frames, features background downloads, can display colors and has many other features.</Description>
-            <Archive type="tarbz2" sha1sum="1e362a7e27078d630edf5868145a46247cda8cc3">http://links.twibright.com/download/links-2.7.tar.bz2</Archive>
-            <BuildDependencies>
-                <Dependency>libpng-devel</Dependency>
-                <Dependency>libtiff-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>network/web/links/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>links</Name>
-            <RuntimeDependencies>
-                <Dependency>libpng</Dependency>
-                <Dependency>gpm</Dependency>
-                <Dependency>libtiff</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="man">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>05-24-2013</Date>
-                <Version>2.7</Version>
-                <Comment>Fix date for pisi</Comment>
-                <Name>Matias Linares</Name>
-                <Email>matiaslina@gmail.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2013-04-20</Date>
-                <Version>2.7</Version>
-                <Comment>Fixed missing dependency (libtiff)</Comment>
-                <Name>Matias Linares</Name>
-                <Email>matiaslina@gmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2013-04-13</Date>
-                <Version>2.7</Version>
-                <Comment>First release</Comment>
-                <Name>Matias Linares</Name>
-                <Email>matiaslina@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>python-django</Name>
             <Homepage>http://www.djangoproject.com</Homepage>
             <Packager>
@@ -30476,62 +30464,6 @@ Bug-SolusOS: T7</Comment>
                 <Comment>Add python-django to repositories</Comment>
                 <Name>Justin Krehel</Name>
                 <Email>justin@solusos.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>links</Name>
-            <Homepage>http://links.twibright.com/</Homepage>
-            <Packager>
-                <Name>Matias Linares</Name>
-                <Email>matiaslina@gmail.com</Email>
-            </Packager>
-            <License>GPLv2</License>
-            <PartOf>browser</PartOf>
-            <Summary xml:lang="en">Lightweight console-mode web browser</Summary>
-            <Description xml:lang="en">Links is a lynx-like character mode browser. It includes support for rendering tables and frames, features background downloads, can display colors and has many other features.</Description>
-            <Archive type="tarbz2" sha1sum="1e362a7e27078d630edf5868145a46247cda8cc3">http://links.twibright.com/download/links-2.7.tar.bz2</Archive>
-            <BuildDependencies>
-                <Dependency>libpng-devel</Dependency>
-                <Dependency>libtiff-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>network/web/browser/links/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>links</Name>
-            <RuntimeDependencies>
-                <Dependency>libpng</Dependency>
-                <Dependency>gpm</Dependency>
-                <Dependency>libtiff</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="man">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>05-24-2013</Date>
-                <Version>2.7</Version>
-                <Comment>Fix date for pisi</Comment>
-                <Name>Matias Linares</Name>
-                <Email>matiaslina@gmail.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2013-04-20</Date>
-                <Version>2.7</Version>
-                <Comment>Fixed missing dependency (libtiff)</Comment>
-                <Name>Matias Linares</Name>
-                <Email>matiaslina@gmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2013-04-13</Date>
-                <Version>2.7</Version>
-                <Comment>First release</Comment>
-                <Name>Matias Linares</Name>
-                <Email>matiaslina@gmail.com</Email>
             </Update>
         </History>
     </SpecFile>
