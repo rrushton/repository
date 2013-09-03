@@ -10,7 +10,7 @@
         <Summary>Linux Kernel</Summary>
         <Description>This package contains the binary image of the Linux kernel, required to use the operating system</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="fc6603d89bc012c83225f9289abae7dfe24915a6" type="tarbz2">https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.10.6.tar.bz2</Archive>
+        <Archive sha1sum="d50478f19d42ae2e5f21e4b0f802d0ea83a8dabe" type="tarxz">https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.11.tar.xz</Archive>
         <AdditionalFiles>
             <AdditionalFile target="configs/kernel-i686-config">configs/kernel-i686-config</AdditionalFile>
             <AdditionalFile permission="0755" target="generate-module-list">scripts/generate-module-list</AdditionalFile>
@@ -72,6 +72,20 @@
     </Package>
     
     <History>
+        <Update release="13">
+            <Date>09-03-2013</Date>
+            <Version>3.11</Version>
+            <Comment>Update to latest upstream version for alpha9
+ - Switch to lz4 compression in the kernel
+ - Build support for Intel Rapid Start technology
+ - Add additional WLAN support (rtlwifi, ath)
+ - Improve i2c support
+ - Rehash config (make oldconfig)
+ </Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="12">
             <Date>08-24-2013</Date>
             <Version>3.10.6</Version>
