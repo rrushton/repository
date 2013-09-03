@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 #
 # Created for SolusOS
+KVERSION = "3.11"
 
 from pisi.actionsapi import kerneltools
 from pisi.actionsapi import shelltools
@@ -24,14 +25,12 @@ def setup():
 def build():
     kerneltools.build(debugSymbols=False)
 
-    # When bumping major version build man files and put them into files/man
-    #autotools.make("WERROR=0 -C tools/perf perf HAVE_CPLUS_DEMANGLE=1")
-
-    # Build cpupowertools
-    #autotools.make("-C tools/power/cpupower CPUFREQ_BENCH=false")
-    #autotools.make("-C tools/power/cpupower/debug/%s centrino-decode powernow-k8-decode" % cpupower_arch)
-
 def install():
+    # pisi needs patching to check if the links exist, before it removes them
+    pisitools.dodir("/lib/modules/%s" % KVERSION)
+    shelltools.echo("%s/lib/modules/%s/source" % (get.installDIR(), KVERSION), "mustFix")
+    shelltools.echo("%s/lib/modules/%s/build" % (get.installDIR(), KVERSION), "mustFix")
+    
     kerneltools.install()
 
     # Install kernel headers needed for out-of-tree module compilation
@@ -39,14 +38,7 @@ def install():
 
     kerneltools.installLibcHeaders()
 
-    # Install cpupowertools stuff
-    #autotools.install("-C tools/power/cpupower DESTDIR=%s libdir=/usr/lib mandir=/%s CPUFREQ_BENCH=false" % (get.installDIR(), get.manDIR()))
-
-    #pisitools.dobin("tools/power/cpupower/debug/%s/centrino-decode" % cpupower_arch)
-    #pisitools.dobin("tools/power/cpupower/debug/%s/powernow-k8-decode" % cpupower_arch)
 
     # Generate some module lists to use within mkinitramfs
     shelltools.system("./generate-module-list %s/lib/modules/%s" % (get.installDIR(), kerneltools.__getSuffix()))
 
-    # Build and install the new 'perf' tool
-    #pisitools.insinto("/usr/bin", "tools/perf/perf", "perf.%s-%s" % (get.srcNAME(), get.srcVERSION()))
