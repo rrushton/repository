@@ -30542,7 +30542,7 @@ Bug-SolusOS: T7</Comment>
             <PartOf>browser</PartOf>
             <Summary xml:lang="en">Firefox web browser</Summary>
             <Description xml:lang="en">Firefox web browser</Description>
-            <Archive type="tarbz2" sha1sum="7e020f0d7263eb794873cc0a4bbd1ba69e6755b2">http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/24.0b7/linux-i686/en-US/firefox-24.0b7.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="21fac137d7b9c4f22b5a790a23bd19466e5ce98e">http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/24.0b8/linux-i686/en-US/firefox-24.0b8.tar.bz2</Archive>
             <SourceURI>network/web/browser/firefox/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -30601,6 +30601,13 @@ Bug-SolusOS: T7</Comment>
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="3">
+                <Date>09-03-2013</Date>
+                <Version>24.0_beta8</Version>
+                <Comment>Update to Firefox 24.0b8</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="2">
                 <Date>08-30-2013</Date>
                 <Version>24.0_beta7</Version>
