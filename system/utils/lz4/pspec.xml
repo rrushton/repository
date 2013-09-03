@@ -1,0 +1,47 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>lz4</Name>
+        <Homepage>http://code.google.com/p/lz4/</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>LZ4 commmand line tools</Summary>
+        <Description>LZ4 is a very fast lossless compression algorithm, providing compression speed at 400 MB/s per core, scalable with multi-cores CPU. It also features an extremely fast decoder, with speed in multiple GB/s per core, typically reaching RAM speed limits on multi-core systems.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="96ccf030b5b36e75a8ef4a5903a31bcb8060f79d" type="targz">https://dl.dropboxusercontent.com/u/59565338/LZ4/lz4-r101.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>lz4</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>lz4-devel</Name>
+        <Summary>Development files for lz4</Summary>
+        <Description>Development files for lz4</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.a</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">lz4</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>09-03-2013</Date>
+            <Version>101</Version>
+            <Comment>Add lz4 to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>	
+</PISI>
