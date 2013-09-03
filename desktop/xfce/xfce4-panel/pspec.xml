@@ -131,6 +131,17 @@
     </Package>
     
     <History>
+        <Update release="3">
+            <Date>09-03-2013</Date>
+            <Version>4.10.0</Version>
+            <Comment> - Have mixer applet by default
+ - No background image, use GTK2 theme
+ - Increase size by 1 pixel for mixer
+ </Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>08-10-2013</Date>
             <Version>4.10.0</Version>

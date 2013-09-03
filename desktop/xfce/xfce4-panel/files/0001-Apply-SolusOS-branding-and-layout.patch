@@ -1,18 +1,18 @@
-From df3dbead923274981821c17a6bb8df900ea58226 Mon Sep 17 00:00:00 2001
+From d05153a46024b4163d6765f44168d7f4c6c2249c Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey@solusos.com>
 Date: Sat, 10 Aug 2013 14:54:19 +0100
 Subject: [PATCH] Apply SolusOS branding and layout
 
 ---
- migrate/default.xml    |   63 +++++++++++-------------------------------------
- migrate/default.xml.in |   63 +++++++++++-------------------------------------
- 2 files changed, 28 insertions(+), 98 deletions(-)
+ migrate/default.xml    |   62 ++++++++++++------------------------------------
+ migrate/default.xml.in |   62 ++++++++++++------------------------------------
+ 2 files changed, 30 insertions(+), 94 deletions(-)
 
 diff --git a/migrate/default.xml b/migrate/default.xml
-index 8c540f6..a22f7f0 100644
+index 8c540f6..602e895 100644
 --- a/migrate/default.xml
 +++ b/migrate/default.xml
-@@ -4,71 +4,36 @@
+@@ -4,71 +4,39 @@
    <property name="configver" type="int" value="2"/>
    <property name="panels" type="array">
      <value type="int" value="1"/>
@@ -23,7 +23,7 @@ index 8c540f6..a22f7f0 100644
        <property name="length" type="uint" value="100"/>
        <property name="position-locked" type="bool" value="true"/>
 -      <property name="size" type="uint" value="30"/>
-+      <property name="size" type="uint" value="25"/>
++      <property name="size" type="uint" value="26"/>
        <property name="plugin-ids" type="array">
          <value type="int" value="1"/>
 +        <value type="int" value="2"/>
@@ -31,7 +31,7 @@ index 8c540f6..a22f7f0 100644
 -        <value type="int" value="15"/>
          <value type="int" value="4"/>
          <value type="int" value="5"/>
--        <value type="int" value="6"/>
+         <value type="int" value="6"/>
 -        <value type="int" value="2"/>
 -      </property>
 -    </property>
@@ -48,7 +48,7 @@ index 8c540f6..a22f7f0 100644
 -        <value type="int" value="13"/>
 -        <value type="int" value="14"/>
        </property>
-+      <property name="background-style" type="uint" value="2"/>
++      <property name="background-style" type="uint" value="0"/>
 +      <property name="background-image" type="string" value="/usr/share/backgrounds/panel.png"/>
      </property>
    </property>
@@ -74,13 +74,14 @@ index 8c540f6..a22f7f0 100644
 -      <property name="items" type="array">
 -        <value type="string" value="exo-terminal-emulator.desktop"/>
 -      </property>
--    </property>
++    <property name="plugin-4" type="string" value="systray">
++        <property name="show-frame" type="bool" value="false"/>
+     </property>
 -    <property name="plugin-10" type="string" value="launcher">
 -      <property name="items" type="array">
 -        <value type="string" value="exo-file-manager.desktop"/>
 -      </property>
-+    <property name="plugin-4" type="string" value="systray">
-+        <property name="show-frame" type="bool" value="false"/>
++    <property name="plugin-5" type="string" value="mixer">
      </property>
 -    <property name="plugin-11" type="string" value="launcher">
 -      <property name="items" type="array">
@@ -91,7 +92,7 @@ index 8c540f6..a22f7f0 100644
 -      <property name="items" type="array">
 -        <value type="string" value="xfce4-appfinder.desktop"/>
 -      </property>
-+    <property name="plugin-5" type="string" value="clock">
++    <property name="plugin-6" type="string" value="clock">
 +        <property name="show-frame" type="bool" value="false"/>
      </property>
 -    <property name="plugin-13" type="string" value="separator"/>
@@ -99,10 +100,10 @@ index 8c540f6..a22f7f0 100644
    </property>
  </channel>
 diff --git a/migrate/default.xml.in b/migrate/default.xml.in
-index 6b61479..540425e 100644
+index 6b61479..7c63b20 100644
 --- a/migrate/default.xml.in
 +++ b/migrate/default.xml.in
-@@ -4,71 +4,36 @@
+@@ -4,71 +4,39 @@
    <property name="configver" type="int" value="@XFCE4_PANEL_CONFIG_VERSION@"/>
    <property name="panels" type="array">
      <value type="int" value="1"/>
@@ -113,7 +114,7 @@ index 6b61479..540425e 100644
        <property name="length" type="uint" value="100"/>
        <property name="position-locked" type="bool" value="true"/>
 -      <property name="size" type="uint" value="30"/>
-+      <property name="size" type="uint" value="25"/>
++      <property name="size" type="uint" value="26"/>
        <property name="plugin-ids" type="array">
          <value type="int" value="1"/>
 +        <value type="int" value="2"/>
@@ -121,7 +122,7 @@ index 6b61479..540425e 100644
 -        <value type="int" value="15"/>
          <value type="int" value="4"/>
          <value type="int" value="5"/>
--        <value type="int" value="6"/>
+         <value type="int" value="6"/>
 -        <value type="int" value="2"/>
 -      </property>
 -    </property>
@@ -138,7 +139,7 @@ index 6b61479..540425e 100644
 -        <value type="int" value="13"/>
 -        <value type="int" value="14"/>
        </property>
-+      <property name="background-style" type="uint" value="2"/>
++      <property name="background-style" type="uint" value="0"/>
 +      <property name="background-image" type="string" value="/usr/share/backgrounds/panel.png"/>
      </property>
    </property>
@@ -164,13 +165,14 @@ index 6b61479..540425e 100644
 -      <property name="items" type="array">
 -        <value type="string" value="exo-terminal-emulator.desktop"/>
 -      </property>
--    </property>
++    <property name="plugin-4" type="string" value="systray">
++        <property name="show-frame" type="bool" value="false"/>
+     </property>
 -    <property name="plugin-10" type="string" value="launcher">
 -      <property name="items" type="array">
 -        <value type="string" value="exo-file-manager.desktop"/>
 -      </property>
-+    <property name="plugin-4" type="string" value="systray">
-+        <property name="show-frame" type="bool" value="false"/>
++    <property name="plugin-5" type="string" value="mixer">
      </property>
 -    <property name="plugin-11" type="string" value="launcher">
 -      <property name="items" type="array">
@@ -181,7 +183,7 @@ index 6b61479..540425e 100644
 -      <property name="items" type="array">
 -        <value type="string" value="xfce4-appfinder.desktop"/>
 -      </property>
-+    <property name="plugin-5" type="string" value="clock">
++    <property name="plugin-6" type="string" value="clock">
 +        <property name="show-frame" type="bool" value="false"/>
      </property>
 -    <property name="plugin-13" type="string" value="separator"/>
