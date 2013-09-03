@@ -16,7 +16,7 @@ index 6db210a..0446610 100644
  snap_to_windows=false
  snap_width=10
 -theme=Default
-+theme=Bluebird
++theme=SolusOS-Darker
  tile_on_move=true
  title_alignment=center
 -title_font=Sans Bold 9
