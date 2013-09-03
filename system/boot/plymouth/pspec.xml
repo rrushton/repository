@@ -19,9 +19,8 @@
             <Dependency>libcairo-devel</Dependency>
         </BuildDependencies>
         <Patches>
-            <!-- EXPERIMENTAL patch to be tested on *real hardware*
-                 Once finished, submit upstream //-->
-            <Patch level="1">0001-nouveau-Port-to-new-libdrm_nouveau-API-s.patch</Patch>
+            <!-- Waiting on upstream response: https://bugs.freedesktop.org/show_bug.cgi?id=58905 //-->
+            <Patch level="1">0001-nouveau-Port-to-new-libdrm-nouveau-API.patch</Patch>
         </Patches>
     </Source>
 

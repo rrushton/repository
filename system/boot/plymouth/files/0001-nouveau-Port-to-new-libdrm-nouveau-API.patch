@@ -1,7 +1,7 @@
 From f6ed8284a4b03aee0b124fbe88ae039518946175 Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey@solusos.com>
 Date: Tue, 3 Sep 2013 12:36:32 +0100
-Subject: [PATCH] nouveau: Port to new libdrm_nouveau API's
+Subject: [PATCH] nouveau: Port to new libdrm nouveau API
 
 ---
  .../renderers/drm/ply-renderer-nouveau-driver.c    |   31 +++++++++++++-------
