@@ -1,0 +1,84 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>plymouth</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>System boot screen</Summary>
+        <Description>Adds a splash screen during system startup</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="770bd51ee28cc6fdc697c8cbc750a2854e8dae40" type="targz">http://ng.solusos.com/sources/plymouth-53f6b44e11cf552e67fb3b45f480eb55dbf2a975.tar.gz</Archive>
+
+        <BuildDependencies>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <!-- EXPERIMENTAL patch to be tested on *real hardware*
+                 Once finished, submit upstream //-->
+            <Patch level="1">0001-nouveau-Port-to-new-libdrm_nouveau-API-s.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>plymouth</Name>
+        <Files>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="executable">/sbin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="library">/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+
+            <!-- Renderers //-->
+            <Path fileType="library">/usr/lib/plymouth/*.so</Path>
+            <Path fileType="data">/usr/share/plymouth</Path>
+            <Path fileType="data">/usr/share/pixmaps/</Path>
+
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/lib/systemd/system</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="config">/var/lib/plymouth</Path>
+            <Path fileType="config">/var/run/plymouth</Path>
+            <Path fileType="config">/var/spool/plymouth</Path>
+            <Path fileType="config">/etc/plymouth</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/share/pixmaps/SolusOS_Splash.png">SolusOS_Splash.png</AdditionalFile>
+        </AdditionalFiles>
+        <RuntimeDependencies>
+            <Dependency>libpng</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libcairo</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>plymouth-devel</Name>
+        <Summary>Development files for plymouth</Summary>
+        <Description>Development files for plymouth</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">plymouth</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>09-03-2013</Date>
+            <Version>0.8.9</Version>
+            <Comment>Pulled from git commit 53f6b44e11cf552e67fb3b45f480eb55dbf2a975, future 0.8.9</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>	
+</PISI>
