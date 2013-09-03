@@ -9852,6 +9852,9 @@ GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possi
                 <Dependency>at-spi2-atk-devel</Dependency>
                 <Dependency>libxkbcommon-devel</Dependency>
             </BuildDependencies>
+            <Patches>
+                <Patch level="1">0001-Disable-test-program-segfault.patch</Patch>
+            </Patches>
             <SourceURI>desktop/library/libtimezonemap/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -23762,6 +23765,120 @@ By using this package, you accept the terms and conditions set in the end-user l
                 <Date>06-18-2013</Date>
                 <Version>0.98.2</Version>
                 <Comment>Add gtk2-engine-murrine to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>unico</Name>
+            <Homepage>https://launchpad.net/ubuntu/+source/gtk3-engines-unico</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.theme</PartOf>
+            <Summary xml:lang="en">Unico theme engine</Summary>
+            <Description xml:lang="en">Unico theme engine for GTK3</Description>
+            <Archive type="targz" sha1sum="eef6200029e8787196e6dd45c5daa27e69eab988">https://launchpad.net/unico/1.0/1.0.2/+download/unico-1.0.2.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>libxcursor-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+                <Dependency>libicu-devel</Dependency>
+                <Dependency>wayland-devel</Dependency>
+                <Dependency>libxi-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libice-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libxinerama-devel</Dependency>
+                <Dependency>libatk-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libxdamage-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>libxrandr-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libgtk-3-devel</Dependency>
+                <Dependency>libxfixes-devel</Dependency>
+                <Dependency>at-spi2-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>dbus-devel</Dependency>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>libxcomposite-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libsm-devel</Dependency>
+                <Dependency>at-spi2-atk-devel</Dependency>
+                <Dependency>libxkbcommon-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="0">border-radius.patch</Patch>
+            </Patches>
+            <SourceURI>desktop/theme/gtk3-engine-unico/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gtk3-engine-unico</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libxcursor</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>libicu</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>wayland</Dependency>
+                <Dependency>libxi</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxinerama</Dependency>
+                <Dependency>libatk</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libxdamage</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>libxrandr</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libgtk-3</Dependency>
+                <Dependency>libxfixes</Dependency>
+                <Dependency>at-spi2</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>libxcomposite</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libsm</Dependency>
+                <Dependency>at-spi2-atk</Dependency>
+                <Dependency>libxkbcommon</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/gtk-3.0</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>09-02-2013</Date>
+                <Version>1.0.2</Version>
+                <Comment>Add unico to repositories</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
@@ -39742,6 +39859,81 @@ The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does
                 <Date>2012-08-23</Date>
                 <Version>1.20.2</Version>
                 <Comment>Add busybox to repos</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>plymouth</Name>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>system.boot</PartOf>
+            <Summary xml:lang="en">System boot screen</Summary>
+            <Description xml:lang="en">Adds a splash screen during system startup</Description>
+            <Archive type="targz" sha1sum="770bd51ee28cc6fdc697c8cbc750a2854e8dae40">http://ng.solusos.com/sources/plymouth-53f6b44e11cf552e67fb3b45f480eb55dbf2a975.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">0001-nouveau-Port-to-new-libdrm_nouveau-API-s.patch</Patch>
+            </Patches>
+            <SourceURI>system/boot/plymouth/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>plymouth</Name>
+            <RuntimeDependencies>
+                <Dependency>libpng</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libcairo</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/bin</Path>
+                <Path fileType="executable">/sbin</Path>
+                <Path fileType="executable">/usr/sbin</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="library">/lib/lib*.so*</Path>
+                <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="library">/usr/lib/plymouth/*.so</Path>
+                <Path fileType="data">/usr/share/plymouth</Path>
+                <Path fileType="data">/usr/share/pixmaps/</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/lib/systemd/system</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="config">/var/lib/plymouth</Path>
+                <Path fileType="config">/var/run/plymouth</Path>
+                <Path fileType="config">/var/spool/plymouth</Path>
+                <Path fileType="config">/etc/plymouth</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/pixmaps/SolusOS_Splash.png">SolusOS_Splash.png</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <Package>
+            <Name>plymouth-devel</Name>
+            <Summary xml:lang="en">Development files for plymouth</Summary>
+            <Description xml:lang="en">Development files for plymouth</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">plymouth</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>09-03-2013</Date>
+                <Version>0.8.9</Version>
+                <Comment>Pulled from git commit 53f6b44e11cf552e67fb3b45f480eb55dbf2a975, future 0.8.9</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
