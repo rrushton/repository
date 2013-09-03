@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>elementary-icon-theme</Name>
@@ -8,7 +8,7 @@
             <Name>Matias Linares</Name>
             <Email>matiaslina@gmail.com</Email>
         </Packager>
-        <License>GPL</License>
+        <License>GPLv2+</License>
         <Summary>Elementary is an good alternative to the icon themes</Summary>
         <Description>Elementary is an good alternative to the icon themes with the right size of icons and perfect panel icons.</Description>
         <Archive sha1sum="7fa3bf104543ebf22b330e5d4725ba24c145f254" type="targz">http://launchpad.net/elementaryicons/2.0/2.7.1/+download/elementary-icon-theme-2.7.1.tar.gz</Archive>
@@ -34,7 +34,7 @@
         </Update>
         
         <Update release="1">
-            <Date>2012-10-12</Date>
+            <Date>2012-10-12</Date> <!-- MATIAS: Stop stealing packages. This is incorrect format for SolusOS packages.... //-->
             <Version>2.7.1</Version>
             <Comment>Added elementary icon theme to repository</Comment>
             <Name>Matias Linares</Name>
