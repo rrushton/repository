@@ -24,6 +24,9 @@
         <AdditionalFiles>
             <AdditionalFile target="/usr/share/pixmaps/SolusOS.png" mode="0644">SolusOS.png</AdditionalFile>
         </AdditionalFiles>
+        <RuntimeDependencies>
+            <Dependency>gtk3-engine-unico</Dependency>
+        </RuntimeDependencies>
     </Package>
 
     <Package>
