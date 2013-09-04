@@ -11,7 +11,7 @@
         <Description>Official SolusOS artwork</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="4e05dac058d3392927a750c9f8ba1787a40bb269" type="tarxz">http://ng.solusos.com/sources/solusos-artwork-2.0.tar.xz</Archive>
-        <Archive sha1sum="e62499a2ae4715bd960fa50bcac059118c1eb773" target="solusos-artwork-2.0" type="tarbz2">https://bitbucket.org/solusos/solusos-branding/get/v0.2.tar.bz2</Archive>
+        <Archive sha1sum="4152a7e8d3458d7930ef1d9957391ecaf9036e26" target="solusos-artwork-2.0" type="tarbz2">https://bitbucket.org/solusos/solusos-branding/get/v0.3.tar.bz2</Archive>
     </Source>
     
     <Package>
@@ -31,14 +31,24 @@
         <Files>
             <Path fileType="data">/usr/share/themes</Path>
             <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/plymouth/themes</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency>gtk3-engine-unico</Dependency>
             <Dependency>faenza-icon-theme</Dependency>
+            <Dependency>plymouth</Dependency>
         </RuntimeDependencies>
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>09-04-2013</Date>
+            <Version>2.0.2</Version>
+            <Comment>Add our new Plymouth theme</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="4">
             <Date>09-03-2013</Date>
             <Version>2.0.1</Version>

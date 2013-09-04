@@ -3,7 +3,7 @@
 # Created For SolusOS
 from pisi.actionsapi import pisitools
 
-ThemeDir = "solusos-solusos-branding-8e7c5dcc956e/"  # v0.2
+ThemeDir = "solusos-solusos-branding-4cf04b1275a6/"  # v0.3
 
 
 def install():
@@ -12,3 +12,6 @@ def install():
 
     pisitools.insinto("/usr/share/themes", "%s/themes/SolusOS-Darker" % ThemeDir)
     pisitools.insinto("/usr/share/icons", "%s/icons/SolusOS" % ThemeDir)
+
+    pisitools.insinto("/usr/share/plymouth/themes", "%s/plymouth" % ThemeDir, "solusos")
+    
