@@ -31,9 +31,9 @@
             <Path fileType="library">/usr/lib/lib*.so*</Path>
 
             <!-- Renderers //-->
-            <Path fileType="library">/usr/lib/plymouth/*.so</Path>
+            <Path fileType="library">/usr/lib/plymouth</Path>
             <Path fileType="data">/usr/share/plymouth</Path>
-            <Path fileType="data">/usr/share/pixmaps/</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
 
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="data">/usr/lib/systemd/system</Path>
@@ -68,8 +68,16 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>09-04-2013</Date>
+            <Version>0.8.9</Version>
+            <Comment>Strange globbing issue didn't include drm.so and x11.so as renderers</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="3">
-            <Date>09-03-2013</Date>
+            <Date>09-04-2013</Date>
             <Version>0.8.9</Version>
             <Comment>Fix configure to build with drm</Comment>
             <Name>Ikey Doherty</Name>
