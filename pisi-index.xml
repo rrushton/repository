@@ -9765,6 +9765,7 @@ GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possi
             <Files>
                 <Path fileType="library">/usr/lib/lib*.so*</Path>
                 <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
@@ -9773,12 +9774,11 @@ GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possi
             <Summary xml:lang="en">Development files for libtelepathy-glib</Summary>
             <Description xml:lang="en">Development files for libtelepathy-glib</Description>
             <RuntimeDependencies>
-                <Dependency release="1">libtelepathy-glib</Dependency>
+                <Dependency release="2">libtelepathy-glib</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
-                <Path fileType="data">/usr/lib/girepository-1.0</Path>
             </Files>
         </Package>
         <Package>
@@ -9786,13 +9786,20 @@ GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possi
             <Summary xml:lang="en">API Documentation libtelepathy-glib</Summary>
             <Description xml:lang="en">API Documentation for libtelepathy-glib</Description>
             <RuntimeDependencies>
-                <Dependency release="1">libtelepathy-glib</Dependency>
+                <Dependency release="2">libtelepathy-glib-devel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/gtk-doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>09-04-2013</Date>
+                <Version>0.20.2</Version>
+                <Comment>Move typelib back into main package</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="1">
                 <Date>05-26-2013</Date>
                 <Version>0.20.2</Version>
@@ -11434,6 +11441,7 @@ By using this package, you accept the terms and conditions set in the end-user l
                 <Path fileType="executable">/usr/lib/WebKitGTK</Path>
                 <Path fileType="library">/usr/lib/lib*.so*</Path>
                 <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
                 <Path fileType="data">/usr/share/webkitgtk-3.0</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
@@ -11447,11 +11455,10 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">Development files for libwebkitgtk</Summary>
             <Description xml:lang="en">Development files for libwebkitgtk</Description>
             <RuntimeDependencies>
-                <Dependency release="3">libwebkit-gtk</Dependency>
+                <Dependency release="4">libwebkit-gtk</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
-                <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
             </Files>
         </Package>
@@ -11460,13 +11467,20 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">API Documentation for libwebkitgtk</Summary>
             <Description xml:lang="en">API Documentation for libwebkitgtk</Description>
             <RuntimeDependencies>
-                <Dependency release="3">libwebkit-gtk</Dependency>
+                <Dependency release="4">libwebkit-gtk-devel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/share/gtk-doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>09-04-2013</Date>
+                <Version>1.10.2</Version>
+                <Comment>Move typelib back into main package, cleanups</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="3">
                 <Date>06-07-2013</Date>
                 <Version>1.10.2</Version>
@@ -14827,6 +14841,7 @@ By using this package, you accept the terms and conditions set in the end-user l
                 <Path fileType="library">/usr/lib/lib*.so*</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
                 <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
                 <Path fileType="data">/usr/share/polkit-1</Path>
                 <Path fileType="data">/usr/share/dbus-1</Path>
@@ -14840,11 +14855,10 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">Development files for AccountsService</Summary>
             <Description xml:lang="en">Development files for AccountsService</Description>
             <RuntimeDependencies>
-                <Dependency release="3">accountsservice</Dependency>
+                <Dependency release="4">accountsservice</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
-                <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
                 <Path fileType="data">/usr/share/vala</Path>
             </Files>
@@ -14854,13 +14868,20 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">API Documentation for AccountsService</Summary>
             <Description xml:lang="en">API Documentation for AccountService</Description>
             <RuntimeDependencies>
-                <Dependency release="3">accountsservice</Dependency>
+                <Dependency release="4">accountsservice-devel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/gtk-doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>09-04-2013</Date>
+                <Version>0.6.30</Version>
+                <Comment>Move typelib back into main package, fix -docs dependency</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="3">
                 <Date>04-12-2013</Date>
                 <Version>0.6.30</Version>
@@ -15019,6 +15040,7 @@ By using this package, you accept the terms and conditions set in the end-user l
                 <Path fileType="library">/usr/lib/lib*.so*</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
                 <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
             </Files>
         </Package>
         <Package>
@@ -15026,12 +15048,11 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">Development files for libxklavier</Summary>
             <Description xml:lang="en">Development files for libxklavier</Description>
             <RuntimeDependencies>
-                <Dependency release="3">libxklavier</Dependency>
+                <Dependency release="4">libxklavier</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
-                <Path fileType="data">/usr/lib/girepository-1.0</Path>
             </Files>
         </Package>
         <Package>
@@ -15039,13 +15060,20 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">API Documentation for libxklavier</Summary>
             <Description xml:lang="en">API Documentation for libxklavier</Description>
             <RuntimeDependencies>
-                <Dependency release="3">libxklavier-devel</Dependency>
+                <Dependency release="4">libxklavier-devel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/share/gtk-doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>09-04-2013</Date>
+                <Version>5.3</Version>
+                <Comment>Move typelib back into main package</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="3">
                 <Date>04-15-2013</Date>
                 <Version>5.3</Version>
@@ -17647,6 +17675,7 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Files>
                 <Path fileType="library">/usr/lib/lib*.so*</Path>
                 <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
@@ -17655,16 +17684,22 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">Development files for libgee</Summary>
             <Description xml:lang="en">Development files for libgee</Description>
             <RuntimeDependencies>
-                <Dependency release="3">libgee</Dependency>
+                <Dependency release="4">libgee</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
-                <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
                 <Path fileType="data">/usr/share/vala</Path>
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>09-04-2013</Date>
+                <Version>0.10.1</Version>
+                <Comment>Move typelib back into main package</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="3">
                 <Date>04-13-2013</Date>
                 <Version>0.10.1</Version>
@@ -17927,6 +17962,7 @@ By using this package, you accept the terms and conditions set in the end-user l
                 <Path fileType="library">/usr/lib/lib*.so*</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
                 <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
                 <Path fileType="man">/usr/share/man</Path>
             </Files>
@@ -17936,12 +17972,11 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">Development files for libsecret</Summary>
             <Description xml:lang="en">Development files for libsecret</Description>
             <RuntimeDependencies>
-                <Dependency release="3">libsecret</Dependency>
+                <Dependency release="4">libsecret</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
-                <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="data">/usr/share/vala</Path>
             </Files>
         </Package>
@@ -17950,13 +17985,20 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">API Documentation for libsecret</Summary>
             <Description xml:lang="en">API Documentation for libsecret</Description>
             <RuntimeDependencies>
-                <Dependency release="3">libsecret-devel</Dependency>
+                <Dependency release="4">libsecret-devel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/gtk-doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>09-04-2013</Date>
+                <Version>0.14</Version>
+                <Comment>Move typelib back into main package</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="3">
                 <Date>04-13-2013</Date>
                 <Version>0.14</Version>
@@ -18672,6 +18714,7 @@ By using this package, you accept the terms and conditions set in the end-user l
                 <Path fileType="data">/usr/share/GConf</Path>
                 <Path fileType="data">/usr/share/applications</Path>
                 <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="data">/usr/share/glib-2.0/schemas</Path>
                 <Path fileType="data">/usr/share/libgnomekbd</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
@@ -18682,15 +18725,21 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">Development files for libgnomekbd</Summary>
             <Description xml:lang="en">Development files for libgnomekbd</Description>
             <RuntimeDependencies>
-                <Dependency release="4">libgnomekbd</Dependency>
+                <Dependency release="5">libgnomekbd</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
-                <Path fileType="data">/usr/lib/girepository-1.0</Path>
             </Files>
         </Package>
         <History>
+            <Update release="5">
+                <Date>09-04-2013</Date>
+                <Version>3.6.0</Version>
+                <Comment>Move typelib back into main package</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="4">
                 <Date>05-30-2013</Date>
                 <Version>3.6.0</Version>
@@ -19262,6 +19311,7 @@ By using this package, you accept the terms and conditions set in the end-user l
                 <Path fileType="data">/usr/share/sgml</Path>
                 <Path fileType="data">/usr/share/polkit-1</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
             </Files>
             <Provides>
                 <COMAR script="packageHandler.py">System.PackageHandler</COMAR>
@@ -19272,13 +19322,12 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">Development files for GConf</Summary>
             <Description xml:lang="en">Development files for GConf</Description>
             <RuntimeDependencies>
-                <Dependency release="4">gconf</Dependency>
+                <Dependency release="5">gconf</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
                 <Path fileType="data">/usr/share/aclocal</Path>
-                <Path fileType="data">/usr/lib/girepository-1.0</Path>
             </Files>
         </Package>
         <Package>
@@ -19286,13 +19335,20 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">Documentation for GConf</Summary>
             <Description xml:lang="en">Documentation for GConf</Description>
             <RuntimeDependencies>
-                <Dependency release="4">gconf</Dependency>
+                <Dependency release="5">gconf-devel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/gtk-doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="5">
+                <Date>09-04-2013</Date>
+                <Version>3.2.6</Version>
+                <Comment>Move typelib back into main package</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="4">
                 <Date>06-06-2013</Date>
                 <Version>3.2.6</Version>
@@ -19498,6 +19554,7 @@ By using this package, you accept the terms and conditions set in the end-user l
                 <Path fileType="doc">/usr/share/doc</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
                 <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
             </Files>
         </Package>
         <Package>
@@ -19505,12 +19562,11 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">Development files for libwnck</Summary>
             <Description xml:lang="en">Development files for libwnck</Description>
             <RuntimeDependencies>
-                <Dependency release="4">libwnck</Dependency>
+                <Dependency release="5">libwnck</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
-                <Path fileType="data">/usr/lib/girepository-1.0</Path>
             </Files>
         </Package>
         <Package>
@@ -19518,13 +19574,20 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">API Documentation for libwnck</Summary>
             <Description xml:lang="en">API Documentation for libwnck</Description>
             <RuntimeDependencies>
-                <Dependency release="4">libwnck-devel</Dependency>
+                <Dependency release="5">libwnck-devel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/share/gtk-doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="5">
+                <Date>09-04-2013</Date>
+                <Version>3.4.4</Version>
+                <Comment>Move typelib back into main package</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="4">
                 <Date>05-30-2013</Date>
                 <Version>3.4.4</Version>
@@ -19741,6 +19804,7 @@ By using this package, you accept the terms and conditions set in the end-user l
                 <Path fileType="library">/usr/lib/lib*.so*</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
                 <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="info">/usr/share/info</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
             </Files>
@@ -19750,12 +19814,11 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">Development files for libgtop</Summary>
             <Description xml:lang="en">Development files for libgtop</Description>
             <RuntimeDependencies>
-                <Dependency release="3">libgtop</Dependency>
+                <Dependency release="4">libgtop</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
-                <Path fileType="data">/usr/lib/girepository-1.0</Path>
             </Files>
         </Package>
         <Package>
@@ -19763,13 +19826,20 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">API Documentation for libgtop</Summary>
             <Description xml:lang="en">API Documentation files for libgtop</Description>
             <RuntimeDependencies>
-                <Dependency release="3">libgtop-devel</Dependency>
+                <Dependency release="4">libgtop-devel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/gtk-doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>09-04-2013</Date>
+                <Version>2.28.4</Version>
+                <Comment>Move typelib back into main package</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="3">
                 <Date>04-15-2013</Date>
                 <Version>2.28.4</Version>
@@ -20031,6 +20101,7 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Files>
                 <Path fileType="library">/usr/lib</Path>
                 <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
@@ -20039,12 +20110,11 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">Development files for librest</Summary>
             <Description xml:lang="en">Development files for librest</Description>
             <RuntimeDependencies>
-                <Dependency release="1">librest</Dependency>
+                <Dependency release="2">librest</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
-                <Path fileType="data">/usr/lib/girepository-1.0</Path>
             </Files>
         </Package>
         <Package>
@@ -20052,13 +20122,20 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">API Documentation for librest</Summary>
             <Description xml:lang="en">API Documentation for librest</Description>
             <RuntimeDependencies>
-                <Dependency release="1">librest</Dependency>
+                <Dependency release="2">librest-devel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/gtk-doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>09-04-2013</Date>
+                <Version>0.7.90</Version>
+                <Comment>Move typelib back into main package, fix librest-docs dependency</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="1">
                 <Date>05-25-2013</Date>
                 <Version>0.7.90</Version>
@@ -20310,6 +20387,7 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Files>
                 <Path fileType="library">/usr/lib/lib*.so*</Path>
                 <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
             </Files>
@@ -20319,11 +20397,10 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">Development files for libjson-glib</Summary>
             <Description xml:lang="en">Development files for libjson-glib</Description>
             <RuntimeDependencies>
-                <Dependency release="1">libjson-glib</Dependency>
+                <Dependency release="2">libjson-glib</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
-                <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
             </Files>
         </Package>
@@ -20332,13 +20409,20 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">API Documentation for libjson-glib</Summary>
             <Description xml:lang="en">API Documentation for libjson-glib</Description>
             <RuntimeDependencies>
-                <Dependency release="1">libjson-glib</Dependency>
+                <Dependency release="2">libjson-glib</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/share/gtk-doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>09-04-2013</Date>
+                <Version>0.16.0</Version>
+                <Comment>Move typelib back into main package</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="1">
                 <Date>05-25-2013</Date>
                 <Version>0.16.0</Version>
@@ -20462,6 +20546,7 @@ By using this package, you accept the terms and conditions set in the end-user l
                 <Path fileType="doc">/usr/share/doc</Path>
                 <Path fileType="data">/usr/share/gir-1.0</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
             </Files>
         </Package>
         <Package>
@@ -20469,12 +20554,11 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">Development files for libgdata</Summary>
             <Description xml:lang="en">Development files for libgdata</Description>
             <RuntimeDependencies>
-                <Dependency release="1">libgdata</Dependency>
+                <Dependency release="2">libgdata</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
-                <Path fileType="data">/usr/lib/girepository-1.0</Path>
             </Files>
         </Package>
         <Package>
@@ -20482,13 +20566,20 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">API Documentation for libgdata</Summary>
             <Description xml:lang="en">API Documentation for libgdata</Description>
             <RuntimeDependencies>
-                <Dependency release="1">libgdata</Dependency>
+                <Dependency release="2">libgdata</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/gtk-doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>09-04-2013</Date>
+                <Version>0.13.2</Version>
+                <Comment>Move typelib back into main package</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="1">
                 <Date>05-25-2013</Date>
                 <Version>0.13.2</Version>
@@ -20712,6 +20803,7 @@ By using this package, you accept the terms and conditions set in the end-user l
                 <Path fileType="executable">/usr/bin/notify-send</Path>
                 <Path fileType="library">/usr/lib/lib*.so*</Path>
                 <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
@@ -20720,12 +20812,11 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">Development files for libnotify</Summary>
             <Description xml:lang="en">Development files for libnotify</Description>
             <RuntimeDependencies>
-                <Dependency release="1">libnotify</Dependency>
+                <Dependency release="2">libnotify</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
-                <Path fileType="data">/usr/lib/girepository-1.0</Path>
             </Files>
         </Package>
         <Package>
@@ -20733,13 +20824,20 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">API Documentation for libnotify</Summary>
             <Description xml:lang="en">API Documentation for libnotify</Description>
             <RuntimeDependencies>
-                <Dependency release="1">libnotify</Dependency>
+                <Dependency release="2">libnotify</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/gtk-doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>09-04-2013</Date>
+                <Version>0.7.5</Version>
+                <Comment>Move typelib back into main package</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="1">
                 <Date>05-25-2013</Date>
                 <Version>0.7.5</Version>
@@ -20963,6 +21061,7 @@ By using this package, you accept the terms and conditions set in the end-user l
                 <Path fileType="doc">/usr/share/doc</Path>
                 <Path fileType="data">/usr/share/GConf</Path>
                 <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
                 <Path fileType="data">/usr/share/glib-2.0/schemas</Path>
             </Files>
@@ -20972,16 +21071,22 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">Development files for folks</Summary>
             <Description xml:lang="en">Development files for folks</Description>
             <RuntimeDependencies>
-                <Dependency release="1">folks</Dependency>
+                <Dependency release="2">folks</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
-                <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="data">/usr/share/vala</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>09-04-2013</Date>
+                <Version>0.9.0</Version>
+                <Comment>Move typelib back into main package</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="1">
                 <Date>05-30-2013</Date>
                 <Version>0.9.0</Version>
@@ -22369,6 +22474,8 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Files>
                 <Path fileType="executable">/usr/lib/at-spi2/core</Path>
                 <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="config">/etc</Path>
                 <Path fileType="data">/usr/share/dbus-1</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
@@ -22378,17 +22485,22 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Name>at-spi2-devel</Name>
             <Description xml:lang="en">Development files for at-spi2</Description>
             <RuntimeDependencies>
-                <Dependency>at-spi2</Dependency>
+                <Dependency release="3">at-spi2</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
-                <Path fileType="data">/usr/share/gir-1.0</Path>
-                <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="doc">/usr/share/gtk-doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>09-04-2013</Date>
+                <Version>2.6.3</Version>
+                <Comment>Move gir files back into main package</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="2">
                 <Date>02-04-2013</Date>
                 <Version>2.6.3</Version>
@@ -22619,6 +22731,7 @@ By using this package, you accept the terms and conditions set in the end-user l
                 <Path fileType="library">/usr/lib/gtk-2.0</Path>
                 <Path fileType="library">/usr/lib/lib*.so*</Path>
                 <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="data">/usr/share/glib-2.0</Path>
                 <Path fileType="locale">/usr/share/locale</Path>
                 <Path fileType="man">/usr/share/man</Path>
@@ -22634,11 +22747,10 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">Development files for libgtk-2</Summary>
             <Description xml:lang="en">Development files for libgtk-2</Description>
             <RuntimeDependencies>
-                <Dependency release="5">libgtk-2</Dependency>
+                <Dependency release="6">libgtk-2</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
-                <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
                 <Path fileType="data">/usr/share/aclocal</Path>
             </Files>
@@ -22648,7 +22760,7 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">API Documentation for libgtk-2</Summary>
             <Description xml:lang="en">API Documentation for libgtk-2</Description>
             <RuntimeDependencies>
-                <Dependency release="5">libgtk-2</Dependency>
+                <Dependency release="6">libgtk-2</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/doc</Path>
@@ -22684,7 +22796,7 @@ By using this package, you accept the terms and conditions set in the end-user l
                 <Dependency>libxext</Dependency>
                 <Dependency>libxrandr</Dependency>
                 <Dependency>pixman</Dependency>
-                <Dependency release="5">libgtk-2</Dependency>
+                <Dependency release="6">libgtk-2</Dependency>
                 <Dependency>libxfixes</Dependency>
                 <Dependency>freetype2</Dependency>
                 <Dependency>libx11</Dependency>
@@ -22698,6 +22810,13 @@ By using this package, you accept the terms and conditions set in the end-user l
             </Files>
         </Package>
         <History>
+            <Update release="6">
+                <Date>09-04-2013</Date>
+                <Version>2.24.17</Version>
+                <Comment>Move typelib back into main package</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="5">
                 <Date>05-30-2013</Date>
                 <Version>2.24.17</Version>
@@ -23380,6 +23499,7 @@ By using this package, you accept the terms and conditions set in the end-user l
                 <Path fileType="library">/usr/lib/gdk-pixbuf-2.0</Path>
                 <Path fileType="library">/usr/lib/lib*.so*</Path>
                 <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="locale">/usr/share/locale</Path>
                 <Path fileType="man">/usr/share/man</Path>
             </Files>
@@ -23393,11 +23513,10 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">Development files for gdk-pixbuf</Summary>
             <Description xml:lang="en">Development files for gdk-pixbuf</Description>
             <RuntimeDependencies>
-                <Dependency release="5">gdk-pixbuf</Dependency>
+                <Dependency release="6">gdk-pixbuf</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
-                <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
             </Files>
         </Package>
@@ -23406,7 +23525,7 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Summary xml:lang="en">Documentation for gdk-pixbuf</Summary>
             <Description xml:lang="en">Documentation for gdk-pixbuf</Description>
             <RuntimeDependencies>
-                <Dependency release="5">gdk-pixbuf-devel</Dependency>
+                <Dependency release="6">gdk-pixbuf-devel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/doc</Path>
@@ -23414,6 +23533,13 @@ By using this package, you accept the terms and conditions set in the end-user l
             </Files>
         </Package>
         <History>
+            <Update release="6">
+                <Date>09-04-2013</Date>
+                <Version>2.28.0</Version>
+                <Comment>Move typelib back into main package</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="5">
                 <Date>06-05-2013</Date>
                 <Version>2.28.0</Version>
@@ -25381,6 +25507,7 @@ Bug-SolusOS: T7</Comment>
                 <Path fileType="data">/usr/share/gst-plugins-base</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
                 <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
             </Files>
         </Package>
         <Package>
@@ -25388,11 +25515,10 @@ Bug-SolusOS: T7</Comment>
             <Summary xml:lang="en">Development files for gstreamer-1.0-plugins-base</Summary>
             <Description xml:lang="en">Development files for gstreamer-1.0-plugins-base</Description>
             <RuntimeDependencies>
-                <Dependency release="3">gstreamer-1.0-plugins-base</Dependency>
+                <Dependency release="4">gstreamer-1.0-plugins-base</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
-                <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
             </Files>
         </Package>
@@ -25401,13 +25527,20 @@ Bug-SolusOS: T7</Comment>
             <Summary xml:lang="en">API Documentation for gstreamer-1.0-plugins-base</Summary>
             <Description xml:lang="en">API Documentation for gstreamer-1.0-plugins-base</Description>
             <RuntimeDependencies>
-                <Dependency release="3">gstreamer-1.0-plugins-base-devel</Dependency>
+                <Dependency release="4">gstreamer-1.0-plugins-base-devel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/gtk-doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>09-04-2013</Date>
+                <Version>1.0.6</Version>
+                <Comment>Move typelib back into main package</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="3">
                 <Date>04-15-2013</Date>
                 <Version>1.0.6</Version>
@@ -25629,6 +25762,7 @@ Bug-SolusOS: T7</Comment>
                 <Path fileType="localedata">/usr/share/locale</Path>
                 <Path fileType="man">/usr/share/man</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
             </Files>
         </Package>
         <Package>
@@ -25636,13 +25770,12 @@ Bug-SolusOS: T7</Comment>
             <Summary xml:lang="en">Development files for gstreamer-1.0</Summary>
             <Description xml:lang="en">Development files for gstreamer-1.0</Description>
             <RuntimeDependencies>
-                <Dependency release="3">gstreamer-1.0</Dependency>
+                <Dependency release="4">gstreamer-1.0</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
                 <Path fileType="data">/usr/share/aclocal</Path>
-                <Path fileType="data">/usr/lib/girepository-1.0</Path>
             </Files>
         </Package>
         <Package>
@@ -25650,13 +25783,20 @@ Bug-SolusOS: T7</Comment>
             <Summary xml:lang="en">API Documentation for gstreamer-1.0</Summary>
             <Description xml:lang="en">API Documentation for gstreamer-1.0</Description>
             <RuntimeDependencies>
-                <Dependency release="3">gstreamer-1.0-devel</Dependency>
+                <Dependency release="4">gstreamer-1.0-devel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/gtk-doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>09-04-2013</Date>
+                <Version>1.0.6</Version>
+                <Comment>Move typelib back into main package</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="3">
                 <Date>04-15-2013</Date>
                 <Version>1.0.6</Version>
