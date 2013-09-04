@@ -8,7 +8,7 @@ shelltools.export ("HOME", get.workDIR())
 
 def setup():
     autotools.configure ("--disable-static \
-                          --disable-man-pages")
+                          --disable-manpages")
 
 
 def build():
