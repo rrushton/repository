@@ -9,7 +9,7 @@ def setup():
     shelltools.system("./autogen.sh")
     autotools.configure("--enable-pango \
                          --enable-gtk \
-                         --enable-drm-renderer \
+                         --enable-drm \
                          --enable-systemd-integration \
                          --with-logo=/usr/share/pixmaps/SolusOS_Splash.png")
 
