@@ -40107,7 +40107,7 @@ The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does
             <Summary xml:lang="en">Development files for plymouth</Summary>
             <Description xml:lang="en">Development files for plymouth</Description>
             <RuntimeDependencies>
-                <Dependency release="2">plymouth</Dependency>
+                <Dependency release="3">plymouth</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -40115,6 +40115,13 @@ The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>09-03-2013</Date>
+                <Version>0.8.9</Version>
+                <Comment>Fix configure to build with drm</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="2">
                 <Date>09-03-2013</Date>
                 <Version>0.8.9</Version>
