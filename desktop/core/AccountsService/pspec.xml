@@ -30,6 +30,7 @@
             <Path fileType="library">/usr/lib/lib*.so*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             
             <Path fileType="data">/usr/share/polkit-1</Path>
@@ -53,7 +54,6 @@
         <Description>Development files for AccountsService</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/girepository-1.0</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="data">/usr/share/vala</Path>
         </Files>
@@ -70,11 +70,19 @@
             <Path fileType="doc">/usr/share/gtk-doc</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency release="current">accountsservice</Dependency>
+            <Dependency release="current">accountsservice-devel</Dependency>
         </RuntimeDependencies>
     </Package>
     
     <History>
+        <Update release="4">
+            <Date>09-04-2013</Date>
+            <Version>0.6.30</Version>
+            <Comment>Move typelib back into main package, fix -docs dependency</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>04-12-2013</Date>
             <Version>0.6.30</Version>

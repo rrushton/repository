@@ -27,6 +27,7 @@
         <Files>
             <Path fileType="library">/usr/lib/lib*.so*</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
         <RuntimeDependencies>
@@ -46,7 +47,6 @@
         <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib/girepository-1.0</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">libtelepathy-glib</Dependency>
@@ -61,11 +61,19 @@
             <Path fileType="doc">/usr/share/gtk-doc</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency release="current">libtelepathy-glib</Dependency>
+            <Dependency release="current">libtelepathy-glib-devel</Dependency>
         </RuntimeDependencies>
     </Package>
     
     <History>
+        <Update release="2">
+            <Date>09-04-2013</Date>
+            <Version>0.20.2</Version>
+            <Comment>Move typelib back into main package</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>05-26-2013</Date>
             <Version>0.20.2</Version>

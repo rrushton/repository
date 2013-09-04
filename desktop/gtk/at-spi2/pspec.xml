@@ -19,6 +19,8 @@
         <Files>
             <Path fileType="executable">/usr/lib/at-spi2/core</Path>
             <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0</Path>
             <Path fileType="config">/etc</Path>
             <Path fileType="data">/usr/share/dbus-1</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
@@ -32,17 +34,23 @@
         <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/share/gir-1.0</Path>
-            <Path fileType="data">/usr/lib/girepository-1.0</Path>
             <Path fileType="doc">/usr/share/gtk-doc</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency>at-spi2</Dependency>
+            <Dependency release="current">at-spi2</Dependency>
         </RuntimeDependencies>
     </Package>
     
     
     <History>
+        <Update release="3">
+            <Date>09-04-2013</Date>
+            <Version>2.6.3</Version>
+            <Comment>Move gir files back into main package</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>02-04-2013</Date>
             <Version>2.6.3</Version>

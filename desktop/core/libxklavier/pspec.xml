@@ -36,6 +36,7 @@
             <Path fileType="library">/usr/lib/lib*.so*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency>libxkbfile</Dependency>
@@ -61,7 +62,6 @@
         <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib/girepository-1.0</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">libxklavier</Dependency>
@@ -81,6 +81,14 @@
     </Package>
     
     <History>
+        <Update release="4">
+            <Date>09-04-2013</Date>
+            <Version>5.3</Version>
+            <Comment>Move typelib back into main package</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>04-15-2013</Date>
             <Version>5.3</Version>

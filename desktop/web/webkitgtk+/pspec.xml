@@ -124,6 +124,7 @@
             <Path fileType="executable">/usr/lib/WebKitGTK</Path>
             <Path fileType="library">/usr/lib/lib*.so*</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0</Path>
             <Path fileType="localedata">/usr/share/locale</Path>.
             <Path fileType="data">/usr/share/webkitgtk-3.0</Path>
             <Path fileType="doc">/usr/share/doc</Path>
@@ -185,7 +186,6 @@
         <Description>Development files for libwebkitgtk</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/girepository-1.0</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <RuntimeDependencies>
@@ -201,11 +201,19 @@
             <Path fileType="header">/usr/share/gtk-doc</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency release="current">libwebkit-gtk</Dependency>
+            <Dependency release="current">libwebkit-gtk-devel</Dependency>
         </RuntimeDependencies>
     </Package>
     
     <History>
+        <Update release="4">
+            <Date>09-04-2013</Date>
+            <Version>1.10.2</Version>
+            <Comment>Move typelib back into main package, cleanups</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>06-07-2013</Date>
             <Version>1.10.2</Version>
