@@ -14991,6 +14991,128 @@ By using this package, you accept the terms and conditions set in the end-user l
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>notify-osd</Name>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.core</PartOf>
+            <Summary xml:lang="en">On screen notification agent</Summary>
+            <Description xml:lang="en">Canonical&apos;s on-screen-display notification agent, implementing the freedesktop.org Desktop Notifications Specification with semi-transparent click-through bubbles.</Description>
+            <Archive type="targz" sha1sum="069a570f6f54ba7ee4a2696ada610006c315911f">https://launchpad.net/notify-osd/precise/0.9.34/+download/notify-osd-0.9.34.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>libxcursor-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+                <Dependency>at-spi2-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libxi-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>libxfixes-devel</Dependency>
+                <Dependency>libice-devel</Dependency>
+                <Dependency>wayland-devel</Dependency>
+                <Dependency>libxinerama-devel</Dependency>
+                <Dependency>libatk-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libwnck-devel</Dependency>
+                <Dependency>libxrandr-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+                <Dependency>libicu-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libgtk-3-devel</Dependency>
+                <Dependency>libxdamage-devel</Dependency>
+                <Dependency>libstartup-notification-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>dbus-devel</Dependency>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>libxcomposite-devel</Dependency>
+                <Dependency>libxres-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libsm-devel</Dependency>
+                <Dependency>at-spi2-atk-devel</Dependency>
+                <Dependency>libxkbcommon-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/core/notify-osd/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>notify-osd</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libxcursor</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>xcb-util</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>dbus-glib</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>at-spi2</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxi</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>libxfixes</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>wayland</Dependency>
+                <Dependency>libxinerama</Dependency>
+                <Dependency>libatk</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>libwnck</Dependency>
+                <Dependency>libxrandr</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>libicu</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libgtk-3</Dependency>
+                <Dependency>libxdamage</Dependency>
+                <Dependency>libstartup-notification</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>libxcomposite</Dependency>
+                <Dependency>libxres</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libsm</Dependency>
+                <Dependency>at-spi2-atk</Dependency>
+                <Dependency>libxkbcommon</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/libexec/notify-osd</Path>
+                <Path fileType="data">/usr/share/GConf</Path>
+                <Path fileType="data">/usr/share/glib-2.0/schemas</Path>
+                <Path fileType="data">/usr/share/notify-osd/icons</Path>
+                <Path fileType="data">/usr/share/dbus-1/services</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>09-05-2013</Date>
+                <Version>0.9.34</Version>
+                <Comment>Add notify-osd to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>libxklavier</Name>
             <Homepage>http://freedesktop.org/wiki/Software/LibXklavier</Homepage>
             <Packager>
@@ -15499,6 +15621,49 @@ By using this package, you accept the terms and conditions set in the end-user l
                 <Date>06-11-2013</Date>
                 <Version>0.8.9</Version>
                 <Comment>Add PackageKit to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>software-update-icon</Name>
+            <Homepage>http://www.solusos.com/</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.core</PartOf>
+            <Summary xml:lang="en">GTK Software Update Icon</Summary>
+            <Description xml:lang="en">System tray icon notifying you to new updates</Description>
+            <Archive type="tarbz2" sha1sum="fe7ccd14430ee09e0de4d0641534388f6ae4bc2f">https://bitbucket.org/solusos/update-icon/get/v0.1.tar.bz2</Archive>
+            <SourceURI>desktop/core/software-update-icon/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>software-update-icon</Name>
+            <RuntimeDependencies>
+                <Dependency>packagekit</Dependency>
+                <Dependency>gnome-packagekit</Dependency>
+                <Dependency>hicolor-icon-theme</Dependency>
+                <Dependency>python</Dependency>
+                <Dependency>python-gobject</Dependency>
+                <AnyDependency>
+                    <Dependency>notify-osd</Dependency>
+                    <Dependency>notification-daemon</Dependency>
+                </AnyDependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/etc/xdg/autostart</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>09-05-2013</Date>
+                <Version>0.1</Version>
+                <Comment>Add software-update-icon to repositories</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
