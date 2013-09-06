@@ -11,19 +11,13 @@
         <Summary>D-Bus abstraction layer that allows the session user to manage packages in a secure way using a cross-distro, cross-architecture API.</Summary>
         <Description>PackageKit is a system designed to make installing and updating software on your computer easier. The primary design goal is to unify all the software graphical tools used in different distributions, and use some of the latest technology like PolicyKit to make the process suck less.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="d69ee5f4429b6b315f259712adc43e0b081e4f5b" type="tarxz">http://www.packagekit.org/releases/PackageKit-0.8.9.tar.xz</Archive>
+        <Archive sha1sum="1ba805675a40e790ec0124b8393a15280d881170" type="tarxz">http://www.packagekit.org/releases/PackageKit-0.8.11.tar.xz</Archive>
         
         <Patches>
-            <!-- Written by moi, official backend in packagekit gitorious repo //-->
-            <Patch level="1">basic_pisi_fixes</Patch>
-            <Patch level="1">take_mapping_from_file</Patch>
-            <Patch level="1">progress_feedback</Patch>
-            <Patch level="1">update_details</Patch>
-            <Patch level="1">download_packages</Patch>
-            <Patch level="1">simulated_support</Patch>
-            <Patch level="1">pending_fixes</Patch>
-            <Patch level="1">multipackage_handling</Patch>
-            <Patch level="1">homepage_fixes</Patch>
+            <!-- In git master, will be in next PackageKit release //-->
+            <Patch level="1">0001-pisi-Fix-parsing-of-package-update-messages.patch</Patch>
+            <Patch level="1">0002-pisi-Detect-when-reboot-is-required-and-report-it.patch</Patch>
+            <Patch level="1">0003-pisi-Support-INFO_BUGFIX-when-listing-new-updates.patch</Patch>
         </Patches>
         
         <BuildDependencies>
@@ -174,6 +168,17 @@
     </Package>
     
     <History>
+        <Update release="3">
+            <Date>09-06-2013</Date>
+            <Version>0.8.11</Version>
+            <Comment> - Latest upstream release
+ - Our PiSi backend is now in official releases
+ - Newest functionality in git master, pulled patches in
+</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>06-11-2013</Date>
             <Version>0.8.9</Version>
