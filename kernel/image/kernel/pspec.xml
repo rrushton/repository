@@ -73,6 +73,16 @@
     </Package>
     
     <History>
+        <Update release="15">
+            <Date>09-06-2013</Date>
+            <Version>3.11.0</Version>
+            <Comment>Enable FANOTIFY by default
+Bug-SolusOS: T9
+</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="14">
             <Date>09-03-2013</Date>
             <Version>3.11.0</Version>
