@@ -1,0 +1,25 @@
+From 6ee3325f58826c4d36c004ac5e5c7f2add3f0e05 Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey@solusos.com>
+Date: Sun, 8 Sep 2013 14:45:20 +0100
+Subject: [PATCH] Use sudo mode by default
+
+---
+ gksu.schemas.in |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/gksu.schemas.in b/gksu.schemas.in
+index e0ebff5..9c858aa 100644
+--- a/gksu.schemas.in
++++ b/gksu.schemas.in
+@@ -37,7 +37,7 @@
+       <key>/schemas/apps/gksu/sudo-mode</key>
+       <applyto>/apps/gksu/sudo-mode</applyto>
+       <owner>gksu</owner>
+-      <type>bool</type>
++      <type>true</type>
+       <default>false</default>
+       <locale name="C">
+ 	<short>Sudo mode</short>
+-- 
+1.7.10.4
+

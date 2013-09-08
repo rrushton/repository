@@ -1,0 +1,110 @@
+diff -ruNb a/libgksu/Makefile.am b/libgksu/Makefile.am
+--- a/libgksu/Makefile.am	2008-05-09 18:39:55.000000000 +0100
++++ b/libgksu/Makefile.am	2013-09-08 14:39:03.476603025 +0100
+@@ -8,8 +8,8 @@
+ # major -> breaks backward compatibility (changes to existing ABI)
+ # minor -> keeps compatibility (additions to the API)
+ # micro -> no change to the API/ABI
+-libgksu2_la_LIBADD = ../libgksuui/libgksuui1.0.la
+-libgksu2_la_LDFLAGS = -version-info 0:2:0 -Wl,-O1 -lutil ${LIBGKSU_LIBS}
++libgksu2_la_LIBADD = ../libgksuui/libgksuui1.0.la -lutil ${LIBGKSU_LIBS}
++libgksu2_la_LDFLAGS = -version-info 0:2:0 -Wl,-O1
+ if USE_VERSION_SCRIPT
+ libgksu2_la_LDFLAGS += -Wl,--version-script=libgksu.ver
+ endif
+@@ -24,12 +24,12 @@
+ 
+ pkglibdir = ${libdir}/${PACKAGE}
+ pkglib_PROGRAMS = gksu-run-helper
+-gksu_run_helper_LDFLAGS = `pkg-config --libs glib-2.0`
+-gksu_run_helper_SOURCES = gksu-run-helper.c
++gksu_run_helper_LDFLAGS =
++gksu_run_helper_LDADD = `pkg-config --libs glib-2.0`
+ 
+ noinst_PROGRAMS = test-gksu
+ test_gksu_SOURCES = test-gksu.c
+-test_gksu_LDADD = libgksu2.la
+-test_gksu_LDFLAGS = `pkg-config --libs glib-2.0`
++test_gksu_LDADD = libgksu2.la `pkg-config --libs gtk+-2.0`
++test_gksu_LDFLAGS =
+ 
+ EXTRA_DIST = libgksu.ver
+diff -ruNb a/libgksu/Makefile.in b/libgksu/Makefile.in
+--- a/libgksu/Makefile.in	2009-06-29 18:55:56.000000000 +0100
++++ b/libgksu/Makefile.in	2013-09-08 14:38:16.940515385 +0100
+@@ -257,18 +257,19 @@
+ # major -> breaks backward compatibility (changes to existing ABI)
+ # minor -> keeps compatibility (additions to the API)
+ # micro -> no change to the API/ABI
+-libgksu2_la_LIBADD = ../libgksuui/libgksuui1.0.la
+-libgksu2_la_LDFLAGS = -version-info 0:2:0 -Wl,-O1 -lutil \
+-	${LIBGKSU_LIBS} $(am__append_1)
++libgksu2_la_LIBADD = ../libgksuui/libgksuui1.0.la -lutil ${LIBGKSU_LIBS} 
++libgksu2_la_LDFLAGS = -version-info 0:2:0 -Wl,-O1 \
++	$(am__append_2)
+ noinst_HEADERS = defines.h
+ include_HEADERS = gksu.h libgksu.h
+ pkgconfigdir = ${libdir}/pkgconfig
+ pkgconfig_DATA = libgksu2.pc
+-gksu_run_helper_LDFLAGS = `pkg-config --libs glib-2.0`
++gksu_run_helper_LDFLAGS =
++gksu_run_helper_LDADD = `pkg-config --libs glib-2.0`
+ gksu_run_helper_SOURCES = gksu-run-helper.c
+ test_gksu_SOURCES = test-gksu.c
+-test_gksu_LDADD = libgksu2.la
+-test_gksu_LDFLAGS = `pkg-config --libs glib-2.0`
++test_gksu_LDADD = libgksu2.la `pkg-config --libs gtk+-2.0`
++test_gksu_LDFLAGS =
+ EXTRA_DIST = libgksu.ver
+ all: all-am
+ 
+diff -ruNb a/libgksuui/Makefile.am b/libgksuui/Makefile.am
+--- a/libgksuui/Makefile.am	2008-05-09 18:39:54.000000000 +0100
++++ b/libgksuui/Makefile.am	2013-09-08 14:36:39.537239056 +0100
+@@ -4,12 +4,13 @@
+ 
+ noinst_LTLIBRARIES = libgksuui1.0.la
+ libgksuui1_0_la_SOURCES = gksuui-dialog.c
+-libgksuui1_0_la_LDFLAGS = -Wl,-O1 `pkg-config --libs gtk+-2.0 gconf-2.0`
++libgksuui1_0_la_LDFLAGS = -Wl,-O1
++libgksuui1_0_la_LIBADD = `pkg-config --libs gtk+-2.0 gconf-2.0 x11` -lm
+ 
+ noinst_HEADERS = defines.h gksuui.h gksuui-dialog.h
+ includedir = ${prefix}/include/$(PACKAGE)
+ 
+ noinst_PROGRAMS = test-gksuui
+ test_gksuui_SOURCES = test-gksuui.c
+-test_gksuui_LDADD = libgksuui1.0.la
+-test_gksuui_LDFLAGS = `pkg-config --libs glib-2.0`
++test_gksuui_LDADD = libgksuui1.0.la `pkg-config --libs glib-2.0 x11` -lm
++test_gksuui_LDFLAGS = 
+diff -ruNb a/libgksuui/Makefile.in b/libgksuui/Makefile.in
+--- a/libgksuui/Makefile.in	2009-06-29 18:55:57.000000000 +0100
++++ b/libgksuui/Makefile.in	2013-09-08 14:35:03.190987671 +0100
+@@ -46,7 +46,8 @@
+ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(noinst_LTLIBRARIES)
+-libgksuui1_0_la_LIBADD =
++libgksuui1_0_la_LIBADD = `pkg-config --libs gtk+-2.0 gconf-2.0 x11` -lm
++libgksuui1_0_la_LDFLAGS = -Wl,-O1
+ am_libgksuui1_0_la_OBJECTS = gksuui-dialog.lo
+ libgksuui1_0_la_OBJECTS = $(am_libgksuui1_0_la_OBJECTS)
+ libgksuui1_0_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
+@@ -56,6 +57,7 @@
+ am_test_gksuui_OBJECTS = test-gksuui.$(OBJEXT)
+ test_gksuui_OBJECTS = $(am_test_gksuui_OBJECTS)
+ test_gksuui_DEPENDENCIES = libgksuui1.0.la
++test_gksuui_LDADD = libgksuui1.0.la `pkg-config --libs glib-2.0 x11` -lm
+ test_gksuui_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
+ 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+ 	$(test_gksuui_LDFLAGS) $(LDFLAGS) -o $@
+@@ -232,7 +234,7 @@
+ noinst_HEADERS = defines.h gksuui.h gksuui-dialog.h
+ test_gksuui_SOURCES = test-gksuui.c
+ test_gksuui_LDADD = libgksuui1.0.la
+-test_gksuui_LDFLAGS = `pkg-config --libs glib-2.0`
++test_gksuui_LDFLAGS = `pkg-config --libs glib-2.0 x11` -lm
+ all: all-am
+ 
+ .SUFFIXES:
