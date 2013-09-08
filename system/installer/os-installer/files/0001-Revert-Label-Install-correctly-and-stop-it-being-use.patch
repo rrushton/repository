@@ -1,0 +1,36 @@
+From d0a01441d134ed81b0bdf0cc62867d8b76e86c7f Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey@solusos.com>
+Date: Sun, 8 Sep 2013 20:11:58 +0100
+Subject: [PATCH 1/2] Revert "Label Install correctly, and stop it being used
+ for 1s after summary show"
+
+This reverts commit d61bd1b2359520c228e0af3630cb37082d46d7cb.
+---
+ os_installer/installer_section.py |   10 ----------
+ 1 file changed, 10 deletions(-)
+
+diff --git a/os_installer/installer_section.py b/os_installer/installer_section.py
+index ce27655..fef8eb2 100644
+--- a/os_installer/installer_section.py
++++ b/os_installer/installer_section.py
+@@ -99,17 +99,7 @@ class InstallerSection(Gtk.VBox):
+         page = self.pages[index]
+         if page.get_name() != "summary" and page.get_name() != "installing":
+             page.prepare()
+-            self.forward.set_label(_("Next"))
+         else:
+-            # Fix up the install button
+-            if page.get_name() == "summary":
+-                self.forward.set_label(_("Install"))
+-                self.forward.set_sensitive(False)
+-                GObject.timeout_add(1000, lambda x: self.forward.set_sensitive(True))
+-            else:
+-                # Hide buttons as we're installing
+-                self.forward.set_visible(False)
+-                self.back.set_visible(False)
+             page.prepare([p for p in self.pages.values() if p.get_name() != "summary" and not p.is_hidden()])
+         self.stack.set_visible_child_name(page.get_name())
+         self.selected_page = index
+-- 
+1.7.10.4
+

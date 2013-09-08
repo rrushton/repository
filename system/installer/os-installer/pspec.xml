@@ -16,6 +16,11 @@
         <BuildDependencies>
             <Dependency>python-setuptools</Dependency>
         </BuildDependencies>
+
+        <Patches>
+            <Patch level="1">0001-Revert-Label-Install-correctly-and-stop-it-being-use.patch</Patch>
+            <Patch level="1">0002-Add-the-wrapper-use-that-in-.desktop.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
@@ -48,6 +53,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>09-09-2013</Date>
+            <Version>0.1</Version>
+            <Comment>Revert label changes, fix desktop files, kill autostart of installer</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>09-09-2013</Date>
             <Version>0.1</Version>
