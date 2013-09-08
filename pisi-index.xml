@@ -35435,6 +35435,62 @@ Bug-SolusOS: T6</Comment>
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>os-installer</Name>
+            <Homepage>http://www.solusos.com</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">Install OS to disk</Summary>
+            <Description xml:lang="en">Install OS to disk</Description>
+            <Archive type="tarbz2" sha1sum="71d9ced690f8a6a3bec635c2d209d8b93dc4c420">https://bitbucket.org/solusos/os-installer/get/v0.1.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>python-setuptools</Dependency>
+            </BuildDependencies>
+            <SourceURI>system/installer/os-installer/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>os-installer</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk2-engine-murrine</Dependency>
+                <Dependency>libwebkit-gtk</Dependency>
+                <Dependency>setxkbmap</Dependency>
+                <Dependency>gnome-themes-mediterranean</Dependency>
+                <Dependency>libtimezonemap</Dependency>
+                <Dependency>gparted</Dependency>
+                <Dependency>python-parted</Dependency>
+                <Dependency>python-geoip</Dependency>
+                <Dependency>python-cairo</Dependency>
+                <Dependency>python-gobject</Dependency>
+                <Dependency>python-configobj</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/lib/python*</Path>
+                <Path fileType="data">/usr/share/os-installer</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/polkit-1/actions</Path>
+                <Path fileType="data">/etc/xdg/autostart</Path>
+                <Path fileType="data">/etc/skel/Desktop</Path>
+                <Path fileType="config">/etc/os-installer</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>09-09-2013</Date>
+                <Version>0.1</Version>
+                <Comment>Add os-installer to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>comar-api</Name>
             <Packager>
                 <Name>Ikey Doherty</Name>
