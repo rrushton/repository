@@ -31,3 +31,6 @@ def install():
     # Write out a default .profile.. temporary
     shelltools.echo ("%s/etc/skel/.profile" % get.installDIR(), "source /etc/profile")
     shelltools.echo ("%s/etc/skel/.bashrc" % get.installDIR(), "source /etc/profile")
+
+    # Bump this ourselves in baselayout next time
+    pisitools.dosed ("%s/etc/issue" % get.installDIR(), "Alpha8", "Alpha 9")
