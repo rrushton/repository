@@ -11,13 +11,14 @@
         <Summary>Lightweight and attractive Display Manager</Summary>
         <Description>Lightweight and attractive Display Manager</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="1349375801cf7369d12b426313c6633b6974864f" type="tarxz">https://launchpad.net/lightdm/1.8/1.7.0/+download/lightdm-1.7.0.tar.xz</Archive>
+        <Archive sha1sum="1349375801cf7369d12b426313c6633b6974864f" type="tarxz">https://launchpad.net/lightdm/1.7/1.7.0/+download/lightdm-1.7.0.tar.xz</Archive>
         
         <Patches>
             <Patch level="1">disable-utmp-handling.patch</Patch>
         </Patches>
         
         <BuildDependencies>
+            <Dependency>itstool</Dependency>
             <Dependency>libxkbfile-devel</Dependency>
             <Dependency>libxklavier-devel</Dependency>
             <Dependency>libx11-devel</Dependency>
@@ -118,6 +119,14 @@
     </Package>
     
     <History>
+        <Update release="6">
+            <Date>09-09-2013</Date>
+            <Version>1.7.0</Version>
+            <Comment>Fix systemd symlinks</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="5">
             <Date>08-13-2013</Date>
             <Version>1.7.0</Version>
