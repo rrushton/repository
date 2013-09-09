@@ -84,6 +84,14 @@
     </Package>
     
     <History>
+        <Update release="10">
+            <Date>09-09-2013</Date>
+            <Version>206</Version>
+            <Comment>Enable readahead by default</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="9">
             <Date>08-06-2013</Date>
             <Version>206</Version>
