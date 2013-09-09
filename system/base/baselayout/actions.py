@@ -34,3 +34,4 @@ def install():
 
     # Bump this ourselves in baselayout next time
     pisitools.dosed ("%s/etc/issue" % get.installDIR(), "Alpha8", "Alpha 9")
+    pisitools.dosed ("%s/usr/share/baselayout/issue" % get.installDIR(), "Alpha8", "Alpha 9")
