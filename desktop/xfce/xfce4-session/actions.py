@@ -6,7 +6,7 @@ from pisi.actionsapi import get, autotools, pisitools
 
 
 def setup():
-    autotools.configure("--enable-libgnome-keyring")
+    autotools.configure("--enable-systemd")
 
 
 def build():
