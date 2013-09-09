@@ -28,6 +28,4 @@ def install():
     autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
 
     # Enable systemd stuff
-    pisitools.dodir ("/usr/lib/systemd/system/multi-user.target.wants")
     pisitools.dosym ("/usr/lib/systemd/system/NetworkManager.service", "/usr/lib/systemd/system/dbus-org.freedesktop.NetworkManager.service")
-    pisitools.dosym ("/usr/lib/systemd/system/NetworkManager.service", "/usr/lib/systemd/system/multi-user.target.wants/NetworkManager.service")
