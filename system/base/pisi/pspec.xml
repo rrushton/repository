@@ -72,6 +72,14 @@
     </Package>
     
     <History>
+        <Update release="11">
+            <Date>09-09-2013</Date>
+            <Version>3.0</Version>
+            <Comment>Fix default configuration for people building packages</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="10">
             <Date>05-30-2013</Date>
             <Version>3.0</Version>
