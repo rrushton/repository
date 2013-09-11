@@ -11,18 +11,9 @@
         <Summary>Low Level Virtual Machine (Reusable compiler and toolchains</Summary>
         <Description>The LLVM package contains a collection of modular and reusable compiler and toolchain technologies. The Low Level Virtual Machine (LLVM) Core libraries provide a modern source and target-independent optimizer, along with code generation support for many popular CPUs (as well as some less common ones!). These libraries are built around a well specified code representation known as the LLVM intermediate representation ("LLVM IR"). </Description>
         <License>NCSA</License>
-        <Archive sha1sum="42d139ab4c9f0c539c60f5ac07486e9d30fc1280" type="targz">http://llvm.org/releases/3.2/llvm-3.2.src.tar.gz</Archive>
-        <Archive sha1sum="b0515298c4088aa294edc08806bd671f8819f870" target="llvm-3.2.src/tools" type="targz">http://llvm.org/releases/3.2/clang-3.2.src.tar.gz</Archive>
-        <Archive sha1sum="718c0249a00e928f8bba32c84771da998ea4d42f" target="llvm-3.2.src/projects" type="targz">http://llvm.org/releases/3.2/compiler-rt-3.2.src.tar.gz</Archive>
-        
-        <AdditionalFiles>
-            <AdditionalFile target="fix_darwin_issue.patch">fix_darwin_issue.patch</AdditionalFile>
-        </AdditionalFiles>
-        <Patches>
-            <Patch level="1">llvm-3.2-blfs_paths-1.patch</Patch>
-            <Patch level="1">R600-Mesa-9.1.patch</Patch>
-            <Patch level="1">llvm-3.2-r600_fixes-1.patch</Patch>
-        </Patches>
+        <Archive sha1sum="c6c22d5593419e3cb47cbcf16d967640e5cce133" type="targz">http://llvm.org/releases/3.3/llvm-3.3.src.tar.gz</Archive>
+        <Archive sha1sum="ccd6dbf2cdb1189a028b70bcb8a22509c25c74c8" target="llvm-3.3.src/tools" type="targz">http://llvm.org/releases/3.3/cfe-3.3.src.tar.gz</Archive>
+        <Archive sha1sum="745386ec046e3e49742e1ecb6912c560ccd0a002" target="llvm-3.3.src/projects" type="targz">http://llvm.org/releases/3.3/compiler-rt-3.3.src.tar.gz</Archive>
     </Source>
     
     <Package>
@@ -90,6 +81,14 @@
     </Package>
     
     <History>
+        <Update release="4">
+            <Date>09-11-2013</Date>
+            <Version>3.3</Version>
+            <Comment>Upgrade to latest upstream version</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>05-26-2013</Date>
             <Version>3.2</Version>
