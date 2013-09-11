@@ -1,4 +1,3 @@
-
 #!/usr/bin/python
 
 # Created For SolusOS
@@ -30,10 +29,3 @@ def build():
 	
 def install():
 	autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
-	
-	# Fix permissions of the static files
-	shelltools.chmod ("%s/usr/lib/llvm/*.a" % get.installDIR(), mode=0644)
-	
-	# Fix the llvm link
-	pisitools.dosym ("/usr/lib/llvm/libLLVM-3.3.so", "/usr/lib/libLLVM-3.3.so")
-	
