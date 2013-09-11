@@ -2,7 +2,7 @@
 
 # Created For SolusOS
 
-from pisi.actionsapi import shelltools, get, autotools, pisitools
+from pisi.actionsapi import get, autotools, pisitools
 
 
 def setup():

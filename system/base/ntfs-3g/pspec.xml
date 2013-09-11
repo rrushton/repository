@@ -47,7 +47,7 @@
             <Version>2013.1</Version>
             <Comment>Add ntfs-3g to repositories
 
-Bug-SolusOS: T19
+Bug-SolusOS: T14
 </Comment>
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>

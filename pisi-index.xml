@@ -35912,6 +35912,58 @@ Bug-SolusOS: T6</Comment>
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>ntfs-3g</Name>
+            <Homepage>http://www.tuxera.com/community/ntfs-3g-download/</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>system.base</PartOf>
+            <Summary xml:lang="en">Open source, driver for Windows NTFS file system</Summary>
+            <Description xml:lang="en">Open source, driver for Windows NTFS file system. This can mount Windows partitions so that they are writeable and allows you edit or delete Windows files from Linux.</Description>
+            <Archive type="targz" sha1sum="8c12b7644d90ae9fb8d0aca0d7ebd5f8fac2c818">http://tuxera.com/opensource/ntfs-3g_ntfsprogs-2013.1.13.tgz</Archive>
+            <SourceURI>system/base/ntfs-3g/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>ntfs-3g</Name>
+            <Files>
+                <Path fileType="executable">/bin</Path>
+                <Path fileType="executable">/sbin</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/sbin</Path>
+                <Path fileType="library">/lib/lib*.so*</Path>
+                <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>ntfs-3g-devel</Name>
+            <Summary xml:lang="en">Development files for ntfs-3g</Summary>
+            <Description xml:lang="en">Development files for ntfs-3g</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">ntfs-3g</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>09-11-2013</Date>
+                <Version>2013.1</Version>
+                <Comment>Add ntfs-3g to repositories
+
+Bug-SolusOS: T14</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>python-urlgrabber</Name>
             <Homepage>http://urlgrabber.baseurl.org/</Homepage>
             <Packager>
