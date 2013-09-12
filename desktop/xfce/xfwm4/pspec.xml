@@ -11,7 +11,7 @@
         <Summary>XFCE Window Manager</Summary>
         <Description>XFCE Window Manager</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="1549954949b5e1f38a2279a39a477b52bb5339f2" type="tarbz2">http://archive.xfce.org/xfce/4.10/src/xfwm4-4.10.0.tar.bz2</Archive>
+        <Archive sha1sum="cbfb1beee0e952f133ef851526823b472992de1d" type="tarbz2">http://archive.xfce.org/src/xfce/xfwm4/4.10/xfwm4-4.10.1.tar.bz2</Archive>
         
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
@@ -50,7 +50,7 @@
             <Dependency>libsm-devel</Dependency>
         </BuildDependencies>
         
-        <Patches>
+        <Patches>           
             <Patch level="1">0001-Apply-SolusOS-defaults-and-branding.patch</Patch>
         </Patches>
     </Source>
@@ -116,6 +116,15 @@
     </Package>
     
     <History>
+        <Update release="5">
+            <Date>09-12-2013</Date>
+            <Version>4.10.1</Version>
+            <Comment> - Update to latest upstream version
+</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="4">
             <Date>09-03-2013</Date>
             <Version>4.10.0</Version>
