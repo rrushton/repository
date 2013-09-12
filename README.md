@@ -59,7 +59,7 @@ refer to the full SolusOS version number for the sake of professionalism.
 
 To use the above version numbers as an example, a user may refer to an update as:
 
-    2.37.4.1.0
+    2.37.4.1-0
 
 Helpful commit messages
 -----------------------
