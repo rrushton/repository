@@ -10,13 +10,13 @@ Versioning and Specifics
 ------------------------
 SolusOS versioning uses the following scheme:
 
- $MAJOR.$ISOYEAR$ISOWEEK.$ISODAY.$PATCHLEVEL
+ $MAJOR.$ISOYEAR$ISOWEEK.$ISODAY.$PATCHLEVEL-$BUILD
 
 All changes should initially be made to the volatile branch, enabling us to
 maintain a static master for the majority of the time. If today's date is
 the 12th of September, 2013, we can say that our base version number would be:
 
-    2.201337.4.0
+    2.201337.4.0-0
 
 Once packages have survived testing in volatile, they can then be merged into
 master. A new version number does not need to be generated unless a build has
@@ -37,7 +37,14 @@ queue ISO date should be retained, with an increment to the patch level.
 For instance, if the last release was 2.201337.4.0, and we push a patch fixing a security
 issue in glibc, the new version number would be:
 
-    2.201337.4.1
+    2.201337.4.1-0
+
+Build numer is used to accomodate multiple builds in one day, and may be omitted for the
+first build. Subsequent releases on the same day should start their build number at 1,
+and increment from there. If a new queue was released on the same day, it could have the
+version:
+
+    2.201337.4.1-1
 
 This will hold true regardless of the current ISO date. If the only manner in which the issue
 could be resolved was a glibc update (i.e. 2.17 to 2.18), the patch level should be reset and
@@ -52,7 +59,7 @@ refer to the full SolusOS version number for the sake of professionalism.
 
 To use the above version numbers as an example, a user may refer to an update as:
 
-    2.37.4.1
+    2.37.4.1.0
 
 Helpful commit messages
 -----------------------
@@ -66,6 +73,10 @@ must now *always* be appropriately prefixed with one of the following:
  * [REMOVE] used to remove a package from the repository
 
 
+Changes
+-------
+ * Added the optional build ID field for same day releases (201337.4)
+ 
 Authors
 -------
 
