@@ -17,6 +17,11 @@
             <Dependency>libjpeg-turbo-devel</Dependency>
             <Dependency>zlib-devel</Dependency>
         </BuildDependencies>
+
+        <Patches>
+            <!-- https://bugzilla.redhat.com/show_bug.cgi?id=996468 //-->
+            <Patch level="1">security/cve-2013-4243.patch</Patch>
+        </Patches>
     </Source>
     
     <Package>
@@ -60,6 +65,15 @@
     </Package>
     
     <History>
+        <Update release="4" type="security">
+            <Date>09-12-2013</Date>
+            <Version>4.0.3</Version>
+            <Comment> - CVE-2013-4243
+Heap-based buffer overflow in the readgifimage function in the gif2tiff tool in libtiff 4.0.3 and earlier allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via a crafted height and width values in a GIF image.</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>04-07-2013</Date>
             <Version>4.0.3</Version>
