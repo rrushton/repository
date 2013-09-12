@@ -1,8 +1,0 @@
-Release 2.201337.4.0 - Ikey Doherty <ikey@solusos.com>
-
- * Remove vsync support, we'll wait for 4.12 (too buggy)
-  - Ikey Doherty (ikey@solusos.com)
-
- * [UPDATE] Update xfwm to 4.10.1
-  - Ikey Doherty (ikey@solusos.com)
-
