@@ -1,4 +1,3 @@
-
 #!/usr/bin/python
 
 # Created For SolusOS
@@ -7,14 +6,15 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
-	autotools.configure ("--prefix=/usr\
-						  --sysconfdir=/etc\
-						  --enable-utf8")
-						
+    autotools.configure("--prefix=/usr\
+                         --sysconfdir=/etc\
+                         --enable-utf8")
+
 def build():
-	autotools.make ()
-	
+    autotools.make()
+
+
 def install():
-	autotools.install ()
-	# Ship the sample nanorc with the package
-	pisitools.insinto("/etc/", "doc/nanorc.sample", "nanorc")
+    autotools.install()
+    # Ship the sample nanorc with the package
+    pisitools.insinto("/etc/", "doc/nanorc.sample", "nanorc")
