@@ -29,15 +29,26 @@
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="data">/usr/share/nano</Path>
-            <Path fileType="*">/</Path>
+            <Path fileType="config">/etc/nanorc</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency>ncurses</Dependency>
             <Dependency>zlib</Dependency>		
         </RuntimeDependencies>
+        <AdditionalFiles>
+            <AdditionalFile target="/etc/nanorc">nanorc</AdditionalFile>
+        </AdditionalFiles>
     </Package>
     
     <History>
+        <Update release="6">
+            <Date>09-13-2013</Date>
+            <Version>2.3.2</Version>
+            <Comment>Ship a better default nanorc</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="5">
             <Date>05-06-2013</Date>
             <Version>2.3.2</Version>
