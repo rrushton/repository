@@ -10,13 +10,13 @@ Versioning and Specifics
 ------------------------
 SolusOS versioning uses the following scheme:
 
- $MAJOR.$ISOYEAR$ISOWEEK.$ISODAY.$PATCHLEVEL-$BUILD
+ $MAJOR.$ISOYEAR$ISOWEEK.$ISODAY.$BUILD
 
 All changes should initially be made to the volatile branch, enabling us to
 maintain a static master for the majority of the time. If today's date is
 the 12th of September, 2013, we can say that our base version number would be:
 
-    2.201337.4.0-0
+    2.201337.4.0
 
 Once packages have survived testing in volatile, they can then be merged into
 master. A new version number does not need to be generated unless a build has
@@ -28,28 +28,13 @@ changes between this tag and the last. This enables real tracking of the reposit
 between different releases, and different upgrades. Using the ISO date system also
 enables us to quickly identify exactly which update caused any issue.
 
-If a security update or patch is pushed to volatile, it again must go through the
-stability testing process. Should only an update that affects either a bug or security
-issue, without changing the major version number of affected packages (this means excluding
-other package updates from the queue) be then merged into the repository, the original
-queue ISO date should be retained, with an increment to the patch level.
-
-For instance, if the last release was 2.201337.4.0, and we push a patch fixing a security
-issue in glibc, the new version number would be:
-
-    2.201337.4.1-0
 
 Build numer is used to accomodate multiple builds in one day, and may be omitted for the
 first build. Subsequent releases on the same day should start their build number at 1,
 and increment from there. If a new queue was released on the same day, it could have the
 version:
 
-    2.201337.4.1-1
-
-This will hold true regardless of the current ISO date. If the only manner in which the issue
-could be resolved was a glibc update (i.e. 2.17 to 2.18), the patch level should be reset and
-a new version number shall be calculated using the current ISO date. Note that the MAJOR
-version is always that of the distribution release, in this case that is 2.
+    2.201337.4.1
 
 Shortening versions
 -------------------
@@ -59,7 +44,7 @@ refer to the full SolusOS version number for the sake of professionalism.
 
 To use the above version numbers as an example, a user may refer to an update as:
 
-    2.37.4.1-0
+    2.37.4.1
 
 Helpful commit messages
 -----------------------
@@ -69,13 +54,14 @@ must now *always* be appropriately prefixed with one of the following:
 
  * [NEW] indicates a new package being added to the repo
  * [UPDATE] indicates a package upgrade
- * [FIX] indicates a security or bugfix, which warrant only patch level and not new version
+ * [FIX] indicates a security or bugfix
  * [REMOVE] used to remove a package from the repository
 
 
 Changes
 -------
  * Added the optional build ID field for same day releases (201337.4)
+ * Made build ID mandatory and dropped patch level (201337.5)
  
 Authors
 -------
