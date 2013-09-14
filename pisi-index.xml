@@ -42664,6 +42664,94 @@ Bug-SolusOS: T6</Comment>
         </Maintainer>
     </Component>
     <Component>
+        <Name>network.base</Name>
+        <LocalName xml:lang="en">Networking Base</LocalName>
+        <Summary xml:lang="en">Networking Base</Summary>
+        <Description xml:lang="en">Networking Base</Description>
+        <Group>network</Group>
+        <Maintainer>
+            <Name>SolusOS Developers</Name>
+            <Email>dev@solusos.com</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>network.mail</Name>
+        <LocalName xml:lang="en">Email clients</LocalName>
+        <Summary xml:lang="en">Email clients</Summary>
+        <Description xml:lang="en">Email clients</Description>
+        <Group>network</Group>
+        <Maintainer>
+            <Name>SolusOS Developers</Name>
+            <Email>dev@solusos.com</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>network.irc</Name>
+        <LocalName xml:lang="en">IRC clients</LocalName>
+        <Summary xml:lang="en">IRC clients</Summary>
+        <Description xml:lang="en">IRC clients</Description>
+        <Group>network</Group>
+        <Maintainer>
+            <Name>SolusOS Developers</Name>
+            <Email>dev@solusos.com</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>network.im</Name>
+        <LocalName xml:lang="en">Instant messaging</LocalName>
+        <Summary xml:lang="en">Instant messaging</Summary>
+        <Description xml:lang="en">Instant messaging</Description>
+        <Group>network</Group>
+        <Maintainer>
+            <Name>SolusOS Developers</Name>
+            <Email>dev@solusos.com</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>network.web</Name>
+        <LocalName xml:lang="en">Web applications</LocalName>
+        <Summary xml:lang="en">Web applications</Summary>
+        <Description xml:lang="en">Web applications</Description>
+        <Group>network</Group>
+        <Maintainer>
+            <Name>SolusOS Developers</Name>
+            <Email>dev@solusos.com</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>network.web.browser</Name>
+        <LocalName xml:lang="en">Web browsers</LocalName>
+        <Summary xml:lang="en">Web browsers</Summary>
+        <Description xml:lang="en">Web browsers</Description>
+        <Group>network</Group>
+        <Maintainer>
+            <Name>SolusOS Developers</Name>
+            <Email>dev@solusos.com</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>network.util</Name>
+        <LocalName xml:lang="en">Networking utilities</LocalName>
+        <Summary xml:lang="en">Networking utilities</Summary>
+        <Description xml:lang="en">Networking utilities</Description>
+        <Group>network</Group>
+        <Maintainer>
+            <Name>SolusOS Developers</Name>
+            <Email>dev@solusos.com</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>network.download</Name>
+        <LocalName xml:lang="en">Download managers</LocalName>
+        <Summary xml:lang="en">Download managers</Summary>
+        <Description xml:lang="en">Download managers</Description>
+        <Group>network</Group>
+        <Maintainer>
+            <Name>SolusOS Developers</Name>
+            <Email>dev@solusos.com</Email>
+        </Maintainer>
+    </Component>
+    <Component>
         <Name>network.clients</Name>
         <LocalName xml:lang="en">Networking CLI Clients</LocalName>
         <Summary xml:lang="en">Networking CLI Clients</Summary>
@@ -42719,10 +42807,43 @@ Bug-SolusOS: T6</Comment>
         </Maintainer>
     </Component>
     <Component>
+        <Name>programming.devel</Name>
+        <LocalName xml:lang="en">Development files</LocalName>
+        <Summary xml:lang="en">Development files</Summary>
+        <Description xml:lang="en">Development files</Description>
+        <Group>programming</Group>
+        <Maintainer>
+            <Name>SolusOS Developers</Name>
+            <Email>dev@solusos.com</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>programming.tools</Name>
+        <LocalName xml:lang="en">Development tools</LocalName>
+        <Summary xml:lang="en">Development tools</Summary>
+        <Description xml:lang="en">Development tools</Description>
+        <Group>programming</Group>
+        <Maintainer>
+            <Name>SolusOS Developers</Name>
+            <Email>dev@solusos.com</Email>
+        </Maintainer>
+    </Component>
+    <Component>
         <Name>programming.python</Name>
         <LocalName xml:lang="en">Python packages</LocalName>
         <Summary xml:lang="en">Python packages</Summary>
         <Description xml:lang="en">Python packages</Description>
+        <Group>programming</Group>
+        <Maintainer>
+            <Name>SolusOS Developers</Name>
+            <Email>dev@solusos.com</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>programming.perl</Name>
+        <LocalName xml:lang="en">Perl packages</LocalName>
+        <Summary xml:lang="en">Perl packages</Summary>
+        <Description xml:lang="en">Perl packages</Description>
         <Group>programming</Group>
         <Maintainer>
             <Name>SolusOS Developers</Name>
@@ -42834,6 +42955,17 @@ Bug-SolusOS: T6</Comment>
         <Summary xml:lang="en">XFCE Desktop</Summary>
         <Description xml:lang="en">XFCE Desktop</Description>
         <Group>desktop</Group>
+        <Maintainer>
+            <Name>SolusOS Developers</Name>
+            <Email>dev@solusos.com</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>security</Name>
+        <LocalName xml:lang="en">Security applications</LocalName>
+        <Summary xml:lang="en">Security applications</Summary>
+        <Description xml:lang="en">Security applications</Description>
+        <Group>system</Group>
         <Maintainer>
             <Name>SolusOS Developers</Name>
             <Email>dev@solusos.com</Email>
