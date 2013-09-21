@@ -10,7 +10,7 @@
         </Packager>
         <Summary>Qt 5 JavaScript Backend</Summary>
         <Description>Qt 5 JavaScript Backend (v8 Engine)</Description>
-        <License>GPLv2+</License>
+        <License>LGPLv2.1-linking-exception</License>
         <Archive sha1sum="e13a5ef112bdbe2fb1691d21c52b287a21da614a" type="tarxz">http://download.qt-project.org/official_releases/qt/5.1/5.1.1/submodules/qtjsbackend-opensource-src-5.1.1.tar.xz</Archive>
 
         <BuildDependencies>
