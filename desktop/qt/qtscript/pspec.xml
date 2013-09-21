@@ -1,0 +1,101 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>qtscript</Name>
+        <Homepage>http://qt.digia.com</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>Qt application scripting support</Summary>
+        <Description>Qt provides support for application scripting with ECMAScript. The following guides and references cover aspects of programming with ECMAScript and Qt.</Description>
+        <License>LGPLv2.1-linking-exception</License>
+        <Archive sha1sum="972e16e91bb470e732716ca7dc18890ff5db6fd5" type="tarxz">http://download.qt-project.org/official_releases/qt/5.1/5.1.1/submodules/qtscript-opensource-src-5.1.1.tar.xz</Archive>
+
+        <BuildDependencies>
+            <Dependency>libicu-devel</Dependency>
+            <Dependency>qt5-devel</Dependency>
+            <Dependency>mesalib-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>libdrm-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>qt5-script</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>libicu</Dependency>
+            <Dependency>qt5</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <Package>
+        <Name>qt5-script-devel</Name>
+        <Summary>Development files for qt5-script</Summary>
+        <Description>Development files for qt5-script</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib/cmake</Path>
+            <Path fileType="data">/usr/lib/qt5/mkspecs</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">qt5-script</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <Package>
+        <Name>qt5-script-demos</Name>
+        <Summary>Demonstration programs for qt5-script</Summary>
+        <Description>Demonstration programs for qt5-script</Description>
+        <Files>
+            <Path fileType="executable">/usr/lib/qt5/examples</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">qt5-script</Dependency>
+            <Dependency>libicu</Dependency>
+            <Dependency>qt5</Dependency>
+            <Dependency>mesalib</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>libdrm</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libx11</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>09-21-2013</Date>
+            <Version>5.1.1</Version>
+            <Comment>Add qt5-script to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>	
+</PISI>
