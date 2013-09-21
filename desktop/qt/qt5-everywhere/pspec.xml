@@ -45,6 +45,7 @@
             <Path fileType="library">/usr/lib/qt5/imports</Path>
             <Path fileType="library">/usr/lib/qt5/qml</Path>
             <Path fileType="library">/usr/lib/qt5/plugins</Path>
+            <Path fileType="executable">/usr/lib/qt5/libexec/QtWebPluginProcess</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency>zlib</Dependency>
