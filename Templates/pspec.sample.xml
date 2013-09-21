@@ -3,6 +3,7 @@
 <PISI>
     <Source>
         <Name>%(PackageName)s</Name>
+        <Homepage></Homepage>
         <Packager>
             <Name>%(PackagerName)s</Name>
             <Email>%(PackagerEmail)s</Email>
