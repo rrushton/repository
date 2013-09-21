@@ -395,7 +395,19 @@
 				<Email>dev@solusos.com</Email>
 			</Maintainer>
 		</Component>
-		
+
+		<Component>
+			<Name>desktop.qt</Name>
+			<LocalName xml:lang="en">Qt Runtime Libraries</LocalName>
+			<Summary xml:lang="en">Qt Runtime Libraries</Summary>
+			<Description xml:lang="en">Qt Runtime Libraries</Description>
+			<Group>desktop</Group>
+			<Maintainer>
+				<Name>SolusOS Developers</Name>
+				<Email>dev@solusos.com</Email>
+			</Maintainer>
+		</Component>
+
 		<Component>
 			<Name>desktop.gtk</Name>
 			<LocalName xml:lang="en">GTK Runtime Libraries</LocalName>
