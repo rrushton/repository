@@ -23065,6 +23065,253 @@ By using this package, you accept the terms and conditions set in the end-user l
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>qt-creator</Name>
+            <Homepage>http://qt.digia.com</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>LGPLv2.1-linking-exception</License>
+            <PartOf>desktop.qt</PartOf>
+            <Summary xml:lang="en">Official Qt IDE</Summary>
+            <Description xml:lang="en">Qt Creator is a cross-platform IDE (integrated development environment) tailored to the needs of Qt developers. It is part of the Qt Project</Description>
+            <Archive type="targz" sha1sum="1711e2266ab3c0a410be923278055c37ef94b93c">http://download.qt-project.org/official_releases/qtcreator/2.8/2.8.1/qt-creator-2.8.1-src.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>mesalib-devel</Dependency>
+                <Dependency>libtiff-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>libicu-devel</Dependency>
+                <Dependency>systemd-devel</Dependency>
+                <Dependency>alsa-lib-devel</Dependency>
+                <Dependency>libxv-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>libdrm-devel</Dependency>
+                <Dependency>libxkbcommon-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>pulseaudio-devel</Dependency>
+                <Dependency>libxi-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>qt5-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/qt/qtcreator/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>qt5-creator</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>mesalib</Dependency>
+                <Dependency>json-c</Dependency>
+                <Dependency>pulseaudio</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>libxtst</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>libicu</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>libxi</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>libcap2</Dependency>
+                <Dependency>libdrm</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>attr</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>openssl</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libsm</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/qtcreator</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/icons/hicolor</Path>
+                <Path fileType="data">/usr/share/qtcreator</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/qtcreator.desktop">qtcreator.desktop</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>09-21-2013</Date>
+                <Version>2.8.1</Version>
+                <Comment>Add qt-creator-2.8.1 to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>qt5-everywhere</Name>
+            <Homepage>http://qt.digia.com/</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>LGPLv2.1-linking-exception</License>
+            <PartOf>desktop.qt</PartOf>
+            <Summary xml:lang="en">Cross platform application and UI framework</Summary>
+            <Description xml:lang="en">Cross platform application and UI development framework</Description>
+            <Archive type="tarxz" sha1sum="e09a34ef5a80b98eda4e07dcf810d1ce0ef62346">http://download.qt-project.org/official_releases/qt/5.1/5.1.1/single/qt-everywhere-opensource-src-5.1.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>mesalib-devel</Dependency>
+                <Dependency>libtiff-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>libicu-devel</Dependency>
+                <Dependency>systemd-devel</Dependency>
+                <Dependency>alsa-lib-devel</Dependency>
+                <Dependency>libxv-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>gstreamer-0.10-devel</Dependency>
+                <Dependency>libdrm-devel</Dependency>
+                <Dependency>gstreamer-0.10-plugins-base-devel</Dependency>
+                <Dependency>libxkbcommon-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>pulseaudio-devel</Dependency>
+                <Dependency>libxi-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libgtk-2</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/qt/qt5-everywhere/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>qt5</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>mesalib</Dependency>
+                <Dependency>libtiff</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>libicu</Dependency>
+                <Dependency>systemd</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libxv</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>gstreamer-0.10</Dependency>
+                <Dependency>libdrm</Dependency>
+                <Dependency>gstreamer-0.10-plugins-base</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libxkbcommon</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>pulseaudio</Dependency>
+                <Dependency>libxi</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libgtk-2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="library">/usr/lib/lib*.a</Path>
+                <Path fileType="library">/usr/lib/qt5/imports</Path>
+                <Path fileType="library">/usr/lib/qt5/qml</Path>
+                <Path fileType="library">/usr/lib/qt5/plugins</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-devel</Name>
+            <Summary xml:lang="en">Development files for Qt 5</Summary>
+            <Description xml:lang="en">Development files for Qt 5</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">qt5</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/lib/cmake</Path>
+                <Path fileType="data">/usr/lib/qt5/mkspecs</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-demos</Name>
+            <Summary xml:lang="en">Demonstration programs for Qt 5</Summary>
+            <Description xml:lang="en">Demonstration programs for Qt 5</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">qt5</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>mesalib</Dependency>
+                <Dependency>json-c</Dependency>
+                <Dependency>pulseaudio</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>libxtst</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>libicu</Dependency>
+                <Dependency>libsndfile</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>libflac</Dependency>
+                <Dependency>libxi</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>libcap2</Dependency>
+                <Dependency>libdrm</Dependency>
+                <Dependency>libogg</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>attr</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>openssl</Dependency>
+                <Dependency>libvorbis</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libsm</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/lib/qt5/examples</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-translations</Name>
+            <Summary xml:lang="en">Localised translations for Qt 5</Summary>
+            <Description xml:lang="en">Localised translations for Qt 5</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">qt5</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="localedata">/usr/share/qt5/translations</Path>
+                <Path fileType="data">/usr/share/qt5/phrasebooks</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-docs</Name>
+            <Summary xml:lang="en">API Documentation for Qt 5</Summary>
+            <Description xml:lang="en">API Documentation for Qt 5</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">qt5-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/qt5</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>09-19-2013</Date>
+                <Version>5.1.1</Version>
+                <Comment>Add qt5 to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>atkmm</Name>
             <Homepage>http://www.gnome.org</Homepage>
             <Packager>
@@ -43331,6 +43578,17 @@ The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does
         <LocalName xml:lang="en">Common libraries required for a desktop</LocalName>
         <Summary xml:lang="en">Common libraries required for a desktop</Summary>
         <Description xml:lang="en">Common libraries required for a desktop</Description>
+        <Group>desktop</Group>
+        <Maintainer>
+            <Name>SolusOS Developers</Name>
+            <Email>dev@solusos.com</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>desktop.qt</Name>
+        <LocalName xml:lang="en">Qt Runtime Libraries</LocalName>
+        <Summary xml:lang="en">Qt Runtime Libraries</Summary>
+        <Description xml:lang="en">Qt Runtime Libraries</Description>
         <Group>desktop</Group>
         <Maintainer>
             <Name>SolusOS Developers</Name>
