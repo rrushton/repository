@@ -7673,6 +7673,112 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>geeqie</Name>
+            <Homepage>http://geeqie.sourceforge.net/</Homepage>
+            <Packager>
+                <Name>Garry Kmieciak</Name>
+                <Email>gazza@virtualcity.com.au</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>graphics</PartOf>
+            <Summary xml:lang="en">Geeqie is a lightweight Gtk+ based image viewer for Unix like operating systems.</Summary>
+            <Description xml:lang="en">EXIF, IPTC and XMP metadata browsing and editing
+            interoperability, easy integration with other software
+            geeqie works on files and directories, there is no need to import images
+            fast preview for many raw image formats
+            tools for image comparison, sorting and managing photo collection</Description>
+            <Archive type="targz" sha1sum="77167479e91e03d9512535a146c5d2d77941257f">http://sourceforge.net/projects/geeqie/files/geeqie/geeqie-1.1/geeqie-1.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>libtiff-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>xz-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libatk-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>libgtk-2-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>graphics/geeqie/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>geeqie</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>libtiff</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libxcursor</Dependency>
+                <Dependency>xz</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>libicu</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxinerama</Dependency>
+                <Dependency>libatk</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libxdamage</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>libxrandr</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>libgtk-2</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>libxfixes</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>libxcomposite</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libsm</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/geeqie</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>09-19-2013</Date>
+                <Version>1.1</Version>
+                <Comment>Add geeqie to repositories</Comment>
+                <Name>Garry Kmieciak</Name>
+                <Email>gazza@virtualcity.com.au</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>libassuan</Name>
             <Packager>
                 <Name>Justin Krehel</Name>
@@ -9058,6 +9164,121 @@ GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possi
                 <Comment>First release</Comment>
                 <Name>Matias Linares</Name>
                 <Email>matiaslina@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>emacs</Name>
+            <Homepage>http://www.gnu.org/software/emacs/</Homepage>
+            <Packager>
+                <Name>Garry Kmieciak</Name>
+                <Email>gazza@virtualcity.com.au</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>editor</PartOf>
+            <Summary xml:lang="en">An extensible, customizable text editor—and more</Summary>
+            <Description xml:lang="en">GNU Emacs is an extensible, customizable text editor—and more. At its core is an interpreter for Emacs Lisp, a dialect of the Lisp programming language with extensions to support text editing. It has many features to increase productivity when programming.</Description>
+            <Archive type="targz" sha1sum="3c672a176df06e20d2661058ad49893f184b4956">http://ftp.gnu.org/gnu/emacs/emacs-24.3.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>libtiff-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>xz-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libxpm-devel</Dependency>
+                <Dependency>libatk-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+                <Dependency>ncurses-devel</Dependency>
+                <Dependency>giflib4-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>libgtk-2-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>dbus-devel</Dependency>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>editor/emacs/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>emacs</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>libtiff</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libxcursor</Dependency>
+                <Dependency>xz</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>libicu</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxpm</Dependency>
+                <Dependency>libxinerama</Dependency>
+                <Dependency>libatk</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libxdamage</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>libxrandr</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>ncurses</Dependency>
+                <Dependency>giflib4</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>libgtk-2</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>libxfixes</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>libxcomposite</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libsm</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/libexec/emacs</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/emacs</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="info">/usr/share/info</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/var/games/emacs</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>09-21-2013</Date>
+                <Version>24.3</Version>
+                <Comment>Add emacs to repositories</Comment>
+                <Name>Garry Kmieciak</Name>
+                <Email>gazza@virtualcity.com.au</Email>
             </Update>
         </History>
     </SpecFile>
@@ -32648,6 +32869,71 @@ Bug-SolusOS: T9</Comment>
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>sylpheed</Name>
+            <Homepage>http://sylpheed.sraoss.jp/en/</Homepage>
+            <Packager>
+                <Name>Garry Kmieciak</Name>
+                <Email>gazza@virtualcity.com.au</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>mail</PartOf>
+            <Summary xml:lang="en">A lightweight email client.</Summary>
+            <Description xml:lang="en">Sylpheed is a simple, lightweight but featureful, and easy-to-use e-mail client.
+            Sylpheed provides intuitive user-interface. Sylpheed is also designed for keyboard-oriented operation, so Sylpheed can be widely used from beginners to power users.</Description>
+            <Archive type="tarbz2" sha1sum="07b7dd7f0b58065b6f8db7a3b443240aade7da6a">http://sylpheed.sraoss.jp/sylpheed/v3.3/sylpheed-3.3.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>openssl-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libatk-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>libgtk-2-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>network/mail/sylpheed/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>sylpheed</Name>
+            <RuntimeDependencies>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>openssl</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libatk</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>libgtk-2</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>pango</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc/sylpheed</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/sylpheed</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>09-21-2013</Date>
+                <Version>3.3.0</Version>
+                <Comment>Add sylpheed to repositories</Comment>
+                <Name>Garry Kmieciak</Name>
+                <Email>gazza@virtualcity.com.au</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>thunderbird</Name>
             <Packager>
                 <Name>Ikey Doherty</Name>
@@ -42415,6 +42701,53 @@ The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does
                 <Comment>Add sqlite3 to repositories</Comment>
                 <Name>SolusOS Developers</Name>
                 <Email>dev@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gdbm</Name>
+            <Homepage>http://www.gnu.org/software/gdbm/gdbm.html</Homepage>
+            <Packager>
+                <Name>Garry Kmieciak</Name>
+                <Email>gazza@virtualcity.com.au</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>database</PartOf>
+            <Summary xml:lang="en">Standard GNU database libraries</Summary>
+            <Description xml:lang="en">GNU dbm is a set of database routines that use extensible hashing. It works similar to the standard UNIX dbm routines.</Description>
+            <Archive type="targz" sha1sum="441201e9145f590ba613f8a1e952455d620e0860">http://gnu.mirror.iweb.com/gdbm/gdbm-1.10.tar.gz</Archive>
+            <SourceURI>database/gdbm/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gdbm</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="info">/usr/share/info</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gdbm-devel</Name>
+            <Summary xml:lang="en">Development files for gdbm</Summary>
+            <Description xml:lang="en">Development files for gdbm</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">gdbm</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>09-21-2013</Date>
+                <Version>1.10</Version>
+                <Comment>Add gdbm to repositories</Comment>
+                <Name>Garry Kmieciak</Name>
+                <Email>gazza@virtualcity.com.au</Email>
             </Update>
         </History>
     </SpecFile>
