@@ -1,0 +1,118 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>emacs</Name>
+        <Homepage>http://www.gnu.org/software/emacs/</Homepage>
+        <Packager>
+            <Name>Garry Kmieciak</Name>
+            <Email>gazza@virtualcity.com.au</Email>
+        </Packager>
+        <Summary>An extensible, customizable text editor—and more</Summary>
+        <Description>GNU Emacs is an extensible, customizable text editor—and more. At its core is an interpreter for Emacs Lisp, a dialect of the Lisp programming language with extensions to support text editing. It has many features to increase productivity when programming.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="3c672a176df06e20d2661058ad49893f184b4956" type="targz">http://ftp.gnu.org/gnu/emacs/emacs-24.3.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>libtiff-devel</Dependency>
+            <Dependency>harfbuzz-devel</Dependency>
+            <Dependency>xz-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>glibc-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libxpm-devel</Dependency>
+            <Dependency>libatk-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>giflib4-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>libgtk-2-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    
+    <Package>
+        <Name>emacs</Name>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec/emacs</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/emacs</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/var/games/emacs</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>libtiff</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>libxcursor</Dependency>
+            <Dependency>xz</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>libicu</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxpm</Dependency>
+            <Dependency>libxinerama</Dependency>
+            <Dependency>libatk</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libxdamage</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libxrandr</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>giflib4</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>libgtk-2</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>libxfixes</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libxcomposite</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libsm</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>09-21-2013</Date>
+            <Version>24.3</Version>
+            <Comment>Add emacs to repositories</Comment>
+            <Name>Garry Kmieciak</Name>
+            <Email>gazza@virtualcity.com.au</Email>
+        </Update>
+    </History>
+    
+</PISI>
