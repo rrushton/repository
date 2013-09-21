@@ -3,6 +3,7 @@
 <PISI>
     <Source>
         <Name>qt5-base</Name>
+        <Homepage>http://qt.digia.com/</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
