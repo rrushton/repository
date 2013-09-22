@@ -1,0 +1,36 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>xfce4-dev-tools</Name>
+        <Homepage>http://users.xfce.org/~benny/projects/xfce4-dev-tools/</Homepage>
+        <Packager>
+            <Name>Peter Passchier</Name>
+            <Email>peter@passchier.net</Email>
+        </Packager>
+        <Summary>Bundle of M4 macros</Summary>
+        <Description> Bundle of the M4 macros and related stuff within a
+        single package. And this is exactly what xfce4-dev-tools provides
+        </Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="20b620ab7e732aa95e8072474251de2d899b3419" type="tarbz2">http://users.xfce.org/~benny/files/xfce4-dev-tools/4.4/xfce4-dev-tools-4.4.0.tar.bz2</Archive>
+    </Source>
+
+    <Package>
+        <Name>xfce4-dev-tools</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/xfce4/dev-tools/m4macros</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>09-22-2013</Date>
+            <Version>4.4.0</Version>
+            <Comment>Add xfce4-dev-tools to repositories</Comment>
+            <Name>Peter Passchier</Name>
+            <Email>peter@passchier.net</Email>
+        </Update>
+    </History>	
+</PISI>
