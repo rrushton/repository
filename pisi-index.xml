@@ -7379,6 +7379,38 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>xmlindent</Name>
+            <Homepage>http://xmlindent.sourceforge.net/</Homepage>
+            <Packager>
+                <Name>Garry Kmieciak</Name>
+                <Email>gazza@virtualcity.com.au</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>utils</PartOf>
+            <Summary xml:lang="en">XML Indent is a XML stream reformatter written in ANSI C.</Summary>
+            <Description xml:lang="en">XML Indent is a XML stream reformatter written in ANSI C. Mainly used to reformat XML documents into a clean readable format</Description>
+            <Archive type="targz" sha1sum="024d5c27ae7fd63b012e663c437b3ec46f12b789">http://sourceforge.net/projects/xmlindent/files/xmlindent/0.2.17/xmlindent-0.2.17.tar.gz</Archive>
+            <SourceURI>utils/xmlindent/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xmlindent</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>09-21-2013</Date>
+                <Version>0.2.17</Version>
+                <Comment>Add xmlindent to repositories</Comment>
+                <Name>Garry Kmieciak</Name>
+                <Email>gazza@virtualcity.com.au</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>ranger</Name>
             <Homepage>http://nongnu.org/ranger</Homepage>
             <Packager>
@@ -7476,6 +7508,51 @@
                 <Comment>Add dar to repositories</Comment>
                 <Name>Justin Krehel</Name>
                 <Email>justin@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>tmux</Name>
+            <Homepage>http://tmux.sourceforge.net/</Homepage>
+            <Packager>
+                <Name>Peter Passchier</Name>
+                <Email>peter@passchier.net</Email>
+            </Packager>
+            <License>BSD</License>
+            <PartOf>utils</PartOf>
+            <Summary xml:lang="en">terminal multiplexer</Summary>
+            <Description xml:lang="en">tmux is a &quot;terminal multiplexer&quot;, it enables a number of terminals (or windows)
+        to be accessed and controlled from a single terminal. tmux is intended to be a
+        simple, modern, BSD-licensed alternative to programs such as GNU screen.</Description>
+            <Archive type="targz" sha1sum="08677ea914e1973ce605b0008919717184cbd033">http://downloads.sourceforge.net/tmux/tmux-1.8.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>ncurses-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>libevent-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>utils/tmux/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>tmux</Name>
+            <RuntimeDependencies>
+                <Dependency>ncurses</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>libevent</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/bash-completion/completions</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>09-20-2013</Date>
+                <Version>1.8</Version>
+                <Comment>Add tmux to repositories</Comment>
+                <Name>Peter Passchier</Name>
+                <Email>peter@passchier.net</Email>
             </Update>
         </History>
     </SpecFile>
@@ -12524,6 +12601,39 @@ By using this package, you accept the terms and conditions set in the end-user l
                 <Comment>Add xfce4-whiskermenu-plugin to repositories</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-dev-tools</Name>
+            <Homepage>http://users.xfce.org/~benny/projects/xfce4-dev-tools/</Homepage>
+            <Packager>
+                <Name>Peter Passchier</Name>
+                <Email>peter@passchier.net</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.xfce</PartOf>
+            <Summary xml:lang="en">Bundle of M4 macros</Summary>
+            <Description xml:lang="en">Bundle of the M4 macros and related stuff within a
+        single package. And this is exactly what xfce4-dev-tools provides</Description>
+            <Archive type="tarbz2" sha1sum="20b620ab7e732aa95e8072474251de2d899b3419">http://users.xfce.org/~benny/files/xfce4-dev-tools/4.4/xfce4-dev-tools-4.4.0.tar.bz2</Archive>
+            <SourceURI>desktop/xfce/xfce4-dev-tools/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-dev-tools</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/xfce4/dev-tools/m4macros</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>09-22-2013</Date>
+                <Version>4.4.0</Version>
+                <Comment>Add xfce4-dev-tools to repositories</Comment>
+                <Name>Peter Passchier</Name>
+                <Email>peter@passchier.net</Email>
             </Update>
         </History>
     </SpecFile>
@@ -23220,6 +23330,7 @@ By using this package, you accept the terms and conditions set in the end-user l
                 <Path fileType="library">/usr/lib/qt5/imports</Path>
                 <Path fileType="library">/usr/lib/qt5/qml</Path>
                 <Path fileType="library">/usr/lib/qt5/plugins</Path>
+                <Path fileType="executable">/usr/lib/qt5/libexec</Path>
             </Files>
         </Package>
         <Package>
@@ -25314,6 +25425,106 @@ By using this package, you accept the terms and conditions set in the end-user l
                 <Comment>Add tint2 to repositories</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gsimplecal</Name>
+            <Homepage>https://github.com/dmedvinsky/gsimplecal/</Homepage>
+            <Packager>
+                <Name>Peter Passchier</Name>
+                <Email>peter@passchier.net</Email>
+            </Packager>
+            <License>BSD</License>
+            <PartOf>desktop.util</PartOf>
+            <Summary xml:lang="en">Gsimplecal is a lightweight calendar applet written in C++
+        using GTK2</Summary>
+            <Description xml:lang="en">Gsimplecal was intentionally made for use with tint2
+        panel in the openbox environment to be launched upon clock click,
+        but of course it will work without it. In fact, binding the gsimplecal
+        to some hotkey in you window manager will probably make you happy.
+        The thing is that when it is started it first shows up, when you run
+        it again it closes the running instance. In that way it is very easy
+        to integrate anywhere. No need to write some wrapper scripts or
+        whatever. Also, you can configure it to not only show the calendar,
+        but also display multiple clocks for different world timezones.</Description>
+            <Archive type="targz" sha1sum="3ee6b817c019c8060293b59da3101139bdd02c72">https://github.com/downloads/dmedvinsky/gsimplecal/gsimplecal-1.6.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>libgtk-2-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libatk-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/util/gsimplecal/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gsimplecal</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libxcursor</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>libgtk-2</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>libicu</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxinerama</Dependency>
+                <Dependency>libatk</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libxdamage</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>libxrandr</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>libxfixes</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>libxcomposite</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libsm</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>09-21-2013</Date>
+                <Version>1.6</Version>
+                <Comment>Add gsimplecal to repositories</Comment>
+                <Name>Peter Passchier</Name>
+                <Email>peter@passchier.net</Email>
             </Update>
         </History>
     </SpecFile>
@@ -37953,6 +38164,50 @@ Bug-SolusOS: T35</Comment>
                 <Comment>Add bc/dc to repositories</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libpipeline</Name>
+            <Homepage>http://libpipeline.nongnu.org</Homepage>
+            <Packager>
+                <Name>Garry Kmieciak</Name>
+                <Email>gazza@virtualcity.com.au</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>system.base</PartOf>
+            <Summary xml:lang="en">pipeline manipulation library.</Summary>
+            <Description xml:lang="en">libpipeline is a C library for manipulating pipelines of subprocesses in a flexible and convenient way.</Description>
+            <Archive type="targz" sha1sum="07f9038a045aaa8db8be531fe04d117f41daf00d">http://download.savannah.gnu.org/releases/libpipeline/libpipeline-1.2.4.tar.gz</Archive>
+            <SourceURI>system/base/libpipeline/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libpipeline</Name>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libpipeline-devel</Name>
+            <Summary xml:lang="en">Development files for libpipeline</Summary>
+            <Description xml:lang="en">Development files for libpipeline</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">libpipeline</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>09-22-2013</Date>
+                <Version>1.2.4</Version>
+                <Comment>Add libpipeline to repositories</Comment>
+                <Name>Garry Kmieciak</Name>
+                <Email>gazza@virtualcity.com.au</Email>
             </Update>
         </History>
     </SpecFile>
