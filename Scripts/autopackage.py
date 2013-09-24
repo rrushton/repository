@@ -171,6 +171,8 @@ class AutoPackage:
 			sample_actions = os.path.join (self.template_dir, "actions.pythonmodules.sample.py")
 		elif self.compile_type == PERL_MODULES:
 			sample_actions = os.path.join (self.template_dir, "actions.perlmodules.sample.py")
+		elif self.compile_type == None:
+			sample_actions = os.path.join (self.template_dir, "actions.sample.py")
 		doc_str = ""
 		if len(self.doc_files) > 0:
 			doc_str = "pisitools.dodoc("
