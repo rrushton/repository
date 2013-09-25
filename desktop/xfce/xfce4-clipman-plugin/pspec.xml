@@ -1,0 +1,128 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>xfce4-clipman-plugin</Name>
+        <Homepage>http://goodies.xfce.org/projects/panel-plugins/xfce4-clipman-plugin/</Homepage>
+        <Packager>
+            <Name>Peter Passchier</Name>
+            <Email>solusos@passchier.net</Email>
+        </Packager>
+        <Summary>Clipboard manager for Xfce</Summary>
+        <Description>Clipman is a clipboard manager for Xfce. It keeps the
+clipboard contents around while it is usually lost when you close
+an application. It is able to handle text and images, and has a
+feature to execute actions on specific text selections by matching
+them against regular expressions.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="20d10cc1877d3bac019ffc72e0a08fc241a81e2b" type="tarbz2">http://archive.xfce.org/src/panel-plugins/xfce4-clipman-plugin/1.2/xfce4-clipman-plugin-1.2.3.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libxfce4ui-devel</Dependency>
+            <Dependency>harfbuzz-devel</Dependency>
+            <Dependency>libxcursor-devel</Dependency>
+            <Dependency>libxtst-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libicu-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>libxi-devel</Dependency>
+            <Dependency>glibc-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libice-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libxinerama-devel</Dependency>
+            <Dependency>libatk-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libxdamage-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>libxrandr-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>libxfce4util-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>libgtk-2-devel</Dependency>
+            <Dependency>libxfixes-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>exo-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libxcomposite-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency>xfconf-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libsm-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>xfce4-clipman-plugin</Name>
+        <Files>
+            <Path fileType="data">/etc/xdg</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="lib">/usr/lib/xfce4/panel</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/xfce4/panel</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>libxfce4ui</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>libxcursor</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>xcb-util</Dependency>
+            <Dependency>libxtst</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>dbus-glib</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>libicu</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>libxi</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxinerama</Dependency>
+            <Dependency>libatk</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libxdamage</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libxrandr</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>libxfce4util</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>libgtk-2</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>libxfixes</Dependency>
+            <Dependency>libstartup-notification</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>exo</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libxcomposite</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>xfconf</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libsm</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>09-25-2013</Date>
+            <Version>1.2.3</Version>
+            <Comment>Add xfce4-clipman-plugin to repositories</Comment>
+            <Name>Peter Passchier</Name>
+            <Email>solusos@passchier.net</Email>
+        </Update>
+    </History>
+</PISI>
