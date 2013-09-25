@@ -1,0 +1,49 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>wavpack</Name>
+        <Homepage>http://www.wavpack.com</Homepage>
+        <Packager>
+            <Name>Stefan Gronewold (groni)</Name>
+            <Email>groni3427@gmail.com</Email>
+        </Packager>
+        <Summary>WavPack audio compression tools</Summary>
+        <Description>WavPack is a completely open audio compression format providing lossless, high-quality lossy, and a unique hybrid compression mode.</Description>
+        <License>BSD</License>
+        <Archive sha1sum="003c65cb4e29c55011cf8e7b10d69120df5e7f30" type="tarbz2">http://www.wavpack.com/wavpack-4.60.1.tar.bz2</Archive>
+    </Source>
+
+    <Package>
+        <Name>wavpack</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>wavpack-devel</Name>
+        <Summary>Development files for wavpack</Summary>
+        <Description>Development files for wavpack</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">wavpack</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>09-25-2013</Date>
+            <Version>4.60.1</Version>
+            <Comment>Add wavpack to repositories</Comment>
+            <Name>Stefan Gronewold (groni)</Name>
+            <Email>groni3427@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
