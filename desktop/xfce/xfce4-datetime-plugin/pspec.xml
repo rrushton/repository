@@ -1,0 +1,112 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>xfce4-datetime-plugin</Name>
+        <Homepage>http://goodies.xfce.org/projects/panel-plugins/xfce4-datetime-plugin</Homepage>
+        <Packager>
+            <Name>Stefan Gronewold (groni)</Name>
+            <Email>groni3427@gmail.com</Email>
+        </Packager>
+        <Summary>This plugin shows the date and time in the panel</Summary>
+        <Description>xfce4-datetime-plugin shows the date and time in the panel, and a calendar appears when you left-click on it.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="5a7e665fcfd06859c45e14b7063d719b5b26885f" type="tarbz2">http://archive.xfce.org/src/panel-plugins/xfce4-datetime-plugin/0.6/xfce4-datetime-plugin-0.6.2.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libxfce4ui-devel</Dependency>
+            <Dependency>harfbuzz-devel</Dependency>
+            <Dependency>libxcursor-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libgtk-2-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libicu-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>glibc-devel</Dependency>
+            <Dependency>libice-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libxinerama-devel</Dependency>
+            <Dependency>libatk-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>libxrandr-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>libxfce4util-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>xfce4-panel-devel</Dependency>
+            <Dependency>libxdamage-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libxcomposite-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libsm-devel</Dependency>
+            <Dependency>libxfixes-devel</Dependency>
+       </BuildDependencies>
+
+    </Source>
+
+    <Package>
+        <Name>xfce4-datetime-plugin</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/xfce4/panel/plugins</Path>
+            <Path fileType="doc">/usr/share/doc/xfce4-datetime-plugin</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/xfce4/panel/plugins</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>libxfce4ui</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>libxcursor</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>xcb-util</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libgtk-2</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>libicu</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxinerama</Dependency>
+            <Dependency>libatk</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libxrandr</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>libxfce4util</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>xfce4-panel</Dependency>
+            <Dependency>libxdamage</Dependency>
+            <Dependency>libstartup-notification</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libxcomposite</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libsm</Dependency>
+            <Dependency>libxfixes</Dependency>
+       </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>09-25-2013</Date>
+            <Version>0.6.2</Version>
+            <Comment>Add xfce4-datetime-plugin to repositories</Comment>
+            <Name>Stefan Gronewold (groni)</Name>
+            <Email>groni3427@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
