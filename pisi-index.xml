@@ -26027,6 +26027,56 @@ By using this package, you accept the terms and conditions set in the end-user l
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>jasper</Name>
+            <Homepage>http://www.ece.uvic.ca/~mdadams/jasper</Homepage>
+            <Packager>
+                <Name>Garry Kmieciak</Name>
+                <Email>gazza@virtualcity.com.au</Email>
+            </Packager>
+            <License>MIT</License>
+            <PartOf>multimedia.graphics</PartOf>
+            <Summary xml:lang="en">Software implementation of JPEG-2000 Part 1</Summary>
+            <Description xml:lang="en">JasPer is a software-based implementation of the codec specified in the JPEG-2000 Part-1 standard (ISO/IEC 15444-1:2000).</Description>
+            <Archive type="zip" sha1sum="9c5735f773922e580bf98c7c7dfda9bbed4c5191">http://www.ece.uvic.ca/~mdadams/jasper/software/jasper-1.900.1.zip</Archive>
+            <BuildDependencies>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/graphics/jasper/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>jasper</Name>
+            <RuntimeDependencies>
+                <Dependency>libjpeg-turbo</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="library">/usr/lib/lib*.so*</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>jasper-devel</Name>
+            <Summary xml:lang="en">Development files for jasper</Summary>
+            <Description xml:lang="en">Development files for jasper</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">jasper</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>09-24-2013</Date>
+                <Version>1.900</Version>
+                <Comment>Add jasper to repositories</Comment>
+                <Name>Garry Kmieciak</Name>
+                <Email>gazza@virtualcity.com.au</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>scrot</Name>
             <Homepage>http://freecode.com/projects/scrot</Homepage>
             <Packager>
@@ -26063,6 +26113,59 @@ By using this package, you accept the terms and conditions set in the end-user l
                 <Comment>Add scrot to repositories</Comment>
                 <Name>Matias Linares</Name>
                 <Email>matiaslina@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libwmf</Name>
+            <Homepage>http://wvware.sourceforge.net/libwmf.html</Homepage>
+            <Packager>
+                <Name>Garry Kmieciak</Name>
+                <Email>gazza@virtualcity.com.au</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>multimedia.graphics</PartOf>
+            <Summary xml:lang="en">A library for reading vector images in Microsøft&apos;s native Windøws Metafile Format (WMF)</Summary>
+            <Description xml:lang="en">libwmf is a library for reading vector images in Microsøft&apos;s native Windøws Metafile Format (WMF) and for either (a) displaying them in, e.g., an X window; or (b) converting them to more standard/open file formats such as, e.g., the W3C&apos;s XML-based Scaleable Vector Graphic (SVG) format.</Description>
+            <Archive type="targz" sha1sum="822ab3bd0f5e8f39ad732f2774a8e9f18fc91e89">http://sourceforge.net/projects/wvware/files/libwmf/0.2.8.4/libwmf-0.2.8.4.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/graphics/libwmf/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libwmf</Name>
+            <RuntimeDependencies>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>libpng</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/libwmf</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libwmf-devel</Name>
+            <Summary xml:lang="en">Development files for libwmf</Summary>
+            <Description xml:lang="en">Development files for libwmf</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">libwmf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>09-24-2013</Date>
+                <Version>0.2.8.4</Version>
+                <Comment>Add libwmf to repositories</Comment>
+                <Name>Garry Kmieciak</Name>
+                <Email>gazza@virtualcity.com.au</Email>
             </Update>
         </History>
     </SpecFile>
@@ -31993,7 +32096,7 @@ Bug-SolusOS: T9</Comment>
             <PartOf>browser</PartOf>
             <Summary xml:lang="en">Firefox web browser</Summary>
             <Description xml:lang="en">Firefox web browser</Description>
-            <Archive type="tarbz2" sha1sum="600a40a77b60187d7cd2b3c6fcb293d2ab5159ea">http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/24.0b10/linux-i686/en-US/firefox-24.0b10.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="a45ab275d5f121eaf0f68f45879525c6495d86ad">ftp://ftp.mozilla.org/pub/firefox/releases/25.0b2/linux-i686/en-US/firefox-25.0b2.tar.bz2</Archive>
             <SourceURI>network/web/browser/firefox/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -32052,6 +32155,13 @@ Bug-SolusOS: T9</Comment>
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="6">
+                <Date>09-25-2013</Date>
+                <Version>25.0_beta2</Version>
+                <Comment>Update to Firefox 25.0b2</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="5">
                 <Date>09-06-2013</Date>
                 <Version>24.0_beta10</Version>
@@ -35877,6 +35987,41 @@ The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>dcfldd</Name>
+            <Homepage>http://dcfldd.sourceforge.net</Homepage>
+            <Packager>
+                <Name>Peter Passchier</Name>
+                <Email>peter@passchier.net</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <PartOf>system.utils</PartOf>
+            <Summary xml:lang="en">dcfldd - enhanced version of dd or forensics and
+        security</Summary>
+            <Description xml:lang="en">dd copies a file with a changeable I/O block size, while
+        optionally performing conversions on it.</Description>
+            <Archive type="targz" sha1sum="0ff5f510ac88490efb24b5b4929c06a7eac47ed8">http://prdownloads.sourceforge.net/dcfldd/dcfldd-1.3.4.tar.gz</Archive>
+            <SourceURI>system/utils/dcfldd/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>dcfldd</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>09-22-2013</Date>
+                <Version>1.3.4</Version>
+                <Comment>Add dcfldd to repositories</Comment>
+                <Name>Peter Passchier</Name>
+                <Email>peter@passchier.net</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>iftop</Name>
             <Homepage>http://www.ex-parrot.com/pdw/iftop</Homepage>
             <Packager>
@@ -39175,6 +39320,39 @@ Bug-SolusOS: T35</Comment>
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>reiserfsprogs</Name>
+            <Homepage>https://reiser4.wiki.kernel.org/index.php/Main_Page</Homepage>
+            <Packager>
+                <Name>Garry Kmieciak</Name>
+                <Email>gazza@virtualcity.com.au</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>system.base</PartOf>
+            <Summary xml:lang="en">The tools to maintain a ReiserFS (Reiser v3) filesystem</Summary>
+            <Description xml:lang="en">The tools to maintain a ReiserFS (Reiser v3) filesystem</Description>
+            <Archive type="tarxz" sha1sum="b51d1a524570436ea6e9eb0d8f74fae717f5f511">https://www.kernel.org/pub/linux/kernel/people/jeffm/reiserfsprogs/v3.6.24/reiserfsprogs-3.6.24.tar.xz</Archive>
+            <SourceURI>system/base/reiserfsprogs/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>reiserfsprogs</Name>
+            <Files>
+                <Path fileType="executable">/usr/sbin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>09-23-2013</Date>
+                <Version>3.6.24</Version>
+                <Comment>Add reiserfsprogs to repositories</Comment>
+                <Name>Garry Kmieciak</Name>
+                <Email>gazza@virtualcity.com.au</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>nano</Name>
             <Homepage>http://www.nano-editor.org/</Homepage>
             <Packager>
@@ -40825,6 +41003,53 @@ Bug-SolusOS: T35</Comment>
                 <Comment>Add procps-ng to repositories</Comment>
                 <Name>SolusOS Developers</Name>
                 <Email>dev@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>man-db</Name>
+            <Homepage>http://www.nongnu.org/man-db/</Homepage>
+            <Packager>
+                <Name>Garry Kmieciak</Name>
+                <Email>gazza@virtualcity.com.au</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>system.base</PartOf>
+            <Summary xml:lang="en">Application to read Linux man pages</Summary>
+            <Description xml:lang="en">man-db is an implementation of the standard Unix documentation system accessed using the man command. It uses a Berkeley DB database in place of the traditional flat-text whatis databases.</Description>
+            <Archive type="tarxz" sha1sum="68d1a6aef246f3201dc70936f6129d4b1a42979c">http://download.savannah.gnu.org/releases/man-db/man-db-2.6.5.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>libpipeline-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>system/base/man-db/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>man-db</Name>
+            <RuntimeDependencies>
+                <Dependency>libpipeline</Dependency>
+                <Dependency>zlib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="executable">/usr/sbin</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/var/cache</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>09-22-2013</Date>
+                <Version>2.6.5</Version>
+                <Comment>Add man-db to repositories</Comment>
+                <Name>Garry Kmieciak</Name>
+                <Email>gazza@virtualcity.com.au</Email>
             </Update>
         </History>
     </SpecFile>
