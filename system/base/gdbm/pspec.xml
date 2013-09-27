@@ -39,6 +39,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>09-27-2013</Date>
+            <Version>1.10</Version>
+            <Comment>Move gdbm into system.base to satisfy man-db dependency</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>09-21-2013</Date>
             <Version>1.10</Version>

@@ -15,6 +15,7 @@
         <BuildDependencies>
             <Dependency>libpipeline-devel</Dependency>
             <Dependency>zlib-devel</Dependency>
+            <Dependency releaseFrom="2">gdbm-devel</Dependency>
         </BuildDependencies>
     </Source>
     
@@ -34,10 +35,19 @@
         <RuntimeDependencies>
             <Dependency>libpipeline</Dependency>
             <Dependency>zlib</Dependency>
+            <Dependency releaseFrom="2">gdbm</Dependency>
         </RuntimeDependencies>
     </Package>
     
     <History>
+        <Update release="2">
+            <Date>09-27-2013</Date>
+            <Version>2.6.5</Version>
+            <Comment>Add gdbm to package dependencies</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>09-22-2013</Date>
             <Version>2.6.5</Version>
@@ -46,5 +56,4 @@
             <Email>gazza@virtualcity.com.au</Email>
         </Update>
     </History>
-    
 </PISI>
