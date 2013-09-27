@@ -19,7 +19,8 @@
     <Package>
         <Name>babl</Name>
         <Files>
-            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/babl-0.1/*.so</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
@@ -29,6 +30,7 @@
         <Description>Development files for babl</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">babl</Dependency>
@@ -43,5 +45,4 @@
             <Email>gazza@virtualcity.com.au</Email>
         </Update>
     </History>
-    
 </PISI>
