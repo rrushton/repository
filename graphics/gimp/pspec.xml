@@ -28,6 +28,7 @@
             <Dependency>libx11-devel</Dependency>
             <Dependency>libxrender-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
+            <Dependency>python-gtk2-devel</Dependency>
         </BuildDependencies>
     </Source>
     
@@ -68,6 +69,7 @@
             <Dependency>libxrender</Dependency>
             <Dependency>glib2</Dependency>
             <Dependency>libsm</Dependency>
+            <Dependency>python-gtk2</Dependency>
         </RuntimeDependencies>
     </Package>
     <Package>
