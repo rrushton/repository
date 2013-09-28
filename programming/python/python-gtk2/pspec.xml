@@ -33,6 +33,7 @@
             <Dependency>libxrender-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
             <Dependency>python-cairo-devel</Dependency>
+            <Dependency>python-gobject2-devel</Dependency>
         </BuildDependencies>
     </Source>
     
@@ -82,6 +83,7 @@
             <Dependency>glib2</Dependency>
             <Dependency>libsm</Dependency>
             <Dependency>python-cairo</Dependency>
+            <Dependency>python-gobject2</Dependency>
         </RuntimeDependencies>
     </Package>
 
