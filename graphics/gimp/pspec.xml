@@ -1,0 +1,98 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gimp</Name>
+        <Homepage>http://www.gimp.org/</Homepage>
+        <Packager>
+            <Name>Garry Kmieciak</Name>
+            <Email>gazza@virtualcity.com.au</Email>
+        </Packager>
+        <Summary>GNU Image Manipulation Program</Summary>
+        <Description>GIMP is a mature image editor with many advanced features and plugin support.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="5f94e39b05a0b892f6d4f8b2d773d97d8ea95731" type="tarbz2">ftp://ftp.gimp.org/pub/gimp/v2.8/gimp-2.8.6.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>glibc-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    
+    <Package>
+        <Name>gimp</Name>
+        <Files>
+            <Path fileType="config">/etc/gimp</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/gimp</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/icons/hicolor</Path>
+            <Path fileType="data">/usr/share/gimp/2.0</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libsm</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <Package>
+        <Name>gimp-devel</Name>
+        <Summary>Development files for gimp</Summary>
+        <Description>Development files for gimp</Description>
+        <Files>
+            <Path fileType="header">/usr/include/gimp-2.0</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">gimp</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>09-26-2013</Date>
+            <Version>2.8.6</Version>
+            <Comment>Add gimp to repositories</Comment>
+            <Name>Garry Kmieciak</Name>
+            <Email>gazza@virtualcity.com.au</Email>
+        </Update>
+    </History>
+    	
+</PISI>
