@@ -11,7 +11,7 @@
         <Summary>The GTK+ 3 package contains the libraries used for creating graphical user interfaces for applications.</Summary>
         <Description>The GTK+ 3 package contains the libraries used for creating graphical user interfaces for applications. </Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="0970e6610b0df7e0e4fb0dac1f647a344d6295c5" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gtk+/3.9/gtk+-3.9.6.tar.xz</Archive>
+        <Archive sha1sum="94a7fbd715e819d8838802bfd68be0b63c8ec72a" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gtk+/3.10/gtk+-3.10.0.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency versionFrom="1.37.1">gobject-introspection-devel</Dependency>
@@ -46,11 +46,6 @@
             <Dependency>libxi-devel</Dependency>
             <Dependency>xinput</Dependency>
         </BuildDependencies>
-        
-        <Patches>
-            <!-- Expose missing function in gdk_wayland library //-->
-            <Patch level="1">expose_custom_surface.patch</Patch>
-        </Patches>
     </Source>
     
     <Package>
@@ -267,6 +262,14 @@
     </Package>
     
     <History>
+        <Update release="16">
+            <Date>10-01-2013</Date>
+            <Version>3.10.0</Version>
+            <Comment>Update to latest upstream version</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="15">
             <Date>08-08-2013</Date>
             <Version>3.9.6</Version>
