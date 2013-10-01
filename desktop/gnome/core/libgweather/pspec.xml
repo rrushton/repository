@@ -143,7 +143,7 @@
     </Package>
     
     <History>
-        <Update release="5">
+        <Update release="6">
             <Date>10-01-2013</Date>
             <Version>3.10.0</Version>
             <Comment>Upgrade to 3.10.0 as part of GNOME 3.10 migration</Comment>
