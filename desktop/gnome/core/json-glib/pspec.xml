@@ -11,7 +11,7 @@
         <Summary>JSON GLib Package</Summary>
         <Description>The JSON GLib package is a library providing serialization and deserialization support for the JavaScript Object Notation (JSON) format described by RFC 4627.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="9e0af8625586fc2e70e12b4beae31b120cff5090" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/json-glib/0.16/json-glib-0.16.0.tar.xz</Archive>
+        <Archive sha1sum="a67e1f0d5a3cc5c96e999ddb24c75c6ca21d8252" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/json-glib/0.16/json-glib-0.16.2.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency>libffi-devel</Dependency>
@@ -65,6 +65,14 @@
     </Package>
     
     <History>
+        <Update release="3">
+            <Date>10-01-2013</Date>
+            <Version>0.16.2</Version>
+            <Comment>Update to 0.16.2 as part of GNOME3.10 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>09-04-2013</Date>
             <Version>0.16.0</Version>
