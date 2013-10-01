@@ -22,6 +22,7 @@ def setup():
                           --with-gstreamer=1.0 \
                           --with-gnu-ld \
                           --enable-introspection \
+                          --disable-geolocation \
                           --disable-gtk-doc-html")
     shelltools.system ("sed -i '/gtkdoc --rebase/s:^:# :' GNUmakefile.*")
 						
