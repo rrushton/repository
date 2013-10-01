@@ -11,7 +11,7 @@
         <Summary>Syntax highlighting text editing C library</Summary>
         <Description>GtkSourceView is a portable C library that extends the standard GTK+ framework for multiline text editing with support for configurable syntax highlighting, unlimited undo/redo, UTF-8 compliant caseless searching, printing and other features typical of a source code editor.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="b291f6f67d0a1d6b04f2ab1697586a7b5982810c" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gtksourceview/3.8/gtksourceview-3.8.1.tar.xz</Archive>
+        <Archive sha1sum="96136aa8b0f133e49269d4c71341fceff32898f7" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gtksourceview/3.10/gtksourceview-3.10.0.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
@@ -36,7 +36,7 @@
             <Dependency>libxdmcp-devel</Dependency>
             <Dependency>libffi-devel</Dependency>
             <Dependency>pango-devel</Dependency>
-            <Dependency releaseFrom="10">libgtk-3-devel</Dependency>
+            <Dependency versionFrom="3.10.0">libgtk-3-devel</Dependency>
             <Dependency>libxfixes-devel</Dependency>
             <Dependency>libcairo-devel</Dependency>
             <Dependency>dbus-devel</Dependency>
@@ -89,7 +89,7 @@
             <Dependency>libxdmcp</Dependency>
             <Dependency>libffi</Dependency>
             <Dependency>pango</Dependency>
-            <Dependency releaseFrom="10">libgtk-3</Dependency>
+            <Dependency versionFrom="3.10.0">libgtk-3</Dependency>
             <Dependency>libxfixes</Dependency>
             <Dependency>libstdc++</Dependency>
             <Dependency>at-spi2</Dependency>
@@ -131,6 +131,14 @@
     </Package>
     
     <History>
+        <Update release="3">
+            <Date>10-01-2013</Date>
+            <Version>3.10.0</Version>
+            <Comment>Upgrade to 3.10.0 as part of GNOME3.10 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>06-19-2013</Date>
             <Version>3.8.1</Version>
