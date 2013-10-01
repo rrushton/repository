@@ -32154,6 +32154,7 @@ By using this package, you accept the terms and conditions set in the end-user l
                 <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
                 <Path fileType="data">/usr/share/webkitgtk-3.0</Path>
+                <Path fileType="library">/usr/lib/webkit2gtk-3.0</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
             </Files>
             <Replaces>
@@ -37334,7 +37335,7 @@ them against regular expressions.</Description>
             <Summary xml:lang="en">Development files for libgweather</Summary>
             <Description xml:lang="en">Development files for libgweather</Description>
             <RuntimeDependencies>
-                <Dependency release="5">libgweather</Dependency>
+                <Dependency release="6">libgweather</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -37347,14 +37348,14 @@ them against regular expressions.</Description>
             <Summary xml:lang="en">API Documentation for libgweather</Summary>
             <Description xml:lang="en">API Documentation for libgweather</Description>
             <RuntimeDependencies>
-                <Dependency release="5">libgweather-devel</Dependency>
+                <Dependency release="6">libgweather-devel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/gtk-doc</Path>
             </Files>
         </Package>
         <History>
-            <Update release="5">
+            <Update release="6">
                 <Date>10-01-2013</Date>
                 <Version>3.10.0</Version>
                 <Comment>Upgrade to 3.10.0 as part of GNOME 3.10 migration</Comment>
