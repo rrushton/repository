@@ -10,10 +10,10 @@
         <Summary>The Standard GNOME3 Themes Package</Summary>
         <Description>The GNOME Themes Standard package contains various components of the default GNOME 3 theme.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="c7318d77636e9bc8546af77cf9355a1c27db6538" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-themes-standard/3.9/gnome-themes-standard-3.9.3.tar.xz</Archive>
+        <Archive sha1sum="98fc640bff92a126b747b22137f6e343ee476382" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-themes-standard/3.10/gnome-themes-standard-3.10.0.tar.xz</Archive>
         
         <BuildDependencies>
-            <Dependency versionFrom="3.9.6">libgtk-3-devel</Dependency>
+            <Dependency versionFrom="3.10.0">libgtk-3-devel</Dependency>
             <Dependency>zlib-devel</Dependency>
             <Dependency>libxml2-devel</Dependency>
             <Dependency>harfbuzz-devel</Dependency>
@@ -62,7 +62,7 @@
             <Path fileType="data">/usr/share/themes</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency versionFrom="3.9.6">libgtk-3</Dependency>
+            <Dependency versionFrom="3.10.0">libgtk-3</Dependency>
             <Dependency>zlib</Dependency>
             <Dependency>libxml2</Dependency>
             <Dependency>expat</Dependency>
@@ -110,6 +110,14 @@
     </Package>
     
     <History>
+        <Update release="4">
+            <Date>10-01-2013</Date>
+            <Version>3.10.0</Version>
+            <Comment>Upgrade to 3.10.0 as part of GNOME3.10 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>06-25-2013</Date>
             <Version>3.9.3</Version>
