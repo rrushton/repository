@@ -10,7 +10,7 @@
         <Summary>GeoInformation service</Summary>
         <Description>GeoClue is a modular geoinformation service built on top of the D-Bus messaging system. The goal of the GeoClue project is to make creating location-aware applications as simple as possible.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="32958b36e679c9fb9b35b25d29c43d5ae6a0be27" type="targz">http://people.freedesktop.org/~hadess/geoclue-0.12.99.tar.gz</Archive>
+        <Archive sha1sum="2bf943e5cfbe714d9247e4b01eee64b3a60efdd1" type="tarxz">http://www.freedesktop.org/software/geoclue/releases/1.99/geoclue-1.99.3.tar.xz</Archive>
     </Source>
     
     <Package>
@@ -23,6 +23,8 @@
             <Path fileType="data">/usr/share/geoclue-providers</Path>
             <Path fileType="data">/usr/share/glib-2.0</Path>
             <Path fileType="data">/usr/share/dbus-1/</Path>
+            <Path fileType="data">/etc/dbus-1/system.d</Path>
+            <Path fileType="data">/usr/share/geoclue-2.0</Path>
         </Files>
     </Package>
     
@@ -39,19 +41,15 @@
         </RuntimeDependencies>
     </Package>
     
-    <Package>
-        <Name>libgeoclue-docs</Name>
-        <Summary>API Documentation for geoclue</Summary>
-        <Description>API Documentation for geoclue</Description>
-        <Files>
-            <Path fileType="header">/usr/share/gtk-doc</Path>
-        </Files>
-        <RuntimeDependencies>
-            <Dependency release="current">libgeoclue</Dependency>
-        </RuntimeDependencies>
-    </Package>
-    
     <History>
+        <Update release="2">
+            <Date>10-01-2013</Date>
+            <Version>1.99.3</Version>
+            <Comment>Update to 1.99.3 as part of GNOME3.10 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>05-06-2013</Date>
             <Version>0.12.99</Version>
@@ -60,6 +58,5 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
 </PISI>
 
