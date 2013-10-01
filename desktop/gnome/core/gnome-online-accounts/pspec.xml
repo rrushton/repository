@@ -10,9 +10,10 @@
         <Summary>The GNOME Online Accounts package contains a framework used to access the user's online accounts.</Summary>
         <Description>The GNOME Online Accounts package contains a framework used to access the user's online accounts.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="23950c7bd3363443f3840bc8f67c5b9be1e10e73" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-online-accounts/3.9/gnome-online-accounts-3.9.2.tar.xz</Archive>
+        <Archive sha1sum="402c13a9b4842fe04c4b78f84c8cfcb28c271c82" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-online-accounts/3.10/gnome-online-accounts-3.10.0.tar.xz</Archive>
         
         <BuildDependencies>
+            <Dependency>libtelepathy-glib-devel</Dependency>
             <Dependency>libffi-devel</Dependency>
             <Dependency>zlib-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
@@ -62,6 +63,14 @@
     </Package>
     
     <History>
+        <Update release="4">
+            <Date>10-01-2013</Date>
+            <Version>3.10.0</Version>
+            <Comment>Upgrade to 3.10.0 as part of GNOME3.10 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>06-26-2013</Date>
             <Version>3.9.2</Version>
