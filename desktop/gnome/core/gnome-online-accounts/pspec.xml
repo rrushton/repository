@@ -40,6 +40,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
         <RuntimeDependencies>
+            <Dependency>libtelepathy-glib</Dependency>
             <Dependency>librest</Dependency>
             <Dependency>libffi</Dependency>
             <Dependency>zlib</Dependency>
