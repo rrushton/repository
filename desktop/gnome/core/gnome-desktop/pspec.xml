@@ -11,12 +11,12 @@
         <Summary>GNOME utility runtime library</Summary>
         <Description>GNOME utility runtime library</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="9f7511ba33605936354baf739202705922eb24b8" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-desktop/3.9/gnome-desktop-3.9.1.1.tar.xz</Archive>
+        <Archive sha1sum="5dee7df7bb029377c11c0ed9920b9efb902593ba" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-desktop/3.10/gnome-desktop-3.10.0.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency>itstool</Dependency>
             <Dependency>xkeyboard-config</Dependency>
-            <Dependency versionFrom="3.9.3">gsettings-desktop-schemas-devel</Dependency>
+            <Dependency versionFrom="3.10.0">gsettings-desktop-schemas-devel</Dependency>
             <Dependency>zlib-devel</Dependency>
             <Dependency>harfbuzz-devel</Dependency>
             <Dependency>libxcursor-devel</Dependency>
@@ -36,7 +36,7 @@
             <Dependency>pixman-devel</Dependency>
             <Dependency>libffi-devel</Dependency>
             <Dependency>pango-devel</Dependency>
-            <Dependency versionFrom="3.9.6">libgtk-3-devel</Dependency>
+            <Dependency versionFrom="3.10.0">libgtk-3-devel</Dependency>
             <Dependency>libxfixes-devel</Dependency>
             <Dependency>libcairo-devel</Dependency>
             <Dependency>dbus-devel</Dependency>
@@ -64,7 +64,7 @@
             <Path fileType="localedata">/usr/share/locale</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency versionFrom="3.9.3">gsettings-desktop-schemas</Dependency>
+            <Dependency versionFrom="3.10.0">gsettings-desktop-schemas</Dependency>
             <Dependency>zlib</Dependency>
             <Dependency>expat</Dependency>
             <Dependency>harfbuzz</Dependency>
@@ -92,7 +92,7 @@
             <Dependency>pixman</Dependency>
             <Dependency>libffi</Dependency>
             <Dependency>pango</Dependency>
-            <Dependency versionFrom="3.9.6">libgtk-3</Dependency>
+            <Dependency versionFrom="3.10.0">libgtk-3</Dependency>
             <Dependency>libxfixes</Dependency>
             <Dependency>at-spi2</Dependency>
             <Dependency>freetype2</Dependency>
@@ -134,6 +134,14 @@
     </Package>
     
     <History>
+        <Update release="4">
+            <Date>10-01-2013</Date>
+            <Version>3.10.0</Version>
+            <Comment>Upgrade to 3.10.0 as part of the GNOME 3.10 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>06-26-2013</Date>
             <Version>3.9.1.1</Version>
