@@ -11,7 +11,7 @@
         <Summary>Provides GNOME session core</Summary>
         <Description>Provides GNOME session core</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="9923bf10b58c2d784900eb64f23c6ada0278f7bf" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-session/3.8/gnome-session-3.8.2.tar.xz</Archive>
+        <Archive sha1sum="5443f9d3cc64c5f03c890959301f34ad45c8b7e9" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-session/3.10/gnome-session-3.10.0.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
@@ -41,7 +41,7 @@
             <Dependency>libxdmcp-devel</Dependency>
             <Dependency>libffi-devel</Dependency>
             <Dependency>pango-devel</Dependency>
-            <Dependency versionFrom="3.9.6">libgtk-3-devel</Dependency>
+            <Dependency versionFrom="3.10.0">libgtk-3-devel</Dependency>
             <Dependency>libxfixes-devel</Dependency>
             <Dependency>libcairo-devel</Dependency>
             <Dependency>dbus-devel</Dependency>
@@ -69,6 +69,7 @@
             <Path fileType="data">/usr/share/xsessions</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="data">/usr/share/gnome-session</Path>
+            <Path fileType="data">/usr/share/wayland-sessions/gnome-wayland.desktop</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency>zlib</Dependency>
@@ -106,7 +107,7 @@
             <Dependency>libxdmcp</Dependency>
             <Dependency>libffi</Dependency>
             <Dependency>pango</Dependency>
-            <Dependency versionFrom="3.9.6">libgtk-3</Dependency>
+            <Dependency versionFrom="3.10.0">libgtk-3</Dependency>
             <Dependency>libxfixes</Dependency>
             <Dependency>at-spi2</Dependency>
             <Dependency>freetype2</Dependency>
@@ -125,6 +126,14 @@
     </Package>
     
     <History>
+        <Update release="4">
+            <Date>10-01-2013</Date>
+            <Version>3.10.0</Version>
+            <Comment>Update to 3.10.0 as part of GNOME3.10 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>06-26-2013</Date>
             <Version>3.8.2</Version>
