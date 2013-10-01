@@ -11,7 +11,7 @@
         <Summary>The official text editor of the GNOME desktop</Summary>
         <Description>While aiming at simplicity and ease of use, gedit is a powerful general purpose text editor.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="ac696fedc13560c34161c967fcc29e09c663038d" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gedit/3.9/gedit-3.9.2.tar.xz</Archive>
+        <Archive sha1sum="665c4978e650e454d1d737cca60a206e3d5986b2" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gedit/3.10/gedit-3.10.0.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency>python3-devel</Dependency>
@@ -39,7 +39,7 @@
             <Dependency>libxdmcp-devel</Dependency>
             <Dependency>libffi-devel</Dependency>
             <Dependency>pango-devel</Dependency>
-            <Dependency versionFrom="3.9.6">libgtk-3-devel</Dependency>
+            <Dependency versionFrom="3.10.0">libgtk-3-devel</Dependency>
             <Dependency>libxfixes-devel</Dependency>
             <Dependency>libcairo-devel</Dependency>
             <Dependency>enchant-devel</Dependency>
@@ -51,6 +51,7 @@
             <Dependency>glib2-devel</Dependency>
             <Dependency>libsm-devel</Dependency>
             <Dependency>at-spi2-atk-devel</Dependency>
+            <Dependency>itstool</Dependency>
         </BuildDependencies>
     </Source>
     
@@ -69,6 +70,7 @@
             <Path fileType="data">/usr/share/glib-2.0</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/help</Path>
+            <Path fileType="data">/usr/share/appdata</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency>python3-devel</Dependency>
@@ -102,7 +104,7 @@
             <Dependency>libxdmcp</Dependency>
             <Dependency>libffi</Dependency>
             <Dependency>pango</Dependency>
-            <Dependency versionFrom="3.9.6">libgtk-3</Dependency>
+            <Dependency versionFrom="3.10.0">libgtk-3</Dependency>
             <Dependency>libxfixes</Dependency>
             <Dependency>libstdc++</Dependency>
             <Dependency>at-spi2</Dependency>
@@ -146,6 +148,14 @@
     </Package>
     
     <History>
+        <Update release="4">
+            <Date>10-01-2013</Date>
+            <Version>3.10.0</Version>
+            <Comment>Upgrade to 3.10.0 as part of GNOME3.10 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>06-26-2013</Date>
             <Version>3.9.2</Version>
