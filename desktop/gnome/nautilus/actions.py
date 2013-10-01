@@ -19,7 +19,7 @@ def build():
 def install():
     autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
 
-    pisitools.dodoc ("AUTHORS", "ChangeLog", "COPYING")
+    pisitools.dodoc ("COPYING")
 
     # Cleanup
     for item in ["XMLnamespaces", "mime.cache", "icons", "aliases", \
