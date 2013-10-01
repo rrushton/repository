@@ -10,11 +10,11 @@
         <Summary>GNOME Icon Theme</Summary>
         <Description>The GNOME Icon Theme package contains an assortment of non-scalable icons of different sizes and themes. </Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="9448caeb86282f51cb022ef5351dd0b653c4f6b7" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-icon-theme/3.8/gnome-icon-theme-3.8.2.tar.xz</Archive>
+        <Archive sha1sum="45fac73ad9852ce25b45cf82e75a1ed4860f090b" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-icon-theme/3.10/gnome-icon-theme-3.10.0.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency>libgtk-2-devel</Dependency>
-            <Dependency releaseFrom="10">libgtk-3-devel</Dependency>
+            <Dependency versionFrom="3.10.0">libgtk-3-devel</Dependency>
             <Dependency>icon-naming-utils</Dependency>
         </BuildDependencies>
     </Source>
@@ -33,6 +33,14 @@
     </Package>
     
     <History>
+        <Update release="4">
+            <Date>10-01-2013</Date>
+            <Version>3.10.0</Version>
+            <Comment>Update to latest version as part of GNOME3.10 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>08-13-2013</Date>
             <Version>3.8.2</Version>
