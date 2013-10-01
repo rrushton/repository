@@ -10,7 +10,7 @@
         <Summary>GNOME Terminal Emulator</Summary>
         <Description>GNOME Terminal Emulator</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="64b570d85cba7bfb730adec0a18883d9f7dd66cd" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-terminal/3.8/gnome-terminal-3.8.3.tar.xz</Archive>
+        <Archive sha1sum="57838a0946728734b71f87785475a9c62c6ac183" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-terminal/3.10/gnome-terminal-3.10.0.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency>desktop-file-utils</Dependency>
@@ -22,7 +22,7 @@
             <Dependency>libxcursor-devel</Dependency>
             <Dependency>libffi-devel</Dependency>
             <Dependency>libxcb-devel</Dependency>
-            <Dependency releaseFrom="2">libvte-devel</Dependency>
+            <Dependency releaseFrom="3">libvte-devel</Dependency>
             <Dependency>libxau-devel</Dependency>
             <Dependency>libicu-devel</Dependency>
             <Dependency>libxi-devel</Dependency>
@@ -38,9 +38,8 @@
             <Dependency>pixman-devel</Dependency>
             <Dependency>ncurses-devel</Dependency>
             <Dependency>libxdmcp-devel</Dependency>
-            <Dependency>gconf-devel</Dependency>
             <Dependency>pango-devel</Dependency>
-            <Dependency releaseFrom="10">libgtk-3-devel</Dependency>
+            <Dependency versionFrom="3.10.0">libgtk-3-devel</Dependency>
             <Dependency>libxfixes-devel</Dependency>
             <Dependency>libcairo-devel</Dependency>
             <Dependency>dbus-devel</Dependency>
@@ -76,7 +75,7 @@
             <Dependency>libffi</Dependency>
             <Dependency>libgcc</Dependency>
             <Dependency>libxcb</Dependency>
-            <Dependency releaseFrom="2">libvte</Dependency>
+            <Dependency releaseFrom="3">libvte</Dependency>
             <Dependency>libxau</Dependency>
             <Dependency>libicu</Dependency>
             <Dependency>bzip2</Dependency>
@@ -96,9 +95,8 @@
             <Dependency>pixman</Dependency>
             <Dependency>ncurses</Dependency>
             <Dependency>libxdmcp</Dependency>
-            <Dependency releaseFrom="4">gconf</Dependency>
             <Dependency>pango</Dependency>
-            <Dependency releaseFrom="10">libgtk-3</Dependency>
+            <Dependency versionFrom="3.10.0">libgtk-3</Dependency>
             <Dependency>libxfixes</Dependency>
             <Dependency>at-spi2</Dependency>
             <Dependency>freetype2</Dependency>
@@ -115,6 +113,14 @@
     </Package>
     
     <History>
+        <Update release="5">
+            <Date>10-01-2013</Date>
+            <Version>3.10.0</Version>
+            <Comment>Update to 3.10.0 as part of GNOME3.10 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="4">
             <Date>08-13-2013</Date>
             <Version>3.8.3</Version>
