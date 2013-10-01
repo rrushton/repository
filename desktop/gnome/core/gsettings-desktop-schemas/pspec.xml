@@ -11,12 +11,7 @@
         <Summary>The GSettings Desktop Schemas package contains a collection of GSettings schemas for settings shared by various components of a GNOME Desktop.</Summary>
         <Description>The GSettings Desktop Schemas package contains a collection of GSettings schemas for settings shared by various components of a GNOME Desktop.</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="5dbd91704583378c64df5ff99424c5961fa9a9bc" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gsettings-desktop-schemas/3.9/gsettings-desktop-schemas-3.9.3.tar.xz</Archive>
-        
-        <Patches>
-            <!-- SolusOS specific branding, etc. //-->
-            <!--<Patch level="1">solusos_branding.patch</Patch>//-->
-        </Patches>
+        <Archive sha1sum="5966274277714e19369b579e9093461cca5ee6e5" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gsettings-desktop-schemas/3.10/gsettings-desktop-schemas-3.10.0.tar.xz</Archive>
         
     </Source>
     
@@ -50,6 +45,14 @@
      
     
     <History>
+        <Update release="9">
+            <Date>10-01-2013</Date>
+            <Version>3.10.0</Version>
+            <Comment>Update to 3.10.0 as part of GNOME3.10 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="8">
             <Date>08-13-2013</Date>
             <Version>3.9.3</Version>
