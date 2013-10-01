@@ -11,7 +11,7 @@
         <Summary>Daemon handling the GNOME session settings</Summary>
         <Description>This package contains the daemon which is responsible for setting the various parameters of a GNOME session and the applications that run under it.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="55c7235eefb6ee54a3fa95b5e5a2d411bfd7627d" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-settings-daemon/3.9/gnome-settings-daemon-3.9.3.tar.xz</Archive>
+        <Archive sha1sum="55c6a9d3a33468852ab108f7fb0df9b3cd824a31" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-settings-daemon/3.10/gnome-settings-daemon-3.10.0.tar.xz</Archive>
         
         <Patches>
             <Patch level="1">font_fixes.patch</Patch>
@@ -39,7 +39,7 @@
             <Dependency>libxdmcp-devel</Dependency>
             <Dependency>libnss-devel</Dependency>
             <Dependency>libxi-devel</Dependency>
-            <Dependency versionFrom="3.9.1.1">libgnome-desktop-devel</Dependency>
+            <Dependency versionFrom="3.10.0">libgnome-desktop-devel</Dependency>
             <Dependency>libxfixes-devel</Dependency>
             <Dependency>libice-devel</Dependency>
             <Dependency>gdk-pixbuf-devel</Dependency>
@@ -56,7 +56,7 @@
             <Dependency>libnotify-devel</Dependency>
             <Dependency>libffi-devel</Dependency>
             <Dependency>pango-devel</Dependency>
-            <Dependency versionFrom="3.9.6">libgtk-3-devel</Dependency>
+            <Dependency versionFrom="3.10.0">libgtk-3-devel</Dependency>
             <Dependency>libsndfile-devel</Dependency>
             <Dependency>libxdamage-devel</Dependency>
             <Dependency>attr-devel</Dependency>
@@ -72,7 +72,11 @@
             <Dependency>libvorbis-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
             <Dependency>libsm-devel</Dependency>
-            <Dependency>at-spi2-atk-devel</Dependency>        
+            <Dependency>at-spi2-atk-devel</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+            <Dependency>libgeoclue-devel</Dependency>
+            <Dependency>colord-devel</Dependency>
+            <Dependency>libgeocode-glib-devel</Dependency>
         </BuildDependencies>
     </Source>
     
@@ -121,7 +125,7 @@
             <Dependency>libnss</Dependency>
             <Dependency>libxi</Dependency>
             <Dependency>glibc</Dependency>
-            <Dependency versionFrom="3.9.1.1">libgnome-desktop</Dependency>
+            <Dependency versionFrom="3.10.0">libgnome-desktop</Dependency>
             <Dependency>libxfixes</Dependency>
             <Dependency>libice</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
@@ -140,7 +144,7 @@
             <Dependency>libnotify</Dependency>
             <Dependency>libffi</Dependency>
             <Dependency>pango</Dependency>
-            <Dependency versionFrom="3.9.6">libgtk-3</Dependency>
+            <Dependency versionFrom="3.10.0">libgtk-3</Dependency>
             <Dependency>libsndfile</Dependency>
             <Dependency>libxdamage</Dependency>
             <Dependency>attr</Dependency>
@@ -159,6 +163,10 @@
             <Dependency>glib2</Dependency>
             <Dependency>libsm</Dependency>
             <Dependency>at-spi2-atk</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>libgeoclue</Dependency>
+            <Dependency>colord</Dependency>
+            <Dependency>libgeocode-glib</Dependency>
         </RuntimeDependencies>
     </Package>
     
@@ -176,6 +184,14 @@
     </Package>
     
     <History>
+        <Update release="5">
+            <Date>10-01-2013</Date>
+            <Version>3.10.0</Version>
+            <Comment>Upgrade to 3.10.0 as part of the GNOME3.10 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="4">
             <Date>06-26-2013</Date>
             <Version>3.9.3</Version>
