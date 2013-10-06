@@ -10,7 +10,7 @@
         <Summary>Generate interface introspection data for GObject libraries</Summary>
         <Description>GObject Introspection is a project for providing machine readable introspection data of the API of C libraries. This introspection data can be used in several different use cases, for example automatic code generation for bindings, API verification and documentation generation.</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="13c4b2a9e9b384caddbf82c168eb5c4caa1a21fa" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gobject-introspection/1.37/gobject-introspection-1.37.1.tar.xz</Archive>
+        <Archive sha1sum="51f3053f6b806efea41a38ea13d2e6ce494cf7af" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gobject-introspection/1.38/gobject-introspection-1.38.0.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency versionFrom="2.37.3">glib2</Dependency>
@@ -49,6 +49,14 @@
     </Package>
     
     <History>
+        <Update release="4">
+            <Date>10-01-2013</Date>
+            <Version>1.38.0</Version>
+            <Comment>Upgrade to 1.38.0 as part of the GNOME3.10 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>06-25-2013</Date>
             <Version>1.37.1</Version>
