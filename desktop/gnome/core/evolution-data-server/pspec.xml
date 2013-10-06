@@ -11,7 +11,7 @@
         <Summary>Unified backend for programs working with contacts, tasks, and calender information</Summary>
         <Description>Evolution Data Server package provides a unified backend for programs that work with contacts, tasks, and calendar information. It was originally developed for Evolution (hence the name), but is now used by other packages as well.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="3bcd70d70b6901c2f3737bee5a96678245c9d996" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/evolution-data-server/3.8/evolution-data-server-3.8.3.tar.xz</Archive>
+        <Archive sha1sum="264d2d99c5274600d2474484e567286eee9c3513" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/evolution-data-server/3.10/evolution-data-server-3.10.0.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency>liboauth-devel</Dependency>
@@ -90,6 +90,14 @@
     </Package>
     
     <History>
+        <Update release="3">
+            <Date>10-06-2013</Date>
+            <Version>3.10.0</Version>
+            <Comment>Upgrade to 3.10.0 as part of GNOME3.10 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>06-19-2013</Date>
             <Version>3.8.3</Version>
