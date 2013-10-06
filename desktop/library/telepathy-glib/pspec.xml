@@ -11,7 +11,7 @@
         <Summary>Telepathy is a D-Bus framework for unifying real time communication</Summary>
         <Description>The Telepathy GLib contains a library used by GLib based Telepathy components. Telepathy is a D-Bus framework for unifying real time communication, including instant messaging, voice calls and video calls. It abstracts differences between protocols to provide a unified interface for applications.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="deaeee5639b45a0e3813e8bb7b51d7c9a3c97db9" type="targz">http://telepathy.freedesktop.org/releases/telepathy-glib/telepathy-glib-0.20.2.tar.gz</Archive>
+        <Archive sha1sum="0ec683f337eb8a1bdc9dfa2b018ccb2862c1260c" type="targz">http://telepathy.freedesktop.org/releases/telepathy-glib/telepathy-glib-0.22.0.tar.gz</Archive>
         
         <BuildDependencies>
             <Dependency>dbus-devel</Dependency>
@@ -66,6 +66,14 @@
     </Package>
     
     <History>
+        <Update release="3">
+            <Date>10-05-2013</Date>
+            <Version>0.22.0</Version>
+            <Comment>Update to latest stable upstream version for GNOME3.10</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>09-04-2013</Date>
             <Version>0.20.2</Version>
