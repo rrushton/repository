@@ -1,0 +1,152 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>clutter-gst</Name>
+        <Homepage>http://blogs.gnome.org/clutter/</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>Clutter GStreamer API</Summary>
+        <Description>Clutter GStreamer API</Description>
+        <License>LGPLv2+</License>
+        <Archive sha1sum="b692ff83e0484d87b55fc3ac6e420c83a7504a95" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/clutter-gst/2.0/clutter-gst-2.0.8.tar.xz</Archive>
+        
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>mesalib-devel</Dependency>
+            <Dependency>harfbuzz-devel</Dependency>
+            <Dependency>libxcursor-devel</Dependency>
+            <Dependency>clutter-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libjson-glib-devel</Dependency>
+            <Dependency>gstreamer-1.0-plugins-base-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libicu-devel</Dependency>
+            <Dependency>gstreamer-1.0-devel</Dependency>
+            <Dependency>libxi-devel</Dependency>
+            <Dependency>glibc-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libice-devel</Dependency>
+            <Dependency>wayland-devel</Dependency>
+            <Dependency>libxinerama-devel</Dependency>
+            <Dependency>libatk-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libxdamage-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>libxrandr-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>systemd-devel</Dependency>
+            <Dependency>libdrm-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libgtk-3-devel</Dependency>
+            <Dependency>libxfixes-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libxcomposite-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency>cogl-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libsm-devel</Dependency>
+            <Dependency>libxkbcommon-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>clutter-gst</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/gstreamer-1.0</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>mesalib</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>libxcursor</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>clutter</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libjson-glib</Dependency>
+            <Dependency>gstreamer-1.0-plugins-base</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>libicu</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>gstreamer-1.0</Dependency>
+            <Dependency>libxi</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>wayland</Dependency>
+            <Dependency>libxinerama</Dependency>
+            <Dependency>libatk</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libxdamage</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libxrandr</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>systemd</Dependency>
+            <Dependency>libdrm</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libgtk-3</Dependency>
+            <Dependency>libxfixes</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libxcomposite</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>cogl</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libsm</Dependency>
+            <Dependency>libxkbcommon</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>clutter-gst-devel</Name>
+        <Summary>Development files for clutter-gst</Summary>
+        <Description>Development files for clutter-gst</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">clutter-gst</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>clutter-gst-docs</Name>
+        <Summary>API Documentation for clutter-gst</Summary>
+        <Description>API Documentation for clutter-gst</Description>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">clutter-gst-devel</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>10-05-2013</Date>
+            <Version>2.0.8</Version>
+            <Comment>Add clutter-gst to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+</PISI>
