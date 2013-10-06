@@ -1,0 +1,140 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gnome-chess</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>GNOME Chess Game</Summary>
+        <Description>Play chess in either 3D or 2D, against the computer or a friend</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="4935a219077c44ecc581a06cb8ba9e5451441ad9" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/gnome-chess/3.10/gnome-chess-3.10.0.tar.xz</Archive>
+        
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>mesalib-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>libcroco-devel</Dependency>
+            <Dependency>harfbuzz-devel</Dependency>
+            <Dependency>libxcursor-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libicu-devel</Dependency>
+            <Dependency>wayland-devel</Dependency>
+            <Dependency>libxi-devel</Dependency>
+            <Dependency>glibc-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libxxf86vm-devel</Dependency>
+            <Dependency>librsvg-devel</Dependency>
+            <Dependency>libice-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libxinerama-devel</Dependency>
+            <Dependency>libatk-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libxdamage-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>libxrandr-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <!-- Info: no expat-devel package - consider splitting -->
+            <Dependency>libdrm-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libgtk-3-devel</Dependency>
+            <Dependency>libxfixes-devel</Dependency>
+            <Dependency>xz-devel</Dependency>
+            <Dependency>at-spi2-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libglu-devel</Dependency>
+            <Dependency>libxcomposite-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libsm-devel</Dependency>
+            <Dependency>at-spi2-atk-devel</Dependency>
+            <Dependency>libxkbcommon-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gnome-chess</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/gnome-chess</Path>
+            <Path fileType="data">/usr/share/glib-2.0/schemas</Path>
+            <Path fileType="data">/usr/share/help</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/appdata</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="config">/etc/chess-engines.conf</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>mesalib</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>libcroco</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>libxcursor</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>libicu</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>wayland</Dependency>
+            <Dependency>libxi</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>libxxf86vm</Dependency>
+            <Dependency>librsvg</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxinerama</Dependency>
+            <Dependency>libatk</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libxdamage</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libxrandr</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>libdrm</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libgtk-3</Dependency>
+            <Dependency>libxfixes</Dependency>
+            <Dependency>xz</Dependency>
+            <Dependency>at-spi2</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libglu</Dependency>
+            <Dependency>libxcomposite</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libsm</Dependency>
+            <Dependency>at-spi2-atk</Dependency>
+            <Dependency>libxkbcommon</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>10-05-2013</Date>
+            <Version>3.10.0</Version>
+            <Comment>Add gnome-chess to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+</PISI>
