@@ -18,6 +18,6 @@ def install():
 	pisitools.dodoc("README")
 	
 	# We maintain this symlink so pisi always uses the correct automake
-	pisitools.dosym ("/usr/share/automake-1.13/", "/usr/share/gnuconfig")
+	pisitools.dosym ("/usr/share/automake-1.14/", "/usr/share/gnuconfig")
 
 

@@ -11,7 +11,7 @@
         <Summary>Automake is a tool for automatically generating `Makefile.in' files compliant with the GNU Coding Standards</Summary>
         <Description>Automake is a tool for automatically generating `Makefile.in' files compliant with the GNU Coding Standards</Description>
         <License>GPLv3</License>
-        <Archive sha1sum="20dac46d2699cb32c8102584db67e964c472b03e" type="tarxz">http://ftp.gnu.org/gnu/automake/automake-1.13.4.tar.xz</Archive>
+        <Archive sha1sum="793881a445134b7561637d6f2a3ca611276e39fe" type="tarxz">http://ftp.gnu.org/gnu/automake/automake-1.14.tar.xz</Archive>
     </Source>
     
     <Package>
@@ -34,6 +34,14 @@
     </Package>
     
     <History>
+        <Update release="3">
+            <Date>10-01-2013</Date>
+            <Version>1.14</Version>
+            <Comment>Upgrade to 1.14 as part of GNOME3.10 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>06-19-2013</Date>
             <Version>1.13.4</Version>
