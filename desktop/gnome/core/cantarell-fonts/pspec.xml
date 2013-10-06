@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>cantarell-fonts</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>GNOME Cantarell fonts</Summary>
+        <Description>GNOME Cantarell fonts - required for GNOME 3</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="bff3325e5f2fedcfab833f8f8e4c80966a0beb7a" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/cantarell-fonts/0.0/cantarell-fonts-0.0.15.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>cantarell-fonts</Name>
+        <Files>
+            <Path fileType="data">/usr/share/fonts</Path>
+            <Path fileType="data">/usr/share/fontconfig</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>10-05-2013</Date>
+            <Version>0.0.15</Version>
+            <Comment>Add cantarell-fonts to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+</PISI>
