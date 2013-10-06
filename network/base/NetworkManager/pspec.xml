@@ -10,7 +10,7 @@
         <Summary>Simple networking</Summary>
         <Description>NetworkManager is a set of co-operative tools that make networking simple and straightforward. Whether WiFi, wired, 3G, or Bluetooth, NetworkManager allows you to quickly move from one network to another: once a network has been configured and joined once, it can be detected and re-joined automatically the next time it's available. </Description>
         <License>LGPLv3+</License>
-        <Archive sha1sum="ef962b32b62fe7916710dc3e66e0b0ca6cd802aa" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/NetworkManager/0.9/NetworkManager-0.9.8.2.tar.xz</Archive>
+        <Archive sha1sum="13f98f6a1aec8e714cf495fb844725d261ae00af" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/NetworkManager/0.9/NetworkManager-0.9.8.6.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency>iptables-devel</Dependency>
@@ -98,6 +98,14 @@
     </Package>
     
     <History>
+        <Update release="8">
+            <Date>10-06-2013</Date>
+            <Version>0.9.8.6</Version>
+            <Comment>Update to 0.9.8.6 as part of GNOME3.10 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="7">
             <Date>09-09-2013</Date>
             <Version>0.9.8.2</Version>
