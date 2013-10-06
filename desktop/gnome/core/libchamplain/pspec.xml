@@ -1,0 +1,158 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libchamplain</Name>
+        <Homepage>https://projects.gnome.org/libchamplain/</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>Clutter Map Widget</Summary>
+        <Description>libchamplain is a C library providing a ClutterActor to display maps. It also provides a Gtk+ widget to display maps in Gtk+ applications. Python and Perl bindings are also available. It supports numerous free map sources such as OpenStreetMap, OpenCycleMap, OpenAerialMap and Maps for free.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="35de02469f45828807eb07482212badf995541ae" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/libchamplain/0.12/libchamplain-0.12.5.tar.xz</Archive>
+        
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>mesalib-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>harfbuzz-devel</Dependency>
+            <Dependency>libxcursor-devel</Dependency>
+            <Dependency>clutter-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libjson-glib-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libicu-devel</Dependency>
+            <Dependency>systemd-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>wayland-devel</Dependency>
+            <Dependency>libxi-devel</Dependency>
+            <Dependency>glibc-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libice-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libxinerama-devel</Dependency>
+            <Dependency>libatk-devel</Dependency>
+            <Dependency>sqlite3-devel</Dependency>
+            <Dependency>libxdamage-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>libxrandr-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libdrm-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libgtk-3-devel</Dependency>
+            <Dependency>libxfixes-devel</Dependency>
+            <Dependency>xz-devel</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libxcomposite-devel</Dependency>
+            <Dependency>clutter-gtk-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency>cogl-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libsm-devel</Dependency>
+            <Dependency>libxkbcommon-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libchamplain</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>mesalib</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>libxcursor</Dependency>
+            <Dependency>libstdc++</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>clutter</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libjson-glib</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>libicu</Dependency>
+            <Dependency>systemd</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>wayland</Dependency>
+            <Dependency>libxi</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxinerama</Dependency>
+            <Dependency>libatk</Dependency>
+            <Dependency>sqlite3</Dependency>
+            <Dependency>libxdamage</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libxrandr</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libdrm</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libgtk-3</Dependency>
+            <Dependency>libxfixes</Dependency>
+            <Dependency>xz</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libxcomposite</Dependency>
+            <Dependency>clutter-gtk</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>cogl</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libsm</Dependency>
+            <Dependency>libxkbcommon</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>libchamplain-devel</Name>
+        <Summary>Development files for libchamplain</Summary>
+        <Description>Development files for libchamplain</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/vala</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libchamplain</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>libchamplain-docs</Name>
+        <Summary>API Documentation for libchamplain</Summary>
+        <Description>API Documentation for libchamplain</Description>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libchamplain-devel</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>10-05-2013</Date>
+            <Version>0.12.5</Version>
+            <Comment>Add libchamplain to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+</PISI>
