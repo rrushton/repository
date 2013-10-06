@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>grilo</Name>
+        <Homepage>https://wiki.gnome.org/Grilo</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>Media discovery framework</Summary>
+        <Description>Grilo is a framework focused on making media discovery and browsing easy for application developers.
+
+More precisely, Grilo provides:
+
+    A single, high-level API that abstracts the differences among various media content providers, allowing application developers to integrate content from various services and sources easily.
+    A collection of plugins for accessing content from various media providers. Developers can share efforts and code by writing plugins for the framework that are application agnostic.
+    A flexible API that allows plugin developers to write plugins of various kinds. </Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="495779030076ab744724132f91b40e7427a32f1b" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/grilo/0.2/grilo-0.2.7.tar.xz</Archive>
+        
+        <BuildDependencies>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>glibc-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>xz-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libgtk-3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>grilo</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>xz</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>libgtk-3</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>grilo-devel</Name>
+        <Summary>Development files for grilo</Summary>
+        <Description>Development files for grilo</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">grilo</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>10-05-2013</Date>
+            <Version>0.2.7</Version>
+            <Comment>Add grilo to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+</PISI>
