@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>cogl</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>A modern 3D graphics API</Summary>
+        <Description>A modern 3D graphics API</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="09c3e93c3e823fb82826f3c783cf4f8804fdc1a6" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/cogl/1.16/cogl-1.16.0.tar.xz</Archive>
+        
+        <BuildDependencies>
+            <Dependency>glibc-devel</Dependency>
+            <Dependency>systemd-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>mesalib-devel</Dependency>
+            <Dependency>wayland-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libxrandr-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libdrm-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libxcomposite-devel</Dependency>
+            <Dependency>libxdamage-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libxfixes-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>cogl</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="doc">/usr/share/cogl/examples-data</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0</Path>
+            <Path fileType="library">/usr/lib/gstreamer-1.0</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>glibc</Dependency>
+            <Dependency>systemd</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>mesalib</Dependency>
+            <Dependency>wayland</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libxrandr</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libdrm</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libxcomposite</Dependency>
+            <Dependency>libxdamage</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libxfixes</Dependency>
+            <Dependency>libxau</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>cogl-devel</Name>
+        <Summary>Development files for cogl</Summary>
+        <Description>Development files for cogl</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">cogl</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>10-01-2013</Date>
+            <Version>1.16.0</Version>
+            <Comment>Add cogl to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+</PISI>
