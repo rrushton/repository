@@ -75,6 +75,7 @@ Tracker is a central repository of user information, that provides two big benef
         <Description>Mozilla Firefox Tracker integration</Description>
         <Files>
             <Path fileType="data">/usr/share/xul-ext/trackerfox</Path>
+            <Path fileType="data">/usr/lib/firefox-addons</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">tracker</Dependency>
@@ -88,6 +89,7 @@ Tracker is a central repository of user information, that provides two big benef
         <Files>
             <Path fileType="data">/usr/share/xul-ext/trackerbird</Path>
             <Path fileType="data">/usr/share/applications/trackerbird-launcher.desktop</Path>
+            <Path fileType="data">/usr/lib/thunderbird-addons</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">tracker</Dependency>
