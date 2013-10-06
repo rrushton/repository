@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python3-cairo</Name>
+        <Homepage>http://cairographics.org</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>Python3 Cairo Bindings</Summary>
+        <Description>Python3 Cairo Bindings</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="b4283aa1cc9aafd12fd72ad371303a486da1d014" type="tarbz2">http://cairographics.org/releases/pycairo-1.10.0.tar.bz2</Archive>
+        
+        <BuildDependencies>
+            <Dependency>libx11-devel</Dependency>
+            <Dependency>libcairo-devel</Dependency>
+            <Dependency>glibc-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libxau-devel</Dependency>
+            <Dependency>libice-devel</Dependency>
+            <Dependency>libxdmcp-devel</Dependency>
+            <Dependency>libxrender-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libxext-devel</Dependency>
+            <Dependency>libsm-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python3-cairo</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libx11</Dependency>
+            <Dependency>freetype2</Dependency>
+            <Dependency>libcairo</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libxau</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libice</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>libxdmcp</Dependency>
+            <Dependency>libxrender</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libxext</Dependency>
+            <Dependency>libsm</Dependency>
+            <Dependency>python3</Dependency>
+            <Dependency>pixman</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>python3-cairo-devel</Name>
+        <Summary>Development files for python3-cairo</Summary>
+        <Description>Development files for python3-cairo</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">python3-cairo</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>10-06-2013</Date>
+            <Version>1.10.0</Version>
+            <Comment>Add python3-cairo to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+</PISI>
