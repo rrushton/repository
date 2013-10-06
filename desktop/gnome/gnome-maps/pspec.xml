@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gnome-maps</Name>
+        <Homepage>https://wiki.gnome.org/Apps/Maps</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Packager>
+        <Summary>GNOME Maps Application</Summary>
+        <Description>GNOME Maps Application</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="546b3093bdec19feff6494d2af5bae86d54d664f" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/gnome-maps/3.10/gnome-maps-3.10.0.tar.xz</Archive>
+        
+        <BuildDependencies>
+            <Dependency>libgjs</Dependency>
+            <Dependency>libchamplain-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gnome-maps</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/gnome-maps</Path>
+            <Path fileType="data">/usr/share/glib-2.0/schemas</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/appdata</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>libgjs</Dependency>
+            <Dependency>libchamplain</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>10-05-2013</Date>
+            <Version>3.10.0</Version>
+            <Comment>Add gnome-maps to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+    </History>
+</PISI>
