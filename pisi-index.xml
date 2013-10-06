@@ -4250,7 +4250,7 @@ sudo 1.3.5 through 1.7.10 and 1.8.0 through 1.8.5, when the tty_tickets option i
             <PartOf>system.base</PartOf>
             <Summary xml:lang="en">Generate interface introspection data for GObject libraries</Summary>
             <Description xml:lang="en">GObject Introspection is a project for providing machine readable introspection data of the API of C libraries. This introspection data can be used in several different use cases, for example automatic code generation for bindings, API verification and documentation generation.</Description>
-            <Archive type="tarxz" sha1sum="13c4b2a9e9b384caddbf82c168eb5c4caa1a21fa">http://ftp.gnome.org/pub/gnome/sources/gobject-introspection/1.37/gobject-introspection-1.37.1.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="51f3053f6b806efea41a38ea13d2e6ce494cf7af">http://ftp.gnome.org/pub/gnome/sources/gobject-introspection/1.38/gobject-introspection-1.38.0.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency versionFrom="2.37.3">glib2</Dependency>
             </BuildDependencies>
@@ -4276,7 +4276,7 @@ sudo 1.3.5 through 1.7.10 and 1.8.0 through 1.8.5, when the tty_tickets option i
             <Description xml:lang="en">This package contains the development files required to build applications using the GObject Introspection System</Description>
             <PartOf>system.devel</PartOf>
             <RuntimeDependencies>
-                <Dependency release="3">gobject-introspection</Dependency>
+                <Dependency release="4">gobject-introspection</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -4286,6 +4286,13 @@ sudo 1.3.5 through 1.7.10 and 1.8.0 through 1.8.5, when the tty_tickets option i
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>10-01-2013</Date>
+                <Version>1.38.0</Version>
+                <Comment>Upgrade to 1.38.0 as part of the GNOME3.10 migration</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="3">
                 <Date>06-25-2013</Date>
                 <Version>1.37.1</Version>
@@ -5794,6 +5801,7 @@ Bug-SolusOS: T35</Comment>
                 <Dependency>dbus-devel</Dependency>
                 <Dependency>dbus-glib</Dependency>
                 <Dependency>python</Dependency>
+                <Dependency>python3</Dependency>
             </BuildDependencies>
             <SourceURI>system/base/python-dbus/pspec.xml</SourceURI>
         </Source>
@@ -5803,6 +5811,7 @@ Bug-SolusOS: T35</Comment>
                 <Dependency>dbus</Dependency>
                 <Dependency>dbus-glib</Dependency>
                 <Dependency>python</Dependency>
+                <Dependency>python3</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib/python*</Path>
@@ -5812,6 +5821,13 @@ Bug-SolusOS: T35</Comment>
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>10-06-2013</Date>
+                <Version>1.1.1</Version>
+                <Comment>Add python3 modules</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="2">
                 <Date>03-16-2013</Date>
                 <Version>1.1.1</Version>
@@ -6995,7 +7011,7 @@ Bug-SolusOS: T6</Comment>
             <PartOf>system.devel</PartOf>
             <Summary xml:lang="en">Automake is a tool for automatically generating `Makefile.in&apos; files compliant with the GNU Coding Standards</Summary>
             <Description xml:lang="en">Automake is a tool for automatically generating `Makefile.in&apos; files compliant with the GNU Coding Standards</Description>
-            <Archive type="tarxz" sha1sum="20dac46d2699cb32c8102584db67e964c472b03e">http://ftp.gnu.org/gnu/automake/automake-1.13.4.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="793881a445134b7561637d6f2a3ca611276e39fe">http://ftp.gnu.org/gnu/automake/automake-1.14.tar.xz</Archive>
             <SourceURI>system/devel/automake/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -7016,6 +7032,13 @@ Bug-SolusOS: T6</Comment>
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>10-01-2013</Date>
+                <Version>1.14</Version>
+                <Comment>Upgrade to 1.14 as part of GNOME3.10 migration</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="2">
                 <Date>06-19-2013</Date>
                 <Version>1.13.4</Version>
@@ -7081,10 +7104,7 @@ Bug-SolusOS: T6</Comment>
             <PartOf>system.devel</PartOf>
             <Summary xml:lang="en">GNU M4 is an implementation of the traditional Unix macro processor</Summary>
             <Description xml:lang="en">GNU M4 is a macro processor in the sense that it copies its input to the output expanding macros as it goes. Macros are either builtin or user-defined and can take any number of arguments. Besides just doing macro expansion, m4 has builtin functions for including named files, running UNIX commands, doing integer arithmetic, manipulating text in various ways, recursion etc... m4 can be used either as a front-end to a compiler or as a macro processor in its own right.</Description>
-            <Archive type="tarxz" sha1sum="d8688d1d84e058366134301e018e57bbbdc33463">http://ftp.gnu.org/gnu/m4/m4-1.4.16.tar.xz</Archive>
-            <Patches>
-                <Patch level="1">m4-1.4.16-fix-gets-error.patch</Patch>
-            </Patches>
+            <Archive type="tarxz" sha1sum="74ad71fa100ec8c13bc715082757eb9ab1e4bbb0">http://ftp.gnu.org/gnu/m4/m4-1.4.17.tar.xz</Archive>
             <SourceURI>system/devel/m4/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -7097,6 +7117,13 @@ Bug-SolusOS: T6</Comment>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>10-01-2013</Date>
+                <Version>1.4.17</Version>
+                <Comment>Update to 1.4.17 for GNOME3.10 migration</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="1">
                 <Date>03-26-2013</Date>
                 <Version>1.4.16</Version>
@@ -7655,7 +7682,7 @@ Bug-SolusOS: T6</Comment>
             <PartOf>system.devel</PartOf>
             <Summary xml:lang="en">Generic library support script</Summary>
             <Description xml:lang="en">The Libtool package contains the GNU generic library support script. It wraps the complexity of using shared libraries in a consistent, portable interface.</Description>
-            <Archive type="tarxz" sha1sum="a5a44aa791c8b93cbe1c2f839368cd3de5f5f3e1">http://ftp.gnu.org/gnu/libtool/libtool-2.4.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="4671f3323f2fbc712a70afce57602ce906a82a15">http://ftp.gnu.org/gnu/libtool/libtool-2.4.2.tar.xz</Archive>
             <SourceURI>system/devel/libtool/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -7672,6 +7699,13 @@ Bug-SolusOS: T6</Comment>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>10-01-2013</Date>
+                <Version>2.4.2</Version>
+                <Comment>Update to 2.4.2 for GNOME3.10 migration</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="1">
                 <Date>05-24-2013</Date>
                 <Version>2.4</Version>
@@ -8701,7 +8735,7 @@ GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possi
             <PartOf>library</PartOf>
             <Summary xml:lang="en">Library for password quality checking and generating random passwords.</Summary>
             <Description xml:lang="en">The libpwquality library purpose is to provide common functions for password quality checking and also scoring them based on their apparent randomness. The library also provides a function for generating random passwords with good pronounceability. The library supports reading and parsing of a configuration file.</Description>
-            <Archive type="tarbz2" sha1sum="a42fe4c2f164e8264a802c26ce3bf9631449da10">https://launchpad.net/libpwquality/trunk/1.2.1/+download/libpwquality-1.2.1.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="3745b81655cf25cea416266c458eb979f59e82f3">https://launchpad.net/libpwquality/trunk/1.2.2/+download/libpwquality-1.2.2.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>zlib-devel</Dependency>
                 <Dependency>pam-devel</Dependency>
@@ -8732,7 +8766,7 @@ GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possi
             <Summary xml:lang="en">Development files for libpwquality</Summary>
             <Description xml:lang="en">Development files for libpwquality</Description>
             <RuntimeDependencies>
-                <Dependency release="1">libpwquality</Dependency>
+                <Dependency release="2">libpwquality</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -8740,6 +8774,13 @@ GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possi
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>10-01-2013</Date>
+                <Version>1.2.2</Version>
+                <Comment>Update to 1.2.2 for GNOME3.10 migration</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="1">
                 <Date>06-16-2013</Date>
                 <Version>1.2.1</Version>
@@ -24211,6 +24252,87 @@ Bug-SolusOS: T7</Comment>
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>python3-cairo</Name>
+            <Homepage>http://cairographics.org</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>programming.python</PartOf>
+            <Summary xml:lang="en">Python3 Cairo Bindings</Summary>
+            <Description xml:lang="en">Python3 Cairo Bindings</Description>
+            <Archive type="tarbz2" sha1sum="b4283aa1cc9aafd12fd72ad371303a486da1d014">http://cairographics.org/releases/pycairo-1.10.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+                <Dependency>libice-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>libsm-devel</Dependency>
+                <Dependency>python3-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/python/python3-cairo/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-cairo</Name>
+            <RuntimeDependencies>
+                <Dependency>bzip2</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>libsm</Dependency>
+                <Dependency>python3</Dependency>
+                <Dependency>pixman</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/python3*</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>python3-cairo-devel</Name>
+            <Summary xml:lang="en">Development files for python3-cairo</Summary>
+            <Description xml:lang="en">Development files for python3-cairo</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">python3-cairo</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>10-06-2013</Date>
+                <Version>1.10.0</Version>
+                <Comment>Add python3-cairo to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>python-gtk2</Name>
             <Homepage>http://www.pygtk.org</Homepage>
             <Packager>
@@ -24843,6 +24965,97 @@ The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does
                 <Date>09-13-2013</Date>
                 <Version>1.4.6</Version>
                 <Comment>Add python-pep8 to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python3-gobject</Name>
+            <Homepage>http://www.gnome.org</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>programming.python</PartOf>
+            <Summary xml:lang="en">Python API to GObject Introspection</Summary>
+            <Description xml:lang="en">Provides access to GObject Introspection libraries within Python3 applications</Description>
+            <Archive type="tarxz" sha1sum="2eb10ad2b0b09df49cf99e02282e2db1a5febde1">http://ftp.gnome.org/pub/GNOME/sources/pygobject/3.10/pygobject-3.10.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>libice-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libsm-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/python/python3-gobject/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-gobject</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>gobject-introspection</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libsm</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="library">/usr/lib/python3*</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>python3-gobject-devel</Name>
+            <Summary xml:lang="en">Development files for python3-gobject</Summary>
+            <Description xml:lang="en">Development files for python3-gobject</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">python3-gobject</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+            <Conflicts>
+                <Package>python-gobject-devel</Package>
+            </Conflicts>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>10-06-2013</Date>
+                <Version>3.10.0</Version>
+                <Comment>Add python3-gobject to repositories</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
@@ -27234,7 +27447,7 @@ The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does
             <PartOf>network.base</PartOf>
             <Summary xml:lang="en">Simple networking</Summary>
             <Description xml:lang="en">NetworkManager is a set of co-operative tools that make networking simple and straightforward. Whether WiFi, wired, 3G, or Bluetooth, NetworkManager allows you to quickly move from one network to another: once a network has been configured and joined once, it can be detected and re-joined automatically the next time it&apos;s available.</Description>
-            <Archive type="tarxz" sha1sum="ef962b32b62fe7916710dc3e66e0b0ca6cd802aa">http://ftp.gnome.org/pub/gnome/sources/NetworkManager/0.9/NetworkManager-0.9.8.2.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="13f98f6a1aec8e714cf495fb844725d261ae00af">http://ftp.gnome.org/pub/gnome/sources/NetworkManager/0.9/NetworkManager-0.9.8.6.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>iptables-devel</Dependency>
                 <Dependency>dhcpcd</Dependency>
@@ -27295,7 +27508,7 @@ The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does
             <Summary xml:lang="en">Development files for network-manager</Summary>
             <Description xml:lang="en">Development files for network-manager</Description>
             <RuntimeDependencies>
-                <Dependency release="7">network-manager</Dependency>
+                <Dependency release="8">network-manager</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -27308,13 +27521,20 @@ The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does
             <Summary xml:lang="en">API Documentation for network-manager</Summary>
             <Description xml:lang="en">API Documentation for network-manager</Description>
             <RuntimeDependencies>
-                <Dependency release="7">network-manager-devel</Dependency>
+                <Dependency release="8">network-manager-devel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/gtk-doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="8">
+                <Date>10-06-2013</Date>
+                <Version>0.9.8.6</Version>
+                <Comment>Update to 0.9.8.6 as part of GNOME3.10 migration</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="7">
                 <Date>09-09-2013</Date>
                 <Version>0.9.8.2</Version>
@@ -30558,7 +30778,7 @@ The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does
             <PartOf>desktop.core</PartOf>
             <Summary xml:lang="en">D-Bus service for accessing user accounts and information</Summary>
             <Description xml:lang="en">AccountsService is a D-Bus service for accessing the list of user accounts and information attached to those accounts.</Description>
-            <Archive type="tarxz" sha1sum="7a8894c4e6a947563acf4deb16d6574693feb49b">http://www.freedesktop.org/software/accountsservice/accountsservice-0.6.30.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="5ab5e4719b555c83fc643b9e150ed87fec3e43d2">http://www.freedesktop.org/software/accountsservice/accountsservice-0.6.34.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>systemd-devel</Dependency>
                 <Dependency>zlib-devel</Dependency>
@@ -30595,7 +30815,7 @@ The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does
             <Summary xml:lang="en">Development files for AccountsService</Summary>
             <Description xml:lang="en">Development files for AccountsService</Description>
             <RuntimeDependencies>
-                <Dependency release="4">accountsservice</Dependency>
+                <Dependency release="5">accountsservice</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -30608,13 +30828,20 @@ The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does
             <Summary xml:lang="en">API Documentation for AccountsService</Summary>
             <Description xml:lang="en">API Documentation for AccountService</Description>
             <RuntimeDependencies>
-                <Dependency release="4">accountsservice-devel</Dependency>
+                <Dependency release="5">accountsservice-devel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/gtk-doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="5">
+                <Date>10-05-2013</Date>
+                <Version>0.6.34</Version>
+                <Comment>Update to latest version</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="4">
                 <Date>09-04-2013</Date>
                 <Version>0.6.30</Version>
@@ -31448,6 +31675,43 @@ The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does
                 <Date>04-12-2013</Date>
                 <Version>0.21</Version>
                 <Comment>Add desktop-file-utils to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xdg-user-dirs</Name>
+            <Homepage>http://www.freedesktop.org/wiki/Software/xdg-user-dirs/</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.core</PartOf>
+            <Summary xml:lang="en">Tool to manage well known user directories</Summary>
+            <Description xml:lang="en">xdg-user-dirs is a tool to help manage &quot;well known&quot; user directories like the desktop folder and the music folder. It also handles localization (i.e. translation) of the filenames.</Description>
+            <Archive type="targz" sha1sum="4e722682adcce33b4b9130b148bfbd9d49737814">http://user-dirs.freedesktop.org/releases/xdg-user-dirs-0.15.tar.gz</Archive>
+            <Patches>
+                <Patch level="1">0001-Disable-man-pages-due-to-build-failure.patch</Patch>
+            </Patches>
+            <SourceURI>desktop/core/xdg-user-dirs/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xdg-user-dirs</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="config">/etc/xdg</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>10-06-2013</Date>
+                <Version>0.15</Version>
+                <Comment>Add xdg-user-dirs to repositories</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
@@ -36311,6 +36575,52 @@ them against regular expressions.</Description>
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>gnome-maps</Name>
+            <Homepage>https://wiki.gnome.org/Apps/Maps</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.gnome</PartOf>
+            <Summary xml:lang="en">GNOME Maps Application</Summary>
+            <Description xml:lang="en">GNOME Maps Application</Description>
+            <Archive type="tarxz" sha1sum="546b3093bdec19feff6494d2af5bae86d54d664f">http://ftp.gnome.org/pub/GNOME/sources/gnome-maps/3.10/gnome-maps-3.10.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>libgjs</Dependency>
+                <Dependency>libchamplain-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/gnome-maps/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gnome-maps</Name>
+            <RuntimeDependencies>
+                <Dependency>libgjs</Dependency>
+                <Dependency>libchamplain</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/gnome-maps</Path>
+                <Path fileType="data">/usr/share/glib-2.0/schemas</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/appdata</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>10-05-2013</Date>
+                <Version>3.10.0</Version>
+                <Comment>Add gnome-maps to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>gnome-packagekit</Name>
             <Homepage>http://www.packagekit.org</Homepage>
             <Packager>
@@ -37154,7 +37464,7 @@ them against regular expressions.</Description>
             <PartOf>desktop.gnome.core</PartOf>
             <Summary xml:lang="en">GNOME JavaScript bindings</Summary>
             <Description xml:lang="en">GNOME JavaScript bindings</Description>
-            <Archive type="tarxz" sha1sum="bd83389a4ee8b31a1d7e639645db364474edde24">http://ftp.gnome.org/pub/gnome/sources/gjs/1.34/gjs-1.34.0.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="c5530fbe6dde7d02e1f461829385075c5487e2bb">http://ftp.gnome.org/pub/gnome/sources/gjs/1.38/gjs-1.38.1.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>gobject-introspection-devel</Dependency>
                 <Dependency>spidermonkey-devel</Dependency>
@@ -37184,6 +37494,7 @@ them against regular expressions.</Description>
                 <Path fileType="library">/usr/lib/gjs-1.0</Path>
                 <Path fileType="library">/usr/lib/lib*.so*</Path>
                 <Path fileType="data">/usr/share/gjs-1.0</Path>
+                <Path fileType="executable">/usr/libexec/gjs</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
@@ -37192,7 +37503,7 @@ them against regular expressions.</Description>
             <Summary xml:lang="en">Development files for libgjs</Summary>
             <Description xml:lang="en">Development files for libgjs</Description>
             <RuntimeDependencies>
-                <Dependency release="2">libgjs</Dependency>
+                <Dependency release="3">libgjs</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -37201,6 +37512,13 @@ them against regular expressions.</Description>
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>10-01-2013</Date>
+                <Version>1.38.1</Version>
+                <Comment>Update to 1.38.1 for GNOME3.10 migration</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="2">
                 <Date>05-30-2013</Date>
                 <Version>1.34.0</Version>
@@ -37394,6 +37712,158 @@ them against regular expressions.</Description>
                 <Date>04-14-2013</Date>
                 <Version>3.6.2</Version>
                 <Comment>Add libgweather to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>caribou</Name>
+            <Homepage>https://wiki.gnome.org/Caribou</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.gnome.core</PartOf>
+            <Summary xml:lang="en">On-screen keyboard for GNOME</Summary>
+            <Description xml:lang="en">On-screen keyboard for GNOME</Description>
+            <Archive type="tarxz" sha1sum="0c1e0797fd809a9b9c9983cecfacd301b1e1c4db">http://ftp.gnome.org/pub/GNOME/sources/caribou/0.4/caribou-0.4.12.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>libgtk-3-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>libxcursor-devel</Dependency>
+                <Dependency>libxtst-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+                <Dependency>libicu-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>wayland-devel</Dependency>
+                <Dependency>libxi-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>libice-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libxinerama-devel</Dependency>
+                <Dependency>libatk-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>libxrandr-devel</Dependency>
+                <Dependency>libxdamage-devel</Dependency>
+                <Dependency>libxklavier-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>libgtk-2-devel</Dependency>
+                <Dependency>libxfixes-devel</Dependency>
+                <Dependency>xz-devel</Dependency>
+                <Dependency>at-spi2-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>dbus-devel</Dependency>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>libxkbfile-devel</Dependency>
+                <Dependency>libxcomposite-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>libgee-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libsm-devel</Dependency>
+                <Dependency>at-spi2-atk-devel</Dependency>
+                <Dependency>libxkbcommon-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/core/caribou/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>caribou</Name>
+            <Summary xml:lang="en">GNOME On Screen Keyboard Library</Summary>
+            <Description xml:lang="en">GNOME On Screen Keyboard Library</Description>
+            <RuntimeDependencies>
+                <Dependency>libgtk-3</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libxcursor</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>libxtst</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>libicu</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>wayland</Dependency>
+                <Dependency>libxi</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxinerama</Dependency>
+                <Dependency>libatk</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>libxrandr</Dependency>
+                <Dependency>libxdamage</Dependency>
+                <Dependency>libxklavier</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>libgtk-2</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>libxfixes</Dependency>
+                <Dependency>xz</Dependency>
+                <Dependency>at-spi2</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>libxcomposite</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>libgee</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libsm</Dependency>
+                <Dependency>at-spi2-atk</Dependency>
+                <Dependency>libxkbcommon</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="library">/usr/lib/gtk-2.0/modules</Path>
+                <Path fileType="library">/usr/lib/gtk-3.0/modules</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
+                <Path fileType="data">/usr/share/glib-2.0/schemas</Path>
+                <Path fileType="data">/usr/share/caribou</Path>
+                <Path fileType="data">/usr/share/dbus-1/services</Path>
+                <Path fileType="data">/usr/lib/gnome-settings-daemon-3.0/gtk-modules</Path>
+                <Path fileType="data">/usr/share/antler</Path>
+                <Path fileType="data">/usr/lib/python*</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/etc/xdg/autostart</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>caribou-devel</Name>
+            <Summary xml:lang="en">Development files for caribou</Summary>
+            <Description xml:lang="en">Development files for caribou</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">caribou</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/share/vala</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>10-01-2013</Date>
+                <Version>0.4.12</Version>
+                <Comment>Add caribou to repositories</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
@@ -38271,6 +38741,159 @@ them against regular expressions.</Description>
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>libchamplain</Name>
+            <Homepage>https://projects.gnome.org/libchamplain/</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.gnome.core</PartOf>
+            <Summary xml:lang="en">Clutter Map Widget</Summary>
+            <Description xml:lang="en">libchamplain is a C library providing a ClutterActor to display maps. It also provides a Gtk+ widget to display maps in Gtk+ applications. Python and Perl bindings are also available. It supports numerous free map sources such as OpenStreetMap, OpenCycleMap, OpenAerialMap and Maps for free.</Description>
+            <Archive type="tarxz" sha1sum="35de02469f45828807eb07482212badf995541ae">http://ftp.gnome.org/pub/GNOME/sources/libchamplain/0.12/libchamplain-0.12.5.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>mesalib-devel</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>libxcursor-devel</Dependency>
+                <Dependency>clutter-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>libjson-glib-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+                <Dependency>libicu-devel</Dependency>
+                <Dependency>systemd-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>wayland-devel</Dependency>
+                <Dependency>libxi-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libice-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libxinerama-devel</Dependency>
+                <Dependency>libatk-devel</Dependency>
+                <Dependency>sqlite3-devel</Dependency>
+                <Dependency>libxdamage-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>libxrandr-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libdrm-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libgtk-3-devel</Dependency>
+                <Dependency>libxfixes-devel</Dependency>
+                <Dependency>xz-devel</Dependency>
+                <Dependency>libsoup-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>libxcomposite-devel</Dependency>
+                <Dependency>clutter-gtk-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>cogl-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libsm-devel</Dependency>
+                <Dependency>libxkbcommon-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/core/libchamplain/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libchamplain</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>mesalib</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libxcursor</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>clutter</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>libjson-glib</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>libicu</Dependency>
+                <Dependency>systemd</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>wayland</Dependency>
+                <Dependency>libxi</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxinerama</Dependency>
+                <Dependency>libatk</Dependency>
+                <Dependency>sqlite3</Dependency>
+                <Dependency>libxdamage</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>libxrandr</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libdrm</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libgtk-3</Dependency>
+                <Dependency>libxfixes</Dependency>
+                <Dependency>xz</Dependency>
+                <Dependency>libsoup</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>libxcomposite</Dependency>
+                <Dependency>clutter-gtk</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>cogl</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libsm</Dependency>
+                <Dependency>libxkbcommon</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libchamplain-devel</Name>
+            <Summary xml:lang="en">Development files for libchamplain</Summary>
+            <Description xml:lang="en">Development files for libchamplain</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">libchamplain</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/share/vala</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libchamplain-docs</Name>
+            <Summary xml:lang="en">API Documentation for libchamplain</Summary>
+            <Description xml:lang="en">API Documentation for libchamplain</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">libchamplain-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>10-05-2013</Date>
+                <Version>0.12.5</Version>
+                <Comment>Add libchamplain to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>gnome-icon-theme-symbolic</Name>
             <Homepage>http://www.gnome.org</Homepage>
             <Packager>
@@ -38316,6 +38939,81 @@ them against regular expressions.</Description>
                 <Date>06-05-2013</Date>
                 <Version>3.6.2</Version>
                 <Comment>Add gnome-icon-theme-symbolic to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>grilo-plugins</Name>
+            <Homepage>http://www.gnome.org</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.gnome.core</PartOf>
+            <Summary xml:lang="en">Plugins for the Grilo framework</Summary>
+            <Description xml:lang="en">Plugins for the Grilo Media Discovery Framework</Description>
+            <Archive type="tarxz" sha1sum="4e16f3db4273ab8029642edb83de4abb08515205">http://ftp.gnome.org/pub/GNOME/sources/grilo-plugins/0.2/grilo-plugins-0.2.9.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>libicu-devel</Dependency>
+                <Dependency>grilo-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>liboauth-devel</Dependency>
+                <Dependency>libjson-glib-devel</Dependency>
+                <Dependency>openssl-devel</Dependency>
+                <Dependency>xz-devel</Dependency>
+                <Dependency>sqlite3-devel</Dependency>
+                <Dependency>tracker-devel</Dependency>
+                <Dependency>gnome-online-accounts-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libsoup-devel</Dependency>
+                <Dependency>curl-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/core/grilo-plugins/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>grilo-plugins</Name>
+            <RuntimeDependencies>
+                <Dependency>libicu</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>grilo</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>liboauth</Dependency>
+                <Dependency>libjson-glib</Dependency>
+                <Dependency>openssl</Dependency>
+                <Dependency>xz</Dependency>
+                <Dependency>sqlite3</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>tracker</Dependency>
+                <Dependency>gnome-online-accounts</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>libsoup</Dependency>
+                <Dependency>curl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/grilo-0.2</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/gnome/help</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>10-06-2013</Date>
+                <Version>0.2.9</Version>
+                <Comment>Add grilo-plugins to repositories</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
@@ -38425,6 +39123,208 @@ them against regular expressions.</Description>
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>grilo</Name>
+            <Homepage>https://wiki.gnome.org/Grilo</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.gnome.core</PartOf>
+            <Summary xml:lang="en">Media discovery framework</Summary>
+            <Description xml:lang="en">Grilo is a framework focused on making media discovery and browsing easy for application developers.
+
+More precisely, Grilo provides:
+
+    A single, high-level API that abstracts the differences among various media content providers, allowing application developers to integrate content from various services and sources easily.
+    A collection of plugins for accessing content from various media providers. Developers can share efforts and code by writing plugins for the framework that are application agnostic.
+    A flexible API that allows plugin developers to write plugins of various kinds.</Description>
+            <Archive type="tarxz" sha1sum="495779030076ab744724132f91b40e7427a32f1b">http://ftp.gnome.org/pub/GNOME/sources/grilo/0.2/grilo-0.2.7.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>xz-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libgtk-3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/core/grilo/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>grilo</Name>
+            <RuntimeDependencies>
+                <Dependency>glib2</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>xz</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>libgtk-3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>grilo-devel</Name>
+            <Summary xml:lang="en">Development files for grilo</Summary>
+            <Description xml:lang="en">Development files for grilo</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">grilo</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>10-05-2013</Date>
+                <Version>0.2.7</Version>
+                <Comment>Add grilo to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>tracker</Name>
+            <Homepage>https://projects.gnome.org/tracker/</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.gnome.core</PartOf>
+            <Summary xml:lang="en">Semantic data storage</Summary>
+            <Description xml:lang="en">Tracker is a semantic data storage for desktop and mobile devices. Tracker uses W3C standards for RDF ontologies using Nepomuk with SPARQL to query and update the data.
+Tracker is a central repository of user information, that provides two big benefits for the user; shared data between applications and information which is relational to other information (for example: mixing contacts with files, locations, activities and etc.).</Description>
+            <Archive type="tarxz" sha1sum="9772281e8389ae83147eea80e670587294690949">http://ftp.gnome.org/pub/GNOME/sources/tracker/0.16/tracker-0.16.2.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>libexempi-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libflac-devel</Dependency>
+                <Dependency>giflib4-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>libvorbis-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/core/tracker/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>tracker</Name>
+            <RuntimeDependencies>
+                <Dependency>expat</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libexempi</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>libflac</Dependency>
+                <Dependency>giflib4</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>libvorbis</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/libexec/tracker*</Path>
+                <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="library">/usr/lib/tracker-0.16</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/dbus-1/services</Path>
+                <Path fileType="data">/usr/share/glib-2.0/schemas</Path>
+                <Path fileType="data">/usr/share/tracker</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/share/icons/hicolor</Path>
+                <Path fileType="data">/usr/share/tracker-tests</Path>
+                <Path fileType="data">/usr/lib/nautilus/extensions-3.0</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/etc/xdg/autostart</Path>
+                <Path fileType="data">/usr/share/applications/tracker-*.desktop</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>tracker-firefox</Name>
+            <Summary xml:lang="en">Mozilla Firefox Tracker integration</Summary>
+            <Description xml:lang="en">Mozilla Firefox Tracker integration</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">tracker</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/share/xul-ext/trackerfox</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>tracker-thunderbird</Name>
+            <Summary xml:lang="en">Mozilla Thunderbird Tracker integration</Summary>
+            <Description xml:lang="en">Mozilla Thunderbird Tracker integration</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">tracker</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/share/xul-ext/trackerbird</Path>
+                <Path fileType="data">/usr/share/applications/trackerbird-launcher.desktop</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>tracker-devel</Name>
+            <Summary xml:lang="en">Development files for tracker</Summary>
+            <Description xml:lang="en">Development files for tracker</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">tracker</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/share/vala</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>tracker-docs</Name>
+            <Summary xml:lang="en">API Documentation for tracker</Summary>
+            <Description xml:lang="en">API Documentation for tracker</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">tracker-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>10-06-2013</Date>
+                <Version>0.16.2</Version>
+                <Comment>Add tracker to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>libgtop</Name>
             <Homepage>http://www.gnome.org</Homepage>
             <Packager>
@@ -38524,8 +39424,9 @@ them against regular expressions.</Description>
             <PartOf>desktop.gnome.core</PartOf>
             <Summary xml:lang="en">The GNOME Online Accounts package contains a framework used to access the user&apos;s online accounts.</Summary>
             <Description xml:lang="en">The GNOME Online Accounts package contains a framework used to access the user&apos;s online accounts.</Description>
-            <Archive type="tarxz" sha1sum="23950c7bd3363443f3840bc8f67c5b9be1e10e73">http://ftp.gnome.org/pub/gnome/sources/gnome-online-accounts/3.9/gnome-online-accounts-3.9.2.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="402c13a9b4842fe04c4b78f84c8cfcb28c271c82">http://ftp.gnome.org/pub/gnome/sources/gnome-online-accounts/3.10/gnome-online-accounts-3.10.0.tar.xz</Archive>
             <BuildDependencies>
+                <Dependency>libtelepathy-glib-devel</Dependency>
                 <Dependency>libffi-devel</Dependency>
                 <Dependency>zlib-devel</Dependency>
                 <Dependency>glib2-devel</Dependency>
@@ -38540,6 +39441,7 @@ them against regular expressions.</Description>
         <Package>
             <Name>gnome-online-accounts</Name>
             <RuntimeDependencies>
+                <Dependency>libtelepathy-glib</Dependency>
                 <Dependency>librest</Dependency>
                 <Dependency>libffi</Dependency>
                 <Dependency>zlib</Dependency>
@@ -38565,7 +39467,7 @@ them against regular expressions.</Description>
             <Name>gnome-online-accounts-devel</Name>
             <Summary xml:lang="en">Development files for gnome-online-accounts</Summary>
             <RuntimeDependencies>
-                <Dependency release="3">gnome-online-accounts</Dependency>
+                <Dependency release="4">gnome-online-accounts</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -38573,6 +39475,13 @@ them against regular expressions.</Description>
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>10-01-2013</Date>
+                <Version>3.10.0</Version>
+                <Comment>Upgrade to 3.10.0 as part of GNOME3.10 migration</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="3">
                 <Date>06-26-2013</Date>
                 <Version>3.9.2</Version>
@@ -38741,6 +39650,296 @@ them against regular expressions.</Description>
                 <Date>04-10-2013</Date>
                 <Version>3.2.6</Version>
                 <Comment>Add GConf to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>clutter-gtk</Name>
+            <Homepage>http://blogs.gnome.org/clutter/</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>LGPLv2+</License>
+            <PartOf>desktop.gnome.core</PartOf>
+            <Summary xml:lang="en">Clutter GTK+ API</Summary>
+            <Description xml:lang="en">Clutter GTK+ API</Description>
+            <Archive type="tarxz" sha1sum="15fa002070671eca0f14e2b7c9c0580b6393f14d">http://ftp.gnome.org/pub/GNOME/sources/clutter-gtk/1.4/clutter-gtk-1.4.4.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>mesalib-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>libxcursor-devel</Dependency>
+                <Dependency>clutter-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>libjson-glib-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+                <Dependency>libicu-devel</Dependency>
+                <Dependency>systemd-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>wayland-devel</Dependency>
+                <Dependency>libxi-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libice-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libxinerama-devel</Dependency>
+                <Dependency>libatk-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libxdamage-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>libxrandr-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+                <Dependency>libdrm-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libgtk-3-devel</Dependency>
+                <Dependency>libxfixes-devel</Dependency>
+                <Dependency>at-spi2-devel</Dependency>
+                <Dependency>libxkbcommon-devel</Dependency>
+                <Dependency>dbus-devel</Dependency>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>libxcomposite-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>cogl-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libsm-devel</Dependency>
+                <Dependency>at-spi2-atk-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/core/clutter-gtk/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>clutter-gtk</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>mesalib</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libxcursor</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>clutter</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>libjson-glib</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>libicu</Dependency>
+                <Dependency>systemd</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>wayland</Dependency>
+                <Dependency>libxi</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxinerama</Dependency>
+                <Dependency>libatk</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libxdamage</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>libxrandr</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>libdrm</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libgtk-3</Dependency>
+                <Dependency>libxfixes</Dependency>
+                <Dependency>at-spi2</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libxkbcommon</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>libxcomposite</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>cogl</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libsm</Dependency>
+                <Dependency>at-spi2-atk</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>clutter-gtk-devel</Name>
+            <Summary xml:lang="en">Development files for clutter-gtk</Summary>
+            <Description xml:lang="en">Development files for clutter-gtk</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">clutter-gtk</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>clutter-gtk-docs</Name>
+            <Summary xml:lang="en">API Documentation for clutter-gtk</Summary>
+            <Description xml:lang="en">API Documentation for clutter-gtk</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">clutter-gtk-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>10-05-2013</Date>
+                <Version>1.4.4</Version>
+                <Comment>Add clutter-gtk to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>clutter</Name>
+            <Homepage>http://blogs.gnome.org/clutter/</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>LGPLv2+</License>
+            <PartOf>desktop.gnome.core</PartOf>
+            <Summary xml:lang="en">OpenGL UI toolkit</Summary>
+            <Description xml:lang="en">Clutter is an open source (LGPL 2.1) software library for creating fast, compelling, portable, and dynamic graphical user interfaces. It is a core part of Gnome3, it is used by the GnomeShell, and is supported by the open source community.</Description>
+            <Archive type="tarxz" sha1sum="3594db1820fa19b40698b86bd09165c20ac52b38">http://ftp.gnome.org/pub/GNOME/sources/clutter/1.16/clutter-1.16.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>mesalib-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>libxcursor-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>libjson-glib-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+                <Dependency>libicu-devel</Dependency>
+                <Dependency>systemd-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>wayland-devel</Dependency>
+                <Dependency>libxi-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libice-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libxinerama-devel</Dependency>
+                <Dependency>libatk-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libxdamage-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>libxrandr-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+                <Dependency>libdrm-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libgtk-3-devel</Dependency>
+                <Dependency>libxfixes-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>libxcomposite-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>cogl-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libsm-devel</Dependency>
+                <Dependency>libxkbcommon-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/core/clutter/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>clutter</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>mesalib</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libxcursor</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>libjson-glib</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>libicu</Dependency>
+                <Dependency>systemd</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>wayland</Dependency>
+                <Dependency>libxi</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxinerama</Dependency>
+                <Dependency>libatk</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libxdamage</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>libxrandr</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>libdrm</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libgtk-3</Dependency>
+                <Dependency>libxfixes</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>libxcomposite</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>cogl</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libsm</Dependency>
+                <Dependency>libxkbcommon</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>clutter-devel</Name>
+            <Summary xml:lang="en">Development files for clutter</Summary>
+            <Description xml:lang="en">Development files for clutter</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">clutter</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>clutter-docs</Name>
+            <Summary xml:lang="en">API Documentation for clutter</Summary>
+            <Description xml:lang="en">API Documentation for clutter</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">clutter-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>10-01-2013</Date>
+                <Version>1.16.0</Version>
+                <Comment>Add clutter to repositories</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
@@ -39956,7 +41155,7 @@ them against regular expressions.</Description>
             <PartOf>desktop.gnome.core</PartOf>
             <Summary xml:lang="en">Unified backend for programs working with contacts, tasks, and calender information</Summary>
             <Description xml:lang="en">Evolution Data Server package provides a unified backend for programs that work with contacts, tasks, and calendar information. It was originally developed for Evolution (hence the name), but is now used by other packages as well.</Description>
-            <Archive type="tarxz" sha1sum="3bcd70d70b6901c2f3737bee5a96678245c9d996">http://ftp.gnome.org/pub/gnome/sources/evolution-data-server/3.8/evolution-data-server-3.8.3.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="264d2d99c5274600d2474484e567286eee9c3513">http://ftp.gnome.org/pub/gnome/sources/evolution-data-server/3.10/evolution-data-server-3.10.0.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>liboauth-devel</Dependency>
                 <Dependency>libgdata-devel</Dependency>
@@ -40011,7 +41210,7 @@ them against regular expressions.</Description>
             <Summary xml:lang="en">Development files for libevolution-data-server</Summary>
             <Description xml:lang="en">Development files for libevolution-data-server</Description>
             <RuntimeDependencies>
-                <Dependency release="2">libevolution-data-server</Dependency>
+                <Dependency release="3">libevolution-data-server</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -40024,13 +41223,20 @@ them against regular expressions.</Description>
             <Summary xml:lang="en">API Documentation for libevolution-data-server</Summary>
             <Description xml:lang="en">API Documentation for libevolution-data-server</Description>
             <RuntimeDependencies>
-                <Dependency release="2">libevolution-data-server</Dependency>
+                <Dependency release="3">libevolution-data-server</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/share/gtk-doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>10-06-2013</Date>
+                <Version>3.10.0</Version>
+                <Comment>Upgrade to 3.10.0 as part of GNOME3.10 migration</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="2">
                 <Date>06-19-2013</Date>
                 <Version>3.8.3</Version>
@@ -40042,6 +41248,186 @@ them against regular expressions.</Description>
                 <Date>05-26-2013</Date>
                 <Version>3.6.4</Version>
                 <Comment>Add evolution-data-server to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>cantarell-fonts</Name>
+            <Homepage>http://www.gnome.org</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.gnome.core</PartOf>
+            <Summary xml:lang="en">GNOME Cantarell fonts</Summary>
+            <Description xml:lang="en">GNOME Cantarell fonts - required for GNOME 3</Description>
+            <Archive type="tarxz" sha1sum="bff3325e5f2fedcfab833f8f8e4c80966a0beb7a">http://ftp.gnome.org/pub/GNOME/sources/cantarell-fonts/0.0/cantarell-fonts-0.0.15.tar.xz</Archive>
+            <SourceURI>desktop/gnome/core/cantarell-fonts/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>cantarell-fonts</Name>
+            <Files>
+                <Path fileType="data">/usr/share/fonts</Path>
+                <Path fileType="data">/usr/share/fontconfig</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>10-05-2013</Date>
+                <Version>0.0.15</Version>
+                <Comment>Add cantarell-fonts to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>clutter-gst</Name>
+            <Homepage>http://blogs.gnome.org/clutter/</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>LGPLv2+</License>
+            <PartOf>desktop.gnome.core</PartOf>
+            <Summary xml:lang="en">Clutter GStreamer API</Summary>
+            <Description xml:lang="en">Clutter GStreamer API</Description>
+            <Archive type="tarxz" sha1sum="b692ff83e0484d87b55fc3ac6e420c83a7504a95">http://ftp.gnome.org/pub/GNOME/sources/clutter-gst/2.0/clutter-gst-2.0.8.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>mesalib-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>libxcursor-devel</Dependency>
+                <Dependency>clutter-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>libjson-glib-devel</Dependency>
+                <Dependency>gstreamer-1.0-plugins-base-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+                <Dependency>libicu-devel</Dependency>
+                <Dependency>gstreamer-1.0-devel</Dependency>
+                <Dependency>libxi-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libice-devel</Dependency>
+                <Dependency>wayland-devel</Dependency>
+                <Dependency>libxinerama-devel</Dependency>
+                <Dependency>libatk-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libxdamage-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>libxrandr-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+                <Dependency>systemd-devel</Dependency>
+                <Dependency>libdrm-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libgtk-3-devel</Dependency>
+                <Dependency>libxfixes-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>libxcomposite-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>cogl-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libsm-devel</Dependency>
+                <Dependency>libxkbcommon-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/core/clutter-gst/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>clutter-gst</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>mesalib</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libxcursor</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>clutter</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>libjson-glib</Dependency>
+                <Dependency>gstreamer-1.0-plugins-base</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>libicu</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>gstreamer-1.0</Dependency>
+                <Dependency>libxi</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>wayland</Dependency>
+                <Dependency>libxinerama</Dependency>
+                <Dependency>libatk</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libxdamage</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>libxrandr</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>systemd</Dependency>
+                <Dependency>libdrm</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libgtk-3</Dependency>
+                <Dependency>libxfixes</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>libxcomposite</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>cogl</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libsm</Dependency>
+                <Dependency>libxkbcommon</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="library">/usr/lib/gstreamer-1.0</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>clutter-gst-devel</Name>
+            <Summary xml:lang="en">Development files for clutter-gst</Summary>
+            <Description xml:lang="en">Development files for clutter-gst</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">clutter-gst</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>clutter-gst-docs</Name>
+            <Summary xml:lang="en">API Documentation for clutter-gst</Summary>
+            <Description xml:lang="en">API Documentation for clutter-gst</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">clutter-gst-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>10-05-2013</Date>
+                <Version>2.0.8</Version>
+                <Comment>Add clutter-gst to repositories</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
@@ -40625,6 +42011,102 @@ load.</Description>
                 <Date>10-01-2013</Date>
                 <Version>3.10.0</Version>
                 <Comment>Add geocode-glib to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>cogl</Name>
+            <Homepage>http://www.gnome.org</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.gnome.core</PartOf>
+            <Summary xml:lang="en">A modern 3D graphics API</Summary>
+            <Description xml:lang="en">A modern 3D graphics API</Description>
+            <Archive type="tarxz" sha1sum="09c3e93c3e823fb82826f3c783cf4f8804fdc1a6">http://ftp.gnome.org/pub/GNOME/sources/cogl/1.16/cogl-1.16.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>systemd-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>mesalib-devel</Dependency>
+                <Dependency>wayland-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libxrandr-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libdrm-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>libxcomposite-devel</Dependency>
+                <Dependency>libxdamage-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libxfixes-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/core/cogl/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>cogl</Name>
+            <RuntimeDependencies>
+                <Dependency>glibc</Dependency>
+                <Dependency>systemd</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>mesalib</Dependency>
+                <Dependency>wayland</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libxrandr</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libdrm</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>libxcomposite</Dependency>
+                <Dependency>libxdamage</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libxfixes</Dependency>
+                <Dependency>libxau</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="doc">/usr/share/cogl/examples-data</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
+                <Path fileType="library">/usr/lib/gstreamer-1.0</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>cogl-devel</Name>
+            <Summary xml:lang="en">Development files for cogl</Summary>
+            <Description xml:lang="en">Development files for cogl</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">cogl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>10-01-2013</Date>
+                <Version>1.16.0</Version>
+                <Comment>Add cogl to repositories</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
@@ -41286,7 +42768,7 @@ load.</Description>
             <PartOf>desktop.gnome</PartOf>
             <Summary xml:lang="en">NetworkManager Applet</Summary>
             <Description xml:lang="en">NetworkManager applet and GTK3 libraries</Description>
-            <Archive type="tarxz" sha1sum="91120d2305711aff39d36ee52920f9af66648c3c">http://ftp.gnome.org/pub/gnome/sources/network-manager-applet/0.9/network-manager-applet-0.9.8.2.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="a94e4cf3ec4756cfaa43efc252c29350d459ca72">http://ftp.gnome.org/pub/gnome/sources/network-manager-applet/0.9/network-manager-applet-0.9.8.4.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency versionFrom="2.37.2">glib-networking</Dependency>
                 <Dependency>zlib-devel</Dependency>
@@ -41406,7 +42888,7 @@ load.</Description>
             <Summary xml:lang="en">Development files for network-manager-applet</Summary>
             <Description xml:lang="en">Development files for network-manager-applet</Description>
             <RuntimeDependencies>
-                <Dependency release="3">network-manager-applet</Dependency>
+                <Dependency release="4">network-manager-applet</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -41414,6 +42896,13 @@ load.</Description>
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>10-06-2013</Date>
+                <Version>0.9.8.4</Version>
+                <Comment>Update to 0.9.8.4 as part of GNOME3.10 migration</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
             <Update release="3">
                 <Date>08-13-2013</Date>
                 <Version>0.9.8.2</Version>
@@ -42522,6 +44011,415 @@ load.</Description>
                 <Date>06-19-2013</Date>
                 <Version>3.6.2</Version>
                 <Comment>Add eog to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gnome-calculator</Name>
+            <Homepage>https://wiki.gnome.org/Calculator</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.gnome</PartOf>
+            <Summary xml:lang="en">Gnome Calculator Application</Summary>
+            <Description xml:lang="en">A tool for calculating mathematical equations
+Uses standard mathematical notation where possible (so users do not have to learn the application when they already know maths)
+Easy enough to use for simple maths (add, subtract, multiply, divide)
+Powerful enough for mid-level mathematics (though not at the expense of being easy for simple mathematics)
+Fast to load and responsive to input
+Appropriately sized to fit into standard screen resolutions (e.g. netbooks)
+Fully accessible
+Well documented
+Integrated into the GNOME Desktop</Description>
+            <Archive type="tarxz" sha1sum="19c951710e0ddab64aefd5edf4ce6d3357360dcc">http://ftp.gnome.org/pub/GNOME/sources/gnome-calculator/3.10/gnome-calculator-3.10.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>libxcursor-devel</Dependency>
+                <Dependency>xz-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+                <Dependency>libicu-devel</Dependency>
+                <Dependency>wayland-devel</Dependency>
+                <Dependency>libxi-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libice-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libxinerama-devel</Dependency>
+                <Dependency>libatk-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libxdamage-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>libxrandr-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libgtk-3-devel</Dependency>
+                <Dependency>libxfixes-devel</Dependency>
+                <Dependency>at-spi2-devel</Dependency>
+                <Dependency>libxkbcommon-devel</Dependency>
+                <Dependency>dbus-devel</Dependency>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>libxcomposite-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libsm-devel</Dependency>
+                <Dependency>at-spi2-atk-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/gnome-calculator/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gnome-calculator</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libxcursor</Dependency>
+                <Dependency>xz</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>libicu</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>wayland</Dependency>
+                <Dependency>libxi</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxinerama</Dependency>
+                <Dependency>libatk</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libxdamage</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>libxrandr</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libgtk-3</Dependency>
+                <Dependency>libxfixes</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>at-spi2</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libxkbcommon</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>libxcomposite</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libsm</Dependency>
+                <Dependency>at-spi2-atk</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/share/glib-2.0/schemas</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/appdata</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/help</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>10-05-2013</Date>
+                <Version>3.10.0</Version>
+                <Comment>Add gnome-calculator to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gnome-clocks</Name>
+            <Homepage>http://www.gnome.org</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.gnome</PartOf>
+            <Summary xml:lang="en">Gnome Clock application</Summary>
+            <Description xml:lang="en">World clocks, stopwatch, alarms and more</Description>
+            <Archive type="tarxz" sha1sum="62bf920ee19bb3b86e25c38f89c9d1b39bd82efe">http://ftp.gnome.org/pub/GNOME/sources/gnome-clocks/3.10/gnome-clocks-3.10.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>libxcursor-devel</Dependency>
+                <Dependency>xz-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>libvorbis-devel</Dependency>
+                <Dependency>libjson-glib-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+                <Dependency>at-spi2-devel</Dependency>
+                <Dependency>wayland-devel</Dependency>
+                <Dependency>libxi-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>libgeocode-glib-devel</Dependency>
+                <Dependency>libgnome-desktop-devel</Dependency>
+                <Dependency>libice-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libxinerama-devel</Dependency>
+                <Dependency>libatk-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libxdamage-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>libxrandr-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+                <Dependency>libicu-devel</Dependency>
+                <Dependency>sqlite3-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>libnotify-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libgtk-3-devel</Dependency>
+                <Dependency>libxfixes-devel</Dependency>
+                <Dependency>libsoup-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>libsm-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>libxkbfile-devel</Dependency>
+                <Dependency>libxcomposite-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>libgweather-devel</Dependency>
+                <Dependency>libogg-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libcanberra-devel</Dependency>
+                <Dependency>dbus-devel</Dependency>
+                <Dependency>at-spi2-atk-devel</Dependency>
+                <Dependency>libxkbcommon-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/gnome-clocks/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gnome-clocks</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libxcursor</Dependency>
+                <Dependency>xz</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>libvorbis</Dependency>
+                <Dependency>libjson-glib</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>at-spi2</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>wayland</Dependency>
+                <Dependency>libxi</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>libgeocode-glib</Dependency>
+                <Dependency>libgnome-desktop</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxinerama</Dependency>
+                <Dependency>libatk</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libxdamage</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>libxrandr</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>libicu</Dependency>
+                <Dependency>sqlite3</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>libtool</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libgtk-3</Dependency>
+                <Dependency>libxfixes</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>libsoup</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>libsm</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>libxkbfile</Dependency>
+                <Dependency>libxcomposite</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>libgweather</Dependency>
+                <Dependency>libogg</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>at-spi2-atk</Dependency>
+                <Dependency>libxkbcommon</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/glib-2.0/schemas</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/help</Path>
+                <Path fileType="data">/usr/share/appdata</Path>
+                <Path fileType="data">/usr/share/gnome-clocks</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>10-05-2013</Date>
+                <Version>3.10.0</Version>
+                <Comment>Add gnome-clocks to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gnome-chess</Name>
+            <Homepage>http://www.gnome.org</Homepage>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <PartOf>desktop.gnome</PartOf>
+            <Summary xml:lang="en">GNOME Chess Game</Summary>
+            <Description xml:lang="en">Play chess in either 3D or 2D, against the computer or a friend</Description>
+            <Archive type="tarxz" sha1sum="4935a219077c44ecc581a06cb8ba9e5451441ad9">http://ftp.gnome.org/pub/GNOME/sources/gnome-chess/3.10/gnome-chess-3.10.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>mesalib-devel</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>libcroco-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>libxcursor-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>libxau-devel</Dependency>
+                <Dependency>libicu-devel</Dependency>
+                <Dependency>wayland-devel</Dependency>
+                <Dependency>libxi-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>libxxf86vm-devel</Dependency>
+                <Dependency>librsvg-devel</Dependency>
+                <Dependency>libice-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libxinerama-devel</Dependency>
+                <Dependency>libatk-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libxdamage-devel</Dependency>
+                <Dependency>libxext-devel</Dependency>
+                <Dependency>libxrandr-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+                <Dependency>libdrm-devel</Dependency>
+                <Dependency>libxdmcp-devel</Dependency>
+                <Dependency>libffi-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libgtk-3-devel</Dependency>
+                <Dependency>libxfixes-devel</Dependency>
+                <Dependency>xz-devel</Dependency>
+                <Dependency>at-spi2-devel</Dependency>
+                <Dependency>libcairo-devel</Dependency>
+                <Dependency>dbus-devel</Dependency>
+                <Dependency>libx11-devel</Dependency>
+                <Dependency>libglu-devel</Dependency>
+                <Dependency>libxcomposite-devel</Dependency>
+                <Dependency>libxrender-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libsm-devel</Dependency>
+                <Dependency>at-spi2-atk-devel</Dependency>
+                <Dependency>libxkbcommon-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/gnome-chess/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gnome-chess</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>mesalib</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>libcroco</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libxcursor</Dependency>
+                <Dependency>libstdc++</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>libxau</Dependency>
+                <Dependency>libicu</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>wayland</Dependency>
+                <Dependency>libxi</Dependency>
+                <Dependency>glibc</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>libxxf86vm</Dependency>
+                <Dependency>librsvg</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libice</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxinerama</Dependency>
+                <Dependency>libatk</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libxdamage</Dependency>
+                <Dependency>libxext</Dependency>
+                <Dependency>libxrandr</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>libdrm</Dependency>
+                <Dependency>libxdmcp</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libgtk-3</Dependency>
+                <Dependency>libxfixes</Dependency>
+                <Dependency>xz</Dependency>
+                <Dependency>at-spi2</Dependency>
+                <Dependency>freetype2</Dependency>
+                <Dependency>libcairo</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>libx11</Dependency>
+                <Dependency>libglu</Dependency>
+                <Dependency>libxcomposite</Dependency>
+                <Dependency>libxrender</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libsm</Dependency>
+                <Dependency>at-spi2-atk</Dependency>
+                <Dependency>libxkbcommon</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/gnome-chess</Path>
+                <Path fileType="data">/usr/share/glib-2.0/schemas</Path>
+                <Path fileType="data">/usr/share/help</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/appdata</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="config">/etc/chess-engines.conf</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>10-05-2013</Date>
+                <Version>3.10.0</Version>
+                <Comment>Add gnome-chess to repositories</Comment>
                 <Name>Ikey Doherty</Name>
                 <Email>ikey@solusos.com</Email>
             </Update>
@@ -43812,6 +45710,51 @@ Heap-based buffer overflow in the readgifimage function in the gif2tiff tool in 
                 <Comment>Add fribidi to repositories</Comment>
                 <Name>Justin Krehel</Name>
                 <Email>justin@solusos.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mozjs17</Name>
+            <Packager>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
+            </Packager>
+            <License>MPL-1.1</License>
+            <License>GPLv2+</License>
+            <PartOf>desktop.library</PartOf>
+            <Summary xml:lang="en">Spidermonkey 17 JavaScript Engine</Summary>
+            <Description xml:lang="en">SpiderMonkey is Mozilla&apos;s JavaScript engine written in C/C++</Description>
+            <Archive type="targz" sha1sum="7805174898c34e5d3c3b256117af9944ba825c89">http://ftp.mozilla.org/pub/mozilla.org/js/mozjs17.0.0.tar.gz</Archive>
+            <SourceURI>desktop/library/mozjs17/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mozjs17</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/lib*.so*</Path>
+                <Path fileType="library">/usr/lib/lib*.a</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>mozjs17-devel</Name>
+            <Summary xml:lang="en">Development files for mozjs17</Summary>
+            <Description xml:lang="en">Development files for mozjs17</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">mozjs17</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>10-01-2013</Date>
+                <Version>17.0.0</Version>
+                <Comment>Add mozjs17 to repositories</Comment>
+                <Name>Ikey Doherty</Name>
+                <Email>ikey@solusos.com</Email>
             </Update>
         </History>
     </SpecFile>
