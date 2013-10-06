@@ -10,7 +10,7 @@
         <Summary>NetworkManager Applet</Summary>
         <Description>NetworkManager applet and GTK3 libraries</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="91120d2305711aff39d36ee52920f9af66648c3c" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/network-manager-applet/0.9/network-manager-applet-0.9.8.2.tar.xz</Archive>
+        <Archive sha1sum="a94e4cf3ec4756cfaa43efc252c29350d459ca72" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/network-manager-applet/0.9/network-manager-applet-0.9.8.4.tar.xz</Archive>
         
         <BuildDependencies>
             <Dependency versionFrom="2.37.2">glib-networking</Dependency>
@@ -141,6 +141,14 @@
     </Package>
     
     <History>
+        <Update release="4">
+            <Date>10-06-2013</Date>
+            <Version>0.9.8.4</Version>
+            <Comment>Update to 0.9.8.4 as part of GNOME3.10 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>08-13-2013</Date>
             <Version>0.9.8.2</Version>
