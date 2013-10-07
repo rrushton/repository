@@ -10,7 +10,7 @@
         <Summary>Linux Kernel</Summary>
         <Description>This package contains the binary image of the Linux kernel, required to use the operating system</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="f616f14d7a8b48b7e2893bf56939c17f50859de5" type="tarbz2">ftp://ftp.kernel.org/pub/linux/kernel/v3.x/linux-3.11.tar.bz2</Archive>
+        <Archive sha1sum="893f9e5ce010d3ebb3fa7e308d105a68789d076b" type="tarbz2">ftp://ftp.kernel.org/pub/linux/kernel/v3.x/linux-3.11.4.tar.bz2</Archive>
         <AdditionalFiles>
             <AdditionalFile target="configs/kernel-i686-config">configs/kernel-i686-config</AdditionalFile>
             <AdditionalFile permission="0755" target="generate-module-list">scripts/generate-module-list</AdditionalFile>
@@ -27,6 +27,17 @@
             <Dependency>lz4</Dependency>
         </BuildDependencies>
         
+        <Patches>
+            <!-- Admittedly breaking a bit from our vanilla philosphy elsewhere
+                 However, it's only a different scheduler we're using here, and
+                 we can consider it an exception for performance reasons //-->
+            <Patch level="1">ck1/3.11-sched-bfs-441.patch</Patch>
+            <Patch level="1">ck1/preempt-desktop-tune.patch</Patch>
+            <Patch level="1">ck1/hz-no_default_250.patch</Patch>
+            <Patch level="1">ck1/hz-default_1000.patch</Patch>
+            <Patch level="1">ck1/kconfig-expose_vmsplit_option.patch</Patch>
+            <Patch level="1">ck1/urw-locks.patch</Patch>
+        </Patches>
     </Source>
     
     <Package>
@@ -35,9 +46,6 @@
             <Path fileType="executable">/boot</Path>
             <Path fileType="config">/etc</Path>
         </Files>
-        <Provides>
-            <COMAR script="package.py">System.Package</COMAR>
-        </Provides>
     </Package>
     
     <Package>
@@ -67,12 +75,25 @@
         <Files>
             <Path fileType="library">/lib/modules</Path>
         </Files>
+        <Provides>
+            <COMAR script="package.py">System.Package</COMAR>
+        </Provides>
         <RuntimeDependencies>
             <Dependency release="current">kernel</Dependency>
         </RuntimeDependencies>
     </Package>
     
     <History>
+        <Update release="16">
+            <Date>10-07-2013</Date>
+            <Version>3.11.4</Version>
+            <Comment>Latest upstream stable version
+ - Reintroduce CK1 patchset
+</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="15">
             <Date>09-06-2013</Date>
             <Version>3.11.0</Version>
