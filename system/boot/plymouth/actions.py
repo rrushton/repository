@@ -11,6 +11,8 @@ def setup():
                          --enable-gtk \
                          --enable-drm \
                          --enable-systemd-integration \
+                         --enable-gdm-transition \
+                         --enable-pango \
                          --with-logo=/usr/share/pixmaps/SolusOS_Splash.png")
 
 
