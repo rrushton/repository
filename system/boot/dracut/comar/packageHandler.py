@@ -9,12 +9,13 @@ def updateInitrd(filepath):
     parse = piksemel.parse(filepath)
     for xmlfile in parse.tags("File"):
         path = xmlfile.getTagData("Path")
-        if "/boot/kernel-" in path or "/boot/vmlinuz-" in path:
-            version = path.split("-")[1]
+        if not path.startswith("/"):
+            path = "/%s" % path # Just in case
+        if path.startswith("/lib/modules"):
+            # Handle the proper case of modules
+            version = path.split("/")[3]
             cmd = "dracut -f --kver %s" % version
             os.system(cmd)
-
-            # Determine whether to actually update grub or not.
             if os.path.exists("/proc/cmdline"):
                 os.system("/usr/sbin/update-grub")
             break
@@ -25,4 +26,5 @@ def setupPackage(metapath, filepath):
 
 
 def postCleanupPackage(metapath, filepath):
-    updateInitrd(filepath)
+    # TODO: Remove old initramfs!
+    pass
