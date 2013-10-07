@@ -11,10 +11,10 @@
         <Summary>Archive manager for the GNOME desktop environment</Summary>
         <Description>File Roller is an archive manager for the GNOME desktop environment</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="28d9e642d64dd7b13d7a84f6334a5ca14b3efef8" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/file-roller/3.9/file-roller-3.9.3.tar.xz</Archive>
+        <Archive sha1sum="a891edb2d8550a70eb44f0c3c8d26ede1175a830" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/file-roller/3.10/file-roller-3.10.0.tar.xz</Archive>
         
         <BuildDependencies>
-            <Dependency versionFrom="3.9.3">nautilus-devel</Dependency>
+            <Dependency versionFrom="3.10.0">nautilus-devel</Dependency>
             <Dependency>libxml2-devel</Dependency>
             <Dependency>harfbuzz-devel</Dependency>
             <Dependency>libxcursor-devel</Dependency>
@@ -39,7 +39,7 @@
             <Dependency>libnotify-devel</Dependency>
             <Dependency>libffi-devel</Dependency>
             <Dependency>pango-devel</Dependency>
-            <Dependency versionFrom="3.9.6">libgtk-3-devel</Dependency>
+            <Dependency versionFrom="3.10.0">libgtk-3-devel</Dependency>
             <Dependency>libxfixes-devel</Dependency>
             <Dependency>attr-devel</Dependency>
             <Dependency>xz-devel</Dependency>
@@ -73,7 +73,7 @@
             <Path fileType="data">/usr/share/dbus-1</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency versionFrom="3.9.3">nautilus</Dependency>
+            <Dependency versionFrom="3.10.0">nautilus</Dependency>
             <Dependency>libxml2</Dependency>
             <Dependency>expat</Dependency>
             <Dependency>harfbuzz</Dependency>
@@ -105,7 +105,7 @@
             <Dependency>libnotify</Dependency>
             <Dependency>libffi</Dependency>
             <Dependency>pango</Dependency>
-            <Dependency versionFrom="3.9.6">libgtk-3</Dependency>
+            <Dependency versionFrom="3.10.0">libgtk-3</Dependency>
             <Dependency>libxfixes</Dependency>
             <Dependency>attr</Dependency>
             <Dependency>xz</Dependency>
@@ -124,6 +124,14 @@
     </Package>
     
     <History>
+        <Update release="4">
+            <Date>10-07-2013</Date>
+            <Version>3.10.0</Version>
+            <Comment>Upgrade to 3.10.0 as part of the GNOME3.10 migration</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>06-19-2013</Date>
             <Version>3.9.3</Version>
