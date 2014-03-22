@@ -418,19 +418,7 @@
 				<Name>SolusOS Developers</Name>
 				<Email>dev@solusos.com</Email>
 			</Maintainer>
-		</Component>	
-
-		<Component>
-			<Name>desktop.consort</Name>
-			<LocalName xml:lang="en">Consort Desktop</LocalName>
-			<Summary xml:lang="en">Consort Desktop</Summary>
-			<Description xml:lang="en">Consort Desktop</Description>
-			<Group>desktop</Group>
-			<Maintainer>
-				<Name>SolusOS Developers</Name>
-				<Email>dev@solusos.com</Email>
-			</Maintainer>
-		</Component>	
+		</Component>
         
 		<Component>
 			<Name>desktop.gnome</Name>
