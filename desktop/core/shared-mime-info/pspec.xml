@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,9 +12,9 @@
         <Description> The Shared Mime Info package contains a MIME database. This allows central updates of MIME information for all supporting applications. </Description>
         <License>GPLv3+</License>
         <Archive sha1sum="752668b0cc5729433c99cbad00f21241ec4797ef" type="tarxz">http://freedesktop.org/~hadess/shared-mime-info-1.1.tar.xz</Archive>
-        
+
         <IsA>app:console</IsA>
-        
+
         <BuildDependencies>
             <Dependency>xz-devel</Dependency>
             <Dependency>libxml2-devel</Dependency>
@@ -23,7 +23,7 @@
             <Dependency>zlib-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>shared-mime-info</Name>
         <Files>
@@ -41,7 +41,7 @@
             <Dependency>zlib</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="2">
             <Date>04-12-2013</Date>
@@ -50,7 +50,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-12-2013</Date>
             <Version>1.1</Version>
@@ -59,6 +59,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

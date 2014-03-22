@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>GPLv2+</License>
         <Archive sha1sum="02b1b5b6fb476bf7dd6251bfbd085c3ba4feaa2a" type="tarxz">http://pkg-isocodes.alioth.debian.org/downloads/iso-codes-3.40.tar.xz</Archive>
     </Source>
-    
+
     <Package>
         <Name>iso-codes</Name>
         <Files>
@@ -22,7 +22,7 @@
             <Path fileType="data">/usr/share/pkgconfig</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="2">
             <Date>04-15-2013</Date>
@@ -31,7 +31,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-15-2013</Date>
             <Version>3.40</Version>
@@ -40,6 +40,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

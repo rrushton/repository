@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>GPLv2+</License>
         <Archive sha1sum="2f24b4624d1a3080626b11610053996ec30ba0f1" type="targz">http://ftp.gnu.org/gnu/sed/sed-4.2.2.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>sed</Name>
         <Files>
@@ -25,7 +25,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="2">
             <Date>04-15-2013</Date>
@@ -42,5 +42,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

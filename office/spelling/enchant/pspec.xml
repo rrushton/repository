@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>LGPL2.1</License>
         <Archive sha1sum="321f9cf0abfa1937401676ce60976d8779c39536" type="targz">http://www.abisource.com/downloads/enchant/1.6.0/enchant-1.6.0.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>enchant</Name>
         <Files>
@@ -29,7 +29,7 @@
         <Name>enchant-devel</Name>
         <Summary>Development files for enchant</Summary>
         <Description>Development files for enchant</Description>
-        <Files>    
+        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
@@ -37,7 +37,7 @@
             <Dependency release="current">enchant</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>04-27-2013</Date>
@@ -47,6 +47,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

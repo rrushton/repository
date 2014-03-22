@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -17,7 +17,7 @@
             <Dependency>gawk</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libevent</Name>
         <Files>
@@ -25,12 +25,12 @@
             <Path fileType="library">/usr/lib/libevent*.so*</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libevent-devel</Name>
         <Summary>Development files for libevent</Summary>
         <Description>Development files for libevent</Description>
-        <Files>	
+        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/libevent*.a</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
@@ -39,7 +39,7 @@
             <Dependency release="1">libevent</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>03-25-2013</Date>
@@ -49,5 +49,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

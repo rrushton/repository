@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>GPLv2+</License>
         <Archive sha1sum="5bd5e2fe10e3055ccec347e8608476fab2d3eaca" type="targz">http://portland.freedesktop.org/download/xdg-utils-1.1.0-rc1.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>xdg-utils</Name>
         <Files>
@@ -21,7 +21,7 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-19-2013</Date>
@@ -31,6 +31,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

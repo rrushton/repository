@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>GPLv3+</License>
         <Archive sha1sum="2bc4e8f00778b1f3fe58b4c4f93607ac2adafbbf" type="tarbz2">mirrors://xorg/individual/proto/dri2proto-2.8.tar.bz2</Archive>
     </Source>
-    
+
     <Package>
         <Name>dri2proto</Name>
         <Files>
@@ -21,7 +21,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>03-09-2013</Date>
@@ -31,6 +31,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

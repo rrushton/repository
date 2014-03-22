@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <Description>The libzeitgeist package contains a client library used to access and manage the Zeitgeist event log from languages such as C and Vala. Zeitgeist is a service which logs the user's activities and events (files opened, websites visited, conversations hold with other people, etc.) and makes the relevant information available to other applications.</Description>
         <License>LGPLv2+</License>
         <Archive sha1sum="3d4ca1d294828f5f90bf5a5b6eacf883ffd9f8ae" type="targz">https://launchpad.net/libzeitgeist/0.3/0.3.18/+download/libzeitgeist-0.3.18.tar.gz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>libffi-devel</Dependency>
             <Dependency>zlib-devel</Dependency>
@@ -21,7 +21,7 @@
             <Dependency>vala</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libzeitgeist</Name>
         <Files>
@@ -35,7 +35,7 @@
             <Dependency>libpcre</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libzeitgeist-devel</Name>
         <Summary>Development files for libzeitgeist</Summary>
@@ -49,7 +49,7 @@
             <Dependency release="current">libzeitgeist</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libzeitgeist-docs</Name>
         <Summary>API Documentation for libzeitgeist</Summary>
@@ -61,7 +61,7 @@
             <Dependency release="current">libzeitgeist</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>05-26-2013</Date>
@@ -71,6 +71,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>GPLv2</License>
         <Archive sha1sum="75b2c90421d34d54246dfaaffe829b2d33cf733c" type="targz">ftp://space.mit.edu/pub/davis/slang/v2.2/slang-2.2.4.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>slang</Name>
         <Files>
@@ -24,7 +24,7 @@
             <Path fileType="data">/usr/share/slsh</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>slang-devel</Name>
         <Summary>Development files for slang</Summary>
@@ -37,7 +37,7 @@
             <Dependency release="current">slang</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-16-2013</Date>
@@ -47,6 +47,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

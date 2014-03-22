@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,14 +12,14 @@
         <Description>The libpwquality library purpose is to provide common functions for password quality checking and also scoring them based on their apparent randomness. The library also provides a function for generating random passwords with good pronounceability. The library supports reading and parsing of a configuration file.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="3745b81655cf25cea416266c458eb979f59e82f3" type="tarbz2">https://launchpad.net/libpwquality/trunk/1.2.2/+download/libpwquality-1.2.2.tar.bz2</Archive>
-        
+
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>pam-devel</Dependency>
             <Dependency>cracklib-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libpwquality</Name>
         <Files>
@@ -38,7 +38,7 @@
             <Dependency>cracklib</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libpwquality-devel</Name>
         <Summary>Development files for libpwquality</Summary>
@@ -51,7 +51,7 @@
             <Dependency release="current">libpwquality</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="2">
             <Date>10-01-2013</Date>

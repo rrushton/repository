@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>GPLv2+</License>
         <Archive sha1sum="a948c02de081542f4d30e0efabc2929754b62a3b" type="targz">http://search.cpan.org/CPAN/authors/id/P/PE/PERIGRIN/XML-NamespaceSupport-1.11.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>perl-xml-namespacesupport</Name>
         <Files>
@@ -20,7 +20,7 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-05-2013</Date>
@@ -30,6 +30,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

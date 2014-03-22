@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -24,7 +24,7 @@
             <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>galculator</Name>
         <RuntimeDependencies>
@@ -35,10 +35,10 @@
             <Dependency>freetype2</Dependency>
             <Dependency>libpng</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>pixman</Dependency>              
+            <Dependency>pixman</Dependency>
             <Dependency>glib2</Dependency>
         </RuntimeDependencies>
-         
+
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="data">/usr/share/applications</Path>
@@ -50,7 +50,7 @@
             <Path fileType="data">/usr/share/pixmaps</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-18-2013</Date>
@@ -60,6 +60,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-     
+
 </PISI>
 

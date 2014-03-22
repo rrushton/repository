@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>BSD</License>
         <Archive sha1sum="034f2da5c9a0ab5a18689fb010ed75008af99c90" type="targz">http://prdownloads.sourceforge.net/flex/flex-2.5.37.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>flex</Name>
         <Files>
@@ -24,12 +24,12 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>flex-devel</Name>
         <Summary>Development files for flex</Summary>
         <Description>Development files for flex</Description>
-        <Files>	
+        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/*.a</Path>
         </Files>
@@ -37,8 +37,8 @@
             <Dependency release="1">flex</Dependency>
         </RuntimeDependencies>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="1">
             <Date>03-25-2013</Date>
             <Version>2.5.37</Version>
@@ -47,5 +47,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

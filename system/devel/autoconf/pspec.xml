@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -17,7 +17,7 @@
             <Dependency>perl</Dependency>
         </Builddependencies>
     </Source>
-    
+
     <Package>
         <Name>autoconf</Name>
         <RuntimeDependencies>
@@ -29,10 +29,10 @@
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="data">/usr/share/autoconf</Path>
             <Path fileType="info">/usr/share/info</Path>
-            
+
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>03-26-2013</Date>
@@ -42,5 +42,5 @@
             <Email>matiaslina@gmail.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

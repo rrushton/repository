@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>GPLv2+</License>
         <Archive sha1sum="9cd50f4b5f07d5e7213dd1277b8673e677804cf8" type="tarbz2">http://alsa.cybermirror.org/lib/alsa-lib-1.0.27.2.tar.bz2</Archive>
     </Source>
-    
+
     <Package>
         <Name>alsa-lib</Name>
         <Files>
@@ -24,7 +24,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>alsa-lib-devel</Name>
         <Summary>Development files for alsa-lib</Summary>
@@ -38,7 +38,7 @@
             <Dependency release="current">alsa-lib</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="3">
             <Date>08-24-2013</Date>
@@ -55,7 +55,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-15-2013</Date>
             <Version>1.0.27</Version>
@@ -64,6 +64,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

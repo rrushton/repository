@@ -74,7 +74,7 @@
             <Dependency>libgtk-2</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>qt5-devel</Name>
         <Summary>Development files for Qt 5</Summary>
@@ -90,7 +90,7 @@
             <Dependency release="current">qt5</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>qt5-demos</Name>
         <Summary>Demonstration programs for Qt 5</Summary>
@@ -131,7 +131,7 @@
             <Dependency>libsm</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>qt5-translations</Name>
         <Summary>Localised translations for Qt 5</Summary>
@@ -144,7 +144,7 @@
             <Dependency release="current">qt5</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>qt5-docs</Name>
         <Summary>API Documentation for Qt 5</Summary>

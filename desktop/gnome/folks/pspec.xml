@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <Description>Folks is a library that aggregates people from multiple sources (eg, Telepathy connection managers and eventually Evolution Data Server, Facebook, etc.) to create metacontacts.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="040f00ec411df8865db9be2a09310dcf87cfd968" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/folks/0.9/folks-0.9.5.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>libsoup-devel</Dependency>
             <Dependency>libnss-devel</Dependency>
@@ -30,7 +30,7 @@
             <Dependency versionFrom="0.22.0">libtelepathy-glib-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>folks</Name>
         <Files>
@@ -61,7 +61,7 @@
             <Dependency versionFrom="0.22.0">libtelepathy-glib</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>folks-devel</Name>
         <Summary>Development files for folks</Summary>
@@ -75,7 +75,7 @@
             <Dependency release="current">folks</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="3">
             <Date>10-06-2013</Date>
@@ -101,6 +101,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

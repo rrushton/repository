@@ -13,7 +13,7 @@
         <Description>This icon theme for Gnome provides monochromatic icons for panels, toolbars and buttons and colourful squared icons for devices, applications, folder, files and Gnome menu items. Four themes are included to fit with light or dark themes/panels.</Description>
         <Archive sha1sum="dfc6cc2ec6f6ecfbef0e436007cee75054043adc" type="zip">http://faenza-icon-theme.googlecode.com/files/faenza-icon-theme_1.3.zip</Archive>
     </Source>
-    
+
     <Package>
         <Name>faenza-icon-theme</Name>
         <Files>
@@ -24,7 +24,7 @@
             <Dependency>hicolor-icon-theme</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>09-03-2013</Date>

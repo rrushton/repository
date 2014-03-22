@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -14,7 +14,7 @@
         <IsA>library</IsA>
         <Archive sha1sum="a4bfcc575ca6e82e2b5bc1f39a8e0cc198b6ed19" type="targz">http://ftp.gnu.org/gnu/libtasn1/libtasn1-3.2.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>libtasn1</Name>
         <Files>
@@ -23,7 +23,7 @@
             <Path fileType="info">/usr/share/info</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libtasn1-devel</Name>
         <Summary>Development files for libtasn1</Summary>
@@ -37,7 +37,7 @@
             <Dependency release="current">libtasn1</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libtasn1-docs</Name>
         <Summary>API Documentation for libtasn1</Summary>
@@ -49,7 +49,7 @@
             <Dependency release="current">libtasn1-devel</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libtasn1-bin</Name>
         <Summary>Command line utilities for libtasn1</Summary>
@@ -62,7 +62,7 @@
             <Dependency release="current">libtasn1</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="2">
             <Date>04-13-2013</Date>
@@ -71,7 +71,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-13-2013</Date>
             <Version>3.2</Version>
@@ -80,6 +80,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

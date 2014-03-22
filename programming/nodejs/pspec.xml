@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>MIT</License>
         <Archive sha1sum="901c1410b7c28a79644292567d3384255f3a6274" type="targz">http://nodejs.org/dist/v0.10.4/node-v0.10.4.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>nodejs</Name>
         <Files>
@@ -23,7 +23,7 @@
             <Path fileType="library">/usr/lib</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>04-21-2013</Date>
@@ -33,5 +33,5 @@
             <Email>matiaslina@gmail.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

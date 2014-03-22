@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <Description>UPower is an abstraction for enumerating power devices, listening to device events and querying history and statistics.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="960ce9b3feaabf743c1070ec260e761176c0411e" type="tarxz">http://upower.freedesktop.org/releases/upower-0.9.20.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>dbus-devel</Dependency>
             <Dependency>zlib-devel</Dependency>
@@ -22,7 +22,7 @@
             <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>upower</Name>
         <Files>
@@ -52,7 +52,7 @@
             <Dependency>dbus-glib</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>upower-devel</Name>
         <Summary>Development files for upower</Summary>
@@ -65,7 +65,7 @@
             <Dependency release="current">upower</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-05-2013</Date>
@@ -75,6 +75,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

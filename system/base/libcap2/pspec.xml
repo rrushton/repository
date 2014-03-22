@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,15 +12,15 @@
         <License>GPLv2</License>
         <Archive sha1sum="7753165ca685a0c78735fa0db25b815d9576b1fe" type="targz">http://ftp.de.debian.org/debian/pool/main/libc/libcap2/libcap2_2.22.orig.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>libcap2</Name>
         <Files>
             <Path fileType="*">/</Path>
         </Files>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="1">
             <Date>03-13-2013</Date>
             <Version>2.22</Version>
@@ -29,5 +29,5 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

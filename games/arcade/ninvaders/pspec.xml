@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -14,14 +14,14 @@
             believes in you...
         </Description>
         <License>GPLv2</License>
-        
+
         <Archive sha1sum="5ab825694b108cbfa988377ca216188fa9a76e89" type="targz">http://ufpr.dl.sourceforge.net/project/ninvaders/ninvaders/0.1.1/ninvaders-0.1.1.tar.gz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>ncurses-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>ninvaders</Name>
         <RuntimeDependencies>
@@ -32,7 +32,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>04-05-2013</Date>
@@ -42,6 +42,6 @@
             <Email>matiaslina@gmail.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

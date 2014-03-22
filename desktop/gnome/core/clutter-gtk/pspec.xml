@@ -12,7 +12,7 @@
         <Description>Clutter GTK+ API</Description>
         <License>LGPLv2+</License>
         <Archive sha1sum="15fa002070671eca0f14e2b7c9c0580b6393f14d" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/clutter-gtk/1.4/clutter-gtk-1.4.4.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>mesalib-devel</Dependency>

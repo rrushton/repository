@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,7 +11,7 @@
         <Description>Add description</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="282d3bb1b26a26efc0ba429467de03de2a71a4ff" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/libpeas/1.8/libpeas-1.8.0.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>python-gobject-devel</Dependency>
             <Dependency>python-cairo-devel</Dependency>
@@ -48,7 +48,7 @@
             <Dependency>libsm-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libpeas</Name>
         <Files>
@@ -105,7 +105,7 @@
             <Dependency>at-spi2-atk</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libpeas-devel</Name>
         <Summary>Development files for libpeas</Summary>
@@ -118,7 +118,7 @@
             <Dependency release="current">libpeas</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libpeas-docs</Name>
         <Summary>API Documentation for libpeas</Summary>
@@ -130,7 +130,7 @@
             <Dependency release="current">libpeas-devel</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-06-2013</Date>
@@ -140,6 +140,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

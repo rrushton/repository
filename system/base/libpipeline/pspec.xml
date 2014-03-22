@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>GPLv2+</License>
         <Archive sha1sum="07f9038a045aaa8db8be531fe04d117f41daf00d" type="targz">http://download.savannah.gnu.org/releases/libpipeline/libpipeline-1.2.4.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>libpipeline</Name>
         <Files>
@@ -22,7 +22,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libpipeline-devel</Name>
         <Summary>Development files for libpipeline</Summary>
@@ -34,7 +34,7 @@
             <Dependency release="current">libpipeline</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>09-22-2013</Date>
@@ -44,5 +44,5 @@
             <Email>gazza@virtualcity.com.au</Email>
         </Update>
     </History>
-    
+
 </PISI>

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,7 +11,7 @@
         <Description>GTK+ convenience library for interacting with colord</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="ffb27568ff25860fbcc09cc32ba05469655b099d" type="tarxz">http://www.freedesktop.org/software/colord/releases/colord-gtk-0.1.25.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>colord-devel</Dependency>
@@ -48,7 +48,7 @@
             <Dependency>at-spi2-atk-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libcolord-gtk</Name>
         <Files>
@@ -102,7 +102,7 @@
             <Dependency>at-spi2-atk</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libcolord-gtk-devel</Name>
         <Summary>Development files for libcolord-gtk</Summary>
@@ -115,7 +115,7 @@
             <Dependency release="current">libcolord-gtk</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-19-2013</Date>
@@ -125,6 +125,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

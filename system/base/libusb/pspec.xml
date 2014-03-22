@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>LGPLv2+</License>
         <Archive sha1sum="025582ff2f6216e2dbc2610ae16b2e073e1b3346" type="tarbz2">http://sourceforge.net/projects/libusb/files/libusb-1.0/libusb-1.0.9/libusb-1.0.9.tar.bz2/download</Archive>
     </Source>
-    
+
     <Package>
         <Name>libusb</Name>
         <Files>
@@ -24,8 +24,8 @@
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="1">
             <Date>03-11-2013</Date>
             <Version>1.0.9</Version>
@@ -34,5 +34,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

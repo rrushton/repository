@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,14 +11,14 @@
         <Description>The icon-naming-utils package contains a script used for maintaining backwards compatibility with current desktop icon themes, while migrating to the names specified in the Icon Naming Specification.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="4e8025f129f9e536eafff847f65e44ede3e5e7ef" type="tarbz2">http://tango.freedesktop.org/releases/icon-naming-utils-0.8.90.tar.bz2</Archive>
-        
+
         <BuildDependencies>
             <Dependency>perl-xmlsimple</Dependency>
             <Dependency>perl-xml-saxbase</Dependency>
             <Dependency>perl-xml-namespacesupport</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>icon-naming-utils</Name>
         <Files>
@@ -29,7 +29,7 @@
             <Path fileType="data">/usr/share/pkgconfig</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-05-2013</Date>
@@ -39,6 +39,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

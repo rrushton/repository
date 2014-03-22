@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>GPLv3+</License>
         <Archive sha1sum="818bffc16139d6e3de4344c83f00c495d3536753" type="tarbz2">mirrors://xorg/individual/proto/xineramaproto-1.2.1.tar.bz2</Archive>
     </Source>
-    
+
     <Package>
         <Name>xineramaproto</Name>
         <Files>
@@ -21,7 +21,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>03-10-2013</Date>
@@ -31,6 +31,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

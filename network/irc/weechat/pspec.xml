@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -23,9 +23,9 @@
             <Dependency>python</Dependency>
             <Dependency>tcl-devel</Dependency>
         </BuildDependencies>
-        	
+
     </Source>
-    
+
     <Package>
         <Name>weechat</Name>
         <RuntimeDependencies>
@@ -47,12 +47,12 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>weechat-devel</Name>
         <Summary>Development files for weechat</Summary>
         <Description>Development files for weechat</Description>
-        <Files>	
+        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
@@ -60,8 +60,8 @@
             <Dependency release="1">weechat</Dependency>
         </RuntimeDependencies>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="1">
             <Date>03-30-2013</Date>
             <Version>0.4.0</Version>
@@ -70,5 +70,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

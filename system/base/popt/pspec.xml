@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>GPLv3+</License>
         <Archive sha1sum="cfe94a15a2404db85858a81ff8de27c8ff3e235e" type="targz">http://rpm5.org/files/popt/popt-1.16.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>popt</Name>
         <Files>
@@ -24,8 +24,8 @@
             <Path fileType="localedata">/usr/share/locale</Path>
         </Files>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="1">
             <Date>03-09-2013</Date>
             <Version>1.16</Version>
@@ -34,6 +34,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

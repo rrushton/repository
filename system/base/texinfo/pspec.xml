@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>GPLv3+</License>
         <Archive sha1sum="8b642aea2f5ba8a1ba4b15f438a47c1d15dcd214" type="targz">http://ftp.gnu.org/gnu/texinfo/texinfo-5.1.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>texinfo</Name>
         <Files>
@@ -24,8 +24,8 @@
             <Path fileType="data">/usr/share/texinfo</Path>
         </Files>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="1">
             <Date>03-20-2013</Date>
             <Version>5.1</Version>
@@ -34,5 +34,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

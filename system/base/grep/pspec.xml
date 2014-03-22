@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>GPLv2+</License>
         <Archive sha1sum="fb6ea404a0ef915334ca6212c7b517432ffe193e" type="tarxz">http://ftp.gnu.org/gnu/grep/grep-2.14.tar.xz</Archive>
     </Source>
-    
+
     <Package>
         <Name>grep</Name>
         <Files>
@@ -24,8 +24,8 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="2">
             <Date>04-16-2013</Date>
             <Version>2.14</Version>
@@ -33,7 +33,7 @@
             <Name>Justin Krehel</Name>
             <Email>justin@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>03-15-2013</Date>
             <Version>2.14</Version>
@@ -42,5 +42,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

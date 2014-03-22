@@ -10,7 +10,7 @@
         <License>GPLv3+</License>
         <Archive sha1sum="d820e95ee6698e7036d4823f5ac5669b79acea86" type="tarbz2">http://xorg.freedesktop.org/releases/individual/app/x11perf-1.5.4.tar.bz2</Archive>
     </Source>
-    
+
     <Package>
         <Name>x11perf</Name>
         <Files>
@@ -19,9 +19,9 @@
             <Path fileType="data">/usr/lib/X11</Path>
         </Files>
     </Package>
-    
+
     <History>
-        
+
         <Update release="1">
             <Date>03-20-2013</Date>
             <Version>1.5.4</Version>
@@ -30,5 +30,5 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

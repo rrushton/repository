@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>GPLv2+</License>
         <Archive sha1sum="a11768b8a168ec607750842bbef406f11547b904" type="targz">http://www.oberhumer.com/opensource/lzo/download/lzo-2.06.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>lzo</Name>
         <Files>
@@ -21,7 +21,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>lzo-devel</Name>
         <Summary>Development files for lzo</Summary>
@@ -33,7 +33,7 @@
             <Dependency release="current">lzo</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-16-2013</Date>
@@ -43,6 +43,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

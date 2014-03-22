@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -27,7 +27,7 @@
             <Dependency>pango-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>sylpheed</Name>
         <Files>
@@ -55,7 +55,7 @@
             <Dependency>pango</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>09-21-2013</Date>
@@ -65,5 +65,5 @@
             <Email>gazza@virtualcity.com.au</Email>
         </Update>
     </History>
-    	
+
 </PISI>

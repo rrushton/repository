@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>GPLv2</License>
         <Archive sha1sum="b920f9664a2c930f1ccdabc0db4f31f67cf95661" type="targz">http://fedorahosted.org/releases/l/o/logrotate/logrotate-3.7.9.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>logrotate</Name>
         <Files>
@@ -23,7 +23,7 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>03-15-2013</Date>
@@ -33,5 +33,5 @@
             <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <Description>Evolution Data Server package provides a unified backend for programs that work with contacts, tasks, and calendar information. It was originally developed for Evolution (hence the name), but is now used by other packages as well.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="264d2d99c5274600d2474484e567286eee9c3513" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/evolution-data-server/3.10/evolution-data-server-3.10.0.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>liboauth-devel</Dependency>
             <Dependency>libgdata-devel</Dependency>
@@ -31,7 +31,7 @@
             <Dependency>vala</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libevolution-data-server</Name>
         <Files>
@@ -62,7 +62,7 @@
             <Dependency>liboauth</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libevolution-data-server-devel</Name>
         <Summary>Development files for libevolution-data-server</Summary>
@@ -76,7 +76,7 @@
             <Dependency release="current">libevolution-data-server</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libevolution-data-server-docs</Name>
         <Summary>API Documentation for libevolution-data-server</Summary>
@@ -88,7 +88,7 @@
             <Dependency release="current">libevolution-data-server</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="3">
             <Date>10-06-2013</Date>
@@ -105,7 +105,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>05-26-2013</Date>
             <Version>3.6.4</Version>
@@ -114,6 +114,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

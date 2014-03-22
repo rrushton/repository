@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,12 +12,12 @@
         <License>GPLv2+</License>
         <License>Multiple-Nonfree</License>
         <Archive sha1sum="ec427795086cb5b2f63e1cd7730e512a855e6aa2" type="tarxz">http://ng.solusos.com/sources/linux-firmware-20130813.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency releaseFrom="3">xz</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>linux-firmware</Name>
         <Files>
@@ -25,7 +25,7 @@
             <Path fileType="doc">/usr/share/doc/linux-firmware</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="2">
             <Date>08-13-2013</Date>
@@ -34,7 +34,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>08-13-2013</Date>
             <Version>20130813</Version>
@@ -43,6 +43,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

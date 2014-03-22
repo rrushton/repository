@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -18,7 +18,7 @@
             <Dependency>perl</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>bison</Name>
         <Files>
@@ -31,8 +31,8 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="1">
             <Date>03-25-2013</Date>
             <Version>2.7</Version>
@@ -41,5 +41,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

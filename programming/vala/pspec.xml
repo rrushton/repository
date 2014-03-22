@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,13 +12,13 @@
         <Description> Vala is a new programming language that aims to bring modern programming language features to GNOME developers without imposing any additional runtime requirements and without using a different ABI compared to applications and libraries written in C. </Description>
         <License>GPLv3+</License>
         <Archive sha1sum="1421a19c03ea565599e2df4ead6864cca761020a" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/vala/0.22/vala-0.22.0.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>libpcre-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>	
+            <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>vala</Name>
         <Files>
@@ -26,7 +26,7 @@
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/lib*.so*</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/share/pkgconfig</Path>		
+            <Path fileType="data">/usr/share/pkgconfig</Path>
             <Path fileType="data">/usr/lib/vala-0.22</Path>
             <Path fileType="data">/usr/share/aclocal</Path>
             <Path fileType="data">/usr/share/vala-0.22</Path>
@@ -36,10 +36,10 @@
         </Files>
         <RuntimeDependencies>
             <Dependency>libpcre</Dependency>
-            <Dependency>glib2</Dependency>		
+            <Dependency>glib2</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>vala-docs</Name>
         <Summary>Documentation for Vala</Summary>
@@ -51,8 +51,8 @@
             <Dependency release="current">vala</Dependency>
         </RuntimeDependencies>
     </Package>
-    
-    
+
+
     <History>
         <Update release="4">
             <Date>10-01-2013</Date>
@@ -69,7 +69,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>04-10-2013</Date>
             <Version>0.20.1</Version>
@@ -77,7 +77,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-10-2013</Date>
             <Version>0.20.1</Version>
@@ -86,5 +86,5 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

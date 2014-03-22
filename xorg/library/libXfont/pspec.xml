@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,14 +11,14 @@
         <Description>libXfont provides various services for X servers, most notably font selection and rasterisation (through external libraries).</Description>
         <License>GPLv3+</License>
         <Archive sha1sum="0bf3cb8aa192ab96bbaf384d1a4a00d15a40171e" type="tarbz2">mirrors://xorg/individual/lib/libXfont-1.4.5.tar.bz2</Archive>
-        
+
         <BuildDependencies>
             <Dependency>fontsproto</Dependency>
             <Dependency>xproto</Dependency>
             <Dependency>libfontenc-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libxfont</Name>
         <Files>
@@ -28,7 +28,7 @@
             <Dependency>libfontenc</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libxfont-devel</Name>
         <Summary>Development files for libxfont</Summary>
@@ -44,7 +44,7 @@
             <Dependency>xproto</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="3">
             <Date>05-24-2013</Date>
@@ -53,7 +53,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>03-17-2013</Date>
             <Version>1.4.5</Version>
@@ -61,7 +61,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>03-12-2013</Date>
             <Version>1.4.5</Version>
@@ -70,6 +70,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

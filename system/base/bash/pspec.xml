@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -58,12 +58,12 @@
             <Patch level="0" compressionType="gzip">bash42-044.gz</Patch>
             <Patch level="0" compressionType="gzip">bash42-045.gz</Patch>
         </Patches>
-        
+
         <BuildDependencies>
             <Dependency>ncurses-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>bash</Name>
         <Files>
@@ -72,7 +72,7 @@
             <Path fileType="info">/usr/share/info</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
-            
+
             <Path fileType="config">/etc/profile</Path>
             <Path fileType="config">/etc/profile.d</Path>
         </Files>
@@ -87,20 +87,21 @@
             <AdditionalFile owner="root" permission="0644" target="/etc/profile.d/50-umask.sh">profile/50-umask.sh</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/profile">profile/profile</AdditionalFile>
         </AdditionalFiles>
-        
+
         <RuntimeDependencies>
             <Dependency>ncurses</Dependency>
             <Dependency>readline</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="7">
             <Date>09-14-2013</Date>
             <Version>4.2.045</Version>
             <Comment>Use # character at end of PS1 prompt if the user is root
 
-Bug-SolusOS: T35</Comment>
+                Bug-SolusOS: T35
+            </Comment>
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
@@ -112,7 +113,7 @@ Bug-SolusOS: T35</Comment>
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="5">
             <Date>03-15-2013</Date>
             <Version>4.2.045</Version>
@@ -120,7 +121,7 @@ Bug-SolusOS: T35</Comment>
             <Name>Evolve OS Packaging</Name>
             <Email>packaging@evolve-os.com</Email>
         </Update>
-        
+
         <Update release="4">
             <Date>03-12-2013</Date>
             <Version>4.2.045</Version>
@@ -128,7 +129,7 @@ Bug-SolusOS: T35</Comment>
             <Name>Evolve OS Packaging</Name>
             <Email>packaging@evolve-os.com</Email>
         </Update>
-        
+
         <Update release="3">
             <Date>03-09-2013</Date>
             <Version>4.2.045</Version>
@@ -136,7 +137,7 @@ Bug-SolusOS: T35</Comment>
             <Name>Evolve OS Packaging</Name>
             <Email>packaging@evolve-os.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>03-09-2013</Date>
             <Version>4.2.045</Version>
@@ -144,7 +145,7 @@ Bug-SolusOS: T35</Comment>
             <Name>Evolve OS Packaging</Name>
             <Email>packaging@evolve-os.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>03-09-2013</Date>
             <Version>4.2</Version>
@@ -153,6 +154,6 @@ Bug-SolusOS: T35</Comment>
             <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <Description>The Telepathy GLib contains a library used by GLib based Telepathy components. Telepathy is a D-Bus framework for unifying real time communication, including instant messaging, voice calls and video calls. It abstracts differences between protocols to provide a unified interface for applications.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="0ec683f337eb8a1bdc9dfa2b018ccb2862c1260c" type="targz">http://telepathy.freedesktop.org/releases/telepathy-glib/telepathy-glib-0.22.0.tar.gz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>dbus-devel</Dependency>
             <Dependency>zlib-devel</Dependency>
@@ -21,7 +21,7 @@
             <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libtelepathy-glib</Name>
         <Files>
@@ -39,7 +39,7 @@
             <Dependency>dbus-glib</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libtelepathy-glib-devel</Name>
         <Summary>Development files for libtelepathy-glib</Summary>
@@ -53,7 +53,7 @@
             <Dependency release="current">libtelepathy-glib</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libtelepathy-glib-docs</Name>
         <Summary>API Documentation libtelepathy-glib</Summary>
@@ -65,7 +65,7 @@
             <Dependency release="current">libtelepathy-glib-devel</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="3">
             <Date>10-05-2013</Date>
@@ -91,6 +91,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,7 +11,7 @@
         <Description>The Xorg Savage Driver package contains the X.Org Video Driver for the S3 Savage family video accelerator chips including Savage3D, Savage4, Savage/MX, Savage/IX, SuperSavage/MX, SuperSavage/IX, ProSavage PM133, ProSavage KM133, Twister, TwisterK, ProSavage DDR and ProSavage DDR-K series.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="459c5b7d1deb4dbcfb9ad6ecd5f360cf7d77a078" type="tarbz2">http://xorg.freedesktop.org/archive/individual/driver/xf86-video-savage-2.3.6.tar.bz2</Archive>
-        
+
         <BuildDependencies>
             <Dependency releaseFrom="4">xorg-server-devel</Dependency>
             <Dependency>libxfont-devel</Dependency>
@@ -27,7 +27,7 @@
             <Dependency>pixman-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>xorg-driver-video-savage</Name>
         <Files>
@@ -39,8 +39,8 @@
             <Dependency releaseFrom="4">xorg-server</Dependency>
         </RuntimeDependencies>
     </Package>
-    
-    <History>        
+
+    <History>
         <Update release="1">
             <Date>08-13-2013</Date>
             <Version>2.3.6</Version>
@@ -49,6 +49,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

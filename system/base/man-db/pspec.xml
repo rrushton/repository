@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -18,7 +18,7 @@
             <Dependency releaseFrom="2">gdbm-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>man-db</Name>
         <Files>
@@ -38,7 +38,7 @@
             <Dependency releaseFrom="2">gdbm</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="2">
             <Date>09-27-2013</Date>

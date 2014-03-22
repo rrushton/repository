@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -18,14 +18,14 @@
         <License>public-domain</License>
         <Archive sha1sum="55cf73d58f568266354898fab9e5d54518c1efab" type="targz">http://www.kernel.org/pub/linux/utils/util-linux/v2.22/util-linux-2.22.2.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>util-linux</Name>
         <Files>
             <Path fileType="*">/</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="2">
             <Date>06-27-2013</Date>
@@ -34,7 +34,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>03-11-2013</Date>
             <Version>3.0.16</Version>
@@ -43,5 +43,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

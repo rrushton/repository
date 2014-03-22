@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>GPLv3+</License>
         <Archive sha1sum="9ff9bb9243b0474330959dc3853973523c9dd9ce" type="tarbz2">mirrors://xorg/individual/proto/resourceproto-1.2.0.tar.bz2</Archive>
     </Source>
-    
+
     <Package>
         <Name>resourceproto</Name>
         <Files>
@@ -21,7 +21,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>03-09-2013</Date>
@@ -31,6 +31,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

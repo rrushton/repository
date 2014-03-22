@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -14,7 +14,7 @@
         <License>MIT</License>
         <Archive sha1sum="b43573800e27361da78f05a2e98394521cfa04fc" type="targz">http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/gc-7.2d.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>bdwgc</Name>
         <Files>
@@ -27,7 +27,7 @@
         <Name>bdwgc-devel</Name>
         <Summary>Development files for bdwgc</Summary>
         <Description>Development files for bdwgc</Description>
-        <Files>	
+        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
@@ -35,7 +35,7 @@
             <Dependency release="current">bdwgc</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>04-21-2013</Date>
@@ -45,6 +45,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

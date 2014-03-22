@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <Description>The libwnck package contains a Window Navigator Construction Kit.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="9283c0efe0c5c44135c9015cfbfd518a877e4d2e" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/libwnck/2.30/libwnck-2.30.7.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>harfbuzz-devel</Dependency>
@@ -45,7 +45,7 @@
             <Dependency>libsm-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libwnck-1</Name>
         <Files>
@@ -97,7 +97,7 @@
             <Dependency>libsm</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libwnck-1-devel</Name>
         <Summary>Development files for libwnck-1</Summary>
@@ -110,7 +110,7 @@
             <Dependency release="current">libwnck-1</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libwnck-1-docs</Name>
         <Summary>API Documentation for libwnck-1</Summary>
@@ -122,7 +122,7 @@
             <Dependency release="current">libwnck-1-devel</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>08-06-2013</Date>
@@ -132,6 +132,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

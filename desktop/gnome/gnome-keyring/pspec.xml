@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <Description>The GNOME Keyring package contains a daemon that keeps passwords and other secrets for users.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="3f0f49f55052be64a66040fce1d59b426c25d50b" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-keyring/3.9/gnome-keyring-3.9.1.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>harfbuzz-devel</Dependency>
@@ -52,7 +52,7 @@
             <Dependency>at-spi2-atk-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>gnome-keyring</Name>
         <Files>
@@ -117,7 +117,7 @@
             <Dependency>at-spi2-atk</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>08-14-2013</Date>
@@ -127,6 +127,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>BSD</License>
         <Archive sha1sum="e5813f2d2fddf62174e5c52c734686f7be8f82e2" type="targz">https://pypi.python.org/packages/source/c/configobj/configobj-4.7.2.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>python-configobj</Name>
         <Files>
@@ -21,7 +21,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-20-2013</Date>
@@ -31,6 +31,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

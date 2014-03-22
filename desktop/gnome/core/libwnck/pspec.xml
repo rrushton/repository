@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <Description>The libwnck package contains the Window Navigator Construction Kit.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="a4a7224d9ac5ee3c00c811ad208ac5fbf233f2b9" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/libwnck/3.4/libwnck-3.4.4.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>libcairo-devel</Dependency>
@@ -49,7 +49,7 @@
             <Dependency>at-spi2-atk-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libwnck</Name>
         <Files>
@@ -103,7 +103,7 @@
             <Dependency>at-spi2-atk</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libwnck-devel</Name>
         <Summary>Development files for libwnck</Summary>
@@ -116,7 +116,7 @@
             <Dependency release="current">libwnck</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libwnck-docs</Name>
         <Summary>API Documentation for libwnck</Summary>
@@ -128,7 +128,7 @@
             <Dependency release="current">libwnck-devel</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="5">
             <Date>09-04-2013</Date>
@@ -145,7 +145,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="3">
             <Date>04-15-2013</Date>
             <Version>3.4.4</Version>
@@ -153,7 +153,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>04-15-2013</Date>
             <Version>3.4.4</Version>
@@ -161,7 +161,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-14-2013</Date>
             <Version>3.4.4</Version>
@@ -170,6 +170,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

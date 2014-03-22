@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>GPLv3+</License>
         <Archive sha1sum="1f48c4b0004d8b133efd0498e8d88d68d3b9199c" type="tarbz2">mirrors://xorg/individual/proto/recordproto-1.14.2.tar.bz2</Archive>
     </Source>
-    
+
     <Package>
         <Name>recordproto</Name>
         <Files>
@@ -21,7 +21,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>03-09-2013</Date>
@@ -31,6 +31,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

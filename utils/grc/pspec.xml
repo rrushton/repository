@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>GPLv2</License>
         <Archive sha1sum="79fd504d8291f13486d361611415ae60fa56712a" type="targz">http://kassiopeia.juls.savba.sk/~garabik/software/grc/grc_1.4.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>grc</Name>
         <Files>
@@ -23,7 +23,7 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-17-2013</Date>
@@ -33,6 +33,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

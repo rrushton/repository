@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -15,7 +15,7 @@
         <License>GPLv2+</License>
         <Archive sha1sum="ee60089e8e9d9390e730d3ae5e41074549928b7a" type="tarbz2">ftp://ftp.gtk.org/pub/babl/0.1/babl-0.1.10.tar.bz2</Archive>
     </Source>
-    
+
     <Package>
         <Name>babl</Name>
         <Files>

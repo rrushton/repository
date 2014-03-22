@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>GPLv2</License>
         <Archive sha1sum="10baf061e3d38e1234fb99182fc53509adf07269" type="tarbz2">http://dag.wieers.com/home-made/dstat/dstat-0.7.2.tar.bz2</Archive>
     </Source>
-    
+
     <Package>
         <Name>dstat</Name>
         <RuntimeDependencies>
@@ -26,7 +26,7 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>04-04-2013</Date>
@@ -36,5 +36,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

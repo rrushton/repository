@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>GPLv3+</License>
         <Archive sha1sum="b9124233b50668fb508773aa2b3ebc631d7c1620" type="zip">http://www.docbook.org/xml/4.5/docbook-xml-4.5.zip</Archive>
     </Source>
-    
+
     <Package>
         <Name>docbook-xml</Name>
         <Files>
@@ -20,8 +20,8 @@
             <Path fileType="config">/etc/xml</Path>
         </Files>
     </Package>
-    
-    
+
+
     <History>
         <Update release="2">
             <Date>04-13-2013</Date>
@@ -30,7 +30,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-13-2013</Date>
             <Version>4.5</Version>
@@ -39,6 +39,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

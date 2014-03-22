@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,15 +12,15 @@
         <Description>The libgtop package contains the GNOME top libraries.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="8c88e14ae21ac5a7071f77aad41deaccf59d88e3" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/libgtop/2.28/libgtop-2.28.4.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>libpcre-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
             <Dependency>libxau-devel</Dependency>
         </BuildDependencies>
-        
+
     </Source>
-    
+
     <Package>
         <Name>libgtop</Name>
         <Files>
@@ -34,10 +34,10 @@
         <RuntimeDependencies>
             <Dependency>libpcre</Dependency>
             <Dependency>glib2</Dependency>
-            <Dependency>libxau</Dependency>			
+            <Dependency>libxau</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libgtop-devel</Name>
         <Summary>Development files for libgtop</Summary>
@@ -50,7 +50,7 @@
             <Dependency release="current">libgtop</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libgtop-docs</Name>
         <Summary>API Documentation for libgtop</Summary>
@@ -62,7 +62,7 @@
             <Dependency release="current">libgtop-devel</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="4">
             <Date>09-04-2013</Date>
@@ -79,7 +79,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>04-15-2013</Date>
             <Version>2.28.4</Version>
@@ -87,7 +87,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-15-2013</Date>
             <Version>2.28.4</Version>
@@ -96,6 +96,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

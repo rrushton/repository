@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,12 +11,12 @@
         <Description>A Perl Module to parse XML</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="68c7ee61b413c2e8255699b1987fca598e0a39d8" type="targz">http://search.cpan.org/CPAN/authors/id/T/TO/TODDR/XML-Parser-2.41.tar.gz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>perl</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>perl-xmlparser</Name>
         <Files>
@@ -27,8 +27,8 @@
             <Dependency>perl</Dependency>
         </RuntimeDependencies>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="1">
             <Date>03-16-2013</Date>
             <Version>2.41</Version>
@@ -37,5 +37,5 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

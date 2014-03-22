@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -57,7 +57,7 @@
             <Dependency>alsa-lib</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>gstreamer-0.10-plugins-base-devel</Name>
         <Summary>Development files for gstreamer-0.10.plugins-base</Summary>
@@ -70,7 +70,7 @@
             <Dependency release="current">gstreamer-0.10-plugins-base</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>gstreamer-0.10-plugins-base-docs</Name>
         <Summary>API Documentation for gstreamer-0.10.plugins-base</Summary>
@@ -91,5 +91,6 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-    </History>	
+    </History>
+
 </PISI>

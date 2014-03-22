@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>GPLv3+</License>
         <Archive sha1sum="3bcd6d87aa5231917ba7123319eedcae90cfa0fd" type="targz">http://www.xs4all.nl/~carlo17/which/which-2.20.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>which</Name>
         <Files>
@@ -22,8 +22,8 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="1">
             <Date>03-09-2013</Date>
             <Version>2.20</Version>
@@ -32,6 +32,6 @@
             <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

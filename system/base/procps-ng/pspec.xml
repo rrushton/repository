@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>GPLv2+</License>
         <Archive sha1sum="65fbeffcdb53072bdee6a137062742db3fd1b7f9" type="tarxz">http://solusos.com/sources/procps-ng-3.3.6.tar.xz</Archive>
     </Source>
-    
+
     <Package>
         <Name>procps-ng</Name>
         <Files>
@@ -21,12 +21,12 @@
             <Path fileType="executable">/sbin</Path>
             <Path fileType="library">/lib</Path>
             <Path fileType="library">/usr/lib/*so*</Path>
-            
+
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>procps-ng-devel</Name>
         <Summary>Development headers for procps-ng</Summary>
@@ -39,7 +39,7 @@
             <Dependency>procps-ng</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>03-16-2013</Date>
@@ -49,6 +49,6 @@
             <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

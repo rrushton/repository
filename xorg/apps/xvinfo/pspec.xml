@@ -10,7 +10,7 @@
         <License>GPLv3+</License>
         <Archive sha1sum="dc326464748fa608da50386112a89024804c1910" type="tarbz2">http://xorg.freedesktop.org/releases/individual/app/xvinfo-1.1.1.tar.bz2</Archive>
     </Source>
-    
+
     <Package>
         <Name>xvinfo</Name>
         <Files>
@@ -18,9 +18,9 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
+
     <History>
-        
+
         <Update release="1">
             <Date>03-20-2013</Date>
             <Version>1.1.1</Version>
@@ -29,5 +29,5 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

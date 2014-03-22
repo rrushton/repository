@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>GPLv2+</License>
         <Archive sha1sum="cff053af3fd6fde3011bb892c39f6c810c84d1e8" type="targz">http://linux.dell.com/dkms/permalink/dkms-2.2.0.3.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>dkms</Name>
         <Files>
@@ -26,7 +26,7 @@
             <Path fileType="data">/var/lib/dkms</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-23-2013</Date>
@@ -36,6 +36,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

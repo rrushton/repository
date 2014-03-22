@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <Description>The libxklavier package contains a utility library for X keyboard.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="dc5e824c738520229174ba9481f0cab35be4870f" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/libxklavier/5.3/libxklavier-5.3.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>libxkbfile-devel</Dependency>
             <Dependency>libxext-devel</Dependency>
@@ -29,7 +29,7 @@
             <Dependency>iso-codes</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libxklavier</Name>
         <Files>
@@ -54,7 +54,7 @@
             <Dependency>iso-codes</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libxklavier-devel</Name>
         <Summary>Development files for libxklavier</Summary>
@@ -67,7 +67,7 @@
             <Dependency release="current">libxklavier</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libxklavier-docs</Name>
         <Summary>API Documentation for libxklavier</Summary>
@@ -79,7 +79,7 @@
             <Dependency release="current">libxklavier-devel</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="4">
             <Date>09-04-2013</Date>
@@ -96,7 +96,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>04-15-2013</Date>
             <Version>5.3</Version>
@@ -104,7 +104,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-15-2013</Date>
             <Version>5.3</Version>
@@ -113,6 +113,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

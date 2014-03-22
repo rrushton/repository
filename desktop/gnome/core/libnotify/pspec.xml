@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <Description>The libnotify library is used to send desktop notifications to a notification daemon, as defined in the Desktop Notifications spec. These notifications can be used to inform the user about an event or display some form of information without getting in the user's way.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="729d1382617fee7e82eac17d808c11469ab2b7e1" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/libnotify/0.7/libnotify-0.7.5.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>libpng-devel</Dependency>
@@ -22,7 +22,7 @@
             <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libnotify</Name>
         <Files>
@@ -38,10 +38,10 @@
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>libffi</Dependency>
             <Dependency>libpcre</Dependency>
-            <Dependency>glib2</Dependency>            
+            <Dependency>glib2</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libnotify-devel</Name>
         <Summary>Development files for libnotify</Summary>
@@ -54,7 +54,7 @@
             <Dependency release="current">libnotify</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libnotify-docs</Name>
         <Summary>API Documentation for libnotify</Summary>
@@ -66,7 +66,7 @@
             <Dependency release="current">libnotify</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="2">
             <Date>09-04-2013</Date>
@@ -84,6 +84,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

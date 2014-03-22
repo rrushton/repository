@@ -12,7 +12,7 @@
         <Description>Telepathy Logger is a platform-independent logging service for the Telepathy communications framework.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="66d5bbb1af442a4a0c259f5eaadc567df1ef2ef1" type="tarbz2">http://telepathy.freedesktop.org/releases/telepathy-logger/telepathy-logger-0.8.0.tar.bz2</Archive>
-        
+
         <BuildDependencies>
             <Dependency versionFrom="0.22.0">libtelepathy-glib-devel</Dependency>
             <Dependency>libxml2-devel</Dependency>

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -16,7 +16,7 @@
             <Dependency>aspell</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>aspell-en-common</Name>
         <RuntimeDependencies>
@@ -35,7 +35,7 @@
         <Name>aspell-en-ca</Name>
         <Summary>Aspell Dictionary for English - Canadian Variant</Summary>
         <Description>Aspell Dictionary for English - Canadian Variant</Description>
-        <Files>    
+        <Files>
             <Path fileType="library">/usr/lib/aspell-0.60/en_CA*</Path>
             <Path fileType="library">/usr/lib/aspell-0.60/canadian*</Path>
         </Files>
@@ -59,7 +59,7 @@
         <Name>aspell-en-us</Name>
         <Summary>Aspell Dictionary for English - American Variant</Summary>
         <Description>Aspell Dictionary for English - American Variant</Description>
-        <Files>    
+        <Files>
             <Path fileType="library">/usr/lib/aspell-0.60/en_US*</Path>
             <Path fileType="library">/usr/lib/aspell-0.60/american*</Path>
         </Files>
@@ -67,7 +67,7 @@
             <Dependency release="current">aspell-en-common</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>04-30-2013</Date>
@@ -77,6 +77,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

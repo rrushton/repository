@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>Info-ZIP</License>
         <Archive sha1sum="c9f4099ecf2772b53c2dd4a8e508064ce015d182" type="targz">http://downloads.sourceforge.net/infozip/zip30.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>zip</Name>
         <Files>
@@ -20,8 +20,8 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="1">
             <Date>03-16-2013</Date>
             <Version>3.0</Version>
@@ -30,6 +30,6 @@
             <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

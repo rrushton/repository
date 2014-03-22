@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -37,7 +37,7 @@
         </RuntimeDependencies>
     </Package>
 
-   <Package>
+    <Package>
         <Name>glibmm-devel</Name>
         <Summary>Development files for glibmm</Summary>
         <Description>Development files for glibmm</Description>
@@ -52,7 +52,7 @@
         </RuntimeDependencies>
     </Package>
 
-  <Package>
+    <Package>
         <Name>glibmm-docs</Name>
         <Summary>API Documentation for glibmm</Summary>
         <Description>API Documentation for glibmm</Description>
@@ -73,5 +73,6 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-    </History>	
+    </History>
+
 </PISI>

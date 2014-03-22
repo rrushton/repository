@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <Description>The VTE package contains a termcap file implementation for terminal emulators.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="4fb258c1d36826c6f7a6674a846be6937a791c1e" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/vte/0.34/vte-0.34.8.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>harfbuzz-devel</Dependency>
@@ -47,7 +47,7 @@
             <Dependency>at-spi2-atk-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libvte</Name>
         <Files>
@@ -103,7 +103,7 @@
             <Dependency>at-spi2-atk</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libvte-devel</Name>
         <Summary>Development files for libvte</Summary>
@@ -116,7 +116,7 @@
             <Dependency release="current">libvte</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libvte-docs</Name>
         <Summary>API Documentation for libvte</Summary>
@@ -128,7 +128,7 @@
             <Dependency release="current">libvte-devel</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="3">
             <Date>10-01-2013</Date>
@@ -145,7 +145,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>06-06-2013</Date>
             <Version>0.34.2</Version>
@@ -154,6 +154,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

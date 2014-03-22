@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <Description>Provides GNOME session core</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="5443f9d3cc64c5f03c890959301f34ad45c8b7e9" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-session/3.10/gnome-session-3.10.0.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>mesalib-devel</Dependency>
@@ -54,7 +54,7 @@
             <Dependency>at-spi2-atk-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>gnome-session</Name>
         <Files>
@@ -124,7 +124,7 @@
             <Dependency>desktop-file-utils</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="4">
             <Date>10-01-2013</Date>
@@ -141,7 +141,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>06-19-2013</Date>
             <Version>3.6.2</Version>
@@ -149,7 +149,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>06-05-2013</Date>
             <Version>3.6.2</Version>
@@ -158,6 +158,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

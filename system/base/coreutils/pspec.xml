@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -10,7 +10,7 @@
         <Summary>GNU core utilities</Summary>
         <Description> This package contains the basic file, shell and text manipulation
             utilities which are expected to exist on every operating system.
-            
+
             Specifically, this package includes:
             arch base64 basename cat chcon chgrp chmod chown chroot cksum comm cp
             csplit cut date dd df dir dircolors dirname du echo env expand expr
@@ -26,19 +26,19 @@
         <Patches>
             <Patch level="1">coreutils-8.21-i18n-1.patch</Patch>
         </Patches>
-        
+
         <SupportsClang>true</SupportsClang>
     </Source>
-    
+
     <Package>
         <Name>coreutils</Name>
         <Files>
             <Path fileType="*">/</Path>
         </Files>
     </Package>
-    
-    <History> 
-        
+
+    <History>
+
         <Update release="1">
             <Date>03-09-2013</Date>
             <Version>8.21</Version>
@@ -47,6 +47,6 @@
             <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

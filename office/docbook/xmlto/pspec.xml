@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -32,7 +32,7 @@
             <Path fileType="data">/usr/share/xmlto</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-11-2013</Date>
@@ -42,5 +42,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>

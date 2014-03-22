@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -15,7 +15,7 @@
             <Patch level="1">libffi-3.0.12-includedir-1.patch</Patch>
         </Patches>
     </Source>
-    
+
     <Package>
         <Name>libffi</Name>
         <Files>
@@ -23,7 +23,7 @@
             <Path fileType="info">/usr/share/info</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libffi-devel</Name>
         <Summary>Development files for libffi</Summary>
@@ -39,7 +39,7 @@
             <Dependency>libffi</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>03-16-2013</Date>
@@ -49,6 +49,6 @@
             <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

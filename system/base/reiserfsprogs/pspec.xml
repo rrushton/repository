@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>GPLv2+</License>
         <Archive sha1sum="b51d1a524570436ea6e9eb0d8f74fae717f5f511" type="tarxz">https://www.kernel.org/pub/linux/kernel/people/jeffm/reiserfsprogs/v3.6.24/reiserfsprogs-3.6.24.tar.xz</Archive>
     </Source>
-    
+
     <Package>
         <Name>reiserfsprogs</Name>
         <Files>
@@ -22,7 +22,7 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>09-23-2013</Date>
@@ -32,5 +32,5 @@
             <Email>gazza@virtualcity.com.au</Email>
         </Update>
     </History>
-    
+
 </PISI>

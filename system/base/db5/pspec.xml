@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>GPLv3+</License>
         <Archive sha1sum="32e43c4898c8996750c958a90c174bd116fcba83" type="targz">http://download.oracle.com/berkeley-db/db-5.3.21.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>db5</Name>
         <Files>
@@ -22,7 +22,7 @@
             <Path fileType="library">/usr/lib</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>db5-docs</Name>
         <Summary>Berkeley Database v5 - Documentation</Summary>
@@ -31,8 +31,8 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="1">
             <Date>03-09-2013</Date>
             <Version>5.3.21</Version>
@@ -41,6 +41,6 @@
             <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

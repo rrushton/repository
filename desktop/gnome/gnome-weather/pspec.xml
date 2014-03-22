@@ -12,7 +12,7 @@
         <Description>Graphical application showing weather from around the whole world</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="fb7523432b50bc8f9f7306cd0365d693183989ee" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/gnome-weather/3.10/gnome-weather-3.10.0.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>harfbuzz-devel</Dependency>

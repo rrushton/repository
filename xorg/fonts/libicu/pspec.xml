@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>GPLv3+</License>
         <Archive sha1sum="ee121e3ba2c3599b36b3d3b4abf68f28e23c9b4a" type="targz">http://download.icu-project.org/files/icu4c/50.1.2/icu4c-50_1_2-src.tgz</Archive>
     </Source>
-    
+
     <Package>
         <Name>libicu</Name>
         <Files>
@@ -22,7 +22,7 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libicu-devel</Name>
         <Summary>Development files for libicu</Summary>
@@ -37,7 +37,7 @@
             <Dependency release="2">libicu</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="2">
             <Date>03-20-2013</Date>
@@ -46,7 +46,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>03-20-2013</Date>
             <Version>50.12</Version>
@@ -55,6 +55,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

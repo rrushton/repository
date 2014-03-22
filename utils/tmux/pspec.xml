@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -10,15 +10,16 @@
         </Packager>
         <Summary>terminal multiplexer</Summary>
         <Description>tmux is a "terminal multiplexer", it enables a number of terminals (or windows)
-        to be accessed and controlled from a single terminal. tmux is intended to be a
-        simple, modern, BSD-licensed alternative to programs such as GNU screen.</Description>
+            to be accessed and controlled from a single terminal. tmux is intended to be a
+            simple, modern, BSD-licensed alternative to programs such as GNU screen.
+        </Description>
         <License>BSD</License>
         <Archive sha1sum="08677ea914e1973ce605b0008919717184cbd033" type="targz">http://downloads.sourceforge.net/tmux/tmux-1.8.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>ncurses-devel</Dependency>
             <Dependency>glibc-devel</Dependency>
             <Dependency>libevent-devel</Dependency>
-       </BuildDependencies>
+        </BuildDependencies>
     </Source>
 
     <Package>
@@ -43,5 +44,6 @@
             <Name>Peter Passchier</Name>
             <Email>peter@passchier.net</Email>
         </Update>
-    </History>	
+    </History>
+
 </PISI>

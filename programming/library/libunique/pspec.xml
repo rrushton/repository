@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -20,9 +20,9 @@
             <Dependency>libgtk-2-devel</Dependency>
             <Dependency>libgtk-2-docs</Dependency>
         </BuildDependencies>
-        
+
     </Source>
-    
+
     <Package>
         <Name>libunique</Name>
         <RuntimeDependencies>
@@ -34,7 +34,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libunique-devel</Name>
         <RuntimeDependencies>
@@ -45,7 +45,7 @@
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-06-2013</Date>
@@ -55,6 +55,6 @@
             <Email>matiaslina@gmail.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

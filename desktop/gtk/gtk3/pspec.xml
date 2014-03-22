@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <Description>The GTK+ 3 package contains the libraries used for creating graphical user interfaces for applications. </Description>
         <License>GPLv3+</License>
         <Archive sha1sum="94a7fbd715e819d8838802bfd68be0b63c8ec72a" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gtk+/3.10/gtk+-3.10.0.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency versionFrom="1.37.1">gobject-introspection-devel</Dependency>
             <Dependency>wayland-devel</Dependency>
@@ -38,7 +38,7 @@
             <Dependency>libx11-devel</Dependency>
             <Dependency>libxcomposite-devel</Dependency>
             <Dependency>libxrender-devel</Dependency>
-            <Dependency versionFrom="2.37.3">glib2-devel</Dependency>		
+            <Dependency versionFrom="2.37.3">glib2-devel</Dependency>
             <Dependency>libgtk-2</Dependency>
             <Dependency releaseFrom="3">libatk-devel</Dependency>
             <Dependency>at-spi2-atk-devel</Dependency>
@@ -47,7 +47,7 @@
             <Dependency>xinput</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libgtk-3</Name>
         <Files>
@@ -103,9 +103,9 @@
             <Dependency>at-spi2-atk</Dependency>
             <Dependency>at-spi2</Dependency>
         </RuntimeDependencies>
-        
+
     </Package>
-    
+
     <Package>
         <Name>libgtk-3-devel</Name>
         <Summary>Development files for libgtk-3</Summary>
@@ -117,7 +117,7 @@
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">libgtk-3</Dependency>
-            
+
             <Dependency>zlib-devel</Dependency>
             <Dependency>libcairo-devel</Dependency>
             <Dependency>harfbuzz-devel</Dependency>
@@ -142,10 +142,10 @@
             <Dependency>libxrender-devel</Dependency>
             <Dependency>libatk-devel</Dependency>
             <Dependency>at-spi2-atk-devel</Dependency>
-            
+
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libgtk-3-docs</Name>
         <Summary>API Documentation for libgtk-3</Summary>
@@ -157,9 +157,9 @@
         <RuntimeDependencies>
             <Dependency release="current">libgtk-3</Dependency>
         </RuntimeDependencies>
-        	
+
     </Package>
-    
+
     <Package>
         <Name>gtk3-demo</Name>
         <Summary>Demonstration of GTK3</Summary>
@@ -208,9 +208,9 @@
             <Dependency>libsm</Dependency>
             <Dependency>at-spi2-atk</Dependency>
         </RuntimeDependencies>
-        	
+
     </Package>
-    
+
     <Package>
         <Name>the-widget-factory-3</Name>
         <Summary>The Widget Factory for GTK3</Summary>
@@ -258,9 +258,9 @@
             <Dependency>libsm</Dependency>
             <Dependency>at-spi2-atk</Dependency>
         </RuntimeDependencies>
-        	
+
     </Package>
-    
+
     <History>
         <Update release="16">
             <Date>10-01-2013</Date>
@@ -277,7 +277,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="14">
             <Date>07-05-2013</Date>
             <Version>3.9.6</Version>
@@ -285,7 +285,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="13">
             <Date>06-24-2013</Date>
             <Version>3.9.6</Version>
@@ -293,7 +293,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="12">
             <Date>06-24-2013</Date>
             <Version>3.8.2</Version>
@@ -301,7 +301,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="11">
             <Date>06-24-2013</Date>
             <Version>3.8.2</Version>
@@ -309,7 +309,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="10">
             <Date>06-19-2013</Date>
             <Version>3.8.2</Version>
@@ -317,7 +317,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="9">
             <Date>05-31-2013</Date>
             <Version>3.6.4</Version>
@@ -325,7 +325,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="8">
             <Date>05-30-2013</Date>
             <Version>3.6.4</Version>
@@ -333,7 +333,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="7">
             <Date>04-27-2013</Date>
             <Version>3.6.4</Version>
@@ -341,7 +341,7 @@
             <Name>Justin Krehel</Name>
             <Email>justin@solusos.com</Email>
         </Update>
-        
+
         <Update release="6">
             <Date>04-08-2013</Date>
             <Version>3.6.4</Version>
@@ -349,7 +349,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="5">
             <Date>04-08-2013</Date>
             <Version>3.6.4</Version>
@@ -357,7 +357,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="4">
             <Date>04-07-2013</Date>
             <Version>3.6.4</Version>
@@ -365,7 +365,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="3">
             <Date>04-07-2013</Date>
             <Version>3.6.4</Version>
@@ -373,7 +373,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>04-07-2013</Date>
             <Version>3.6.4</Version>
@@ -381,7 +381,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-07-2013</Date>
             <Version>3.6.4</Version>
@@ -390,5 +390,5 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,19 +13,19 @@
         <License>GPLv2</License>
         <Archive sha1sum="431bc92195f27673bfdd2be67ce0f58338da8d3b" type="tarbz2">http://dvdnav.mplayerhq.hu/releases/libdvdread-4.2.0.tar.bz2</Archive>
     </Source>
-    
+
     <Package>
         <Name>libdvdread</Name>
         <Files>
             <Path fileType="library">/usr/lib/lib*.so*</Path>
-            <Path fileType="doc">/usr/share/doc</Path>            
+            <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
     <Package>
         <Name>libdvdread-devel</Name>
         <Summary>Development files for libdvdread</Summary>
         <Description>Development files for libdvdread</Description>
-        <Files>    
+        <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
@@ -35,7 +35,7 @@
             <Dependency release="current">libdvdread</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="3">
             <Date>05-05-2013</Date>
@@ -44,7 +44,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>04-24-2013</Date>
             <Version>4.2.0</Version>
@@ -52,7 +52,7 @@
             <Name>Justin Krehel</Name>
             <Email>justin@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-22-2013</Date>
             <Version>4.2.0</Version>
@@ -61,5 +61,5 @@
             <Email>vande.walle.k@gmail.com</Email>
         </Update>
     </History>
-     
+
 </PISI>

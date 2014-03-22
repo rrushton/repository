@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <Description>The GStreamer Base Plug-ins is a well-groomed and well-maintained collection of GStreamer plug-ins and elements, spanning the range of possible types of elements one would want to write for GStreamer. You will need at least one of Good, Bad, Ugly or Libav plugins for GStreamer applications to function properly.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="8cf49dded9c44cd1f1a742bfadaeb7fb83dc5979" type="tarxz">http://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.0.6.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>libpcre-devel</Dependency>
@@ -20,7 +20,7 @@
             <Dependency>gstreamer-1.0-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>gstreamer-1.0-plugins-base</Name>
         <Files>
@@ -41,7 +41,7 @@
             <Dependency>gstreamer-1.0</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>gstreamer-1.0-plugins-base-devel</Name>
         <Summary>Development files for gstreamer-1.0-plugins-base</Summary>
@@ -54,7 +54,7 @@
             <Dependency release="current">gstreamer-1.0-plugins-base</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>gstreamer-1.0-plugins-base-docs</Name>
         <Summary>API Documentation for gstreamer-1.0-plugins-base</Summary>
@@ -66,7 +66,7 @@
             <Dependency release="current">gstreamer-1.0-plugins-base-devel</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="4">
             <Date>09-04-2013</Date>
@@ -83,7 +83,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>04-15-2013</Date>
             <Version>1.0.6</Version>
@@ -91,7 +91,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-15-2013</Date>
             <Version>1.0.6</Version>
@@ -100,6 +100,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

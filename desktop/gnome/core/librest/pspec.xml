@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <Description>librest was designed to make it easier to access web services that claim to be "RESTful". It includes convenience wrappers for libsoup and libxml to ease remote use of the RESTful API.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="c1b7be3afed247252e2a15b1f6510707cf9ceca4" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/rest/0.7/rest-0.7.90.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>libsoup-devel</Dependency>
             <Dependency>libgnome-keyring-devel</Dependency>
@@ -25,9 +25,9 @@
             <Dependency>glib2-devel</Dependency>
             <Dependency>dbus-devel</Dependency>
         </BuildDependencies>
-        
+
     </Source>
-    
+
     <Package>
         <Name>librest</Name>
         <Files>
@@ -51,7 +51,7 @@
             <Dependency>dbus</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>librest-devel</Name>
         <Summary>Development files for librest</Summary>
@@ -64,8 +64,8 @@
             <Dependency release="current">librest</Dependency>
         </RuntimeDependencies>
     </Package>
-    
-    
+
+
     <Package>
         <Name>librest-docs</Name>
         <Summary>API Documentation for librest</Summary>
@@ -77,9 +77,9 @@
             <Dependency release="current">librest-devel</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
-       <Update release="2">
+        <Update release="2">
             <Date>09-04-2013</Date>
             <Version>0.7.90</Version>
             <Comment>Move typelib back into main package, fix librest-docs dependency</Comment>
@@ -95,6 +95,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

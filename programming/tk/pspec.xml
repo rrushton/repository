@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -16,7 +16,7 @@
             <Dependency>tcl</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>tk</Name>
         <Files>
@@ -31,12 +31,12 @@
             <Dependency>tcl</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>tk-devel</Name>
         <Summary>Development files for tk</Summary>
         <Description>Development files for tk</Description>
-        <Files>	
+        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/*.a</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
@@ -46,8 +46,8 @@
             <Dependency release="1">tk</Dependency>
         </RuntimeDependencies>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="1">
             <Date>03-24-2013</Date>
             <Version>8.6.0</Version>
@@ -56,5 +56,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

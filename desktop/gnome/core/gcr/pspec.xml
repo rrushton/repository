@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <Description> he Gcr package contains libraries used for displaying certificates and accessing key stores. It also provides the viewer for crypto files on the GNOME Desktop.</Description>
         <License>GPLv3+</License>
         <Archive sha1sum="241acff88075bb6a8f7ee199c0e31ce6c768806e" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gcr/3.8/gcr-3.8.2.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency releaseFrom="10">libgtk-3-devel</Dependency>
             <Dependency>libp11-kit-devel</Dependency>
@@ -27,7 +27,7 @@
             <Dependency>libtasn1-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>gcr</Name>
         <Files>
@@ -58,8 +58,8 @@
             <Dependency>pango</Dependency>
         </RuntimeDependencies>
     </Package>
-     
-    
+
+
     <Package>
         <Name>gcr-devel</Name>
         <Summary>Development files for gcr</Summary>
@@ -72,7 +72,7 @@
             <Dependency release="current">gcr</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>gcr-docs</Name>
         <Summary>API Documentation for gcr</Summary>
@@ -84,7 +84,7 @@
             <Dependency release="current">gcr-devel</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="6">
             <Date>06-19-2013</Date>
@@ -93,7 +93,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="5">
             <Date>05-30-2013</Date>
             <Version>3.6.2</Version>
@@ -101,7 +101,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="4">
             <Date>04-13-2013</Date>
             <Version>3.6.2</Version>
@@ -109,7 +109,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="3">
             <Date>04-13-2013</Date>
             <Version>3.6.2</Version>
@@ -117,7 +117,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>04-13-2013</Date>
             <Version>3.6.2</Version>
@@ -125,7 +125,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-13-2013</Date>
             <Version>3.6.2</Version>
@@ -134,6 +134,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

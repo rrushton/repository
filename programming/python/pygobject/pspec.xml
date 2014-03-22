@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <Description>PyGObject provides Python 2 bindings to the GObject class from GLib.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="abf695f16d36a36e72f713016a92eab0646d37a2" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/pygobject/3.4/pygobject-3.4.2.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>libxcb-devel</Dependency>
@@ -30,7 +30,7 @@
             <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>python-gobject</Name>
         <Files>
@@ -62,7 +62,7 @@
             <Dependency>libsm</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>python-gobject-devel</Name>
         <Summary>Development files for python-gobject</Summary>
@@ -75,7 +75,7 @@
             <Dependency release="current">python-gobject</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>05-30-2013</Date>
@@ -85,6 +85,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

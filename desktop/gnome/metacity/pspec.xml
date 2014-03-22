@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,7 +11,7 @@
         <Description>Boring window manager for the adult in you. Many window managers are like Marshmallow Froot Loops; Metacity is like Cheerios.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="7b5b20e84ffb86290955a726af946a78b7a45e26" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/metacity/2.34/metacity-2.34.13.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>harfbuzz-devel</Dependency>
@@ -45,7 +45,7 @@
             <Dependency>libsm-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>metacity</Name>
         <Files>
@@ -105,7 +105,7 @@
             <Dependency>libsm</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>metacity-devel</Name>
         <Summary>Development files for metacity</Summary>
@@ -118,7 +118,7 @@
             <Dependency release="current">metacity</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-05-2013</Date>
@@ -128,6 +128,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

@@ -23,7 +23,7 @@
             <Dependency>glibc-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>python-gobject2</Name>
         <Files>
@@ -54,7 +54,7 @@
             <Dependency release="current">python-gobject2</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>python-gobject2-docs</Name>
         <Summary>API Documentation for python-gobject2</Summary>

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,14 +11,14 @@
         <Description>The Xorg VESA Driver contains the Generic VESA video driver for the Xorg X server. This driver is often used as fallback driver if the hardware specific driver fails to load or is not present. If this driver is not installed, Xorg Server will print a warning on startup, but it can be safely ignored if hardware specific driver works well.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="d49a57de24e7923bf17270084ce91ecf2feb4286" type="tarbz2">http://xorg.freedesktop.org/releases/individual/driver/xf86-video-vesa-2.3.2.tar.bz2</Archive>
-        
+
         <Patches>
             <!-- Fix issue with mibstore -->
             <Patch level="1">backing_store_build.patch</Patch>
         </Patches>
-        
+
     </Source>
-    
+
     <Package>
         <Name>xorg-driver-video-vesa</Name>
         <Files>
@@ -26,7 +26,7 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>03-28-2013</Date>
@@ -36,6 +36,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -16,7 +16,7 @@
             <Dependency>gpm-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>mc</Name>
         <Files>
@@ -31,7 +31,7 @@
             <Path fileType="data">/usr/share/mc</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>03-21-2013</Date>
@@ -41,5 +41,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

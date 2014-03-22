@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,7 +11,7 @@
         <Description>The libxcb package provides an interface to the X Window System protocol, which replaces the current Xlib interface. Xlib can also use XCB as a transport layer, allowing software to make requests and receive responses with both.</Description>
         <License>GPLv3+</License>
         <Archive sha1sum="ad2fb95eeec41ba3d39502a4f7460c3b64fdf061" type="tarbz2">http://xcb.freedesktop.org/dist/libxcb-1.9.tar.bz2</Archive>
-        
+
         <BuildDependencies>
             <Dependency>xcb-proto</Dependency>
             <Dependency>xproto</Dependency>
@@ -20,7 +20,7 @@
             <Dependency>xcb-util-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libxcb</Name>
         <Files>
@@ -29,12 +29,12 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libxcb-devel</Name>
         <Summary>Development files for libxcb</Summary>
         <Description>Development files for libxcb</Description>
-        <Files>	
+        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/*.a</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
@@ -47,7 +47,7 @@
             <Dependency>libxdmcp-devel</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="4">
             <Date>05-30-2013</Date>
@@ -56,7 +56,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="3">
             <Date>05-24-2013</Date>
             <Version>1.9</Version>
@@ -64,7 +64,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>03-18-2013</Date>
             <Version>1.9</Version>
@@ -72,7 +72,7 @@
             <Name>Justin Krehel</Name>
             <Email>justin@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>03-09-2013</Date>
             <Version>1.9</Version>
@@ -81,6 +81,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

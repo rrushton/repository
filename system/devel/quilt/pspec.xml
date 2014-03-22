@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -14,17 +14,17 @@
             un-applied, refreshed, and more.
         </Description>
         <License>GPLv2</License>
-        
+
         <Archive sha1sum="c93c79598c55ba288f60babcc74a9fc9b04404b6" type="targz">http://download.savannah.gnu.org/releases/quilt/quilt-0.60.tar.gz</Archive>
         <BuildDependencies>
-            <!-- 
+            <!--
                 Optional functionalities will be missing
-                without diffstat 
+                without diffstat
             -->
             <Dependency>diffstat</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>quilt</Name>
         <Files>
@@ -37,7 +37,7 @@
             <Path fileType="data">/usr/share/emacs</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>04-04-2013</Date>
@@ -47,6 +47,6 @@
             <Email>matiaslina@gmail.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

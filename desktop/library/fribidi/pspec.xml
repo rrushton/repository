@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>LGPLv2.1</License>
         <Archive sha1sum="58445266df185f7e5109f356c0261d41db39182a" type="tarbz2">http://fribidi.org/download/fribidi-0.19.5.tar.bz2</Archive>
     </Source>
-    
+
     <Package>
         <Name>fribidi</Name>
         <Files>
@@ -21,7 +21,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>fribidi-devel</Name>
         <Summary>Development files for fribidi</Summary>
@@ -36,7 +36,7 @@
             <Dependency release="current">fribidi</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-24-2013</Date>
@@ -46,6 +46,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

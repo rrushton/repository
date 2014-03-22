@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>GPLv2+</License>
         <Archive sha1sum="1a10398e869c3b2ee23b20240e61a888091ddfc7" type="tarbz2">http://sourceforge.net/projects/bashdb/files/remake/3.82+dbg-0.9/remake-3.82+dbg0.9.tar.bz2</Archive>
     </Source>
-    
+
     <Package>
         <Name>remake</Name>
         <Files>
@@ -23,7 +23,7 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>05-28-2013</Date>
@@ -33,6 +33,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

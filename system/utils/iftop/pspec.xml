@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -17,7 +17,7 @@
             <Dependency>libpcap-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>iftop</Name>
         <RuntimeDependencies>
@@ -30,8 +30,8 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="1">
             <Date>04-04-2013</Date>
             <Version>1.0b</Version>

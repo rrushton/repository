@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>GPLv3+</License>
         <Archive sha1sum="37223941e25bb504bf54631daaabb01b147dc1d3" type="targz">ftp://ftp.gnu.org/gnu/groff/groff-1.22.2.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>groff</Name>
         <Files>
@@ -27,20 +27,20 @@
             <Dependency>gawk</Dependency>
         </BuildDependencies>
     </Package>
-    
+
     <Package>
         <Name>groff-docs</Name>
         <Summary>Document/example files for groff</Summary>
         <Description>Document/example files for groff</Description>
-        <Files>	
+        <Files>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency>groff</Dependency>
         </RuntimeDependencies>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="1">
             <Date>03-20-2013</Date>
             <Version>1.22.2</Version>
@@ -49,5 +49,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

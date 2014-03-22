@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <Description>While aiming at simplicity and ease of use, gedit is a powerful general purpose text editor.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="665c4978e650e454d1d737cca60a206e3d5986b2" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gedit/3.10/gedit-3.10.0.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>python3-devel</Dependency>
             <Dependency>zlib-devel</Dependency>
@@ -54,7 +54,7 @@
             <Dependency>itstool</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>gedit</Name>
         <Files>
@@ -121,7 +121,7 @@
             <Dependency>at-spi2-atk</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>gedit-devel</Name>
         <Summary>Development files for gedit</Summary>
@@ -134,7 +134,7 @@
             <Dependency release="current">gedit</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>gedit-docs</Name>
         <Summary>API Documentation for gedit</Summary>
@@ -146,7 +146,7 @@
             <Dependency release="current">gedit-devel</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="4">
             <Date>10-01-2013</Date>
@@ -163,7 +163,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>06-20-2013</Date>
             <Version>3.8.2</Version>
@@ -171,7 +171,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>06-06-2013</Date>
             <Version>3.6.2</Version>
@@ -180,6 +180,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>MIT</License>
         <Archive sha1sum="b7d1704ec186a71c2fff1706896ecd294b708a55" type="targz">http://pypi.python.org/packages/source/v/virtualenv/virtualenv-1.9.1.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>virtualenv</Name>
         <RuntimeDependencies>
@@ -25,7 +25,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>04-21-2013</Date>
@@ -35,6 +35,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>GPLv3+</License>
         <Archive sha1sum="60d0b055949c2ba6155187f05ed2b0f89cb895b9" type="targz">http://download.savannah.gnu.org/releases/acl/acl-2.2.51.src.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>acl</Name>
         <Files>
@@ -25,7 +25,7 @@
             <Path fileType="localedata">/usr/share/locale</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>acl-devel</Name>
         <Summary>Development files for acl</Summary>
@@ -38,8 +38,8 @@
             <Dependency release="current">acl</Dependency>
         </RuntimeDependencies>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="2">
             <Date>05-23-2013</Date>
             <Version>2.2.51</Version>
@@ -47,7 +47,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>03-09-2013</Date>
             <Version>2.2.51</Version>
@@ -56,6 +56,6 @@
             <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

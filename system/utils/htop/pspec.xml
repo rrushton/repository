@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,13 +11,13 @@
         <Summary>htop (interactive process viewer for Linux)</Summary>
         <Description> htop is an interactive process viewer for Linux.</Description>
         <License>GPLv2</License>
-        <Archive sha1sum="07893b93fe8109610f8e9976b3934ae4bb7a925d" 
+        <Archive sha1sum="07893b93fe8109610f8e9976b3934ae4bb7a925d"
 type="targz">http://downloads.sourceforge.net/project/htop/htop/1.0.2/htop-1.0.2.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>ncurses-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>htop</Name>
         <RuntimeDependencies>
@@ -30,8 +30,8 @@ type="targz">http://downloads.sourceforge.net/project/htop/htop/1.0.2/htop-1.0.2
             <Path fileType="data">/usr/share/applications</Path>
         </Files>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="1">
             <Date>03-21-2013</Date>
             <Version>1.0.2</Version>

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,22 +11,22 @@
         <Description>systemd is a system and service manager for Linux, compatible with SysV and LSB init scripts. systemd provides aggressive parallelization capabilities, uses socket and D-Bus activation for starting services, offers on-demand starting of daemons, keeps track of processes using Linux control groups, supports snapshotting and restoring of the system state, maintains mount and automount points and implements an elaborate transactional dependency-based service control logic. It can work as a drop-in replacement for sysvinit. </Description>
         <License>GPLv3+</License>
         <Archive sha1sum="167e648a32a8048a6aae8d20fac486aa29ef6675" type="tarxz">http://www.freedesktop.org/software/systemd/systemd-206.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>libgcrypt-devel</Dependency>
             <Dependency versionFrom="14">kmod-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>systemd</Name>
         <Files>
             <Path fileType="executable">/bin</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="executable">/sbin</Path>
-            
+
             <Path fileType="config">/etc</Path> <!-- consider showing all of the individual /etc/* directories, for future splitting //-->
-            
+
             <Path fileType="library">/lib</Path>
             <Path fileType="library">/usr/share/gir-1.0/</Path>
             <Path fileType="library">/usr/lib/udev</Path>
@@ -38,21 +38,21 @@
             <Path fileType="library">/usr/lib/modules-load.d</Path>
             <Path fileType="library">/usr/lib/girepository-1.0</Path>
             <Path fileType="library">/usr/lib/binfmt.d</Path>
-            
+
             <Path fileType="library">/usr/lib/python*</Path>
-            
+
             <Path fileType="data">/usr/share/bash-completion</Path>
             <Path fileType="data">/usr/share/dbus-1</Path>
             <Path fileType="data">/usr/share/polkit-1</Path>
             <Path fileType="data">/usr/share/systemd</Path>
-            
+
             <Path fileType="data">/var/lib/systemd</Path>
             <Path fileType="doc">/var/log/README</Path>
             <Path fileType="data">/var/log/journal</Path>
-            
+
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
-            
+
             <Path fileType="data">/usr/lib/kernel/install.d</Path>
         </Files>
         <RuntimeDependencies>
@@ -68,7 +68,7 @@
             <Dependency>libgcrypt</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>systemd-devel</Name>
         <Summary>systemd development headers</Summary>
@@ -82,7 +82,7 @@
             <Dependency release="current">systemd</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="10">
             <Date>09-09-2013</Date>
@@ -99,7 +99,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="8">
             <Date>06-23-2013</Date>
             <Version>200</Version>
@@ -107,7 +107,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="7">
             <Date>05-06-2013</Date>
             <Version>200</Version>
@@ -115,7 +115,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="6">
             <Date>06-02-2013</Date>
             <Version>200</Version>
@@ -123,7 +123,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="5">
             <Date>03-29-2013</Date>
             <Version>200</Version>
@@ -131,7 +131,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="4">
             <Date>03-14-2013</Date>
             <Version>198</Version>
@@ -139,7 +139,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="3">
             <Date>03-14-2013</Date>
             <Version>198</Version>
@@ -147,7 +147,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>03-14-2013</Date>
             <Version>198</Version>
@@ -155,7 +155,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>03-12-2013</Date>
             <Version>198</Version>
@@ -164,6 +164,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

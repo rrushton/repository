@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -17,7 +17,7 @@
             <Dependency>pam</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>dropbear</Name>
         <Provides>
@@ -30,8 +30,8 @@
             <Path fileType="doc">/usr/share/doc/dropbear</Path>
         </Files>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="1">
             <Date>03-20-2013</Date>
             <Version>2012.55</Version>
@@ -40,5 +40,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

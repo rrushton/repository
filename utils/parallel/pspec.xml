@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>GPLv3+</License>
         <Archive sha1sum="4f154de0818c59b45e2e1f6129a9c42fc0c6d3de" type="tarbz2">http://ftp.gnu.org/gnu/parallel/parallel-20130522.tar.bz2</Archive>
     </Source>
-    
+
     <Package>
         <Name>parallel</Name>
         <Files>
@@ -21,7 +21,7 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-16-2013</Date>
@@ -31,6 +31,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

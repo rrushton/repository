@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -17,7 +17,7 @@
             <Dependency>bison</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libpcap</Name>
         <Files>
@@ -26,13 +26,13 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libpcap-devel</Name>
         <Summary>Development files for libpcap</Summary>
         <Description>Development files for libpcap</Description>
         <Files>
-            <Path fileType="executable">/usr/bin</Path>	
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/*.a</Path>
             <Path fileType="man">/usr/share/man/man1</Path>
@@ -43,8 +43,8 @@
             <Dependency release="1">libpcap</Dependency>
         </RuntimeDependencies>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="1">
             <Date>04-04-2013</Date>
             <Version>1.3.0</Version>

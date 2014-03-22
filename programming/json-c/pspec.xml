@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>MIT</License>
         <Archive sha1sum="5d0377d2cc4a1af324d5aeb5b63032d1d026aacd" type="targz">https://s3.amazonaws.com/json-c_releases/releases/json-c-0.11.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>json-c</Name>
         <Files>
@@ -21,7 +21,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>json-c-devel</Name>
         <Summary>Development files for json-c</Summary>
@@ -34,7 +34,7 @@
             <Dependency release="current">json-c</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>05-30-2013</Date>
@@ -44,6 +44,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

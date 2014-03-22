@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,7 +11,7 @@
         <Description>colord is a system service that makes it easy to manage, install and generate color profiles to accurately color manage input and output devices.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="081ce4457e9752c726e68820b1b079ab314093a0" type="tarxz">http://www.freedesktop.org/software/colord/releases/colord-1.0.2.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>systemd-devel</Dependency>
             <Dependency>liblcms2-devel</Dependency>
@@ -24,7 +24,7 @@
             <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>colord</Name>
         <Files>
@@ -61,7 +61,7 @@
             <Dependency>glib2</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>colord-devel</Name>
         <Summary>Development files for colord</Summary>
@@ -74,7 +74,7 @@
             <Dependency release="current">colord</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="2">
             <Date>10-01-2013</Date>

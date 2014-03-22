@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -16,7 +16,7 @@
             <Dependency>libgtk-2-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>geany</Name>
         <RuntimeDependencies>
@@ -33,7 +33,7 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>geany-devel</Name>
         <Summary>Development files for geany</Summary>
@@ -46,7 +46,7 @@
             <Dependency release="current">geany</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-18-2013</Date>
@@ -56,6 +56,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <Description>The Polkit GNOME package provides an Authentication Agent for Polkit that integrates well with the GNOME Desktop environment.</Description>
         <License>GPLv3+</License>
         <Archive sha1sum="948bad76395834a1b45b65bd191d46145f5c0b9f" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/polkit-gnome/0.105/polkit-gnome-0.105.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>libcairo-devel</Dependency>
@@ -45,10 +45,10 @@
             <Dependency>libxrender-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
             <Dependency>libsm-devel</Dependency>
-            <Dependency>at-spi2-atk-devel</Dependency>		
+            <Dependency>at-spi2-atk-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>polkit-gnome</Name>
         <Files>
@@ -101,7 +101,7 @@
             <AdditionalFile target="/etc/xdg/autostart/polkit-gnome-authentication-agent-1.desktop">polkit-gnome-authentication-agent-1.desktop</AdditionalFile>
         </AdditionalFiles>
     </Package>
-    
+
     <History>
         <Update release="5">
             <Date>06-15-2013</Date>
@@ -110,7 +110,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="4">
             <Date>05-30-2013</Date>
             <Version>0.105</Version>
@@ -118,7 +118,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="3">
             <Date>04-12-2013</Date>
             <Version>0.105</Version>
@@ -126,7 +126,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>04-12-2013</Date>
             <Version>0.105</Version>
@@ -134,7 +134,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-12-2013</Date>
             <Version>0.105</Version>
@@ -143,6 +143,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

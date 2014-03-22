@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -15,7 +15,7 @@
             <Dependency>gawk</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libassuan</Name>
         <Files>
@@ -26,7 +26,7 @@
             <Path fileType="info">/usr/share/info</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>03-24-2013</Date>
@@ -36,5 +36,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

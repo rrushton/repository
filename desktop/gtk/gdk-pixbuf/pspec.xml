@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,17 +12,17 @@
         <Description>The Gdk Pixbuf is a toolkit for image loading and pixel buffer manipulation. It is used by GTK+ 2 and GTK+ 3 to load and manipulate images.</Description>
         <License>GPLv3+</License>
         <Archive sha1sum="c1e2b5e7ca5281543f327d805e0b5d5d0c08a6db" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gdk-pixbuf/2.28/gdk-pixbuf-2.28.0.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>libtiff-devel</Dependency>
             <Dependency>libjpeg-turbo-devel</Dependency>
             <Dependency>zlib-devel</Dependency>
             <Dependency>libpng-devel</Dependency>
             <Dependency>libpcre-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>		
+            <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>gdk-pixbuf</Name>
         <Files>
@@ -47,10 +47,10 @@
             <Dependency>glib2</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>gdk-pixbuf-devel</Name>
-        <Summary>Development files for gdk-pixbuf</Summary>    
+        <Summary>Development files for gdk-pixbuf</Summary>
         <Description>Development files for gdk-pixbuf</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
@@ -60,7 +60,7 @@
             <Dependency release="current">gdk-pixbuf</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>gdk-pixbuf-docs</Name>
         <Summary>Documentation for gdk-pixbuf</Summary>
@@ -73,9 +73,9 @@
             <Dependency release="current">gdk-pixbuf-devel</Dependency>
         </RuntimeDependencies>
     </Package>
-     
-    
-    
+
+
+
     <History>
         <Update release="6">
             <Date>09-04-2013</Date>
@@ -92,7 +92,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="4">
             <Date>04-07-2013</Date>
             <Version>2.28.0</Version>
@@ -100,7 +100,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="3">
             <Date>04-07-2013</Date>
             <Version>2.28.0</Version>
@@ -108,7 +108,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>04-07-2013</Date>
             <Version>2.28.0</Version>
@@ -116,7 +116,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-07-2013</Date>
             <Version>2.28.0</Version>
@@ -125,5 +125,5 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

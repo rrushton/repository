@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,13 +11,13 @@
         <Description>libXrandr provides an X Window System client interface to the RandR extension to the X protocol. The RandR extension allows for run-time configuration of display attributes such as resolution, rotation, and reflection.</Description>
         <License>GPLv3+</License>
         <Archive sha1sum="2353d16635a20521a64838f568bb4c8a10823316" type="tarbz2">mirrors://xorg/individual/lib/libXrandr-1.4.0.tar.bz2</Archive>
-        
+
         <BuildDependencies>
             <Dependency>randrproto</Dependency>
             <Dependency>xproto</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libxrandr</Name>
         <Files>
@@ -25,7 +25,7 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libxrandr-devel</Name>
         <Summary>Development files for libxrandr</Summary>
@@ -41,7 +41,7 @@
             <Dependency>xproto</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="3">
             <Date>05-24-2013</Date>
@@ -50,7 +50,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>03-18-2013</Date>
             <Version>1.4.0</Version>
@@ -58,7 +58,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>03-12-2013</Date>
             <Version>1.4.0</Version>
@@ -67,6 +67,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

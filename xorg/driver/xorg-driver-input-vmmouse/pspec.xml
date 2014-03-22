@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,12 +11,12 @@
         <Description>The Xorg VMMouse Driver package contains the VMMouse input driver for the Xorg X server. The VMMouse driver enables support for the special VMMouse protocol that is provided by VMware virtual machines to give absolute pointer positioning.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="0fa67d2ca9b2b26d32b93cc030fc3ea28964fe81" type="tarbz2">ftp://ftp.x.org/pub/individual/driver/xf86-input-vmmouse-13.0.0.tar.bz2</Archive>
-        
+
         <BuildDependencies>
             <Dependency>xorg-server-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>xorg-driver-input-vmmouse</Name>
         <Files>
@@ -31,7 +31,7 @@
             <Dependency>xorg-server</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-05-2013</Date>
@@ -41,6 +41,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

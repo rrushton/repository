@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,12 +13,12 @@
         <License>GPLv2+</License>
         <IsA>library</IsA>
         <Archive sha1sum="a7f038223ecbdd59f5fafb142f6aa89d4061e460" type="targz">http://p11-glue.freedesktop.org/releases/p11-kit-0.15.2.tar.gz</Archive>
-        
+
         <BuildDependencies>
-            <Dependency>libtasn1-devel</Dependency>		
+            <Dependency>libtasn1-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libp11-kit</Name>
         <Files>
@@ -30,10 +30,10 @@
             <Path fileType="library">/usr/lib/pkcs11</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency>libtasn1</Dependency>		
+            <Dependency>libtasn1</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libp11-kit-devel</Name>
         <Summary>Development files for libp11-kit</Summary>
@@ -46,7 +46,7 @@
             <Dependency release="current">libp11-kit</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libp11-kit-docs</Name>
         <Summary>API Documentation for libp11-kit</Summary>
@@ -58,7 +58,7 @@
             <Dependency release="current">libp11-kit-devel</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="3">
             <Date>04-13-2013</Date>
@@ -67,7 +67,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>04-13-2013</Date>
             <Version>0.15.2</Version>
@@ -75,7 +75,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-13-2013</Date>
             <Version>0.15.2</Version>
@@ -84,6 +84,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

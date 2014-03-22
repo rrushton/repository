@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,7 +11,7 @@
         <Description>Core X11 protocol client library</Description>
         <License>GPLv3+</License>
         <Archive sha1sum="8177535c9c59d8c3ab98d55ce53520b5737ccd1a" type="tarbz2">mirrors://xorg/individual/lib/libX11-1.5.0.tar.bz2</Archive>
-        
+
         <BuildDependencies>
             <Dependency>libxdmcp-devel</Dependency>
             <Dependency>libxcb-devel</Dependency>
@@ -19,26 +19,26 @@
             <Dependency>kbproto</Dependency>
             <Dependency>inputproto</Dependency>
         </BuildDependencies>
-        
+
     </Source>
-    
+
     <Package>
         <Name>libx11</Name>
         <Files>
             <Path fileType="library">/usr/lib/lib*so*</Path>
             <Path fileType="data">/usr/lib/X11</Path>
-            <Path fileType="doc">/usr/share/doc</Path> 
+            <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="data">/usr/share/X11</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency>libxdmcp</Dependency>
             <Dependency>libxcb</Dependency>
-            <Dependency>libxau</Dependency>	
+            <Dependency>libxau</Dependency>
         </RuntimeDependencies>
-        	
+
     </Package>
-    
+
     <Package>
         <Name>libx11-devel</Name>
         <Summary>Development files for libx11</Summary>
@@ -53,7 +53,7 @@
             <Dependency>kbproto</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="5">
             <Date>05-30-2013</Date>
@@ -62,7 +62,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="4">
             <Date>04-03-2013</Date>
             <Version>1.5.0</Version>
@@ -70,7 +70,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="3">
             <Date>03-28-2013</Date>
             <Version>1.5.0</Version>
@@ -78,7 +78,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>03-17-2013</Date>
             <Version>1.5.0</Version>
@@ -86,7 +86,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>03-11-2013</Date>
             <Version>1.5.0</Version>
@@ -95,6 +95,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

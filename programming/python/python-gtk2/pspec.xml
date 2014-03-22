@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -36,7 +36,7 @@
             <Dependency>python-gobject2-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>python-gtk2</Name>
         <Files>
@@ -113,7 +113,7 @@
             <Dependency release="current">python-gtk2-devel</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>09-26-2013</Date>
@@ -123,5 +123,5 @@
             <Email>gazza@virtualcity.com.au</Email>
         </Update>
     </History>
-    	
+
 </PISI>

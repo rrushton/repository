@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,7 +11,7 @@
         <Description>Murrine Engine for GTK2 Themes</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="ddaca56b6e10736838572014ae9d20b814242615" type="tarxz">https://launchpad.net/ubuntu/+archive/primary/+files/gtk2-engines-murrine_0.98.2.orig.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>harfbuzz-devel</Dependency>
@@ -42,7 +42,7 @@
             <Dependency>libsm-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>gtk2-engine-murrine</Name>
         <Files>
@@ -88,7 +88,7 @@
             <Dependency>libsm</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-18-2013</Date>
@@ -98,6 +98,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

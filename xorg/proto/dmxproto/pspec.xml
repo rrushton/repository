@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -14,7 +14,7 @@
         <License>GPLv3+</License>
         <Archive sha1sum="3b8b273b8ef3d8dbab998df9ec1dddf99edf4d91" type="tarbz2">mirrors://xorg/individual/proto/dmxproto-2.3.1.tar.bz2</Archive>
     </Source>
-    
+
     <Package>
         <Name>dmxproto</Name>
         <Files>
@@ -23,7 +23,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>03-09-2013</Date>
@@ -33,6 +33,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

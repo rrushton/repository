@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>GPLv3+</License>
         <Archive sha1sum="8886fe94a4cefaf42678ebeca25f4c012bd0f5dc" type="targz">ftp://ftp.gnu.org/gnu/patch/patch-2.7.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>patch</Name>
         <Files>
@@ -21,8 +21,8 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="1">
             <Date>03-11-2013</Date>
             <Version>2.7</Version>
@@ -31,5 +31,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

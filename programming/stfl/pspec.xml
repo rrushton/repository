@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>GPLv3</License>
         <Archive sha1sum="226488be2b33867dfb233f0fa2dde2d066e494bd" type="targz">http://www.clifford.at/stfl/stfl-0.22.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>stfl</Name>
         <Files>
@@ -20,7 +20,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>stfl-devel</Name>
         <Summary>Development files for stfl</Summary>
@@ -33,7 +33,7 @@
             <Dependency release="current">stfl</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>05-30-2013</Date>
@@ -43,6 +43,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

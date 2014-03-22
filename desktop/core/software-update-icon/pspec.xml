@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,9 +12,9 @@
         <Description>System tray icon notifying you to new updates</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="07a121e5b8753ec94a765148b07d53550fc08e0a" type="tarbz2">https://bitbucket.org/solusos/update-icon/get/v0.2.tar.bz2</Archive>
-        
+
     </Source>
-    
+
     <Package>
         <Name>software-update-icon</Name>
         <Files>
@@ -33,15 +33,15 @@
             </AnyDependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="2">
             <Date>09-09-2013</Date>
             <Version>0.2</Version>
             <Comment>Upgrade to latest version
- - Bail in live sessions
- - Use better wording in messages
-</Comment>
+                - Bail in live sessions
+                - Use better wording in messages
+            </Comment>
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>

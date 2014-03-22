@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -14,7 +14,7 @@
         <License>LGPLV3+</License>
         <Archive sha1sum="e1ea13c24a30bc93932d19eb5ad0704a618506dd" type="targz">http://ftp.gnu.org/gnu/libunistring/libunistring-0.9.3.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>libunistring</Name>
         <Files>
@@ -28,12 +28,12 @@
             <Path fileType="doc">/usr/share/doc/libunistring/COPYING*</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libunistring-devel</Name>
         <Summary>Development files for libunistring</Summary>
         <Description>Development files for libunistring</Description>
-        <Files>	
+        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="doc">/usr/share/doc/libunistring/libunistring*</Path>
         </Files>
@@ -41,7 +41,7 @@
             <Dependency release="current">libunistring</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>04-21-2013</Date>
@@ -51,5 +51,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>

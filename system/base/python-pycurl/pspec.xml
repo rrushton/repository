@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,19 +11,19 @@
         <Description>Easy access to libcurl from Python</Description>
         <License>MIT</License>
         <Archive sha1sum="3fb59eca1461331bb9e9e8d6fe3b23eda961a416" type="targz">http://pycurl.sourceforge.net/download/pycurl-7.19.0.tar.gz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>curl-devel</Dependency>
             <Dependency>python</Dependency>
         </BuildDependencies>
-        
+
         <Patches>
             <Patch level="1">no_static_link.patch</Patch>
             <Patch level="1">force_openssl.patch</Patch>
         </Patches>
-        
+
     </Source>
-    
+
     <Package>
         <Name>python-pycurl</Name>
         <Files>
@@ -35,8 +35,8 @@
             <Dependency>python</Dependency>
         </RuntimeDependencies>
     </Package>
-    
-    <History>	
+
+    <History>
         <Update release="3">
             <Date>05-26-2013</Date>
             <Version>7.19.0</Version>
@@ -44,7 +44,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>05-25-2013</Date>
             <Version>7.19.0</Version>
@@ -52,7 +52,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>03-12-2013</Date>
             <Version>7.19.0</Version>
@@ -61,6 +61,6 @@
             <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

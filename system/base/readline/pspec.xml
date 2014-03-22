@@ -21,14 +21,14 @@
             <Patch>readline62-004</Patch>
         </Patches>
     </Source>
-    
+
     <Package>
         <Name>readline</Name>
         <Files>
             <Path fileType="*">/</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>03-09-2013</Date>

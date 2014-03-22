@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,17 +12,17 @@
         <Description>The Network Security Services (NSS) package is a set of libraries designed to support cross-platform development of security-enabled client and server applications. Applications built with NSS can support SSL v2 and v3, TLS, PKCS #5, PKCS #7, PKCS #11, PKCS #12, S/MIME, X.509 v3 certificates, and other security standards. This is useful for implementing SSL and S/MIME or other Internet security standards into an application.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="94d8781d1fa29cfbd37453dda3e9488709b82c4c" type="targz">http://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_14_3_RTM/src/nss-3.14.3.tar.gz</Archive>
-        
+
         <Patches>
             <Patch level="2">nss-3.14.3-standalone-1.patch</Patch>
         </Patches>
-        
+
         <BuildDependencies>
             <Dependency>libnspr-devel</Dependency>
             <Dependency>sqlite3-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libnss</Name>
         <Files>
@@ -36,7 +36,7 @@
             <Dependency>sqlite3</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libnss-devel</Name>
         <Summary>Development files for libnss</Summary>
@@ -50,7 +50,7 @@
             <Dependency release="current">libnss</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="5">
             <Date>05-25-2013</Date>
@@ -59,7 +59,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="4">
             <Date>04-22-2013</Date>
             <Version>3.14.3</Version>
@@ -67,7 +67,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="3">
             <Date>03-19-2013</Date>
             <Version>3.14.3</Version>
@@ -75,7 +75,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>03-19-2013</Date>
             <Version>3.14.3</Version>
@@ -83,7 +83,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>03-19-2013</Date>
             <Version>3.14.3</Version>
@@ -92,6 +92,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

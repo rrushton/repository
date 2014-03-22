@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,7 +11,7 @@
         <Description>tint2 is a simple panel/taskbar unintrusive and light (memory / cpu / aestetic).</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="9752255529673dabf13e7437afd1cd0b39d9c92b" type="tarbz2">http://tint2.googlecode.com/files/tint2-0.11.tar.bz2</Archive>
-        
+
         <BuildDependencies>
             <Dependency>libx11-devel</Dependency>
             <Dependency>harfbuzz-devel</Dependency>
@@ -42,7 +42,7 @@
             <Dependency>libxft-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>tint2</Name>
         <Files>
@@ -93,7 +93,7 @@
             <Dependency>libsm</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-04-2013</Date>
@@ -103,6 +103,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

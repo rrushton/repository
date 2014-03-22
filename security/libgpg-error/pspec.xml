@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -10,10 +10,10 @@
         <Summary>library with error codes for GnuPG related software</Summary>
         <Description> Libgpg-error is a small library with error codes and descriptions shared by most GnuPG related software.</Description>
         <License>GPLv3</License>
-        
+
         <Archive sha1sum="be209b013652add5c7e2c473ea114f58203cc6cd" type="tarbz2">ftp://ftp.gnupg.org/gcrypt/libgpg-error/libgpg-error-1.11.tar.bz2</Archive>
     </Source>
-    
+
     <Package>
         <Name>libgpg-error</Name>
         <Files>
@@ -25,7 +25,7 @@
             <Path fileType="localedata">/usr/share/locale</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>03-24-2013</Date>
@@ -35,5 +35,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

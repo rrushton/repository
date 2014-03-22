@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -18,7 +18,7 @@
             <Dependency>gnupg</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>mutt</Name>
         <Files>
@@ -33,9 +33,9 @@
             <Dependency>gnupg</Dependency>
         </RuntimeDependencies>
     </Package>
-    
-    
-    <History> 
+
+
+    <History>
         <Update release="1">
             <Date>03-24-2013</Date>
             <Version>1.5.21</Version>
@@ -44,5 +44,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

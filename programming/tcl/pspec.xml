@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>BSD</License>
         <Archive sha1sum="fc57fc08ab113740a702bb67d4f350f8ec85ef58" type="targz">http://prdownloads.sourceforge.net/tcl/tcl8.6.0-src.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>tcl</Name>
         <Files>
@@ -30,12 +30,12 @@
             <Path fileType="man">/usr/share/man/mann</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>tcl-devel</Name>
         <Summary>Development files for tcl</Summary>
         <Description>Development files for tcl</Description>
-        <Files>	
+        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/*.a</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
@@ -45,8 +45,8 @@
             <Dependency release="1">tcl</Dependency>
         </RuntimeDependencies>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="1">
             <Date>03-23-2013</Date>
             <Version>8.6.0</Version>
@@ -55,5 +55,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

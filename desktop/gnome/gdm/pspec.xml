@@ -12,7 +12,7 @@
         <Description>A graphical login manager for your desktop, integrated within the GNOME desktop environment</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="8178169c0609f335bb5411ad030cc07d8b55e278" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/gdm/3.10/gdm-3.10.0.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>harfbuzz-devel</Dependency>

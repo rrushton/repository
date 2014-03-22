@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,12 +12,12 @@
         <License>GPLv2+</License>
         <Archive sha1sum="d91d977a1909e0cc3f5cb30754ba5e5e90655ab0" type="targz">http://downloads.sourceforge.net/cracklib/cracklib-2.8.22.tar.gz</Archive>
         <Archive sha1sum="e0cea03e505e709b15b8b950d56cb493166607da" type="binary">http://downloads.sourceforge.net/cracklib/cracklib-words-20080507.gz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>cracklib</Name>
         <Files>
@@ -33,7 +33,7 @@
             <Dependency>zlib</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>cracklib-devel</Name>
         <Summary>Development files for cracklib</Summary>
@@ -45,7 +45,7 @@
             <Dependency release="current">cracklib</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-16-2013</Date>
@@ -55,6 +55,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

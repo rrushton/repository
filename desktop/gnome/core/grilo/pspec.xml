@@ -11,14 +11,15 @@
         <Summary>Media discovery framework</Summary>
         <Description>Grilo is a framework focused on making media discovery and browsing easy for application developers.
 
-More precisely, Grilo provides:
+            More precisely, Grilo provides:
 
-    A single, high-level API that abstracts the differences among various media content providers, allowing application developers to integrate content from various services and sources easily.
-    A collection of plugins for accessing content from various media providers. Developers can share efforts and code by writing plugins for the framework that are application agnostic.
-    A flexible API that allows plugin developers to write plugins of various kinds. </Description>
+            A single, high-level API that abstracts the differences among various media content providers, allowing application developers to integrate content from various services and sources easily.
+            A collection of plugins for accessing content from various media providers. Developers can share efforts and code by writing plugins for the framework that are application agnostic.
+            A flexible API that allows plugin developers to write plugins of various kinds.
+        </Description>
         <License>GPLv2+</License>
         <Archive sha1sum="495779030076ab744724132f91b40e7427a32f1b" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/grilo/0.2/grilo-0.2.7.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>glib2-devel</Dependency>
             <Dependency>libxml2-devel</Dependency>

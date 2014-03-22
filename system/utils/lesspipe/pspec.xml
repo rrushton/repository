@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>GPLv2</License>
         <Archive sha1sum="61a7657b20b910ed8219c6b77467e601f9a89894" type="targz">http://www-zeuthen.desy.de/~friebel/unix/less/lesspipe.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>lesspipe</Name>
         <Files>
@@ -21,7 +21,7 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>04-19-2013</Date>
@@ -31,6 +31,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

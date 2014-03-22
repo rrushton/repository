@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,12 +11,12 @@
         <Description>The LVM2 package is a package that manages logical partitions. It allows spanning of file systems across multiple physical disks and disk partitions and provides for dynamic growing or shrinking of logical partitions. </Description>
         <License>GPLv3+</License>
         <Archive sha1sum="90a1f3cc3fb9d1c47cc94a9cf58dddacecc26e57"  type="targz">ftp://sources.redhat.com/pub/lvm2/releases/LVM2.2.02.99.tgz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>systemd-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>lvm2</Name>
         <Files>
@@ -29,7 +29,7 @@
             <Path fileType="library">/lib/device-mapper/*.so</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>lvm2-devel</Name>
         <Summary>Development files for lvm2 and device-mapper</Summary>
@@ -42,7 +42,7 @@
             <Dependency release="current">lvm2</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="5">
             <Date>08-24-2013</Date>
@@ -59,7 +59,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="3">
             <Date>08-07-2013</Date>
             <Version>2.02.99</Version>
@@ -67,7 +67,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>03-28-2013</Date>
             <Version>2.02.98</Version>
@@ -75,7 +75,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>03-28-2013</Date>
             <Version>2.02.98</Version>
@@ -84,6 +84,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

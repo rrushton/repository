@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,12 +12,12 @@
         <Description>The GTK+ 2 package contains the libraries used for creating graphical user interfaces for applications. </Description>
         <License>GPLv3+</License>
         <Archive sha1sum="1c539a1564fbcb0a9b60b03188dc808f7b678531" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gtk+/2.24/gtk+-2.24.17.tar.xz</Archive>
-        
+
         <Patches>
             <!-- Prevent bugs in GTK+ documentation  rebuilding. Fix man pages for the binary tools //-->
             <Patch level="1">fix_docs_and_manpages.patch</Patch>
         </Patches>
-        
+
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>libcairo-devel</Dependency>
@@ -40,18 +40,18 @@
             <Dependency>libx11-devel</Dependency>
             <Dependency>libxcomposite-devel</Dependency>
             <Dependency>libxrender-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>	
+            <Dependency>glib2-devel</Dependency>
             <Dependency>libatk-devel</Dependency>
             <Dependency>at-spi2-atk-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libgtk-2</Name>
         <Files>
             <Path fileType="executable">/usr/bin/gtk-builder-convert</Path>
             <Path fileType="executable">/usr/bin/gtk-query-immodules-2.0</Path>
-            <Path fileType="executable">/usr/bin/gtk-update-icon-cache</Path>		
+            <Path fileType="executable">/usr/bin/gtk-update-icon-cache</Path>
             <Path fileType="library">/usr/lib/gtk-2.0</Path>
             <Path fileType="library">/usr/lib/lib*.so*</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
@@ -95,9 +95,9 @@
             <Dependency>libxrender</Dependency>
             <Dependency>glib2</Dependency>
         </RuntimeDependencies>
-        
+
     </Package>
-    
+
     <Package>
         <Name>libgtk-2-devel</Name>
         <Summary>Development files for libgtk-2</Summary>
@@ -111,7 +111,7 @@
             <Dependency release="current">libgtk-2</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libgtk-2-docs</Name>
         <Summary>API Documentation for libgtk-2</Summary>
@@ -123,9 +123,9 @@
         <RuntimeDependencies>
             <Dependency release="current">libgtk-2</Dependency>
         </RuntimeDependencies>
-        	
+
     </Package>
-    
+
     <Package>
         <Name>gtk2-demo</Name>
         <Summary>Demonstration of gtk2</Summary>
@@ -167,9 +167,9 @@
             <Dependency>libxrender</Dependency>
             <Dependency>glib2</Dependency>
         </RuntimeDependencies>
-        	
+
     </Package>
-    
+
     <History>
         <Update release="6">
             <Date>09-04-2013</Date>
@@ -186,7 +186,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="4">
             <Date>04-08-2013</Date>
             <Version>2.24.17</Version>
@@ -194,7 +194,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="3">
             <Date>04-08-2013</Date>
             <Version>2.24.17</Version>
@@ -202,7 +202,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>04-08-2013</Date>
             <Version>2.24.17</Version>
@@ -210,7 +210,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-08-2013</Date>
             <Version>2.24.17</Version>
@@ -219,5 +219,5 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -15,9 +15,9 @@
         <Patches>
             <Patch level="0">change-dest-for-install.patch</Patch>
         </Patches>
-        
+
     </Source>
-    
+
     <Package>
         <Name>pciutils</Name>
         <Files>
@@ -28,7 +28,7 @@
             <Path fileType="data">/usr/share/hwids</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>pciutils-devel</Name>
         <Summary>Development files for pciutils</Summary>
@@ -40,7 +40,7 @@
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>03-15-2013</Date>
@@ -50,5 +50,5 @@
             <Email>matiaslina@gmail.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

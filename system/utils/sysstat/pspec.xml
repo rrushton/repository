@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -16,7 +16,7 @@
             <Dependency>ncurses-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>sysstat</Name>
         <RuntimeDependencies>
@@ -32,8 +32,8 @@
             <Path fileType="data">/var/log/sa</Path>
         </Files>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="1">
             <Date>03-23-2013</Date>
             <Version>10.0.5</Version>

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,7 +11,8 @@
         <Summary>Adobe Flash Player</Summary>
         <Description>The Adobe Flash Player enables rich content in web browsers, and is in use on many websites across the world. Note that this package provides the last released Linux plugin, which will no longer be updated by Adobe. Newer versions are available in Google Chrome via the Pepper Plugin.
 
-By using this package, you accept the terms and conditions set in the end-user license agreement: http://www.adobe.com/products/eulas/players/flash/</Description>
+            By using this package, you accept the terms and conditions set in the end-user license agreement: http://www.adobe.com/products/eulas/players/flash/
+        </Description>
         <License>AdobeFlash-12.2.202.297</License>
         <!-- the i386 plugin, we haven't got a 64-bit SolusOS yet //-->
         <Archive sha1sum="cf86001e5362b4e226e3c24031e47b35ad491147" type="targz">http://fpdownload.macromedia.com/get/flashplayer/pdc/11.2.202.297/install_flash_player_11_linux.i386.tar.gz</Archive>
@@ -76,5 +77,6 @@ By using this package, you accept the terms and conditions set in the end-user l
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-    </History>	
+    </History>
+
 </PISI>

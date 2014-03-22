@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -17,7 +17,7 @@
             <Dependency>bdwgc-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>guile</Name>
         <Files>
@@ -34,7 +34,7 @@
         <Name>guile-devel</Name>
         <Summary>Development files for guile</Summary>
         <Description>Development files for guile</Description>
-        <Files>	
+        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="data">/usr/share/aclocal</Path>
@@ -43,7 +43,7 @@
             <Dependency release="current">guile</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>04-21-2013</Date>
@@ -53,6 +53,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

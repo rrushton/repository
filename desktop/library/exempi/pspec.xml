@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,12 +13,12 @@
         <License>GPLv2+</License>
         <License>BSD</License>
         <Archive sha1sum="8c90ee42fef86890e4850c3562f8044f9cd66cfb" type="tarbz2">http://libopenraw.freedesktop.org/download/exempi-2.2.0.tar.bz2</Archive>
-        
+
         <BuildDependencies>
             <Dependency>libboost-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libexempi</Name>
         <Files>
@@ -27,7 +27,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libexempi-devel</Name>
         <Summary>Development files for libexempi</Summary>
@@ -40,7 +40,7 @@
             <Dependency release="current">libexempi</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-06-2013</Date>
@@ -50,6 +50,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

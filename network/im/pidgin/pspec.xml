@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <Description>Pidgin is a graphical multi-protocol IM client that runs on Microsoft Windows and Unixes. It is written in C and uses Glib and GTK+. It also provides libpurple, a library used for developing IM programs.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="01bc06e3a5712dded3ad4a4913ada12a3cd01e15" type="tarbz2">http://sourceforge.net/projects/pidgin/files/Pidgin/2.10.7/pidgin-2.10.7.tar.bz2</Archive>
-        
+
         <BuildDependencies>
             <Dependency>libcairo-devel</Dependency>
             <Dependency>dbus-devel</Dependency>
@@ -46,7 +46,7 @@
             <Dependency>network-manager-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libpurple</Name>
         <Description>Core IM libraries</Description>
@@ -103,12 +103,12 @@
             <Dependency release="current">libpurple</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>finch</Name>
         <Summary>Finch is the command line client part of Pidgin</Summary>
         <Description>Finch is a command line chat client that ships with Pidgin.</Description>
-        <Files>    
+        <Files>
             <Path fileType="executable">/usr/bin/finch</Path>
             <Path fileType="library">/usr/lib/finch</Path>
             <Path fileType="library">/usr/lib/libgnt*.so*</Path>
@@ -123,7 +123,7 @@
         <Name>finch-devel</Name>
         <Summary>Development files for finch</Summary>
         <Description>Development files for finch</Description>
-        <Files>    
+        <Files>
             <Path fileType="header">/usr/include/gnt</Path>
             <Path fileType="header">/usr/include/finch</Path>
             <Path fileType="data">/usr/lib/pkgconfig/gnt*</Path>
@@ -135,12 +135,12 @@
             <Dependency release="current">libpurple-devel</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>pidgin</Name>
         <Summary>Graphical multi-protocol IM client</Summary>
         <Description>Pidgin is a graphical multi-protocol IM client that runs on Microsoft Windows and Unixes. It is written in C and uses Glib and GTK+. It also provides libpurple, a library used for developing IM programs.</Description>
-        <Files>    
+        <Files>
             <Path fileType="executable">/usr/bin/pidgin</Path>
             <Path fileType="library">/usr/lib/pidgin</Path>
             <Path fileType="data">/usr/share/pixmaps/pidgin</Path>
@@ -193,12 +193,12 @@
             <Dependency>libsm</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>pidgin-devel</Name>
         <Summary>Development files for Pidgin</Summary>
         <Description>Development files for Pidgin</Description>
-        <Files>    
+        <Files>
             <Path fileType="header">/usr/include/pidgin</Path>
             <Path fileType="data">/usr/lib/pkgconfig/pidgin.pc</Path>
         </Files>
@@ -206,7 +206,7 @@
             <Dependency release="current">pidgin</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="4">
             <Date>05-30-2013</Date>
@@ -215,7 +215,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="3">
             <Date>05-21-2013</Date>
             <Version>2.10.7</Version>
@@ -223,7 +223,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>04-27-2013</Date>
             <Version>2.10.7</Version>
@@ -231,7 +231,7 @@
             <Name>Justin Krehel</Name>
             <Email>justin@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-19-2013</Date>
             <Version>2.10.7</Version>
@@ -240,6 +240,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

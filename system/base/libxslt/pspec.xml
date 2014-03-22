@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>GPLv3+</License>
         <Archive sha1sum="4df177de629b2653db322bfb891afa3c0d1fa221" type="targz">http://xmlsoft.org/sources/libxslt-1.1.28.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>libxslt</Name>
         <Files>
@@ -25,7 +25,7 @@
             <Path fileType="library">/usr/lib/python*</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libxslt-devel</Name>
         <Files>
@@ -37,7 +37,7 @@
             <Dependency>libxslt</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>03-11-2013</Date>
@@ -47,6 +47,6 @@
             <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

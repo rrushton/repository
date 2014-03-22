@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>GPLv2+</License>
         <Archive sha1sum="024d5c27ae7fd63b012e663c437b3ec46f12b789" type="targz">http://sourceforge.net/projects/xmlindent/files/xmlindent/0.2.17/xmlindent-0.2.17.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>xmlindent</Name>
         <Files>
@@ -21,7 +21,7 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>09-21-2013</Date>
@@ -31,5 +31,5 @@
             <Email>gazza@virtualcity.com.au</Email>
         </Update>
     </History>
-    
+
 </PISI>

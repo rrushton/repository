@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>Apache</License>
         <Archive sha1sum="1edaa0e3cf9d445988313212f0ea4538c3324c86" type="targz">http://www.cython.org/release/Cython-0.19.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>cython</Name>
         <Files>
@@ -22,7 +22,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>04-25-2013</Date>
@@ -32,6 +32,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

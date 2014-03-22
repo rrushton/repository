@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,9 +12,9 @@
         <Description>ATK provides the set of accessibility interfaces that are implemented by other toolkits and applications. Using the ATK interfaces, accessibility tools have full access to view and control running applications.</Description>
         <License>GPLv3+</License>
         <Archive sha1sum="e8a9dacd22b31a6cb733ce66fb1c220cc6720970" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/atk/2.8/atk-2.8.0.tar.xz</Archive>
-        
+
     </Source>
-    
+
     <Package>
         <Name>libatk</Name>
         <Files>
@@ -24,7 +24,7 @@
             <Path fileType="data">/usr/share/gir-1.0</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libatk-devel</Name>
         <Summary>Development files for libatk</Summary>
@@ -38,7 +38,7 @@
             <Dependency>libatk</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="3">
             <Date>06-19-2013</Date>
@@ -47,7 +47,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>02-04-2013</Date>
             <Version>2.6.0</Version>
@@ -55,7 +55,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>02-04-2013</Date>
             <Version>2.6.0</Version>
@@ -64,5 +64,5 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

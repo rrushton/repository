@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>GPLv2</License>
         <Archive sha1sum="db4717a151742dbdb492318f104504a92075543a" type="targz">http://www.abisource.com/downloads/wv/1.2.9/wv-1.2.9.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>libwv</Name>
         <Files>
@@ -23,7 +23,7 @@
             <Path fileType="data">/usr/share/wv</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libwv-devel</Name>
         <Summary>Development files for libwv</Summary>
@@ -33,7 +33,7 @@
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-25-2013</Date>
@@ -43,6 +43,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

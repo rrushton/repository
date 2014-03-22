@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>LGPLv2.1</License>
         <Archive sha1sum="fcd3430a03fcda27d7359d6bbbc3c1396438c183" type="targz">http://alpha.gnu.org/gnu/aspell/aspell-0.60.7-20110707.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>aspell</Name>
         <Files>
@@ -30,14 +30,14 @@
         <Name>aspell-devel</Name>
         <Summary>Development files for aspell</Summary>
         <Description>Development files for aspell</Description>
-        <Files>    
+        <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">aspell</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>04-27-2013</Date>
@@ -47,6 +47,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -17,7 +17,7 @@
             <Dependency>openssl-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <RuntimeDependencies>
             <Dependency>libpcap</Dependency>
@@ -30,7 +30,7 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>04-04-2013</Date>
@@ -40,5 +40,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

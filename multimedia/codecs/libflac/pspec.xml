@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -19,7 +19,7 @@
             <Patch level="1">fix_memcmp_not_declared.patch</Patch>
         </Patches>
     </Source>
-    
+
     <Package>
         <Name>libflac</Name>
         <RuntimeDependencies>
@@ -32,7 +32,7 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libflac-devel</Name>
         <RuntimeDependencies>
@@ -44,7 +44,7 @@
             <Path fileType="data">/usr/share/aclocal</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>05-31-2013</Date>
@@ -54,6 +54,6 @@
             <Email>matiaslina@gmail.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>GPLv3+</License>
         <Archive sha1sum="49c87e0ccb999966b7b1b4e72cb927f05e0835bd" type="tarbz2">mirrors://xorg/individual/lib/libXv-1.0.7.tar.bz2</Archive>
     </Source>
-    
+
     <Package>
         <Name>libxv</Name>
         <Files>
@@ -20,12 +20,12 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libxv-devel</Name>
         <Summary>Development files for libxv</Summary>
         <Description>Development files for libxv</Description>
-        <Files>	
+        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/*.a</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
@@ -34,7 +34,7 @@
             <Dependency release="2">libxv</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="2">
             <Date>03-18-2013</Date>
@@ -43,7 +43,7 @@
             <Name>Justin Krehel</Name>
             <Email>justin@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>03-12-2013</Date>
             <Version>1.0.7</Version>
@@ -52,6 +52,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -19,7 +19,7 @@
             <Dependency>libspeex-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libav-bin</Name>
         <Summary>Cross-platform media decoding library</Summary>
@@ -42,7 +42,7 @@
             <Dependency>libav-codec</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libav-docs</Name>
         <Summary>Doc files for libav</Summary>
@@ -50,7 +50,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libswscale</Name>
         <Summary>Libav video scaling library</Summary>
@@ -61,7 +61,7 @@
             <Dependency>libav-util</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libswscale-devel</Name>
         <Summary>Development files for libswscale</Summary>
@@ -74,8 +74,8 @@
             <Dependency>libav-util-devel</Dependency>
         </RuntimeDependencies>
     </Package>
-    
-    
+
+
     <Package>
         <Name>libav-util</Name>
         <Summary>Libav utility library</Summary>
@@ -83,7 +83,7 @@
             <Path fileType="library">/usr/lib/libavutil.so*</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libav-util-devel</Name>
         <Summary>Development files for libav-util</Summary>
@@ -95,8 +95,8 @@
             <Dependency release="current">libav-util</Dependency>
         </RuntimeDependencies>
     </Package>
-    
-    
+
+
     <Package>
         <Name>libav-resample</Name>
         <Summary>Libav utilities for resample</Summary>
@@ -109,7 +109,7 @@
             <Dependency>libav-format</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libav-resample-devel</Name>
         <Summary>Development files for libav-resample library</Summary>
@@ -122,8 +122,8 @@
             <Dependency>libav-util-devel</Dependency>
         </RuntimeDependencies>
     </Package>
-    
-    
+
+
     <Package>
         <Name>libav-format</Name>
         <Summary>Libav file format library</Summary>
@@ -135,7 +135,7 @@
             <Dependency>libav-codec</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libav-format-devel</Name>
         <Summary>Development files for libav-format library</Summary>
@@ -149,8 +149,8 @@
             <Dependency>libav-util-devel</Dependency>
         </RuntimeDependencies>
     </Package>
-    
-    
+
+
     <Package>
         <Name>libav-filter</Name>
         <Summary>libav video filtering library</Summary>
@@ -164,7 +164,7 @@
             <Dependency>libswscale</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Summary>Development files for libav-filter library</Summary>
         <Name>libav-filter-devel</Name>
@@ -177,7 +177,7 @@
             <Dependency>libav-codec-devel</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libav-device</Name>
         <Summary>Libav device handling library</Summary>
@@ -191,7 +191,7 @@
             <!-- need libjack (checked in `aptitude show...` -->
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libav-device-devel</Name>
         <Summary>Development files for libav-device library</Summary>
@@ -204,7 +204,7 @@
             <Dependency>libav-format-devel</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libav-codec</Name>
         <Summary>Libav codec library</Summary>
@@ -219,7 +219,7 @@
             <Dependency>libav-util</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libav-codec-devel</Name>
         <Summary>Development files for libav-codec library</Summary>
@@ -232,7 +232,7 @@
             <Dependency>libav-util-devel</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-02-2013</Date>
@@ -242,6 +242,6 @@
             <Email>matiaslina@gmail.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

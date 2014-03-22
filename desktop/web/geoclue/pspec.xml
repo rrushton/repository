@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>GPLv2+</License>
         <Archive sha1sum="2bf943e5cfbe714d9247e4b01eee64b3a60efdd1" type="tarxz">http://www.freedesktop.org/software/geoclue/releases/1.99/geoclue-1.99.3.tar.xz</Archive>
     </Source>
-    
+
     <Package>
         <Name>libgeoclue</Name>
         <Files>
@@ -27,7 +27,7 @@
             <Path fileType="data">/usr/share/geoclue-2.0</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libgeoclue-devel</Name>
         <Summary>Development files for geoclue</Summary>
@@ -40,7 +40,7 @@
             <Dependency release="current">libgeoclue</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="2">
             <Date>10-01-2013</Date>

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -17,7 +17,7 @@
             <Patch>symlink.patch</Patch>
         </Patches>
     </Source>
-    
+
     <Package>
         <Name>bzip2</Name>
         <Files>
@@ -29,8 +29,8 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="1">
             <Date>03-11-2013</Date>
             <Version>1.0.6</Version>
@@ -39,5 +39,5 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

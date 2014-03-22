@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -96,8 +96,9 @@
             <Date>09-03-2013</Date>
             <Version>0.8.9</Version>
             <Comment>Latest git-master snapshot, includes drm renderer changes: 0e896858068f6529b862a1a2fab9c38b43a753d0
- - All driver specific renderers dropped
- - rhgb compat link no longer installed by default</Comment>
+                - All driver specific renderers dropped
+                - rhgb compat link no longer installed by default
+            </Comment>
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
@@ -109,5 +110,6 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-    </History>	
+    </History>
+
 </PISI>

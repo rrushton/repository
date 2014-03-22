@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>MIT</License>
         <Archive sha1sum="9944902864283af49e4e21a1ca456db4e04ea7c2" type="targz">http://downloads.sourceforge.net/lcms/lcms2-2.4.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>liblcms2</Name>
         <Files>
@@ -23,7 +23,7 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>liblcms2-devel</Name>
         <Summary>Development files for liblcms2</Summary>
@@ -36,7 +36,7 @@
             <Dependency release="current">liblcms2</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-05-2013</Date>
@@ -46,6 +46,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

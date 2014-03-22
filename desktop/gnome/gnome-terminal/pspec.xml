@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,7 +11,7 @@
         <Description>GNOME Terminal Emulator</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="57838a0946728734b71f87785475a9c62c6ac183" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-terminal/3.10/gnome-terminal-3.10.0.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>desktop-file-utils</Dependency>
             <Dependency>gnome-doc-utils</Dependency>
@@ -51,7 +51,7 @@
             <Dependency>at-spi2-atk-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>gnome-terminal</Name>
         <Files>
@@ -111,7 +111,7 @@
             <Dependency>at-spi2-atk</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="5">
             <Date>10-01-2013</Date>
@@ -128,7 +128,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="3">
             <Date>06-19-2013</Date>
             <Version>3.8.3</Version>
@@ -136,7 +136,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>06-06-2013</Date>
             <Version>3.6.2</Version>
@@ -144,7 +144,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>06-06-2013</Date>
             <Version>3.6.2</Version>
@@ -153,6 +153,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

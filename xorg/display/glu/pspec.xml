@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,7 +11,7 @@
         <Description>Mesa OpenGL Utility Library</Description>
         <License>SGI-B</License>
         <Archive sha1sum="6c547b7c7d5dc0f169f96f1826d44799129bb0aa" type="targz">ftp://ftp.freedesktop.org/pub/mesa/glu/glu-9.0.0.tar.gz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>libxdmcp-devel</Dependency>
             <Dependency>mesalib-devel</Dependency>
@@ -25,7 +25,7 @@
             <Dependency>libxau-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libglu</Name>
         <Files>
@@ -46,7 +46,7 @@
             <Dependency>libxau</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libglu-devel</Name>
         <Files>
@@ -57,9 +57,9 @@
             <Dependency release="3">libglu</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
-        
+
         <Update release="3">
             <Date>03-28-2013</Date>
             <Version>9.0.0</Version>
@@ -67,7 +67,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>03-27-2013</Date>
             <Version>9.0.0</Version>
@@ -75,7 +75,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>03-27-2013</Date>
             <Version>9.0.0</Version>
@@ -84,6 +84,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

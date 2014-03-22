@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,7 +11,7 @@
         <Description>Background setting utility</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="5fa150afff8536f57c4709b617a8738900bc3818" type="targz">http://solusos.com/dev/esetroot-20030422.tar.gz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>libx11-devel</Dependency>
@@ -22,7 +22,7 @@
             <Dependency>libxau-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>esetroot</Name>
         <Files>
@@ -41,7 +41,7 @@
             <Dependency>libxau</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-05-2013</Date>
@@ -51,6 +51,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

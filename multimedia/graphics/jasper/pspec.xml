@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -16,7 +16,7 @@
             <Dependency>libjpeg-turbo-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>jasper</Name>
         <Files>
@@ -48,5 +48,5 @@
             <Email>gazza@virtualcity.com.au</Email>
         </Update>
     </History>
-    
+
 </PISI>

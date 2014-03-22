@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,9 +12,9 @@
         <Description>The GMP package contains math libraries. These have useful functions for arbitrary precision arithmetic.</Description>
         <License>GPLv3+</License>
         <Archive sha1sum="cc272972435b1b7fccabf5797095ef75a181bad1" type="tarxz">http://ftp.gnu.org/gnu/gmp/gmp-5.1.1.tar.xz</Archive>
-        
+
     </Source>
-    
+
     <Package>
         <Name>gmp</Name>
         <Files>
@@ -25,7 +25,7 @@
             <Path fileType="info">/usr/share/info</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>03-25-2013</Date>
@@ -35,6 +35,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

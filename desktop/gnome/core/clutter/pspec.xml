@@ -12,7 +12,7 @@
         <Description>Clutter is an open source (LGPL 2.1) software library for creating fast, compelling, portable, and dynamic graphical user interfaces. It is a core part of Gnome3, it is used by the GnomeShell, and is supported by the open source community.</Description>
         <License>LGPLv2+</License>
         <Archive sha1sum="3594db1820fa19b40698b86bd09165c20ac52b38" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/clutter/1.16/clutter-1.16.0.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>mesalib-devel</Dependency>

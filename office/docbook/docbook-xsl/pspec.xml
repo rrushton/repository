@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <Archive sha1sum="23862c5dbe06847c644fb71e40beeddca92953f9" type="tarbz2">http://downloads.sourceforge.net/docbook/docbook-xsl-1.77.1.tar.bz2</Archive>
         <Archive sha1sum="a228f9f1b955b994f8632361f634e714d3255973" type="tarbz2">http://downloads.sourceforge.net/docbook/docbook-xsl-doc-1.77.1.tar.bz2</Archive>
     </Source>
-    
+
     <Package>
         <Name>docbook-xsl</Name>
         <Files>
@@ -23,7 +23,7 @@
             <Dependency>docbook-xml</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>docbook-xsl-docs</Name>
         <Summary>Documentation for docbook-xsl</Summary>
@@ -35,7 +35,7 @@
             <Dependency release="current">docbook-xsl</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="2">
             <Date>04-13-2013</Date>
@@ -44,7 +44,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-13-2013</Date>
             <Version>1.77.1</Version>
@@ -53,6 +53,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

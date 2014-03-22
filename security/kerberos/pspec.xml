@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>MIT</License>
         <Archive sha1sum="dcdc305bd2b63cf8b8cb698cb9ea28f0a6282136" type="tar">http://web.mit.edu/kerberos/www/dist/krb5/1.11/krb5-1.11-signed.tar</Archive>
     </Source>
-    
+
     <Package>
         <Name>kerberos</Name>
         <Files>
@@ -29,7 +29,7 @@
             <Path fileType="localedata">/usr/share/locale</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>kerberos-devel</Name>
         <Summary>Development files for kerberos</Summary>
@@ -41,7 +41,7 @@
             <Dependency release="current">kerberos</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-16-2013</Date>
@@ -51,6 +51,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

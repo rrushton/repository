@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,7 +11,7 @@
         <Description>The Xorg Wacom Driver package contains the X.Org X11 driver for Wacom and Wacom-like tablets. It is not required to use a Wacom tablet, the xf86-input-evdev driver can handle these devices without problems.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="7b82547a44b97357f9a3eb87515a26b3cab4ce58" type="tarbz2">http://downloads.sourceforge.net/linuxwacom/xf86-input-wacom-0.20.0.tar.bz2</Archive>
-        
+
         <BuildDependencies>
             <Dependency>xorg-server-devel</Dependency>
             <Dependency>libxdmcp-devel</Dependency>
@@ -25,7 +25,7 @@
             <Dependency>libxrender-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>xorg-driver-input-wacom</Name>
         <Files>
@@ -48,7 +48,7 @@
             <Dependency>xorg-server</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>xorg-driver-input-wacom-devel</Name>
         <Summary>Development files for xorg-driver-input-wacom</Summary>
@@ -58,7 +58,7 @@
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-05-2013</Date>
@@ -68,6 +68,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

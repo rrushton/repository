@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,17 +12,17 @@
         <Description> libpng is the official PNG reference library, supporting almost all PNG features and has been extensively tested.</Description>
         <License>libpng</License>
         <Archive sha1sum="67f20d69564a4a50204cb924deab029f11ad2d3c" type="targz">http://prdownloads.sourceforge.net/libpng/libpng-1.5.14.tar.gz?download</Archive>
-        
+
         <Patches>
             <!-- Include animated png functionality in libpng (required for firefox to use system libpng) -->
             <Patch level="1" compressionType="gzip">libpng-1.5.14-apng.patch.gz</Patch>
         </Patches>
-        
+
         <BuildDependencies>
             <Dependency>zlib</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libpng</Name>
         <Files>
@@ -34,12 +34,12 @@
             <Dependency>zlib</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libpng-devel</Name>
         <Summary>Development files for libpng</Summary>
         <Description>Development files for libpng</Description>
-        <Files>	
+        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/libpng*.*a</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
@@ -48,7 +48,7 @@
             <Dependency release="current">libpng</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="4">
             <Date>04-07-2013</Date>
@@ -57,7 +57,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="3">
             <Date>04-05-2013</Date>
             <Version>1.5.14</Version>
@@ -65,7 +65,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>03-21-2013</Date>
             <Version>1.5.14</Version>
@@ -73,7 +73,7 @@
             <Name>Justin Krehel</Name>
             <Email>justin@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>03-20-2013</Date>
             <Version>1.5.14</Version>
@@ -82,5 +82,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

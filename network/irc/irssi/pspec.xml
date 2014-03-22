@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -23,7 +23,7 @@
             <Patch level="0">add-solusos-server-info.patch</Patch>
         </Patches>
     </Source>
-    
+
     <Package>
         <Name>irssi</Name>
         <RuntimeDependencies>
@@ -45,7 +45,7 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>irssi-devel</Name>
         <Summary>Development files for irssi</Summary>
@@ -58,7 +58,7 @@
             <Dependency>irssi</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>irssi-bot</Name>
         <Summary>This is the bot the irssi package provides</Summary>
@@ -70,7 +70,7 @@
             <Dependency>irssi</Dependency>
         </RuntimeDependencies>
     </Package>
-    <History> 
+    <History>
         <Update release="1">
             <Date>03-29-2013</Date>
             <Version>0.8.15</Version>
@@ -79,5 +79,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

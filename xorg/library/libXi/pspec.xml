@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,14 +11,14 @@
         <Description>libXi provides an X Window System client interface to the XINPUT extension to the X protocol. The Input extension allows setup and configuration of multiple input devices, and will soon allow hotplugging of input devices; to be added and removed on the fly.</Description>
         <License>GPLv3+</License>
         <Archive sha1sum="ac00cf9790648c17815860b10c9a6abbe32bb175" type="tarbz2">mirrors://xorg/individual/lib/libXi-1.6.2.tar.bz2</Archive>
-        
+
         <BuildDependencies>
             <Dependency>libx11-devel</Dependency>
             <Dependency>xinput</Dependency>
             <Dependency>inputproto</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libxi</Name>
         <Files>
@@ -27,7 +27,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libxi-devel</Name>
         <Summary>Development files for libxi</Summary>
@@ -43,7 +43,7 @@
             <Dependency>xinput</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="3">
             <Date>06-05-2013</Date>
@@ -52,7 +52,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>03-17-2013</Date>
             <Version>1.6.2</Version>
@@ -60,7 +60,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>03-12-2013</Date>
             <Version>1.6.2</Version>
@@ -69,6 +69,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

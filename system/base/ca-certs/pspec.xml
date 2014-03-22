@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,20 +11,20 @@
         <Description>The Public Key Inrastructure is used for many security issues in a Linux system. In order for a certificate to be trusted, it must be signed by a trusted agent called a Certificate Authority (CA)</Description>
         <License>MPL-1.0</License>
         <Archive sha1sum="a62a0cb15d36b2d4da771625f4b17c46c06b3ebd" type="binary">http://solusos.com/dev/README</Archive>
-        
+
         <AdditionalFiles>
             <AdditionalFile permission="0755" target="build_certs.sh">build_certs.sh</AdditionalFile>
             <AdditionalFile permission="0755" target="make-ca.sh">make-ca.sh</AdditionalFile>
             <AdditionalFile permission="0755" target="make-cert.pl">make-cert.pl</AdditionalFile>
-            <AdditionalFile permission="0755" target="remove-expired-certs.sh">remove-expired-certs.sh</AdditionalFile>		
+            <AdditionalFile permission="0755" target="remove-expired-certs.sh">remove-expired-certs.sh</AdditionalFile>
         </AdditionalFiles>
-        
+
         <BuildDependencies>
             <Dependency>curl</Dependency>
             <Dependency>openssl</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>ca-certs</Name>
         <Files>
@@ -38,7 +38,7 @@
             <Dependency>openssl</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="4">
             <Date>05-25-2013</Date>
@@ -47,7 +47,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="3">
             <Date>05-23-2013</Date>
             <Version>1.87</Version>
@@ -55,7 +55,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>04-13-2013</Date>
             <Version>1.87</Version>
@@ -63,7 +63,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-13-2013</Date>
             <Version>1.87</Version>
@@ -72,6 +72,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

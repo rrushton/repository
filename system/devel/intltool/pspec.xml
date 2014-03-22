@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -17,7 +17,7 @@
             <Dependency>perl-xmlparser</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>intltool</Name>
         <Files>
@@ -31,8 +31,8 @@
             <Dependency>perl-xmlparser</Dependency>
         </RuntimeDependencies>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="1">
             <Date>03-16-2013</Date>
             <Version>0.50.2</Version>
@@ -41,5 +41,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

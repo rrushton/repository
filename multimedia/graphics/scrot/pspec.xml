@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -17,7 +17,7 @@
             <Dependency>giblib-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>scrot</Name>
         <RuntimeDependencies>
@@ -30,7 +30,7 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-09-2013</Date>
@@ -40,6 +40,6 @@
             <Email>matiaslina@gmail.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

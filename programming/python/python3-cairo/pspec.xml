@@ -12,7 +12,7 @@
         <Description>Python3 Cairo Bindings</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="b4283aa1cc9aafd12fd72ad371303a486da1d014" type="tarbz2">http://cairographics.org/releases/pycairo-1.10.0.tar.bz2</Archive>
-        
+
         <BuildDependencies>
             <Dependency>libx11-devel</Dependency>
             <Dependency>libcairo-devel</Dependency>

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -17,12 +17,12 @@
             'uuencode' prepares a file for transmission over an electronic
             channel which ignores or otherwise mangles the eight bit (high
             order bit) of bytes.  'uudecode' does the converse transformation.
-            Homepage: 
+            Homepage:
         </Description>
         <License>GPLv3+</License>
         <Archive sha1sum="50582fcededd1891c47ec1caa98491e280950cbd" type="tarxz">http://ftp.gnu.org/gnu/sharutils/sharutils-4.13.3.tar.xz</Archive>
     </Source>
-    
+
     <Package>
         <Name>sharutils</Name>
         <Files>
@@ -32,8 +32,8 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="1">
             <Date>03-09-2013</Date>
             <Version>4.13.3</Version>
@@ -42,6 +42,6 @@
             <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

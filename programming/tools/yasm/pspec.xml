@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>GPLv2+</License>
         <Archive sha1sum="773d28f27f83c44ac35079add0d3167ca6c1def8" type="targz">http://www.tortall.net/projects/yasm/releases/yasm-1.2.0.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>yasm</Name>
         <Files>
@@ -23,7 +23,7 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-07-2013</Date>
@@ -33,6 +33,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

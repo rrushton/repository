@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -47,10 +47,11 @@
             <Version>2013.1</Version>
             <Comment>Add ntfs-3g to repositories
 
-Bug-SolusOS: T14
-</Comment>
+                Bug-SolusOS: T14
+            </Comment>
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-    </History>	
+    </History>
+
 </PISI>

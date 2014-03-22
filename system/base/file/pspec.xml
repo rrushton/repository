@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -16,7 +16,7 @@
             <Patch level="0">change-dest-for-mgc-file.patch</Patch>
         </Patches>
     </Source>
-    
+
     <Package>
         <Name>file</Name>
         <Files>
@@ -28,8 +28,8 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="1">
             <Date>03-11-2013</Date>
             <Version>5.13</Version>
@@ -38,5 +38,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

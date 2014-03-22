@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -21,7 +21,7 @@
              Until we have 64-bit SolusOS ready, things will have to remain this way, and when we have
              64-bit SolusOS we'll actually be cross-building Firefox. Exceptions ftw. //-->
     </Source>
-    
+
     <Package>
         <Name>firefox</Name>
         <Files>
@@ -77,7 +77,7 @@
             <Dependency>libsm</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="6">
             <Date>09-25-2013</Date>
@@ -127,6 +127,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

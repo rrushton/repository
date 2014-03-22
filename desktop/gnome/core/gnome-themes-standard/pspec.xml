@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,7 +11,7 @@
         <Description>The GNOME Themes Standard package contains various components of the default GNOME 3 theme.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="98fc640bff92a126b747b22137f6e343ee476382" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-themes-standard/3.10/gnome-themes-standard-3.10.0.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency versionFrom="3.10.0">libgtk-3-devel</Dependency>
             <Dependency>zlib-devel</Dependency>
@@ -48,7 +48,7 @@
             <Dependency>at-spi2-atk-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>gnome-themes-standard</Name>
         <Files>
@@ -108,7 +108,7 @@
             <Dependency>at-spi2-atk</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="4">
             <Date>10-01-2013</Date>
@@ -125,7 +125,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>06-19-2013</Date>
             <Version>3.8.1</Version>
@@ -133,7 +133,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>06-05-2013</Date>
             <Version>3.6.5</Version>
@@ -142,6 +142,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

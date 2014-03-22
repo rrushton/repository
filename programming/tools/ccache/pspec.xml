@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>GPLv3+</License>
         <Archive sha1sum="1002d869cc87d1fc2f05b5d623abb41f342f577e" type="tarxz">http://samba.org/ftp/ccache/ccache-3.1.9.tar.xz</Archive>
     </Source>
-    
+
     <Package>
         <Name>ccache</Name>
         <Files>
@@ -21,8 +21,8 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="2">
             <Date>05-31-2013</Date>
             <Version>3.1.9</Version>
@@ -30,7 +30,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-08-2013</Date>
             <Version>3.1.9</Version>
@@ -39,5 +39,5 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

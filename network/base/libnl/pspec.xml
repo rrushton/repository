@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>LGPLv3+</License>
         <Archive sha1sum="7d680788902f1e839889b7c2611393595beba907" type="targz">http://www.infradead.org/~tgr/libnl/files/libnl-3.2.21.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>libnl</Name>
         <Files>
@@ -23,7 +23,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libnl-devel</Name>
         <Summary>Development files for libnl</Summary>
@@ -36,7 +36,7 @@
             <Dependency release="2">libnl</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>netlink-cli</Name>
         <Summary>CLI utilities for the Netlink Protocol</Summary>
@@ -50,7 +50,7 @@
         </RuntimeDependencies>
         <PartOf>network.clients</PartOf>
     </Package>
-    
+
     <History>
         <Update release="2">
             <Date>03-19-2013</Date>
@@ -60,7 +60,7 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
     <History>
         <Update release="1">
             <Date>03-19-2013</Date>
@@ -70,6 +70,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

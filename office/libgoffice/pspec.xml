@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -19,7 +19,7 @@
             <Dependency>intltool</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libgoffice</Name>
         <RuntimeDependencies>
@@ -34,7 +34,7 @@
             <Path fileType="localedata">/usr/share/locale</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libgoffice-devel</Name>
         <Summary>Development files for libgoffice</Summary>
@@ -47,7 +47,7 @@
             <Dependency release="current">libgoffice</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libgoffice-docs</Name>
         <Summary>Documentation files for libgoffice</Summary>
@@ -68,6 +68,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

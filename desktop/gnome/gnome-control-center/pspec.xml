@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,7 +11,7 @@
         <Description>The GNOME Control Center</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="8a92efe97e41157b97dc80a70f57ffd465ff595f" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-control-center/3.9/gnome-control-center-3.9.3.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>accountsservice-devel</Dependency>
             <Dependency versionFrom="3.9.6">libgtk-3-devel</Dependency>
@@ -100,7 +100,7 @@
             <Dependency>at-spi2-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>gnome-control-center</Name>
         <Files>
@@ -225,7 +225,7 @@
             <Dependency>mesalib-demos</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="3">
             <Date>06-26-2013</Date>
@@ -234,7 +234,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>06-19-2013</Date>
             <Version>3.8.3</Version>
@@ -242,7 +242,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>06-16-2013</Date>
             <Version>3.6.3</Version>
@@ -251,6 +251,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,7 +11,7 @@
         <Description>NetworkManager applet and GTK3 libraries</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="a94e4cf3ec4756cfaa43efc252c29350d459ca72" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/network-manager-applet/0.9/network-manager-applet-0.9.8.4.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency versionFrom="2.37.2">glib-networking</Dependency>
             <Dependency>zlib-devel</Dependency>
@@ -52,7 +52,7 @@
             <Dependency>libsecret-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>network-manager-applet</Name>
         <Files>
@@ -126,7 +126,7 @@
             <Dependency>libsecret</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>network-manager-applet-devel</Name>
         <Summary>Development files for network-manager-applet</Summary>
@@ -139,7 +139,7 @@
             <Dependency release="current">network-manager-applet</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="4">
             <Date>10-06-2013</Date>
@@ -156,7 +156,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>06-26-2013</Date>
             <Version>0.9.8.2</Version>
@@ -164,7 +164,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>06-06-2013</Date>
             <Version>0.9.8.0</Version>
@@ -173,6 +173,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

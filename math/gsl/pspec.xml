@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>GPLv3</License>
         <Archive sha1sum="d914f84b39a5274b0a589d9b83a66f44cd17ca8e" type="targz">http://ftp.gnu.org/gnu/gsl/gsl-1.15.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>gsl</Name>
         <Files>
@@ -21,7 +21,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>gsl-devel</Name>
         <Summary>Development files for gsl</Summary>
@@ -38,7 +38,7 @@
             <Dependency release="current">gsl</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>04-25-2013</Date>
@@ -48,6 +48,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-     
+
 </PISI>
 

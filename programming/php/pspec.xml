@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -23,7 +23,7 @@
             <Dependency>curl-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>php5</Name>
         <Files>
@@ -46,7 +46,7 @@
             <Dependency>curl</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>php5-devel</Name>
         <Summary>Development files for php</Summary>
@@ -58,15 +58,15 @@
             <Dependency release="current">php5</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="2">
             <Date>09-11-2013</Date>
             <Version>5.5.3</Version>
             <Comment>Upgrade to latest release
 
-- I've taken over this package as it clearly won't get maintained otherwise.
-</Comment>
+                - I've taken over this package as it clearly won't get maintained otherwise.
+            </Comment>
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
@@ -79,6 +79,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -17,7 +17,7 @@
             <Dependency>libpng-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libwmf</Name>
         <Files>
@@ -31,7 +31,7 @@
             <Dependency>libpng</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libwmf-devel</Name>
         <Summary>Development files for libwmf</Summary>
@@ -43,7 +43,7 @@
             <Dependency release="current">libwmf</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>09-24-2013</Date>
@@ -53,5 +53,5 @@
             <Email>gazza@virtualcity.com.au</Email>
         </Update>
     </History>
-    	
+
 </PISI>

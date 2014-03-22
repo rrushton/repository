@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>MIT</License>
         <Archive sha1sum="2214b690cb5a4f9695d287f27730c4368e6ef829" type="tarxz">http://wayland.freedesktop.org/releases/wayland-1.2.1.tar.xz</Archive>
     </Source>
-    
+
     <Package>
         <Name>wayland</Name>
         <Files>
@@ -21,7 +21,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>wayland-devel</Name>
         <Summary>Development files for wayland</Summary>
@@ -37,7 +37,7 @@
             <Dependency release="current">wayland</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="2">
             <Date>09-16-2013</Date>
@@ -55,6 +55,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

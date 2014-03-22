@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,7 +11,7 @@
         <Description>Weston SDK</Description>
         <License>MIT</License>
         <Archive sha1sum="b08d0c15b5eef65d5f7b864fe393b27f981f97f7" type="tarxz">http://wayland.freedesktop.org/releases/weston-1.2.2.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>libx11-devel</Dependency>
             <Dependency>mesalib-devel</Dependency>
@@ -37,7 +37,7 @@
             <Dependency>libxkbcommon-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>weston</Name>
         <Files>
@@ -79,7 +79,7 @@
             <Dependency>libxkbcommon</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>weston-devel</Name>
         <Summary>Development files for weston</Summary>
@@ -92,7 +92,7 @@
             <Dependency release="current">weston</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="2">
             <Date>09-16-2013</Date>
@@ -110,6 +110,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -23,7 +23,7 @@
             <Dependency>libnettle-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libarchive</Name>
         <RuntimeDependencies>
@@ -41,7 +41,7 @@
             <Path fileType="doc">/usr/share/doc/libarchive</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libarchive-devel</Name>
         <Summary>Development files of libarchive</Summary>
@@ -54,8 +54,8 @@
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>
-    
-    <History>                
+
+    <History>
         <Update release="2">
             <Date>05-24-2013</Date>
             <Version>3.1.2</Version>
@@ -63,7 +63,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-08-2013</Date>
             <Version>3.1.2</Version>
@@ -72,6 +72,6 @@
             <Email>matiaslina@gmail.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

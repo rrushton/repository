@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>GPLv3+</License>
         <Archive sha1sum="a27556b14e2b4c250afcb98b6e99eebd7623816f" type="tarbz2">mirrors://xorg/individual/lib/libXaw-1.0.11.tar.bz2</Archive>
     </Source>
-    
+
     <Package>
         <Name>libxaw</Name>
         <Files>
@@ -21,7 +21,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libxaw-devel</Name>
         <Summary>Development files for libxaw</Summary>
@@ -35,7 +35,7 @@
             <Dependency release="2">libxaw</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="2">
             <Date>03-17-2013</Date>
@@ -44,7 +44,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>03-12-2013</Date>
             <Version>1.0.11</Version>
@@ -53,6 +53,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

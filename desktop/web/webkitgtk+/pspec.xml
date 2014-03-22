@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -35,7 +35,7 @@
             <Dependency>libx11-devel</Dependency>
             <Dependency>libxrender-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
-            
+
             <Dependency>libxtst-devel</Dependency>
             <Dependency>libxpm-devel</Dependency>
             <Dependency>libxi-devel</Dependency>
@@ -75,7 +75,7 @@
             <Dependency>gstreamer-1.0-devel</Dependency>
             <Dependency>ruby</Dependency>
             <Dependency>libjpeg-turbo-devel</Dependency>
-            
+
             <Dependency>libgtk-3-devel</Dependency>
             <Dependency>libgtk-2-devel</Dependency>
             <Dependency>gsettings-desktop-schemas</Dependency>
@@ -112,7 +112,7 @@
             <Dependency>libdrm-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libwebkit-gtk</Name>
         <Files>
@@ -170,13 +170,13 @@
             <Dependency>glib2</Dependency>
             <Dependency>libsm</Dependency>
             <Dependency>at-spi2-atk</Dependency>
-            
+
         </RuntimeDependencies>
         <Replaces>
             <Package>webkitgtk</Package>
         </Replaces>
     </Package>
-    
+
     <Package>
         <Name>libwebkit-gtk-devel</Name>
         <Summary>Development files for libwebkitgtk</Summary>
@@ -189,7 +189,7 @@
             <Dependency release="current">libwebkit-gtk</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libwebkit-gtk-docs</Name>
         <Summary>API Documentation for libwebkitgtk</Summary>
@@ -201,7 +201,7 @@
             <Dependency release="current">libwebkit-gtk-devel</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="5">
             <Date>10-01-2013</Date>
@@ -226,7 +226,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>05-25-2013</Date>
             <Version>1.10.2</Version>
@@ -234,7 +234,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-15-2013</Date>
             <Version>1.10.2</Version>
@@ -243,6 +243,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

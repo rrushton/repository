@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,11 +12,11 @@
         <Description>Gperf generates a perfect hash function from a key set.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="e32d4aff8f0c730c9a56554377b2c6d82d0951b8" type="targz">http://ftp.gnu.org/gnu/gperf/gperf-3.0.4.tar.gz</Archive>
-        
+
         <IsA>app:console</IsA>
-        
+
     </Source>
-    
+
     <Package>
         <Name>gperf</Name>
         <Files>
@@ -30,7 +30,7 @@
             <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="2">
             <Date>04-15-2013</Date>
@@ -39,7 +39,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-15-2013</Date>
             <Version>3.0.4</Version>
@@ -48,6 +48,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>GPLv3+</License>
         <Archive sha1sum="c424a09fa6f628e24eff74496acebef13e8093b9" type="tarbz2">http://xorg.freedesktop.org/releases/individual/util/util-macros-1.17.tar.bz2</Archive>
     </Source>
-    
+
     <Package>
         <Name>util-macros</Name>
         <Files>
@@ -22,7 +22,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>03-09-2013</Date>
@@ -32,6 +32,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

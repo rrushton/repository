@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <License>GPLv3+</License>
         <Archive sha1sum="d38a54c22cf6232447654dcd52def482e0a48787" type="targz">http://ftp.gnu.org/pub/gnu/chess/gnuchess-6.0.3.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>gnuchess</Name>
         <Files>
@@ -22,7 +22,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>04-22-2013</Date>
@@ -32,6 +32,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

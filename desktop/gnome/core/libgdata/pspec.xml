@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,7 +11,7 @@
         <Description>Add description</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="c7e9b3c55a7d30e2ca4bce960e78f29fd46cfdc6" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/libgdata/0.13/libgdata-0.13.2.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>liboauth-devel</Dependency>
             <Dependency>libsoup-devel</Dependency>
@@ -31,7 +31,7 @@
             <Dependency>libpcre-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libgdata</Name>
         <Files>
@@ -62,7 +62,7 @@
             <Dependency>libpcre</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libgdata-devel</Name>
         <Summary>Development files for libgdata</Summary>
@@ -75,7 +75,7 @@
             <Dependency release="current">libgdata</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libgdata-docs</Name>
         <Summary>API Documentation for libgdata</Summary>
@@ -87,7 +87,7 @@
             <Dependency release="current">libgdata</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="2">
             <Date>09-04-2013</Date>
@@ -105,6 +105,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

@@ -22,14 +22,14 @@
             <Patch level="1">busybox-1.21.0-xz.patch</Patch>
         </Patches>
     </Source>
-    
+
     <Package>
         <Name>busybox</Name>
         <Files>
             <Path fileType="executable">/bin</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="2">
             <Date>05-24-2013</Date>
@@ -38,7 +38,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>2012-08-23</Date>
             <Version>1.20.2</Version>

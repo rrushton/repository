@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,14 +13,14 @@
         <License>GPL</License>
         <Archive sha1sum="df4deffe542b501070ccb0aee37d875ebb0c9e22" type="targz">http://ufpr.dl.sourceforge.net/project/modplug-xmms/libmodplug/0.8.8.4/libmodplug-0.8.8.4.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>libmodplug</Name>
         <Files>
             <Path fileType="library">/usr/lib</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libmodplug-devel</Name>
         <Summary>Development files for libmodplug</Summary>
@@ -32,7 +32,7 @@
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-04-2013</Date>
@@ -42,6 +42,6 @@
             <Email>matiaslina@gmail.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

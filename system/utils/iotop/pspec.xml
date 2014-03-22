@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -16,7 +16,7 @@
             <Dependency>python</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>iotop</Name>
         <Files>
@@ -29,8 +29,8 @@
             <Dependency>python</Dependency>
         </RuntimeDependencies>
     </Package>
-    
-    <History> 
+
+    <History>
         <Update release="1">
             <Date>03-21-2013</Date>
             <Version>0.5</Version>

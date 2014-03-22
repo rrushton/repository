@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -14,7 +14,7 @@
         <Archive sha1sum="42d139ab4c9f0c539c60f5ac07486e9d30fc1280" type="targz">http://llvm.org/releases/3.2/llvm-3.2.src.tar.gz</Archive>
         <Archive sha1sum="b0515298c4088aa294edc08806bd671f8819f870" target="llvm-3.2.src/tools" type="targz">http://llvm.org/releases/3.2/clang-3.2.src.tar.gz</Archive>
         <Archive sha1sum="718c0249a00e928f8bba32c84771da998ea4d42f" target="llvm-3.2.src/projects" type="targz">http://llvm.org/releases/3.2/compiler-rt-3.2.src.tar.gz</Archive>
-        
+
         <AdditionalFiles>
             <AdditionalFile target="fix_darwin_issue.patch">fix_darwin_issue.patch</AdditionalFile>
         </AdditionalFiles>
@@ -24,7 +24,7 @@
             <Patch level="1">llvm-3.2-r600_fixes-1.patch</Patch>
         </Patches>
     </Source>
-    
+
     <Package>
         <Name>llvm</Name>
         <Files>
@@ -37,7 +37,7 @@
             <Path fileType="library">/usr/lib/libLLVM*.so*</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>llvm-devel</Name>
         <Summary>Development files for LLVM</Summary>
@@ -50,7 +50,7 @@
             <Dependency release="current">llvm</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>llvm-docs</Name>
         <Summary>API Documentation for LLVM</Summary>
@@ -62,7 +62,7 @@
             <Dependency release="current">llvm</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>clang</Name>
         <Summary>Clang provide a new C, C++, Objective C and Objective C++ front-ends and runtime libraries for the LLVM.</Summary>
@@ -76,7 +76,7 @@
             <Dependency release="current">llvm</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>clang-devel</Name>
         <Summary>Development files for Clang</Summary>
@@ -88,7 +88,7 @@
             <Dependency release="current">clang</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="3">
             <Date>05-26-2013</Date>
@@ -97,7 +97,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>03-25-2013</Date>
             <Version>3.2</Version>
@@ -105,7 +105,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>03-20-2013</Date>
             <Version>3.2</Version>
@@ -114,6 +114,6 @@
             <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,9 +12,9 @@
         <Description>The GSettings Desktop Schemas package contains a collection of GSettings schemas for settings shared by various components of a GNOME Desktop.</Description>
         <License>GPLv3+</License>
         <Archive sha1sum="5966274277714e19369b579e9093461cca5ee6e5" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gsettings-desktop-schemas/3.10/gsettings-desktop-schemas-3.10.0.tar.xz</Archive>
-        
+
     </Source>
-    
+
     <Package>
         <Name>gsettings-desktop-schemas</Name>
         <Files>
@@ -29,7 +29,7 @@
             <Dependency>dconf</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>gsettings-desktop-schemas-devel</Name>
         <Summary>Development files for gsettings-desktop-schemas</Summary>
@@ -42,8 +42,8 @@
             <Dependency release="current">gsettings-desktop-schemas</Dependency>
         </RuntimeDependencies>
     </Package>
-     
-    
+
+
     <History>
         <Update release="9">
             <Date>10-01-2013</Date>
@@ -60,7 +60,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="7">
             <Date>06-26-2013</Date>
             <Version>3.9.3</Version>
@@ -68,7 +68,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="6">
             <Date>06-19-2013</Date>
             <Version>3.8.2</Version>
@@ -76,7 +76,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="5">
             <Date>06-15-2013</Date>
             <Version>3.6.1</Version>
@@ -84,7 +84,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="4">
             <Date>06-15-2013</Date>
             <Version>3.6.1</Version>
@@ -92,7 +92,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="3">
             <Date>05-06-2013</Date>
             <Version>3.6.1</Version>
@@ -100,7 +100,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>04-13-2013</Date>
             <Version>3.6.1</Version>
@@ -108,7 +108,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-13-2013</Date>
             <Version>3.6.1</Version>
@@ -117,6 +117,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

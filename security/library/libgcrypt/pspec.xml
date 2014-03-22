@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -15,7 +15,7 @@
             <Dependency>libgpg-error</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libgcrypt</Name>
         <RuntimeDependencies>
@@ -29,26 +29,27 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libgcrypt-devel</Name>
         <Summary>Development files for libgcrypt</Summary>
         <Description>Development files for libgcrypt</Description>
-        <Files>	
+        <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">libgcrypt</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="2" type="security">
             <Date>08-23-2013</Date>
             <Version>1.5.3</Version>
             <Comment> - CVE-2013-4242
 
-GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possibly other products, allows local users to obtain private RSA keys via a cache side-channel attack involving the L3 cache, aka Flush+Reload.</Comment>
+                GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possibly other products, allows local users to obtain private RSA keys via a cache side-channel attack involving the L3 cache, aka Flush+Reload.
+            </Comment>
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
@@ -61,5 +62,5 @@ GnuPG before 1.4.14, and Libgcrypt before 1.5.3 as used in GnuPG 2.0.x and possi
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

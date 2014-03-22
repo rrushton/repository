@@ -12,7 +12,7 @@
         <Description>Clutter GStreamer API</Description>
         <License>LGPLv2+</License>
         <Archive sha1sum="b692ff83e0484d87b55fc3ac6e420c83a7504a95" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/clutter-gst/2.0/clutter-gst-2.0.8.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>mesalib-devel</Dependency>

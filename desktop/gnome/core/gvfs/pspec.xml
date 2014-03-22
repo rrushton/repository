@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <Description>The Gvfs package is a userspace virtual filesystem designed to work with the I/O abstractions of GLib's GIO library.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="689cd53cfd15059003b501ce39303733467a63cd" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gvfs/1.17/gvfs-1.17.2.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>systemd-devel</Dependency>
             <Dependency>udisks-devel</Dependency>
@@ -25,7 +25,7 @@
             <Dependency>libgcrypt-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>gvfs</Name>
         <Files>
@@ -54,7 +54,7 @@
             <Dependency>libgcrypt</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>gvfs-devel</Name>
         <Summary>Development files for gvfs</Summary>
@@ -66,7 +66,7 @@
             <Dependency release="current">gvfs</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="2">
             <Date>06-26-2013</Date>
@@ -75,7 +75,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>06-13-2013</Date>
             <Version>1.14.2</Version>
@@ -84,6 +84,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

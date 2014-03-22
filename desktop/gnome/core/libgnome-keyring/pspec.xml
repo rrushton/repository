@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -12,7 +12,7 @@
         <Description>The libgnome-keyring is used by applications to integrate with the GNOME Keyring system.</Description>
         <License>GPLv3+</License>
         <Archive sha1sum="5540ac37ef38768d6df9f15ab340132e6653df93" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/libgnome-keyring/3.8/libgnome-keyring-3.8.0.tar.xz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>libpcre-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
@@ -20,7 +20,7 @@
             <Dependency>libgcrypt-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libgnome-keyring</Name>
         <Files>
@@ -35,10 +35,10 @@
             <Dependency>glib2</Dependency>
             <Dependency>dbus</Dependency>
             <Dependency>libgpg-error</Dependency>
-            <Dependency>libgcrypt</Dependency>		
+            <Dependency>libgcrypt</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libgnome-keyring-devel</Name>
         <Summary>Development files for libgnome-keyring</Summary>
@@ -52,7 +52,7 @@
             <Dependency release="current">libgnome-keyring</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>libgnome-keyring-docs</Name>
         <Summary>API Documentation for libgnome-keyring</Summary>
@@ -64,7 +64,7 @@
             <Dependency release="current">libgnome-keyring</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="4">
             <Date>06-19-2013</Date>
@@ -73,7 +73,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="3">
             <Date>04-13-2013</Date>
             <Version>3.6.0</Version>
@@ -81,7 +81,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>04-13-2013</Date>
             <Version>3.6.0</Version>
@@ -89,7 +89,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>04-13-2013</Date>
             <Version>3.6.0</Version>
@@ -98,6 +98,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,13 +11,13 @@
         <Description>The Xorg Evdev Driver package contains Generic Linux input driver for the Xorg X server. It handles keyboard, mouse, touchpads and wacom devices, though for touchpad and wacom advanced handling, additional drivers are required. .</Description>
         <License>MIT</License>
         <Archive sha1sum="57adaafd29d59b3685c923342717e767a0323474" type="tarbz2">http://xorg.freedesktop.org/releases/individual/driver/xf86-input-evdev-2.7.3.tar.bz2</Archive>
-        
+
         <BuildDependencies>
             <Dependency>mtdev-devel</Dependency>
         </BuildDependencies>
-        
+
     </Source>
-    
+
     <Package>
         <Name>xorg-driver-input-evdev</Name>
         <Files>
@@ -28,7 +28,7 @@
             <Dependency>mtdev</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <Package>
         <Name>xorg-driver-input-evdev-devel</Name>
         <Summary>Development files for Evdev</Summary>
@@ -41,7 +41,7 @@
             <Dependency>xorg-driver-input-evdev</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>03-28-2013</Date>
@@ -51,6 +51,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -19,27 +19,28 @@
             <Patch level="1">security/cve-2013-4238.patch</Patch>
         </Patches>
     </Source>
-    
+
     <Package>
         <Name>python</Name>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib/lib*so*</Path>
             <Path fileType="man">/usr/share/man</Path>
-            
+
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="header">/usr/include</Path>
-            
+
             <Path fileType="library">/usr/lib/python*</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="2" type="security">
             <Date>08-23-2013</Date>
             <Version>2.7.3</Version>
             <Comment>  - CVE-2013-4238
-The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does not properly handle a '\0' character in a domain name in the Subject Alternative Name field of an X.509 certificate, which allows man-in-the-middle attackers to spoof arbitrary SSL servers via a crafted certificate issued by a legitimate Certification Authority, a related issue to CVE-2009-2408.</Comment>
+                The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does not properly handle a '\0' character in a domain name in the Subject Alternative Name field of an X.509 certificate, which allows man-in-the-middle attackers to spoof arbitrary SSL servers via a crafted certificate issued by a legitimate Certification Authority, a related issue to CVE-2009-2408.
+            </Comment>
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
@@ -52,6 +53,6 @@ The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does
             <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
-    
+
 </PISI>
 

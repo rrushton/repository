@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>GPL</License>
         <Archive sha1sum="482da1ecd182ab39bbdc09f2f02c9fba8cd20030" type="targz">http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz</Archive>
     </Source>
-    
+
     <Package>
         <Name>ctags</Name>
         <Files>
@@ -22,7 +22,7 @@
             <Path fileType="man">/usr/share/man/</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>05-28-2013</Date>
@@ -32,6 +32,6 @@
             <Email>matiaslina@gmail.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -16,7 +16,7 @@
             <Dependency>apr-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>apr-util</Name>
         <RuntimeDependencies>
@@ -28,7 +28,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>apr-util-devel</Name>
         <Summary>Development files for apr-util</Summary>
@@ -44,7 +44,7 @@
             <Dependency>apr</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-26-2013</Date>
@@ -54,6 +54,6 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

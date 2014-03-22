@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -23,9 +23,9 @@
             <Dependency>libxext-devel</Dependency>
             <Dependency>pixman-devel</Dependency>
         </BuildDependencies>
-        	
+
     </Source>
-    
+
     <Package>
         <Name>libcairo</Name>
         <Files>
@@ -46,18 +46,18 @@
             <Dependency>libpng</Dependency>
             <Dependency>libxext</Dependency>
             <Dependency>expat</Dependency>
-            <Dependency>pixman</Dependency>		
+            <Dependency>pixman</Dependency>
         </RuntimeDependencies>
         <Replaces>
             <Package>cairo</Package>
         </Replaces>
     </Package>
-    
+
     <Package>
         <Name>libcairo-devel</Name>
         <Summary>Development files for cairo</Summary>
         <Description>Development files for cairo</Description>
-        <Files>	
+        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/*.a</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
@@ -76,7 +76,7 @@
             <Package>cairo-devel</Package>
         </Replaces>
     </Package>
-    
+
     <History>
         <Update release="4">
             <Date>05-30-2013</Date>
@@ -85,7 +85,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="3">
             <Date>04-07-2013</Date>
             <Version>1.12.14</Version>
@@ -93,7 +93,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@solusos.com</Email>
         </Update>
-        
+
         <Update release="2">
             <Date>03-21-2013</Date>
             <Version>1.12.14</Version>
@@ -101,7 +101,7 @@
             <Name>Justin Krehel</Name>
             <Email>justin@solusos.com</Email>
         </Update>
-        
+
         <Update release="1">
             <Date>03-21-2013</Date>
             <Version>1.12.14</Version>
@@ -110,5 +110,5 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-    
+
 </PISI>

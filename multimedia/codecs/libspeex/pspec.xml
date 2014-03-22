@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -16,7 +16,7 @@
             <Dependency>libogg-devel</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>libspeex</Name>
         <RuntimeDependencies>
@@ -29,7 +29,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libspeex-devel</Name>
         <Summary>Development package for speex</Summary>
@@ -42,7 +42,7 @@
             <Path fileType="data">/usr/share/aclocal</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>05-31-2013</Date>
@@ -52,6 +52,6 @@
             <Email>matiaslina@gmail.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

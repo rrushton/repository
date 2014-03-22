@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -44,7 +44,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libxaw3d-devel</Name>
         <Summary>Development files for libxaw3d</Summary>
@@ -58,7 +58,7 @@
             <Dependency release="1">libxaw3d</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>04-09-2013</Date>
@@ -68,5 +68,5 @@
             <Email>radbatik@gmail.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>

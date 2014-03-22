@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -13,7 +13,7 @@
         <License>GPLv2+</License>
         <Archive sha1sum="a52219b12dbc8d33fc096468591170fda71316c0" type="tarbz2">http://sourceforge.net/projects/libexif/files/libexif/0.6.21/libexif-0.6.21.tar.bz2/download</Archive>
     </Source>
-    
+
     <Package>
         <Name>libexif</Name>
         <Files>
@@ -22,7 +22,7 @@
             <Path fileType="localedata">/usr/share/locale</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>libexif-devel</Name>
         <Summary>Development files for libexif</Summary>
@@ -35,7 +35,7 @@
             <Dependency release="current">libexif</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>06-06-2013</Date>
@@ -45,6 +45,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 

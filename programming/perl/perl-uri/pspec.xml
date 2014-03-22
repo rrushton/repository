@@ -1,4 +1,4 @@
-<?xml version="1.0" ?> 
+<?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -11,12 +11,12 @@
         <Description>This module implements the URI class. Objects of this class represent "Uniform Resource Identifier references" as specified in RFC 2396 (and updated by RFC 2732). A Uniform Resource Identifier is a compact string of characters that identifies an abstract or physical resource. A Uniform Resource Identifier can be further classified as either a Uniform Resource Locator (URL) or a Uniform Resource Name (URN). The distinction between URL and URN does not matter to the URI class interface. A "URI-reference" is a URI that may have additional information attached in the form of a fragment identifier.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="940315985af24b9f4bb5a9761b1e2bbe6c1d0df3" type="targz">http://www.cpan.org/authors/id/G/GA/GAAS/URI-1.60.tar.gz</Archive>
-        
+
         <BuildDependencies>
             <Dependency>perl</Dependency>
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>perl-uri</Name>
         <Files>
@@ -27,7 +27,7 @@
             <Dependency>perl</Dependency>
         </RuntimeDependencies>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>08-06-2013</Date>
@@ -37,6 +37,6 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-    	
+
 </PISI>
 
