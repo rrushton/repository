@@ -1,0 +1,82 @@
+From d6d1085af1b0174759f30ccae40c7d6c453635f5 Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey.doherty@gmail.com>
+Date: Sat, 22 Mar 2014 18:45:30 +0000
+Subject: [PATCH] Prebuild changes
+
+---
+ fixincludes/Makefile.in                                     |  3 ---
+ libiberty/Makefile.in                                       |  2 +-
+ libmudflap/testsuite/libmudflap.c++/pass41-frag.cxx         | 13 -------------
+ libmudflap/testsuite/libmudflap.c++/pass41-frag.cxx.disable | 13 +++++++++++++
+ 4 files changed, 14 insertions(+), 17 deletions(-)
+ delete mode 100644 libmudflap/testsuite/libmudflap.c++/pass41-frag.cxx
+ create mode 100644 libmudflap/testsuite/libmudflap.c++/pass41-frag.cxx.disable
+
+diff --git a/fixincludes/Makefile.in b/fixincludes/Makefile.in
+index ce850ff..df0fb37 100644
+--- a/fixincludes/Makefile.in
++++ b/fixincludes/Makefile.in
+@@ -173,9 +173,6 @@ $(srcdir)/aclocal.m4: @MAINT@ $(srcdir)/configure.ac
+ 	cd $(srcdir) && $(ACLOCAL) $(ACLOCAL_AMFLAGS)
+ 
+ check : all
+-	autogen -T $(srcdir)/check.tpl $(srcdir)/inclhack.def
+-	$(SHELL) ./check.sh $(srcdir)/tests/base
+-	@rm -f ./check.sh
+ 
+ install : all
+ 	-rm -rf $(DESTDIR)$(itoolsdir)
+diff --git a/libiberty/Makefile.in b/libiberty/Makefile.in
+index f6a3ebd..1194c8f 100644
+--- a/libiberty/Makefile.in
++++ b/libiberty/Makefile.in
+@@ -344,7 +344,7 @@ libiberty.html : $(srcdir)/libiberty.texi $(TEXISRC)
+ @MAINT@	echo stamp > stamp-functions
+ 
+ INSTALL_DEST = @INSTALL_DEST@
+-install: install_to_$(INSTALL_DEST) install-subdir
++install: install-subdir
+ install-strip: install
+ 
+ .PHONY: install install-strip
+diff --git a/libmudflap/testsuite/libmudflap.c++/pass41-frag.cxx b/libmudflap/testsuite/libmudflap.c++/pass41-frag.cxx
+deleted file mode 100644
+index 06896c7..0000000
+--- a/libmudflap/testsuite/libmudflap.c++/pass41-frag.cxx
++++ /dev/null
+@@ -1,13 +0,0 @@
+-#include <string>
+-#include <iostream>
+-
+-int
+-main (int argc, char *argv[])
+-{
+-    std::string myStr = "Hello, World!";
+-    std::cout << myStr << std::endl;
+-    return 0;
+-}
+-
+-/* Ignore a warning that is irrelevant to the purpose of this test.  */
+-/* { dg-prune-output ".*mudflap cannot track unknown size extern.*" } */
+diff --git a/libmudflap/testsuite/libmudflap.c++/pass41-frag.cxx.disable b/libmudflap/testsuite/libmudflap.c++/pass41-frag.cxx.disable
+new file mode 100644
+index 0000000..06896c7
+--- /dev/null
++++ b/libmudflap/testsuite/libmudflap.c++/pass41-frag.cxx.disable
+@@ -0,0 +1,13 @@
++#include <string>
++#include <iostream>
++
++int
++main (int argc, char *argv[])
++{
++    std::string myStr = "Hello, World!";
++    std::cout << myStr << std::endl;
++    return 0;
++}
++
++/* Ignore a warning that is irrelevant to the purpose of this test.  */
++/* { dg-prune-output ".*mudflap cannot track unknown size extern.*" } */
+-- 
+1.8.5.3
+
