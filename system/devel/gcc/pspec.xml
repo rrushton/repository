@@ -63,6 +63,9 @@
         <Name>libgcc</Name>
         <Files>
             <Path fileType="library">/usr/lib64/libgcc*</Path>
+            <Path fileType="library">/usr/lib64/libasan*</Path>
+            <Path fileType="library">/usr/lib64/libtsan*</Path>
+            <Path fileType="library">/usr/lib64/libatomic*</Path>
             <Path fileType="library">/usr/lib64/libitm*</Path>
             <Path fileType="library">/usr/lib64/libquadmath*</Path>
             <Path fileType="library">/usr/lib64/libssp*</Path>
