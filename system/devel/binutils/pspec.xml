@@ -12,6 +12,10 @@
         <Description>The Binutils package contains a linker, an assembler, and other tools for handling object files. </Description>
         <License>GPLv3+</License>
         <Archive sha1sum="042c51073205ebaf88c272d6168f9deb71984b56" type="tarbz2">http://ftp.gnu.org/gnu/binutils/binutils-2.23.2.tar.bz2</Archive>
+
+        <Patches>
+            <Patch level="1">0001-Fix-texinfo-build-issues.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
