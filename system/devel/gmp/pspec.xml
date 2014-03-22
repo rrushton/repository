@@ -6,12 +6,12 @@
         <Homepage>http://gnu.org/</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>The GMP package contains math libraries. These have useful functions for arbitrary precision arithmetic. </Summary>
         <Description>The GMP package contains math libraries. These have useful functions for arbitrary precision arithmetic.</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="cc272972435b1b7fccabf5797095ef75a181bad1" type="tarxz">http://ftp.gnu.org/gnu/gmp/gmp-5.1.1.tar.xz</Archive>
+        <Archive sha1sum="980426a6ef54d4fff2e67ab970a432251ee2c3a1" type="tarxz">http://ftp.gnu.org/gnu/gmp/gmp-5.1.2.tar.xz</Archive>
 
     </Source>
 
@@ -27,6 +27,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>03-22-2013</Date>
+            <Version>5.1.2</Version>
+            <Comment>Update for toolchain</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>03-25-2013</Date>
             <Version>5.1.1</Version>
