@@ -16,7 +16,7 @@ def setup():
 	
 	shelltools.cd (BuildDir)
 	# Configure
-	shelltools.system ("../binutils-2.23.1/configure --prefix=/usr --enable-lto --enable-gold")
+	shelltools.system ("../binutils-2.23.2/configure --prefix=/usr --enable-lto --enable-gold --target=x86_64-evolveos-linux")
 	
 def build():
 	shelltools.cd (BuildDir)
@@ -27,4 +27,4 @@ def install():
 	autotools.rawInstall ("tooldir=/usr DESTDIR=%s" % get.installDIR())
 	
 	# Include the libiberty header
-	pisitools.insinto ("/usr/include", "../binutils-2.23.1/include/libiberty.h")
+	pisitools.insinto ("/usr/include", "../binutils-2.23.2/include/libiberty.h")
