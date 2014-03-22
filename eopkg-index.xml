@@ -1,8 +1,8 @@
 <PISI>
     <Distribution>
-        <SourceName>SolusOS</SourceName>
-        <Description xml:lang="en">Official SolusOS Repository</Description>
-        <Version>2</Version>
+        <SourceName>Evolve OS</SourceName>
+        <Description xml:lang="en">Evolve OS Repository</Description>
+        <Version>1</Version>
         <Type>main</Type>
         <BinaryName>SolusOS</BinaryName>
         <Obsoletes>
