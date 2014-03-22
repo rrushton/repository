@@ -10,7 +10,7 @@ from pisi.actionsapi import get
 
 import os
 
-WorkDir = "glibc-2.17"
+WorkDir = "glibc-2.18"
 
 defaultflags = "-O3 -g -U_FORTIFY_SOURCE -fno-strict-aliasing \
                 -fomit-frame-pointer -mno-tls-direct-seg-refs"
@@ -19,7 +19,6 @@ defaultflags = "-O3 -g -U_FORTIFY_SOURCE -fno-strict-aliasing \
 sysflags = "-mtune=generic -march=x86-64" if get.ARCH() == "x86_64" \
            else "-mtune=atom -march=i686"
 
-multibuild = (get.ARCH() == "x86_64")
 pkgworkdir = "%s/%s" % (get.workDIR(), WorkDir)
 
 config = {
