@@ -6,7 +6,7 @@
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 BuildDir = "%s/%s" % ( get.workDIR(), "gcc-build")
-GccDir = "../gcc-4.7.2"
+GccDir = "../gcc-4.8.1"
 
 def get_multiarch_host ():
 	if get.ARCH() == "x86_64":
@@ -21,9 +21,7 @@ def exportMultiVars ():
 	
 def setup():
 	exportMultiVars ()
-	
-	# .info's are broke to shit, don't bother building them
-	shelltools.system ("sed -i 's/BUILD_INFO=info/BUILD_INFO=/' gcc/configure")
+
 	shelltools.makedirs (BuildDir)
 	
 	shelltools.cd (BuildDir)
@@ -31,7 +29,7 @@ def setup():
 	# Configure GCC
 	shelltools.system ("%s/configure \
 						--prefix=/usr \
-						--with-pkgversion='SolusOS 2'\
+						--with-pkgversion='EvolveOS'\
 						--libdir=/usr/lib\
 						--libexecdir=/usr/lib\
 						--with-system-zlib\
@@ -47,7 +45,7 @@ def setup():
 						--enable-lto\
 						--with-multiarch-defaults=i386-linux-gnu\
 						--with-arch-32=i686\
-						--with-bugurl='http://bugs.solusos.com'\
+						--with-bugurl='http://bugs.evolve-os.com'\
 						--build=%s\
 						--host=%s\
 						--target=%s\
