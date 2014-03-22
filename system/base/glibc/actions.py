@@ -121,10 +121,6 @@ def install():
     if shelltools.isFile("%s/etc/ld.so.cache" % get.installDIR()):
         pisitools.remove("/etc/ld.so.cache")
 
-    # It previously has 0755 perms which was killing things
-    shelltools.chmod("%s/usr/%s/misc/pt_chown" % (get.installDIR(),
-                     config["system"]["libdir"]), 04711)
-
     # Prevent overwriting of the /etc/localtime symlink
     if shelltools.isFile("%s/etc/localtime" % get.installDIR()):
         pisitools.remove("/etc/localtime")

@@ -20,10 +20,12 @@
         <Name>glibc</Name>
         <Files>
             <Path fileType="library">/lib</Path>
+            <Path fileType="library">/lib64</Path>
             <Path fileType="executable">/sbin</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="executable">/usr/sbin</Path>
             <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib64</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="info">/usr/share/info</Path>
             <Path fileType="data">/usr/share/i18n/charmaps</Path>
