@@ -469,18 +469,6 @@
 		</Component>
 
 		<Component>
-			<Name>desktop.xfce</Name>
-			<LocalName xml:lang="en">XFCE Desktop</LocalName>
-			<Summary xml:lang="en">XFCE Desktop</Summary>
-			<Description xml:lang="en">XFCE Desktop</Description>
-			<Group>desktop</Group>
-			<Maintainer>
-				<Name>SolusOS Developers</Name>
-				<Email>dev@solusos.com</Email>
-			</Maintainer>
-		</Component>
-
-		<Component>
 			<Name>security</Name>
 			<LocalName xml:lang="en">Security applications</LocalName>
 			<Summary xml:lang="en">Security applications</Summary>
