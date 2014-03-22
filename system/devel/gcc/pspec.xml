@@ -62,11 +62,11 @@
     <Package>
         <Name>libgcc</Name>
         <Files>
-            <Path fileType="library">/usr/lib/libgcc*</Path>
-            <Path fileType="library">/usr/lib/libitm*</Path>
-            <Path fileType="library">/usr/lib/libquadmath*</Path>
-            <Path fileType="library">/usr/lib/libssp*</Path>
-            <Path fileType="library">/usr/lib/libmudflap*</Path>
+            <Path fileType="library">/usr/lib64/libgcc*</Path>
+            <Path fileType="library">/usr/lib64/libitm*</Path>
+            <Path fileType="library">/usr/lib64/libquadmath*</Path>
+            <Path fileType="library">/usr/lib64/libssp*</Path>
+            <Path fileType="library">/usr/lib64/libmudflap*</Path>
         </Files>
         <PartOf>system.base</PartOf>
     </Package>
@@ -74,7 +74,7 @@
     <Package>
         <Name>libstdc++</Name>
         <Files>
-            <Path fileType="library">/usr/lib/lib*++*</Path>
+            <Path fileType="library">/usr/lib64/lib*++*</Path>
             <Path fileType="localedata">/usr/share/locale/*/LC_MESSAGES/cpplib.mo</Path>
             <Path fileType="localedata">/usr/share/locale/*/LC_MESSAGES/libstdc++.mo</Path>
         </Files>
@@ -87,7 +87,7 @@
     <Package>
         <Name>libgomp</Name>
         <Files>
-            <Path fileType="library">/usr/lib/libgomp*</Path>
+            <Path fileType="library">/usr/lib64/libgomp*</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency>libgcc</Dependency>
@@ -99,7 +99,7 @@
         <Name>gfortran</Name>
         <Files>
             <Path fileType="executable">/usr/bin/*fortran*</Path>
-            <Path fileType="library">/usr/lib/*fortran*</Path>
+            <Path fileType="library">/usr/lib64/*fortran*</Path>
             <Path fileType="man">/usr/share/man/*/*fortran*</Path>
         </Files>
         <RuntimeDependencies>
