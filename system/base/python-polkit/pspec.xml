@@ -4,8 +4,8 @@
     <Source>
         <Name>python-polkit</Name>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>plkit module for python</Summary>
         <Description>Easy access to polkit from Python</Description>
@@ -35,8 +35,8 @@
             <Date>03-17-2013</Date>
             <Version>0.8</Version>
             <Comment>Add python-polkit to repositories</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
     

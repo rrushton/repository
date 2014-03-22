@@ -4,8 +4,8 @@
     <Source>
         <Name>python-dbus</Name>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>D-Bus module for Python</Summary>
         <Description>Easy access to dbus from Python</Description>
@@ -57,8 +57,8 @@
             <Date>03-16-2013</Date>
             <Version>1.1.1</Version>
             <Comment>Add python-dbus to repositories</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
     

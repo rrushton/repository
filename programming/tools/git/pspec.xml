@@ -4,8 +4,8 @@
     <Source>
         <Name>git</Name>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>fast, scalable, distributed revision control system </Summary>
         <Description>fast, scalable, distributed revision control system</Description>
@@ -94,8 +94,8 @@
             <Date>03-12-2013</Date>
             <Version>1.8.1.5</Version>
             <Comment>Add git to repositories</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
     

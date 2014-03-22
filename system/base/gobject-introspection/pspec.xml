@@ -77,8 +77,8 @@
             <Date>03-16-2013</Date>
             <Version>1.35.8</Version>
             <Comment>Add gobject-introspection to repositories</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
     

@@ -4,8 +4,8 @@
     <Source>
         <Name>zip</Name>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>Archiver for .zip files</Summary>
         <Description>This is InfoZIP's zip program. It produces files that are fully compatible with the popular PKZIP program; however, the command line options are not identical. In other words, the end result is the same, but the methods differ. :-)</Description>
@@ -26,8 +26,8 @@
             <Date>03-16-2013</Date>
             <Version>3.0</Version>
             <Comment>Add zip to repositories</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
     

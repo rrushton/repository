@@ -73,8 +73,8 @@
             <Date>03-09-2013</Date>
             <Version>5.9</Version>
             <Comment>Add ncurses to repositories</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
     

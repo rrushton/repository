@@ -5,8 +5,8 @@
         <Name>texinfo</Name>
         <Homepage>http://www.gnu.org/software/texinfo</Homepage>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>texinfo (Documentation format used by GNU)</Summary>
         <Description> textinfo is the documentation format used by the GNU project, invented by Richard Stallman and Bob Chassell. It is used to take a single source file and produce various outputs such as dvi, html, and pdf.</Description>

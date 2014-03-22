@@ -4,8 +4,8 @@
     <Source>
         <Name>python-pyliblzma</Name>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>Python bindings for lzma</Summary>
         <Description>pyliblzma provides a python interface for the liblzma library to read/write data that has been compressed/decompressed with lzma utils.</Description>
@@ -35,8 +35,8 @@
             <Date>03-12-2013</Date>
             <Version>0.5.3</Version>
             <Comment>Add python-pyliblzma to repositories</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
     

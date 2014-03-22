@@ -5,8 +5,8 @@
         <Name>usbutils</Name>
         <Homepage>http://linux-usb.sourceforge.net/</Homepage>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>usbutils (USB Utilities)</Summary>
         <Description> usbutils provides userland utilities for USB devices under Linux.</Description>

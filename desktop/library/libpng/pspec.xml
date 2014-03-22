@@ -5,8 +5,8 @@
         <Name>libpng</Name>
         <Homepage>http://www.libpng.org/pub/png/libpng.html</Homepage>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>libpng (Official PNG reference library)</Summary>
         <Description> libpng is the official PNG reference library, supporting almost all PNG features and has been extensively tested.</Description>

@@ -4,8 +4,8 @@
     <Source>
         <Name>pam</Name>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>Pluggable Authentication Modules library</Summary>
         <Description>The Linux PAM package contains Pluggable Authentication Modules used to enable the local system administrator to choose how applications authenticate users. </Description>
@@ -78,8 +78,8 @@
             <Date>03-09-2013</Date>
             <Version>1.1.6</Version>
             <Comment>Add pam to repositories</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
     

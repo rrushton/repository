@@ -5,8 +5,8 @@
         <Name>libusb</Name>
         <Homepage>http://www.libusb.org</Homepage>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>libusb (USB library)</Summary>
         <Description> libusb is a C library that gives applications easy access to USB devices on many different operating systems.</Description>

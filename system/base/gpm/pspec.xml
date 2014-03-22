@@ -5,8 +5,8 @@
         <Name>gpm</Name>
         <Homepage>http://www.gnu.org/software/time</Homepage>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>gpm (General Purpose Mouse daemon)</Summary>
         <Description> GPM allows the use of a mouse in the console and xterm.</Description>

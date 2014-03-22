@@ -4,8 +4,8 @@
     <Source>
         <Name>perl-xmlparser</Name>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>XML Parsing Module for Perl</Summary>
         <Description>A Perl Module to parse XML</Description>

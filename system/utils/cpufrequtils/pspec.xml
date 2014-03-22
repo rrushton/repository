@@ -5,8 +5,8 @@
         <Name>cpufrequtils</Name>
         <Homepage>https://www.kernel.org/pub/linux/utils/kernel/cpufreq/cpufreq-info.html</Homepage>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>Utilities to retrieve cpufreq kernel information  .</Summary>
         <Description>Library which offers a unified access method for userspace tools and programs to the cpufreq core and drivers in the Linux kernel. This allows for code reduction in userspace tools, a clean implementation of the interaction to the cpufreq core, and support for both the sysfs and proc interfaces.</Description>

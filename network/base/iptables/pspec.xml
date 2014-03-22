@@ -4,8 +4,8 @@
     <Source>
         <Name>iptables</Name>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>Netfilter firewall</Summary>
         <Description>Netfilter firewall</Description>

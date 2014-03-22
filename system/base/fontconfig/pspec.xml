@@ -90,8 +90,8 @@
             <Date>03-11-2013</Date>
             <Version>2.10.2</Version>
             <Comment>Add fontconfig to repositories</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
     

@@ -5,8 +5,8 @@
         <Name>e2fsprogs</Name>
         <Homepage>http://e2fsprogs.sourceforge.net</Homepage>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>e2fsprogs (Filesystem utilities for ext2/3/4 filesystems)</Summary>
         <Description> e2fsprofs are tools for checking and creating ext2, ext3, and ext4 filesystem formats.  They were written by Theodore Ts'o and Remy Card.</Description>

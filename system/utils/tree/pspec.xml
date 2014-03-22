@@ -5,8 +5,8 @@
         <Name>tree</Name>
         <Homepage>http://mama.indstate.edu/users/ice/tree/</Homepage>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>list contents of directories in a tree-like format.</Summary>
         <Description>Tree is a recursive directory listing command that produces a depth indented listing of files, which is colorized ala dircolors if the LS_COLORS environment variable is set and output is to tty</Description>

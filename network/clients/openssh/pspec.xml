@@ -5,8 +5,8 @@
         <Name>openssh</Name>
         <Homepage>http://www.openssh.org</Homepage>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>OpenSSH (OpenBSD Secure Shell)</Summary>
         <Description>OpenSSH is a free version of secure shell tools developed by the OpenBSD project to help facilitate secure connections and communications.</Description>

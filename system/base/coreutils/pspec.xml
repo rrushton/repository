@@ -4,8 +4,8 @@
     <Source>
         <Name>coreutils</Name>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>GNU core utilities</Summary>
         <Description> This package contains the basic file, shell and text manipulation
@@ -43,8 +43,8 @@
             <Date>03-09-2013</Date>
             <Version>8.21</Version>
             <Comment>Add coreutils to repositories</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
     

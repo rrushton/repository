@@ -5,8 +5,8 @@
         <Name>pango</Name>
         <Homepage>http://www.pango.org</Homepage>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>pango (Library for laying out and rendering text)</Summary>
         <Description> Pango is a library used for laying out and rendering text with an emphasis on internationalization.</Description>

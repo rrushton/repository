@@ -4,8 +4,8 @@
     <Source>
         <Name>dbus-glib</Name>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>D-Bus GLib Bindings</Summary>
         <Description>The D-Bus Bindings are a group of packages that contain programming language and platform interfaces to the D-Bus API. This is useful for programmers to easily interface D-Bus with their supported platform or language of choice. Some non-D-Bus packages will require one or more of the Bindings packages in order to build successfully.</Description>
@@ -42,16 +42,16 @@
             <Date>03-16-2013</Date>
             <Version>0.100</Version>
             <Comment>Update dependencies</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
         
         <Update release="1">
             <Date>03-16-2013</Date>
             <Version>0.100</Version>
             <Comment>Add dbus-glib to repositories</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
     

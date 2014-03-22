@@ -4,8 +4,8 @@
     <Source>
         <Name>libcap2</Name>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>libcap2</Summary>
         <Description>libcap2</Description>

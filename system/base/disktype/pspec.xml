@@ -6,8 +6,8 @@
         <Name>disktype</Name>
         <Homepage>http://disktype.sourceforge.net/</Homepage>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <License>BSD</License>
         <IsA>app:console</IsA>

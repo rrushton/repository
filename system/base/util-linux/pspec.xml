@@ -5,8 +5,8 @@
         <Name>util-linux</Name>
         <Homepage>http://freecode.com/projects/util-linux</Homepage>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>util-linux (Essential Linux utilties)</Summary>
         <Description> Util-linux is a suite of essential tools for any Linux system, such as chsh, kill, cfdisk, mkfs, mount, and more.</Description>

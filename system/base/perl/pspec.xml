@@ -4,8 +4,8 @@
     <Source>
         <Name>perl</Name>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>Perl</Summary>
         <Description>An interpreted scripting language, known among some as "Unix's Swiss Army Chainsaw".</Description>
@@ -37,8 +37,8 @@
             <Date>03-16-2013</Date>
             <Version>5.16.3</Version>
             <Comment>Add Perl to repositories</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
     

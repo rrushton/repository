@@ -5,8 +5,8 @@
         <Name>htop</Name>
         <Homepage>http://htop.sourceforge.net/index.php</Homepage>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>htop (interactive process viewer for Linux)</Summary>
         <Description> htop is an interactive process viewer for Linux.</Description>

@@ -4,8 +4,8 @@
     <Source>
         <Name>spidermonkey</Name>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>C/C++ JavaScript Engine</Summary>
         <Description> SpiderMonkey is Mozilla's JavaScript engine written in C/C++. This release implements JavaScript 1.8.5. </Description>

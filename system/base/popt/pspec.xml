@@ -5,8 +5,8 @@
         <Name>popt</Name>
         <Homepage>http://directory.fsf.org/wiki/Popt</Homepage>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>popt</Summary>
         <Description>The popt package contains the popt libraries which are used by some programs to parse command-line options.</Description>

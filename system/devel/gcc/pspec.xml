@@ -120,8 +120,8 @@
             <Date>03-25-2013</Date>
             <Version>4.7.2</Version>
             <Comment>Add gcc to repositories</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
     

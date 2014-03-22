@@ -117,40 +117,40 @@ Bug-SolusOS: T35</Comment>
             <Date>03-15-2013</Date>
             <Version>4.2.045</Version>
             <Comment>Don't install /bin/sh symlink</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
         
         <Update release="4">
             <Date>03-12-2013</Date>
             <Version>4.2.045</Version>
             <Comment>Link against ncurses and enable history</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
         
         <Update release="3">
             <Date>03-09-2013</Date>
             <Version>4.2.045</Version>
             <Comment>Add bash startup files</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
         
         <Update release="2">
             <Date>03-09-2013</Date>
             <Version>4.2.045</Version>
             <Comment>Sync with latest bash patches</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
         
         <Update release="1">
             <Date>03-09-2013</Date>
             <Version>4.2</Version>
             <Comment>Add bash to repositories</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
     

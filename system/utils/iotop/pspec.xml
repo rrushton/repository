@@ -5,8 +5,8 @@
         <Name>iotop</Name>
         <Homepage>http://guichaz.free.fr/iotop/</Homepage>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>iotop shows I/O activity similar to "top"</Summary>
         <Description> iotop shows I/O activitiy similar to "top".</Description>

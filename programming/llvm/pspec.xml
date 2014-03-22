@@ -110,8 +110,8 @@
             <Date>03-20-2013</Date>
             <Version>3.2</Version>
             <Comment>Add llvm to repositories</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
     

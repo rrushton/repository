@@ -4,8 +4,8 @@
     <Source>
         <Name>expat</Name>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>XML Parsing Library</Summary>
         <Description>The Expat package contains a stream oriented C library for parsing XML. </Description>
@@ -30,8 +30,8 @@
             <Date>03-09-2013</Date>
             <Version>2.1.0</Version>
             <Comment>Add expat to repositories</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
     

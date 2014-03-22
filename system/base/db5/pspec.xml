@@ -4,8 +4,8 @@
     <Source>
         <Name>db5</Name>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>Berkeley Database v5</Summary>
         <Description>This package provides different tools for manipulating databases in the Berkeley Database v5 format.
@@ -37,8 +37,8 @@
             <Date>03-09-2013</Date>
             <Version>5.3.21</Version>
             <Comment>Add db5 to repositories</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
     

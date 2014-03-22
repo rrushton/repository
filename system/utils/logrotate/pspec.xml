@@ -5,8 +5,8 @@
         <Name>logrotate</Name>
         <Homepage>https://fedorahosted.org/releases/l/o/logrotate</Homepage>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>Rotates, compresses, removes and emails system log files</Summary>
         <Description>logrotate is designed to ease administration of systems that generate large numbers of log files. It allows automatic rotation, compression, removal, and emailing of log files.</Description>
@@ -29,8 +29,8 @@
             <Date>03-15-2013</Date>
             <Version>3.7.9</Version>
             <Comment>First release</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
     

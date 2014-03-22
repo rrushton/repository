@@ -215,16 +215,16 @@ Bug-SolusOS: T9
             <Date>03-13-2013</Date>
             <Version>3.8.2</Version>
             <Comment>Split packages</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
         
         <Update release="1">
             <Date>03-13-2013</Date>
             <Version>3.8.2</Version>
             <Comment>Add kernel to repositories</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
     

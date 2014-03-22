@@ -4,8 +4,8 @@
     <Source>
         <Name>python-magic</Name>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>Python interface for libmagic</Summary>
         <Description>This module uses ctypes to access the libmagic file type identification library. It makes use of the local magic database and supports both textual and MIME-type output.</Description>
@@ -33,8 +33,8 @@
             <Date>03-19-2013</Date>
             <Version>0.4.3</Version>
             <Comment>Add python-magic to repositories</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
     

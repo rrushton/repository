@@ -70,24 +70,24 @@
             <Date>03-16-2013</Date>
             <Version>1.6.8</Version>
             <Comment>Split -devel package</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
         
         <Update release="2">
             <Date>03-09-2013</Date>
             <Version>1.6.8</Version>
             <Comment>Fix systemd building</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
         
         <Update release="1">
             <Date>03-09-2013</Date>
             <Version>1.6.8</Version>
             <Comment>Add dbus to repositories</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
     

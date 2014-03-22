@@ -5,8 +5,8 @@
         <Name>dropbear</Name>
         <Homepage>http://matt.ucc.asn.au/dropbear/dropbear.html</Homepage>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>dropbear (small SSH server and client)</Summary>
         <Description> Dropbear is a small SSH server and client that allows a small memory footprint, useful in embedded applications.</Description>

@@ -47,8 +47,8 @@
             <Date>03-19-2013</Date>
             <Version>3.9.1</Version>
             <Comment>Add python-urlgrabber to repositories</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
     

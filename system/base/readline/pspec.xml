@@ -5,8 +5,8 @@
         <Name>readline</Name>
         <Homepage>http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html</Homepage>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <License>GPLv2</License>
         <IsA>library</IsA>

@@ -5,8 +5,8 @@
         <Name>lftp</Name>
         <Homepage>http://lftp.yar.ru</Homepage>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>LFTP (FTP / HTTP client, File Transfer Program)</Summary>
         <Description> LFTP is a sophisticated ftp/http client, and file transfer program supporting many network protocols. It offers job control and uses readline, has bookmarks, mirroring, and parallelization.</Description>

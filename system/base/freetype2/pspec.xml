@@ -45,8 +45,8 @@
             <Date>03-11-2013</Date>
             <Version>2.4.11</Version>
             <Comment>Add freetype2 to repositories</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
     

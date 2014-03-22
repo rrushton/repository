@@ -5,8 +5,8 @@
         <Name>pkg-config</Name>
         <Homepage>http://www.freedesktop.org/wiki/Software/pkg-config</Homepage>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>manage compile and link flags for libraries</Summary>
         <Description>pkg-config is a system for managing library compile and link flags that works with automake and autoconf</Description>

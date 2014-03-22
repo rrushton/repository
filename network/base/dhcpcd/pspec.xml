@@ -5,8 +5,8 @@
         <Name>dhcpcd</Name>
         <Homepage>http://roy.marples.name/projects/dhcpcd/</Homepage>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>DHCP client and server</Summary>
         <Description> In layman's terms, dhcpcd runs on your machine and silently configures your computer to work on the attached networks without trouble and mostly without configuration. </Description>

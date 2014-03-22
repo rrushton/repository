@@ -5,8 +5,8 @@
         <Name>libpcre</Name>
         <Homepage>http://www.pcre.org</Homepage>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>pcre (Perl Compatible Regular Expressions)</Summary>
         <Description> pcre is a library of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5. It has its own API and wrappers that correspond to the POSIX regular expression API.</Description>

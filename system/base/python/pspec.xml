@@ -48,8 +48,8 @@ The ssl.match_hostname function in the SSL module in Python 2.6 through 3.4 does
             <Date>03-12-2013</Date>
             <Version>2.7.3</Version>
             <Comment>Add Python to repositories</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
     

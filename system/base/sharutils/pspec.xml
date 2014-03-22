@@ -5,8 +5,8 @@
         <Name>sharutils</Name>
         <Homepage>http://www.gnu.org/software/sharutils/</Homepage>
         <Packager>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Packager>
         <Summary>Creates "shell archives" (or shar files) which are in text format and can be mailed. </Summary>
         <Description> 'shar' makes so-called shell archives out of many files, preparing
@@ -38,8 +38,8 @@
             <Date>03-09-2013</Date>
             <Version>4.13.3</Version>
             <Comment>Add sharutils to repositories</Comment>
-            <Name>SolusOS Developers</Name>
-            <Email>dev@solusos.com</Email>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
     
