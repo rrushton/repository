@@ -11,7 +11,7 @@
         <License>GPLv2</License>
         <Summary>Manages system configuration</Summary>
         <Description>PiSi packages are packaged with small scripts which configures them to entegrate with system and each other. Çomar is the tool which manages and executes these scripts.</Description>
-        <Archive sha1sum="a0894a20d3c2bb5843de7e25fc98707baf554df1" type="tarbz2">http://ng.solusos.com/sources/comar-3.0.3.tar.bz2</Archive>
+        <Archive sha1sum="9ea747d6b9eb424332dd09dec08eaec3a74e1cb4" type="tarxz">http://evolve-os.com/sources/comar-3.0.3.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>dbus-devel</Dependency>
             <Dependency>python</Dependency>
