@@ -17,10 +17,6 @@
             <Dependency>python</Dependency>
             <Dependency>libnettle-devel</Dependency>
         </BuildDependencies>
-        <Patches>
-            <Patch level="1">fix-flags.patch</Patch>
-            <Patch level="1">update-system-manager-model.patch</Patch>
-        </Patches>
     </Source>
 
     <Package>
