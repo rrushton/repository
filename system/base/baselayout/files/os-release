@@ -1,9 +1,9 @@
-NAME=SolusOS
-VERSION=2
-ID=solusos
-VERSION_ID=alpha9
-PRETTY_NAME="SolusOS 2 Alpha 9"
+NAME=EvolveOS
+VERSION=1
+ID=evolveos
+VERSION_ID=alpha1
+PRETTY_NAME="Evolve OS Alpha 1"
 ANSI_COLOR="1;34"
-HOME_URL="http://www.solusos.com"
-SUPPORT_URL="http://forums.solusos.com"
-BUG_REPORT_URL="http://inf.solusos.com/maniphest/"
+HOME_URL="http://www.evolve-os.com"
+SUPPORT_URL="http://www.evolve-os.com"
+BUG_REPORT_URL="http://www.evolve-os.com"
