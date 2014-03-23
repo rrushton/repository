@@ -17,3 +17,5 @@ def build():
 	
 def install():
 	autotools.rawInstall("INSTALL_PREFIX=%s MANDIR=/usr/share/man" % get.installDIR())
+	# Move pkgconfig back into /usr/lib/pkgconfig
+	pisitools.domove("/usr/lib64/pkgconfig", "/usr/lib")
