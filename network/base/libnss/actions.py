@@ -16,6 +16,7 @@ def build():
 	shelltools.export ("NSPR_INCLUDE_DIR", "/usr/include/nspr")
 	shelltools.export ("USE_SYSTEM_ZLIB", "1")
 	shelltools.export ("NSS_USE_SYSTEM_SQLITE", "1")
+	shelltools.export ("USE_64", "1")
 	
 	autotools.make ("nss_build_all -j1")
 	
