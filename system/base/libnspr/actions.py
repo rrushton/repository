@@ -16,7 +16,8 @@ def setup():
 	
 	autotools.configure ("--prefix=/usr\
 						 --with-mozilla\
-						 --with-pthreads")
+						 --with-pthreads \
+						 --enable-64bit")
 					
 def build():
 	os.chdir (BuildDir)
