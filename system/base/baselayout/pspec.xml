@@ -11,7 +11,7 @@
         <License>GPLv2</License>
         <Summary>Filesystem baselayout</Summary>
         <Description>baselayout creates the Evolve OS main filesystem hierarchy.</Description>
-        <Archive sha1sum="9d5de4457e629e794bf14b10040b1a5206142ad2" type="targz">http://evolve-os.com/sources/baselayout-1.6.tar.gz</Archive>
+        <Archive sha1sum="a8878efb68feb79860656b011ca79b58ca12ae64" type="targz">http://evolve-os.com/sources/baselayout-1.6.tar.gz</Archive>
     </Source>
 
     <Package>
