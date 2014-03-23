@@ -26,8 +26,6 @@
         <Patches>
             <Patch level="1">coreutils-8.21-i18n-1.patch</Patch>
         </Patches>
-
-        <SupportsClang>true</SupportsClang>
     </Source>
 
     <Package>
@@ -38,7 +36,6 @@
     </Package>
 
     <History>
-
         <Update release="1">
             <Date>03-09-2013</Date>
             <Version>8.21</Version>
@@ -47,6 +44,5 @@
             <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
-
 </PISI>
 
