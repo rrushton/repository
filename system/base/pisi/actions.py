@@ -14,5 +14,4 @@ def install():
     pythonmodules.install()
 
     pisitools.dosym("pisi-cli", "/usr/bin/pisi")
-
-    pisitools.insinto("/etc/pisi", "pisi.conf-%s" % get.ARCH(), "pisi.conf")
+    pisitools.dosym("pisi-cli", "/usr/bin/eopkg")
