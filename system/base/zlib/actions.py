@@ -15,5 +15,6 @@ def build():
 def install():
 	autotools.install()
 	pisitools.domove("/usr/lib/libz*.so*", "/lib/")
-	pisitools.dosym("/lib/libz.so.1.2.7", "/usr/lib/libz.so")
+	pisitools.dosym("/lib/libz.so.1.2.8", "/usr/lib/libz.so")
+	pisitools.dosym("/lib/libz.so.1.2.8", "/usr/lib64/libz.so")
 	pisitools.dodoc("ChangeLog", "README")
