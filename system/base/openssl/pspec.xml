@@ -22,8 +22,8 @@
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="config">/etc</Path>
-            <Path fileType="library">/usr/lib/engines</Path>
-            <Path fileType="library">/usr/lib/lib*so*</Path>
+            <Path fileType="library">/usr/lib64/engines</Path>
+            <Path fileType="library">/usr/lib64/lib*so*</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
@@ -34,7 +34,7 @@
         <Description>Development files required to build applications based on or using OpenSSL</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
-            <Path fileType="library">/usr/lib/*.a</Path>
+            <Path fileType="library">/usr/lib64/*.a</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <RuntimeDependencies>
