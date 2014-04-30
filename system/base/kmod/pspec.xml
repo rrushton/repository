@@ -19,6 +19,7 @@
             <Path fileType="library">/lib/*.so*</Path>
             <Path fileType="binary">/bin</Path>
             <Path fileType="binary">/sbin</Path>
+            <Path fileType="data">/usr/share/bash-completion/completions/kmod</Path>
         </Files>
     </Package>
 
