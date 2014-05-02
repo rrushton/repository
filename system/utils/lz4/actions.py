@@ -21,7 +21,7 @@ def install():
 
     pisitools.dodir("/usr/bin")
     # In future check arch
-    shelltools.move("%s/usr/lz4c32" % get.installDIR(), "%s/usr/bin/lz4c32" % get.installDIR())
+    shelltools.move("%s/usr/lz4c64" % get.installDIR(), "%s/usr/bin/lz4c64" % get.installDIR())
 
-    pisitools.dosym ("/usr/bin/lz4c32", "/usr/bin/lz4c")
+    pisitools.dosym ("/usr/bin/lz4c64", "/usr/bin/lz4c")
     

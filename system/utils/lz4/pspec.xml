@@ -6,7 +6,7 @@
         <Homepage>http://code.google.com/p/lz4/</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>LZ4 commmand line tools</Summary>
         <Description>LZ4 is a very fast lossless compression algorithm, providing compression speed at 400 MB/s per core, scalable with multi-cores CPU. It also features an extremely fast decoder, with speed in multiple GB/s per core, typically reaching RAM speed limits on multi-core systems.</Description>
@@ -36,6 +36,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>05-02-2013</Date>
+            <Version>101</Version>
+            <Comment>Switch to 64-bit lz4c</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>09-03-2013</Date>
             <Version>101</Version>
