@@ -27,18 +27,6 @@
             <Dependency>perl</Dependency>
             <Dependency>lz4</Dependency>
         </BuildDependencies>
-
-        <Patches>
-            <!-- Admittedly breaking a bit from our vanilla philosphy elsewhere
-                 However, it's only a different scheduler we're using here, and
-                 we can consider it an exception for performance reasons //-->
-            <Patch level="1">ck1/3.11-sched-bfs-441.patch</Patch>
-            <Patch level="1">ck1/preempt-desktop-tune.patch</Patch>
-            <Patch level="1">ck1/hz-no_default_250.patch</Patch>
-            <Patch level="1">ck1/hz-default_1000.patch</Patch>
-            <Patch level="1">ck1/kconfig-expose_vmsplit_option.patch</Patch>
-            <Patch level="1">ck1/urw-locks.patch</Patch>
-        </Patches>
     </Source>
 
     <Package>
