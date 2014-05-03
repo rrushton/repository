@@ -5,11 +5,11 @@ diff -Naur valgrind-3.8.1-orig/configure valgrind-3.8.1/configure
  
  	# DEFAULT_SUPP set by kernel version check above.
  	;;
-+     2.17)
-+	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: 2.17 family" >&5
-+$as_echo "2.17 family" >&6; }
++     2.18)
++	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: 2.18 family" >&5
++$as_echo "2.18 family" >&6; }
 +
-+$as_echo "#define GLIBC_2_17 1" >>confdefs.h
++$as_echo "#define GLIBC_2_18 1" >>confdefs.h
 +
 +	DEFAULT_SUPP="glibc-2.X.supp ${DEFAULT_SUPP}"
 +	DEFAULT_SUPP="glibc-2.34567-NPTL-helgrind.supp ${DEFAULT_SUPP}"
@@ -31,7 +31,7 @@ diff -Naur valgrind-3.8.1-orig/configure valgrind-3.8.1/configure
  	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: unsupported version ${GLIBC_VERSION}" >&5
  $as_echo "unsupported version ${GLIBC_VERSION}" >&6; }
 -	as_fn_error "Valgrind requires glibc version 2.2 - 2.16" "$LINENO" 5
-+	as_fn_error "Valgrind requires glibc version 2.2 - 2.17" "$LINENO" 5
++	as_fn_error "Valgrind requires glibc version 2.2 - 2.18" "$LINENO" 5
  	as_fn_error "or Darwin libc" "$LINENO" 5
  	;;
  esac
