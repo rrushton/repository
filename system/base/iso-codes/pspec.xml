@@ -5,12 +5,12 @@
         <Name>iso-codes</Name>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>Central database of ISO codes</Summary>
         <Description>The ISO Codes package contains a list of country, language and currency names and it is used as a central database for accessing this data.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="02b1b5b6fb476bf7dd6251bfbd085c3ba4feaa2a" type="tarxz">http://pkg-isocodes.alioth.debian.org/downloads/iso-codes-3.40.tar.xz</Archive>
+        <Archive sha1sum="fa28cc4070388548566717dd5c1c96dd9ee0cfba" type="tarxz">http://pkg-isocodes.alioth.debian.org/downloads/iso-codes-3.46.tar.xz</Archive>
     </Source>
 
     <Package>
@@ -24,6 +24,14 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>05-04-2014</Date>
+            <Version>3.46</Version>
+            <Comment>Minor update - don't want breakage</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>04-15-2013</Date>
             <Version>3.40</Version>
