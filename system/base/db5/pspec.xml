@@ -11,7 +11,7 @@
         <Description>This package provides different tools for manipulating databases in the Berkeley Database v5 format.
         </Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="32e43c4898c8996750c958a90c174bd116fcba83" type="targz">http://download.oracle.com/berkeley-db/db-5.3.21.tar.gz</Archive>
+        <Archive sha1sum="32e43c4898c8996750c958a90c174bd116fcba83" type="targz">http://evolve-os.com/sources/db-5.3.21.tar.gz</Archive>
     </Source>
 
     <Package>
