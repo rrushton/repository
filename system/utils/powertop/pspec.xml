@@ -10,7 +10,7 @@
         <Summary>Add summary</Summary>
         <Description>Add description</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="0bb26b38a87f45cdb61acc8dc233e4391220c8b4" type="targz">http://01.org/powertop/sites/default/files/downloads/powertop-2.3.tar.gz</Archive>
+        <Archive sha1sum="0bb26b38a87f45cdb61acc8dc233e4391220c8b4" type="targz">https://01.org/sites/default/files/downloads/powertop/powertop-2.3.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libnl-devel</Dependency>
             <Dependency>ncurses-devel</Dependency>
