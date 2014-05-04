@@ -12,14 +12,11 @@ def setup():
                           --libexecdir=/usr/lib/evolution-data-server \
                           --enable-vala-bindings \
                           --disable-uoa")
-						
-def build():
-	autotools.make ()
-	
-def install():
-	autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
-	
-	pisitools.dodoc ("AUTHORS", "ChangeLog", "COPYING")
-	
-	
 
+def build():
+    autotools.make ()
+
+def install():
+    autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
+
+    pisitools.dodoc ("AUTHORS", "ChangeLog", "COPYING")

@@ -22,4 +22,3 @@ def install():
     os.removedirs("%s/usr/share/man/man1" % get.installDIR())
 
     pisitools.dodoc ("README", "NEWS", "COPYING")
-

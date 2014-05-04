@@ -11,15 +11,15 @@ InstallDir = "dist"
 WorkDir="%s-%s/mozilla" % (get.srcNAME().replace("lib",""), get.srcVERSION())
 
 def build():
-	shelltools.cd (BuildDir)
-	shelltools.export ("BUILD_OPT", "1")
-	shelltools.export ("NSPR_INCLUDE_DIR", "/usr/include/nspr")
-	shelltools.export ("USE_SYSTEM_ZLIB", "1")
-	shelltools.export ("NSS_USE_SYSTEM_SQLITE", "1")
-	shelltools.export ("USE_64", "1")
-	
-	autotools.make ("nss_build_all -j1")
-	
+    shelltools.cd (BuildDir)
+    shelltools.export ("BUILD_OPT", "1")
+    shelltools.export ("NSPR_INCLUDE_DIR", "/usr/include/nspr")
+    shelltools.export ("USE_SYSTEM_ZLIB", "1")
+    shelltools.export ("NSS_USE_SYSTEM_SQLITE", "1")
+    shelltools.export ("USE_64", "1")
+
+    autotools.make ("nss_build_all -j1")
+
 def install():
     for binary in ["certutil", "modutil", "pk12util", "signtool", "ssltap", "nss-config"]:
         pisitools.insinto("/usr/bin","dist/Linux*/bin/%s" % binary, sym=False)
@@ -38,5 +38,5 @@ def install():
     pisitools.insinto("/usr/lib/pkgconfig", "dist/Linux*/lib/pkgconfig/nss.pc", sym=False)
 
     for lib in ["libfreebl3.so", "libnssutil3.so", "libnss3.so", "libsmime3.so", "libnssckbi.so"\
-				"libsmime3.so", "libsoftokn3.so", "libnssdbm3.so", "libssl3.so", "libnsssysinit.so"]:
-		pisitools.dosym ("/usr/lib/nss/%s" % lib, "/usr/lib/%s" % lib)
+                                "libsmime3.so", "libsoftokn3.so", "libnssdbm3.so", "libssl3.so", "libnsssysinit.so"]:
+        pisitools.dosym ("/usr/lib/nss/%s" % lib, "/usr/lib/%s" % lib)

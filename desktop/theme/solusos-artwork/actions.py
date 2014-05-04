@@ -14,4 +14,3 @@ def install():
     pisitools.insinto("/usr/share/icons", "%s/icons/SolusOS" % ThemeDir)
 
     pisitools.insinto("/usr/share/plymouth/themes", "%s/plymouth" % ThemeDir, "solusos")
-    

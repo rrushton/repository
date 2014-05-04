@@ -8,15 +8,15 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
-	autotools.configure ("--prefix=/usr")
-	
+    autotools.configure ("--prefix=/usr")
+
 def build():
-	autotools.make ()
+    autotools.make ()
 
 def check():
-	autotools.make ("check")
-		
+    autotools.make ("check")
+
 def install():
-	autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
-	
-	# TODO: Add docs
+    autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
+
+    # TODO: Add docs

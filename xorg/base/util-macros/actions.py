@@ -7,11 +7,11 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
-	autotools.configure ("--disable-static")
-						
+    autotools.configure ("--disable-static")
+
 def build():
-	pass
-	
+    pass
+
 def install():
-	autotools.install ()
-	pisitools.dodoc ("README", "COPYING", "ChangeLog")
+    autotools.install ()
+    pisitools.dodoc ("README", "COPYING", "ChangeLog")

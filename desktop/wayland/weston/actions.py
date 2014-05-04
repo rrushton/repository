@@ -10,14 +10,11 @@ def setup():
     autotools.configure ("--disable-libunwind    \
                           --enable-weston-launch \
                           --enable-demo-clients")
-						
+
 def build():
-	autotools.make ()
-	
+    autotools.make ()
+
 def install():
     autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
 
     pisitools.dodoc ("COPYING")
-
-	
-

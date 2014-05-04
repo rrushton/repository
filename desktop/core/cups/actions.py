@@ -17,10 +17,10 @@ def setup():
                           --enable-acl \
                           --enable-dbus \
                           --enable-libpaper ")
-						
+
 def build():
-	autotools.make ()
-	
+    autotools.make ()
+
 def install():
     autotools.rawInstall ("BUILDROOT=%s" % get.installDIR() )
 

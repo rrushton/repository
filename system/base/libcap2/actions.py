@@ -6,9 +6,9 @@
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
-					
+
 def build():
-	autotools.make()
-	
+    autotools.make()
+
 def install():
-	autotools.rawInstall("RAISE_SETFCAP=no DESTDIR=%s" % get.installDIR())
+    autotools.rawInstall("RAISE_SETFCAP=no DESTDIR=%s" % get.installDIR())

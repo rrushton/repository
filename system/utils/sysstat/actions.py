@@ -7,11 +7,11 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
-	autotools.configure("--sysconfdir=/etc/sysstat")
+    autotools.configure("--sysconfdir=/etc/sysstat")
 
 def build():
-	autotools.make()
-	
+    autotools.make()
+
 def install():
-	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-	pisitools.dodir("/var/log/sa")
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    pisitools.dodir("/var/log/sa")

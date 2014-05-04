@@ -39,8 +39,8 @@ def setup():
 
 
 def build():
-	autotools.make ()
-	
+    autotools.make ()
+
 def install():
     autotools.rawInstall ("INSTALL_ROOT=%s" % get.installDIR())
 

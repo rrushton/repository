@@ -11,14 +11,11 @@ def setup():
     autotools.configure ("--disable-static \
                           --libexecdir=/usr/lib/gnome-online-accounts \
                           --disable-documentation")
-						
-def build():
-	autotools.make ()
-	
-def install():
-	autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
-	
-	pisitools.dodoc ("COPYING")
-	
-	
 
+def build():
+    autotools.make ()
+
+def install():
+    autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
+
+    pisitools.dodoc ("COPYING")

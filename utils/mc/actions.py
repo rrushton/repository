@@ -5,13 +5,13 @@
 from pisi.actionsapi import autotools, shelltools, get
 
 def setup():
-	autotools.autoconf()
-	shelltools.system("aclocal")
-	#autotools.autoreconf()
-	autotools.configure("--with-screen=ncurses")
+    autotools.autoconf()
+    shelltools.system("aclocal")
+    #autotools.autoreconf()
+    autotools.configure("--with-screen=ncurses")
 
 def build():
-	autotools.automake("--add-missing")
+    autotools.automake("--add-missing")
 
 def install():
-	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())

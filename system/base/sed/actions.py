@@ -7,14 +7,14 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
-	autotools.rawConfigure("--prefix=/usr \
-							--bindir=/bin")
-					
+    autotools.rawConfigure("--prefix=/usr \
+                                                    --bindir=/bin")
+
 def build():
-	autotools.make()
-	
+    autotools.make()
+
 def install():
-	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-	pisitools.dosym("/bin/sed", "/usr/bin/sed")
-	pisitools.dodoc("AUTHORS", "COPYING", "ChangeLog", "NEWS",
-					"README", "THANKS")
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    pisitools.dosym("/bin/sed", "/usr/bin/sed")
+    pisitools.dodoc("AUTHORS", "COPYING", "ChangeLog", "NEWS",
+                                    "README", "THANKS")

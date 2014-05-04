@@ -15,13 +15,12 @@ def setup():
                           --disable-static \
                           --libexecdir=/usr/lib/lightdm \
                           --with-greeter-session=lightdm-gtk-greeter")
-						
+
 def build():
-	autotools.make ()
-	
+    autotools.make ()
+
 def install():
     autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
     pisitools.dodir ("/usr/lib/systemd/system/graphical.target.wants")
     pisitools.dosym ("/usr/lib/systemd/system/lightdm.service", "/usr/lib/systemd/system/displaymanager.service")
     pisitools.dosym ("/usr/lib/systemd/system/lightdm.service", "/usr/lib/systemd/system/graphical.target.wants/lightdm.service")
-

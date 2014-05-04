@@ -6,4 +6,4 @@
 from pisi.actionsapi import pythonmodules
 
 def install():
-	pythonmodules.install("--optimize=1")
+    pythonmodules.install("--optimize=1")

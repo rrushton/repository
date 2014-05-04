@@ -9,10 +9,9 @@ def setup():
     autotools.autoreconf ("-vfi")
     autotools.configure ("--prefix=/usr\
                           --with-pcre=system")
-						
+
 def build():
-	autotools.make ()
-	
+    autotools.make ()
+
 def install():
-	autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
-	
+    autotools.rawInstall ("DESTDIR=%s" % get.installDIR())

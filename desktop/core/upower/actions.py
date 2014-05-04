@@ -12,14 +12,11 @@ def setup():
     autotools.configure ("--disable-static \
                           --disable-man-pages \
                           --libexecdir=/usr/lib/upower")
-						
-def build():
-	autotools.make ()
-	
-def install():
-	autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
-	
-	pisitools.dodoc ("AUTHORS", "ChangeLog", "COPYING")
-	
-	
 
+def build():
+    autotools.make ()
+
+def install():
+    autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
+
+    pisitools.dodoc ("AUTHORS", "ChangeLog", "COPYING")

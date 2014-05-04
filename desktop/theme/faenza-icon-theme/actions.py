@@ -14,7 +14,7 @@ Icons = ["Faenza",
          "Faenza-Darker",
          "Faenza-Darkest",
          "Faenza-Radiance"]
-         
+
 def build():
     for icon_theme in Icons:
         shelltools.system("tar xvf %s.tar.gz" % icon_theme)
@@ -25,6 +25,3 @@ def install():
         pisitools.insinto ("/usr/share/icons", icon_theme)
 
     pisitools.dodoc("COPYING")
-
-
-

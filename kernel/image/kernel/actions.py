@@ -30,7 +30,7 @@ def install():
     pisitools.dodir("/lib/modules/%s" % KVERSION)
     shelltools.echo("%s/lib/modules/%s/source" % (get.installDIR(), KVERSION), "mustFix")
     shelltools.echo("%s/lib/modules/%s/build" % (get.installDIR(), KVERSION), "mustFix")
-    
+
     kerneltools.install()
 
     # Install kernel headers needed for out-of-tree module compilation
@@ -41,4 +41,3 @@ def install():
 
     # Generate some module lists to use within mkinitramfs
     shelltools.system("./generate-module-list %s/lib/modules/%s" % (get.installDIR(), kerneltools.__getSuffix()))
-

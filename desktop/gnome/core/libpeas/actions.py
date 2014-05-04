@@ -12,14 +12,11 @@ def setup():
                           --enable-python2 \
                           --enable-gjs \
                           --enable-gtk ")
-						
-def build():
-	autotools.make ()
-	
-def install():
-	autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
-	
-	pisitools.dodoc ("AUTHORS", "ChangeLog", "COPYING")
-	
-	
 
+def build():
+    autotools.make ()
+
+def install():
+    autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
+
+    pisitools.dodoc ("AUTHORS", "ChangeLog", "COPYING")

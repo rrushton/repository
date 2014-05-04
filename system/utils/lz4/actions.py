@@ -24,4 +24,3 @@ def install():
     shelltools.move("%s/usr/lz4c64" % get.installDIR(), "%s/usr/bin/lz4c64" % get.installDIR())
 
     pisitools.dosym ("/usr/bin/lz4c64", "/usr/bin/lz4c")
-    

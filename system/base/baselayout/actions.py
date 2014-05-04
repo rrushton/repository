@@ -14,8 +14,8 @@ def install():
     pisitools.insinto("/", "root/*")
 
     for dire in ["/tmp", "/var/tmp", "/dev", "/usr/lib64", "/lib64", "/proc", "/sys", "/run/lock", "/root", "/home", "/run"]:
-		pisitools.dodir (dire)
-		
+        pisitools.dodir (dire)
+
     # Adjust permissions
     do_chmod("/tmp", 01777)
     do_chmod("/var/tmp", 01777)

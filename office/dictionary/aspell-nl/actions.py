@@ -6,11 +6,11 @@
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 def setup():
-	autotools.rawConfigure()
-						
+    autotools.rawConfigure()
+
 def build():
-	autotools.make()
-	
+    autotools.make()
+
 def install():
-	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-	pisitools.dodoc("Copyright", "README")
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    pisitools.dodoc("Copyright", "README")

@@ -22,4 +22,3 @@ def install():
         else:
             if not potential in Blacklisted:
                 pisitools.insinto ("/lib/firmware", potential)
-

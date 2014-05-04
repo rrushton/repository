@@ -25,14 +25,11 @@ def setup():
                           --disable-geolocation \
                           --disable-gtk-doc-html")
     shelltools.system ("sed -i '/gtkdoc --rebase/s:^:# :' GNUmakefile.*")
-						
+
 def build():
     if not get.canClang(): build_config ()
     autotools.make ()
-	
+
 def install():
     if not get.canClang(): build_config ()
     autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
-	
-	
-

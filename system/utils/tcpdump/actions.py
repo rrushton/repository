@@ -7,12 +7,12 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
-	autotools.configure()
-					
+    autotools.configure()
+
 def build():
-	autotools.make()
-	
+    autotools.make()
+
 def install():
-	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-	pisitools.remove("/usr/sbin/tcpdump.4.3.0")
-	pisitools.dodoc("CREDITS", "LICENSE", "README")
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    pisitools.remove("/usr/sbin/tcpdump.4.3.0")
+    pisitools.dodoc("CREDITS", "LICENSE", "README")

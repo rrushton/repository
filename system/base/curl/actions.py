@@ -16,10 +16,10 @@ def setup():
                           --without-gnutls \
                           --enable-libcurl-option \
                           --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt")
-						
+
 def build():
-	autotools.make ()
-	
+    autotools.make ()
+
 def install():
-	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-	pisitools.dodoc ("docs/VERSIONS", "docs/MAIL-ETIQUETTE", "docs/BINDINGS", "docs/BUGS")
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    pisitools.dodoc ("docs/VERSIONS", "docs/MAIL-ETIQUETTE", "docs/BINDINGS", "docs/BUGS")

@@ -10,14 +10,11 @@ shelltools.export ("HOME", get.workDIR())
 def setup():
     autotools.configure ("--disable-static \
                           --libexecdir=/usr/lib/gnome-panel")
-						
-def build():
-	autotools.make ()
-	
-def install():
-	autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
-	
-	pisitools.dodoc ("AUTHORS", "ChangeLog", "COPYING")
-	
-	
 
+def build():
+    autotools.make ()
+
+def install():
+    autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
+
+    pisitools.dodoc ("AUTHORS", "ChangeLog", "COPYING")

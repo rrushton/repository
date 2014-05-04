@@ -13,23 +13,23 @@ movetobin = ["basename", "cat", "chgrp", "chmod", "chown", "cp", "cut", "date", 
 symtousrbin = ["env", "cut", "readlink"]
 
 def setup():
-	shelltools.export ("FORCE_UNSAFE_CONFIGURE","1")
-	autotools.configure ("--prefix=/usr         \
-            --libexecdir=/usr/lib \
-            --enable-largefile \
-            --enable-no-install-program=kill,uptime")
-						
+    shelltools.export ("FORCE_UNSAFE_CONFIGURE","1")
+    autotools.configure ("--prefix=/usr         \
+        --libexecdir=/usr/lib \
+        --enable-largefile \
+        --enable-no-install-program=kill,uptime")
+
 def build():
-	autotools.make ()
-	
+    autotools.make ()
+
 def install():
-	autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
+    autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
 
-    # move critical files into /bin
-	for f in movetobin:
-		pisitools.domove("/usr/bin/%s" % f, "/bin/")
+# move critical files into /bin
+    for f in movetobin:
+        pisitools.domove("/usr/bin/%s" % f, "/bin/")
 
-	for f in symtousrbin:
-		pisitools.dosym("../../bin/%s" % f, "/usr/bin/%s" % f)
+    for f in symtousrbin:
+        pisitools.dosym("../../bin/%s" % f, "/usr/bin/%s" % f)
 
-	pisitools.dodoc("AUTHORS", "ChangeLog*", "NEWS", "README*", "THANKS", "TODO")
+    pisitools.dodoc("AUTHORS", "ChangeLog*", "NEWS", "README*", "THANKS", "TODO")

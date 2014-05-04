@@ -9,14 +9,11 @@ shelltools.export ("HOME", get.workDIR())
 
 def setup():
     autotools.configure ("--libexecdir=/usr/lib/gnome-terminal ")
-						
-def build():
-	autotools.make ()
-	
-def install():
-	autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
-	
-	pisitools.dodoc ("AUTHORS", "ChangeLog", "COPYING")
-	
-	
 
+def build():
+    autotools.make ()
+
+def install():
+    autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
+
+    pisitools.dodoc ("AUTHORS", "ChangeLog", "COPYING")

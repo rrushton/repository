@@ -8,8 +8,7 @@ def setup():
     autotools.configure("--prefix=/usr")
 
 def build():
-	autotools.make()
+    autotools.make()
 
 def install():
-	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())

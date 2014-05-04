@@ -7,11 +7,11 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
-	autotools.configure("--with-glib=yes")
-						
+    autotools.configure("--with-glib=yes")
+
 def build():
-	autotools.make ()
-	
+    autotools.make ()
+
 def install():
-	autotools.install ()
-	pisitools.dodoc ("COPYING", "ChangeLog", "AUTHORS")
+    autotools.install ()
+    pisitools.dodoc ("COPYING", "ChangeLog", "AUTHORS")

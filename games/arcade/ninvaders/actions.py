@@ -10,4 +10,3 @@ def build():
 def install():
     pisitools.dobin("nInvaders","/usr/bin")
     pisitools.dodoc("README","ChangeLog", "gpl.txt")
-

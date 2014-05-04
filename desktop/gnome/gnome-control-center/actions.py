@@ -12,14 +12,11 @@ def setup():
                           --enable-systemd \
                           --disable-documentation \
                           --libexecdir=/usr/lib/gnome-control-center")
-						
-def build():
-	autotools.make ()
-	
-def install():
-	autotools.rawInstall ("DESTDIR=%s" % get.installDIR() )
-	
-	pisitools.dodoc ("AUTHORS", "ChangeLog", "COPYING")
-	
-	
 
+def build():
+    autotools.make ()
+
+def install():
+    autotools.rawInstall ("DESTDIR=%s" % get.installDIR() )
+
+    pisitools.dodoc ("AUTHORS", "ChangeLog", "COPYING")

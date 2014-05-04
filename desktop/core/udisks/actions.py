@@ -12,14 +12,11 @@ def setup():
                           --disable-man \
                           --enable-introspection \
                           --with-udevdir=/lib/udev")
-						
-def build():
-	autotools.make ()
-	
-def install():
-	autotools.rawInstall ("DESTDIR=%s" % get.installDIR() )
-	
-	pisitools.dodoc ("AUTHORS", "COPYING")
-	
-	
 
+def build():
+    autotools.make ()
+
+def install():
+    autotools.rawInstall ("DESTDIR=%s" % get.installDIR() )
+
+    pisitools.dodoc ("AUTHORS", "COPYING")

@@ -9,7 +9,7 @@ def setup():
     # TODO: Totem for --enable-optical-media, --enable-youtube,
     #                 --enable-vimeo
     #       gssdp for --enable-upnp
-    #       gmime for --enable-podcasts 
+    #       gmime for --enable-podcasts
     autotools.configure("--enable-goa \
                          --enable-filesystem \
                          --enable-jamendo \

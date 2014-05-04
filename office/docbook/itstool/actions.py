@@ -5,12 +5,12 @@
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 def setup():
-	autotools.configure ()
+    autotools.configure ()
 
 def build():
-	autotools.make ()
+    autotools.make ()
 
 def install():
-	autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
-	
-	pisitools.dodoc ("COPYING.GPL3", "COPYING", "README")
+    autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
+
+    pisitools.dodoc ("COPYING.GPL3", "COPYING", "README")

@@ -16,10 +16,10 @@ def setup():
                           --with-sysvinit-path=/etc/init.d \
                           --with-firmware-path=/lib/firmware \
                           --with-pamlibdir=/lib/security")
-						
+
 def build():
-	autotools.make ()
-	
+    autotools.make ()
+
 def install():
     autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
 
@@ -42,7 +42,7 @@ def install():
     # Remove unwanted rpm macro
     pisitools.removeDir ("/usr/lib/rpm")
 
-    
+
     # Set defaults (enable readahead)
     pisitools.dosym("/usr/lib/systemd/system/systemd-readahead-collect.service",
                     "/usr/lib/systemd/system/default.target.wants/systemd-readahead-collect.service")

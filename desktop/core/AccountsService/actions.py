@@ -16,11 +16,11 @@ def setup():
                          --enable-introspection \
                          --enable-systemd \
                          --disable-static")
-						
+
 def build():
-	autotools.make ()
-	
+    autotools.make ()
+
 def install():
-	autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
-		
-	pisitools.dodoc ("README", "COPYING", "AUTHORS")
+    autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
+
+    pisitools.dodoc ("README", "COPYING", "AUTHORS")

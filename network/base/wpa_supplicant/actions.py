@@ -11,7 +11,7 @@ _workDir = "wpa_supplicant"
 def build():
     os.chdir (_workDir)
     autotools.make ("BINDIR=/sbin LIBDIR=/lib PREFIX=/usr")
-	
+
 def install():
     os.chdir (_workDir)
     autotools.rawInstall ("DESTDIR=%s" % get.installDIR())

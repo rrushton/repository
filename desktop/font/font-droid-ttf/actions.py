@@ -14,5 +14,5 @@ def install():
 
     for i in glob.glob ("*.ttf"):
         pisitools.insinto (FontDir, i)
-        		
-	pisitools.dodoc ("README")
+
+        pisitools.dodoc ("README")

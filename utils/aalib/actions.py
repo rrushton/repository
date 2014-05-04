@@ -4,10 +4,10 @@
 from pisi.actionsapi import pisitools, autotools,get
 
 def setup():
-	autotools.configure("--disable-static")
+    autotools.configure("--disable-static")
 
 def build():
-	autotools.make()
+    autotools.make()
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())

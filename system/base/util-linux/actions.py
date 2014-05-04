@@ -6,13 +6,13 @@
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 def setup():
-	shelltools.system("./autogen.sh")
-	autotools.configure("--disable-login \
-						 --disable-su")
+    shelltools.system("./autogen.sh")
+    autotools.configure("--disable-login \
+                                             --disable-su")
 
 def build():
-	autotools.make()
-	
+    autotools.make()
+
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
     # Conflicts with e2fsprogs

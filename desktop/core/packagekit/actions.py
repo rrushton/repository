@@ -16,14 +16,11 @@ def setup():
                           --disable-static \
                           --libexecdir=/usr/lib/PackageKit \
                           --enable-systemd ")
-						
-def build():
-	autotools.make ()
-	
-def install():
-	autotools.rawInstall ("DESTDIR=%s" % get.installDIR() )
-	
-	pisitools.dodoc ("AUTHORS", "ChangeLog", "COPYING")
-	
-	
 
+def build():
+    autotools.make ()
+
+def install():
+    autotools.rawInstall ("DESTDIR=%s" % get.installDIR() )
+
+    pisitools.dodoc ("AUTHORS", "ChangeLog", "COPYING")

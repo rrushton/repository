@@ -7,14 +7,14 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
-	autotools.configure ("--prefix=/usr\
-						  --sysconfdir=/etc\
-						  --disable-static")
-						
+    autotools.configure ("--prefix=/usr\
+                                              --sysconfdir=/etc\
+                                              --disable-static")
+
 def build():
-	autotools.make ()
-	
+    autotools.make ()
+
 def install():
-	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-	
-	pisitools.dodoc ("COPYING")
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+
+    pisitools.dodoc ("COPYING")

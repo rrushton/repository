@@ -7,10 +7,10 @@
 
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
-						
+
 def build():
-	autotools.make ()
-	
+    autotools.make ()
+
 def install():
     pisitools.dobin("linux-boot-prober")
     pisitools.dobin("os-prober")

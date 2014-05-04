@@ -48,7 +48,7 @@ def build():
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-	
+
     libbasedir = "lib"
     # Handle static libs in /usr/%libdir/static
     pisitools.dodir("/usr/%s/static" % libbasedir)

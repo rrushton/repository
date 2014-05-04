@@ -9,14 +9,14 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 shelltools.export ("HOME", get.workDIR())
 
 def setup():
-	autotools.configure ("--disable-static\
-						  --enable-locations-compression")
-						
+    autotools.configure ("--disable-static\
+                                              --enable-locations-compression")
+
 def build():
-	autotools.make ()
-	
+    autotools.make ()
+
 def install():
-	autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
-	
-	# Ensure docs are installed in main library package
-	pisitools.dodoc ("COPYING", "AUTHORS")
+    autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
+
+    # Ensure docs are installed in main library package
+    pisitools.dodoc ("COPYING", "AUTHORS")

@@ -7,11 +7,11 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
-	autotools.configure()
+    autotools.configure()
 
 def build():
-	autotools.make()
-	
+    autotools.make()
+
 def install():
-	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-	pisitools.dodoc("AUTHORS", "COPYING", "README", "TODO")
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    pisitools.dodoc("AUTHORS", "COPYING", "README", "TODO")

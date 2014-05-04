@@ -17,10 +17,10 @@ def setup():
                          --disable-gstreamer \
                          --disable-schemas-install \
                          --disable-avahi")
-						
+
 def build():
     autotools.make()
-	
+
 def install():
     autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
     pisitools.removeDir("/usr/lib/perl5")

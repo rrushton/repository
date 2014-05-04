@@ -7,11 +7,10 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
-	autotools.configure ("--disable-devel-docs")
-						
+    autotools.configure ("--disable-devel-docs")
+
 def build():
-	autotools.make ()
-	
+    autotools.make ()
+
 def install():
-	autotools.install ()
-	
+    autotools.install ()

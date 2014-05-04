@@ -6,8 +6,8 @@
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 def build():
-	autotools.make ()
-	
+    autotools.make ()
+
 def install():
-	autotools.install ()
-	pisitools.dodoc ("AUTHORS", "LICENSE")
+    autotools.install ()
+    pisitools.dodoc ("AUTHORS", "LICENSE")

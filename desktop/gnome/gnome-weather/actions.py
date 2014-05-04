@@ -18,5 +18,3 @@ def build():
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-
-    

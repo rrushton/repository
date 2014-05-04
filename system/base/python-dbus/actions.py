@@ -3,7 +3,7 @@
 
 # Created For SolusOS
 
-from pisi.actionsapi import shelltools, get, autotools, pisitools   
+from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 py2dir = "py2build"
 py3dir = "py3build"
@@ -27,7 +27,7 @@ def build():
     autotools.make ()
     shelltools.cd("..")
     shelltools.cd(py3dir)
-	
+
 def install():
     shelltools.cd(py2dir)
     autotools.rawInstall ("DESTDIR=%s" % get.installDIR())

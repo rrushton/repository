@@ -16,4 +16,3 @@ def build():
 def install():
     autotools.rawInstall("INSTALL_ROOT=%s/usr" % get.installDIR())
     pisitools.dodoc("LGPL_EXCEPTION.TXT")
-

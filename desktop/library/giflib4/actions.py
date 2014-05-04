@@ -4,18 +4,18 @@
 from pisi.actionsapi import pisitools, autotools,get
 
 def setup():
-	autotools.rawConfigure("--prefix=/usr \
-							--with-x \
-							--disable-static")
+    autotools.rawConfigure("--prefix=/usr \
+                                                    --with-x \
+                                                    --disable-static")
 
 
 
 def build():
-	autotools.make()
+    autotools.make()
 
 
 def install():
-	autotools.rawInstall("DESTDIR=\%s" % get.installDIR())
+    autotools.rawInstall("DESTDIR=\%s" % get.installDIR())
 
-	pisitools.dohtml("doc/")
-	pisitools.dodoc("README","AUTHORS","BUGS","NEWS")
+    pisitools.dohtml("doc/")
+    pisitools.dodoc("README","AUTHORS","BUGS","NEWS")

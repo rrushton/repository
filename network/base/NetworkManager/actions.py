@@ -18,13 +18,13 @@ def setup():
                           --disable-ppp")
     ## Its erroring out with new glib
     shelltools.system ("find . -name \"Makefile\" | xargs sed -i \"s@ -Werror@@g\"")
-						
+
 def build():
-	shelltools.export ("HOME", get.workDIR())
-	autotools.make ()
-	
+    shelltools.export ("HOME", get.workDIR())
+    autotools.make ()
+
 def install():
-    shelltools.export ("HOME", get.workDIR())	
+    shelltools.export ("HOME", get.workDIR())
     autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
 
     # Enable systemd stuff

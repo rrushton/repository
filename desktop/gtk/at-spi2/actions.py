@@ -9,13 +9,13 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 shelltools.export ("HOME", get.installDIR())
 
 def setup():
-	autotools.configure("--disable-static\
-						 --prefix=/usr\
-						 --sysconfdir=/etc\
-						 --libexecdir=/usr/lib/at-spi2/core")
+    autotools.configure("--disable-static\
+                                             --prefix=/usr\
+                                             --sysconfdir=/etc\
+                                             --libexecdir=/usr/lib/at-spi2/core")
 
 def build():
-	autotools.make()
-	
+    autotools.make()
+
 def install():
-	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())

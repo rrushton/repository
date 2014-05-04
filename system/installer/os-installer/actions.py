@@ -26,7 +26,7 @@ def install():
     pisitools.insinto("/usr/share/applications", "dist/os-installer.desktop")
     pisitools.insinto("/etc/skel/Desktop", "dist/os-installer.desktop")
     shelltools.chmod("%s/etc/skel/Desktop/os-installer.desktop" % get.installDIR())
-                    
+
     # Configuration file
     pisitools.insinto("/etc/os-installer", "dist/install.conf")
 
@@ -34,4 +34,3 @@ def install():
     pisitools.insinto("/usr/share/polkit-1/actions", "dist/*.policy")
 
     pisitools.dobin("dist/os-installer-wrapper")
-

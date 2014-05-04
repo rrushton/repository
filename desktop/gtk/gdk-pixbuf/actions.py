@@ -9,13 +9,13 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 shelltools.export ("HOME", get.installDIR())
 
 def setup():
-	# TODO: Add Jasper support
-	autotools.configure("--disable-static\
-						 --prefix=/usr\
-						 --with-x11")
+    # TODO: Add Jasper support
+    autotools.configure("--disable-static\
+                                             --prefix=/usr\
+                                             --with-x11")
 
 def build():
-	autotools.make()
-	
+    autotools.make()
+
 def install():
-	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())

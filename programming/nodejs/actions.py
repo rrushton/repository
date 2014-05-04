@@ -10,10 +10,10 @@ def setup():
     autotools.rawConfigure("--prefix=/usr")
 
 def build():
-	autotools.make()
-	
+    autotools.make()
+
 
 def install():
-	autotools.rawInstall('DESTDIR=%s' % get.installDIR())
-						
-	pisitools.dodoc("LICENSE","README*")
+    autotools.rawInstall('DESTDIR=%s' % get.installDIR())
+
+    pisitools.dodoc("LICENSE","README*")

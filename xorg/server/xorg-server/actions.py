@@ -7,16 +7,15 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
-	autotools.configure ("--with-xkb-output=/var/lib/xkb \
-						  --enable-install-setuid \
-                          --with-xkb-path=/usr/share/X11/xkb \
-                          --with-fontrootdir=/usr/share/fonts \
-						  --prefix=/usr \
-						  --disable-static")
-						
+    autotools.configure ("--with-xkb-output=/var/lib/xkb \
+                                              --enable-install-setuid \
+                      --with-xkb-path=/usr/share/X11/xkb \
+                      --with-fontrootdir=/usr/share/fonts \
+                                              --prefix=/usr \
+                                              --disable-static")
+
 def build():
-	autotools.make ()
-	
+    autotools.make ()
+
 def install():
-	autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
-	
+    autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
