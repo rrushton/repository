@@ -12,6 +12,7 @@ Packages provided in source form only.
 * [ ] Integrate LSM
 * [ ] Integrate Buxton for configurables (determine scope here)
 * [ ] Update minimum amount of packages (.1 gnome releases)
+* [ ] Clean up all specs and actions.py files
 
 NOTE: There is little reason to update any package beyond security
 or branch-backports! This means we *are staying with GNOME 3.10* !
