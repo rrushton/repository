@@ -3,7 +3,7 @@
 	<Version>1</Version>
 	<Description xml:lang="en">Evolve OS Repository</Description>
 	<Type>main</Type>
-	<BinaryName>SolusOS</BinaryName>
+	<BinaryName>Evolve OS</BinaryName>
 	
 	<Obsoletes>
 		<!-- Replaced by libpcre -->
