@@ -5,7 +5,7 @@
         <Name>nettle</Name>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>Low level cryptographic library</Summary>
         <Description>The Nettle package contains the low-level cryptographic library that is designed to fit easily in many contexts.</Description>
@@ -61,6 +61,14 @@
     </Package>
 
     <History>
+        <Update release="6">
+            <Date>05-05-2013</Date>
+            <Version>2.6</Version>
+            <Comment>Force libdir to /usr/lib (temporary)</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="5">
             <Date>06-06-2013</Date>
             <Version>2.6</Version>
