@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #
 # Created for SolusOS
-KVERSION = "3.11.0"
+KVERSION = "3.14.2"
 
 from pisi.actionsapi import kerneltools
 from pisi.actionsapi import shelltools
@@ -12,7 +12,7 @@ from pisi.actionsapi import get
 
 NoStrip = ["/lib", "/boot"]
 
-shelltools.export("KBUILD_BUILD_USER", "solusos")
+shelltools.export("KBUILD_BUILD_USER", "evolveos")
 shelltools.export("KBUILD_BUILD_HOST", "hercules")
 shelltools.export("PYTHONDONTWRITEBYTECODE", "1")
 shelltools.export("HOME", get.workDIR())
