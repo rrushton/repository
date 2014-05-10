@@ -10,7 +10,7 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-NoStrip = ["/lib", "/boot"]
+NoStrip = ["/boot"]
 
 shelltools.export("KBUILD_BUILD_USER", "evolveos")
 shelltools.export("KBUILD_BUILD_HOST", "hercules")
