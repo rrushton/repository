@@ -1,0 +1,31 @@
+From 59e7b815be149aab21672e5a89b0b15d0f991e73 Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey.doherty@gmail.com>
+Date: Sat, 10 May 2014 15:48:52 +0100
+Subject: [PATCH] Ensure kernel modules (.ko files) are also stripped
+
+---
+ pisi/util.py | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+diff --git a/pisi/util.py b/pisi/util.py
+index cd324f6..6777385 100644
+--- a/pisi/util.py
++++ b/pisi/util.py
+@@ -587,6 +587,14 @@ def strip_file(filepath, fileinfo, outpath):
+         # run_chrpath(filepath)
+         return True
+ 
++    # Bit nasty, but just ensures kernel modules are also stripped and we split debug
++    elif "SB relocatable" in fileinfo and filepath.endswith(".ko"):
++        if ctx.config.values.build.generatedebug:
++            ensure_dirs(os.path.dirname(outpath))
++            save_elf_debug(filepath, outpath)
++        run_strip(filepath)
++        return True
++
+     elif "SB shared object" in fileinfo:
+         if ctx.config.values.build.generatedebug:
+             ensure_dirs(os.path.dirname(outpath))
+-- 
+1.9.1
+
