@@ -12,16 +12,7 @@
         <IsA>app:console</IsA>
         <Summary>PISI</Summary>
         <Description>PISI is a modern package management system implemented in Python. Some of its main features are: package sources are written in XML and python, implements all functions through a simple-to-use API, integrates low-level and high-level package management features.</Description>
-        <Archive sha1sum="ecbe114cba453c0ec50bcb2111ea88366789cb63" type="tarxz">http://evolve-os.com/sources/pisi-3.0.tar.xz</Archive>
-
-        <Patches>
-            <!-- From git master, ensure kernel modules are stripped //-->
-            <Patch level="1">0001-Ensure-kernel-modules-.ko-files-are-also-stripped.patch</Patch>
-            <Patch level="1">0002-Only-remove-unneeded-and-debug-symbols-from-kernel-m.patch</Patch>
-            <!-- Allow pkgconfig build dependencies //-->
-            <Patch level="1">0003-Export-pkg-config-information-when-building-packages.patch</Patch>
-            <Patch level="1">0004-Allow-PkgConfig-build-dependencies-for-packages.patch</Patch>
-        </Patches>
+        <Archive sha1sum="c82ef752f8252f9997472a27d58ed99bb16a8668" type="tarbz2">http://evolve-os.com/sources/pisi-3.1.tar.bz2</Archive>
 
         <BuildDependencies>
             <Dependency>python</Dependency>
@@ -62,6 +53,14 @@
     </Package>
 
     <History>
+        <Update release="16">
+            <Date>05-10-2014</Date>
+            <Version>3.1</Version>
+            <Comment>Automatic binary dependencies, etc.</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="15">
             <Date>05-10-2014</Date>
             <Version>3.0</Version>
