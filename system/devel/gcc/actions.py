@@ -1,4 +1,3 @@
-
 #!/usr/bin/python
 
 # Created For SolusOS
@@ -7,6 +6,8 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 BuildDir = "%s/%s" % ( get.workDIR(), "gcc-build")
 GccDir = "../gcc-4.8.1"
+
+IgnoreAutodep = True
 
 def setup():
     shelltools.makedirs (BuildDir)

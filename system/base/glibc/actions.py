@@ -10,6 +10,8 @@ from pisi.actionsapi import get
 
 import os
 
+IgnoreAutodep = True
+
 WorkDir = "glibc-2.18"
 
 defaultflags = "-O3 -g -U_FORTIFY_SOURCE -fno-strict-aliasing \
