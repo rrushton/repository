@@ -1,7 +1,8 @@
-
 #!/usr/bin/python
 
 # Created For SolusOS
+
+IgnoreAutodep = True
 
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 

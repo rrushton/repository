@@ -1,4 +1,3 @@
-
 #!/usr/bin/python
 
 # Created For SolusOS
@@ -7,6 +6,9 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 # Avoid g-ir-scanner FTB/SV
 shelltools.export ("HOME", get.installDIR())
+
+# Circular deps  - woo
+IgnoreAutodep = True
 
 def setup():
     autotools.configure ("--libexecdir=/usr/lib \
