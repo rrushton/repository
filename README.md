@@ -3,7 +3,6 @@ Evolve OS Package Repo
 
 Packages provided in source form only.
 
-* [ ] Switch to elfutils where appropriate (vs binutils)
 * [ ] Split off fat packages (docs,locale*)
 * [ ] Address rampant CVEs
 * [ ] Incorporate Budgie Desktop
