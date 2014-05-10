@@ -1,0 +1,44 @@
+From dd483af1c9a9b8e3274b89ee730f28b118335efa Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey.doherty@gmail.com>
+Date: Sat, 10 May 2014 22:29:30 +0100
+Subject: [PATCH 2/2] actionsapi: Add automatic job count support to 'get'
+
+Users can now simply set "jobs" to "auto" in their eopkg.conf file so that
+the right job count (i.e. -j5 for a quad-core) is automatically determined
+and set for them. Note that this will not work in chroot environments unless
+/sys/ has been mounted.
+---
+ pisi/actionsapi/get.py | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+diff --git a/pisi/actionsapi/get.py b/pisi/actionsapi/get.py
+index 1f14ed4..883b983 100644
+--- a/pisi/actionsapi/get.py
++++ b/pisi/actionsapi/get.py
+@@ -21,6 +21,8 @@ _ = __trans.ugettext
+ import pisi.actionsapi
+ import pisi.context as ctx
+ 
++import multiprocessing
++
+ # ActionsAPI Modules
+ import pisi.actionsapi.variables
+ 
+@@ -120,6 +122,14 @@ def LDFLAGS():
+     return env.ldflags
+ 
+ def makeJOBS():
++    # Note: "auto" only works when /sys is mounted.
++    if env.jobs == "auto":
++        procs = 2
++        try:
++            procs = multiprocessing.cpu_count() + 1
++        except Exception, e:
++            ctx.ui.warning("Unable to retrieve CPU count: %s" % e)
++        return "-j%s" % procs
+     return env.jobs
+ 
+ def buildTYPE():
+-- 
+1.9.1
+
