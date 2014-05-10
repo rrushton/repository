@@ -8,9 +8,9 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 def setup():
     shelltools.system ("./config --prefix=/usr\
-                                            --openssldir=/etc/ssl\
-                                            shared\
-                                            zlib-dynamic")
+                        --openssldir=/etc/ssl\
+                        shared\
+                        zlib-dynamic")
 
 def build():
     autotools.make ("-j1")

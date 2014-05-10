@@ -9,7 +9,7 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 def setup():
     shelltools.system("./autogen.sh")
     autotools.configure("--prefix=/usr \
-                                             --sysconfdir=/etc")
+                         --sysconfdir=/etc")
 
 def build():
     autotools.make()

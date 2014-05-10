@@ -8,7 +8,7 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 def setup():
     shelltools.system("./autogen.sh")
     autotools.configure("--disable-login \
-                                             --disable-su")
+                         --disable-su")
 
 def build():
     autotools.make()

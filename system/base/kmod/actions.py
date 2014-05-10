@@ -7,12 +7,12 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 def setup():
     autotools.configure ("--prefix=/usr       \
-        --bindir=/bin       \
-        --libdir=/lib       \
-        --sysconfdir=/etc   \
-        --disable-manpages  \
-        --with-xz           \
-        --with-zlib")
+                          --bindir=/bin       \
+                          --libdir=/lib       \
+                          --sysconfdir=/etc   \
+                          --disable-manpages  \
+                          --with-xz           \
+                          --with-zlib")
 
 def build():
     autotools.make()

@@ -10,7 +10,7 @@ def setup():
     pisitools.dosed("setup.py","ndbm_libs =.*","ndbm_libs = ['gdbm', 'gdbm_compat']")
     autotools.autoreconf ("-vfi")
     autotools.configure ("--prefix=/usr\
-                                              --enable-shared")
+                          --enable-shared")
 
 def build():
     autotools.make ()

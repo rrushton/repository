@@ -8,10 +8,10 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 def setup():
     autotools.configure ("--prefix=/usr \
-                                              --sysconfdir=/etc \
-                                              --docdir=/usr/share/doc/Linux-PAM-1.1.6 \
-                                              --enable-securedir=/lib/security \
-                                              --disable-nis")
+                          --sysconfdir=/etc \
+                          --docdir=/usr/share/doc/Linux-PAM-1.1.6 \
+                          --enable-securedir=/lib/security \
+                          --disable-nis")
 
 def build():
     autotools.make ()

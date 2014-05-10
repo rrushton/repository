@@ -15,9 +15,9 @@ def setup():
     shelltools.system ("sed -i 's#$(LIBRARY) ##' config/rules.mk")
 
     autotools.configure ("--prefix=/usr\
-                                             --with-mozilla\
-                                             --with-pthreads \
-                                             --enable-64bit")
+                          --with-mozilla\
+                          --with-pthreads \
+                          --enable-64bit")
 
 def build():
     os.chdir (BuildDir)

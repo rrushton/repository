@@ -8,9 +8,9 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 def setup():
     autotools.rawConfigure("--prefix=/usr \
-                                                    --with-awk=/usr/bin/awk \
-                                                    --with-gnu-ld \
-                                                    --without-x")
+                            --with-awk=/usr/bin/awk \
+                            --with-gnu-ld \
+                            --without-x")
 
 def build():
     autotools.make()

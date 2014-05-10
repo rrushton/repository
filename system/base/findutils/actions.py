@@ -8,7 +8,7 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 def setup():
     autotools.rawConfigure("--prefix=/usr \
-                           --libexecdir=/usr/lib/findutils")
+                            --libexecdir=/usr/lib/findutils")
 
 def build():
     autotools.make()

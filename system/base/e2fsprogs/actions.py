@@ -7,11 +7,11 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 def setup():
     autotools.configure("--prefix=/usr \
-                                             --with-root-prefix="" \
-                                             --enable-elf-shlibs \
-                                             --disable-libblkid \
-                                             --disable-libuuid \
-                                             --disable-uuidd")
+                         --with-root-prefix="" \
+                         --enable-elf-shlibs \
+                         --disable-libblkid \
+                         --disable-libuuid \
+                         --disable-uuidd")
 
 def build():
     autotools.make("-j1")
