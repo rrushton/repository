@@ -1,9 +1,11 @@
-
 #!/usr/bin/python
 
 # Created For SolusOS
 
 from pisi.actionsapi import shelltools, get, autotools, pisitools
+
+# Circular deps  - woo
+IgnoreAutodep = True
 
 def setup():
     shelltools.system("./autogen.sh")
