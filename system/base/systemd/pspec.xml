@@ -15,6 +15,7 @@
         <BuildDependencies>
             <Dependency>libgcrypt-devel</Dependency>
             <Dependency versionFrom="14">kmod-devel</Dependency>
+            <Dependency>gperf</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -84,6 +85,14 @@
     </Package>
 
     <History>
+        <Update release="11">
+            <Date>06-01-2014</Date>
+            <Version>206</Version>
+            <Comment>Require gperf to build</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="10">
             <Date>09-09-2013</Date>
             <Version>206</Version>
