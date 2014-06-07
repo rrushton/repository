@@ -10,7 +10,7 @@
         <Summary>Find program in path</Summary>
         <Description>Find a program in the path and display its location</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="3bcd6d87aa5231917ba7123319eedcae90cfa0fd" type="targz">http://www.xs4all.nl/~carlo17/which/which-2.20.tar.gz</Archive>
+        <Archive sha1sum="3bcd6d87aa5231917ba7123319eedcae90cfa0fd" type="targz">http://evolve-os.com/sources/which-2.20.tar.gz</Archive>
     </Source>
 
     <Package>
