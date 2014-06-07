@@ -5,18 +5,23 @@
         <Name>libxdmcp</Name>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>X Display Manager Control Protocol library</Summary>
         <Description>X Display Manager Control Protocol library</Description>
         <License>GPLv3+</License>
         <Archive sha1sum="3b63e8fc1600c51d9897d017da190fc6c16245b6" type="tarbz2">mirrors://xorg/individual/lib/libXdmcp-1.1.1.tar.bz2</Archive>
+
+        <BuildDependencies>
+            <Dependency type="pkgconfig">xproto</Dependency>
+        </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libxdmcp</Name>
         <Files>
-            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
@@ -27,14 +32,23 @@
         <Description>Development files for libxdmcp</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="header">/usr/lib/pkgconfig</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency release="2">libxdmcp</Dependency>
+            <Dependency release="current">libxdmcp</Dependency>
         </RuntimeDependencies>
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>06-07-2013</Date>
+            <Version>1.1.1</Version>
+            <Comment>Add build dependency on xproto.pc, fix separation of devel</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>03-17-2013</Date>
             <Version>1.1.1</Version>
