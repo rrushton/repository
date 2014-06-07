@@ -1,7 +1,7 @@
 From dd483af1c9a9b8e3274b89ee730f28b118335efa Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey.doherty@gmail.com>
 Date: Sat, 10 May 2014 22:29:30 +0100
-Subject: [PATCH 2/6] actionsapi: Add automatic job count support to 'get'
+Subject: [PATCH 2/7] actionsapi: Add automatic job count support to 'get'
 
 Users can now simply set "jobs" to "auto" in their eopkg.conf file so that
 the right job count (i.e. -j5 for a quad-core) is automatically determined

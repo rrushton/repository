@@ -1,7 +1,7 @@
 From d547b9d9c4c943fc5edb428686c5d4e541a58a8f Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey.doherty@gmail.com>
 Date: Fri, 6 Jun 2014 19:31:50 +0100
-Subject: [PATCH 4/6] Fix issue OS-4 in Evolve OS (breaks binary updates)
+Subject: [PATCH 4/7] Fix issue OS-4 in Evolve OS (breaks binary updates)
 
 ---
  pisi/relation.py | 2 +-

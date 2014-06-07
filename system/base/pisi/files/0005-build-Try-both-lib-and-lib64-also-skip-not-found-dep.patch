@@ -1,7 +1,7 @@
 From 38d02d71ae2ce9dd4e7165c6b446589627175967 Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey.doherty@gmail.com>
 Date: Sat, 7 Jun 2014 15:59:23 +0100
-Subject: [PATCH 5/6] build: Try both lib and lib64, also skip "not found" deps
+Subject: [PATCH 5/7] build: Try both lib and lib64, also skip "not found" deps
 
 Under Evolve OS, for some unknown reason the "not found" string with
 random dependencies will cause gobject-introspection to become a dependency
