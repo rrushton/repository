@@ -1,7 +1,7 @@
 From f1ee090193ab67929506e2d71347bba67bbabf1f Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey.doherty@gmail.com>
 Date: Sat, 10 May 2014 22:18:36 +0100
-Subject: [PATCH 1/5] build: Skip auto binary deps if IgnoreAutodep is set in
+Subject: [PATCH 1/6] build: Skip auto binary deps if IgnoreAutodep is set in
  actions.py
 
 This is required in some cases where we encounter vicious circular

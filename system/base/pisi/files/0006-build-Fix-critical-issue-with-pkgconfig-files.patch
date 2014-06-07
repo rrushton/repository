@@ -1,0 +1,36 @@
+From 71a2dc0664b3516dc20941bac29187ced78dc65e Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey.doherty@gmail.com>
+Date: Sat, 7 Jun 2014 16:31:34 +0100
+Subject: [PATCH 6/6] build: Fix critical issue with pkgconfig files
+
+Previously we only accounted for one packaged .pc file, and tested it
+multiple times due to using the wrong variable. We now ensure that
+every single .pc file within the package is tested for dependencies.
+---
+ pisi/operations/build.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/pisi/operations/build.py b/pisi/operations/build.py
+index 1bc2c12..7dd54a2 100644
+--- a/pisi/operations/build.py
++++ b/pisi/operations/build.py
+@@ -1040,14 +1040,14 @@ class Builder:
+         for pcFile in knownPcFiles:
+             # We need to also add -devel dependencies to this devel if it needs other packages
+             lines = list()
+-            code,out,err = pisi.util.run_batch("%s --print-requires %s" % (pkgconfigExec, pcPath))
++            code,out,err = pisi.util.run_batch("%s --print-requires %s" % (pkgconfigExec, pcFile))
+             for line in out.split("\n"):
+                 line = line.strip().rstrip()
+                 if line == '':
+                     continue
+                 lines.append(line)
+             # Cmon, give us your details!
+-            code,out,err = pisi.util.run_batch("%s --print-requires-private %s" % (pkgconfigExec, pcPath))
++            code,out,err = pisi.util.run_batch("%s --print-requires-private %s" % (pkgconfigExec, pcFile))
+             for line in out.split("\n"):
+                 line = line.strip().rstrip()
+                 if line == '':
+-- 
+1.9.1
+

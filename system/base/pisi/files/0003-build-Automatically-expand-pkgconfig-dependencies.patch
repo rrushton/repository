@@ -1,7 +1,7 @@
 From 7be265c37471a9b7557e4c5b43e19e63f97dd6c2 Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey.doherty@gmail.com>
 Date: Sun, 11 May 2014 12:35:32 +0100
-Subject: [PATCH 3/5] build: Automatically expand pkgconfig dependencies
+Subject: [PATCH 3/6] build: Automatically expand pkgconfig dependencies
 
 In more complex packages, the provided .pc file can tell us a lot
 about the dependencies required to build using this package. For
