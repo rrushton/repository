@@ -14,37 +14,25 @@
         <Archive sha1sum="94a7fbd715e819d8838802bfd68be0b63c8ec72a" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gtk+/3.10/gtk+-3.10.0.tar.xz</Archive>
 
         <BuildDependencies>
-            <Dependency versionFrom="1.37.1">gobject-introspection-devel</Dependency>
-            <Dependency>wayland-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libcairo-devel</Dependency>
-            <Dependency>harfbuzz-devel</Dependency>
-            <Dependency>libxcursor-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>libxau-devel</Dependency>
-            <Dependency>libicu-devel</Dependency>
-            <Dependency>libxdmcp-devel</Dependency>
-            <Dependency>libxi-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
-            <Dependency>libxinerama-devel</Dependency>
-            <Dependency>libpng-devel</Dependency>
-            <Dependency>libxdamage-devel</Dependency>
-            <Dependency>libxext-devel</Dependency>
-            <Dependency>libxrandr-devel</Dependency>
-            <Dependency>pixman-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency>libxfixes-devel</Dependency>
-            <Dependency>libx11-devel</Dependency>
-            <Dependency>libxcomposite-devel</Dependency>
-            <Dependency>libxrender-devel</Dependency>
-            <Dependency versionFrom="2.37.3">glib2-devel</Dependency>
-            <Dependency>libgtk-2</Dependency>
-            <Dependency releaseFrom="3">libatk-devel</Dependency>
-            <Dependency>at-spi2-atk-devel</Dependency>
-            <Dependency>at-spi2</Dependency>
-            <Dependency>libxi-devel</Dependency>
-            <Dependency>xinput</Dependency>
+            <Dependency type="pkgconfig">gdk-pixbuf-2.0</Dependency>
+            <!-- Because of gtk-update* compatibility //-->
+            <Dependency type="pkgconfig">gtk+-2.0</Dependency>
+            <Dependency type="pkgconfig">atk</Dependency>
+            <Dependency type="pkgconfig">atk-bridge-2.0</Dependency>
+            <Dependency type="pkgconfig">pango</Dependency>
+            <Dependency type="pkgconfig">cairo</Dependency>
+            <Dependency type="pkgconfig">wayland-client</Dependency>
+            <Dependency type="pkgconfig">xkbcommon</Dependency>
+            <Dependency type="pkgconfig">xi</Dependency>
+
+            <!-- x11 extensions. Add more here to enable //-->
+            <Dependency type="pkgconfig">xinerama</Dependency>
+            <Dependency type="pkgconfig">xrandr</Dependency>
+            <Dependency type="pkgconfig">xdamage</Dependency>
+            <Dependency type="pkgconfig">xfixes</Dependency>
+            <Dependency type="pkgconfig">xcomposite</Dependency>
+
+            <!-- TODO: Enable colord and cups support //-->
         </BuildDependencies>
     </Source>
 
@@ -54,7 +42,8 @@
             <Path fileType="executable">/usr/bin/gtk-*</Path>
             <Path fileType="library">/usr/lib/gtk-3.0</Path>
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="data">/usr/share/glib-2.0</Path>
             <Path fileType="data">/usr/share/gtk-3.0/gtkbuilder.rng</Path>
@@ -66,44 +55,6 @@
         <Provides>
             <COMAR script="package.py">System.Package</COMAR>
         </Provides>
-        <RuntimeDependencies>
-            <Dependency versionFrom="1.37.1">gobject-introspection</Dependency>
-            <Dependency>libxkbcommon</Dependency>
-            <Dependency>wayland</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>libcairo</Dependency>
-            <Dependency>expat</Dependency>
-            <Dependency>harfbuzz</Dependency>
-            <Dependency>libxcursor</Dependency>
-            <Dependency>libstdc++</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libxcb</Dependency>
-            <Dependency>libxau</Dependency>
-            <Dependency>libicu</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>libxdmcp</Dependency>
-            <Dependency>libxi</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>fontconfig</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libxinerama</Dependency>
-            <Dependency>libpng</Dependency>
-            <Dependency>libxdamage</Dependency>
-            <Dependency>libxext</Dependency>
-            <Dependency>libxrandr</Dependency>
-            <Dependency>pixman</Dependency>
-            <Dependency>pango</Dependency>
-            <Dependency>libxfixes</Dependency>
-            <Dependency>freetype2</Dependency>
-            <Dependency>libx11</Dependency>
-            <Dependency>libxcomposite</Dependency>
-            <Dependency>libxrender</Dependency>
-            <Dependency versionFrom="2.37.3">glib2</Dependency>
-            <Dependency releaseFrom="3">libatk</Dependency>
-            <Dependency>at-spi2-atk</Dependency>
-            <Dependency>at-spi2</Dependency>
-        </RuntimeDependencies>
-
     </Package>
 
     <Package>
@@ -112,37 +63,12 @@
         <Description>Development files for libgtk-3</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="data">/usr/share/aclocal</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">libgtk-3</Dependency>
-
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libcairo-devel</Dependency>
-            <Dependency>harfbuzz-devel</Dependency>
-            <Dependency>libxcursor-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>libxau-devel</Dependency>
-            <Dependency>libicu-devel</Dependency>
-            <Dependency>libxdmcp-devel</Dependency>
-            <Dependency>libxi-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
-            <Dependency>libxinerama-devel</Dependency>
-            <Dependency>libpng-devel</Dependency>
-            <Dependency>libxdamage-devel</Dependency>
-            <Dependency>libxext-devel</Dependency>
-            <Dependency>libxrandr-devel</Dependency>
-            <Dependency>pixman-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency>libxfixes-devel</Dependency>
-            <Dependency>libx11-devel</Dependency>
-            <Dependency>libxcomposite-devel</Dependency>
-            <Dependency>libxrender-devel</Dependency>
-            <Dependency>libatk-devel</Dependency>
-            <Dependency>at-spi2-atk-devel</Dependency>
-
         </RuntimeDependencies>
     </Package>
 
@@ -155,9 +81,8 @@
             <Path fileType="doc">/usr/share/gtk-doc</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency release="current">libgtk-3</Dependency>
+            <Dependency release="current">libgtk-3-devel</Dependency>
         </RuntimeDependencies>
-
     </Package>
 
     <Package>
@@ -170,45 +95,8 @@
             <Path fileType="data">/usr/share/gtk-3.0/demo</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>libcairo</Dependency>
-            <Dependency>expat</Dependency>
-            <Dependency>harfbuzz</Dependency>
-            <Dependency>libxcursor</Dependency>
-            <Dependency>libstdc++</Dependency>
-            <Dependency>util-linux</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libxcb</Dependency>
-            <Dependency>libxau</Dependency>
-            <Dependency>libicu</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>libxdmcp</Dependency>
-            <Dependency>libxi</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>fontconfig</Dependency>
-            <Dependency>libice</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libxinerama</Dependency>
-            <Dependency>libatk</Dependency>
-            <Dependency>libpng</Dependency>
-            <Dependency>libxdamage</Dependency>
-            <Dependency>libxext</Dependency>
-            <Dependency>libxrandr</Dependency>
-            <Dependency>pixman</Dependency>
-            <Dependency>pango</Dependency>
             <Dependency release="current">libgtk-3</Dependency>
-            <Dependency>libxfixes</Dependency>
-            <Dependency>at-spi2</Dependency>
-            <Dependency>freetype2</Dependency>
-            <Dependency>dbus</Dependency>
-            <Dependency>libx11</Dependency>
-            <Dependency>libxcomposite</Dependency>
-            <Dependency>libxrender</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libsm</Dependency>
-            <Dependency>at-spi2-atk</Dependency>
         </RuntimeDependencies>
-
     </Package>
 
     <Package>
@@ -220,48 +108,19 @@
             <Path fileType="executable">/usr/bin/gtk3-widget-factory</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>libcairo</Dependency>
-            <Dependency>expat</Dependency>
-            <Dependency>harfbuzz</Dependency>
-            <Dependency>libxcursor</Dependency>
-            <Dependency>libstdc++</Dependency>
-            <Dependency>util-linux</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libxcb</Dependency>
-            <Dependency>libxau</Dependency>
-            <Dependency>libicu</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>libxdmcp</Dependency>
-            <Dependency>libxi</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>fontconfig</Dependency>
-            <Dependency>libice</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libxinerama</Dependency>
-            <Dependency>libatk</Dependency>
-            <Dependency>libpng</Dependency>
-            <Dependency>libxdamage</Dependency>
-            <Dependency>libxext</Dependency>
-            <Dependency>libxrandr</Dependency>
-            <Dependency>pixman</Dependency>
-            <Dependency>pango</Dependency>
             <Dependency release="current">libgtk-3</Dependency>
-            <Dependency>libxfixes</Dependency>
-            <Dependency>at-spi2</Dependency>
-            <Dependency>freetype2</Dependency>
-            <Dependency>dbus</Dependency>
-            <Dependency>libx11</Dependency>
-            <Dependency>libxcomposite</Dependency>
-            <Dependency>libxrender</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libsm</Dependency>
-            <Dependency>at-spi2-atk</Dependency>
         </RuntimeDependencies>
-
     </Package>
 
     <History>
+        <Update release="17">
+            <Date>06-08-2014</Date>
+            <Version>3.10.0</Version>
+            <Comment>Fix splitting, use pkgconfig+auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="16">
             <Date>10-01-2013</Date>
             <Version>3.10.0</Version>
@@ -390,5 +249,4 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-
 </PISI>
