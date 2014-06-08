@@ -6,7 +6,7 @@
         <Homepage>http://sourceforge.net/projects/libjpeg-turbo/</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>libjpeg-turbo is a a fork of the original IJG libjpeg, offering faster compression and decompression.</Summary>
         <Description> libjpeg-turbo is a fork of the original IJG libjpeg which uses SIMD to accelerate baseline JPEG compression and decompression. libjpeg is a library that implements JPEG image encoding, decoding and transcoding. </Description>
@@ -16,14 +16,17 @@
         <BuildDependencies>
             <Dependency>nasm</Dependency>
         </BuildDependencies>
+
+        <!-- TODO: Work with upstream to get a pkgconfig file in place //-->
     </Source>
 
     <Package>
         <Name>libjpeg-turbo</Name>
         <Files>
-            <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
             <Path fileType="man">/usr/share/man</Path>
+            <!-- TODO: SPLIT DOCS //-->
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
         <Conflicts>
@@ -34,18 +37,28 @@
     <Package>
         <Name>libjpeg-turbo-devel</Name>
         <Summary>Development files for libjpeg-turbo</Summary>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
+        </Files>
         <RuntimeDependencies>
             <Dependency release="current">libjpeg-turbo</Dependency>
         </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-        </Files>
         <Conflicts>
             <Package>libjpeg-devel</Package>
         </Conflicts>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>06-08-2014</Date>
+            <Version>1.2.1</Version>
+            <Comment>Split packages better</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>04-07-2013</Date>
             <Version>1.2.1</Version>
@@ -54,5 +67,4 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-
 </PISI>
