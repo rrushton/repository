@@ -10,7 +10,7 @@ shelltools.export ("HOME", get.installDIR())
 
 def setup():
     autotools.configure("--disable-static\
-                                             --prefix=/usr")
+                         --prefix=/usr")
 
 def build():
     autotools.make()
