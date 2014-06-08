@@ -1,4 +1,3 @@
-
 #!/usr/bin/python
 
 # Created For SolusOS
@@ -10,9 +9,9 @@ shelltools.export ("HOME", get.installDIR())
 
 def setup():
     autotools.configure("--disable-static\
-                                             --prefix=/usr\
-                                             --sysconfdir=/etc\
-                                             --libexecdir=/usr/lib/at-spi2/core")
+                         --prefix=/usr\
+                         --sysconfdir=/etc\
+                         --libexecdir=/usr/lib/at-spi2/core")
 
 def build():
     autotools.make()
