@@ -11,8 +11,8 @@ shelltools.export ("HOME", get.installDIR())
 def setup():
     # TODO: Add Jasper support
     autotools.configure("--disable-static\
-                                             --prefix=/usr\
-                                             --with-x11")
+                         --prefix=/usr\
+                         --with-x11")
 
 def build():
     autotools.make()
