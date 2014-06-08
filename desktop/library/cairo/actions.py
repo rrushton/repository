@@ -7,7 +7,10 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
-    autotools.configure("--disable-static")
+    # We need to --enable-gl in the future for Wayland
+    autotools.configure("--disable-static \
+                         --enable-xlib-xcb \
+                         --enable-tee")
 
 def build():
     autotools.make()
