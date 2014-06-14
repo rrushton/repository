@@ -5,20 +5,24 @@
         <Name>libxpm</Name>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>X Pixmap (XPM) image file format library</Summary>
         <Description>libXpm provides support and common operation for the XPM pixmap format, which is commonly used in legacy X applications.  XPM is an extension of the monochrome XBM bitmap specificied in the X protocol.
         </Description>
         <License>GPLv3+</License>
         <Archive sha1sum="eca9dbfa6253f7d6cc7d593dc83110c6c4876d7c" type="tarbz2">mirrors://xorg/individual/lib/libXpm-3.5.10.tar.bz2</Archive>
+
+        <BuildDependencies>
+            <Dependency type="pkgconfig">x11</Dependency>
+        </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libxpm</Name>
         <Files>
-            <Path fileType="library">/usr/lib/lib*so*</Path>
-            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
@@ -29,15 +33,24 @@
         <Description>Development files for libxpm</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
-            <Path fileType="library">/usr/lib/*.a</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency release="2">libxpm</Dependency>
+            <Dependency release="current">libxpm</Dependency>
         </RuntimeDependencies>
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>06-14-2014</Date>
+            <Version>3.5.10</Version>
+            <Comment>Fix splitting, use pkgconfig+auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>03-17-2013</Date>
             <Version>3.5.10</Version>
@@ -54,6 +67,4 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-
 </PISI>
-
