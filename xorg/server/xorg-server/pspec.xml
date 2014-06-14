@@ -5,7 +5,7 @@
         <Name>xorg-server</Name>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>The Xorg Server is the core of the X Window system. </Summary>
         <Description>The Xorg Server is the core of the X Window system.</Description>
@@ -17,84 +17,31 @@
         </Patches>
 
         <BuildDependencies>
-            <Dependency>mesalib-devel</Dependency>
-            <Dependency>openssl-devel</Dependency>
-            <Dependency>xkeyboard-config</Dependency>
-            <Dependency>systemd-devel</Dependency>
-            <Dependency>libxdmcp-devel</Dependency>
-            <Dependency>libxfont-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libx11-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>libpciaccess-devel</Dependency>
-            <Dependency>libdrm-devel</Dependency>
-            <Dependency>libxext-devel</Dependency>
-            <Dependency>libnettle-devel</Dependency>
-            <Dependency>libxau-devel</Dependency>
-            <Dependency>libfontenc-devel</Dependency>
-            <Dependency>pixman-devel</Dependency>
-
-            <Dependency>bigreqsproto</Dependency>
-            <Dependency>compositeproto</Dependency>
-            <Dependency>damageproto</Dependency>
-            <Dependency>dmxproto</Dependency>
-            <Dependency>dri2proto</Dependency>
-            <Dependency>fixesproto</Dependency>
-            <Dependency>fontsproto</Dependency>
-            <Dependency>glproto</Dependency>
-            <Dependency>inputproto</Dependency>
-            <Dependency>kbproto</Dependency>
-            <Dependency>randrproto</Dependency>
-            <Dependency>recordproto</Dependency>
-            <Dependency>renderproto</Dependency>
-            <Dependency>resourceproto</Dependency>
-            <Dependency>scrnsaverproto</Dependency>
-            <Dependency>videoproto</Dependency>
-            <Dependency>xcb-proto</Dependency>
-            <Dependency>xcmiscproto</Dependency>
-            <Dependency>xextproto</Dependency>
-            <Dependency>xf86bigfontproto</Dependency>
-            <Dependency>xf86dgaproto</Dependency>
-            <Dependency>xf86driproto</Dependency>
-            <Dependency>xf86vidmodeproto</Dependency>
-            <Dependency>xineramaproto</Dependency>
-            <Dependency>xproto</Dependency>
-
-            <Dependency>libxaw-devel</Dependency>
-            <Dependency>libfontenc-devel</Dependency>
-            <Dependency>libxcomposite-devel</Dependency>
-            <Dependency>libxinerama-devel</Dependency>
-            <Dependency>libxkbfile-devel</Dependency>
-            <Dependency>libxpm-devel</Dependency>
-            <Dependency>libxcursor-devel</Dependency>
-            <Dependency>libsm-devel</Dependency>
-            <Dependency>libdmx-devel</Dependency>
-            <Dependency>libxext-devel</Dependency>
-            <Dependency>libxxf86dga-devel</Dependency>
-            <Dependency>libxt-devel</Dependency>
-            <Dependency>libfs-devel</Dependency>
-            <Dependency>libxrender-devel</Dependency>
-            <Dependency>libxres-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>libxfont-devel</Dependency>
-            <Dependency>libxdamage-devel</Dependency>
-            <Dependency>libice-devel</Dependency>
-            <Dependency>libxvmc-devel</Dependency>
-            <Dependency>libxrandr-devel</Dependency>
-            <Dependency>libpciaccess-devel</Dependency>
-            <Dependency>libxv-devel</Dependency>
-            <Dependency>libxscrnsaver-devel</Dependency>
-            <Dependency>libxft-devel</Dependency>
-            <Dependency>libxdmcp-devel</Dependency>
-            <Dependency>libxfixes-devel</Dependency>
-            <Dependency>libxmu-devel</Dependency>
-            <Dependency>libxi-devel</Dependency>
-            <Dependency>libxxf86vm-devel</Dependency>
-            <Dependency>libxau-devel</Dependency>
-            <Dependency>libxaw3d-devel</Dependency>
-            <Dependency>libx11-devel</Dependency>
-            <Dependency>libxtst-devel</Dependency>
-
+            <Dependency type="pkgconfig">xtrans</Dependency>
+            <Dependency type="pkgconfig">x11</Dependency>
+            <Dependency type="pkgconfig">pixman-1</Dependency>
+            <Dependency type="pkgconfig">gl</Dependency>
+            <Dependency type="pkgconfig">glproto</Dependency>
+            <Dependency type="pkgconfig">xf86vidmodeproto</Dependency>
+            <Dependency type="pkgconfig">xf86dgaproto</Dependency>
+            <Dependency type="pkgconfig">dri2proto</Dependency>
+            <Dependency type="pkgconfig">xcmiscproto</Dependency>
+            <Dependency type="pkgconfig">bigreqsproto</Dependency>
+            <Dependency type="pkgconfig">randrproto</Dependency>
+            <Dependency type="pkgconfig">renderproto</Dependency>
+            <Dependency type="pkgconfig">inputproto</Dependency>
+            <Dependency type="pkgconfig">fontsproto</Dependency>
+            <Dependency type="pkgconfig">videoproto</Dependency>
+            <Dependency type="pkgconfig">compositeproto</Dependency>
+            <Dependency type="pkgconfig">recordproto</Dependency>
+            <Dependency type="pkgconfig">scrnsaverproto</Dependency>
+            <Dependency type="pkgconfig">resourceproto</Dependency>
+            <Dependency type="pkgconfig">xf86driproto</Dependency>
+            <Dependency type="pkgconfig">xineramaproto</Dependency>
+            <Dependency type="pkgconfig">xkbfile</Dependency>
+            <Dependency type="pkgconfig">xfont</Dependency>
+            <Dependency type="pkgconfig">pciaccess</Dependency>
+            <Dependency type="pkgconfig">nettle</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -108,23 +55,6 @@
             <Path fileType="data">/var/lib/xkb</Path>
             <Path fileType="config">/var/log</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>systemd</Dependency>
-            <Dependency>libxdmcp</Dependency>
-            <Dependency>freetype2</Dependency>
-            <Dependency>libxfont</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>libx11</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>libxcb</Dependency>
-            <Dependency>libpciaccess</Dependency>
-            <Dependency>libdrm</Dependency>
-            <Dependency>libxext</Dependency>
-            <Dependency>libnettle</Dependency>
-            <Dependency>libxau</Dependency>
-            <Dependency>libfontenc</Dependency>
-            <Dependency>pixman</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -138,71 +68,18 @@
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">xorg-server</Dependency>
-            <Dependency>bigreqsproto</Dependency>
-            <Dependency>compositeproto</Dependency>
-            <Dependency>damageproto</Dependency>
-            <Dependency>dmxproto</Dependency>
-            <Dependency>dri2proto</Dependency>
-            <Dependency>fixesproto</Dependency>
-            <Dependency>fontsproto</Dependency>
-            <Dependency>glproto</Dependency>
-            <Dependency>inputproto</Dependency>
-            <Dependency>kbproto</Dependency>
-            <Dependency>randrproto</Dependency>
-            <Dependency>recordproto</Dependency>
-            <Dependency>renderproto</Dependency>
-            <Dependency>resourceproto</Dependency>
-            <Dependency>scrnsaverproto</Dependency>
-            <Dependency>videoproto</Dependency>
-            <Dependency>xcb-proto</Dependency>
-            <Dependency>xcmiscproto</Dependency>
-            <Dependency>xextproto</Dependency>
-            <Dependency>xf86bigfontproto</Dependency>
-            <Dependency>xf86dgaproto</Dependency>
-            <Dependency>xf86driproto</Dependency>
-            <Dependency>xf86vidmodeproto</Dependency>
-            <Dependency>xineramaproto</Dependency>
-            <Dependency>xproto</Dependency>
-
-            <Dependency>libxaw-devel</Dependency>
-            <Dependency>libfontenc-devel</Dependency>
-            <Dependency>libxcomposite-devel</Dependency>
-            <Dependency>libxinerama-devel</Dependency>
-            <Dependency>libxkbfile-devel</Dependency>
-            <Dependency>libxpm-devel</Dependency>
-            <Dependency>libxcursor-devel</Dependency>
-            <Dependency>libsm-devel</Dependency>
-            <Dependency>libdmx-devel</Dependency>
-            <Dependency>libxext-devel</Dependency>
-            <Dependency>libxxf86dga-devel</Dependency>
-            <Dependency>libxt-devel</Dependency>
-            <Dependency>libfs-devel</Dependency>
-            <Dependency>libxrender-devel</Dependency>
-            <Dependency>libxres-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>libxfont-devel</Dependency>
-            <Dependency>libxdamage-devel</Dependency>
-            <Dependency>libice-devel</Dependency>
-            <Dependency>libxvmc-devel</Dependency>
-            <Dependency>libxrandr-devel</Dependency>
-            <Dependency>libpciaccess-devel</Dependency>
-            <Dependency>libxv-devel</Dependency>
-            <Dependency>libxscrnsaver-devel</Dependency>
-            <Dependency>libxft-devel</Dependency>
-            <Dependency>libxdmcp-devel</Dependency>
-            <Dependency>libxfixes-devel</Dependency>
-            <Dependency>libxmu-devel</Dependency>
-            <Dependency>libxi-devel</Dependency>
-            <Dependency>libxxf86vm-devel</Dependency>
-            <Dependency>libxau-devel</Dependency>
-            <Dependency>libxaw3d-devel</Dependency>
-            <Dependency>libx11-devel</Dependency>
-            <Dependency>libxtst-devel</Dependency>
-            <Dependency>mesalib-devel</Dependency>
         </RuntimeDependencies>
     </Package>
 
     <History>
+        <Update release="6">
+            <Date>06-14-2014</Date>
+            <Version>1.14.3</Version>
+            <Comment>Fix splitting, use pkgconfig+auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="5">
             <Date>10-07-2013</Date>
             <Version>1.14.3</Version>
@@ -243,6 +120,4 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-
 </PISI>
-
