@@ -5,7 +5,7 @@
         <Name>libdrm</Name>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>Direct Rendering Manager API + Library</Summary>
         <Description>libdrm provides core library routines for the X Window System to directly interface with video hardware using the Linux kernel's Direct Rendering Manager (DRM).</Description>
@@ -14,13 +14,15 @@
 
         <BuildDependencies>
             <Dependency>valgrind</Dependency>
+            <Dependency type="pkgconfig">pciaccess</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libdrm</Name>
         <Files>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
@@ -31,14 +33,23 @@
         <Description>Development files required to build packages using libdrm</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency release="2">libdrm</Dependency>
+            <Dependency release="current">libdrm</Dependency>
         </RuntimeDependencies>
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>06-14-2014</Date>
+            <Version>2.4.42</Version>
+            <Comment>Fix splitting, use pkgconfig deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>03-27-2013</Date>
             <Version>2.4.42</Version>
