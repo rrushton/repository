@@ -5,7 +5,7 @@
         <Name>xorg-driver-video-fbdev</Name>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>Framebuffer Video Driver</Summary>
         <Description>The Xorg Fbdev Driver package contains the X.Org Video Driver for framebuffer devices. This driver is often used as fallback driver if the hardware specific and VESA drivers fail to load or are not present.</Description>
@@ -13,18 +13,9 @@
         <Archive sha1sum="1c0c4ab498010baf1e55b9fb5c7bb23c8d2353d1" type="tarbz2">http://xorg.freedesktop.org/archive/individual/driver/xf86-video-fbdev-0.4.3.tar.bz2</Archive>
 
         <BuildDependencies>
-            <Dependency releaseFrom="4">xorg-server-devel</Dependency>
-            <Dependency>libxfont-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libx11-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>libpciaccess-devel</Dependency>
-            <Dependency>libdrm-devel</Dependency>
-            <Dependency>libxext-devel</Dependency>
-            <Dependency>libnettle-devel</Dependency>
-            <Dependency>libxau-devel</Dependency>
-            <Dependency>libfontenc-devel</Dependency>
-            <Dependency>pixman-devel</Dependency>
+            <Dependency type="pkgconfig">xorg-server</Dependency>
+            <Dependency type="pkgconfig">resourceproto</Dependency>
+            <Dependency type="pkgconfig">scrnsaverproto</Dependency>
         </BuildDependencies>
 
         <Patches>
@@ -39,12 +30,17 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency releaseFrom="4">xorg-server</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>06-14-2014</Date>
+            <Version>0.4.3</Version>
+            <Comment>AUse pkgconfig+auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>08-13-2013</Date>
             <Version>0.4.3</Version>
@@ -53,6 +49,4 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-
 </PISI>
-
