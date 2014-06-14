@@ -11,22 +11,23 @@ def setup():
     shelltools.export ("CFLAGS", "-O2")
     shelltools.export ("CXXFLAGS", "-O2")
 
+    #disabled r300,r600,radeonsi
     autotools.configure ("--prefix=/usr                  \
-                                              --sysconfdir=/etc              \
-                                              --enable-texture-float         \
-                                              --enable-gles1                 \
-                                              --enable-gles2                 \
-                                              --enable-openvg                \
-                                              --enable-osmesa                \
-                                              --enable-xa                    \
-                                              --enable-gbm                   \
-                                              --enable-gallium-egl           \
-                                              --enable-gallium-gbm           \
-                                              --enable-glx-tls               \
-                                              --with-llvm-shared-libs        \
-                      --enable-shared-glapi \
-                                              --with-egl-platforms=\"drm,x11,wayland\" \
-                                              --with-gallium-drivers=\"nouveau,r300,r600,radeonsi,svga,swrast\" ")
+                          --sysconfdir=/etc              \
+                          --enable-texture-float         \
+                          --enable-gles1                 \
+                          --enable-gles2                 \
+                          --enable-openvg                \
+                          --enable-osmesa                \
+                          --enable-xa                    \
+                          --enable-gbm                   \
+                          --enable-gallium-egl           \
+                          --enable-gallium-gbm           \
+                          --enable-glx-tls               \
+                          --with-llvm-shared-libs        \
+                          --enable-shared-glapi \
+                          --with-egl-platforms=\"drm,x11,wayland\" \
+                          --with-gallium-drivers=\"nouveau,svga,swrast\" ")
 
 def build():
     autotools.make ()
