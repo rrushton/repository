@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>budgie-desktop</Name>
+        <Homepage>https://evolve-os.com</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Packager>
+        <Summary>Budgie Desktop</Summary>
+        <Description>Budgie Desktop</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="90474987ed461989aaddc9e5e916fafb0718a829" type="tarxz">https://evolve-os.com/sources/budgie-desktop-2.tar.xz</Archive>
+
+        <Patches>
+            <Patch level="1">0001-configure-Drop-1-point-version-for-upower-requiremen.patch</Patch>
+        </Patches>
+
+        <BuildDependencies>
+            <Dependency type="pkgconfig">gtk+-3.0</Dependency>
+            <Dependency type="pkgconfig">libpulse-mainloop-glib</Dependency>
+            <Dependency type="pkgconfig">libmutter</Dependency>
+            <Dependency type="pkgconfig">libwnck-3.0</Dependency>
+            <Dependency type="pkgconfig">upower-glib</Dependency>
+            <Dependency type="pkgconfig">libgnome-menu-3.0</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>budgie-desktop</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/budgie-desktop/Gvc-1.0.typelib</Path>
+            <Path fileType="data">/usr/share/xsessions/budgie-desktop.desktop</Path>
+            <Path fileType="data">/usr/share/glib-2.0/schemas/com.evolve-os.budgie.panel.gschema.xml</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>06-15-2014</Date>
+            <Version>2</Version>
+            <Comment>Add budgie-desktop to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
