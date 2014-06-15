@@ -6,37 +6,52 @@
         <Homepage>https://live.gnome.org/Vala</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>Compiler for the GObject type system</Summary>
-        <Description> Vala is a new programming language that aims to bring modern programming language features to GNOME developers without imposing any additional runtime requirements and without using a different ABI compared to applications and libraries written in C. </Description>
+        <Description>Vala is a new programming language that aims to bring modern programming language features to GNOME developers without imposing any additional runtime requirements and without using a different ABI compared to applications and libraries written in C. </Description>
         <License>GPLv3+</License>
         <Archive sha1sum="1421a19c03ea565599e2df4ead6864cca761020a" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/vala/0.22/vala-0.22.0.tar.xz</Archive>
-
-        <BuildDependencies>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-        </BuildDependencies>
     </Source>
 
     <Package>
         <Name>vala</Name>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/share/pkgconfig</Path>
             <Path fileType="data">/usr/lib/vala-0.22</Path>
-            <Path fileType="data">/usr/share/aclocal</Path>
             <Path fileType="data">/usr/share/vala-0.22</Path>
             <Path fileType="data">/usr/share/vala</Path>
             <Path fileType="man">/usr/share/man</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency>libpcre</Dependency>
-            <Dependency>glib2</Dependency>
+            <Dependency release="current">libvala</Dependency>
+            <Dependency release="current">libvala-devel</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>libvala</Name>
+        <Summary>Vala libraries</Summary>
+        <Description>Vala libraries</Description>
+        <Files>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libvala-devel</Name>
+        <Summary>Vala development files</Summary>
+        <Description>Vala development files</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/pkgconfig</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libvala</Dependency>
         </RuntimeDependencies>
     </Package>
 
@@ -45,6 +60,7 @@
         <Summary>Documentation for Vala</Summary>
         <Description>Documentation for Vala</Description>
         <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="doc">/usr/share/devhelp</Path>
         </Files>
         <RuntimeDependencies>
@@ -54,6 +70,14 @@
 
 
     <History>
+        <Update release="5">
+            <Date>06-15-2014</Date>
+            <Version>0.22.0</Version>
+            <Comment>Split off library and development headers</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="4">
             <Date>10-01-2013</Date>
             <Version>0.22.0</Version>
@@ -86,5 +110,4 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-
 </PISI>
