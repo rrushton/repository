@@ -28,10 +28,8 @@
             <Path fileType="executable">/usr/bin/ll*</Path>
             <Path fileType="executable">/usr/bin/macho-dump</Path>
             <Path fileType="executable">/usr/bin/opt</Path>
-            <Path fileType="library">/usr/lib/llvm/*.so.[0-9]</Path>
-            <Path fileType="library">/usr/lib/llvm/*.so.*.*.*</Path>
-            <Path fileType="library">/usr/lib/libLLVM*.so.[0-9]</Path>
-            <Path fileType="library">/usr/lib/libLLVM*.so.*.*.*</Path>
+            <Path fileType="library">/usr/lib/llvm/*.so*</Path>
+            <Path fileType="library">/usr/lib/libLLVM*.so*</Path>
         </Files>
     </Package>
 
@@ -42,8 +40,6 @@
         <Files>
             <Path fileType="header">/usr/include/llvm*</Path>
             <Path fileType="library">/usr/lib/llvm/*.a</Path>
-            <Path fileType="library">/usr/lib/llvm/*.so</Path>
-            <Path fileType="library">/usr/lib/libLLVM*.so</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">llvm</Dependency>
