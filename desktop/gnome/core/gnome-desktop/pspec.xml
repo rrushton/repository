@@ -46,9 +46,9 @@
             <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
-        <RuntimeDependendencies>
+        <RuntimeDependencies>
             <Dependency release="current">libgnome-desktop</Dependency>
-        </RuntimeDependendencies>
+        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -59,9 +59,9 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="doc">/usr/share/gtk-doc</Path>
         </Files>
-        <RuntimeDependendencies>
+        <RuntimeDependencies>
             <Dependency release="current">libgnome-desktop-devel</Dependency>
-        </RuntimeDependendencies>
+        </RuntimeDependencies>
     </Package>
 
     <History>
