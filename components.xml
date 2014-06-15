@@ -419,7 +419,19 @@
 				<Email>packaging@evolve-os.com</Email>
 			</Maintainer>
 		</Component>
-        
+
+		<Component>
+			<Name>desktop.budgie</Name>
+			<LocalName xml:lang="en">Budgie Desktop</LocalName>
+			<Summary xml:lang="en">Budgie Desktop</Summary>
+			<Description xml:lang="en">Budgie Desktop</Description>
+			<Group>desktop</Group>
+			<Maintainer>
+				<Name>Evolve OS Packaging</Name>
+				<Email>packaging@evolve-os.com</Email>
+			</Maintainer>
+		</Component>
+
 		<Component>
 			<Name>desktop.gnome</Name>
 			<LocalName xml:lang="en">GNOME Desktop</LocalName>
