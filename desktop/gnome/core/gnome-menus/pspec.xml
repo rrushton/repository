@@ -5,26 +5,20 @@
         <Name>gnome-menus</Name>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>GNOME library to access and manipulate menus</Summary>
         <Description>GNOME library to access and manipulate menus</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="33f700b6fc9caff64f1056ea085a28e1aaaed0bd" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-menus/3.8/gnome-menus-3.8.0.tar.xz</Archive>
-
-        <BuildDependencies>
-            <Dependency>libffi-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-        </BuildDependencies>
+        <Archive sha1sum="29226e7a8ab59984cabb13545cc0ec28cba55398" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-menus/3.10/gnome-menus-3.10.1.tar.xz</Archive>
     </Source>
 
     <Package>
         <Name>libgnome-menus</Name>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
             <Path fileType="data">/usr/lib/python*</Path>
             <Path fileType="data">/usr/share/applications</Path>
@@ -35,12 +29,6 @@
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="data">/etc/xdg</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>libffi</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libpcre</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -49,6 +37,7 @@
         <Description>Development files for libgnome-menus</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <RuntimeDependencies>
@@ -57,6 +46,14 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>06-15-2014</Date>
+            <Version>3.10.1</Version>
+            <Comment>Update to 3.10.1 for Budgie</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>06-19-2013</Date>
             <Version>3.8.0</Version>
@@ -73,6 +70,4 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-
 </PISI>
-
