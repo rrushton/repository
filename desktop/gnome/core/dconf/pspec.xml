@@ -6,7 +6,7 @@
         <Homepage>http://projects.gnome.org/dconf/</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>GNOME Configuration Database</Summary>
         <Description>The dconf package contains a configuration database system used by many GNOME applications.</Description>
@@ -14,42 +14,8 @@
         <Archive sha1sum="9b37e8d22714c32931fe8ab44cb0304c5c91b7ea" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/dconf/0.18/dconf-0.18.0.tar.xz</Archive>
 
         <BuildDependencies>
-            <!-- Many dependencies are actually for the dconf-editor package,
-			 consult the dconf package runtime dependencies if confused :) //-->
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libcairo-devel</Dependency>
-            <Dependency>harfbuzz-devel</Dependency>
-            <Dependency>libxcursor-devel</Dependency>
-            <Dependency>xz-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>libxau-devel</Dependency>
-            <Dependency>libicu-devel</Dependency>
-            <Dependency>libxdmcp-devel</Dependency>
-            <Dependency>libxi-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>libice-devel</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
-            <Dependency>libxinerama-devel</Dependency>
-            <Dependency>libatk-devel</Dependency>
-            <Dependency>libpng-devel</Dependency>
-            <Dependency>libxdamage-devel</Dependency>
-            <Dependency>libxext-devel</Dependency>
-            <Dependency>libxrandr-devel</Dependency>
-            <Dependency>pixman-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency>libgtk-3-devel</Dependency>
-            <Dependency>libxfixes-devel</Dependency>
-            <Dependency>at-spi2-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>libx11-devel</Dependency>
-            <Dependency>libxcomposite-devel</Dependency>
-            <Dependency>libxrender-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libsm-devel</Dependency>
-            <Dependency>at-spi2-atk-devel</Dependency>
-
             <!-- Required for the editor and vala bindings //-->
+            <Dependency type="pkgconfig">gtk+-3.0</Dependency>
             <Dependency>vala</Dependency>
         </BuildDependencies>
     </Source>
@@ -60,23 +26,13 @@
             <Path fileType="executable">/usr/bin/dconf</Path>
             <Path fileType="executable">/usr/lib/dconf/dconf-service</Path>
             <Path fileType="library">/usr/lib/gio</Path>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
             <Path fileType="data">/usr/share/bash-completion</Path>
             <Path fileType="data">/usr/share/dbus-1</Path>
             <Path fileType="data">/usr/share/glib-2.0</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
         </Files>
-        <Provides>
-            <COMAR script="package.py">System.Package</COMAR>
-        </Provides>
-        <RuntimeDependencies>
-            <Dependency>dbus</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>glibc</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libpcre</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -92,46 +48,7 @@
             <Path fileType="data">/usr/share/dconf-editor</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency>libxml2</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>libcairo</Dependency>
-            <Dependency>expat</Dependency>
-            <Dependency>harfbuzz</Dependency>
-            <Dependency>libxcursor</Dependency>
-            <Dependency>xz</Dependency>
-            <Dependency>util-linux</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libxcb</Dependency>
             <Dependency release="current">dconf</Dependency>
-            <Dependency>libxau</Dependency>
-            <Dependency>libicu</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>libxdmcp</Dependency>
-            <Dependency>libxi</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>fontconfig</Dependency>
-            <Dependency>libice</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libxinerama</Dependency>
-            <Dependency>libatk</Dependency>
-            <Dependency>libpng</Dependency>
-            <Dependency>libxdamage</Dependency>
-            <Dependency>libxext</Dependency>
-            <Dependency>libxrandr</Dependency>
-            <Dependency>pixman</Dependency>
-            <Dependency>pango</Dependency>
-            <Dependency>libgtk-3</Dependency>
-            <Dependency>libxfixes</Dependency>
-            <Dependency>libstdc++</Dependency>
-            <Dependency>at-spi2</Dependency>
-            <Dependency>freetype2</Dependency>
-            <Dependency>dbus</Dependency>
-            <Dependency>libx11</Dependency>
-            <Dependency>libxcomposite</Dependency>
-            <Dependency>libxrender</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libsm</Dependency>
-            <Dependency>at-spi2-atk</Dependency>
         </RuntimeDependencies>
     </Package>
 
@@ -141,6 +58,7 @@
         <Description>Development files for DConf</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="data">/usr/share/vala</Path>
         </Files>
@@ -154,6 +72,7 @@
         <Summary>API Documentation for DConf</Summary>
         <Description>API Documentation for DConf</Description>
         <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="doc">/usr/share/gtk-doc</Path>
         </Files>
         <RuntimeDependencies>
@@ -163,6 +82,14 @@
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>06-15-2014</Date>
+            <Version>0.18</Version>
+            <Comment>Fix splitting, use pkgconfig+auto-deps, drop comar</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="6">
             <Date>10-01-2013</Date>
             <Version>0.18</Version>
