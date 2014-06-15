@@ -6,7 +6,7 @@
         <Homepage>http://gstreamer.freedesktop.org</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>GStreamer base plug-ins and elements</Summary>
         <Description>The GStreamer Base Plug-ins is a well-groomed and well-maintained collection of GStreamer plug-ins and elements, spanning the range of possible types of elements one would want to write for GStreamer. You will need at least one of Good, Bad, Ugly or Libav plugins for GStreamer applications to function properly.</Description>
@@ -14,10 +14,10 @@
         <Archive sha1sum="8cf49dded9c44cd1f1a742bfadaeb7fb83dc5979" type="tarxz">http://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.0.6.tar.xz</Archive>
 
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>gstreamer-1.0-devel</Dependency>
+            <Dependency type="pkgconfig">gstreamer-1.0</Dependency>
+            <Dependency type="pkgconfig">ogg</Dependency>
+            <Dependency type="pkgconfig">vorbis</Dependency>
+            <Dependency type="pkgconfig">theora</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -26,7 +26,8 @@
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib/gstreamer-1.0</Path>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/gst-plugins-base</Path>
@@ -34,12 +35,6 @@
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>gstreamer-1.0</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -48,6 +43,7 @@
         <Description>Development files for gstreamer-1.0-plugins-base</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <RuntimeDependencies>
@@ -68,6 +64,14 @@
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>06-15-2014</Date>
+            <Version>1.0.6</Version>
+            <Comment>Fix splitting, use pkgconfig+auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="4">
             <Date>09-04-2013</Date>
             <Version>1.0.6</Version>
