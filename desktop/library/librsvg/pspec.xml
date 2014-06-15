@@ -5,8 +5,8 @@
         <Name>librsvg</Name>
         <Homepage>http://www.live.gnome.org/LibRsvg</Homepage>
         <Packager>
-            <Name>Justin Krehel</Name>
-            <Email>justin@solusos.com</Email>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>Library to render SVG files using cairo</Summary>
         <Description>Library to render SVG files using cairo.</Description>
@@ -14,62 +14,19 @@
         <License>LGPLv2</License>
         <Archive sha1sum="92ac16f1210e2324011039284407e17d3fda6e88" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/librsvg/2.37/librsvg-2.37.0.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>libx11-devel</Dependency>
-            <Dependency>libcairo-devel</Dependency>
-            <Dependency>libcroco-devel</Dependency>
-            <Dependency>harfbuzz-devel</Dependency>
-            <Dependency>xz-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>libxau-devel</Dependency>
-            <Dependency>libicu-devel</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>libxdmcp-devel</Dependency>
-            <Dependency>fontconfig</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>libpng-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>libxext-devel</Dependency>
-            <Dependency>pixman-devel</Dependency>
-            <Dependency>expat</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency>freetype2</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libxrender-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
+            <Dependency>vala</Dependency>
+            <Dependency type="pkgconfig">pangocairo</Dependency>
+            <Dependency type="pkgconfig">cairo-png</Dependency>
+            <Dependency type="pkgconfig">gdk-pixbuf-2.0</Dependency>
+            <Dependency type="pkgconfig">libcroco-0.6</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>librsvg</Name>
-        <RuntimeDependencies>
-            <Dependency>libx11</Dependency>
-            <Dependency>libcairo</Dependency>
-            <Dependency>libcroco</Dependency>
-            <Dependency>harfbuzz</Dependency>
-            <Dependency>xz</Dependency>
-            <Dependency>libxcb</Dependency>
-            <Dependency>libxau</Dependency>
-            <Dependency>libicu</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>libxdmcp</Dependency>
-            <Dependency>fontconfig</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libxml2</Dependency>
-            <Dependency>libpng</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>libxext</Dependency>
-            <Dependency>pixman</Dependency>
-            <Dependency>expat</Dependency>
-            <Dependency>pango</Dependency>
-            <Dependency>freetype2</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>libxrender</Dependency>
-            <Dependency>glib2</Dependency>
-        </RuntimeDependencies>
-
         <Files>
-            <Path fileType="library">/usr/lib/librsvg*.so*</Path>
+            <Path fileType="library">/usr/lib/librsvg*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/librsvg*.so.*.*.*</Path>
             <Path fileType="library">/usr/lib/gdk-pixbuf*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/lib/gtk-2.0</Path>
@@ -84,6 +41,7 @@
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="header">/usr/lib/lib*.so</Path>
             <Path fileType="library">/usr/lib/girepository*</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="doc">/usr/share/gtk-doc</Path>
@@ -96,6 +54,14 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>06-15-2014</Date>
+            <Version>2.37.0</Version>
+            <Comment>Fix splitting, use pkgconfig+auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>05-30-2013</Date>
             <Version>2.37.0</Version>
