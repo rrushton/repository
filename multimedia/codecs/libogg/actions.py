@@ -7,14 +7,14 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
-    autotools.configure ("--disable-static")
+    autotools.configure("--disable-static")
 
 def build():
-    autotools.make ()
+    autotools.make()
 
 def install():
-    autotools.install ()
+    autotools.install()
 
-    pisitools.dodoc ("AUTHORS", "COPYING")
+    pisitools.dodoc("AUTHORS", "COPYING")
 
-    pisitools.domove ("/usr/share/doc/libogg-1.3.0", "/usr/share/doc/libogg-docs")
+    pisitools.domove("/usr/share/doc/libogg-1.3.0", "/usr/share/doc/libogg-docs")
