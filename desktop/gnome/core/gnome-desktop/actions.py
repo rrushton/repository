@@ -5,17 +5,17 @@
 
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
-shelltools.export ("HOME", get.workDIR())
+shelltools.export("HOME", get.workDIR())
 
 def setup():
-    autotools.configure ("--disable-static \
-                          --libexecdir=/usr/lib/GnomeDesktop \
-                          --with-gnome-distributor=SolusOS")
+    autotools.configure("--disable-static \
+                         --libexecdir=/usr/lib/GnomeDesktop \
+                         --with-gnome-distributor=\"Evolve OS\"")
 
 def build():
-    autotools.make ()
+    autotools.make()
 
 def install():
-    autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    pisitools.dodoc ("AUTHORS", "ChangeLog", "COPYING")
+    pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING")
