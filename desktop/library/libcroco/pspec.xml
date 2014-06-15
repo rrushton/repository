@@ -4,33 +4,22 @@
     <Source>
         <Name>libcroco</Name>
         <Packager>
-            <Name>Justin Krehel</Name>
-            <Email>justin@solusos.com</Email>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>Standalone CSS2 parsing and manipulation library</Summary>
         <Description>Libcroco is a standalone CSS2 parsing and manipulation library for the GNOME project, and allows for XML/CSS rendering.</Description>
         <License>GPLv2</License>
         <License>LGPLv2</License>
         <Archive sha1sum="23a5c33a2a86d5e46173234f5fa88ac1e15de035" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/libcroco/0.6/libcroco-0.6.8.tar.xz</Archive>
-        <BuildDependencies>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>xz-devel</Dependency>
-        </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libcroco</Name>
-        <RuntimeDependencies>
-            <Dependency>libxml2</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>xz</Dependency>
-        </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/csslint*</Path>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
@@ -42,6 +31,7 @@
         <Files>
             <Path fileType="executable">/usr/bin/croco*</Path>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="header">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="doc">/usr/share/gtk-doc</Path>
         </Files>
@@ -51,6 +41,14 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>06-15-2014</Date>
+            <Version>0.6.8</Version>
+            <Comment>Fix splitting, use auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>05-30-2013</Date>
             <Version>0.6.8</Version>
