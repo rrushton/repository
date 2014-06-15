@@ -1,4 +1,3 @@
-
 #!/usr/bin/python
 
 # Created For SolusOS
@@ -7,15 +6,6 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
-    # Move the clang stuff to be usable
-    shelltools.move("tools/clang-3.2.src", "tools/clang")
-    shelltools.move("projects/compiler-rt-3.2.src", "projects/compiler-rt")
-
-    shelltools.system("sed -e \"s@../lib/libprofile_rt.a@../lib/llvm/libprofile_rt.a@g\" -i tools/clang/lib/Driver/Tools.cpp")
-
-    # "Final" release has broken compiler-rt, attempts to include darwin specific stuff ..
-    shelltools.system("patch -b projects/compiler-rt/make/platform/clang_darwin.mk < fix_darwin_issue.patch")
-
     shelltools.export("CC", "gcc")
     shelltools.export("CXX", "g++")
     autotools.rawConfigure("--prefix=/usr              \
