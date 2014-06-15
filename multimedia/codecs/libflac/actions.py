@@ -7,16 +7,16 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
-    autotools.configure ("--disable-static \
-                                              --enable-ogg \
-                                              --enable-sse \
-                                              --disable-doxygen-docs \
-                                              --disable-dependency-tracking")
+    autotools.configure("--disable-static \
+                         --enable-ogg \
+                         --enable-sse \
+                         --disable-doxygen-docs \
+                         --disable-dependency-tracking")
 
 def build():
-    autotools.make ()
+    autotools.make()
 
 def install():
-    autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    pisitools.dodoc ("COPYING.GPL", "AUTHORS")
+    pisitools.dodoc("COPYING.GPL", "AUTHORS")
