@@ -9,10 +9,10 @@ shelltools.export("HOME", get.workDIR())
 
 
 def setup():
-    # TODO: Re-enable cogl-gst
     autotools.configure("--disable-static \
                          --enable-glib \
                          --enable-cogl-pango \
+                         --enable-cogl-gst \
                          --enable-gdk-pixbuf \
                          --enable-examples-install \
                          --enable-gles2 \
