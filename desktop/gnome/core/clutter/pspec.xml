@@ -6,7 +6,7 @@
         <Homepage>http://blogs.gnome.org/clutter/</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ike.doherty@gmail.com</Email>
         </Packager>
         <Summary>OpenGL UI toolkit</Summary>
         <Description>Clutter is an open source (LGPL 2.1) software library for creating fast, compelling, portable, and dynamic graphical user interfaces. It is a core part of Gnome3, it is used by the GnomeShell, and is supported by the open source community.</Description>
@@ -14,99 +14,24 @@
         <Archive sha1sum="3594db1820fa19b40698b86bd09165c20ac52b38" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/clutter/1.16/clutter-1.16.0.tar.xz</Archive>
 
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>mesalib-devel</Dependency>
-            <Dependency>harfbuzz-devel</Dependency>
-            <Dependency>libxcursor-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>libjson-glib-devel</Dependency>
-            <Dependency>libxau-devel</Dependency>
-            <Dependency>libicu-devel</Dependency>
-            <Dependency>systemd-devel</Dependency>
-            <Dependency>libxdmcp-devel</Dependency>
-            <Dependency>wayland-devel</Dependency>
-            <Dependency>libxi-devel</Dependency>
-            <Dependency>glibc-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>libice-devel</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
-            <Dependency>libxinerama-devel</Dependency>
-            <Dependency>libatk-devel</Dependency>
-            <Dependency>libpng-devel</Dependency>
-            <Dependency>libxdamage-devel</Dependency>
-            <Dependency>libxext-devel</Dependency>
-            <Dependency>libxrandr-devel</Dependency>
-            <Dependency>pixman-devel</Dependency>
-            <Dependency>libdrm-devel</Dependency>
-            <Dependency>libffi-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency>libgtk-3-devel</Dependency>
-            <Dependency>libxfixes-devel</Dependency>
-            <Dependency>libcairo-devel</Dependency>
-            <Dependency>libx11-devel</Dependency>
-            <Dependency>libxcomposite-devel</Dependency>
-            <Dependency>libxrender-devel</Dependency>
-            <Dependency>cogl-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libsm-devel</Dependency>
-            <Dependency>libxkbcommon-devel</Dependency>
+            <Dependency type="pkgconfig">cogl-1.0</Dependency>
+            <Dependency type="pkgconfig">cairo-gobject</Dependency>
+            <Dependency type="pkgconfig">atk</Dependency>
+            <Dependency type="pkgconfig">pangocairo</Dependency>
+            <Dependency type="pkgconfig">json-glib-1.0</Dependency>
+            <Dependency type="pkgconfig">gdk-3.0</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>clutter</Name>
         <Files>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>mesalib</Dependency>
-            <Dependency>expat</Dependency>
-            <Dependency>harfbuzz</Dependency>
-            <Dependency>libxcursor</Dependency>
-            <Dependency>libstdc++</Dependency>
-            <Dependency>util-linux</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libxcb</Dependency>
-            <Dependency>libjson-glib</Dependency>
-            <Dependency>libxau</Dependency>
-            <Dependency>libicu</Dependency>
-            <Dependency>systemd</Dependency>
-            <Dependency>libxdmcp</Dependency>
-            <Dependency>wayland</Dependency>
-            <Dependency>libxi</Dependency>
-            <Dependency>glibc</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>fontconfig</Dependency>
-            <Dependency>libice</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libxinerama</Dependency>
-            <Dependency>libatk</Dependency>
-            <Dependency>libpng</Dependency>
-            <Dependency>libxdamage</Dependency>
-            <Dependency>libxext</Dependency>
-            <Dependency>libxrandr</Dependency>
-            <Dependency>pixman</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>libdrm</Dependency>
-            <Dependency>libffi</Dependency>
-            <Dependency>pango</Dependency>
-            <Dependency>libgtk-3</Dependency>
-            <Dependency>libxfixes</Dependency>
-            <Dependency>freetype2</Dependency>
-            <Dependency>libcairo</Dependency>
-            <Dependency>libx11</Dependency>
-            <Dependency>libxcomposite</Dependency>
-            <Dependency>libxrender</Dependency>
-            <Dependency>cogl</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libsm</Dependency>
-            <Dependency>libxkbcommon</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -115,6 +40,7 @@
         <Description>Development files for clutter</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <RuntimeDependencies>
@@ -127,6 +53,7 @@
         <Summary>API Documentation for clutter</Summary>
         <Description>API Documentation for clutter</Description>
         <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="doc">/usr/share/gtk-doc</Path>
         </Files>
         <RuntimeDependencies>
@@ -135,6 +62,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>06-15-2014</Date>
+            <Version>1.16.0</Version>
+            <Comment>Fix splitting, use pkgconfig+auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>10-01-2013</Date>
             <Version>1.16.0</Version>

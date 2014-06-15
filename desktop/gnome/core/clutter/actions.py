@@ -1,4 +1,3 @@
-
 #!/usr/bin/python
 
 # Created For SolusOS
@@ -10,7 +9,6 @@ shelltools.export("HOME", get.workDIR())
 
 def setup():
     # TODO: Add libevdev: --enable-evdev-input
-    # Need to support GNOME on Wayland in SolusOS
     autotools.configure("--disable-static \
                          --enable-x11-backend \
                          --enable-gdk-backend \
