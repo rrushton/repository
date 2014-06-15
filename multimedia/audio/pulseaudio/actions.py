@@ -7,9 +7,9 @@ from pisi.actionsapi import get, autotools, pisitools
 
 def setup():
     autotools.configure("--disable-static \
-                          --libexecdir=/usr/lib \
-                          --enable-alsa \
-                          --enable-dbus")
+                         --libexecdir=/usr/lib \
+                         --enable-alsa \
+                         --enable-dbus")
 
 
 def build():
