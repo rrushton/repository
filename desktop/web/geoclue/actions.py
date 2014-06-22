@@ -7,12 +7,12 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
-    autotools.configure ("--disable-static --libexecdir=/usr/lib/geoclue")
+    autotools.configure("--disable-static --libexecdir=/usr/lib/geoclue")
 
 def build():
-    autotools.make ()
+    autotools.make()
 
 def install():
-    autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    pisitools.dodoc ("COPYING")
+    pisitools.dodoc("COPYING")
