@@ -6,7 +6,7 @@
         <Homepage>http://code.google.com/p/ibus/</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>Intelligent Input Bus</Summary>
         <Description>IBus is an Intelligent Input Bus. It is a new input framework for Linux OS. It provides full featured and user friendly input method user interface.</Description>
@@ -14,20 +14,11 @@
         <Archive sha1sum="a7e1695731b4c954fa8897d091e6dda64e08b28c" type="targz">http://ibus.googlecode.com/files/ibus-1.5.2.tar.gz</Archive>
 
         <BuildDependencies>
-            <Dependency>libgtk-3-devel</Dependency>
-            <Dependency>libgtk-2-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>libcairo-devel</Dependency>
-            <Dependency>libxi-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>dconf-devel</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
-            <Dependency>libatk-devel</Dependency>
-            <Dependency>libffi-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency>libx11-devel</Dependency>
+            <Dependency>vala</Dependency>
+            <Dependency type="pkgconfig">gtk+-2.0</Dependency>
+            <Dependency type="pkgconfig">gtk+-3.0</Dependency>
+            <!-- Nobody should be using this directly... grr... //-->
+            <Dependency type="pkgconfig">dconf</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -36,7 +27,8 @@
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="config">/etc/dconf</Path>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
             <Path fileType="executable">/usr/lib/ibus</Path>
             <Path fileType="data">/usr/share/GConf</Path>
             <Path fileType="data">/usr/share/applications</Path>
@@ -52,25 +44,6 @@
             <Path fileType="library">/usr/lib/gtk-3.0</Path>
             <Path fileType="library">/usr/lib/python*</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>libgtk-3</Dependency>
-            <Dependency>libgtk-2</Dependency>
-            <Dependency>dbus</Dependency>
-            <Dependency>libcairo</Dependency>
-            <Dependency>libxi</Dependency>
-            <Dependency>glibc</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>dconf</Dependency>
-            <Dependency>fontconfig</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>freetype2</Dependency>
-            <Dependency>libatk</Dependency>
-            <Dependency>libffi</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>pango</Dependency>
-            <Dependency>libx11</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -79,6 +52,7 @@
         <Description>Development files for ibus</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="header">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="data">/usr/share/vala/vapi</Path>
         </Files>
@@ -100,6 +74,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>06-22-2014</Date>
+            <Version>1.5.2</Version>
+            <Comment>Fix splitting, use pkgconfig+auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>06-05-2013</Date>
             <Version>1.5.2</Version>
