@@ -6,7 +6,7 @@
         <Homepage>http://www.gnome.org</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>Geocoding library</Summary>
         <Description>geocode-glib is a convenience library for the geocoding (finding longitude,
@@ -19,39 +19,20 @@
         <Archive sha1sum="e2d851850cc532b02aa93a86aa9ba23de93dfe31" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/geocode-glib/3.10/geocode-glib-3.10.0.tar.xz</Archive>
 
         <BuildDependencies>
-            <Dependency>sqlite3-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>glibc-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>xz-devel</Dependency>
-            <Dependency>libffi-devel</Dependency>
-            <Dependency>libjson-glib-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>libsoup-devel</Dependency>
+            <Dependency type="pkgconfig">json-glib-1.0</Dependency>
+            <Dependency type="pkgconfig">libsoup-2.4</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libgeocode-glib</Name>
         <Files>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>sqlite3</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libxml2</Dependency>
-            <Dependency>glibc</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>xz</Dependency>
-            <Dependency>libffi</Dependency>
-            <Dependency>libjson-glib</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>libsoup</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -60,6 +41,7 @@
         <Description>Development files for libgeocode-glib</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <RuntimeDependencies>
@@ -80,6 +62,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>06-22-2014</Date>
+            <Version>3.10.0</Version>
+            <Comment>Fix splitting, use pkgconfig+auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>10-01-2013</Date>
             <Version>3.10.0</Version>
