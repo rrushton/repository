@@ -6,7 +6,7 @@
         <Homepage>http://www.gnome.org</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>Daemon handling the GNOME session settings</Summary>
         <Description>This package contains the daemon which is responsible for setting the various parameters of a GNOME session and the applications that run under it.</Description>
@@ -19,64 +19,25 @@
 
         <BuildDependencies>
             <Dependency>cups-devel</Dependency>
-            <Dependency>recordproto</Dependency>
-            <Dependency>libflac-devel</Dependency>
-            <Dependency>xorg-driver-input-wacom-devel</Dependency>
-            <Dependency>packagekit-devel</Dependency>
-            <Dependency>colord-devel</Dependency>
-            <Dependency>liblcms2-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>json-c-devel</Dependency>
-            <Dependency>ibus-devel</Dependency>
-            <Dependency>harfbuzz-devel</Dependency>
-            <Dependency>libxcursor-devel</Dependency>
-            <Dependency>libxtst-devel</Dependency>
-            <Dependency>libnspr-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>libxau-devel</Dependency>
-            <Dependency>libicu-devel</Dependency>
-            <Dependency>systemd-devel</Dependency>
-            <Dependency>libxdmcp-devel</Dependency>
-            <Dependency>libnss-devel</Dependency>
-            <Dependency>libxi-devel</Dependency>
-            <Dependency versionFrom="3.10.0">libgnome-desktop-devel</Dependency>
-            <Dependency>libxfixes-devel</Dependency>
-            <Dependency>libice-devel</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
-            <Dependency>libxinerama-devel</Dependency>
-            <Dependency>libatk-devel</Dependency>
-            <Dependency>libpng-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>libxext-devel</Dependency>
-            <Dependency>libxrandr-devel</Dependency>
-            <Dependency>pixman-devel</Dependency>
-            <Dependency>libwacom-devel</Dependency>
-            <Dependency>sqlite3-devel</Dependency>
-            <Dependency>libogg-devel</Dependency>
-            <Dependency>libnotify-devel</Dependency>
-            <Dependency>libffi-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency versionFrom="3.10.0">libgtk-3-devel</Dependency>
-            <Dependency>libsndfile-devel</Dependency>
-            <Dependency>libxdamage-devel</Dependency>
-            <Dependency>attr-devel</Dependency>
-            <Dependency>libcairo-devel</Dependency>
-            <Dependency>libcanberra-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>libx11-devel</Dependency>
-            <Dependency>pulseaudio-devel</Dependency>
-            <Dependency>libxkbfile-devel</Dependency>
-            <Dependency>libxcomposite-devel</Dependency>
-            <Dependency>libxrender-devel</Dependency>
-            <Dependency>upower-devel</Dependency>
-            <Dependency>libvorbis-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libsm-devel</Dependency>
-            <Dependency>at-spi2-atk-devel</Dependency>
-            <Dependency>libsoup-devel</Dependency>
-            <Dependency>libgeoclue-devel</Dependency>
-            <Dependency>colord-devel</Dependency>
-            <Dependency>libgeocode-glib-devel</Dependency>
+            <Dependency type="pkgconfig">gtk+-3.0</Dependency>
+            <Dependency type="pkgconfig">gsettings-desktop-schemas</Dependency>
+            <Dependency type="pkgconfig">libnotify</Dependency>
+            <Dependency type="pkgconfig">gnome-desktop-3.0</Dependency>
+            <Dependency type="pkgconfig">packagekit-glib2</Dependency>
+            <Dependency type="pkgconfig">xtst</Dependency>
+            <Dependency type="pkgconfig">ibus-1.0</Dependency>
+            <Dependency type="pkgconfig">libpulse-mainloop-glib</Dependency>
+            <Dependency type="pkgconfig">libcanberra-gtk3</Dependency>
+            <Dependency type="pkgconfig">upower-glib</Dependency>
+            <Dependency type="pkgconfig">xrandr</Dependency>
+            <Dependency type="pkgconfig">geocode-glib-1.0</Dependency>
+            <Dependency type="pkgconfig">gweather-3.0</Dependency>
+            <Dependency type="pkgconfig">lcms2</Dependency>
+            <Dependency type="pkgconfig">colord</Dependency>
+            <Dependency type="pkgconfig">geoclue-2.0</Dependency>
+            <Dependency type="pkgconfig">librsvg-2.0</Dependency>
+            <Dependency type="pkgconfig">xorg-wacom</Dependency>
+            <Dependency type="pkgconfig">libwacom</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -99,74 +60,7 @@
             <Path fileType="data">/usr/share/dbus-1</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency>cups</Dependency>
-            <Dependency>packagekit</Dependency>
-            <Dependency>colord</Dependency>
-            <Dependency>liblcms2</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>json-c</Dependency>
-            <Dependency>expat</Dependency>
-            <Dependency>ibus</Dependency>
-            <Dependency>harfbuzz</Dependency>
-            <Dependency>libxcursor</Dependency>
-            <Dependency>libstdc++</Dependency>
-            <Dependency>util-linux</Dependency>
-            <Dependency>libxtst</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libnspr</Dependency>
-            <Dependency>libxcb</Dependency>
-            <Dependency>fontconfig</Dependency>
-            <Dependency>libtool</Dependency>
-            <Dependency>dbus-glib</Dependency>
-            <Dependency>libxau</Dependency>
-            <Dependency>libicu</Dependency>
-            <Dependency>systemd</Dependency>
-            <Dependency>libxdmcp</Dependency>
-            <Dependency>libnss</Dependency>
-            <Dependency>libxi</Dependency>
-            <Dependency>glibc</Dependency>
-            <Dependency versionFrom="3.10.0">libgnome-desktop</Dependency>
-            <Dependency>libxfixes</Dependency>
-            <Dependency>libice</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libxinerama</Dependency>
-            <Dependency>libatk</Dependency>
-            <Dependency>libpng</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>libxext</Dependency>
-            <Dependency>libxrandr</Dependency>
-            <Dependency>pixman</Dependency>
-            <Dependency>libcap2</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>libwacom</Dependency>
-            <Dependency>sqlite3</Dependency>
-            <Dependency>libogg</Dependency>
-            <Dependency>libnotify</Dependency>
-            <Dependency>libffi</Dependency>
-            <Dependency>pango</Dependency>
-            <Dependency versionFrom="3.10.0">libgtk-3</Dependency>
-            <Dependency>libsndfile</Dependency>
-            <Dependency>libxdamage</Dependency>
-            <Dependency>attr</Dependency>
-            <Dependency>at-spi2</Dependency>
-            <Dependency>freetype2</Dependency>
-            <Dependency>libcairo</Dependency>
-            <Dependency>libcanberra</Dependency>
-            <Dependency>dbus</Dependency>
-            <Dependency>libx11</Dependency>
-            <Dependency>pulseaudio</Dependency>
-            <Dependency>libxkbfile</Dependency>
-            <Dependency>libxcomposite</Dependency>
-            <Dependency>libxrender</Dependency>
-            <Dependency>upower</Dependency>
-            <Dependency>libvorbis</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libsm</Dependency>
-            <Dependency>at-spi2-atk</Dependency>
-            <Dependency>libsoup</Dependency>
-            <Dependency>libgeoclue</Dependency>
-            <Dependency>colord</Dependency>
-            <Dependency>libgeocode-glib</Dependency>
+            <Dependency>gsettings-desktop-schemas</Dependency>
         </RuntimeDependencies>
     </Package>
 
@@ -184,6 +78,14 @@
     </Package>
 
     <History>
+        <Update release="6">
+            <Date>06-22-2014</Date>
+            <Version>3.10.0</Version>
+            <Comment>Use pkgconfig+auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="5">
             <Date>10-01-2013</Date>
             <Version>3.10.0</Version>
@@ -224,6 +126,4 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-
 </PISI>
-

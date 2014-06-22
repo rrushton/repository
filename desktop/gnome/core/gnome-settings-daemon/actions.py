@@ -7,16 +7,16 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
-    autotools.configure ("--disable-static \
-                          --disable-man \
-                          --libexecdir=/usr/lib/gnome-settings-daemon \
-                          --enable-packagekit \
-                          --enable-systemd")
+    autotools.configure("--disable-static \
+                         --disable-man \
+                         --libexecdir=/usr/lib/gnome-settings-daemon \
+                         --enable-packagekit \
+                         --enable-systemd")
 
 def build():
-    autotools.make ()
+    autotools.make()
 
 def install():
-    autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    pisitools.dodoc ("AUTHORS", "ChangeLog", "COPYING")
+    pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING")
