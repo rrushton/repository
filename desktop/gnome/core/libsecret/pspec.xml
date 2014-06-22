@@ -6,7 +6,7 @@
         <Homepage>https://live.gnome.org/Libsecret</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>The libsecret package contains a GObject based library for accessing the Secret Service API.</Summary>
         <Description>The libsecret package contains a GObject based library for accessing the Secret Service API. </Description>
@@ -16,9 +16,6 @@
         <IsA>library</IsA>
 
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>libgcrypt-devel</Dependency>
         </BuildDependencies>
 
@@ -28,20 +25,13 @@
         <Name>libsecret</Name>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>libgpg-error</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libgcrypt</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -50,6 +40,7 @@
         <Description>Development files for libsecret</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="data">/usr/share/vala</Path>
         </Files>
@@ -63,6 +54,7 @@
         <Summary>API Documentation for libsecret</Summary>
         <Description>API Documentation for libsecret</Description>
         <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="doc">/usr/share/gtk-doc</Path>
         </Files>
         <RuntimeDependencies>
@@ -72,6 +64,14 @@
 
 
     <History>
+        <Update release="6">
+            <Date>06-22-2014</Date>
+            <Version>0.16</Version>
+            <Comment>Fix splitting, use pkgconfig+auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="5">
             <Date>10-01-2013</Date>
             <Version>0.16</Version>

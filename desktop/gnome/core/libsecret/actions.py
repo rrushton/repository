@@ -4,19 +4,19 @@
 
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
-shelltools.export ("HOME", get.workDIR())
+shelltools.export("HOME", get.workDIR())
 
 def setup():
-    autotools.configure ("--disable-static \
-                          --disable-manpages")
+    autotools.configure("--disable-static \
+                         --disable-manpages")
 
 
 def build():
-    autotools.make ()
+    autotools.make()
 
 
 def install():
-    autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
     # Ensure docs are installed in main library package
-    pisitools.dodoc ("COPYING", "ChangeLog", "AUTHORS")
+    pisitools.dodoc("COPYING", "ChangeLog", "AUTHORS")
