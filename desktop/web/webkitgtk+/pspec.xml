@@ -39,6 +39,7 @@
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="executable">/usr/lib/WebKitGTK</Path>
             <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.25</Path>
             <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
