@@ -5,10 +5,10 @@
 
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
-shelltools.export ("HOME", get.workDIR())
+shelltools.export("HOME", get.workDIR())
 
 def setup():
-    autotools.configure ("--prefix=/usr \
+    autotools.configure("--prefix=/usr \
                          --sysconfdir=/etc \
                          --localstatedir=/var \
                          --libexecdir=/usr/lib/accountsservice \
@@ -18,9 +18,9 @@ def setup():
                          --disable-static")
 
 def build():
-    autotools.make ()
+    autotools.make()
 
 def install():
-    autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    pisitools.dodoc ("README", "COPYING", "AUTHORS")
+    pisitools.dodoc("README", "COPYING", "AUTHORS")
