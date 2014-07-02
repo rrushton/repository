@@ -28,9 +28,9 @@ def build():
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    # Enable ourselves by default (will conflict with lightdm)
-    pisitools.dodir ("/usr/lib/systemd/system/graphical.target.wants")
-    pisitools.dosym ("/usr/lib/systemd/system/gdm.service", "/usr/lib/systemd/system/displaymanager.service")
-    pisitools.dosym ("/usr/lib/systemd/system/gdm.service", "/usr/lib/systemd/system/graphical.target.wants/gdm.service")
+    # Enable ourselves by default(will conflict with lightdm)
+    pisitools.dodir("/usr/lib/systemd/system/graphical.target.wants")
+    pisitools.dosym("/usr/lib/systemd/system/gdm.service", "/usr/lib/systemd/system/displaymanager.service")
+    pisitools.dosym("/usr/lib/systemd/system/gdm.service", "/usr/lib/systemd/system/graphical.target.wants/gdm.service")
 
     pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING")
