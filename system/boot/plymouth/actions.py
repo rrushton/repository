@@ -6,7 +6,6 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools, libtools
 
 
 def setup():
-    shelltools.system("./autogen.sh")
     autotools.configure("--enable-pango \
                          --enable-gtk \
                          --enable-drm \
