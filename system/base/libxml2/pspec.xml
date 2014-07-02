@@ -5,7 +5,7 @@
         <Name>libxml2</Name>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>GNOME XML Library</Summary>
         <Description>The libxml2 package contains libraries and utilities used for parsing XML files.</Description>
@@ -46,6 +46,14 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>07-02-2014</Date>
+            <Version>2.9.0</Version>
+            <Comment>Fix broken script.</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>04-13-2013</Date>
             <Version>2.9.0</Version>
