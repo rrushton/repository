@@ -6,7 +6,7 @@
         <Homepage></Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>Spidermonkey 17 JavaScript Engine</Summary>
         <Description>SpiderMonkey is Mozilla's JavaScript engine written in C/C++</Description>
@@ -19,7 +19,8 @@
         <Name>mozjs17</Name>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
             <Path fileType="library">/usr/lib/lib*.a</Path>
         </Files>
     </Package>
@@ -30,6 +31,7 @@
         <Description>Development files for mozjs17</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <RuntimeDependencies>
@@ -38,6 +40,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>07-04-2014</Date>
+            <Version>17.0.0</Version>
+            <Comment>Fix splitting</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>10-01-2013</Date>
             <Version>17.0.0</Version>
