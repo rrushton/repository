@@ -6,7 +6,7 @@
         <Homepage>http://www.gnome.org</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>Provides GNOME session core</Summary>
         <Description>Provides GNOME session core</Description>
@@ -14,44 +14,13 @@
         <Archive sha1sum="5443f9d3cc64c5f03c890959301f34ad45c8b7e9" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-session/3.10/gnome-session-3.10.0.tar.xz</Archive>
 
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>mesalib-devel</Dependency>
-            <Dependency>harfbuzz-devel</Dependency>
-            <Dependency>libxcursor-devel</Dependency>
-            <Dependency>gconf-devel</Dependency>
-            <Dependency>libxtst-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>libjson-glib-devel</Dependency>
-            <Dependency>libxau-devel</Dependency>
-            <Dependency>libicu-devel</Dependency>
-            <Dependency>libxi-devel</Dependency>
-            <Dependency>libxxf86vm-devel</Dependency>
-            <Dependency>libice-devel</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
-            <Dependency>libxinerama-devel</Dependency>
-            <Dependency>libatk-devel</Dependency>
-            <Dependency>libpng-devel</Dependency>
-            <Dependency>pixman-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>libxext-devel</Dependency>
-            <Dependency>libxrandr-devel</Dependency>
-            <Dependency>libxdamage-devel</Dependency>
-            <Dependency>systemd-devel</Dependency>
-            <Dependency>libdrm-devel</Dependency>
-            <Dependency>libxdmcp-devel</Dependency>
-            <Dependency>libffi-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency versionFrom="3.10.0">libgtk-3-devel</Dependency>
-            <Dependency>libxfixes-devel</Dependency>
-            <Dependency>libcairo-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>libx11-devel</Dependency>
-            <Dependency>libxcomposite-devel</Dependency>
-            <Dependency>libxrender-devel</Dependency>
-            <Dependency>upower-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libsm-devel</Dependency>
-            <Dependency>at-spi2-atk-devel</Dependency>
+            <Dependency type="pkgconfig">gtk+-3.0</Dependency>
+            <Dependency type="pkgconfig">json-glib-1.0</Dependency>
+            <Dependency type="pkgconfig">gnome-desktop-3.0</Dependency>
+            <Dependency type="pkgconfig">upower-glib</Dependency>
+            <Dependency type="pkgconfig">sm</Dependency>
+            <Dependency type="pkgconfig">gl</Dependency>
+            <Dependency type="pkgconfig">xtst</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -71,61 +40,17 @@
             <Path fileType="data">/usr/share/gnome-session</Path>
             <Path fileType="data">/usr/share/wayland-sessions/gnome-wayland.desktop</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>mesalib</Dependency>
-            <Dependency>expat</Dependency>
-            <Dependency>harfbuzz</Dependency>
-            <Dependency>libxcursor</Dependency>
-            <Dependency>libstdc++</Dependency>
-            <Dependency>gconf</Dependency>
-            <Dependency>libxtst</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libxcb</Dependency>
-            <Dependency>libjson-glib</Dependency>
-            <Dependency>dbus-glib</Dependency>
-            <Dependency>libxau</Dependency>
-            <Dependency>libicu</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>util-linux</Dependency>
-            <Dependency>libxi</Dependency>
-            <Dependency>glibc</Dependency>
-            <Dependency>libxxf86vm</Dependency>
-            <Dependency>fontconfig</Dependency>
-            <Dependency>libice</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libxinerama</Dependency>
-            <Dependency>libatk</Dependency>
-            <Dependency>libpng</Dependency>
-            <Dependency>pixman</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>libxext</Dependency>
-            <Dependency>libxrandr</Dependency>
-            <Dependency>libxdamage</Dependency>
-            <Dependency>systemd</Dependency>
-            <Dependency>libdrm</Dependency>
-            <Dependency>libxdmcp</Dependency>
-            <Dependency>libffi</Dependency>
-            <Dependency>pango</Dependency>
-            <Dependency versionFrom="3.10.0">libgtk-3</Dependency>
-            <Dependency>libxfixes</Dependency>
-            <Dependency>at-spi2</Dependency>
-            <Dependency>freetype2</Dependency>
-            <Dependency>libcairo</Dependency>
-            <Dependency>dbus</Dependency>
-            <Dependency>libx11</Dependency>
-            <Dependency>libxcomposite</Dependency>
-            <Dependency>libxrender</Dependency>
-            <Dependency>upower</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libsm</Dependency>
-            <Dependency>at-spi2-atk</Dependency>
-            <Dependency>xdg-utils</Dependency>
-            <Dependency>desktop-file-utils</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>07-03-2014</Date>
+            <Version>3.10.0</Version>
+            <Comment>Use pkgconfig+auto-deps, re-enable docbook docs</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="4">
             <Date>10-01-2013</Date>
             <Version>3.10.0</Version>
@@ -158,6 +83,4 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-
 </PISI>
-
