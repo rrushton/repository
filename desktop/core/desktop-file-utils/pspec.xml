@@ -6,17 +6,12 @@
         <Homepage>http://freedesktop.org/wiki/Software/desktop-file-utils</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>Utilities required for working with Desktop entries</Summary>
         <Description> The Desktop File Utils package contains command line utilities for working with Desktop entries. These utilities are used by Desktop Environments and other applications to manipulate the MIME-types application databases and help adhere to the Desktop Entry Specification.</Description>
         <License>GPLv3+</License>
         <Archive sha1sum="5412232434ba8726358be4f59520c8adb1c58732" type="tarxz">http://freedesktop.org/software/desktop-file-utils/releases/desktop-file-utils-0.21.tar.xz</Archive>
-
-        <BuildDependencies>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-        </BuildDependencies>
 
         <IsA>app:console</IsA>
 
@@ -29,9 +24,6 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>libpcre</Dependency>
-        </RuntimeDependencies>
         <Provides>
             <COMAR script="package.py">System.Package</COMAR>
             <COMAR script="packageHandler.py">System.PackageHandler</COMAR>
@@ -39,6 +31,14 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>07-02-2014</Date>
+            <Version>0.21</Version>
+            <Comment>Use auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>06-19-2013</Date>
             <Version>0.21</Version>
