@@ -6,22 +6,12 @@
         <Homepage>http://projects.gnome.org/gconf/</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>GNOME Configuration Database</Summary>
         <Description>The GConf package contains a configuration database system used by many GNOME applications.</Description>
         <License>GPLv3+</License>
         <Archive sha1sum="a90d3ac08dc454f927c8d3024f52d4d57e3ff613" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/GConf/3.2/GConf-3.2.6.tar.xz</Archive>
-
-        <BuildDependencies>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>xz-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-        </BuildDependencies>
-
     </Source>
 
     <Package>
@@ -32,7 +22,8 @@
             <Path fileType="config">/etc/gconf</Path>
             <Path fileType="data">/etc/xdg</Path>
             <Path fileType="library">/usr/lib/GConf</Path>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
             <Path fileType="library">/usr/lib/gio/modules</Path>
             <Path fileType="data">/usr/share/dbus-1</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
@@ -43,15 +34,6 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>libxml2</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>xz</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>dbus</Dependency>
-            <Dependency>dbus-glib</Dependency>
-        </RuntimeDependencies>
         <Provides>
             <COMAR script="packageHandler.py">System.PackageHandler</COMAR>
         </Provides>
@@ -63,6 +45,7 @@
         <Description>Development files for GConf</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="lib">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="data">/usr/share/aclocal</Path>
         </Files>
@@ -84,6 +67,14 @@
     </Package>
 
     <History>
+        <Update release="6">
+            <Date>07-02-2014</Date>
+            <Version>3.2.6</Version>
+            <Comment>Fix splitting, use auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="5">
             <Date>09-04-2013</Date>
             <Version>3.2.6</Version>
