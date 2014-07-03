@@ -6,7 +6,7 @@
         <Homepage>http://freedesktop.org/wiki/Software/shared-mime-info</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>Shared Mime Info Database</Summary>
         <Description> The Shared Mime Info package contains a MIME database. This allows central updates of MIME information for all supporting applications. </Description>
@@ -14,14 +14,6 @@
         <Archive sha1sum="752668b0cc5729433c99cbad00f21241ec4797ef" type="tarxz">http://freedesktop.org/~hadess/shared-mime-info-1.1.tar.xz</Archive>
 
         <IsA>app:console</IsA>
-
-        <BuildDependencies>
-            <Dependency>xz-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-        </BuildDependencies>
     </Source>
 
     <Package>
@@ -34,15 +26,17 @@
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="data">/usr/share/pkgconfig</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>xz</Dependency>
-            <Dependency>libxml2</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>zlib</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>07-03-2014</Date>
+            <Version>1.1</Version>
+            <Comment>Use auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>04-12-2013</Date>
             <Version>1.1</Version>
@@ -59,6 +53,5 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-
 </PISI>
 
