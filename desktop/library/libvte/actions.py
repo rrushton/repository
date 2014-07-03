@@ -5,17 +5,17 @@
 
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
-shelltools.export ("HOME", get.workDIR())
+shelltools.export("HOME", get.workDIR())
 
 def setup():
-    autotools.configure ("--disable-static \
-                          --enable-introspection \
-                          --libexecdir=/usr/lib/vte")
+    autotools.configure("--disable-static \
+                         --enable-introspection \
+                         --libexecdir=/usr/lib/vte")
 
 def build():
-    autotools.make ()
+    autotools.make()
 
 def install():
-    autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    pisitools.dodoc ("AUTHORS", "ChangeLog", "COPYING")
+    pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING")
