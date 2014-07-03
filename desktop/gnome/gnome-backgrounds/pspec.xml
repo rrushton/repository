@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gnome-backgrounds</Name>
+        <Homepage></Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Packager>
+        <Summary>Default GNOME artwork</Summary>
+        <Description>Default GNOME artwork</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="fbe48dba15c0bfc97a5cf13318ed34e5bc9c27a6" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-backgrounds/3.10/gnome-backgrounds-3.10.1.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>gnome-backgrounds</Name>
+        <Files>
+            <Path fileType="data">/usr/share/backgrounds</Path>
+            <Path fileType="data">/usr/share/gnome-background-properties</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>07-03-2014</Date>
+            <Version>3.10.1</Version>
+            <Comment>Add gnome-backgrounds to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
