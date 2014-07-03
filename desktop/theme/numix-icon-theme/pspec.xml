@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>numix-icon-theme</Name>
+        <Homepage>http://numixproject.org/</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Packager>
+        <Summary>The Numix Icon Theme</Summary>
+        <Description>Designed to look fresh, swishy and modern using white symbols on vividly
+coloured background for applications and simplistic devices, toolbars
+and status icons.</Description>
+        <License>GPLv3+</License>
+        <Archive sha1sum="f6e6d28c9d584d601c98a3d66decdd263aea5b4a" type="tarxz">http://ppa.launchpad.net/numix/ppa/ubuntu/pool/main/n/numix-icon-theme/numix-icon-theme_0.3+143~201406151532~ubuntu14.10.1.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>numix-icon-theme</Name>
+        <Files>
+            <Path fileType="data">/usr/share/icons/Numix</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>hicolor-icon-theme</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>07-03-2014</Date>
+            <Version>0.3</Version>
+            <Comment>Add numix-icon-theme to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
