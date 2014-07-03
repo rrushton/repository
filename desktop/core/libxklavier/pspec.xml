@@ -6,7 +6,7 @@
         <Homepage>http://freedesktop.org/wiki/Software/LibXklavier</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>The libxklavier package contains a utility library for X keyboard.</Summary>
         <Description>The libxklavier package contains a utility library for X keyboard.</Description>
@@ -14,45 +14,20 @@
         <Archive sha1sum="dc5e824c738520229174ba9481f0cab35be4870f" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/libxklavier/5.3/libxklavier-5.3.tar.xz</Archive>
 
         <BuildDependencies>
-            <Dependency>libxkbfile-devel</Dependency>
-            <Dependency>libxext-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libxau-devel</Dependency>
-            <Dependency>xz-devel</Dependency>
-            <Dependency>libxdmcp-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>libxi-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libx11-devel</Dependency>
-            <Dependency>iso-codes</Dependency>
+            <Dependency type="pkgconfig">x11</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libxklavier</Name>
         <Files>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.16</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>libxkbfile</Dependency>
-            <Dependency>libxext</Dependency>
-            <Dependency>libxml2</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>libxau</Dependency>
-            <Dependency>xz</Dependency>
-            <Dependency>libxdmcp</Dependency>
-            <Dependency>libxcb</Dependency>
-            <Dependency>libxi</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libx11</Dependency>
-            <Dependency>iso-codes</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -61,6 +36,7 @@
         <Description>Development files for libxklavier</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <RuntimeDependencies>
@@ -81,6 +57,14 @@
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>07-03-2014</Date>
+            <Version>5.3</Version>
+            <Comment>Fix splitting, use pkgconfig+auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="4">
             <Date>09-04-2013</Date>
             <Version>5.3</Version>
