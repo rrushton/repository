@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>numix-icon-theme-circle</Name>
+        <Homepage>http://numixproject.org/</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Packager>
+        <Summary>Numix Circle Icon Theme</Summary>
+        <Description>Numix Circle is an icon theme from the Numix project</Description>
+        <License>GPLv3+</License>
+        <Archive sha1sum="d6a78045e2d2c31466ae31ca35299da877c03835" type="tarxz">http://ppa.launchpad.net/numix/ppa/ubuntu/pool/main/n/numix-icon-theme-circle/numix-icon-theme-circle_0.2+201406221518~626~ubuntu14.10.1.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>numix-icon-theme-circle</Name>
+        <Files>
+            <Path fileType="data">/usr/share/icons/Numix-Circle</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>numix-icon-theme</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>07-03-2014</Date>
+            <Version>0.2</Version>
+            <Comment>Add numix-icon-theme-circle to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
