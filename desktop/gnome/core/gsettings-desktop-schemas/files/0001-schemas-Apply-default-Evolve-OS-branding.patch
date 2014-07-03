@@ -1,0 +1,48 @@
+From bf438bcd42257fbfba8d20a3260eb783907104dc Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey.doherty@gmail.com>
+Date: Thu, 3 Jul 2014 21:43:54 +0100
+Subject: [PATCH] schemas: Apply default Evolve OS branding
+
+---
+ schemas/org.gnome.desktop.background.gschema.xml.in.in | 2 +-
+ schemas/org.gnome.desktop.interface.gschema.xml.in.in  | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/schemas/org.gnome.desktop.background.gschema.xml.in.in b/schemas/org.gnome.desktop.background.gschema.xml.in.in
+index 4d3c32b..ae48940 100644
+--- a/schemas/org.gnome.desktop.background.gschema.xml.in.in
++++ b/schemas/org.gnome.desktop.background.gschema.xml.in.in
+@@ -10,7 +10,7 @@
+       </_description>
+     </key>
+     <key name="picture-uri" type="s">
+-      <default>'file://@datadir@/themes/Adwaita/backgrounds/adwaita-timed.xml'</default>
++      <default>'file://@datadir@/backgrounds/evolve-os/Path.jpg'</default>
+       <_summary>Picture URI</_summary>
+       <_description>
+         URI to use for the background image. Note that the backend only supports
+diff --git a/schemas/org.gnome.desktop.interface.gschema.xml.in.in b/schemas/org.gnome.desktop.interface.gschema.xml.in.in
+index c102bd1..0a4fdd4 100644
+--- a/schemas/org.gnome.desktop.interface.gschema.xml.in.in
++++ b/schemas/org.gnome.desktop.interface.gschema.xml.in.in
+@@ -83,7 +83,7 @@
+       </_description>
+     </key>
+     <key name="icon-theme" type="s">
+-      <default>'gnome'</default>
++      <default>'Numix-Circle'</default>
+       <_summary>Icon Theme</_summary>
+       <_description>
+         Icon theme to use for the panel, nautilus etc.
+@@ -104,7 +104,7 @@
+       </_description>
+     </key>
+     <key name="font-name" type="s">
+-      <default>'Cantarell 11'</default>
++      <default>'Droid Sans 10'</default>
+       <_summary>Default font</_summary>
+       <_description>
+         Name of the default font used by gtk+.
+-- 
+1.9.1
+
