@@ -5,8 +5,8 @@ from pisi.actionsapi import pisitools, autotools,get
 
 def setup():
     autotools.rawConfigure("--prefix=/usr \
-                                                    --with-x \
-                                                    --disable-static")
+                            --with-x \
+                            --disable-static")
 
 
 
