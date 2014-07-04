@@ -20,12 +20,13 @@
     </Source>
 
     <Package>
-        <Name>libgjs</Name>
+        <Name>gjs</Name>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib/gjs-1.0</Path>
             <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
             <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
+            <Path fileType="data">/usr/lib/gjs/girepository-1.0</Path>
             <Path fileType="data">/usr/share/gjs-1.0</Path>
             <Path fileType="executable">/usr/libexec/gjs</Path>
             <Path fileType="doc">/usr/share/doc</Path>
@@ -33,14 +34,13 @@
     </Package>
 
     <Package>
-        <Name>libgjs-devel</Name>
+        <Name>gjs-devel</Name>
         <Summary>Development files for libgjs</Summary>
         <Description>Development files for libgjs</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="data">/usr/lib/lib*.so</Path>
-            <Path fileType="data">/usr/lib/gjs/girepository-1.0</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">libgjs</Dependency>
@@ -48,6 +48,14 @@
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>07-04-2014</Date>
+            <Version>1.38.1</Version>
+            <Comment>Ensure gjs has its private girepository files, rename packages</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="4">
             <Date>07-04-2014</Date>
             <Version>1.38.1</Version>
