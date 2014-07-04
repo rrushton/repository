@@ -5,47 +5,18 @@
         <Name>libpeas</Name>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
-        <Summary>Add summary</Summary>
-        <Description>Add description</Description>
+        <Summary>libpeas provides a plugin framework for GLib applications</Summary>
+        <Description>libpeas provides a plugin framework for GLib applications</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="282d3bb1b26a26efc0ba429467de03de2a71a4ff" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/libpeas/1.8/libpeas-1.8.0.tar.xz</Archive>
 
         <BuildDependencies>
-            <Dependency>python-gobject-devel</Dependency>
-            <Dependency>python-cairo-devel</Dependency>
-            <Dependency>libgjs-devel</Dependency>
-            <Dependency>libx11-devel</Dependency>
-            <Dependency>harfbuzz-devel</Dependency>
-            <Dependency>libxcursor-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>libxau-devel</Dependency>
-            <Dependency>libicu-devel</Dependency>
-            <Dependency>gobject-introspection-devel</Dependency>
-            <Dependency>libxi-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>libice-devel</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
-            <Dependency>libxinerama-devel</Dependency>
-            <Dependency>libatk-devel</Dependency>
-            <Dependency>libpng-devel</Dependency>
-            <Dependency>libxdamage-devel</Dependency>
-            <Dependency>libxext-devel</Dependency>
-            <Dependency>libxrandr-devel</Dependency>
-            <Dependency>pixman-devel</Dependency>
-            <Dependency>libxdmcp-devel</Dependency>
-            <Dependency>libffi-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency>libgtk-3-devel</Dependency>
-            <Dependency>libxfixes-devel</Dependency>
-            <Dependency>libcairo-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libxcomposite-devel</Dependency>
-            <Dependency>libxrender-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libsm-devel</Dependency>
+            <Dependency type="pkgconfig">gtk+-3.0</Dependency>
+            <!--<Dependency type="pkgconfig">gjs-internals-1.0</Dependency>//-->
+            <Dependency type="pkgconfig">pygobject-3.0</Dependency>
+            <Dependency type="pkgconfig">python3</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -53,7 +24,8 @@
         <Name>libpeas</Name>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="library">/usr/lib/peas-demo</Path>
@@ -61,49 +33,6 @@
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="data">/usr/share/icons</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>libgjs</Dependency>
-            <Dependency>libx11</Dependency>
-            <Dependency>expat</Dependency>
-            <Dependency>harfbuzz</Dependency>
-            <Dependency>libxcursor</Dependency>
-            <Dependency>libstdc++</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libxcb</Dependency>
-            <Dependency>libxau</Dependency>
-            <Dependency>libicu</Dependency>
-            <Dependency>gobject-introspection</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>util-linux</Dependency>
-            <Dependency>libxi</Dependency>
-            <Dependency>glibc</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>fontconfig</Dependency>
-            <Dependency>libice</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libxinerama</Dependency>
-            <Dependency>libatk</Dependency>
-            <Dependency>libpng</Dependency>
-            <Dependency>libxdamage</Dependency>
-            <Dependency>libxext</Dependency>
-            <Dependency>libxrandr</Dependency>
-            <Dependency>pixman</Dependency>
-            <Dependency>libxdmcp</Dependency>
-            <Dependency>libffi</Dependency>
-            <Dependency>pango</Dependency>
-            <Dependency>libgtk-3</Dependency>
-            <Dependency>libxfixes</Dependency>
-            <Dependency>at-spi2</Dependency>
-            <Dependency>freetype2</Dependency>
-            <Dependency>libcairo</Dependency>
-            <Dependency>dbus</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>libxcomposite</Dependency>
-            <Dependency>libxrender</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libsm</Dependency>
-            <Dependency>at-spi2-atk</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -112,6 +41,7 @@
         <Description>Development files for libpeas</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <RuntimeDependencies>
@@ -132,6 +62,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>07-04-2014</Date>
+            <Version>1.8.0</Version>
+            <Comment>Fix splitting, use pkgconfig+auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>06-06-2013</Date>
             <Version>1.8.0</Version>
@@ -140,6 +78,5 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-
 </PISI>
 
