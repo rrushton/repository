@@ -6,7 +6,7 @@
         <Homepage></Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>GNOME weather application</Summary>
         <Description>Graphical application showing weather from around the whole world</Description>
@@ -14,41 +14,9 @@
         <Archive sha1sum="fb7523432b50bc8f9f7306cd0365d693183989ee" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/gnome-weather/3.10/gnome-weather-3.10.0.tar.xz</Archive>
 
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>harfbuzz-devel</Dependency>
-            <Dependency>libxcursor-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>libxau-devel</Dependency>
-            <Dependency>libicu-devel</Dependency>
-            <Dependency>wayland-devel</Dependency>
-            <Dependency>libxi-devel</Dependency>
-            <Dependency>glibc-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>libice-devel</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
-            <Dependency>libxinerama-devel</Dependency>
-            <Dependency>libatk-devel</Dependency>
-            <Dependency>libpng-devel</Dependency>
-            <Dependency>libxdamage-devel</Dependency>
-            <Dependency>libxext-devel</Dependency>
-            <Dependency>libxrandr-devel</Dependency>
-            <Dependency>pixman-devel</Dependency>
-            <Dependency>libxdmcp-devel</Dependency>
-            <Dependency>libffi-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency>libgtk-3-devel</Dependency>
-            <Dependency>libxfixes-devel</Dependency>
-            <Dependency>at-spi2-devel</Dependency>
-            <Dependency>libcairo-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>libx11-devel</Dependency>
-            <Dependency>libxcomposite-devel</Dependency>
-            <Dependency>libxrender-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libsm-devel</Dependency>
-            <Dependency>at-spi2-atk-devel</Dependency>
-            <Dependency>libxkbcommon-devel</Dependency>
-            <Dependency>libgjs-devel</Dependency>
+            <Dependency type="pkgconfig">gtk+-3.0</Dependency>
+            <Dependency type="pkgconfig">gweather-3.0</Dependency>
+            <Dependency type="pkgconfig">gjs-1.0</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -67,52 +35,21 @@
             <Path fileType="data">/usr/share/gnome-shell/search-providers</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>expat</Dependency>
-            <Dependency>harfbuzz</Dependency>
-            <Dependency>libxcursor</Dependency>
-            <Dependency>libstdc++</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libxcb</Dependency>
-            <Dependency>libxau</Dependency>
-            <Dependency>libicu</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>util-linux</Dependency>
-            <Dependency>wayland</Dependency>
-            <Dependency>libxi</Dependency>
-            <Dependency>glibc</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>fontconfig</Dependency>
-            <Dependency>libice</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libxinerama</Dependency>
-            <Dependency>libatk</Dependency>
-            <Dependency>libpng</Dependency>
-            <Dependency>libxdamage</Dependency>
-            <Dependency>libxext</Dependency>
-            <Dependency>libxrandr</Dependency>
-            <Dependency>pixman</Dependency>
-            <Dependency>libxdmcp</Dependency>
-            <Dependency>libffi</Dependency>
-            <Dependency>pango</Dependency>
-            <Dependency>libgtk-3</Dependency>
-            <Dependency>libxfixes</Dependency>
-            <Dependency>at-spi2</Dependency>
-            <Dependency>freetype2</Dependency>
-            <Dependency>libcairo</Dependency>
-            <Dependency>dbus</Dependency>
-            <Dependency>libx11</Dependency>
-            <Dependency>libxcomposite</Dependency>
-            <Dependency>libxrender</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libsm</Dependency>
-            <Dependency>at-spi2-atk</Dependency>
-            <Dependency>libxkbcommon</Dependency>
-            <Dependency>libgjs</Dependency>
+            <!-- JavaScript application - not automatic binary deps //-->
+            <Dependency>gjs</Dependency>
+            <Dependency>libgweather</Dependency>
         </RuntimeDependencies>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>07-04-2014</Date>
+            <Version>3.10.0</Version>
+            <Comment>Use pkgconfig+auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>10-05-2013</Date>
             <Version>3.10.0</Version>
