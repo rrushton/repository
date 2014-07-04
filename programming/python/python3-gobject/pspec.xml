@@ -6,7 +6,7 @@
         <Homepage>http://www.gnome.org</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>Python API to GObject Introspection</Summary>
         <Description>Provides access to GObject Introspection libraries within Python3 applications</Description>
@@ -14,57 +14,18 @@
         <Archive sha1sum="2eb10ad2b0b09df49cf99e02282e2db1a5febde1" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/pygobject/3.10/pygobject-3.10.0.tar.xz</Archive>
 
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>libxau-devel</Dependency>
-            <Dependency>gobject-introspection-devel</Dependency>
-            <Dependency>libxdmcp-devel</Dependency>
-            <Dependency>glibc-devel</Dependency>
-            <Dependency>libice-devel</Dependency>
-            <Dependency>libpng-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>libxext-devel</Dependency>
-            <Dependency>pixman-devel</Dependency>
-            <Dependency>libffi-devel</Dependency>
-            <Dependency>libcairo-devel</Dependency>
-            <Dependency>libx11-devel</Dependency>
-            <Dependency>libxrender-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libsm-devel</Dependency>
+            <Dependency type="pkgconfig">py3cairo</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>python3-gobject</Name>
         <Files>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
             <Path fileType="library">/usr/lib/python3*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>expat</Dependency>
-            <Dependency>libxcb</Dependency>
-            <Dependency>libxau</Dependency>
-            <Dependency>gobject-introspection</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>libxdmcp</Dependency>
-            <Dependency>glibc</Dependency>
-            <Dependency>fontconfig</Dependency>
-            <Dependency>libice</Dependency>
-            <Dependency>libpng</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>libxext</Dependency>
-            <Dependency>pixman</Dependency>
-            <Dependency>libffi</Dependency>
-            <Dependency>util-linux</Dependency>
-            <Dependency>freetype2</Dependency>
-            <Dependency>libcairo</Dependency>
-            <Dependency>libx11</Dependency>
-            <Dependency>libxrender</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libsm</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -73,6 +34,7 @@
         <Description>Development files for python3-gobject</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <RuntimeDependencies>
@@ -85,6 +47,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>07-04-2014</Date>
+            <Version>3.10.0</Version>
+            <Comment>Fix splitting, use pkgconfig+auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>10-06-2013</Date>
             <Version>3.10.0</Version>
