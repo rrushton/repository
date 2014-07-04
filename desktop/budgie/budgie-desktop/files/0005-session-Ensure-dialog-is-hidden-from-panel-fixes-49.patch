@@ -1,0 +1,25 @@
+From 4b2fa872d867339c837d64da6ed2755d904f144b Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey.doherty@gmail.com>
+Date: Mon, 30 Jun 2014 19:08:34 +0100
+Subject: [PATCH 5/5] session: Ensure dialog is hidden from panel (fixes #49)
+
+---
+ session/budgie-session-dialog.c | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/session/budgie-session-dialog.c b/session/budgie-session-dialog.c
+index b8b70a7..68719c4 100644
+--- a/session/budgie-session-dialog.c
++++ b/session/budgie-session-dialog.c
+@@ -105,6 +105,8 @@ static void budgie_session_dialog_init(BudgieSessionDialog *self)
+ 
+ 
+         gtk_window_set_position(GTK_WINDOW(self), GTK_WIN_POS_CENTER_ALWAYS);
++        gtk_window_set_skip_taskbar_hint(GTK_WINDOW(self), TRUE);
++        gtk_window_set_skip_pager_hint(GTK_WINDOW(self), TRUE);
+         gtk_window_set_title(GTK_WINDOW(self), "End your session?");
+         gtk_window_set_default_size(GTK_WINDOW(self), 300, -1);
+ 
+-- 
+1.9.1
+
