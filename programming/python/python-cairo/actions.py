@@ -1,4 +1,3 @@
-
 #!/usr/bin/python
 
 # Created For SolusOS
@@ -6,12 +5,12 @@
 from pisi.actionsapi import pisitools, waftools
 
 def setup():
-    waftools.configure ()
+    waftools.configure()
 
 def build():
-    waftools.make ()
+    waftools.make()
 
 def install():
-    waftools.install ()
+    waftools.install()
 
-    pisitools.dodoc ("AUTHORS", "COPYING")
+    pisitools.dodoc("AUTHORS", "COPYING")
