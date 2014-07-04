@@ -6,7 +6,7 @@
         <Homepage>https://live.gnome.org/Nautilus</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>The file manager of the GNOME desktop</Summary>
         <Description>The file manager of the GNOME desktop</Description>
@@ -14,41 +14,15 @@
         <Archive sha1sum="2d059385e1e68c642343032b6e093d1110a7e231" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/nautilus/3.10/nautilus-3.10.0.tar.xz</Archive>
 
         <BuildDependencies>
-            <Dependency>shared-mime-info</Dependency>
-            <Dependency>libexif-devel</Dependency>
-            <Dependency>libexempi-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>harfbuzz-devel</Dependency>
-            <Dependency>libxcursor-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>libxau-devel</Dependency>
-            <Dependency>libicu-devel</Dependency>
-            <Dependency>libxi-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>libice-devel</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
-            <Dependency>libxinerama-devel</Dependency>
-            <Dependency>libatk-devel</Dependency>
-            <Dependency>libpng-devel</Dependency>
-            <Dependency>libxdamage-devel</Dependency>
-            <Dependency>libxext-devel</Dependency>
-            <Dependency>libxrandr-devel</Dependency>
-            <Dependency>pixman-devel</Dependency>
-            <Dependency>libxdmcp-devel</Dependency>
-            <Dependency>libffi-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency versionFrom="3.10.0">libgtk-3-devel</Dependency>
-            <Dependency>libxfixes-devel</Dependency>
-            <Dependency>libcairo-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>libx11-devel</Dependency>
-            <Dependency>libxcomposite-devel</Dependency>
-            <Dependency>libxrender-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libsm-devel</Dependency>
-            <Dependency>at-spi2-atk-devel</Dependency>
+            <Dependency type="pkgconfig">gtk+-3.0</Dependency>
+            <Dependency type="pkgconfig">packagekit-glib2</Dependency>
+            <Dependency type="pkgconfig">gsettings-desktop-schemas</Dependency>
+            <Dependency type="pkgconfig">libnotify</Dependency>
+            <Dependency type="pkgconfig">libexif</Dependency>
+            <Dependency type="pkgconfig">exempi-2.0</Dependency>
+            <Dependency type="pkgconfig">gnome-desktop-3.0</Dependency>
+            <Dependency type="pkgconfig">shared-mime-info</Dependency>
         </BuildDependencies>
-
     </Source>
 
     <Package>
@@ -57,7 +31,8 @@
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
             <Path fileType="data">/usr/lib/nautilus</Path>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
             <Path fileType="data">/usr/share/GConf</Path>
             <Path fileType="data">/usr/share/applications</Path>
             <Path fileType="data">/usr/share/dbus-1</Path>
@@ -71,50 +46,6 @@
             <Path fileType="data">/etc/xdg/autostart</Path>
             <Path fileType="data">/usr/share/gnome-shell</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>libexempi</Dependency>
-            <Dependency>libexif</Dependency>
-            <Dependency>shared-mime-info</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>expat</Dependency>
-            <Dependency>harfbuzz</Dependency>
-            <Dependency>libxcursor</Dependency>
-            <Dependency>libstdc++</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libxcb</Dependency>
-            <Dependency>libxau</Dependency>
-            <Dependency>libicu</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>util-linux</Dependency>
-            <Dependency>libxi</Dependency>
-            <Dependency>glibc</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>fontconfig</Dependency>
-            <Dependency>libice</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libxinerama</Dependency>
-            <Dependency>libatk</Dependency>
-            <Dependency>libpng</Dependency>
-            <Dependency>libxdamage</Dependency>
-            <Dependency>libxext</Dependency>
-            <Dependency>libxrandr</Dependency>
-            <Dependency>pixman</Dependency>
-            <Dependency>libxdmcp</Dependency>
-            <Dependency>libffi</Dependency>
-            <Dependency>pango</Dependency>
-            <Dependency versionFrom="3.10.0">libgtk-3</Dependency>
-            <Dependency>libxfixes</Dependency>
-            <Dependency>at-spi2</Dependency>
-            <Dependency>freetype2</Dependency>
-            <Dependency>libcairo</Dependency>
-            <Dependency>dbus</Dependency>
-            <Dependency>libx11</Dependency>
-            <Dependency>libxcomposite</Dependency>
-            <Dependency>libxrender</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libsm</Dependency>
-            <Dependency>at-spi2-atk</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -123,6 +54,7 @@
         <Description>Development files for Nautilus</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <RuntimeDependencies>
@@ -143,6 +75,14 @@
     </Package>
 
     <History>
+        <Update release="6">
+            <Date>07-04-2014</Date>
+            <Version>3.10.0</Version>
+            <Comment>Fix splitting, use pkgconfig+auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="5">
             <Date>10-01-2013</Date>
             <Version>3.10.0</Version>
@@ -183,6 +123,4 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-
 </PISI>
-
