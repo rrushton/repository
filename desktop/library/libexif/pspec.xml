@@ -6,7 +6,7 @@
         <Homepage>http://sourceforge.net/projects/libexif/</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>EXIF tag parsing library</Summary>
         <Description>EXIF tag parsing library</Description>
@@ -17,7 +17,8 @@
     <Package>
         <Name>libexif</Name>
         <Files>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.12</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
         </Files>
@@ -29,6 +30,7 @@
         <Description>Development files for libexif</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <RuntimeDependencies>
@@ -37,6 +39,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>07-04-2014</Date>
+            <Version>0.6.21</Version>
+            <Comment>Fix splitting</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>06-06-2013</Date>
             <Version>0.6.21</Version>
@@ -45,6 +55,4 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-
 </PISI>
-

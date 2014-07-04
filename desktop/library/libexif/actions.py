@@ -1,4 +1,3 @@
-
 #!/usr/bin/python
 
 # Created For SolusOS
@@ -7,12 +6,12 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
-    autotools.configure ("--disable-static")
+    autotools.configure("--disable-static")
 
 def build():
-    autotools.make ()
+    autotools.make()
 
 def install():
-    autotools.install ()
+    autotools.install()
 
-    pisitools.dodoc ("AUTHORS", "ChangeLog", "COPYING")
+    pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING")
