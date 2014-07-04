@@ -1,20 +1,19 @@
-
 #!/usr/bin/python
 
 # Created For SolusOS
 
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
-shelltools.export ("HOME", get.workDIR())
+shelltools.export("HOME", get.workDIR())
 
 def setup():
-    autotools.configure ("--disable-static \
-                          --libexecdir=/usr/lib/gedit")
+    autotools.configure("--disable-static \
+                         --libexecdir=/usr/lib/gedit")
 
 def build():
-    autotools.make ()
+    autotools.make()
 
 def install():
-    autotools.rawInstall ("DESTDIR=%s" % get.installDIR() )
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR() )
 
-    pisitools.dodoc ("AUTHORS", "ChangeLog", "BUGS", "COPYING")
+    pisitools.dodoc("AUTHORS", "ChangeLog", "BUGS", "COPYING")

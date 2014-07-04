@@ -6,51 +6,22 @@
         <Homepage>http://projects.gnome.org/gedit/</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>The official text editor of the GNOME desktop</Summary>
         <Description>While aiming at simplicity and ease of use, gedit is a powerful general purpose text editor.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="665c4978e650e454d1d737cca60a206e3d5986b2" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gedit/3.10/gedit-3.10.0.tar.xz</Archive>
+        <Archive sha1sum="98a62e1cee7990b60301a2cabbf24c11bcd31707" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gedit/3.10/gedit-3.10.4.tar.xz</Archive>
 
         <BuildDependencies>
-            <Dependency>python3-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>harfbuzz-devel</Dependency>
-            <Dependency>libxcursor-devel</Dependency>
-            <Dependency>xz-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>libgtksourceview-devel</Dependency>
-            <Dependency>libxau-devel</Dependency>
-            <Dependency>libicu-devel</Dependency>
-            <Dependency versionFrom="1.37.1">gobject-introspection-devel</Dependency>
-            <Dependency>libxi-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>libice-devel</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
-            <Dependency>libxinerama-devel</Dependency>
-            <Dependency>libatk-devel</Dependency>
-            <Dependency>libpng-devel</Dependency>
-            <Dependency>libxdamage-devel</Dependency>
-            <Dependency>libxext-devel</Dependency>
-            <Dependency>libxrandr-devel</Dependency>
-            <Dependency>pixman-devel</Dependency>
-            <Dependency>libxdmcp-devel</Dependency>
-            <Dependency>libffi-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency versionFrom="3.10.0">libgtk-3-devel</Dependency>
-            <Dependency>libxfixes-devel</Dependency>
-            <Dependency>libcairo-devel</Dependency>
-            <Dependency>enchant-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>libx11-devel</Dependency>
-            <Dependency>libpeas-devel</Dependency>
-            <Dependency>libxcomposite-devel</Dependency>
-            <Dependency>libxrender-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libsm-devel</Dependency>
-            <Dependency>at-spi2-atk-devel</Dependency>
+            <Dependency type="pkgconfig">gtksourceview-3.0</Dependency>
+            <Dependency type="pkgconfig">gtk+-3.0</Dependency>
+            <Dependency type="pkgconfig">python3</Dependency>
+            <Dependency type="pkgconfig">libsoup-2.4</Dependency>
+            <Dependency type="pkgconfig">enchant</Dependency>
+            <Dependency type="pkgconfig">gsettings-desktop-schemas</Dependency>
+            <Dependency type="pkgconfig">libpeas-1.0</Dependency>
+            <Dependency type="pkgconfig">libpeas-gtk-1.0</Dependency>
             <Dependency>itstool</Dependency>
         </BuildDependencies>
     </Source>
@@ -72,54 +43,6 @@
             <Path fileType="data">/usr/share/help</Path>
             <Path fileType="data">/usr/share/appdata</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>python3-devel</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>libxml2</Dependency>
-            <Dependency>expat</Dependency>
-            <Dependency>harfbuzz</Dependency>
-            <Dependency>libxcursor</Dependency>
-            <Dependency>xz</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libxcb</Dependency>
-            <Dependency>libgtksourceview</Dependency>
-            <Dependency>libxau</Dependency>
-            <Dependency>libicu</Dependency>
-            <Dependency versionFrom="1.37.1">gobject-introspection</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>util-linux</Dependency>
-            <Dependency>libxi</Dependency>
-            <Dependency>glibc</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>fontconfig</Dependency>
-            <Dependency>libice</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libxinerama</Dependency>
-            <Dependency>libatk</Dependency>
-            <Dependency>libpng</Dependency>
-            <Dependency>libxdamage</Dependency>
-            <Dependency>libxext</Dependency>
-            <Dependency>libxrandr</Dependency>
-            <Dependency>pixman</Dependency>
-            <Dependency>libxdmcp</Dependency>
-            <Dependency>libffi</Dependency>
-            <Dependency>pango</Dependency>
-            <Dependency versionFrom="3.10.0">libgtk-3</Dependency>
-            <Dependency>libxfixes</Dependency>
-            <Dependency>libstdc++</Dependency>
-            <Dependency>at-spi2</Dependency>
-            <Dependency>freetype2</Dependency>
-            <Dependency>libcairo</Dependency>
-            <Dependency>enchant</Dependency>
-            <Dependency>dbus</Dependency>
-            <Dependency>libx11</Dependency>
-            <Dependency>libpeas</Dependency>
-            <Dependency>libxcomposite</Dependency>
-            <Dependency>libxrender</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libsm</Dependency>
-            <Dependency>at-spi2-atk</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -148,6 +71,14 @@
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>07-04-2014</Date>
+            <Version>3.10.4</Version>
+            <Comment>Update to 3.10.4, use pkgconfig+auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="4">
             <Date>10-01-2013</Date>
             <Version>3.10.0</Version>
