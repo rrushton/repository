@@ -6,7 +6,7 @@
         <Homepage>https://live.gnome.org/GnomeKeyring</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>The libgnome-keyring is used by applications to integrate with the GNOME Keyring system. </Summary>
         <Description>The libgnome-keyring is used by applications to integrate with the GNOME Keyring system.</Description>
@@ -14,29 +14,22 @@
         <Archive sha1sum="5540ac37ef38768d6df9f15ab340132e6653df93" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/libgnome-keyring/3.8/libgnome-keyring-3.8.0.tar.xz</Archive>
 
         <BuildDependencies>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
             <Dependency>libgcrypt-devel</Dependency>
+            <!-- For vapi bindings //-->
+            <Dependency>vala</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libgnome-keyring</Name>
         <Files>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="locale">/usr/share/locale</Path>
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>libpcre</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>dbus</Dependency>
-            <Dependency>libgpg-error</Dependency>
-            <Dependency>libgcrypt</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -45,6 +38,7 @@
         <Description>Development files for libgnome-keyring</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="data">/usr/share/vala</Path>
         </Files>
@@ -66,6 +60,14 @@
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>07-05-2014</Date>
+            <Version>3.8.0</Version>
+            <Comment>Fix splitting, use auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="4">
             <Date>06-19-2013</Date>
             <Version>3.8.0</Version>
