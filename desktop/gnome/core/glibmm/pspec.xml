@@ -6,7 +6,7 @@
         <Homepage>http://www.gnome.org</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>C++ bindings to GLib</Summary>
         <Description>C++ bindings to GLib</Description>
@@ -14,27 +14,16 @@
         <Archive sha1sum="72dbf3da2742bc57bfc2ce360b4c413c4ab3698e" type="tarxz">ftp://ftp.gnome.org/pub/gnome/sources/glibmm/2.37/glibmm-2.37.4.tar.xz</Archive>
 
         <BuildDependencies>
-            <Dependency>libffi-devel</Dependency>
-            <Dependency>libsigc++-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
+            <Dependency type="pkgconfig">sigc++-2.0</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>glibmm</Name>
         <Files>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
-            <Path fileType="doc">/usr/share/doc/glibmm</Path>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>libstdc++</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libffi</Dependency>
-            <Dependency>libsigc++</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>glib2</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -43,6 +32,7 @@
         <Description>Development files for glibmm</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="data">/usr/lib/giomm-2.4</Path>
             <Path fileType="data">/usr/lib/glibmm-2.4</Path>
@@ -59,13 +49,22 @@
         <Files>
             <Path fileType="doc">/usr/share/devhelp</Path>
             <Path fileType="doc">/usr/share/doc/glibmm-2.4</Path>
+            <Path fileType="doc">/usr/share/doc/glibmm</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency release="current">glibmm-devel</Dependency>
+            <Dependency release="current">glibmm-</Dependency>
         </RuntimeDependencies>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>07-06-2014</Date>
+            <Version>2.37.4</Version>
+            <Comment>Fix splitting, use pkgconfig+auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>08-24-2013</Date>
             <Version>2.37.4</Version>
@@ -74,5 +73,4 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-
 </PISI>
