@@ -30,8 +30,6 @@
             <Dependency type="pkgconfig">xt</Dependency>
             <Dependency type="pkgconfig">icu-i18n</Dependency>
             <Dependency type="pkgconfig">sqlite3</Dependency>
-            <Dependency type="pkgconfig">nspr</Dependency>
-            <Dependency type="pkgconfig">nss</Dependency>
             <!-- We have libpng15, and firefox uses its own build for now.
             <Dependency type="pkgconfig">libpng</Dependency>//-->
             <Dependency>libjpeg-turbo-devel</Dependency>
@@ -54,6 +52,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>07-05-2014</Date>
+            <Version>30.0</Version>
+            <Comment>Let Firefox build its own nss/nspr</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>07-05-2014</Date>
             <Version>30.0</Version>
