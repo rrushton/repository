@@ -6,36 +6,25 @@
         <Homepage>http://www.gnome.org</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>GNOME top libraries</Summary>
         <Description>The libgtop package contains the GNOME top libraries.</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="8c88e14ae21ac5a7071f77aad41deaccf59d88e3" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/libgtop/2.28/libgtop-2.28.4.tar.xz</Archive>
-
-        <BuildDependencies>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libxau-devel</Dependency>
-        </BuildDependencies>
-
     </Source>
 
     <Package>
         <Name>libgtop</Name>
         <Files>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
             <Path fileType="info">/usr/share/info</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>libpcre</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libxau</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -44,6 +33,7 @@
         <Description>Development files for libgtop</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <RuntimeDependencies>
@@ -64,6 +54,14 @@
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>07-05-2014</Date>
+            <Version>2.28.4</Version>
+            <Comment>Fix splitting, use auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="4">
             <Date>09-04-2013</Date>
             <Version>2.28.4</Version>
@@ -96,6 +94,4 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-
 </PISI>
-
