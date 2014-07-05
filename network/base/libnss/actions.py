@@ -5,10 +5,10 @@
 
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
-BuildDir = "security/nss"
+BuildDir = "nss"
 InstallDir = "dist"
 
-WorkDir="%s-%s/mozilla" % (get.srcNAME().replace("lib",""), get.srcVERSION())
+WorkDir="%s-%s/" % (get.srcNAME().replace("lib",""), get.srcVERSION())
 
 def build():
     shelltools.cd (BuildDir)
@@ -37,6 +37,6 @@ def install():
     # Install nss-config and nss.pc
     pisitools.insinto("/usr/lib/pkgconfig", "dist/Linux*/lib/pkgconfig/nss.pc", sym=False)
 
-    for lib in ["libfreebl3.so", "libnssutil3.so", "libnss3.so", "libsmime3.so", "libnssckbi.so"\
+    for lib in ["libcrmf.a", "libfreebl3.so", "libnssutil3.so", "libnss3.so", "libsmime3.so", "libnssckbi.so"\
                                 "libsmime3.so", "libsoftokn3.so", "libnssdbm3.so", "libssl3.so", "libnsssysinit.so"]:
         pisitools.dosym ("/usr/lib/nss/%s" % lib, "/usr/lib/%s" % lib)
