@@ -1,4 +1,3 @@
-
 #!/usr/bin/python
 
 # Created For SolusOS
@@ -6,7 +5,7 @@
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 import os
 
-BuildDir = "mozilla/nsprpub"
+BuildDir = "nspr"
 
 def setup():
     os.chdir (BuildDir)
