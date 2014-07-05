@@ -5,99 +5,37 @@
         <Name>gnome-control-center</Name>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>The GNOME Control Center</Summary>
         <Description>The GNOME Control Center</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="8a92efe97e41157b97dc80a70f57ffd465ff595f" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-control-center/3.9/gnome-control-center-3.9.3.tar.xz</Archive>
+        <Archive sha1sum="9d59e493eb70d86c755b1ecb3737cc6a80f4b838" type="tarxz">http://ftp.acc.umu.se/pub/gnome/sources/gnome-control-center/3.10/gnome-control-center-3.10.3.tar.xz</Archive>
 
         <BuildDependencies>
-            <Dependency>accountsservice-devel</Dependency>
-            <Dependency versionFrom="3.9.6">libgtk-3-devel</Dependency>
-            <Dependency>libcolord-gtk-devel</Dependency>
-            <Dependency>colord-devel</Dependency>
-            <Dependency>libxtst-devel</Dependency>
-            <Dependency>libnspr-devel</Dependency>
-            <Dependency>gstreamer-1.0-plugins-base-devel</Dependency>
-            <Dependency>systemd-devel</Dependency>
-            <Dependency>libxdmcp-devel</Dependency>
-            <Dependency>libnss-devel</Dependency>
-            <Dependency>gstreamer-1.0-devel</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
-            <Dependency>pixman-devel</Dependency>
-            <Dependency>libwacom-devel</Dependency>
-            <Dependency>libdrm-devel</Dependency>
-            <Dependency>libnotify-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency>xz-devel</Dependency>
-            <Dependency>libcairo-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>libxcomposite-devel</Dependency>
-            <Dependency versionFrom="3.9.2">gnome-online-accounts-devel</Dependency>
-            <Dependency>libvorbis-devel</Dependency>
-            <Dependency>json-c-devel</Dependency>
-            <Dependency>libxslt-devel</Dependency>
-            <Dependency>libxau-devel</Dependency>
-            <Dependency>libicu-devel</Dependency>
-            <Dependency>libxi-devel</Dependency>
-            <Dependency>libgpg-error</Dependency>
-            <Dependency>libice-devel</Dependency>
-            <Dependency>libxt-devel</Dependency>
-            <Dependency>libpng-devel</Dependency>
-            <Dependency>libxext-devel</Dependency>
-            <Dependency>libwebkit-gtk-devel</Dependency>
-            <Dependency>libgtop-devel</Dependency>
-            <Dependency>libcap2</Dependency>
-            <Dependency>libsndfile-devel</Dependency>
-            <Dependency>libgnome-menus-devel</Dependency>
-            <Dependency>libgcrypt-devel</Dependency>
-            <Dependency>libpwquality-devel</Dependency>
-            <Dependency>libsm-devel</Dependency>
-            <Dependency>libjpeg-turbo-devel</Dependency>
-            <Dependency>openssl-devel</Dependency>
-            <Dependency>libogg-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libxxf86vm-devel</Dependency>
-            <Dependency>mesalib-devel</Dependency>
-            <Dependency>harfbuzz-devel</Dependency>
-            <Dependency>libxcursor-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>cups-devel</Dependency>
-            <Dependency>network-manager-devel</Dependency>
-            <Dependency versionFrom="0.9.8.2">network-manager-applet-devel</Dependency>
-            <Dependency>libxinerama-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>libxrandr-devel</Dependency>
-            <Dependency>cracklib-devel</Dependency>
+            <Dependency type="pkgconfig">gtk+-3.0</Dependency>
+            <Dependency type="pkgconfig">gsettings-desktop-schemas</Dependency>
+            <Dependency type="pkgconfig">gnome-desktop-3.0</Dependency>
+            <Dependency type="pkgconfig">upower-glib</Dependency>
+            <Dependency type="pkgconfig">libgtop-2.0</Dependency>
+            <Dependency type="pkgconfig">gl</Dependency>
+            <Dependency type="pkgconfig">gnome-settings-daemon</Dependency>
+            <Dependency type="pkgconfig">libgnome-menu-3.0</Dependency>
+            <Dependency type="pkgconfig">goa-backend-1.0</Dependency>
+            <Dependency type="pkgconfig">libsoup-2.4</Dependency>
+            <Dependency type="pkgconfig">colord-gtk</Dependency>
+            <Dependency type="pkgconfig">accountsservice</Dependency>
+            <Dependency type="pkgconfig">ibus-1.0</Dependency>
+            <Dependency type="pkgconfig">libpulse-mainloop-glib</Dependency>
+            <Dependency type="pkgconfig">libcanberra-gtk3</Dependency>
+            <Dependency type="pkgconfig">pwquality</Dependency>
+            <Dependency type="pkgconfig">NetworkManager</Dependency>
+            <Dependency type="pkgconfig">libnm-gtk</Dependency>
+            <Dependency type="pkgconfig">libwacom</Dependency>
             <Dependency>kerberos-devel</Dependency>
-            <Dependency>attr-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libxrender-devel</Dependency>
-            <Dependency>upower-devel</Dependency>
-            <Dependency>libcanberra-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>ibus-devel</Dependency>
-            <Dependency>libgnome-keyring-devel</Dependency>
-            <Dependency>libflac-devel</Dependency>
-            <Dependency versionFrom="3.9.1">libgnome-desktop-devel</Dependency>
-            <Dependency>libsecret-devel</Dependency>
-            <Dependency>libatk-devel</Dependency>
-            <Dependency>sqlite3-devel</Dependency>
-            <Dependency>libxdamage-devel</Dependency>
-            <Dependency>libsoup-devel</Dependency>
-            <Dependency>pam-devel</Dependency>
-            <Dependency>polkit-devel</Dependency>
-            <Dependency>libtool</Dependency>
-            <Dependency>libffi-devel</Dependency>
-            <Dependency>libxfixes-devel</Dependency>
-            <Dependency>liblcms2-devel</Dependency>
-            <Dependency>libx11-devel</Dependency>
-            <Dependency>pulseaudio-devel</Dependency>
-            <Dependency>libxkbfile-devel</Dependency>
-            <Dependency>at-spi2-atk-devel</Dependency>
-            <Dependency>libgeoclue-devel</Dependency>
-            <Dependency>at-spi2-devel</Dependency>
+
+            <!-- TODO: Post SAMBA inclusion, rebuild for printing panel //-->
+            <!-- TODO: Post BlueZ/gnome-bluetooth inclusion, rebuild for bluetooth panel //-->
         </BuildDependencies>
     </Source>
 
@@ -123,110 +61,17 @@
             <Path fileType="data">/usr/share/dbus-1</Path>
             <Path fileType="data">/usr/share/bash-completion</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>accountsservice</Dependency>
-            <Dependency>libcolord-gtk</Dependency>
-            <Dependency versionFrom="3.9.6">libgtk-3</Dependency>
-            <Dependency>colord</Dependency>
-            <Dependency>libxtst</Dependency>
-            <Dependency>libnspr</Dependency>
-            <Dependency>gstreamer-1.0-plugins-base</Dependency>
-            <Dependency>systemd</Dependency>
-            <Dependency>libxdmcp</Dependency>
-            <Dependency>libnss</Dependency>
-            <Dependency>gstreamer-1.0</Dependency>
-            <Dependency>fontconfig</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>pixman</Dependency>
-            <Dependency>libwacom</Dependency>
-            <Dependency>libdrm</Dependency>
-            <Dependency>libnotify</Dependency>
-            <Dependency>pango</Dependency>
-            <Dependency>util-linux</Dependency>
-            <Dependency>freetype2</Dependency>
-            <Dependency>xz</Dependency>
-            <Dependency>libcairo</Dependency>
-            <Dependency>dbus</Dependency>
-            <Dependency>libxcomposite</Dependency>
-            <Dependency versionFrom="3.9.2">gnome-online-accounts</Dependency>
-            <Dependency>libvorbis</Dependency>
-            <Dependency>enchant</Dependency>
-            <Dependency>json-c</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libxslt</Dependency>
-            <Dependency>libxau</Dependency>
-            <Dependency>libicu</Dependency>
-            <Dependency>libxi</Dependency>
-            <Dependency>glibc</Dependency>
-            <Dependency>libgpg-error</Dependency>
-            <Dependency>libice</Dependency>
-            <Dependency>libxt</Dependency>
-            <Dependency>libpng</Dependency>
-            <Dependency>libxext</Dependency>
-            <Dependency>libwebkit-gtk</Dependency>
-            <Dependency>libgtop</Dependency>
-            <Dependency>libcap2</Dependency>
-            <Dependency>libsndfile</Dependency>
-            <Dependency>libgnome-menus</Dependency>
-            <Dependency>libgcrypt</Dependency>
-            <Dependency>libpwquality</Dependency>
-            <Dependency>libsm</Dependency>
-            <Dependency>libjpeg-turbo</Dependency>
-            <Dependency>openssl</Dependency>
-            <Dependency>libogg</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libxxf86vm</Dependency>
-            <Dependency>mesalib</Dependency>
-            <Dependency>harfbuzz</Dependency>
-            <Dependency>libxcursor</Dependency>
-            <Dependency>libstdc++</Dependency>
-            <Dependency>libxcb</Dependency>
-            <Dependency>cups</Dependency>
-            <Dependency>network-manager</Dependency>
-            <Dependency>libxinerama</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>libxrandr</Dependency>
-            <Dependency>cracklib</Dependency>
-            <Dependency>kerberos</Dependency>
-            <Dependency>attr</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency versionFrom="0.9.8.2">network-manager-applet</Dependency>
-            <Dependency>libxrender</Dependency>
-            <Dependency>upower</Dependency>
-            <Dependency>libcanberra</Dependency>
-            <Dependency>libxml2</Dependency>
-            <Dependency>expat</Dependency>
-            <Dependency>ibus</Dependency>
-            <Dependency>dbus-glib</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>libgnome-keyring</Dependency>
-            <Dependency>libflac</Dependency>
-            <Dependency versionFrom="3.9.1">libgnome-desktop</Dependency>
-            <Dependency>libsecret</Dependency>
-            <Dependency>libatk</Dependency>
-            <Dependency>sqlite3</Dependency>
-            <Dependency>libxdamage</Dependency>
-            <Dependency>libsoup</Dependency>
-            <Dependency>pam</Dependency>
-            <Dependency>polkit</Dependency>
-            <Dependency>libtool</Dependency>
-            <Dependency>libffi</Dependency>
-            <Dependency>libxfixes</Dependency>
-            <Dependency>liblcms2</Dependency>
-            <Dependency>libx11</Dependency>
-            <Dependency>pulseaudio</Dependency>
-            <Dependency>e2fsprogs</Dependency>
-            <Dependency>libxkbfile</Dependency>
-            <Dependency>at-spi2-atk</Dependency>
-            <Dependency>libgeoclue</Dependency>
-            <Dependency>at-spi2</Dependency>
-            <Dependency>libjson-glib</Dependency>
-            <Dependency>librest</Dependency>
-            <Dependency>mesalib-demos</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>07-05-2014</Date>
+            <Version>3.10.3</Version>
+            <Comment>Update to 3.10.3, use pkgconfig+auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>06-26-2013</Date>
             <Version>3.9.3</Version>
@@ -251,6 +96,4 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-
 </PISI>
-
