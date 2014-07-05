@@ -18,6 +18,7 @@
             <Dependency type="pkgconfig">gsettings-desktop-schemas</Dependency>
             <Dependency type="pkgconfig">dconf</Dependency>
             <Dependency type="pkgconfig">gconf-2.0</Dependency>
+            <Dependency type="pkgconfig">libnautilus-extension</Dependency>
             <Dependency>desktop-file-utils</Dependency>
             <Dependency>itstool</Dependency>
         </BuildDependencies>
@@ -35,12 +36,21 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="executable">/usr/lib/gnome-terminal</Path>
+            <Path fileType="library">/usr/lib/nautilus/extensions-3.0/*.so</Path>
             <Path fileType="data">/usr/share/dbus-1</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>07-04-2014</Date>
+            <Version>3.10.0</Version>
+            <Comment>Enable nautilus extension</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+    
         <Update release="6">
             <Date>07-02-2014</Date>
             <Version>3.10.0</Version>

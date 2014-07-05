@@ -8,7 +8,9 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 shelltools.export("HOME", get.workDIR())
 
 def setup():
-    autotools.configure("--libexecdir=/usr/lib/gnome-terminal ")
+    autotools.configure("--libexecdir=/usr/lib/gnome-terminal \
+                         --with-nautilus-extension \
+                         --disable-static")
 
 def build():
     autotools.make()
