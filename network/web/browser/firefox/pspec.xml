@@ -3,130 +3,63 @@
 <PISI>
     <Source>
         <Name>firefox</Name>
-        <Homepage>http://www.mozilla.org</Homepage>
+        <Homepage></Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>Firefox web browser</Summary>
         <Description>Firefox web browser</Description>
-        <License>MPL-1.1</License>
-        <Archive sha1sum="a45ab275d5f121eaf0f68f45879525c6495d86ad" type="tarbz2">ftp://ftp.mozilla.org/pub/firefox/releases/25.0b2/linux-i686/en-US/firefox-25.0b2.tar.bz2</Archive>
+        <License>GPLv2+</License>
+        <Archive sha1sum="21dce1a2d4b8085c5f7f66b5f4f60bc37598285d" type="tarbz2">http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/30.0/source/firefox-30.0.source.tar.bz2</Archive>
 
-        <!-- NO BUILD DEPENDENCIES.
-             Note we're not currently building from source, but rather using the firefox prebuilt tarball
-             from Mozilla directly. This somewhat complicates packaging ethos for us, but currently it
-             is *not possible to build Firefox from source using a 32-bit toolchain*, even if the hosting
-             system/kernel are 64-bit (i.e. via chroot)
-             Until we have 64-bit SolusOS ready, things will have to remain this way, and when we have
-             64-bit SolusOS we'll actually be cross-building Firefox. Exceptions ftw. //-->
+        <AdditionalFiles>
+            <AdditionalFile target="mozconfig">config</AdditionalFile>
+        </AdditionalFiles>
+
+        <BuildDependencies>
+            <Dependency type="pkgconfig">libevent</Dependency>
+            <Dependency type="pkgconfig">gtk+-2.0</Dependency>
+            <Dependency type="pkgconfig">cairo</Dependency>
+            <Dependency type="pkgconfig">atk</Dependency>
+            <Dependency type="pkgconfig">libstartup-notification-1.0</Dependency>
+            <Dependency type="pkgconfig">alsa</Dependency>
+            <Dependency type="pkgconfig">libpulse</Dependency>
+            <Dependency type="pkgconfig">gstreamer-plugins-base-1.0</Dependency>
+            <Dependency type="pkgconfig">x11</Dependency>
+            <Dependency type="pkgconfig">xt</Dependency>
+            <Dependency type="pkgconfig">icu-i18n</Dependency>
+            <Dependency type="pkgconfig">sqlite3</Dependency>
+            <Dependency type="pkgconfig">nspr</Dependency>
+            <Dependency type="pkgconfig">nss</Dependency>
+            <!-- We have libpng15, and firefox uses its own build for now.
+            <Dependency type="pkgconfig">libpng</Dependency>//-->
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>yasm</Dependency>
+        </BuildDependencies>
     </Source>
 
     <Package>
         <Name>firefox</Name>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="executable">/opt/firefox</Path>
+            <Path fileType="library">/usr/lib/firefox-30.0</Path>
             <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="library">/usr/lib/mozilla/plugins</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile permission="0755" target="/usr/bin/firefox">sh-launcher</AdditionalFile>
             <AdditionalFile permission="0644" target="/usr/share/applications/firefox.desktop">firefox.desktop</AdditionalFile>
         </AdditionalFiles>
-        <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>expat</Dependency>
-            <Dependency>harfbuzz</Dependency>
-            <Dependency>libxcursor</Dependency>
-            <Dependency>libstdc++</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libnspr</Dependency>
-            <Dependency>libxcb</Dependency>
-            <Dependency>pango</Dependency>
-            <Dependency>dbus-glib</Dependency>
-            <Dependency>libxau</Dependency>
-            <Dependency>libicu</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>libxdmcp</Dependency>
-            <Dependency>libnss</Dependency>
-            <Dependency>alsa-lib</Dependency>
-            <Dependency>glibc</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>fontconfig</Dependency>
-            <Dependency>libice</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libxt</Dependency>
-            <Dependency>libxinerama</Dependency>
-            <Dependency>libatk</Dependency>
-            <Dependency>libpng</Dependency>
-            <Dependency>libxdamage</Dependency>
-            <Dependency>libxext</Dependency>
-            <Dependency>libxrandr</Dependency>
-            <Dependency>pixman</Dependency>
-            <Dependency>libffi</Dependency>
-            <Dependency>libgtk-2</Dependency>
-            <Dependency>util-linux</Dependency>
-            <Dependency>libxfixes</Dependency>
-            <Dependency>freetype2</Dependency>
-            <Dependency>libcairo</Dependency>
-            <Dependency>dbus</Dependency>
-            <Dependency>libx11</Dependency>
-            <Dependency>libxcomposite</Dependency>
-            <Dependency>libxrender</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libsm</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <History>
-        <Update release="6">
-            <Date>09-25-2013</Date>
-            <Version>25.0_beta2</Version>
-            <Comment>Update to Firefox 25.0b2</Comment>
-            <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
-        </Update>
-
-        <Update release="5">
-            <Date>09-06-2013</Date>
-            <Version>24.0_beta10</Version>
-            <Comment>Update to Firefox 24.0b10</Comment>
-            <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
-        </Update>
-
-        <Update release="4">
-            <Date>09-06-2013</Date>
-            <Version>24.0_beta9</Version>
-            <Comment>Update to Firefox 24.0b9</Comment>
-            <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
-        </Update>
-
-        <Update release="3">
-            <Date>09-03-2013</Date>
-            <Version>24.0_beta8</Version>
-            <Comment>Update to Firefox 24.0b8</Comment>
-            <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
-        </Update>
-
-        <Update release="2">
-            <Date>08-30-2013</Date>
-            <Version>24.0_beta7</Version>
-            <Comment>Update to Firefox 24.0b7</Comment>
-            <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
-        </Update>
-
         <Update release="1">
-            <Date>08-25-2013</Date>
-            <Version>23.0.1</Version>
-            <Comment>Add firefox to repositories - Mozilla prebuilt</Comment>
+            <Date>07-05-2014</Date>
+            <Version>30.0</Version>
+            <Comment>Add firefox to repositories</Comment>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Update>
     </History>
-
 </PISI>
-
