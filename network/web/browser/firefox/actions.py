@@ -17,5 +17,5 @@ def install():
                      "/usr/share/pixmaps/firefox.png")
     pisitools.dodir("/usr/lib/mozilla/plugins")
     pisitools.dosym("/usr/lib/mozilla/plugins",
-                    "/usr/lib/firefox-30.0/.")
+                    "/usr/lib/firefox-30.0/plugins")
 
