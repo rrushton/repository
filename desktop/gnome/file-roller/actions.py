@@ -1,4 +1,3 @@
-
 #!/usr/bin/python
 
 # Created For SolusOS
@@ -7,13 +6,13 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
-    autotools.configure ("--disable-static \
-                          --libexecdir=/usr/lib/file-roller")
+    autotools.configure("--disable-static \
+                         --libexecdir=/usr/lib/file-roller")
 
 def build():
-    autotools.make ()
+    autotools.make()
 
 def install():
-    autotools.rawInstall ("DESTDIR=%s" % get.installDIR() )
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR() )
 
-    pisitools.dodoc ("AUTHORS", "ChangeLog", "COPYING")
+    pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING")
