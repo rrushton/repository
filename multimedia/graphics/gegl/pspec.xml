@@ -5,34 +5,20 @@
         <Name>gegl</Name>
         <Homepage>http://www.gegl.org/</Homepage>
         <Packager>
-            <Name>Garry Kmieciak</Name>
-            <Email>gazza@virtualcity.com.au</Email>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>GEGL (Generic Graphics Library) is a graph based image processing framework.</Summary>
         <Description>GEGL provides infrastructure to do demand based cached non destructive image editing on larger than RAM buffers. Through babl it provides support for a wide range of color models and pixel storage formats for input and output.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="764cc66cb3c7b261b8fc18a6268a0e264a91d573" type="tarbz2">ftp://ftp.gimp.org/pub/gegl/0.2/gegl-0.2.0.tar.bz2</Archive>
+        <Archive sha1sum="764cc66cb3c7b261b8fc18a6268a0e264a91d573" type="tarbz2">http://ftp.gtk.org/pub/gegl/0.2/gegl-0.2.0.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>harfbuzz-devel</Dependency>
-            <Dependency>jasper-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>libxau-devel</Dependency>
-            <Dependency>libxdmcp-devel</Dependency>
-            <Dependency>glibc-devel</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
-            <Dependency>libpng-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>libxext-devel</Dependency>
-            <Dependency>pixman-devel</Dependency>
-            <Dependency>babl-devel</Dependency>
-            <Dependency>libffi-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency>libcairo-devel</Dependency>
+            <Dependency>vala</Dependency>
             <Dependency>libjpeg-turbo-devel</Dependency>
-            <Dependency>libx11-devel</Dependency>
-            <Dependency>libxrender-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
+            <Dependency type="pkgconfig">babl</Dependency>
+            <Dependency type="pkgconfig">libpng15</Dependency>
+            <Dependency type="pkgconfig">librsvg-2.0</Dependency>
+            <Dependency type="pkgconfig">pangocairo</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -40,44 +26,13 @@
         <Name>gegl</Name>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
             <Path fileType="library">/usr/lib/gegl-0.2*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="doc">/usr/share/gtk-doc</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>expat</Dependency>
-            <Dependency>harfbuzz</Dependency>
-            <Dependency>libstdc++</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>jasper</Dependency>
-            <Dependency>libxcb</Dependency>
-            <Dependency>libxau</Dependency>
-            <Dependency>libicu</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>libxdmcp</Dependency>
-            <Dependency>glibc</Dependency>
-            <Dependency>fontconfig</Dependency>
-            <Dependency>libice</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libpng</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>libxext</Dependency>
-            <Dependency>pixman</Dependency>
-            <Dependency>babl</Dependency>
-            <Dependency>libffi</Dependency>
-            <Dependency>pango</Dependency>
-            <Dependency>util-linux</Dependency>
-            <Dependency>freetype2</Dependency>
-            <Dependency>libcairo</Dependency>
-            <Dependency>libjpeg-turbo</Dependency>
-            <Dependency>libx11</Dependency>
-            <Dependency>libxrender</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libsm</Dependency>
-        </RuntimeDependencies>
     </Package>
     <Package>
         <Name>gegl-devel</Name>
@@ -85,6 +40,7 @@
         <Description>Development files for gegl</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <RuntimeDependencies>
@@ -92,6 +48,14 @@
         </RuntimeDependencies>
     </Package>
     <History>
+        <Update release="2">
+            <Date>07-06-2014</Date>
+            <Version>0.2.0</Version>
+            <Comment>Fix splitting, use pkgconfig+auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>09-26-2013</Date>
             <Version>0.2.0</Version>
@@ -100,5 +64,4 @@
             <Email>gazza@virtualcity.com.au</Email>
         </Update>
     </History>
-
 </PISI>
