@@ -5,7 +5,7 @@
         <Name>xorg-driver-video-sis</Name>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>SiS Video Driver</Summary>
         <Description>The Xorg SiS Driver package contains the X.Org Video Driver for SiS (Silicon Integrated Systems) and XGI video cards including SiS5597/5598, SiS530/620, SiS6326/AGP/DVD, SiS300/305, SiS540, SiS630/730, SiS315/E/H/PRO, SiS550/551/552, SiS650/651/661/741, SiS330 (Xabre), SiS760/761, XGI Volari V3/V5/V8 and XGI Volari Z7 chipsets.</Description>
@@ -13,18 +13,12 @@
         <Archive sha1sum="8f8cd88fe7d3a85f6bf2b12a34fd55db35f186d7" type="tarbz2">http://xorg.freedesktop.org/archive/individual/driver/xf86-video-sis-0.10.7.tar.bz2</Archive>
 
         <BuildDependencies>
-            <Dependency releaseFrom="4">xorg-server-devel</Dependency>
-            <Dependency>libxfont-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libx11-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>libpciaccess-devel</Dependency>
-            <Dependency>libdrm-devel</Dependency>
-            <Dependency>libxext-devel</Dependency>
-            <Dependency>libnettle-devel</Dependency>
-            <Dependency>libxau-devel</Dependency>
-            <Dependency>libfontenc-devel</Dependency>
-            <Dependency>pixman-devel</Dependency>
+            <Dependency type="pkgconfig">xorg-server</Dependency>
+            <!-- Haha, too funny. SiS supports things. I remember my 650 ._. //-->
+            <Dependency type="pkgconfig">xf86dgaproto</Dependency>
+
+            <Dependency type="pkgconfig">resourceproto</Dependency>
+            <Dependency type="pkgconfig">scrnsaverproto</Dependency>
         </BuildDependencies>
 
         <Patches>
@@ -39,12 +33,17 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency releaseFrom="4">xorg-server</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>07-06-2014</Date>
+            <Version>0.10.7</Version>
+            <Comment>Use pkgconfig+auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>08-13-2013</Date>
             <Version>0.10.7</Version>
@@ -53,6 +52,4 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-
 </PISI>
-
