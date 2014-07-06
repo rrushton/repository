@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import os
 
-KernelVersion = "3.15.3"
+KernelVersion = "3.14.2"
 
 def postInstall(fromVersion, fromRelease, toVersion, toRelease):
     # Must run depmod to keep the modules up to date :)
