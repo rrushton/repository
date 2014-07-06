@@ -6,12 +6,12 @@
         <Homepage>http://code.google.com/p/inxi/</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>System info script for irc (forked from infobash by locsmif)</Summary>
         <Description>Inxi is a system information script can display all kinds of things about your hardware and software to users in an IRC (Internet Relay Chat) chatroom. It runs with the /exec command in most irc clients and also /cmd with konversation and /inxi in quassel.</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="a70dfbeb633acbbfa2c3671cf4141d117740ceb1" type="binary">http://ng.solusos.com/sources/inxi</Archive>
+        <Archive sha1sum="80c0aa0519bf8198fbd98295f4badd58d1c77a85" type="binary">https://evolve-os.com/sources/inxi</Archive>
     </Source>
 
     <Package>
@@ -29,6 +29,14 @@
     </Package>
 
     <History>
+        <Update release="6">
+            <Date>07-06-2014</Date>
+            <Version>2.1.28</Version>
+            <Comment>Latest upstream version</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="5">
             <Date>09-11-2013</Date>
             <Version>1.9.14</Version>
