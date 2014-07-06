@@ -1,7 +1,7 @@
 From 62380f01f6f111ad0517076705a539bdc415522b Mon Sep 17 00:00:00 2001
 From: Elias Aebi <user142@hotmail.com>
 Date: Wed, 25 Jun 2014 18:54:49 +0200
-Subject: [PATCH 4/5] set the icon geometry in order to fix the minimise
+Subject: [PATCH 4/6] set the icon geometry in order to fix the minimise
  animation
 
 ---

@@ -1,7 +1,7 @@
 From 718a5562ffe3ac9290c423ad9203ee5eb96ca9dd Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey.doherty@gmail.com>
 Date: Mon, 23 Jun 2014 13:28:46 +0100
-Subject: [PATCH 3/5] budgie-popover: Do works to enable true LHS placement of
+Subject: [PATCH 3/6] budgie-popover: Do works to enable true LHS placement of
  menu
 
 ---
