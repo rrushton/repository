@@ -19,7 +19,6 @@ def install():
     pisitools.insinto("/usr/share/os-installer", "changes")
 
     # Icons
-    pisitools.insinto("/usr/share/icons", "dist/logo.png", "os-installer.png")
     pisitools.insinto("/usr/share/icons/gnome/scalable/actions", "dist/icons/*")
 
     # Desktop file
