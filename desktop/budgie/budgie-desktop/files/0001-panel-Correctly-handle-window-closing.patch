@@ -1,7 +1,7 @@
 From 8bd7a9a9364210fb3dcbddc087c795b4cff55d05 Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey.doherty@gmail.com>
 Date: Mon, 23 Jun 2014 12:51:02 +0100
-Subject: [PATCH 1/6] panel: Correctly handle window closing
+Subject: [PATCH 1/7] panel: Correctly handle window closing
 
 We previously didn't handle maximize state tracking for windows about to
 close, therefore our max_count would never reset, and the panel would remain

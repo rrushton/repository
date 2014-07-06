@@ -1,7 +1,7 @@
 From e5b5e90331fc7ebaa840179237aa90c520a23e05 Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey.doherty@gmail.com>
 Date: Mon, 23 Jun 2014 13:10:19 +0100
-Subject: [PATCH 2/6] session: Lie about desktop environment
+Subject: [PATCH 2/7] session: Lie about desktop environment
 
 Under certain configurations some tools may not work, such as xdg-su.
 This commit lies about the desktop environment (setting it to GNOME) so
