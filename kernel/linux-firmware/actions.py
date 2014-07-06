@@ -1,4 +1,3 @@
-
 #!/usr/bin/python
 
 #Created For SolusOS
@@ -6,7 +5,7 @@
 from pisi.actionsapi import shelltools, get, pisitools
 import os
 
-FirmwareSource = "%s/linux-firmware-20130813" % get.workDIR()
+FirmwareSource = "%s/linux-firmware-20140704" % get.workDIR()
 
 Blacklisted = ["carl9170fw"]
 
