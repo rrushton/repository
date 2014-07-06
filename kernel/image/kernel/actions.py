@@ -1,8 +1,6 @@
 #!/usr/bin/python
-# -*- coding: utf-8 -*-
-#
-# Created for SolusOS
-KVERSION = "3.14.2"
+
+KVERSION = "3.15.3"
 
 from pisi.actionsapi import kerneltools
 from pisi.actionsapi import shelltools
@@ -13,11 +11,9 @@ from pisi.actionsapi import get
 NoStrip = ["/boot"]
 
 shelltools.export("KBUILD_BUILD_USER", "evolveos")
-shelltools.export("KBUILD_BUILD_HOST", "hercules")
+shelltools.export("KBUILD_BUILD_HOST", "thor")
 shelltools.export("PYTHONDONTWRITEBYTECODE", "1")
 shelltools.export("HOME", get.workDIR())
-
-cpupower_arch = get.ARCH().replace("i686", "i386")
 
 def setup():
     kerneltools.configure()
@@ -38,6 +34,5 @@ def install():
 
     kerneltools.installLibcHeaders()
 
-
-    # Generate some module lists to use within mkinitramfs
+    # Generate some module lists to use within dracut
     shelltools.system("./generate-module-list %s/lib/modules/%s" % (get.installDIR(), kerneltools.__getSuffix()))
