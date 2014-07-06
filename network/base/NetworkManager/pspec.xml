@@ -13,19 +13,9 @@
         <Archive sha1sum="13f98f6a1aec8e714cf495fb844725d261ae00af" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/NetworkManager/0.9/NetworkManager-0.9.8.6.tar.xz</Archive>
 
         <BuildDependencies>
-            <Dependency>iptables-devel</Dependency>
-            <Dependency>dhcpcd</Dependency>
-            <Dependency>libnl-devel</Dependency>
-            <Dependency>systemd-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency releaseFrom="3">libnss-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>sqlite3-devel</Dependency>
-            <Dependency>libnspr-devel</Dependency>
-            <Dependency>libffi-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>libsoup-devel</Dependency>
+            <Dependency type="pkgconfig">libnl-3.0</Dependency>
+            <Dependency type="pkgconfig">nss</Dependency>
+            <Dependency type="pkgconfig">mm-glib</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -36,7 +26,8 @@
             <Path fileType="executable">/usr/sbin</Path>
             <Path fileType="data">/lib/udev</Path>
             <Path fileType="data">/usr/lib/NetworkManager</Path>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
 
             <Path fileType="localedata">/usr/share/locale</Path>
 
@@ -53,22 +44,6 @@
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>iptables</Dependency>
-            <Dependency>dhcpcd</Dependency>
-            <Dependency>libnl</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency releaseFrom="3">libnss</Dependency>
-            <Dependency>dbus</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>sqlite3</Dependency>
-            <Dependency>libnspr</Dependency>
-            <Dependency>libffi</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>util-linux</Dependency>
-            <Dependency>dbus-glib</Dependency>
-            <Dependency>libsoup</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -77,6 +52,7 @@
         <Description>Development files for network-manager</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="data">/usr/share/vala/vapi</Path>
         </Files>
@@ -98,6 +74,14 @@
     </Package>
 
     <History>
+        <Update release="9">
+            <Date>07-06-2014</Date>
+            <Version>0.9.8.6</Version>
+            <Comment>Enable MM, fix splitting, use pkgconfig+auto-deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solusos.com</Email>
+        </Update>
+
         <Update release="8">
             <Date>10-06-2013</Date>
             <Version>0.9.8.6</Version>
