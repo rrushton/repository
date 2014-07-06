@@ -8,7 +8,7 @@ shelltools.export("HOME", get.workDIR())
 
 
 def setup():
-    autotools.autoreconf("-vfi")
+    autotools.autoreconf("-fi")
     autotools.configure()
 
 
