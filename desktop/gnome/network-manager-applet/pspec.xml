@@ -13,7 +13,7 @@
         <Archive sha1sum="a94e4cf3ec4756cfaa43efc252c29350d459ca72" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/network-manager-applet/0.9/network-manager-applet-0.9.8.4.tar.xz</Archive>
 
         <BuildDependencies>
-            <!--TODO: Revisit when we have gnome-bluetooth/bluez integrated //--->
+            <!--TODO: Revisit when we have gnome-bluetooth/bluez integrated //-->
             <Dependency type="pkgconfig">libnm-glib</Dependency>
             <Dependency type="pkgconfig">gnome-keyring-1</Dependency>
             <Dependency type="pkgconfig">gconf-2.0</Dependency>
