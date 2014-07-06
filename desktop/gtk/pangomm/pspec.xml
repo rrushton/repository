@@ -38,6 +38,9 @@
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="data">/usr/lib/pangomm-1.4/</Path>
         </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">pangomm</Dependency>
+        </RuntimeDependencies>
     </Package>
 
     <Package>
