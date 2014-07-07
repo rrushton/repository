@@ -11,14 +11,16 @@
         <Summary>LZ4 commmand line tools</Summary>
         <Description>LZ4 is a very fast lossless compression algorithm, providing compression speed at 400 MB/s per core, scalable with multi-cores CPU. It also features an extremely fast decoder, with speed in multiple GB/s per core, typically reaching RAM speed limits on multi-core systems.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="96ccf030b5b36e75a8ef4a5903a31bcb8060f79d" type="targz">https://dl.dropboxusercontent.com/u/59565338/LZ4/lz4-r101.tar.gz</Archive>
+        <Archive sha1sum="4cb9280bd0df80aae3064720516a7f36169d52d2" type="targz">https://github.com/Cyan4973/lz4/archive/r119.tar.gz</Archive>
     </Source>
 
     <Package>
         <Name>lz4</Name>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
+            <Path fileType="doc">/usr/share/man</Path>
         </Files>
     </Package>
 
@@ -28,6 +30,7 @@
         <Description>Development files for lz4</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="library">/usr/lib/lib*.a</Path>
         </Files>
         <RuntimeDependencies>
@@ -36,6 +39,14 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>07-07-2014</Date>
+            <Version>119</Version>
+            <Comment>Update to latest version for kernel builds</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>05-02-2013</Date>
             <Version>101</Version>
@@ -43,6 +54,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey.doherty@gmail.com</Email>
         </Update>
+
         <Update release="1">
             <Date>09-03-2013</Date>
             <Version>101</Version>

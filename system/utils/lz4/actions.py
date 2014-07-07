@@ -1,26 +1,14 @@
-
 #!/usr/bin/python
 
 #Created For SolusOS
 
-from pisi.actionsapi import shelltools, get, cmaketools, pisitools
-
-def setup():
-    shelltools.cd("cmake")
-    cmaketools.configure("-DBUILD_SHARED_LIBS=true")
+from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def build():
-    shelltools.cd("cmake")
-    cmaketools.make()
+    autotools.make()
 
 
 def install():
-    shelltools.cd("cmake")
-    cmaketools.install()
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    pisitools.dodir("/usr/bin")
-    # In future check arch
-    shelltools.move("%s/usr/lz4c64" % get.installDIR(), "%s/usr/bin/lz4c64" % get.installDIR())
-
-    pisitools.dosym ("/usr/bin/lz4c64", "/usr/bin/lz4c")
