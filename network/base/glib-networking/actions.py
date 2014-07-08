@@ -1,4 +1,3 @@
-
 #!/usr/bin/python
 
 # Created For SolusOS
@@ -6,12 +5,12 @@
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 def setup():
-    autotools.configure ("--disable-static \
-                                              --libexecdir=/usr/lib/glib-networking \
-                                              --with-ca-certificates=/etc/ssl/certs/ca-certificates.crt")
+    autotools.configure("--disable-static \
+                         --libexecdir=/usr/lib/glib-networking \
+                         --with-ca-certificates=/etc/ssl/certs/ca-certificates.crt")
 def build():
-    autotools.make ()
+    autotools.make()
 
 def install():
-    autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
-    pisitools.dodoc ("COPYING")
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    pisitools.dodoc("COPYING")
