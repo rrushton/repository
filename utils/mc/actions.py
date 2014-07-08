@@ -1,17 +1,13 @@
 #!/usr/bin/python
 
-# Created for SolusOS
-
-from pisi.actionsapi import autotools, shelltools, get
+from pisi.actionsapi import autotools, get
 
 def setup():
-    autotools.autoconf()
-    shelltools.system("aclocal")
-    #autotools.autoreconf()
-    autotools.configure("--with-screen=ncurses")
+    autotools.configure("--with-screen=ncurses \
+                         --enable-charset")
 
 def build():
-    autotools.automake("--add-missing")
+    autotools.make()
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())

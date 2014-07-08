@@ -4,16 +4,16 @@
     <Source>
         <Name>mc</Name>
         <Packager>
-            <Name>Justin Krehel</Name>
-            <Email>justin@solusos.com</Email>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>GNU midnight commander (ncurses based file manager)</Summary>
         <Description>GNU Midnight Commander is a visual file manager that allows full file management using the terminal and utilizing ncurses. It allows standard features such as copying, moving, deleting, editing, and searching files.</Description>
         <License>GPLv2</License>
-        <Archive sha1sum="5f1b1881735911da3e8ea765de48bdc8226abead" type="tarxz">http://www.midnight-commander.org/downloads/mc-4.8.7.tar.xz</Archive>
+        <Archive sha1sum="e22460acd2666560da17054324fd504bc6084e54" type="tarxz">http://www.midnight-commander.org/downloads/mc-4.8.12.tar.xz</Archive>
+
         <BuildDependencies>
-            <Dependency>ncurses-devel</Dependency>
-            <Dependency>gpm-devel</Dependency>
+            <Dependency type="pkgconfig">x11</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -33,6 +33,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>07-08-2014</Date>
+            <Version>4.8.12</Version>
+            <Comment>Update to latest upstream version, enable X11 mouse support</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>03-21-2013</Date>
             <Version>4.8.7</Version>
@@ -41,5 +49,4 @@
             <Email>justin@solusos.com</Email>
         </Update>
     </History>
-
 </PISI>
