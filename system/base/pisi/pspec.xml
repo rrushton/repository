@@ -21,6 +21,10 @@
             <Dependency>python-urlgrabber</Dependency>
             <Dependency>python-pycurl</Dependency>
         </BuildDependencies>
+
+        <Patches>
+            <Patch level="1">0001-build-Ensure-we-set-automatic-dependency-minimum-rel.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
@@ -53,6 +57,14 @@
     </Package>
 
     <History>
+        <Update release="24">
+            <Date>07-08-2014</Date>
+            <Version>3.2</Version>
+            <Comment>Incorporate git head patch (rel numbers)</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="23">
             <Date>06-09-2014</Date>
             <Version>3.2</Version>
