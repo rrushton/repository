@@ -6,14 +6,13 @@ IgnoreAutodep = True
 
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
+shelltools.export("HOME", get.workDIR())
+
 def setup():
-    shelltools.export ("HOME", get.workDIR())
-    autotools.configure ("--disable-static")
+    autotools.configure("--disable-static")
 
 def build():
-    shelltools.export ("HOME", get.workDIR())
-    autotools.make ()
+    autotools.make()
 
 def install():
-    shelltools.export ("HOME", get.workDIR())
-    autotools.rawInstall ("DESTDIR=%s" % get.installDIR())
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
