@@ -1,0 +1,38 @@
+From 69d730513565c4852f91d617e8c132f8fd87e85a Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey.doherty@gmail.com>
+Date: Fri, 11 Jul 2014 00:59:54 +0100
+Subject: [PATCH 19/22] budgie-session-dialog: Use real name where possible
+
+---
+ session/budgie-session-dialog.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+diff --git a/session/budgie-session-dialog.c b/session/budgie-session-dialog.c
+index d2b048e..d68d3cd 100644
+--- a/session/budgie-session-dialog.c
++++ b/session/budgie-session-dialog.c
+@@ -56,6 +56,7 @@ static void budgie_session_dialog_init(BudgieSessionDialog *self)
+         GtkWidget *image;
+         GtkWidget *label;
+         autofree gchar *txt = NULL;
++        const gchar *name;
+         GError *error = NULL;
+         GtkStyleContext *style;
+         gboolean can_reboot = FALSE;
+@@ -144,7 +145,12 @@ static void budgie_session_dialog_init(BudgieSessionDialog *self)
+         gtk_box_pack_start(GTK_BOX(top), image, FALSE, FALSE, 0);
+ 
+         /* And a helpful label */
+-        txt = g_strdup_printf("<big>Goodbye, %s!</big>", g_get_user_name());
++        name = g_get_real_name();
++        /* Documented behaviour for when the real name is unknown */
++        if (g_str_equal(name, "Unknown")) {
++                name = g_get_user_name();
++        }
++        txt = g_strdup_printf("<big>Goodbye, %s!</big>", name);
+         label = gtk_label_new(txt);
+         gtk_label_set_use_markup(GTK_LABEL(label), TRUE);
+         gtk_box_pack_start(GTK_BOX(top), label, TRUE, TRUE, 0);
+-- 
+1.9.1
+

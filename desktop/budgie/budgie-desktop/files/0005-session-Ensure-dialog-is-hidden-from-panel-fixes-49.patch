@@ -1,7 +1,7 @@
 From 4b2fa872d867339c837d64da6ed2755d904f144b Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey.doherty@gmail.com>
 Date: Mon, 30 Jun 2014 19:08:34 +0100
-Subject: [PATCH 5/7] session: Ensure dialog is hidden from panel (fixes #49)
+Subject: [PATCH 05/22] session: Ensure dialog is hidden from panel (fixes #49)
 
 ---
  session/budgie-session-dialog.c | 2 ++

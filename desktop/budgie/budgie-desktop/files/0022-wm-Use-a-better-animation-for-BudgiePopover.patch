@@ -1,0 +1,81 @@
+From cf75358bf3ba6dc9db876e9d832ff3b2a5324349 Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey.doherty@gmail.com>
+Date: Fri, 11 Jul 2014 02:46:16 +0100
+Subject: [PATCH 22/22] wm: Use a better animation for BudgiePopover
+
+---
+ panel/common/budgie-popover.c |  1 +
+ wm/plugin.c                   | 38 ++++++++++++++++++++++++++++++--------
+ 2 files changed, 31 insertions(+), 8 deletions(-)
+
+diff --git a/panel/common/budgie-popover.c b/panel/common/budgie-popover.c
+index a36b358..47b3c72 100644
+--- a/panel/common/budgie-popover.c
++++ b/panel/common/budgie-popover.c
+@@ -86,6 +86,7 @@ static void budgie_popover_init(BudgiePopover *self)
+         self->our_width = 0;
+         self->our_height = 0;
+ 
++        gtk_window_set_wmclass(GTK_WINDOW(self), "budgie-popover", "budgie-popover");
+ }
+ 
+ static void budgie_popover_dispose(GObject *object)
+diff --git a/wm/plugin.c b/wm/plugin.c
+index e8d0572..64bd064 100644
+--- a/wm/plugin.c
++++ b/wm/plugin.c
+@@ -853,21 +853,43 @@ map (MetaPlugin *plugin, MetaWindowActor *window_actor)
+       ClutterAnimation *animation;
+       EffectCompleteData *data = g_new0 (EffectCompleteData, 1);
+       ActorPrivate *apriv = get_actor_private (window_actor);
++      const gchar *wm_class;
+ 
+       clutter_actor_move_anchor_point_from_gravity (actor,
+                                                     CLUTTER_GRAVITY_CENTER);
+ 
+-      clutter_actor_set_scale (actor, MAP_SCALE, MAP_SCALE);
+-      clutter_actor_set_opacity (actor, 0);
+-      clutter_actor_show (actor);
++      wm_class = meta_window_get_wm_class (meta_window);
+ 
+-      animation = clutter_actor_animate (actor,
+-                                         CLUTTER_EASE_IN_SINE,
+-                                         MAP_TIMEOUT,
+-                                         "scale-x", 1.0,
+-                                         "scale-y", 1.0,
++      if (g_str_equal(wm_class, "budgie-popover"))
++      {
++              /* Handle budgie-popover somewhat differently */
++              gfloat height, width;
++              height = clutter_actor_get_height (actor);
++              width = clutter_actor_get_height (actor);
++
++              clutter_actor_set_size (actor, width, 0.0);
++              clutter_actor_set_opacity (actor, 0);
++              clutter_actor_show (actor);
++              animation = clutter_actor_animate (actor,
++                                         CLUTTER_EASE_IN_BOUNCE,
++                                         MAP_TIMEOUT+30,
++                                         "width", width,
++                                         "height", height,
+                                          "opacity", 255,
+                                          NULL);
++      } else {                      
++              clutter_actor_set_scale (actor, MAP_SCALE, MAP_SCALE);
++              clutter_actor_set_opacity (actor, 0);
++              clutter_actor_show (actor);
++
++              animation = clutter_actor_animate (actor,
++                                                 CLUTTER_EASE_IN_SINE,
++                                                 MAP_TIMEOUT,
++                                                 "scale-x", 1.0,
++                                                 "scale-y", 1.0,
++                                                 "opacity", 255,
++                                                 NULL);
++      }
+       apriv->tml_map = clutter_animation_get_timeline (animation);
+       data->actor = actor;
+       data->plugin = plugin;
+-- 
+1.9.1
+

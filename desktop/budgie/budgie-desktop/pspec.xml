@@ -30,6 +30,21 @@
             <Patch level="1">0005-session-Ensure-dialog-is-hidden-from-panel-fixes-49.patch</Patch>
             <Patch level="1">0006-session-Autostart-XDG-system-items-only.patch</Patch>
             <Patch level="1">0007-session-Support-GSettings-based-autostart-conditions.patch</Patch>
+            <Patch level="1">0008-Update-README.-Not-that-its-ever-read.-Ironic-name.-.patch</Patch>
+            <Patch level="1">0009-menu-window-Reload-menus-should-they-change.patch</Patch>
+            <Patch level="1">0010-panel-Fix-several-gtk_container_get_children-related.patch</Patch>
+            <Patch level="1">0011-wm-Use-faster-animations-so-applications-are-ready-s.patch</Patch>
+            <Patch level="1">0012-panel-Convert-to-GApplication-to-enable-menu-invocat.patch</Patch>
+            <Patch level="1">0013-wm-Link-budgie-panel-menu-to-panel-main-menu-keybind.patch</Patch>
+            <Patch level="1">0014-panel-Fix-comment.patch</Patch>
+            <Patch level="1">0015-session-Fix-memory-issues.patch</Patch>
+            <Patch level="1">0016-Let-the-people-know-README.patch</Patch>
+            <Patch level="1">0017-budgie-session-dialog-Implement-suspend-support.patch</Patch>
+            <Patch level="1">0018-budgie-session-dialog-Rename-and-re-order-items-logi.patch</Patch>
+            <Patch level="1">0019-budgie-session-dialog-Use-real-name-where-possible.patch</Patch>
+            <Patch level="1">0020-budgie-popover-Do-not-unmap-unrealize-the-widget.patch</Patch>
+            <Patch level="1">0021-budgie-popover-Ensure-we-re-always-on-top.patch</Patch>
+            <Patch level="1">0022-wm-Use-a-better-animation-for-BudgiePopover.patch</Patch>
         </Patches>
     </Source>
 
@@ -44,6 +59,14 @@
     </Package>
 
     <History>
+        <Update release="6">
+            <Date>07-11-2014</Date>
+            <Version>3.22</Version>
+            <Comment>Sync with git master</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="5">
             <Date>07-06-2014</Date>
             <Version>3</Version>

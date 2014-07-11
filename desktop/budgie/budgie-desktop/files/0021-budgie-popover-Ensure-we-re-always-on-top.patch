@@ -1,0 +1,24 @@
+From ff88b3f3301638aca5a9b3a1da464ab5bb8d6e94 Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey.doherty@gmail.com>
+Date: Fri, 11 Jul 2014 01:41:10 +0100
+Subject: [PATCH 21/22] budgie-popover: Ensure we're always on top
+
+---
+ panel/common/budgie-popover.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/panel/common/budgie-popover.c b/panel/common/budgie-popover.c
+index bee6fc6..a36b358 100644
+--- a/panel/common/budgie-popover.c
++++ b/panel/common/budgie-popover.c
+@@ -75,6 +75,7 @@ static void budgie_popover_init(BudgiePopover *self)
+ 
+         gtk_window_set_decorated(GTK_WINDOW(self), FALSE);
+         gtk_widget_set_app_paintable(GTK_WIDGET(self), TRUE);
++        gtk_window_set_keep_above(GTK_WINDOW(self), TRUE);
+ 
+         /* Skip, no decorations, etc */
+         gtk_window_set_skip_taskbar_hint(GTK_WINDOW(self), TRUE);
+-- 
+1.9.1
+

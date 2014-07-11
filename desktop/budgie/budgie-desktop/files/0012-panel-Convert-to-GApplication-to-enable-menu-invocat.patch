@@ -1,0 +1,158 @@
+From 40401c1b3642c9affaf8bdb480f6d195e8503158 Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey.doherty@gmail.com>
+Date: Thu, 10 Jul 2014 19:43:27 +0100
+Subject: [PATCH 12/22] panel: Convert to GApplication to enable --menu
+ invocation
+
+BudgiePanel now runs as a single instance, enabling it to be spoken to.
+This has been done specifically so that someone may invoke budgie-panel
+with the "--menu" option, which will cause the main menu to appear.
+---
+ panel/applets/menu-applet.c |  7 +++++
+ panel/applets/menu-applet.h |  6 +++++
+ panel/budgie-panel-main.c   | 62 ++++++++++++++++++++++++++++++++++++++++++---
+ panel/budgie-panel.c        |  9 +++++++
+ panel/budgie-panel.h        |  6 +++++
+ 5 files changed, 86 insertions(+), 4 deletions(-)
+
+diff --git a/panel/applets/menu-applet.c b/panel/applets/menu-applet.c
+index b7bfe95..25c2dac 100644
+--- a/panel/applets/menu-applet.c
++++ b/panel/applets/menu-applet.c
+@@ -116,3 +116,10 @@ static void toggled_cb(GtkWidget *widget, gpointer userdata)
+         menu_window_present(MENU_WINDOW(self->menu_window));
+         budgie_popover_present(BUDGIE_POPOVER(self->menu_window), widget, NULL);
+ }
++
++void menu_applet_show_menu(MenuApplet *self)
++{
++        gboolean active = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(self->menu_button));
++
++        gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(self->menu_button), !active);
++}
+diff --git a/panel/applets/menu-applet.h b/panel/applets/menu-applet.h
+index 7717d8a..8c18a3d 100644
+--- a/panel/applets/menu-applet.h
++++ b/panel/applets/menu-applet.h
+@@ -61,4 +61,10 @@ GType menu_applet_get_type(void);
+  */
+ GtkWidget *menu_applet_new(void);
+ 
++/**
++ * Present the menu
++ * @param applet MenuApplet instance
++ */
++void menu_applet_show_menu(MenuApplet *applet);
++
+ #endif /* menu_applet_h */
+diff --git a/panel/budgie-panel-main.c b/panel/budgie-panel-main.c
+index bcac848..0ea749d 100644
+--- a/panel/budgie-panel-main.c
++++ b/panel/budgie-panel-main.c
+@@ -12,13 +12,67 @@
+ #include "budgie-panel.h"
+ #include <stdlib.h>
+ 
+-gint main(gint argc, gchar **argv)
++#define BUDGIE_PANEL_ID "com.evolve_os.BudgiePanel"
++#define ACTION_MENU "open-menu"
++
++static gboolean activated = FALSE;
++
++/* Currently only support a single BudgiePanel */
++static BudgiePanel *panel;
++
++/**
++ * Main launch of BudgiePanel
++ */
++static void activate(GApplication *application, gpointer userdata)
+ {
+-        __attribute__ ((unused)) BudgiePanel *panel;
++        if (activated) {
++                return;
++        }
+ 
+-        gtk_init(&argc, &argv);
+         panel = budgie_panel_new();
++        activated = TRUE;
+         gtk_main();
++}
++
++static void menu_cb(GAction *action,
++                    GVariant *param,
++                    gpointer userdata)
++{
++        /* Go and show the menu */
++        budgie_panel_show_menu(panel);
++}
++
++gint main(gint argc, gchar **argv)
++{
++        GApplication *app = NULL;
++        GSimpleAction *action = NULL;
++        int status = 0;
++
++        gtk_init(&argc, &argv);
++
++        app = g_application_new(BUDGIE_PANEL_ID, G_APPLICATION_FLAGS_NONE);
++        g_signal_connect(app, "activate", G_CALLBACK(activate), NULL);
++
++        /* Logout action */
++        action = g_simple_action_new(ACTION_MENU, NULL);
++        g_signal_connect(action, "activate", G_CALLBACK(menu_cb), app);
++        g_action_map_add_action(G_ACTION_MAP(app), G_ACTION(action));
++        g_object_unref(action);
++
++        /* TODO: Also use opts.. */
++        if (argc > 1) {
++                if (g_str_equal(argv[1], "--menu")) {
++                        g_application_register(app, NULL, NULL);
++                        g_action_group_activate_action(G_ACTION_GROUP(app),
++                                ACTION_MENU, NULL);
++                } else {
++                        printf("Unknown command: %s\n", argv[1]);
++                        return EXIT_FAILURE;
++                }
++        } else {
++                status = g_application_run(app, argc, argv);
++        }
+ 
+-        return EXIT_SUCCESS;
++        g_object_unref(app);
++        return status;
+ }
+diff --git a/panel/budgie-panel.c b/panel/budgie-panel.c
+index fd28ade..0154d6d 100644
+--- a/panel/budgie-panel.c
++++ b/panel/budgie-panel.c
+@@ -349,3 +349,12 @@ static gboolean budgie_panel_draw(GtkWidget *widget,
+ 
+         return FALSE;
+ }
++
++void budgie_panel_show_menu(BudgiePanel *self)
++{
++        /* So currently we have a hard-coded pass-along system to
++         * get the menu shown, but when we actually support "plugins",
++         * or applets, we'll use method pointers to achieve this
++         */
++         menu_applet_show_menu(MENU_APPLET(self->menu));
++}
+diff --git a/panel/budgie-panel.h b/panel/budgie-panel.h
+index fd9ab88..c4b0392 100644
+--- a/panel/budgie-panel.h
++++ b/panel/budgie-panel.h
+@@ -95,4 +95,10 @@ BudgiePanel *budgie_panel_new(void);
+ void budgie_panel_set_view_obscured(BudgiePanel *panel,
+                                     gboolean obscured);
+ 
++/**
++ * Request that the main menu is shown to the user
++ * @param panel BudgiePanel instance
++ */
++void budgie_panel_show_menu(BudgiePanel *panel);
++
+ #endif /* budgie_panel_h */
+-- 
+1.9.1
+

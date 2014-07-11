@@ -1,0 +1,40 @@
+From 7921096eb47dadfb41bff3b901e4a413d275f7c0 Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey.doherty@gmail.com>
+Date: Wed, 9 Jul 2014 18:57:55 +0100
+Subject: [PATCH 08/22] Update README. Not that its ever read. Ironic name. :P
+
+---
+ README.md | 10 +---------
+ 1 file changed, 1 insertion(+), 9 deletions(-)
+
+diff --git a/README.md b/README.md
+index 5a15b6f..9c24414 100644
+--- a/README.md
++++ b/README.md
+@@ -19,14 +19,6 @@ Budgie Desktop integrates with the GNOME stack, and as such requires
+ certain components to operate correctly. Your distribution should provide
+ an autostart file for gnome-settings-daemon in its package.
+ 
+-budgie-session will attempt to parse the file and launch it if it is
+-found, which is guessed to be living in:
+-    /etc/xdg/autostart/gnome-settings-daemon.desktop
+-
+-If budgie-session cannot locate the file, gnome-settings-daemon will not
+-be launched, and dynamic settings for themes, etc, will not work until
+-it is launched.
+-
+ Ubuntu users:
+ It is highly likely your theme or Ubuntu setup can affect the usability
+ of budgie-panel.
+@@ -107,7 +99,7 @@ of the panel). This is largely due to the use of GdkPixbuf's
+  * libpulse
+  * libpulse-mainloop-glib
+  * GTK3 (>= 3.10.1)
+- * upower-glib (>= 0.9.21)
++ * upower-glib (>= 0.9.20)
+  * libgnome-menu (>= 3.10.1)
+  * libwnck (>= 3.4.7)
+  * libmutter (>= 3.10.1)
+-- 
+1.9.1
+

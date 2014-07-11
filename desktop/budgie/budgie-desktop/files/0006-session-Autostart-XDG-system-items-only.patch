@@ -1,7 +1,7 @@
 From b8d8674a0808ff2dc020137737b850d32b8397c3 Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey.doherty@gmail.com>
 Date: Sun, 6 Jul 2014 12:03:39 +0100
-Subject: [PATCH 6/7] session: Autostart XDG *system* items only
+Subject: [PATCH 06/22] session: Autostart XDG *system* items only
 
 We now no longer manually invoke gnome-settings-daemon, instead we iterate
 and execute all items discovered in /etc/xdg*/autostart (XDG config
