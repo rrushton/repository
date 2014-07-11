@@ -1,0 +1,25 @@
+From 488ad1e10ac4686858a43ec84003f67c9857ec7c Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey.doherty@gmail.com>
+Date: Fri, 11 Jul 2014 18:09:04 +0100
+Subject: [PATCH] schema: Do not use Super_L as its bound to Budgie
+
+---
+ src/org.gnome.mutter.gschema.xml.in | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/org.gnome.mutter.gschema.xml.in b/src/org.gnome.mutter.gschema.xml.in
+index 9d83cf3..8e5c90c 100644
+--- a/src/org.gnome.mutter.gschema.xml.in
++++ b/src/org.gnome.mutter.gschema.xml.in
+@@ -3,7 +3,7 @@
+           gettext-domain="@GETTEXT_DOMAIN">
+ 
+     <key name="overlay-key" type="s">
+-      <default>'Super_L'</default>
++      <default>'F12'</default>
+       <_summary>Modifier to use for extended window management operations</_summary>
+       <_description>
+         This key will initiate the "overlay", which is a combination window
+-- 
+1.9.1
+
