@@ -1,7 +1,7 @@
-From bf438bcd42257fbfba8d20a3260eb783907104dc Mon Sep 17 00:00:00 2001
+From e093a06b87ffd204c33142beb9724e7cebafaee3 Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey.doherty@gmail.com>
 Date: Thu, 3 Jul 2014 21:43:54 +0100
-Subject: [PATCH] schemas: Apply default Evolve OS branding
+Subject: [PATCH 1/2] schemas: Apply default Evolve OS branding
 
 ---
  schemas/org.gnome.desktop.background.gschema.xml.in.in | 2 +-
