@@ -1,7 +1,7 @@
 From 233c0d561388721cab26b8bcd208327f4bb28131 Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey.doherty@gmail.com>
 Date: Wed, 9 Jul 2014 02:14:11 +0100
-Subject: [PATCH 4/5] users: Ensure only lower case user names (OS-26)
+Subject: [PATCH 4/7] users: Ensure only lower case user names (OS-26)
 
 ---
  os_installer/pages/users.py | 2 +-

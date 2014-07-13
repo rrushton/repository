@@ -1,7 +1,7 @@
 From a14f3149a1570fe3e71f558ed1f971b182af69bb Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey.doherty@gmail.com>
 Date: Sun, 13 Jul 2014 19:34:03 +0100
-Subject: [PATCH 5/5] changes: Update for alpha 2
+Subject: [PATCH 5/7] changes: Update for alpha 2
 
 ---
  changes/index.html | 22 ++++++++++++++++------

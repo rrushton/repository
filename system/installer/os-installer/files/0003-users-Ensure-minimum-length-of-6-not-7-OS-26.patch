@@ -1,7 +1,7 @@
 From 6af3b4c49cddc9e709b02b87a97d02d962e02a3c Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey.doherty@gmail.com>
 Date: Wed, 9 Jul 2014 02:12:28 +0100
-Subject: [PATCH 3/5] users: Ensure minimum length of 6, not 7 (OS-26)
+Subject: [PATCH 3/7] users: Ensure minimum length of 6, not 7 (OS-26)
 
 ---
  os_installer/pages/users.py | 4 ++--

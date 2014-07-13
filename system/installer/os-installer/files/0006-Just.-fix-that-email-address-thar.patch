@@ -1,0 +1,25 @@
+From 0c4d8b071ce903112181b6067466b35e766ab51c Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey.doherty@gmail.com>
+Date: Sun, 13 Jul 2014 19:39:29 +0100
+Subject: [PATCH 6/7] Just.. fix that email address thar..
+
+---
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/README.md b/README.md
+index 1f32711..a784322 100644
+--- a/README.md
++++ b/README.md
+@@ -8,7 +8,7 @@ Currently under heavy development, don't be surprised if there are issues.
+ 
+ Authors
+ --------
+- * Ikey Doherty <ikey@solusos.com>
++ * Ikey Doherty <ikey.doherty@gmail.com>
+ 
+ 
+ Artists
+-- 
+1.9.1
+

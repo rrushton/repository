@@ -1,7 +1,7 @@
 From 89fb5f441d0805e001bced45c4390da59afd2bae Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey.doherty@gmail.com>
 Date: Sun, 6 Jul 2014 15:58:23 +0100
-Subject: [PATCH 2/5] interface: Be a fully fledged window, no close button
+Subject: [PATCH 2/7] interface: Be a fully fledged window, no close button
  under Budgie
 
 ---
