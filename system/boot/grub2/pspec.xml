@@ -40,9 +40,20 @@
             <!-- Configuration + branding //-->
             <AdditionalFile target="/etc/default/grub" permission="0644">conf/grub</AdditionalFile>
         </AdditionalFiles>
+        <RuntimeDependencies>
+            <Dependency>os-prober</Dependency>
+        </RuntimeDependencies>
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>07-13-2014</Date>
+            <Version>2.0</Version>
+            <Comment>Ensure we bring os-prober in via deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="6">
             <Date>07-06-2014</Date>
             <Version>2.0</Version>
