@@ -1,0 +1,39 @@
+From 32ca5c59397ecb0eae92aa5ffd85acd53f716951 Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey.doherty@gmail.com>
+Date: Sun, 13 Jul 2014 13:52:33 +0100
+Subject: [PATCH 1/2] rundialog: Use newer libgee (0.8 > 1.0....)
+
+This definitely had me confused, but the *correct* version for libgee is
+the new 0.8 series.
+See https://mail.gnome.org/archives/libgee-list/2013-July/msg00006.html
+---
+ configure.ac          | 2 +-
+ rundialog/Makefile.am | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index 5bac453..3afd81d 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -46,7 +46,7 @@ AC_CONFIG_MACRO_DIR([m4])
+ GOBJECT_INTROSPECTION_CHECK([1.38.0])
+ 
+ # For various Vala things.
+-PKG_CHECK_MODULES([GEE], [gee-1.0])
++PKG_CHECK_MODULES([GEE], [gee-0.8])
+ 
+ # Need Vala.
+ AM_PROG_VALAC([0.22], [], [AC_MSG_ERROR([valac is required to build Budgie Desktop])])
+diff --git a/rundialog/Makefile.am b/rundialog/Makefile.am
+index 0a53344..99779f7 100644
+--- a/rundialog/Makefile.am
++++ b/rundialog/Makefile.am
+@@ -21,4 +21,4 @@ budgie_run_dialog_VALAFLAGS = \
+ 	--pkg gtk+-3.0 \
+ 	--pkg libgnome-menu-3.0 \
+ 	--pkg gio-unix-2.0 \
+-	--pkg gee-1.0
++	--pkg gee-0.8
+-- 
+1.9.1
+

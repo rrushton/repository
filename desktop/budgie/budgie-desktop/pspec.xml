@@ -11,7 +11,7 @@
         <Summary>Budgie Desktop</Summary>
         <Description>Budgie Desktop</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="ef4e934c5e0aff5bc06e6cdad81a80198c5e303d" type="tarxz">https://github.com/evolve-os/budgie-desktop/releases/download/v3/budgie-desktop-3.tar.xz</Archive>
+        <Archive sha1sum="f2f8433b5c983ac651f0cf6b997455e1350cbe5d" type="tarxz">https://github.com/evolve-os/budgie-desktop/releases/download/v4/budgie-desktop-4.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
@@ -20,31 +20,13 @@
             <Dependency type="pkgconfig">libwnck-3.0</Dependency>
             <Dependency type="pkgconfig">upower-glib</Dependency>
             <Dependency type="pkgconfig">libgnome-menu-3.0</Dependency>
+            <Dependency type="pkgconfig">gee-0.8</Dependency>
+            <Dependency>vala</Dependency>
         </BuildDependencies>
 
         <Patches>
-            <Patch level="1">0001-panel-Correctly-handle-window-closing.patch</Patch>
-            <Patch level="1">0002-session-Lie-about-desktop-environment.patch</Patch>
-            <Patch level="1">0003-budgie-popover-Do-works-to-enable-true-LHS-placement.patch</Patch>
-            <Patch level="1">0004-set-the-icon-geometry-in-order-to-fix-the-minimise-a.patch</Patch>
-            <Patch level="1">0005-session-Ensure-dialog-is-hidden-from-panel-fixes-49.patch</Patch>
-            <Patch level="1">0006-session-Autostart-XDG-system-items-only.patch</Patch>
-            <Patch level="1">0007-session-Support-GSettings-based-autostart-conditions.patch</Patch>
-            <Patch level="1">0008-Update-README.-Not-that-its-ever-read.-Ironic-name.-.patch</Patch>
-            <Patch level="1">0009-menu-window-Reload-menus-should-they-change.patch</Patch>
-            <Patch level="1">0010-panel-Fix-several-gtk_container_get_children-related.patch</Patch>
-            <Patch level="1">0011-wm-Use-faster-animations-so-applications-are-ready-s.patch</Patch>
-            <Patch level="1">0012-panel-Convert-to-GApplication-to-enable-menu-invocat.patch</Patch>
-            <Patch level="1">0013-wm-Link-budgie-panel-menu-to-panel-main-menu-keybind.patch</Patch>
-            <Patch level="1">0014-panel-Fix-comment.patch</Patch>
-            <Patch level="1">0015-session-Fix-memory-issues.patch</Patch>
-            <Patch level="1">0016-Let-the-people-know-README.patch</Patch>
-            <Patch level="1">0017-budgie-session-dialog-Implement-suspend-support.patch</Patch>
-            <Patch level="1">0018-budgie-session-dialog-Rename-and-re-order-items-logi.patch</Patch>
-            <Patch level="1">0019-budgie-session-dialog-Use-real-name-where-possible.patch</Patch>
-            <Patch level="1">0020-budgie-popover-Do-not-unmap-unrealize-the-widget.patch</Patch>
-            <Patch level="1">0021-budgie-popover-Ensure-we-re-always-on-top.patch</Patch>
-            <Patch level="1">0022-wm-Use-a-better-animation-for-BudgiePopover.patch</Patch>
+            <Patch level="1">0001-rundialog-Use-newer-libgee-0.8-1.0.patch</Patch>
+            <Patch level="1">0002-rundialog-Ensure-we-compile-with-multiple-versions-o.patch</Patch>
         </Patches>
     </Source>
 
@@ -59,6 +41,14 @@
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>07-13-2014</Date>
+            <Version>4.2</Version>
+            <Comment>Sync with git master</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="6">
             <Date>07-11-2014</Date>
             <Version>3.22</Version>

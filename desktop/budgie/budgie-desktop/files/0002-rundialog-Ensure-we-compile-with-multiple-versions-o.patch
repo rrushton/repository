@@ -1,0 +1,26 @@
+From c7d29f07cbf332da173e9f5857d8e1a61e904a8f Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey.doherty@gmail.com>
+Date: Sun, 13 Jul 2014 14:48:48 +0100
+Subject: [PATCH 2/2] rundialog: Ensure we compile with multiple versions of
+ libgee
+
+---
+ rundialog/RunDialog.vala | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/rundialog/RunDialog.vala b/rundialog/RunDialog.vala
+index e4dfb67..0b93161 100644
+--- a/rundialog/RunDialog.vala
++++ b/rundialog/RunDialog.vala
+@@ -168,7 +168,7 @@ public class RunDialog : Gtk.Window
+                 return;
+             }
+             root = tree.get_root_directory();
+-            mapping = new Gee.HashMap<string,GLib.DesktopAppInfo>();
++            mapping = new Gee.HashMap<string,GLib.DesktopAppInfo>(null,null,null);
+         } else {
+             root = tree_root;
+         }
+-- 
+1.9.1
+
