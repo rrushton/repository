@@ -1,7 +1,7 @@
 From d52301f8507ded96d5bc45b99f39678acb7f6430 Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey.doherty@gmail.com>
 Date: Sun, 6 Jul 2014 15:37:31 +0100
-Subject: [PATCH 1/2] interface: Fix teh newb mistake. Need to be punished for
+Subject: [PATCH 1/5] interface: Fix teh newb mistake. Need to be punished for
  that one.
 
 ---

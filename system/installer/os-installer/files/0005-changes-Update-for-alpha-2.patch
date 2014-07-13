@@ -1,0 +1,59 @@
+From a14f3149a1570fe3e71f558ed1f971b182af69bb Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey.doherty@gmail.com>
+Date: Sun, 13 Jul 2014 19:34:03 +0100
+Subject: [PATCH 5/5] changes: Update for alpha 2
+
+---
+ changes/index.html | 22 ++++++++++++++++------
+ 1 file changed, 16 insertions(+), 6 deletions(-)
+
+diff --git a/changes/index.html b/changes/index.html
+index 386417c..924fde0 100644
+--- a/changes/index.html
++++ b/changes/index.html
+@@ -6,7 +6,7 @@
+     <meta name="description" content="">
+     <meta name="author" content="Ikey Doherty">
+ 
+-    <title>Evolve OS Alpha 1</title>
++    <title>Evolve OS Alpha 2</title>
+ 
+     <!-- Bootstrap core CSS -->
+     <link href="assets/css/bootstrap.css" rel="stylesheet">
+@@ -20,18 +20,28 @@
+ 
+     <div class="container">
+       <div class="header">
+-        <h3 class="text-muted">Evolve OS Alpha 1<small>July 6th, 2014</small></h3>
++        <h3 class="text-muted">Evolve OS Alpha 2 <small>July 13th, 2014</small></h3>
+       </div>
+ 
+       <div class="row marketing">
+         <div class="col-lg-6">
+-          <h4>A new beginning</h4>
+-          <p>Welcome to the first alpha of Evolve OS. There isn't much we can say here, except you're now using a built-from-scratch Linux distribution designed and built with the desktop in mind</p>
++          <h4>A new version of Budgie</h4>
++          <p>This release includes Budgie v4, which now features a rundialog. You'll receive updates for Budgie Desktop first, as both Evolve OS and the Budgie desktop are developed in tandem. </p>
+         </div>
+ 
+         <div class="col-lg-6">
+-          <h4>Fat, nasty bugses.. we doesn't like them my precioussss</h4>
+-          <p>Remember this is only an alpha release (the very first in fact!) Make sure you head over to evolve-os.com and help report any issues you find, and help make this the best possible experience for desktop Linux users!</p>
++          <h4>A few good taters..</h4>
++          <p>As well as addressing some basic bugs, we've included Gimp 2.8.10 for your pleasure, as well as GNOME Maps. Because knowing where you are is awesome.</p>
++        </div>
++
++        <div class="col-lg-6">
++            <h4>Installer fixes</h4>
++            <p>The installer now requires a lower-case username, as well as a minimum password length of 6 characters. In a future version of the installer guidelines will be clearly visible</p>
++        </div>
++
++        <div class="col-lg-6">
++            <h4>Moar integration</h4>
++            <p>The desktop experience is somewhat more integrated now, enabling the use of traditional keybindings for the panel menu (Super_L) and the run dialog (ALT+F2).</p>
+         </div>
+       </div>
+ 
+-- 
+1.9.1
+
