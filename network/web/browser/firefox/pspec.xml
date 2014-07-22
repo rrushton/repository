@@ -41,7 +41,7 @@
         <Name>firefox</Name>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib/firefox-30.0</Path>
+            <Path fileType="library">/usr/lib/firefox-31.0</Path>
             <Path fileType="data">/usr/share/applications</Path>
             <Path fileType="data">/usr/share/pixmaps</Path>
             <Path fileType="library">/usr/lib/mozilla/plugins</Path>
