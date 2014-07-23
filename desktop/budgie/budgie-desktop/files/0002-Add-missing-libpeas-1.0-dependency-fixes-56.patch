@@ -1,0 +1,24 @@
+From 0ec0744e98e7664c30c58400439f44bfc057bd2b Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey.doherty@gmail.com>
+Date: Sun, 20 Jul 2014 11:36:45 +0100
+Subject: [PATCH 2/8] Add missing libpeas-1.0 dependency (fixes #56)
+
+---
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/README.md b/README.md
+index a77c1bd..c915550 100644
+--- a/README.md
++++ b/README.md
+@@ -69,6 +69,7 @@ path without having to use the terminal or menu
+  * libmutter (>= 3.10.1)
+  * GLib (>= 2.38.0)
+  * gee-0.8 (not gee-1.0!)
++ * libpeas-1.0
+  * valac
+ 
+ Ubuntu users:
+-- 
+1.9.1
+

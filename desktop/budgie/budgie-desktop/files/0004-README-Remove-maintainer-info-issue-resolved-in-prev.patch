@@ -1,0 +1,28 @@
+From c0fdd050da00d635b3b6a2e59e908d4e83563bc0 Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey.doherty@gmail.com>
+Date: Sun, 20 Jul 2014 13:22:31 +0100
+Subject: [PATCH 4/8] README: Remove maintainer info (issue resolved in
+ previous commit)
+
+---
+ README.md | 4 ----
+ 1 file changed, 4 deletions(-)
+
+diff --git a/README.md b/README.md
+index c915550..1bc253e 100644
+--- a/README.md
++++ b/README.md
+@@ -10,10 +10,6 @@ Simple, yet elegant desktop
+ Budgie Desktop integrates with the GNOME stack, and as such requires
+ certain components to operate correctly. 
+ 
+-*Maintainer note*: Currently /usr/lib/budgie-desktop is the hard-coded location
+-of system-wide plugins for Budgie. Make sure to either patch around this
+-current limitation or configure as appropriate.
+-
+ *TODO:*
+  * Start adding support for translations
+  * Optimize menu (migrate from GtkListBox)
+-- 
+1.9.1
+
