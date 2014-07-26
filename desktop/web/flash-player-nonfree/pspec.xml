@@ -6,7 +6,7 @@
         <Homepage>http://www.adobe.com</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>Adobe Flash Player</Summary>
         <Description>The Adobe Flash Player enables rich content in web browsers, and is in use on many websites across the world. Note that this package provides the last released Linux plugin, which will no longer be updated by Adobe. Newer versions are available in Google Chrome via the Pepper Plugin.
@@ -14,8 +14,7 @@
             By using this package, you accept the terms and conditions set in the end-user license agreement: http://www.adobe.com/products/eulas/players/flash/
         </Description>
         <License>AdobeFlash-12.2.202.297</License>
-        <!-- the i386 plugin, we haven't got a 64-bit SolusOS yet //-->
-        <Archive sha1sum="cf86001e5362b4e226e3c24031e47b35ad491147" type="targz">http://fpdownload.macromedia.com/get/flashplayer/pdc/11.2.202.297/install_flash_player_11_linux.i386.tar.gz</Archive>
+        <Archive sha1sum="50734f3cb3ae843cfab43ccc8590550ff31cd9e2" type="targz">http://fpdownload.macromedia.com/get/flashplayer/pdc/11.2.202.394/install_flash_player_11_linux.x86_64.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -27,49 +26,17 @@
             <Path fileType="data">/usr/share/icons/hicolor</Path>
             <Path fileType="data">/usr/share/pixmaps</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>expat</Dependency>
-            <Dependency>harfbuzz</Dependency>
-            <Dependency>libxcursor</Dependency>
-            <Dependency>libstdc++</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libnspr</Dependency>
-            <Dependency>libxcb</Dependency>
-            <Dependency>pango</Dependency>
-            <Dependency>libxau</Dependency>
-            <Dependency>libicu</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>libxdmcp</Dependency>
-            <Dependency>libnss</Dependency>
-            <Dependency>glibc</Dependency>
-            <Dependency>fontconfig</Dependency>
-            <Dependency>libice</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libxt</Dependency>
-            <Dependency>libxinerama</Dependency>
-            <Dependency>libatk</Dependency>
-            <Dependency>libpng</Dependency>
-            <Dependency>pixman</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>libxext</Dependency>
-            <Dependency>libxrandr</Dependency>
-            <Dependency>libxdamage</Dependency>
-            <Dependency>libffi</Dependency>
-            <Dependency>libgtk-2</Dependency>
-            <Dependency>util-linux</Dependency>
-            <Dependency>libxfixes</Dependency>
-            <Dependency>freetype2</Dependency>
-            <Dependency>libcairo</Dependency>
-            <Dependency>libx11</Dependency>
-            <Dependency>libxcomposite</Dependency>
-            <Dependency>libxrender</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libsm</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>07-25-2014</Date>
+            <Version>11.2.202.394</Version>
+            <Comment>Update to latest security release</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>08-25-2013</Date>
             <Version>11.2.202.297</Version>
@@ -78,5 +45,4 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-
 </PISI>

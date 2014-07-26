@@ -1,7 +1,5 @@
 #!/usr/bin/python
 
-# Created For SolusOS
-
 from pisi.actionsapi import pisitools
 
 WorkDir = "."
@@ -17,7 +15,8 @@ def install():
 
     # Not currently interested in the KDE component
     pisitools.remove("/usr/lib/kde4/kcm_adobe_flash_player.so")
-    pisitools.removeDir("/usr/lib")
+    pisitools.removeDir("/usr/lib64")
+    pisitools.removeDir("/usr/lib/kde4")
     pisitools.removeDir("/usr/share/kde4/")
 
     # Make the plugin available to Firefox
