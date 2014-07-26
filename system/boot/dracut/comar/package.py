@@ -7,7 +7,9 @@ def postInstall(fromVersion, fromRelease, toVersion, toRelease):
     for possible in os.listdir ("/boot"):
         if possible.startswith ("kernel-") or possible.startswith ("vmlinuz-"):
             version = possible.split ("-")[1]
-            cmd = "dracut -f --kver %s" % version
+            cmd = "/sbin/depmod %s" % version
+            os.system(cmd)
+            cmd = "dracut -N -f --kver %s" % version
             os.system (cmd)
 
     # Determine whether to actually update grub or not.

@@ -1,5 +1,4 @@
 #!/usr/bin/python
-
 import piksemel
 import os
 import os.path
@@ -14,7 +13,9 @@ def updateInitrd(filepath):
         if path.startswith("/lib/modules"):
             # Handle the proper case of modules
             version = path.split("/")[3]
-            cmd = "dracut -f --kver %s" % version
+            cmd = "/sbin/depmod %s" % version
+            os.system(cmd)
+            cmd = "dracut -N -f --kver %s" % version
             os.system(cmd)
             if os.path.exists("/proc/cmdline"):
                 os.system("/usr/sbin/update-grub")
