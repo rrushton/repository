@@ -10,11 +10,7 @@
         <Summary>GL-based rendering acceleration library for X</Summary>
         <Description>The Glamor EGL package contains a GL-based rendering acceleration library for X server</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="97276590a10078c943226ca567f945da130f6468" type="tarxz">http://anduin.linuxfromscratch.org/sources/other/glamor-egl-0.5.0.tar.xz</Archive>
-
-        <Patches>
-            <Patch level="1">glamor-egl-0.5.0-fixes-1.patch</Patch>
-        </Patches>
+        <Archive sha1sum="59c7518a49c9bde0c982705655514bbeab482ead" type="tarbz2">http://xorg.freedesktop.org/archive/individual/driver/glamor-egl-0.6.0.tar.bz2</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">xorg-macros</Dependency>
@@ -50,6 +46,14 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>07-26-2014</Date>
+            <Version>0.6.0</Version>
+            <Comment>Update to latest upstream version</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>07-06-2014</Date>
             <Version>0.5.0</Version>
