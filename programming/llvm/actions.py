@@ -1,7 +1,5 @@
 #!/usr/bin/python
 
-# Created For SolusOS
-
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
@@ -16,8 +14,7 @@ def setup():
                             --enable-shared            \
                             --disable-assertions       \
                             --disable-debug-runtime    \
-                            --disable-expensive-checks \
-                            --enable-experimental-targets=R600")
+                            --disable-expensive-checks")
 
 def build():
     autotools.make()
@@ -26,7 +23,6 @@ def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
     # Fix permissions of the static files
-    shelltools.chmod("%s/usr/lib/llvm/*.a" % get.installDIR(), mode=0644)
+    shelltools.chmod("%s/usr/lib/*.a" % get.installDIR(), mode=0644)
 
-    # Fix the llvm link
-    pisitools.dosym("/usr/lib/llvm/libLLVM-3.2.so", "/usr/lib/libLLVM-3.2.so")
+    pisitools.domove("/usr/docs", "/usr/share/", "doc")
