@@ -10,10 +10,10 @@ def setup():
     pisitools.dosed("configure.ac", "pthread-stubs", "")
     autotools.autoreconf("-fi")
     autotools.configure("--enable-xinput\
-                         --docdir=/usr/share/doc/libxcb-1.9")
+                         --docdir=/usr/share/doc/libxcb-1.10")
 
     # configure routine gets this wrong
-    pisitools.dosed("doc/Makefile", "/root/install-sh", "%s/libxcb-1.9/install-sh" % get.workDIR())
+    pisitools.dosed("doc/Makefile", "/root/install-sh", "%s/libxcb-1.10/install-sh" % get.workDIR())
 
 def build():
     autotools.make()
