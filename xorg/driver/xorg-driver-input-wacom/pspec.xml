@@ -10,7 +10,7 @@
         <Summary>Input driver for Wacom/Wacom-like tablets</Summary>
         <Description>The Xorg Wacom Driver package contains the X.Org X11 driver for Wacom and Wacom-like tablets. It is not required to use a Wacom tablet, the xf86-input-evdev driver can handle these devices without problems.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="7b82547a44b97357f9a3eb87515a26b3cab4ce58" type="tarbz2">http://downloads.sourceforge.net/linuxwacom/xf86-input-wacom-0.20.0.tar.bz2</Archive>
+        <Archive sha1sum="80505eb68c885da05ee0357460b838bc169e4e6f" type="tarbz2">http://downloads.sourceforge.net/linuxwacom/xf86-input-wacom-0.25.0.tar.bz2</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">xorg-server</Dependency>
@@ -31,6 +31,8 @@
             <Path fileType="data">/usr/share/X11</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/lib/udev/rules.d</Path>
+            <Path fileType="data">/usr/lib/systemd/system</Path>
         </Files>
     </Package>
 
@@ -45,6 +47,14 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>07-26-2014</Date>
+            <Version>0.25.0</Version>
+            <Comment>Update to latest upstream version</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>06-21-2014</Date>
             <Version>0.20.0</Version>
