@@ -1,8 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 #
-# Created for SolusOS
-KVERSION = "3.14.2"
+KVERSION = "3.15.6"
 
 from pisi.actionsapi import kerneltools
 from pisi.actionsapi import shelltools
