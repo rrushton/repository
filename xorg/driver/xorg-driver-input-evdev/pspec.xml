@@ -15,6 +15,7 @@
         <BuildDependencies>
             <Dependency type="pkgconfig">mtdev</Dependency>
             <Dependency type="pkgconfig">xorg-server</Dependency>
+            <Dependency type="pkgconfig">libevdev</Dependency>
 
             <!-- see vesa package for details //-->
             <Dependency type="pkgconfig">resourceproto</Dependency>
