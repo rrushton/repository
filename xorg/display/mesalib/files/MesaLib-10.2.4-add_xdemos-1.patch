@@ -1,12 +1,12 @@
 Submitted By:            Armin K. <krejzi at email dot com>
-Date:                    2013-03-01
-Initial Package Version: 9.1
+Date:                    2013-08-21
+Initial Package Version: 9.2.0
 Upstream Status:         Not applicable.
 Origin:                  Self.
 Description:             This patch adds two OpenGL demos, glxinfo and glxgears.
 
 --- a/xdemos/glxgears.1	1970-01-01 01:00:00.000000000 +0100
-+++ b/xdemos/glxgears.1	2013-03-01 18:48:17.041254870 +0100
++++ b/xdemos/glxgears.1	2013-08-21 16:51:15.365141920 +0200
 @@ -0,0 +1,30 @@
 +.TH glxgears 1 "2006-11-29"
 +.SH NAME
@@ -39,7 +39,7 @@ Description:             This patch adds two OpenGL demos, glxinfo and glxgears.
 +
 +
 --- a/xdemos/glxgears.c	1970-01-01 01:00:00.000000000 +0100
-+++ b/xdemos/glxgears.c	2013-03-01 19:03:16.000000000 +0100
++++ b/xdemos/glxgears.c	2013-08-21 16:51:15.365141920 +0200
 @@ -0,0 +1,806 @@
 +/*
 + * Copyright (C) 1999-2001  Brian Paul   All Rights Reserved.
@@ -848,7 +848,7 @@ Description:             This patch adds two OpenGL demos, glxinfo and glxgears.
 +   return 0;
 +}
 --- a/xdemos/glxinfo.1	1970-01-01 01:00:00.000000000 +0100
-+++ b/xdemos/glxinfo.1	2013-03-01 18:48:17.044588259 +0100
++++ b/xdemos/glxinfo.1	2013-08-21 16:51:15.365141920 +0200
 @@ -0,0 +1,42 @@
 +.TH glxinfo 1 "2006-11-29"
 +.SH NAME
@@ -893,7 +893,7 @@ Description:             This patch adds two OpenGL demos, glxinfo and glxgears.
 +
 +
 --- a/xdemos/glxinfo.c	1970-01-01 01:00:00.000000000 +0100
-+++ b/xdemos/glxinfo.c	2013-03-01 19:03:08.000000000 +0100
++++ b/xdemos/glxinfo.c	2013-08-21 16:51:15.368475313 +0200
 @@ -0,0 +1,1747 @@
 +/*
 + * Copyright (C) 1999-2006  Brian Paul   All Rights Reserved.
@@ -2643,7 +2643,7 @@ Description:             This patch adds two OpenGL demos, glxinfo and glxgears.
 +   return 0;
 +}
 --- a/xdemos/Makefile	1970-01-01 01:00:00.000000000 +0100
-+++ b/xdemos/Makefile	2013-03-01 19:01:56.964870781 +0100
++++ b/xdemos/Makefile	2013-08-21 16:52:19.059605255 +0200
 @@ -0,0 +1,42 @@
 +ifeq ("$(DEMOS_PREFIX)", "")
 +	DEMOS_PREFIX=/usr
@@ -2659,13 +2659,13 @@ Description:             This patch adds two OpenGL demos, glxinfo and glxgears.
 + VB =
 +endif
 +
-+LIBRARY_PATH=../lib
++LIBRARY_PATH=../lib$(EXT)
 +
 +X11_INCLUDES = $(shell pkg-config --cflags x11)
 +X11_LIBS =  $(shell pkg-config --libs x11)
 +
 +DEMOS_CFLAGS = -g -O2 -I../include $(X11_INCLUDES)
-+DEMOS_LDFLAGS = -L../lib -lGL $(X11_LIBS) -lm
++DEMOS_LDFLAGS = -L../lib$(EXT) -lGL $(X11_LIBS) -lm
 +
 +default: glxgears glxinfo
 +
