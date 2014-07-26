@@ -10,7 +10,7 @@
         <Summary>VMWare Video Driver</Summary>
         <Description>The Xorg VMware Driver package contains the X.Org Video Driver for VMware SVGA virtual video cards.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="c7109eb9f683156b12d3c55a74d51345ab70abfe" type="tarbz2">http://xorg.freedesktop.org/archive/individual/driver/xf86-video-vmware-13.0.1.tar.bz2</Archive>
+        <Archive sha1sum="ec38323a260e50c00f033aeff486a3ae53f46997" type="tarbz2">http://xorg.freedesktop.org/archive/individual/driver/xf86-video-vmware-13.0.2.tar.bz2</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">xorg-server</Dependency>
@@ -30,6 +30,14 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>07-26-2014</Date>
+            <Version>13.0.2</Version>
+            <Comment>Update to latest upstream version</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>07-06-2014</Date>
             <Version>13.0.1</Version>
