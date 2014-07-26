@@ -5,12 +5,12 @@
         <Name>xorg-driver-input-evdev</Name>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey.doherty@intel.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>Generic Linux input driver</Summary>
         <Description>The Xorg Evdev Driver package contains Generic Linux input driver for the Xorg X server. It handles keyboard, mouse, touchpads and wacom devices, though for touchpad and wacom advanced handling, additional drivers are required. .</Description>
         <License>MIT</License>
-        <Archive sha1sum="57adaafd29d59b3685c923342717e767a0323474" type="tarbz2">http://xorg.freedesktop.org/releases/individual/driver/xf86-input-evdev-2.7.3.tar.bz2</Archive>
+        <Archive sha1sum="e5e196719c09a02ca275b8eab534753408518e05" type="tarbz2">http://xorg.freedesktop.org/releases/individual/driver/xf86-input-evdev-2.9.0.tar.bz2</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">mtdev</Dependency>
@@ -44,6 +44,14 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>07-26-2014</Date>
+            <Version>2.9.0</Version>
+            <Comment>Update to latest upstream version</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>06-14-2014</Date>
             <Version>2.7.3</Version>
