@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>sound-theme-freedesktop</Name>
+        <Homepage>www.freedesktop.org/wiki/Specifications/sound-theme-spec/</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Packager>
+        <Summary>Freedesktop reference sound theme</Summary>
+        <Description>Freedesktop reference sound theme</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="166bbbafa90c5dd5ebcc405ee6a4fdb35f568bb6" type="tarbz2">http://people.freedesktop.org/~mccann/dist/sound-theme-freedesktop-0.8.tar.bz2</Archive>
+    </Source>
+
+    <Package>
+        <Name>sound-theme-freedesktop</Name>
+        <Files>
+            <Path fileType="data">/usr/share/sounds/freedesktop</Path>
+            <Path fileType="doc">/usr/share/doc/sound-theme-freedesktop</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>07-26-2014</Date>
+            <Version>0.8</Version>
+            <Comment>Add sound-theme-freedesktop to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
