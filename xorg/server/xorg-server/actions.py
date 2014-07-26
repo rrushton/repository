@@ -8,6 +8,7 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 def setup():
     autotools.configure("--with-xkb-output=/var/lib/xkb \
                          --enable-install-setuid \
+                         --enable-suid-wrapper \
                          --with-xkb-path=/usr/share/X11/xkb \
                          --with-fontrootdir=/usr/share/fonts \
                          --prefix=/usr \

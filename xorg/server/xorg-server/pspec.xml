@@ -10,10 +10,10 @@
         <Summary>The Xorg Server is the core of the X Window system. </Summary>
         <Description>The Xorg Server is the core of the X Window system.</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="7df3611010c8ad2c4aaf210074938607c2c351e3" type="tarbz2">http://xorg.freedesktop.org/releases/individual/xserver/xorg-server-1.14.3.tar.bz2</Archive>
+        <Archive sha1sum="0b5ce3868c1c617c21e19ce863aab1ede6e154c4" type="tarbz2">http://xorg.freedesktop.org/releases/individual/xserver/xorg-server-1.16.0.tar.bz2</Archive>
 
         <Patches>
-            <Patch level="1">xorg-server-1.14.3-add_prime_support-1.patch</Patch>
+            <Patch level="1">xorg-server-1.16.0-add_prime_support-1.patch</Patch>
         </Patches>
 
         <BuildDependencies>
@@ -25,6 +25,8 @@
             <Dependency type="pkgconfig">xf86vidmodeproto</Dependency>
             <Dependency type="pkgconfig">xf86dgaproto</Dependency>
             <Dependency type="pkgconfig">dri2proto</Dependency>
+            <Dependency type="pkgconfig">dri3proto</Dependency>
+            <Dependency type="pkgconfig">xshmfence</Dependency>
             <Dependency type="pkgconfig">xcmiscproto</Dependency>
             <Dependency type="pkgconfig">bigreqsproto</Dependency>
             <Dependency type="pkgconfig">randrproto</Dependency>
@@ -49,6 +51,7 @@
         <Name>xorg-server</Name>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec/Xorg.*</Path>
             <Path fileType="library">/usr/lib/xorg</Path>
             <Path fileType="data">/usr/share/X11</Path>
             <Path fileType="man">/usr/share/man</Path>
@@ -72,6 +75,14 @@
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>07-26-2014</Date>
+            <Version>1.16.0</Version>
+            <Comment>Update to latest upstream version</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="6">
             <Date>06-14-2014</Date>
             <Version>1.14.3</Version>
