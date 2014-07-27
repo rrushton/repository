@@ -27,6 +27,11 @@ CMAKE = 3
 PYTHON_MODULES = 4
 PERL_MODULES = 5
 
+class DepObject:
+
+	name = None
+	version = None
+
 class AutoPackage:
 	
 	def __init__(self, uri):
@@ -47,7 +52,9 @@ class AutoPackage:
 		us = os.path.dirname(os.path.abspath(__file__))
 		base_dir = "/".join (us.split ("/")[:-1])
 		self.template_dir = os.path.join (base_dir, "Templates")
-		
+
+		self.build_deps = list()
+
 		self.doc_files = list()
 		
 	def verify (self):
@@ -105,6 +112,9 @@ class AutoPackage:
 					if not file in self.doc_files:
 						self.doc_files.append (file)
 						print "Added %s" % file
+				if "configure.ac" in file:
+                    # Examine this fella for build deps
+					self.build_deps = self.check_build_deps(os.path.join(root, file))
 				if "configure" in file:
 					# Check if we need to employ certain hacks needed in gnome packages
 					fPath = os.path.join (root, file)
@@ -135,12 +145,47 @@ class AutoPackage:
 		# Always delete
 		if os.path.exists (self.file_name):
 			os.remove (self.file_name)
-					
+
+	def check_build_deps(self, path):
+		deps = list()
+		with open(path, "r") as read:
+			for line in read.readlines():
+				line = line.replace("\n","").replace("\r","").strip()
+				# Currently only handles configure.ac
+				if "PKG_CHECK_MODULES" in line:
+					part = line.split(",")[1]
+					part = part.replace("[","").replace(")","").replace("]","")
+					splits = part.split(">=")
+					pkg = splits[0].strip()
+					dep = DepObject()
+					dep.name = pkg
+					if len(splits) > 1:
+						version = splits[1].strip()
+						# Can happen, we don't handle variable expansion.
+						if "$" in version:
+							continue
+						dep.version = version
+					# Check it hasn't been added
+					objs = [x for x in deps if x.name == dep.name]
+					if len(objs) == 0:
+						deps.append(dep)
+
+		return deps
+
 	def create_pspec (self):
 		''' Now the interesting stuff happens. We'll create a pspec.xml automagically :) '''
 		sample_pspec = os.path.join (self.template_dir, "pspec.sample.xml")
 		
 		date = datetime.datetime.now().strftime ("%m-%d-%Y")
+		deps = ""
+		for dep in self.build_deps:
+			depStr = ""
+			if dep.version is not None:
+				depStr = "<Dependency type=\"pkgconfig\" versionFrom=\"%s\">%s</Dependency>" % (dep.version, dep.name)
+			else:
+				depStr = "<Dependency type=\"pkgconfig\">%s</Dependency>" % dep.name
+			deps += "            %s\n" % depStr
+		deps = deps.replace("\n\n","\n")
 		with open (sample_pspec, "r") as sample:
 			mapping =  { 'PackagerName' : self.packager_name, \
 						 'PackagerEmail' : self.email, \
@@ -152,7 +197,8 @@ class AutoPackage:
 						 'ArchiveType': self.file_type, \
 						 'ArchiveURI': self.package_uri, \
 						 'Date': date, \
-						 'Version': self.version_string }
+						 'Version': self.version_string, \
+						 'BuildDeps': deps}
 			lines = sample.read () % mapping
 			
 			with open ("pspec.xml", "w") as pspec:

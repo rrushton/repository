@@ -12,6 +12,10 @@
         <Description>%(Description)s</Description>
         <License>%(License)s</License>
         <Archive sha1sum="%(HashSum)s" type="%(ArchiveType)s">%(ArchiveURI)s</Archive>
+
+        <BuildDependencies>
+%(BuildDeps)s
+        </BuildDependencies>
     </Source>
 
     <Package>
