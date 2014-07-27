@@ -2,7 +2,7 @@
 
 # Created For Evolve OS
 
-from pisi.actionsapi import get, autotools, pisitools
+from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 shelltools.export("HOME", get.workDIR())
 
