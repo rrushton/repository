@@ -10,7 +10,7 @@ import shutil
 from configobj import ConfigObj
 
 ''' Example config file
-~/.solusos/packager
+~/.evolveos/packager
 
 [Packager]
 Name=Your Name Goes Here
@@ -32,7 +32,7 @@ class AutoPackage:
 	def __init__(self, uri):
 		self.package_uri = uri
 		homeDir = os.environ ["HOME"]
-		config = ".solusos/packager"
+		config = ".evolveos/packager"
 		self.config_dir = os.path.join (homeDir, config)
 		if not os.path.exists (self.config_dir):
 			print "Config file not found at %s" % self.config_dir
