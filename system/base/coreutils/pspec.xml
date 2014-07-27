@@ -4,8 +4,8 @@
     <Source>
         <Name>coreutils</Name>
         <Packager>
-            <Name>Evolve OS Packaging</Name>
-            <Email>packaging@evolve-os.com</Email>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>GNU core utilities</Summary>
         <Description> This package contains the basic file, shell and text manipulation
@@ -22,20 +22,34 @@
             users vdir wc who whoami yes
         </Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="3fba93c72fab62f3742fe50957d3a86d4cd08176" type="tarxz">http://ftp.gnu.org/gnu/coreutils/coreutils-8.21.tar.xz</Archive>
+        <Archive sha1sum="adead02839225218b85133fa57b4dba02af2291d" type="tarxz">http://ftp.gnu.org/gnu/coreutils/coreutils-8.23.tar.xz</Archive>
         <Patches>
-            <Patch level="1">coreutils-8.21-i18n-1.patch</Patch>
+            <Patch level="1">coreutils-8.23-i18n-1.patch</Patch>
         </Patches>
     </Source>
 
     <Package>
         <Name>coreutils</Name>
         <Files>
-            <Path fileType="*">/</Path>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/coreutils</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>07-27-2014</Date>
+            <Version>8.23</Version>
+            <Comment>Update to latest upstream version</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>03-09-2013</Date>
             <Version>8.21</Version>

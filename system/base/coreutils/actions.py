@@ -1,7 +1,4 @@
-
 #!/usr/bin/python
-
-# Created For SolusOS
 
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
@@ -13,6 +10,7 @@ movetobin = ["basename", "cat", "chgrp", "chmod", "chown", "cp", "cut", "date", 
 symtousrbin = ["env", "cut", "readlink"]
 
 def setup():
+    autotools.autoreconf("-vfi")
     shelltools.export ("FORCE_UNSAFE_CONFIGURE","1")
     autotools.configure ("--prefix=/usr         \
         --libexecdir=/usr/lib \
