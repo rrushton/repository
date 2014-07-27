@@ -6,54 +6,23 @@
         <Homepage>http://freeglut.sourceforge.net/</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>OpenSource GLUT library</Summary>
         <Description>Freeglut is intended to be a 100% compatible, completely opensourced clone of the GLUT library. GLUT is a window system independent toolkit for writing OpenGL programs, implementing a simple windowing API, which makes learning about and exploring OpenGL programming very easy.</Description>
         <License>MIT</License>
-        <Archive sha1sum="4debbe559c6c9841ce1abaddc9d461d17c6083b1" type="targz">http://downloads.sourceforge.net/freeglut/freeglut-2.8.0.tar.gz</Archive>
-
-        <Patches>
-            <Patch level="1">freeglut-2.8.0-remove_smooth_opengl3_demo-1.patch</Patch>
-        </Patches>
+        <Archive sha1sum="7330b622481e2226c0c9f6d2e72febe96b03f9c4" type="targz">http://downloads.sourceforge.net/freeglut/freeglut-2.8.1.tar.gz</Archive>
 
         <BuildDependencies>
-            <Dependency>libxdmcp-devel</Dependency>
-            <Dependency>mesalib-devel</Dependency>
-            <Dependency>libxi-devel</Dependency>
-            <Dependency>libx11-devel</Dependency>
-            <Dependency>libxfixes-devel</Dependency>
-            <Dependency>libdrm-devel</Dependency>
-            <Dependency>libxrender-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>libxdamage-devel</Dependency>
-            <Dependency>libxext-devel</Dependency>
-            <Dependency>libxrandr-devel</Dependency>
-            <Dependency>libxxf86vm-devel</Dependency>
-            <Dependency>libxau-devel</Dependency>
+            <Dependency type="pkgconfig">gl</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>freeglut</Name>
         <Files>
-            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>libxdmcp</Dependency>
-            <Dependency>mesalib</Dependency>
-            <Dependency>libxi</Dependency>
-            <Dependency>libx11</Dependency>
-            <Dependency>libxfixes</Dependency>
-            <Dependency>libdrm</Dependency>
-            <Dependency>libxrender</Dependency>
-            <Dependency>libxcb</Dependency>
-            <Dependency>libxdamage</Dependency>
-            <Dependency>libxext</Dependency>
-            <Dependency>libxrandr</Dependency>
-            <Dependency>libxxf86vm</Dependency>
-            <Dependency>libxau</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -62,6 +31,7 @@
         <Description>Development files for freeglut</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">freeglut</Dependency>
@@ -69,7 +39,15 @@
     </Package>
 
     <History>
-        <Update release="2">
+        <Update release="4">
+            <Date>07-27-2014</Date>
+            <Version>2.8.1</Version>
+            <Comment>Update for media chain</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
+        <Update release="3">
             <Date>04-07-2013</Date>
             <Version>2.8.0</Version>
             <Comment>Add binary dependencies</Comment>
@@ -93,5 +71,4 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-
 </PISI>
