@@ -6,7 +6,7 @@
         <Homepage>http://ccache.samba.org/</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>compiler cache</Summary>
         <Description>ccache is a compiler cache. It speeds up recompilation by caching previous compilations and detecting when the same compilation is being done again. Supported languages are C, C++, Objective-C and Objective-C++.</Description>
@@ -18,11 +18,20 @@
         <Name>ccache</Name>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/lib/ccache/bin</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>07-27-2014</Date>
+            <Version>3.1.9</Version>
+            <Comment>Add compatibility symlinks to enable usage automatically</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>05-31-2013</Date>
             <Version>3.1.9</Version>
@@ -39,5 +48,4 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-
 </PISI>
