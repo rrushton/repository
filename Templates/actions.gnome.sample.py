@@ -1,9 +1,8 @@
-
 #!/usr/bin/python
 
-# Created For SolusOS
+# Created For Evolve OS
 
-from pisi.actionsapi import shelltools, get, autotools, pisitools
+from pisi.actionsapi import get, autotools, pisitools
 
 shelltools.export("HOME", get.workDIR())
 

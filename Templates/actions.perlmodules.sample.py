@@ -1,8 +1,8 @@
 #!/usr/bin/python
 
-# Created For SolusOS
+# Created For Evolve OS
 
-from pisi.actionsapi import shelltools, get, perlmodules, pisitools
+from pisi.actionsapi import perlmodules, pisitools
 
 
 def setup():

@@ -1,8 +1,8 @@
 #!/usr/bin/python
 
-# Created For SolusOS
+# Created For Evolve OS
 
-from pisi.actionsapi import shelltools, get, autotools, pisitools
+from pisi.actionsapi import get, autotools, pisitools
 
 
 def setup():
@@ -14,6 +14,6 @@ def build():
 
 
 def install():
-    autotools.install()
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
     #EXTRADOCS#
