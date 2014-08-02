@@ -10,7 +10,7 @@
         <Summary>The GNOME Control Center</Summary>
         <Description>The GNOME Control Center</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="9d59e493eb70d86c755b1ecb3737cc6a80f4b838" type="tarxz">http://ftp.acc.umu.se/pub/gnome/sources/gnome-control-center/3.10/gnome-control-center-3.10.3.tar.xz</Archive>
+        <Archive sha1sum="5c00713dc7105f56a52a8d0dd477367402153e4f" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-control-center/3.12/gnome-control-center-3.12.1.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
@@ -22,6 +22,7 @@
             <Dependency type="pkgconfig">gnome-settings-daemon</Dependency>
             <Dependency type="pkgconfig">libgnome-menu-3.0</Dependency>
             <Dependency type="pkgconfig">goa-backend-1.0</Dependency>
+            <Dependency type="pkgconfig">grilo-0.2</Dependency>
             <Dependency type="pkgconfig">libsoup-2.4</Dependency>
             <Dependency type="pkgconfig">colord-gtk</Dependency>
             <Dependency type="pkgconfig">accountsservice</Dependency>
@@ -33,6 +34,8 @@
             <Dependency type="pkgconfig">ModemManager</Dependency>
             <Dependency type="pkgconfig">libnm-gtk</Dependency>
             <Dependency type="pkgconfig">libwacom</Dependency>
+            <Dependency type="pkgconfig">clutter-1.0</Dependency>
+            <Dependency type="pkgconfig">clutter-gtk-1.0</Dependency>
             <Dependency>kerberos-devel</Dependency>
 
             <!-- TODO: Post SAMBA inclusion, rebuild for printing panel //-->
@@ -68,6 +71,14 @@
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>08-02-2014</Date>
+            <Version>3.12.1</Version>
+            <Comment>Update to 3.12.1</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="6">
             <Date>07-26-2014</Date>
             <Version>3.10.3</Version>
