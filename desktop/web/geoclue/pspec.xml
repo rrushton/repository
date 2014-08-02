@@ -10,11 +10,12 @@
         <Summary>GeoInformation service</Summary>
         <Description>GeoClue is a modular geoinformation service built on top of the D-Bus messaging system. The goal of the GeoClue project is to make creating location-aware applications as simple as possible.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="2bf943e5cfbe714d9247e4b01eee64b3a60efdd1" type="tarxz">http://www.freedesktop.org/software/geoclue/releases/1.99/geoclue-1.99.3.tar.xz</Archive>
+        <Archive sha1sum="d13af576ffd33a730b178b3f6ffdaae223fff600" type="tarxz">http://www.freedesktop.org/software/geoclue/releases/2.1/geoclue-2.1.9.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">json-glib-1.0</Dependency>
             <Dependency type="pkgconfig">libsoup-2.4</Dependency>
+            <Dependency type="pkgconfig">mm-glib</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -29,8 +30,11 @@
             <Path fileType="data">/usr/share/geoclue-providers</Path>
             <Path fileType="data">/usr/share/glib-2.0</Path>
             <Path fileType="data">/usr/share/dbus-1/</Path>
+            <Path fileType="data">/usr/lib/systemd/system</Path>
             <Path fileType="data">/etc/dbus-1/system.d</Path>
             <Path fileType="data">/usr/share/geoclue-2.0</Path>
+            <Path fileType="data">/usr/share/applications/*.desktop</Path>
+            <Path fileType="config">/etc/geoclue/geoclue.conf</Path>
         </Files>
     </Package>
 
@@ -49,6 +53,14 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>08-02-2014</Date>
+            <Version>2.1.9</Version>
+            <Comment>Update for gnome-maps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>06-22-2014</Date>
             <Version>1.99.3</Version>
