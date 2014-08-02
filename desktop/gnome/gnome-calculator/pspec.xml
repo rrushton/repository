@@ -20,10 +20,11 @@
             Integrated into the GNOME Desktop
         </Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="19c951710e0ddab64aefd5edf4ce6d3357360dcc" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/gnome-calculator/3.10/gnome-calculator-3.10.0.tar.xz</Archive>
+        <Archive sha1sum="33c977c6180402dcf9501dc45226001aa89ffe59" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/gnome-calculator/3.12/gnome-calculator-3.12.3.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
+            <Dependency type="pkgconfig">gtksourceview-3.0</Dependency>
             <Dependency>itstool</Dependency>
         </BuildDependencies>
     </Source>
@@ -42,6 +43,14 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>08-02-2014</Date>
+            <Version>3.12.3</Version>
+            <Comment>Update to 3.12.3</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>07-04-2014</Date>
             <Version>3.10.0</Version>
