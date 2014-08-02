@@ -11,7 +11,7 @@
         <Summary>The GSettings Desktop Schemas package contains a collection of GSettings schemas for settings shared by various components of a GNOME Desktop.</Summary>
         <Description>The GSettings Desktop Schemas package contains a collection of GSettings schemas for settings shared by various components of a GNOME Desktop.</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="5966274277714e19369b579e9093461cca5ee6e5" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gsettings-desktop-schemas/3.10/gsettings-desktop-schemas-3.10.0.tar.xz</Archive>
+        <Archive sha1sum="52da72ef60eb9190c7b8000cc8c6e8f672d1dafe" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gsettings-desktop-schemas/3.12/gsettings-desktop-schemas-3.12.2.tar.xz</Archive>
 
         <Patches>
             <Patch level="1">0001-schemas-Apply-default-Evolve-OS-branding.patch</Patch>
@@ -49,6 +49,14 @@
 
 
     <History>
+        <Update release="12">
+            <Date>08-02-2014</Date>
+            <Version>3.12.2</Version>
+            <Comment>Update to 3.12.2</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="11">
             <Date>07-11-2014</Date>
             <Version>3.10.0</Version>
