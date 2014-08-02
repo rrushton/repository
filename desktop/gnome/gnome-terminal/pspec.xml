@@ -10,7 +10,7 @@
         <Summary>GNOME Terminal Emulator</Summary>
         <Description>GNOME Terminal Emulator</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="57838a0946728734b71f87785475a9c62c6ac183" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-terminal/3.10/gnome-terminal-3.10.0.tar.xz</Archive>
+        <Archive sha1sum="6e2b6b0a0e1239bb41cd20f161ba9c16e8c083b6" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/gnome-terminal/3.12/gnome-terminal-3.12.3.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
@@ -19,6 +19,7 @@
             <Dependency type="pkgconfig">dconf</Dependency>
             <Dependency type="pkgconfig">gconf-2.0</Dependency>
             <Dependency type="pkgconfig">libnautilus-extension</Dependency>
+            <Dependency>appdata-tools</Dependency>
             <Dependency>desktop-file-utils</Dependency>
             <Dependency>itstool</Dependency>
         </BuildDependencies>
@@ -39,10 +40,19 @@
             <Path fileType="library">/usr/lib/nautilus/extensions-3.0/*.so</Path>
             <Path fileType="data">/usr/share/dbus-1</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas</Path>
+            <Path fileType="data">/usr/share/appdata</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="8">
+            <Date>08-02-2014</Date>
+            <Version>3.12.3</Version>
+            <Comment>Enable nautilus extension</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="7">
             <Date>07-04-2014</Date>
             <Version>3.10.0</Version>

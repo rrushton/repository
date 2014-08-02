@@ -10,6 +10,7 @@ shelltools.export("HOME", get.workDIR())
 def setup():
     autotools.configure("--libexecdir=/usr/lib/gnome-terminal \
                          --with-nautilus-extension \
+                         --disable-search-provider \
                          --disable-static")
 
 def build():
