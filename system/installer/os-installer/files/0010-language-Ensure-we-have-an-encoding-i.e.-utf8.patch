@@ -1,0 +1,26 @@
+From b897c1d53c2fb81719fa8d9ef709f05e81fb37ce Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey.doherty@gmail.com>
+Date: Sun, 3 Aug 2014 14:33:57 +0100
+Subject: [PATCH 10/10] language: Ensure we have an encoding (i.e. utf8)
+
+---
+ os_installer/pages/language.py | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/os_installer/pages/language.py b/os_installer/pages/language.py
+index 6ad5210..c818ca6 100644
+--- a/os_installer/pages/language.py
++++ b/os_installer/pages/language.py
+@@ -186,4 +186,8 @@ class LanguagePage(BasePage):
+         return self.locale_item.language_string
+ 
+     def seed(self, setup):
+-        setup.language = self.locale_item.locale
++        # Ensure we have .utf8 here for gnome-terminal to work
++        locale = self.locale_item.locale
++        if not "." in locale:
++            locale = "%s.utf8" % locale
++        setup.language = locale
+-- 
+1.8.4
+

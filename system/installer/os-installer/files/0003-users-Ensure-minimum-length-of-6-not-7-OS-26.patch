@@ -1,7 +1,7 @@
 From 6af3b4c49cddc9e709b02b87a97d02d962e02a3c Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey.doherty@gmail.com>
 Date: Wed, 9 Jul 2014 02:12:28 +0100
-Subject: [PATCH 3/7] users: Ensure minimum length of 6, not 7 (OS-26)
+Subject: [PATCH 03/10] users: Ensure minimum length of 6, not 7 (OS-26)
 
 ---
  os_installer/pages/users.py | 4 ++--
@@ -29,5 +29,5 @@ index 1e4d300..6c86ea4 100644
                  self.update_score(self.pword_field2, True)
              else:
 -- 
-1.9.1
+1.8.4
 
