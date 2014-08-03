@@ -11,7 +11,7 @@
         <Summary>Symbolic icon theme for GNOME</Summary>
         <Description>The GNOME Icon Theme Symbolic package contains symbolic icons for the default GNOME icon theme.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="1f5cc286be5366310506409839b04057870c9fca" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-icon-theme-symbolic/3.10/gnome-icon-theme-symbolic-3.10.0.tar.xz</Archive>
+        <Archive sha1sum="e0d84c1d8983f37c7697afd55df69de8aae02b03" type="tarxz">http://ftp.acc.umu.se/pub/gnome/sources/gnome-icon-theme-symbolic/3.12/gnome-icon-theme-symbolic-3.12.0.tar.xz</Archive>
 
         <BuildDependencies>
             <!-- Due to gtk-update-icon-cache //-->
@@ -33,6 +33,14 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>08-02-2014</Date>
+            <Version>3.12.0</Version>
+            <Comment>Update to 3.12.0</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>06-15-2014</Date>
             <Version>3.10.0</Version>
