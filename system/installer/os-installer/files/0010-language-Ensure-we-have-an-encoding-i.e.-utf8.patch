@@ -1,7 +1,7 @@
 From b897c1d53c2fb81719fa8d9ef709f05e81fb37ce Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey.doherty@gmail.com>
 Date: Sun, 3 Aug 2014 14:33:57 +0100
-Subject: [PATCH 10/10] language: Ensure we have an encoding (i.e. utf8)
+Subject: [PATCH 10/11] language: Ensure we have an encoding (i.e. utf8)
 
 ---
  os_installer/pages/language.py | 6 +++++-

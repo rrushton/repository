@@ -1,7 +1,7 @@
 From c72eef1fa3747f5de9ca3c6d9d945c2f57daa8ce Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey.doherty@gmail.com>
 Date: Sun, 13 Jul 2014 19:54:26 +0100
-Subject: [PATCH 07/10] Ensure we say alpha2 in the version string
+Subject: [PATCH 07/11] Ensure we say alpha2 in the version string
 
 ---
  dist/install.conf | 2 +-

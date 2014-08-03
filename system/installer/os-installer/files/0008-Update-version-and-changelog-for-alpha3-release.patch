@@ -1,7 +1,7 @@
 From 9039d78991e9045b3ca772e557aa4f9d9bbf909c Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey.doherty@gmail.com>
 Date: Sun, 3 Aug 2014 14:27:21 +0100
-Subject: [PATCH 08/10] Update version and changelog for alpha3 release
+Subject: [PATCH 08/11] Update version and changelog for alpha3 release
 
 ---
  changes/index.html | 20 ++++++++++----------
