@@ -11,7 +11,7 @@
         <Summary>Budgie Desktop</Summary>
         <Description>Budgie Desktop</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="427a9de9f96bea3922db4bdfa42d04365dec3978" type="tarxz">https://github.com/evolve-os/budgie-desktop/releases/download/v5.1/budgie-desktop-5.1.tar.xz</Archive>
+        <Archive sha1sum="76d1ea6ed434e0029625238a4cd893075fe77d4e" type="tarxz">https://evolve-os.com/sources/budgie-desktop-5.1.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
@@ -26,15 +26,6 @@
         </BuildDependencies>
 
         <Patches>
-            <Patch level="1">0001-Update-README-for-maintainers.patch</Patch>
-            <Patch level="1">0002-Add-missing-libpeas-1.0-dependency-fixes-56.patch</Patch>
-            <Patch level="1">0003-panel-Use-build-time-locations-to-know-where-to-load.patch</Patch>
-            <Patch level="1">0004-README-Remove-maintainer-info-issue-resolved-in-prev.patch</Patch>
-            <Patch level="1">0005-panel-Fix-up-previous-half-arsed-commit.patch</Patch>
-            <Patch level="1">0006-Because-some-people-are-serious-morons.patch</Patch>
-            <Patch level="1">0007-session-Rewrite-old-budgie-session-in-Vala.patch</Patch>
-            <Patch level="1">0008-session-Fix-incorrect-file-header.patch</Patch>
-
             <!-- Currently Evolve OS specific - needs upstreaming back into Budgie //-->
             <Patch level="1">evolveos-fix.patch</Patch>
         </Patches>
@@ -72,6 +63,14 @@
     </Package>
 
     <History>
+        <Update release="13">
+            <Date>08-03-2014</Date>
+            <Version>5.1</Version>
+            <Comment>Sync with git so we don't introduce regressions with 3.12 update</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="12">
             <Date>08-03-2014</Date>
             <Version>5.1</Version>
