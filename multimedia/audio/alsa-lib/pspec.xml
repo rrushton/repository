@@ -23,7 +23,11 @@
             <Path fileType="library">/usr/lib/alsa-lib</Path>
             <Path fileType="config">/usr/share/alsa</Path>
             <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="config">/etc/asound.conf</Path>
         </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/asound.conf">asound.conf</AdditionalFile>
+        </AdditionalFiles>
     </Package>
 
     <Package>
@@ -42,6 +46,14 @@
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>08-03-2014</Date>
+            <Version>1.0.27.2</Version>
+            <Comment>Ensure PulseAudio is always used</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="4">
             <Date>06-15-2014</Date>
             <Version>1.0.27.2</Version>
