@@ -7,8 +7,9 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
-    autotools.configure("--enable-kms-only \
-                         --with-default-accel=sna \
+    autotools.configure("--with-default-accel=sna \
+                         --enable-uxa \
+                         --disable-dri3 \
                          --enable-glamor")
 
 def build():
