@@ -11,7 +11,7 @@
         <Summary>Budgie Desktop</Summary>
         <Description>Budgie Desktop</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="d2ea9077b89953c59c9683e0782033faa9a5db4a" type="tarxz">https://evolve-os.com/sources/budgie-desktop-5.1.tar.xz</Archive>
+        <Archive sha1sum="29f736b2e6857ee187f6a703fb9de93cfa7f5ecb" type="tarxz">https://github.com/evolve-os/budgie-desktop/releases/download/v6/budgie-desktop-6.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
@@ -64,6 +64,14 @@
     </Package>
 
     <History>
+        <Update release="15">
+            <Date>08-20-2014</Date>
+            <Version>6</Version>
+            <Comment>Latest upstream release of Budgie Desktop</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="14">
             <Date>08-15-2014</Date>
             <Version>5.1</Version>
