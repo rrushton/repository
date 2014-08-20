@@ -11,6 +11,10 @@
         <Description>GNOME library to access and manipulate menus</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="29226e7a8ab59984cabb13545cc0ec28cba55398" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-menus/3.10/gnome-menus-3.10.1.tar.xz</Archive>
+
+        <Patches>
+            <Patch level="1">0001-Do-not-hide-System-Settings-category-from-menu-listi.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
@@ -46,6 +50,14 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>08-20-2014</Date>
+            <Version>3.10.1</Version>
+            <Comment>Do not hide System Settings category from menu listings</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>06-15-2014</Date>
             <Version>3.10.1</Version>
