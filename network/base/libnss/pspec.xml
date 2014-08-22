@@ -49,6 +49,14 @@
     </Package>
 
     <History>
+        <Update release="8">
+            <Date>07-22-2014</Date>
+            <Version>3.16.1</Version>
+            <Comment>Fix ridiculous error with symlink</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="7">
             <Date>07-05-2014</Date>
             <Version>3.16.1</Version>
