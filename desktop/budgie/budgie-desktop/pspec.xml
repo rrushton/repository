@@ -11,7 +11,7 @@
         <Summary>Budgie Desktop</Summary>
         <Description>Budgie Desktop</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="29f736b2e6857ee187f6a703fb9de93cfa7f5ecb" type="tarxz">https://github.com/evolve-os/budgie-desktop/releases/download/v6/budgie-desktop-6.tar.xz</Archive>
+        <Archive sha1sum="021e13d43130e307a00299b83283e287d368c6d7" type="tarxz">https://evolve-os.com/sources/budgie-desktop-6.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
@@ -64,6 +64,22 @@
     </Package>
 
     <History>
+        <Update release="17">
+            <Date>08-25-2014</Date>
+            <Version>6</Version>
+            <Comment>Sync with git for status-area popover changes (volume control)</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
+        <Update release="16">
+            <Date>08-25-2014</Date>
+            <Version>6</Version>
+            <Comment>Sync with git for X11 tray and multihead tweaks</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="15">
             <Date>08-20-2014</Date>
             <Version>6</Version>
