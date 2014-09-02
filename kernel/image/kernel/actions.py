@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 #
-KVERSION = "3.15.6"
+KVERSION = "3.16.1"
 
 from pisi.actionsapi import kerneltools
 from pisi.actionsapi import shelltools
@@ -12,7 +12,7 @@ from pisi.actionsapi import get
 NoStrip = ["/boot"]
 
 shelltools.export("KBUILD_BUILD_USER", "evolveos")
-shelltools.export("KBUILD_BUILD_HOST", "hercules")
+shelltools.export("KBUILD_BUILD_HOST", "bodacious")
 shelltools.export("PYTHONDONTWRITEBYTECODE", "1")
 shelltools.export("HOME", get.workDIR())
 
