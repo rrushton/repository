@@ -3,80 +3,60 @@
 <PISI>
     <Source>
         <Name>thunderbird</Name>
+        <Homepage>https://www.mozilla.org/</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
-        <Summary>Thunderbird email client</Summary>
-        <Description>Thunderbird email client</Description>
+        <Summary>Thunderbird Email Client</Summary>
+        <Description>Thunderbird Email Client</Description>
         <License>MPL-1.1</License>
-        <Archive sha1sum="4aea18b5bed2dd013a6daa2cfe8aa302571c4fcd" type="tarbz2">http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/17.0.8/linux-i686/en-US/thunderbird-17.0.8.tar.bz2</Archive>
+        <Archive sha1sum="08d231541a80a79180826f98dde732c5796191f4" type="tarbz2">http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/31.1.0/source/thunderbird-31.1.0.source.tar.bz2</Archive>
+
+        <AdditionalFiles>
+            <AdditionalFile target="mozconfig">config</AdditionalFile>
+        </AdditionalFiles>
+
+        <BuildDependencies>
+            <Dependency type="pkgconfig">libevent</Dependency>
+            <Dependency type="pkgconfig">gtk+-2.0</Dependency>
+            <Dependency type="pkgconfig">cairo</Dependency>
+            <Dependency type="pkgconfig">atk</Dependency>
+            <Dependency type="pkgconfig">libstartup-notification-1.0</Dependency>
+            <Dependency type="pkgconfig">alsa</Dependency>
+            <Dependency type="pkgconfig">libpulse</Dependency>
+            <Dependency type="pkgconfig">gstreamer-plugins-base-1.0</Dependency>
+            <Dependency type="pkgconfig">x11</Dependency>
+            <Dependency type="pkgconfig">xt</Dependency>
+            <Dependency type="pkgconfig">icu-i18n</Dependency>
+            <Dependency type="pkgconfig">sqlite3</Dependency>
+            <!-- We have libpng15, and thunderbird uses its own build for now.
+            <Dependency type="pkgconfig">libpng</Dependency>//-->
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>yasm</Dependency>
+        </BuildDependencies>
     </Source>
 
     <Package>
         <Name>thunderbird</Name>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="executable">/opt/thunderbird</Path>
+            <Path fileType="library">/usr/lib/thunderbird-31.1.0</Path>
             <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile permission="0755" target="/usr/bin/thunderbird">sh-launcher</AdditionalFile>
             <AdditionalFile permission="0644" target="/usr/share/applications/thunderbird.desktop">thunderbird.desktop</AdditionalFile>
         </AdditionalFiles>
-        <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>expat</Dependency>
-            <Dependency>harfbuzz</Dependency>
-            <Dependency>libxcursor</Dependency>
-            <Dependency>libstdc++</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libnspr</Dependency>
-            <Dependency>libxcb</Dependency>
-            <Dependency>pango</Dependency>
-            <Dependency>dbus-glib</Dependency>
-            <Dependency>libxau</Dependency>
-            <Dependency>libicu</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>libxdmcp</Dependency>
-            <Dependency>libnss</Dependency>
-            <Dependency>alsa-lib</Dependency>
-            <Dependency>glibc</Dependency>
-            <Dependency>fontconfig</Dependency>
-            <Dependency>libice</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libxt</Dependency>
-            <Dependency>libxinerama</Dependency>
-            <Dependency>libatk</Dependency>
-            <Dependency>libpng</Dependency>
-            <Dependency>pixman</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>libxext</Dependency>
-            <Dependency>libxrandr</Dependency>
-            <Dependency>libxdamage</Dependency>
-            <Dependency>libffi</Dependency>
-            <Dependency>libgtk-2</Dependency>
-            <Dependency>util-linux</Dependency>
-            <Dependency>libxfixes</Dependency>
-            <Dependency>freetype2</Dependency>
-            <Dependency>libcairo</Dependency>
-            <Dependency>dbus</Dependency>
-            <Dependency>libx11</Dependency>
-            <Dependency>libxcomposite</Dependency>
-            <Dependency>libxrender</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libsm</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <History>
         <Update release="1">
-            <Date>09-01-2013</Date>
-            <Version>17.0.8</Version>
+            <Date>09-02-2014</Date>
+            <Version>31.1.0</Version>
             <Comment>Add thunderbird to repositories</Comment>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Update>
     </History>
-
 </PISI>

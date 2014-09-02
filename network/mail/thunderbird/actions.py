@@ -1,9 +1,18 @@
 #!/usr/bin/python
 
-# Created For SolusOS
 
-from pisi.actionsapi import pisitools
+from pisi.actionsapi import shelltools, get, autotools, pisitools
+
+def setup():
+    pisitools.dosed("mozconfig", "##JOBCOUNT##", get.makeJOBS())
+
+def build():
+    autotools.make("-f client.mk")
 
 
 def install():
-    pisitools.insinto ("/opt/thunderbird", "*")
+    autotools.rawInstall("-f client.mk install INSTALL_SDK= DESTDIR=%s" % get.installDIR())
+    pisitools.dosym("/usr/lib/thunderbird-31.1.0/chrome/icons/mozicon128.png",
+                     "/usr/share/pixmaps/thunderbird.png")
+    pisitools.dosym("/usr/lib/mozilla/plugins",
+                    "/usr/lib/thunderbird-31.1.0/plugins")
