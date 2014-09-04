@@ -154,6 +154,13 @@ def parse_pspec(location):
 
 
 def main():
+    # filter..
+    filters = list()
+    if len(sys.argv) > 2 and sys.argv[1] == "-f":
+        t_filters = sys.argv[2].split(",")
+        for f in t_filters:
+            filters.append(f.strip())
+
     # Walk the tree to find all packages
     print "Discovering all source files..."
     for root, dirs, files in os.walk(repo_base):
@@ -184,7 +191,11 @@ def main():
                     patch = os.path.join(basedir, "files/security/%s.patch" % vulnerability.cve_id.lower())
                     if not os.path.exists(patch):
                         reports += 1
-                        print_report(vulnerability)
+                        name = "%s:%s" % (vulnerability.vendor, vulnerability.product)
+                        if name in filters:
+                            continue
+                        else:
+                            print_report(vulnerability)
 
     print "Discovered %d potentially insecure packages" % reports
 
