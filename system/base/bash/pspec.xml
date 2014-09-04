@@ -5,7 +5,7 @@
         <Name>bash</Name>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>bash (sh-compatible shell)</Summary>
         <Description>bash (sh-compatible shell) The GNU Bourne-Again SHell.  Bash is a sh-compatible command interpreter that executes commands read from the standard input or from a file.  Bash also incorporates useful features from the Korn and C shells (ksh and csh).  Bash is ultimately intended to be a conformant implementation of the IEEE Posix Shell and Tools specification (IEEE Working Group 1003.2). Bash must be present for the system to boot properly.</Description>
@@ -57,6 +57,8 @@
             <Patch level="0" compressionType="gzip">bash42-043.gz</Patch>
             <Patch level="0" compressionType="gzip">bash42-044.gz</Patch>
             <Patch level="0" compressionType="gzip">bash42-045.gz</Patch>
+            <Patch level="0" compressionType="gzip">bash42-046.gz</Patch>
+            <Patch level="0" compressionType="gzip">bash42-047.gz</Patch>
         </Patches>
 
         <BuildDependencies>
@@ -87,14 +89,17 @@
             <AdditionalFile owner="root" permission="0644" target="/etc/profile.d/50-umask.sh">profile/50-umask.sh</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/profile">profile/profile</AdditionalFile>
         </AdditionalFiles>
-
-        <RuntimeDependencies>
-            <Dependency>ncurses</Dependency>
-            <Dependency>readline</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <History>
+        <Update release="8">
+            <Date>09-04-2014</Date>
+            <Version>4.2.047</Version>
+            <Comment>Update to last 4.2 version</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="7">
             <Date>09-14-2013</Date>
             <Version>4.2.045</Version>
@@ -154,6 +159,4 @@
             <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
-
 </PISI>
-
