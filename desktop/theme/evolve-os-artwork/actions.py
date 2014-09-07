@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-from pisi.actionsapi import autotools
+from pisi.actionsapi import autotools, pisitools
 
 def setup():
     autotools.configure()
@@ -10,3 +10,4 @@ def build():
 
 def install():
     autotools.install()
+    pisitools.insinto("/usr/share/themes", "../gtk/Evotex")
