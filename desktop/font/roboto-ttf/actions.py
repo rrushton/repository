@@ -10,3 +10,4 @@ WorkDir = "."
 def install():
     for i in glob.glob("*.ttf"):
         pisitools.insinto(FontDir, i)
+    shelltools.system("chmod 644 -R %s/%s" % (get.installDIR(), FontDir))
