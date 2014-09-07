@@ -1,4 +1,4 @@
-From b029caa900a1348156b9d1486b8b96fbbf904551 Mon Sep 17 00:00:00 2001
+From e26dfac0002f4a8dad3e1ac10bed5aea456ec277 Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey.doherty@gmail.com>
 Date: Fri, 11 Jul 2014 18:17:10 +0100
 Subject: [PATCH 2/2] schemas: Use Super_L for panel-main-menu keybinding
@@ -8,7 +8,7 @@ Subject: [PATCH 2/2] schemas: Use Super_L for panel-main-menu keybinding
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/schemas/org.gnome.desktop.wm.keybindings.gschema.xml.in.in b/schemas/org.gnome.desktop.wm.keybindings.gschema.xml.in.in
-index a502fef..5ad6427 100644
+index 4db8799..02b47fc 100644
 --- a/schemas/org.gnome.desktop.wm.keybindings.gschema.xml.in.in
 +++ b/schemas/org.gnome.desktop.wm.keybindings.gschema.xml.in.in
 @@ -128,7 +128,7 @@
@@ -21,5 +21,5 @@ index a502fef..5ad6427 100644
      </key>
      <key name="panel-run-dialog" type="as">
 -- 
-1.9.1
+1.8.4
 
