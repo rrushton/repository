@@ -5,7 +5,7 @@
         <Name>gtk2-engine-murrine</Name>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey.doherty@gmail.com</Email>
         </Packager>
         <Summary>Murrine Engine for GTK2 Themes</Summary>
         <Description>Murrine Engine for GTK2 Themes</Description>
@@ -13,33 +13,10 @@
         <Archive sha1sum="ddaca56b6e10736838572014ae9d20b814242615" type="tarxz">https://launchpad.net/ubuntu/+archive/primary/+files/gtk2-engines-murrine_0.98.2.orig.tar.xz</Archive>
 
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>harfbuzz-devel</Dependency>
-            <Dependency>libxcursor-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency>libxau-devel</Dependency>
-            <Dependency>libicu-devel</Dependency>
-            <Dependency>libxdmcp-devel</Dependency>
-            <Dependency>libice-devel</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
-            <Dependency>libxinerama-devel</Dependency>
-            <Dependency>libatk-devel</Dependency>
-            <Dependency>libpng-devel</Dependency>
-            <Dependency>pixman-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>libxext-devel</Dependency>
-            <Dependency>libxrandr-devel</Dependency>
-            <Dependency>libxdamage-devel</Dependency>
-            <Dependency>libffi-devel</Dependency>
-            <Dependency>libgtk-2-devel</Dependency>
-            <Dependency>libxfixes-devel</Dependency>
-            <Dependency>libcairo-devel</Dependency>
-            <Dependency>libx11-devel</Dependency>
-            <Dependency>libxcomposite-devel</Dependency>
-            <Dependency>libxrender-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libsm-devel</Dependency>
+            <Dependency type="pkgconfig">gtk+-2.0</Dependency>
+            <Dependency type="pkgconfig">pango</Dependency>
+            <Dependency type="pkgconfig">cairo</Dependency>
+            <Dependency type="pkgconfig">atk</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -50,46 +27,17 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/gtk-engines</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>expat</Dependency>
-            <Dependency>harfbuzz</Dependency>
-            <Dependency>libxcursor</Dependency>
-            <Dependency>libstdc++</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libxcb</Dependency>
-            <Dependency>pango</Dependency>
-            <Dependency>libxau</Dependency>
-            <Dependency>libicu</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>libxdmcp</Dependency>
-            <Dependency>glibc</Dependency>
-            <Dependency>fontconfig</Dependency>
-            <Dependency>libice</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libxinerama</Dependency>
-            <Dependency>libatk</Dependency>
-            <Dependency>libpng</Dependency>
-            <Dependency>pixman</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>libxext</Dependency>
-            <Dependency>libxrandr</Dependency>
-            <Dependency>libxdamage</Dependency>
-            <Dependency>libffi</Dependency>
-            <Dependency>libgtk-2</Dependency>
-            <Dependency>util-linux</Dependency>
-            <Dependency>libxfixes</Dependency>
-            <Dependency>freetype2</Dependency>
-            <Dependency>libcairo</Dependency>
-            <Dependency>libx11</Dependency>
-            <Dependency>libxcomposite</Dependency>
-            <Dependency>libxrender</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libsm</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>09-07-2014</Date>
+            <Version>0.98.2</Version>
+            <Comment>Cleanup packaging</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>06-18-2013</Date>
             <Version>0.98.2</Version>
@@ -98,6 +46,5 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-
 </PISI>
 
