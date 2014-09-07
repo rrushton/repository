@@ -12,6 +12,10 @@
         <Description>Early Testing of Evo Assist Tool</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="1ac23c8d03bcbe9b792877d18a3a422afad516b7" type="zip">https://github.com/evolve-os/evoassist/archive/v1.zip</Archive>
+
+        <Patches>
+            <Patch level="1">fix.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
@@ -25,9 +29,20 @@
             <Dependency>libgtk-3</Dependency>
             <Dependency>python-gobject</Dependency>
         </RuntimeDependencies>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" target="/usr/bin/evo-assist-ui-wrap" permission="0755">evoassist-ui-wrap.sh</AdditionalFile>
+        </AdditionalFiles>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>09-07-2014</Date>
+            <Version>1</Version>
+            <Comment>Quick fix to enable launching from menu</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>08-24-2014</Date>
             <Version>1</Version>
