@@ -11,7 +11,7 @@
         <Summary>Budgie Desktop</Summary>
         <Description>Budgie Desktop</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="eebe16f0219cb110a349c422aa27037be29a7662" type="tarxz">https://evolve-os.com/sources/budgie-desktop-7.tar.xz</Archive>
+        <Archive sha1sum="95cc20cb0ed0b1c1623b284eeac9cb2781541bb0" type="tarxz">https://evolve-os.com/sources/budgie-desktop-7.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
@@ -64,6 +64,14 @@
     </Package>
 
     <History>
+        <Update release="21">
+            <Date>09-07-2014</Date>
+            <Version>7</Version>
+            <Comment>Sync with git for sizing fixes, and default tray in A4</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="20">
             <Date>09-06-2014</Date>
             <Version>7</Version>
