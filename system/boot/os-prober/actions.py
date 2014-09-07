@@ -28,3 +28,4 @@ def install():
     pisitools.insinto("/usr/lib/os-probes/mounted", "os-probes/mounted/powerpc/20macosx")
 
     pisitools.dodoc("debian/copyright")
+    pisitools.dodir("/var/lib/os-prober/mounts")
