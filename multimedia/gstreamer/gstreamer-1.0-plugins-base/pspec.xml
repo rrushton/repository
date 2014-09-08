@@ -11,13 +11,20 @@
         <Summary>GStreamer base plug-ins and elements</Summary>
         <Description>The GStreamer Base Plug-ins is a well-groomed and well-maintained collection of GStreamer plug-ins and elements, spanning the range of possible types of elements one would want to write for GStreamer. You will need at least one of Good, Bad, Ugly or Libav plugins for GStreamer applications to function properly.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="8cf49dded9c44cd1f1a742bfadaeb7fb83dc5979" type="tarxz">http://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.0.6.tar.xz</Archive>
+        <Archive sha1sum="0818947329495d15ba64373fd891b7ae6ed887d7" type="tarxz">http://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.4.1.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gstreamer-1.0</Dependency>
             <Dependency type="pkgconfig">ogg</Dependency>
             <Dependency type="pkgconfig">vorbis</Dependency>
             <Dependency type="pkgconfig">theora</Dependency>
+            <Dependency type="pkgconfig">alsa</Dependency>
+            <Dependency type="pkgconfig">pangocairo</Dependency>
+            <Dependency type="pkgconfig">x11</Dependency>
+            <Dependency type="pkgconfig">xv</Dependency>
+            <Dependency type="pkgconfig">xext</Dependency>
+
+            <!-- missing, libvisual, cdparanoia. not sure how bothered we are yet. //-->
         </BuildDependencies>
     </Source>
 
@@ -26,8 +33,7 @@
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib/gstreamer-1.0</Path>
-            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
-            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/gst-plugins-base</Path>
@@ -64,6 +70,14 @@
     </Package>
 
     <History>
+        <Update release="6">
+            <Date>09-08-2014</Date>
+            <Version>1.4.1</Version>
+            <Comment>Update to latest upstream version</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="5">
             <Date>06-15-2014</Date>
             <Version>1.0.6</Version>

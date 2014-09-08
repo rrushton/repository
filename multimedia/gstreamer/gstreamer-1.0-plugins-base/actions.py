@@ -9,7 +9,7 @@ shelltools.export("HOME", get.workDIR())
 
 def setup():
     autotools.configure("--disable-static \
-                         --with-package-name=\"GStreamer Base Plugins 1.0.6 Evolve OS\" \
+                         --with-package-name=\"GStreamer Base Plugins 1.4.1 Evolve OS\" \
                          --with-package-origin=\"https://evolve-os.com\"")
 
 def build():
