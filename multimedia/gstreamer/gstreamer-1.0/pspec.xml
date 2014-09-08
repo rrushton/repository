@@ -55,6 +55,14 @@
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>09-08-2014</Date>
+            <Version>1.4.1</Version>
+            <Comment>Fix URI and version info</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="6">
             <Date>09-08-2014</Date>
             <Version>1.4.1</Version>
