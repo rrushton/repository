@@ -1,7 +1,7 @@
 From 272483a6f4fedbfaea6b819b7b847220587a836c Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey.doherty@gmail.com>
 Date: Tue, 8 Jul 2014 19:38:20 +0100
-Subject: [PATCH] build: Ensure we set automatic dependency minimum release
+Subject: [PATCH 1/2] build: Ensure we set automatic dependency minimum release
  number
 
 Given that our automatic dependencies are either binary or pkgconfig, we
@@ -52,5 +52,5 @@ index 26bd037..cf284ab 100644
                          output += " [cached]"
                      ctx.ui.debug(output)
 -- 
-1.9.1
+1.8.4
 
