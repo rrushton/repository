@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gst-plugins-good</Name>
+        <Homepage>http://gstreamer.freedesktop.org/</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Packager>
+        <Summary>Plugins deemed to be of good quality</Summary>
+        <Description>Plugins that the GStreamer developers believe to be of good quality and licensing</Description>
+        <License>LGPLv2.1+</License>
+        <Archive sha1sum="55880af6e7150e8b74dca848da6fb6e4582afb9e" type="tarxz">http://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.4.1.tar.xz</Archive>
+
+        <BuildDependencies>
+            <Dependency type="pkgconfig" versionFrom="1.4.1">gstreamer-1.0</Dependency>
+            <Dependency type="pkgconfig" versionFrom="1.4.1">gstreamer-plugins-base-1.0</Dependency>
+            <Dependency type="pkgconfig" versionFrom="147">gudev-1.0</Dependency>
+            <Dependency type="pkgconfig">libv4l2</Dependency>
+            <Dependency type="pkgconfig">xfixes</Dependency>
+            <Dependency type="pkgconfig">xdamage</Dependency>
+            <Dependency type="pkgconfig" versionFrom="1.10.0">cairo-gobject</Dependency>
+            <Dependency type="pkgconfig" versionFrom="1.1.4">flac</Dependency>
+            <Dependency type="pkgconfig" versionFrom="2.8.0">gdk-pixbuf-2.0</Dependency>
+            <!-- Support at a later stage.
+                <Dependency type="pkgconfig" versionFrom="0.99.10">jack</Dependency>
+                <Dependency type="pkgconfig">caca</Dependency>
+                TODO: Add avc1394.
+            //-->
+            <Dependency type="pkgconfig" versionFrom="0.100">libdv</Dependency>
+            <Dependency type="pkgconfig" versionFrom="1.2">libpng</Dependency>
+            <Dependency type="pkgconfig" versionFrom="2.0">libpulse</Dependency>
+            <Dependency type="pkgconfig" versionFrom="2.0.0">libraw1394</Dependency>
+            <Dependency type="pkgconfig" versionFrom="1.0.0">libiec61883</Dependency>
+            <Dependency type="pkgconfig" versionFrom="2.0">shout</Dependency>
+            <Dependency type="pkgconfig" versionFrom="2.40">libsoup-2.4</Dependency>
+            <Dependency type="pkgconfig" versionFrom="1.1.6">speex</Dependency>
+            <Dependency type="pkgconfig" versionFrom="1.5">taglib</Dependency>
+            <Dependency type="pkgconfig" versionFrom="1.1.0">vpx</Dependency>
+            <Dependency type="pkgconfig" versionFrom="4.40.0">wavpack</Dependency>
+            <Dependency type="pkgconfig">orc-0.4</Dependency>
+            <Dependency versionFrom="4.40.0">wavpack-utils</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>aalib-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gstreamer-1.0-plugins-good</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
+            <Path fileType="library">/usr/lib/gstreamer-1.0/lib*.so</Path>
+            <Path fileType="data">/usr/share/gstreamer-1.0/presets</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gstreamer-1.0-plugins-good-docs</Name>
+        <Summary>API Documentation for gstreamer-1.0-plugins-good</Summary>
+        <Description>API Documentation for gstreamer-1.0-plugins-good</Description>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>09-08-2014</Date>
+            <Version>1.4.1</Version>
+            <Comment>Add gstreamer-1.0-plugins-good to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
