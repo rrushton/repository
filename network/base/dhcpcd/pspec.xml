@@ -12,6 +12,10 @@
         <Description> In layman's terms, dhcpcd runs on your machine and silently configures your computer to work on the attached networks without trouble and mostly without configuration. </Description>
         <License>LGPLv3+</License>
         <Archive sha1sum="2f9f2f432e43181497c4909725e29239c9ff004a" type="tarbz2">http://roy.marples.name/downloads/dhcpcd/dhcpcd-5.6.7.tar.bz2</Archive>
+
+        <Patches>
+            <Patch level="1">security/cve-2014-6060.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
@@ -31,6 +35,17 @@
     </Package>
 
     <History>
+        <Update release="3" type="security">
+            <Date>09-11-2014</Date>
+            <Version>5.6.7</Version>
+            <Comment>Address CVE-2014-6060</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+            <Requires>
+                <Action package="glibc">systemRestart</Action>
+            </Requires>
+        </Update>
+
         <Update release="2">
             <Date>03-19-2013</Date>
             <Version>5.6.7</Version>
