@@ -35,6 +35,17 @@
     </Package>
 
     <History>
+        <Update release="4" type="security">
+            <Date>09-12-2014</Date>
+            <Version>5.6.7</Version>
+            <Comment>Fix metainfo on previous update</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+            <Requires>
+                <Action package="dhcpcd">systemRestart</Action>
+            </Requires>
+        </Update>
+
         <Update release="3" type="security">
             <Date>09-11-2014</Date>
             <Version>5.6.7</Version>
@@ -42,7 +53,7 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@evolve-os.com</Email>
             <Requires>
-                <Action package="glibc">systemRestart</Action>
+                <Action package="dhcpcd">systemRestart</Action>
             </Requires>
         </Update>
 
