@@ -22,7 +22,6 @@
         <Name>x264</Name>
         <Files>
             <Path fileType="library">/usr/lib/lib*.so.*</Path>
-            <Path fileType="library">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>
 
@@ -33,6 +32,7 @@
         <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/lib*.so</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">x264</Dependency>
