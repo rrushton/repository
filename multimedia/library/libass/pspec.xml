@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libass</Name>
+        <Homepage></Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Packager>
+        <Summary>Portable subtitle renderer</Summary>
+        <Description>Portable subtitle renderer</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="1bffc32d0a601ee6cf289797557bb38636e185b5" type="tarxz">https://github.com/libass/libass/releases/download/0.11.2/libass-0.11.2.tar.xz</Archive>
+
+        <BuildDependencies>
+            <Dependency type="pkgconfig">freetype2</Dependency>
+            <Dependency type="pkgconfig" versionFrom="0.19.0">fribidi</Dependency>
+            <Dependency type="pkgconfig" versionFrom="2.4.2">fontconfig</Dependency>
+            <Dependency type="pkgconfig" versionFrom="0.9.5">harfbuzz</Dependency>
+            <Dependency type="pkgconfig" versionFrom="1.2.0">libpng</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libass</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libass-devel</Name>
+        <Summary>Development files for libass</Summary>
+        <Description>Development files for libass</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libass</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>09-13-2014</Date>
+            <Version>0.11.2</Version>
+            <Comment>Add libass to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+    </History>
+</PISI>
