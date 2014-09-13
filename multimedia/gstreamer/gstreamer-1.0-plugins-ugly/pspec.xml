@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gst-plugins-ugly</Name>
+        <Homepage>http://gstreamer.freedesktop.org/</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Packager>
+        <Summary>Additional GStreamer plugins</Summary>
+        <Description>Additional GStreamer plugins</Description>
+        <License>LGPLv2.1+</License>
+        <Archive sha1sum="991bbc66b9b8b056b21545fa5972b1d4967492f4" type="tarxz">http://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.4.1.tar.xz</Archive>
+
+        <BuildDependencies>
+            <Dependency type="pkgconfig" versionFrom="1.4.1">gstreamer-1.0</Dependency>
+            <Dependency type="pkgconfig" versionFrom="1.4.1">gstreamer-plugins-base-1.0</Dependency>
+            <Dependency type="pkgconfig">orc-0.4</Dependency>
+
+            <!-- Future support.
+            <Dependency type="pkgconfig" versionFrom="0.76">libcdio</Dependency>
+            <Dependency type="pkgconfig" versionFrom="0.15">mad</Dependency>
+            <Dependency type="pkgconfig" versionFrom="0.3.10">twolame</Dependency>//-->
+            <Dependency type="pkgconfig" versionFrom="0.4.0">libmpeg2</Dependency>
+            <Dependency type="pkgconfig" versionFrom="0.120">x264</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gstreamer-1.0-plugins-ugly</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/gstreamer-1.0</Path>
+            <Path fileType="data">/usr/share/gstreamer-1.0</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gstreamer-1.0-plugins-ugly-docs</Name>
+        <Summary>Documentation for gstreamer-1.0-plugins-ugly</Summary>
+        <Description>Documentation for gstreamer-1.0-plugins-ugly</Description>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>09-13-2014</Date>
+            <Version>1.4.1</Version>
+            <Comment>Add gstreamer-1.0-plugins-ugly to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
