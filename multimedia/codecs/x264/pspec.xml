@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>x264</Name>
+        <Homepage>http://videolan.org</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Packager>
+        <Summary>A library for encoding video streams into the H.264/MPEG-4 AVC format.</Summary>
+        <Description>A library for encoding video streams into the H.264/MPEG-4 AVC format.n</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="5a9c145ffcda43ad96e8efb6e37f3921da95df25" type="tarbz2">ftp://ftp.videolan.org/pub/videolan/x264/snapshots/x264-snapshot-20140818-2245-stable.tar.bz2</Archive>
+
+        <BuildDependencies>
+            <Dependency>yasm</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>x264</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>x264-devel</Name>
+        <Summary>Development files for x264</Summary>
+        <Description>Development files for x264</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">x264</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>09-13-2014</Date>
+            <Version>20140818.2245</Version>
+            <Comment>Add x264 to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
