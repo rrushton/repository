@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gst-libav</Name>
+        <Homepage>http://gstreamer.freedesktop.org</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Packager>
+        <Summary>GStreamer libav based plugin</Summary>
+        <Description>GStreamer libav based plugin providing H264, AVI support, amongst others</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="4afa9d8722394831719ce5e43919d8e3776f4b2c" type="tarxz">http://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.4.1.tar.xz</Archive>
+
+        <BuildDependencies>
+            <Dependency type="pkgconfig" versionFrom="1.4.1">gstreamer-1.0</Dependency>
+            <Dependency type="pkgconfig" versionFrom="1.4.1">gstreamer-plugins-base-1.0</Dependency>
+            <Dependency type="pkgconfig">orc-0.4</Dependency>
+            <Dependency type="pkgconfig">libass</Dependency>
+            <Dependency>yasm</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gstreamer-1.0-libav</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/gstreamer-1.0</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gstreamer-1.0-libav-docs</Name>
+        <Summary>Documentation for gstreamer-1.0-libav</Summary>
+        <Description>Documentation for gstreamer-1.0-libav</Description>
+        <Files>
+            <Path fileType="library">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>09-13-2014</Date>
+            <Version>1.4.1</Version>
+            <Comment>Add gstreamer-1.0-libav to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
