@@ -20,10 +20,11 @@
             <Dependency type="pkgconfig">theora</Dependency>
             <Dependency type="pkgconfig">alsa</Dependency>
             <Dependency type="pkgconfig">pangocairo</Dependency>
+            <Dependency type="pkgconfig">cairo</Dependency>
             <Dependency type="pkgconfig">x11</Dependency>
             <Dependency type="pkgconfig">xv</Dependency>
             <Dependency type="pkgconfig">xext</Dependency>
-
+            <Dependency type="pkgconfig">orc-0.4</Dependency>
             <!-- missing, libvisual, cdparanoia. not sure how bothered we are yet. //-->
         </BuildDependencies>
     </Source>
@@ -70,6 +71,14 @@
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>09-14-2014</Date>
+            <Version>1.4.1</Version>
+            <Comment>Enable pangocairo correctly, and use orc</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="6">
             <Date>09-08-2014</Date>
             <Version>1.4.1</Version>
