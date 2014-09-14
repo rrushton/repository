@@ -12,7 +12,7 @@ def setup():
     autotools.configure("--disable-static \
                          --enable-glib \
                          --enable-cogl-pango \
-                         --enable-cogl-gst \
+                         --disable-cogl-gst \
                          --enable-gdk-pixbuf \
                          --enable-examples-install \
                          --enable-gles2 \
