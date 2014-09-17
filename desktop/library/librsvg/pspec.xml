@@ -12,7 +12,7 @@
         <Description>Library to render SVG files using cairo.</Description>
         <License>GPLv2</License>
         <License>LGPLv2</License>
-        <Archive sha1sum="92ac16f1210e2324011039284407e17d3fda6e88" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/librsvg/2.37/librsvg-2.37.0.tar.xz</Archive>
+        <Archive sha1sum="840f1d56c1dc9dfe291049dfc9e46da0d1915bf3" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/librsvg/2.40/librsvg-2.40.4.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>vala</Dependency>
             <Dependency type="pkgconfig">pangocairo</Dependency>
@@ -25,8 +25,7 @@
     <Package>
         <Name>librsvg</Name>
         <Files>
-            <Path fileType="library">/usr/lib/librsvg*.so.[0-9]</Path>
-            <Path fileType="library">/usr/lib/librsvg*.so.*.*.*</Path>
+            <Path fileType="library">/usr/lib/librsvg*.so.*</Path>
             <Path fileType="library">/usr/lib/gdk-pixbuf*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/lib/gtk-2.0</Path>
@@ -54,6 +53,14 @@
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>09-16-2014</Date>
+            <Version>2.40.4</Version>
+            <Comment>Update to latest upstream version</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="4">
             <Date>06-15-2014</Date>
             <Version>2.37.0</Version>
