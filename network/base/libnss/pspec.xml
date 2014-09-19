@@ -6,17 +6,16 @@
         <Homepage>http://www.mozilla.org/projects/security/pki/nss/</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey.doherty@gmail.com</Email>
+            <Email>ikey@evolve-os.com</Email>
         </Packager>
         <Summary>Network Security Services</Summary>
         <Description>The Network Security Services (NSS) package is a set of libraries designed to support cross-platform development of security-enabled client and server applications. Applications built with NSS can support SSL v2 and v3, TLS, PKCS #5, PKCS #7, PKCS #11, PKCS #12, S/MIME, X.509 v3 certificates, and other security standards. This is useful for implementing SSL and S/MIME or other Internet security standards into an application.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="450a88dde8c7e4533507ac8340dbf94be28a759b" type="targz">http://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_16_1_RTM/src/nss-3.16.1.tar.gz</Archive>
+        <Archive sha1sum="c4e7f007723cfafcf7fe743000e3960cc5086642" type="targz">http://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_16_2_RTM/src/nss-3.16.2.tar.gz</Archive>
 
         <Patches>
             <Patch level="1">nss-3.16.1-standalone-1.patch</Patch>
         </Patches>
-
         <BuildDependencies>
             <Dependency type="pkgconfig">nspr</Dependency>
             <Dependency type="pkgconfig">sqlite3</Dependency>
@@ -49,6 +48,14 @@
     </Package>
 
     <History>
+        <Update release="9">
+            <Date>09-19-2014</Date>
+            <Version>3.16.2</Version>
+            <Comment>Update to enable Netflix</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="8">
             <Date>07-22-2014</Date>
             <Version>3.16.1</Version>
@@ -113,6 +120,4 @@
             <Email>ikey@solusos.com</Email>
         </Update>
     </History>
-
 </PISI>
-
