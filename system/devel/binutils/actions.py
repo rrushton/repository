@@ -19,6 +19,7 @@ def setup():
     shelltools.system ("../binutils-2.23.2/configure \
         --prefix=/usr \
         --enable-lto \
+        --enable-multilib \
         --enable-gold \
         --target=x86_64-evolveos-linux \
         --build=x86_64-evolveos-linux")
