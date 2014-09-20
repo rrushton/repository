@@ -16,26 +16,27 @@ def setup():
 
     # Configure GCC
     shelltools.system ("%s/configure \
-                                            --prefix=/usr \
-                                            --with-pkgversion='EvolveOS'\
-                                            --libdir=/usr/lib\
-                                            --libexecdir=/usr/lib\
-                                            --with-system-zlib\
-                                            --enable-shared\
-                                            --enable-threads=posix\
-                                            --enable-__cxa_atexit\
-                                            --enable-plugin\
-                                            --enable-gold\
-                                            --enable-ld=default\
-                                            --with-plugin-ld=ld.gold\
-                                            --enable-clocale=gnu\
-                                            --disable-multiarch\
-                                            --disable-multilib\
-                                            --enable-lto\
-                                            --with-bugurl='http://bugs.evolve-os.com'\
-                                            --build=%s\
-                                            --target=%s\
-                                            --enable-languages=c,c++,fortran" % (GccDir, get.HOST(), get.HOST()) )
+                        --prefix=/usr \
+                        --with-pkgversion='Evolve OS' \
+                        --libdir=/usr/lib \
+                        --libexecdir=/usr/lib \
+                        --with-system-zlib \
+                        --enable-shared \
+                        --enable-threads=posix \
+                        --enable-__cxa_atexit \
+                        --enable-plugin \
+                        --enable-gold \
+                        --enable-ld=default \
+                        --with-plugin-ld=ld.gold \
+                        --enable-clocale=gnu \
+                        --disable-multilib \
+                        --enable-lto \
+                        --with-bugurl='http://bugs.evolve-os.com' \
+                        --with-arch_32=i686 \
+                        --enable-linker-build-id  \
+                        --build=%s \
+                        --target=%s \
+                        --enable-languages=c,c++,fortran" % (GccDir, get.HOST(), get.HOST()) )
 
     # Print the summary
     shelltools.system ("%s/contrib/test_summary" % GccDir)
