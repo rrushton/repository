@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>evince</Name>
+        <Homepage>https://wiki.gnome.org/Apps/Evince</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Packager>
+        <Summary>GNOME Platform Document Viewer</Summary>
+        <Description>Evince is a document viewer for multiple document formats. The goal of evince is to replace the multiple document viewers that exist on the GNOME Desktop with a single simple application.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="7332ed1a7f58a74eb9e09cdac25bb9e95ec03b3b" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/evince/3.12/evince-3.12.2.tar.xz</Archive>
+
+        <BuildDependencies>
+            <Dependency type="pkgconfig">gsettings-desktop-schemas</Dependency>
+            <Dependency type="pkgconfig">gtk+-3.0</Dependency>
+            <Dependency type="pkgconfig">cairo-pdf</Dependency>
+            <Dependency type="pkgconfig">cairo-ps</Dependency>
+            <Dependency type="pkgconfig">libsecret-1</Dependency>
+            <Dependency type="pkgconfig">poppler-glib</Dependency>
+            <Dependency type="pkgconfig">gnome-icon-theme</Dependency>
+            <Dependency type="pkgconfig">libnautilus-extension</Dependency>
+            <Dependency>itstool</Dependency>
+            <!-- libspectre (PS)  djvulibre (djvu) //-->
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>evince</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
+            <Path fileType="library">/usr/lib/nautilus</Path>
+            <Path fileType="library">/usr/lib/evince</Path>
+            <Path fileType="data">/usr/share/glib-2.0/schemas</Path>
+            <Path fileType="data">/usr/share/GConf</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/dbus-1/services</Path>
+            <Path fileType="data">/usr/share/evince</Path>
+            <Path fileType="data">/usr/share/thumbnailers</Path>
+            <Path fileType="doc">/usr/share/help</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>evince-devel</Name>
+        <Summary>Development files for evince</Summary>
+        <Description>Development files for evince</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">evince</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>evince-docs</Name>
+        <Summary>Documentation for evince</Summary>
+        <Description>Documentation for evince</Description>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>09-19-2014</Date>
+            <Version>3.12.2</Version>
+            <Comment>Add evince to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+    </History>
+</PISI>
