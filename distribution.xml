@@ -28,6 +28,10 @@
 
         <!-- Replaced by gtkspell3-docs -->
         <Package>gtkspell-docs</Package>
+
+        <!-- Replaced by adwaita-icon-theme -->
+        <Package>gnome-icon-theme</Package>
+        <Package>gnome-icon-theme-symbolic</Package>
 	</Obsoletes>
 	
 </PISI>
