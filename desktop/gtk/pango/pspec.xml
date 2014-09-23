@@ -11,7 +11,7 @@
         <Summary>pango (Library for laying out and rendering text)</Summary>
         <Description> Pango is a library used for laying out and rendering text with an emphasis on internationalization.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="ef26b2f4eae1860dcbcfc8d3d47fedf0f0d1427b" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/pango/1.33/pango-1.33.9.tar.xz</Archive>
+        <Archive sha1sum="c6ba02ee8f9d8b22b7cfd74c4b6ae170bebc8d2b" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/pango/1.36/pango-1.36.8.tar.xz</Archive>
         <BuildDependencies>
             <Dependency type="pkgconfig">cairo</Dependency>
             <Dependency type="pkgconfig">harfbuzz</Dependency>
@@ -53,6 +53,14 @@
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>09-23-2014</Date>
+            <Version>1.36.8</Version>
+            <Comment>Update for GNOME 3.14</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="6">
             <Date>06-15-2014</Date>
             <Version>1.33.9</Version>
