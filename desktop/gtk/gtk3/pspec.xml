@@ -6,12 +6,12 @@
         <Homepage>http://www.gnome.org</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey@evolve-os.com</Email>
         </Packager>
         <Summary>The GTK+ 3 package contains the libraries used for creating graphical user interfaces for applications.</Summary>
         <Description>The GTK+ 3 package contains the libraries used for creating graphical user interfaces for applications. </Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="9727843d1389306fcad80f92bb50201f1f43f894" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gtk+/3.12/gtk+-3.12.2.tar.xz</Archive>
+        <Archive sha1sum="c78fb622b211e2cc697cd60ecd33d8f44e702da6" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/gtk+/3.14/gtk+-3.14.0.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gdk-pixbuf-2.0</Dependency>
@@ -46,8 +46,7 @@
             <Path fileType="executable">/usr/bin/gtk-*</Path>
             <Path fileType="library">/usr/lib/gtk-3.0</Path>
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
-            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
-            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="data">/usr/share/glib-2.0</Path>
             <Path fileType="data">/usr/share/gtk-3.0/gtkbuilder.rng</Path>
@@ -120,7 +119,29 @@
         </RuntimeDependencies>
     </Package>
 
+    <Package>
+        <Name>gtk3-icon-browser</Name>
+        <Summary>Icon theme browser for GTK3</Summary>
+        <Description>Icon theme browser for GTK3</Description>
+        <IsA>app:gui</IsA>
+        <Files>
+            <Path fileType="executable">/usr/bin/gtk3-icon-browser</Path>
+            <Path fileType="data">/usr/share/applications/gtk3-icon-browser.desktop</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libgtk-3</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
     <History>
+        <Update release="19">
+            <Date>09-23-2014</Date>
+            <Version>3.14.0</Version>
+            <Comment>Update as part of GNOME3.14 transition</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="18">
             <Date>07-08-2014</Date>
             <Version>3.12.2</Version>

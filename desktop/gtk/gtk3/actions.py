@@ -1,7 +1,5 @@
-
 #!/usr/bin/python
 
-# Created For SolusOS
 
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
@@ -10,7 +8,6 @@ shelltools.export ("HOME", get.workDIR())
 def setup():
     autotools.configure("--enable-gtk2-dependency \
                          --enable-wayland-backend \
-                         --disable-packagekit     \
                          --enable-x11-backend")
 
 def build():
