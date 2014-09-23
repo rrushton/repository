@@ -31,6 +31,9 @@
 
         <!-- Replaced by libtasn1-utils //-->
         <Package>libtasn1-bin</Package>
+        <!-- Replaced by adwaita-icon-theme -->
+        <Package>gnome-icon-theme</Package>
+        <Package>gnome-icon-theme-symbolic</Package>
 	</Obsoletes>
-	
+
 </PISI>

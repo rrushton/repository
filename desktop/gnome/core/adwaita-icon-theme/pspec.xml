@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>adwaita-icon-theme</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Packager>
+        <Summary>Adwaita Icon Theme</Summary>
+        <Description>The Adwaita Icon Theme package contains an assortment of non-scalable icons of different sizes and themes.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="e1d603d9cc4e4b7f83f749ba20934832d4321dd2" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/adwaita-icon-theme/3.14/adwaita-icon-theme-3.14.1.tar.xz</Archive>
+
+        <BuildDependencies>
+            <!-- gtk+-2.0 dep due to gtk-update-icon-cache //-->
+            <Dependency type="pkgconfig">gtk+-2.0</Dependency>
+            <Dependency type="pkgconfig">icon-naming-utils</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>adwaita-icon-theme</Name>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/icons/Adwaita</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>hicolor-icon-theme</Dependency>
+        </RuntimeDependencies>
+        <Replaces>
+            <Package>gnome-icon-theme</Package>
+            <Package>gnome-icon-theme-symbolic</Package>
+        </Replaces>
+        <Conflicts>
+            <Package>gnome-icon-theme</Package>
+            <Package>gnome-icon-theme-symbolic</Package>
+        </Conflicts>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>09-23-2014</Date>
+            <Version>3.14.1</Version>
+            <Comment>Add adwaita-icon-theme to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+    </History>
+</PISI>
+
