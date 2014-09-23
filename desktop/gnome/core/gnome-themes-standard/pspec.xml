@@ -10,7 +10,7 @@
         <Summary>The Standard GNOME3 Themes Package</Summary>
         <Description>The GNOME Themes Standard package contains various components of the default GNOME 3 theme.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="05f2b818cfbfc87ac7303e9735ae947c039d5daa" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-themes-standard/3.12/gnome-themes-standard-3.12.0.tar.xz</Archive>
+        <Archive sha1sum="d81cfa3b2258cfc5014a44e1c8e4e638d537bfc5" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/gnome-themes-standard/3.14/gnome-themes-standard-3.14.0.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-2.0</Dependency>
@@ -24,7 +24,6 @@
         <Files>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="library">/usr/lib/gtk-2.0</Path>
-            <Path fileType="library">/usr/lib/gtk-3.0</Path>
             <Path fileType="data">/usr/share/gnome-background-properties</Path>
             <Path fileType="data">/usr/share/icons/Adwaita</Path>
             <Path fileType="data">/usr/share/icons/HighContrast</Path>
@@ -34,6 +33,14 @@
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>09-23-2014</Date>
+            <Version>3.14.0</Version>
+            <Comment>Update for GNOME 3.14</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="6">
             <Date>07-09-2014</Date>
             <Version>3.12.0</Version>
