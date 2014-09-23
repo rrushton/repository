@@ -11,7 +11,7 @@
         <Summary>The file manager of the GNOME desktop</Summary>
         <Description>The file manager of the GNOME desktop</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="5997e728cefdf70667054898ad3b927a9c8e997f" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/nautilus/3.12/nautilus-3.12.2.tar.xz</Archive>
+        <Archive sha1sum="fe31cfc89f40f680d21ff04a98d4b8dc14c39002" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/nautilus/3.14/nautilus-3.14.0.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
@@ -76,6 +76,14 @@
     </Package>
 
     <History>
+        <Update release="8">
+            <Date>09-23-2014</Date>
+            <Version>3.14.0</Version>
+            <Comment>Update to 3.14.0</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="7">
             <Date>08-02-2014</Date>
             <Version>3.12.2</Version>
