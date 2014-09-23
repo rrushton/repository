@@ -8,7 +8,10 @@ shelltools.export("HOME", get.workDIR())
 
 
 def setup():
-    autotools.configure("--disable-static")
+    # bashisms. bashisms everywhere.
+    shelltools.export("CONFIG_SHELL", "/bin/bash")
+    autotools.configure("--enable-introspection \
+                         --disable-static")
 
 
 def build():
