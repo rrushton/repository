@@ -11,7 +11,7 @@
         <Summary>A tool to customize advanced GNOME 3 options.</Summary>
         <Description>A tool to customize advanced GNOME 3 options.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="1cad568658463dd94119365380c9248efb0e33ba" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/gnome-tweak-tool/3.12/gnome-tweak-tool-3.12.0.tar.xz</Archive>
+        <Archive sha1sum="fe488da24e6783be5fca7d784a5c357164bc1976" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/gnome-tweak-tool/3.14/gnome-tweak-tool-3.14.0.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gsettings-desktop-schemas</Dependency>
@@ -35,6 +35,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>09-25-2014</Date>
+            <Version>3.14.0</Version>
+            <Comment>Upgrade for GNOME 3.14</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>09-07-2014</Date>
             <Version>3.12.0</Version>
