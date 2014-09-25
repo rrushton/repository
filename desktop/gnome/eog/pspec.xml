@@ -11,7 +11,7 @@
         <Summary>The Eye of GNOME image viewer is the official image viewer for the GNOME Desktop environment. With it, you can view single image files, as well as large image collections.</Summary>
         <Description>The Eye of GNOME image viewer is the official image viewer for the GNOME Desktop environment. With it, you can view single image files, as well as large image collections. The Eye of GNOME supports a variety of image file formats. The GdkPixbuf library determines which file formats Eye of GNOME can load and save.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="3a6cce6d83cdfb19c0629592d85c4248315c16f9" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/eog/3.12/eog-3.12.2.tar.xz</Archive>
+        <Archive sha1sum="963bac65d05c94abb766ebf33fdaad2a7898cedf" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/eog/3.14/eog-3.14.0.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
@@ -72,6 +72,14 @@
     </Package>
 
     <History>
+        <Update release="8">
+            <Date>09-25-2014</Date>
+            <Version>3.14.0</Version>
+            <Comment>Upgrade for GNOME 3.14</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="7">
             <Date>08-03-2014</Date>
             <Version>3.12.2</Version>
