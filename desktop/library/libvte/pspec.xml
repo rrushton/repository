@@ -11,10 +11,11 @@
         <Summary>The VTE package contains a termcap file implementation for terminal emulators.</Summary>
         <Description>The VTE package contains a termcap file implementation for terminal emulators.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="a7acc1594eb6fa249edccb059c21132b3aa2657b" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/vte/0.36/vte-0.36.3.tar.xz</Archive>
+        <Archive sha1sum="936215d2904959e7a18f08832d7454fdad09fde8" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/vte/0.38/vte-0.38.0.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
+            <Dependency>vala</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -25,8 +26,7 @@
             <Path fileType="config">/etc</Path>
             <Path fileType="executable">/usr/lib/vte</Path>
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
-            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
-            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
@@ -41,6 +41,7 @@
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/vala</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">libvte</Dependency>
@@ -60,6 +61,14 @@
     </Package>
 
     <History>
+        <Update release="6">
+            <Date>09-25-2014</Date>
+            <Version>0.38.0</Version>
+            <Comment>Update for GNOME 3.14</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="5">
             <Date>08-02-2014</Date>
             <Version>0.36.3</Version>
