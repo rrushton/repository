@@ -11,7 +11,7 @@
         <Summary>GNOME Screenshot Utility</Summary>
         <Description>Take screenshots with the GNOME Screenshot Utility</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="d960b8dc4f120e031e6bac2e81f34a3118baf565" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-screenshot/3.12/gnome-screenshot-3.12.0.tar.xz</Archive>
+        <Archive sha1sum="0ab91c20755caa06fa591bd67f63e94845df5835" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/gnome-screenshot/3.14/gnome-screenshot-3.14.0.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">xext</Dependency>
@@ -28,6 +28,7 @@
             <Path fileType="data">/usr/share/GConf</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas</Path>
             <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="man">/usr/share/man</Path>
@@ -35,6 +36,14 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>09-25-2014</Date>
+            <Version>3.14.0</Version>
+            <Comment>Update for GNOME 3.14</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>08-23-2014</Date>
             <Version>3.12.0</Version>
