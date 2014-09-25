@@ -10,7 +10,7 @@
         <Summary>The GNOME Control Center</Summary>
         <Description>The GNOME Control Center</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="5c00713dc7105f56a52a8d0dd477367402153e4f" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-control-center/3.12/gnome-control-center-3.12.1.tar.xz</Archive>
+        <Archive sha1sum="a0a386f6021e2e307b9d7096f8801ab2f7163cd5" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/gnome-control-center/3.14/gnome-control-center-3.14.0.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
@@ -75,6 +75,14 @@
     </Package>
 
     <History>
+        <Update release="9">
+            <Date>09-25-2014</Date>
+            <Version>3.14.0</Version>
+            <Comment>Upgrade for GNOME 3.14</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="8">
             <Date>08-20-2014</Date>
             <Version>3.12.1</Version>
