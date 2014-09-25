@@ -1,36 +1,38 @@
-From 9369cd43f29ae28c964773c6a5d3d9093757123e Mon Sep 17 00:00:00 2001
-From: Ikey Doherty <ikey.doherty@gmail.com>
-Date: Thu, 3 Jul 2014 21:43:54 +0100
-Subject: [PATCH 1/2] schemas: Apply default Evolve OS branding
+From 03b2b07ba68cacf19407fb6d211d3f20cfeb5da3 Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey@evolve-os.com>
+Date: Thu, 25 Sep 2014 21:55:33 +0100
+Subject: [PATCH] schemas: Evolve OS Settings
 
+Signed-off-by: Ikey Doherty <ikey@evolve-os.com>
 ---
  schemas/org.gnome.desktop.background.gschema.xml.in.in     | 2 +-
  schemas/org.gnome.desktop.interface.gschema.xml.in.in      | 6 +++---
- schemas/org.gnome.desktop.wm.preferences.gschema.xml.in.in | 4 ++--
- 3 files changed, 6 insertions(+), 6 deletions(-)
+ schemas/org.gnome.desktop.wm.keybindings.gschema.xml.in.in | 2 +-
+ schemas/org.gnome.desktop.wm.preferences.gschema.xml.in.in | 2 +-
+ 4 files changed, 6 insertions(+), 6 deletions(-)
 
 diff --git a/schemas/org.gnome.desktop.background.gschema.xml.in.in b/schemas/org.gnome.desktop.background.gschema.xml.in.in
-index 4d3c32b..cef482e 100644
+index c22d97f..cef482e 100644
 --- a/schemas/org.gnome.desktop.background.gschema.xml.in.in
 +++ b/schemas/org.gnome.desktop.background.gschema.xml.in.in
 @@ -10,7 +10,7 @@
        </_description>
      </key>
      <key name="picture-uri" type="s">
--      <default>'file://@datadir@/themes/Adwaita/backgrounds/adwaita-timed.xml'</default>
+-      <default>'file://@datadir@/backgrounds/gnome/adwaita-timed.xml'</default>
 +      <default>'file://@datadir@/backgrounds/evolve-os/BogFlower.jpg'</default>
        <_summary>Picture URI</_summary>
        <_description>
          URI to use for the background image. Note that the backend only supports
 diff --git a/schemas/org.gnome.desktop.interface.gschema.xml.in.in b/schemas/org.gnome.desktop.interface.gschema.xml.in.in
-index c102bd1..fa3d6c8 100644
+index 82c7984..a4a883d 100644
 --- a/schemas/org.gnome.desktop.interface.gschema.xml.in.in
 +++ b/schemas/org.gnome.desktop.interface.gschema.xml.in.in
 @@ -83,14 +83,14 @@
        </_description>
      </key>
      <key name="icon-theme" type="s">
--      <default>'gnome'</default>
+-      <default>'Adwaita'</default>
 +      <default>'Numix-Circle'</default>
        <_summary>Icon Theme</_summary>
        <_description>
@@ -39,7 +41,7 @@ index c102bd1..fa3d6c8 100644
      </key>
      <key name="gtk-theme" type="s">
 -      <default>'Adwaita'</default>
-+      <default>'Evotex'</default>
++      <default>'Vertex'</default>
        <_summary>Gtk+ Theme</_summary>
        <_description>
          Basename of the default theme used by gtk+.
@@ -52,8 +54,21 @@ index c102bd1..fa3d6c8 100644
        <_summary>Default font</_summary>
        <_description>
          Name of the default font used by gtk+.
+diff --git a/schemas/org.gnome.desktop.wm.keybindings.gschema.xml.in.in b/schemas/org.gnome.desktop.wm.keybindings.gschema.xml.in.in
+index 70dbba7..b59d298 100644
+--- a/schemas/org.gnome.desktop.wm.keybindings.gschema.xml.in.in
++++ b/schemas/org.gnome.desktop.wm.keybindings.gschema.xml.in.in
+@@ -132,7 +132,7 @@
+       <_summary>Hide all normal windows</_summary>
+     </key>
+     <key name="panel-main-menu" type="as">
+-      <default><![CDATA[['<Super>s','<Alt>F1']]]></default>
++      <default><![CDATA[['Super_L']]]></default>
+       <_summary>Show the activities overview</_summary>
+     </key>
+     <key name="panel-run-dialog" type="as">
 diff --git a/schemas/org.gnome.desktop.wm.preferences.gschema.xml.in.in b/schemas/org.gnome.desktop.wm.preferences.gschema.xml.in.in
-index 6d2502e..ca7a205 100644
+index 45add9e..1e8de62 100644
 --- a/schemas/org.gnome.desktop.wm.preferences.gschema.xml.in.in
 +++ b/schemas/org.gnome.desktop.wm.preferences.gschema.xml.in.in
 @@ -188,7 +188,7 @@
@@ -61,19 +76,10 @@ index 6d2502e..ca7a205 100644
      </key>
      <key name="theme" type="s">
 -      <default>'Adwaita'</default>
-+      <default>'Evotex'</default>
++      <default>'Vertex'</default>
        <_summary>Current theme</_summary>
        <_description>
          The theme determines the appearance of window borders, titlebar,
-@@ -204,7 +204,7 @@
-       </_description>
-     </key>
-     <key name="titlebar-font" type="s">
--      <default>'Cantarell Bold 11'</default>
-+      <default>'Roboto Bold 11'</default>
-       <_summary>Window title font</_summary>
-       <_description>
-         A font description string describing a font for window titlebars.
 -- 
 1.8.4
 

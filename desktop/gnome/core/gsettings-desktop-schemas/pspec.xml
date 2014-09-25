@@ -11,11 +11,10 @@
         <Summary>The GSettings Desktop Schemas package contains a collection of GSettings schemas for settings shared by various components of a GNOME Desktop.</Summary>
         <Description>The GSettings Desktop Schemas package contains a collection of GSettings schemas for settings shared by various components of a GNOME Desktop.</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="52da72ef60eb9190c7b8000cc8c6e8f672d1dafe" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gsettings-desktop-schemas/3.12/gsettings-desktop-schemas-3.12.2.tar.xz</Archive>
+        <Archive sha1sum="e98d6b6c1f0155f9bd3ff4587dfd7214fe0575eb" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/gsettings-desktop-schemas/3.14/gsettings-desktop-schemas-3.14.0.tar.xz</Archive>
 
         <Patches>
-            <Patch level="1">0001-schemas-Apply-default-Evolve-OS-branding.patch</Patch>
-            <Patch level="1">0002-schemas-Use-Super_L-for-panel-main-menu-keybinding.patch</Patch>
+            <Patch level="1">0001-schemas-Evolve-OS-Settings.patch</Patch>
         </Patches>
     </Source>
 
@@ -49,6 +48,14 @@
 
 
     <History>
+        <Update release="14">
+            <Date>09-25-2014</Date>
+            <Version>3.14.0</Version>
+            <Comment>Upgrade for GNOME 3.14</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="13">
             <Date>09-07-2014</Date>
             <Version>3.12.2</Version>
