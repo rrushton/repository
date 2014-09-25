@@ -11,7 +11,7 @@
         <Summary>The libgweather package is a library used to access weather information from online services for numerous locations.</Summary>
         <Description>The libgweather package is a library used to access weather information from online services for numerous locations.</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="38663d4e2164c86e2295e3a7ee8d437735e41ab5" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/libgweather/3.12/libgweather-3.12.2.tar.xz</Archive>
+        <Archive sha1sum="a754f1ce518111214dc212e88f7e18b26280535e" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/libgweather/3.14/libgweather-3.14.0.tar.xz</Archive>
 
         <IsA>library</IsA>
 
@@ -19,6 +19,7 @@
             <Dependency>vala</Dependency>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
             <Dependency type="pkgconfig">libsoup-2.4</Dependency>
+            <Dependency type="pkgconfig">geocode-glib-1.0</Dependency>
         </BuildDependencies>
 
     </Source>
@@ -66,6 +67,14 @@
     </Package>
 
     <History>
+        <Update release="9">
+            <Date>09-25-2014</Date>
+            <Version>3.14.0</Version>
+            <Comment>Upgrade for GNOME 3.14</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="8">
             <Date>08-02-2014</Date>
             <Version>3.12.2</Version>
