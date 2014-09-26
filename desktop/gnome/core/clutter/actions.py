@@ -8,7 +8,6 @@ shelltools.export("HOME", get.workDIR())
 
 
 def setup():
-    # TODO: Add libevdev: --enable-evdev-input
     autotools.configure("--disable-static \
                          --enable-x11-backend \
                          --enable-gdk-backend \
@@ -17,7 +16,8 @@ def setup():
                          --enable-wayland-compositor \
                          --enable-xinput \
                          --enable-gdk-pixbuf \
-                         --enable-introspection")
+                         --enable-introspection \
+                         --enable-evdev-input")
 
 
 def build():

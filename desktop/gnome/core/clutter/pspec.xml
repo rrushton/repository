@@ -20,6 +20,8 @@
             <Dependency type="pkgconfig">pangocairo</Dependency>
             <Dependency type="pkgconfig">json-glib-1.0</Dependency>
             <Dependency type="pkgconfig">gdk-3.0</Dependency>
+            <Dependency type="pkgconfig">libevdev</Dependency>
+            <Dependency type="pkgconfig">libinput</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -61,6 +63,14 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>09-26-2014</Date>
+            <Version>1.20.0</Version>
+            <Comment>Enable evdev input</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>09-26-2014</Date>
             <Version>1.20.0</Version>
