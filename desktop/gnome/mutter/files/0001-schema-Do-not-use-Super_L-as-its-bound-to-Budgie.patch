@@ -1,16 +1,17 @@
-From 488ad1e10ac4686858a43ec84003f67c9857ec7c Mon Sep 17 00:00:00 2001
-From: Ikey Doherty <ikey.doherty@gmail.com>
-Date: Fri, 11 Jul 2014 18:09:04 +0100
+From 9a93361cfb59a697f7a5403a09579c7e94611881 Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey@evolve-os.com>
+Date: Fri, 26 Sep 2014 21:10:59 +0100
 Subject: [PATCH] schema: Do not use Super_L as its bound to Budgie
 
+Signed-off-by: Ikey Doherty <ikey@evolve-os.com>
 ---
- src/org.gnome.mutter.gschema.xml.in | 2 +-
+ data/org.gnome.mutter.gschema.xml.in | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/src/org.gnome.mutter.gschema.xml.in b/src/org.gnome.mutter.gschema.xml.in
-index 9d83cf3..8e5c90c 100644
---- a/src/org.gnome.mutter.gschema.xml.in
-+++ b/src/org.gnome.mutter.gschema.xml.in
+diff --git a/data/org.gnome.mutter.gschema.xml.in b/data/org.gnome.mutter.gschema.xml.in
+index cffeeb8..0f3eaf7 100644
+--- a/data/org.gnome.mutter.gschema.xml.in
++++ b/data/org.gnome.mutter.gschema.xml.in
 @@ -3,7 +3,7 @@
            gettext-domain="@GETTEXT_DOMAIN">
  
@@ -21,5 +22,5 @@ index 9d83cf3..8e5c90c 100644
        <_description>
          This key will initiate the "overlay", which is a combination window
 -- 
-1.9.1
+1.8.4
 
