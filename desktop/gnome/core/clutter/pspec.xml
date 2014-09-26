@@ -11,7 +11,7 @@
         <Summary>OpenGL UI toolkit</Summary>
         <Description>Clutter is an open source (LGPL 2.1) software library for creating fast, compelling, portable, and dynamic graphical user interfaces. It is a core part of Gnome3, it is used by the GnomeShell, and is supported by the open source community.</Description>
         <License>LGPLv2+</License>
-        <Archive sha1sum="3594db1820fa19b40698b86bd09165c20ac52b38" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/clutter/1.16/clutter-1.16.0.tar.xz</Archive>
+        <Archive sha1sum="9939b90268e44c5500f44f3b11665eafabe8193e" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/clutter/1.20/clutter-1.20.0.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">cogl-1.0</Dependency>
@@ -26,8 +26,7 @@
     <Package>
         <Name>clutter</Name>
         <Files>
-            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
-            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
@@ -62,6 +61,14 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>09-26-2014</Date>
+            <Version>1.20.0</Version>
+            <Comment>Upgrade for GNOME 3.14</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>06-15-2014</Date>
             <Version>1.16.0</Version>
