@@ -1,4 +1,4 @@
-_pisi()
+_eopkg()
 {
   local cur command commands options packages files
 
@@ -179,9 +179,9 @@ _pisi()
       return 0;
     fi
   fi
-  _filedir '@(pisi)'
+  _filedir '@(eopkg)'
 }
-complete -F _pisi -o filenames pisi
+complete -F _eopkg -o filenames eopkg
 
 _service()
 {
