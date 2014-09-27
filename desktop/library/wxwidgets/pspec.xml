@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>wxwidgets</Name>
+        <Homepage>http://www.wxwidgets.org/</Homepage>
+        <Packager>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Packager>
+        <Summary>Cross-platform UI toolkit library</Summary>
+        <Description>wxWidgets gives you a single, easy-to-use API for writing GUI applications on multiple platforms that still utilize the native platform's controls and utilities. Link with the appropriate library for your platform and compiler, and your application will adopt the look and feel appropriate to that platform. On top of great GUI functionality, wxWidgets gives you: online help, network programming, streams, clipboard and drag and drop, multithreading, image loading and saving in a variety of popular formats, database support, HTML viewing and printing, and much more.</Description>
+        <License>wxWinFDL-3</License>
+        <Archive sha1sum="73e58521d6871c9f4d1e7974c6e3a81629fddcf8" type="tarbz2">http://downloads.sourceforge.net/wxwindows/wxWidgets-3.0.1.tar.bz2</Archive>
+
+        <BuildDependencies>
+            <Dependency type="pkgconfig">gtk+-2.0</Dependency>
+            <!-- One day. One day.. //-->
+            <Dependency type="pkgconfig">gtk+-3.0</Dependency>
+            <Dependency type="pkgconfig">sm</Dependency>
+            <Dependency type="pkgconfig">ice</Dependency>
+            <Dependency type="pkgconfig">gl</Dependency>
+            <Dependency type="pkgconfig">glu</Dependency>
+            <Dependency type="pkgconfig">libnotify</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>wxwidgets</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
+            <Path fileType="library">/usr/lib/wx</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>wxwidgets-devel</Name>
+        <Files>
+            <Path fileType="data">/usr/include</Path>
+            <Path fileType="libarary">/usr/lib/lib*.so</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>09-27-2014</Date>
+            <Version>3.0.1</Version>
+            <Comment>Add wxWidgets to repositories</Comment>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
