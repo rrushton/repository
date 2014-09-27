@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>rhythmbox</Name>
+        <Homepage>https://wiki.gnome.org/Apps/Rhythmbox</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Packager>
+        <Summary>Music playing application for GNOME</Summary>
+        <Description>Music playing application for GNOME</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="594b87df4ba10df9fedf8b7285f02b6aa3a377aa" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/rhythmbox/3.0/rhythmbox-3.0.tar.xz</Archive>
+
+        <BuildDependencies>
+            <Dependency type="pkgconfig">gtk+-3.0</Dependency>
+            <Dependency type="pkgconfig">libsoup-gnome-2.4</Dependency>
+            <Dependency type="pkgconfig">libpeas-gtk-1.0</Dependency>
+            <Dependency type="pkgconfig">tdb</Dependency>
+            <Dependency type="pkgconfig">totem-plparser</Dependency>
+            <Dependency type="pkgconfig">webkit2gtk-3.0</Dependency>
+            <Dependency type="pkgconfig">json-glib-1.0</Dependency>
+            <Dependency type="pkgconfig">gstreamer-audio-1.0</Dependency>
+            <Dependency type="pkgconfig">gstreamer-plugins-base-1.0</Dependency>
+            <Dependency type="pkgconfig">ice</Dependency>
+            <Dependency type="pkgconfig">sm</Dependency>
+            <Dependency>itstool</Dependency>
+            <Dependency>vala</Dependency>
+            <!-- TODO: iPod support, CD Burning, MTP, DAAP //-->
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>rhythmbox</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
+            <Path fileType="library">/usr/lib/mozilla/plugins</Path>
+            <Path fileType="library">/usr/lib/rhythmbox</Path>
+            <Path fileType="data">/usr/share/rhythmbox</Path>
+            <Path fileType="library">/usr/lib/girepository-1.0</Path>
+            <Path fileType="library">/usr/share/gir-1.0</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/glib-2.0/schemas</Path>
+            <Path fileType="doc">/usr/share/help</Path>
+            <Path fileType="doc">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>rhythmbox-devel</Name>
+        <Summary>Development files for Rhythmbox</Summary>
+        <Description>Development files for Rhythmbox</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">rhythmbox</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>rhythmbox-docs</Name>
+        <Summary>Documentation for Rhythmbox</Summary>
+        <Description>Documentation for Rhythmbox</Description>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>09-27-2014</Date>
+            <Version>3.0</Version>
+            <Comment>Add rhythmbox to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+    </History>
+</PISI>
