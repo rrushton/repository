@@ -11,7 +11,7 @@
         <Summary>Firefox web browser</Summary>
         <Description>Firefox web browser</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="a6c3e25ee3aeb7da42db2aaeb50a385d63532beb" type="tarbz2">http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/31.0/source/firefox-31.0.source.tar.bz2</Archive>
+        <Archive sha1sum="5cb7644af9741ebcdb3a21b777362913908c8f41" type="tarbz2">http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/32.0/source/firefox-32.0.source.tar.bz2</Archive>
 
         <AdditionalFiles>
             <AdditionalFile target="mozconfig">config</AdditionalFile>
@@ -41,7 +41,7 @@
         <Name>firefox</Name>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib/firefox-31.0</Path>
+            <Path fileType="library">/usr/lib/firefox-32.0</Path>
             <Path fileType="data">/usr/share/applications</Path>
             <Path fileType="data">/usr/share/pixmaps</Path>
             <Path fileType="library">/usr/lib/mozilla/plugins</Path>
@@ -52,6 +52,14 @@
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>09-27-2014</Date>
+            <Version>32.0</Version>
+            <Comment>Update to Firefox 32.0</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="4">
             <Date>07-23-2014</Date>
             <Version>31.0</Version>
