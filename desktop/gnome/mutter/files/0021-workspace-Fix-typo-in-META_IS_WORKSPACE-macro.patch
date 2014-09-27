@@ -1,0 +1,25 @@
+From c954f9cc245dc85b5d698a14ec21e71d6c6d88c4 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Florian=20M=C3=BCllner?= <fmuellner@gnome.org>
+Date: Sat, 27 Sep 2014 06:04:30 +0200
+Subject: [PATCH 21/24] workspace: Fix typo in META_IS_WORKSPACE macro
+
+---
+ src/meta/workspace.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/meta/workspace.h b/src/meta/workspace.h
+index 9cce118..005e9c9 100644
+--- a/src/meta/workspace.h
++++ b/src/meta/workspace.h
+@@ -28,7 +28,7 @@
+ #define META_TYPE_WORKSPACE            (meta_workspace_get_type ())
+ #define META_WORKSPACE(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), META_TYPE_WORKSPACE, MetaWorkspace))
+ #define META_WORKSPACE_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  META_TYPE_WORKSPACE, MetaWorkspaceClass))
+-#define META_IS_WORKSPACE(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), META_WORKSPACE_TYPE))
++#define META_IS_WORKSPACE(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), META_TYPE_WORKSPACE))
+ #define META_IS_WORKSPACE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  META_TYPE_WORKSPACE))
+ #define META_WORKSPACE_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  META_TYPE_WORKSPACE, MetaWorkspaceClass))
+ 
+-- 
+1.8.4
+

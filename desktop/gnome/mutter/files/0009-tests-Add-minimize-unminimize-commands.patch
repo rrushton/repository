@@ -1,0 +1,95 @@
+From 371560c2b620bff18ad2601ad17d5060436915a6 Mon Sep 17 00:00:00 2001
+From: "Owen W. Taylor" <otaylor@fishsoup.net>
+Date: Wed, 24 Sep 2014 16:09:20 -0400
+Subject: [PATCH 09/24] tests: Add minimize/unminimize commands
+
+Add commands to request the client to minimize or unminimize the window;
+unminimize doesn't currently work for GTK+ because it expects XMapRequest
+to be received by the window manager, but the window is already mapped.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=737233
+---
+ src/tests/README        |  5 +++++
+ src/tests/test-client.c | 28 ++++++++++++++++++++++++++++
+ src/tests/test-runner.c |  3 +++
+ 3 files changed, 36 insertions(+)
+
+diff --git a/src/tests/README b/src/tests/README
+index fb7d87e..2038eb8 100644
+--- a/src/tests/README
++++ b/src/tests/README
+@@ -71,6 +71,11 @@ lower <client-id>/<window-id>
+   for Wayland clients. (It's also considered discouraged, but supported, for
+   non-override-redirect X11 clients.)
+ 
++minimize <client-id>/<window-id>
++unminimize <client-id>/<window-id>
++  Ask the client to minimize or unminimize the given window ID. This older
++  term for this operation is "iconify".
++
+ destroy <client-id>/<window-id>
+   Destroy the given window
+ 
+diff --git a/src/tests/test-client.c b/src/tests/test-client.c
+index 1618331..35f675d 100644
+--- a/src/tests/test-client.c
++++ b/src/tests/test-client.c
+@@ -263,6 +263,34 @@ process_line (const char *line)
+       XSyncSetCounter (gdk_x11_display_get_xdisplay (gdk_display_get_default ()),
+                        counter, sync_value);
+     }
++  else if (strcmp (argv[0], "minimize") == 0)
++    {
++      if (argc != 2)
++        {
++          g_print ("usage: minimize <id>");
++          goto out;
++        }
++
++      GtkWidget *window = lookup_window (argv[1]);
++      if (!window)
++        goto out;
++
++      gtk_window_iconify (GTK_WINDOW (window));
++    }
++  else if (strcmp (argv[0], "unminimize") == 0)
++    {
++      if (argc != 2)
++        {
++          g_print ("usage: unminimize <id>");
++          goto out;
++        }
++
++      GtkWidget *window = lookup_window (argv[1]);
++      if (!window)
++        goto out;
++
++      gtk_window_deiconify (GTK_WINDOW (window));
++    }
+   else
+     {
+       g_print ("Unknown command %s", argv[0]);
+diff --git a/src/tests/test-runner.c b/src/tests/test-runner.c
+index 6996a87..3234c53 100644
+--- a/src/tests/test-runner.c
++++ b/src/tests/test-runner.c
+@@ -773,6 +773,8 @@ test_case_do (TestCase *test,
+            strcmp (argv[0], "activate") == 0 ||
+            strcmp (argv[0], "raise") == 0 ||
+            strcmp (argv[0], "lower") == 0 ||
++           strcmp (argv[0], "minimize") == 0 ||
++           strcmp (argv[0], "unminimize") == 0 ||
+            strcmp (argv[0], "destroy") == 0)
+     {
+       if (argc != 2)
+@@ -814,6 +816,7 @@ test_case_do (TestCase *test,
+     {
+       if (!test_case_assert_stacking (test, argv + 1, argc - 1, error))
+         return FALSE;
++
+       if (!test_case_check_xserver_stacking (test, error))
+         return FALSE;
+     }
+-- 
+1.8.4
+

@@ -1,0 +1,49 @@
+From d06b39d13c6a79d2031a14a9edc1cf38a660b935 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Florian=20M=C3=BCllner?= <fmuellner@gnome.org>
+Date: Fri, 26 Sep 2014 11:39:31 +0100
+Subject: [PATCH 20/24] window: Fix another case of uninitialized workspace
+ state
+
+Since commit 2eec11b4453e, windows without a __NET_WM_DESKTOP property
+that should be on all workspaces are not added to the active workspace;
+this is correct, however not adding them to any workspace is not ...
+---
+ src/core/window.c | 14 +++++++++++---
+ 1 file changed, 11 insertions(+), 3 deletions(-)
+
+diff --git a/src/core/window.c b/src/core/window.c
+index f46ca08..5039e30 100644
+--- a/src/core/window.c
++++ b/src/core/window.c
+@@ -1097,9 +1097,9 @@ _meta_window_shared_new (MetaDisplay         *display,
+    * but appear on other workspaces. override-redirect windows are part
+    * of no workspace.
+    */
+-  if (!window->override_redirect)
++  if (!window->override_redirect && window->workspace == NULL)
+     {
+-      if (window->workspace == NULL && window->transient_for != NULL)
++      if (window->transient_for != NULL)
+         {
+           meta_topic (META_DEBUG_PLACEMENT,
+                       "Putting window %s on same workspace as parent %s\n",
+@@ -1110,7 +1110,15 @@ _meta_window_shared_new (MetaDisplay         *display,
+                                window->transient_for->workspace);
+         }
+ 
+-      if (window->workspace == NULL && !window->on_all_workspaces)
++      if (window->on_all_workspaces)
++        {
++          meta_topic (META_DEBUG_PLACEMENT,
++                      "Putting window %s on all workspaces\n",
++                      window->desc);
++
++          set_workspace_state (window, TRUE, NULL);
++        }
++      else
+         {
+           meta_topic (META_DEBUG_PLACEMENT,
+                       "Putting window %s on active workspace\n",
+-- 
+1.8.4
+

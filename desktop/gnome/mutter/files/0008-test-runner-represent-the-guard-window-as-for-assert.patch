@@ -1,0 +1,84 @@
+From 7616881afa5396878201681b2655b9f2efbd3087 Mon Sep 17 00:00:00 2001
+From: "Owen W. Taylor" <otaylor@fishsoup.net>
+Date: Wed, 24 Sep 2014 16:07:11 -0400
+Subject: [PATCH 08/24] test-runner: represent the guard window as '|' for
+ assert_stacking
+
+Allow putting '|' into the list of windows for assert_stacking to
+represent the position of the guard window. Not present is the same
+as at the beginning (bottom) of the list.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=737233
+---
+ src/tests/README                              |  5 ++++-
+ src/tests/stacking/override-redirect.metatest |  2 +-
+ src/tests/test-runner.c                       | 17 +++++++++++++++++
+ 3 files changed, 22 insertions(+), 2 deletions(-)
+
+diff --git a/src/tests/README b/src/tests/README
+index b7d9444..fb7d87e 100644
+--- a/src/tests/README
++++ b/src/tests/README
+@@ -80,7 +80,10 @@ wait
+ 
+ assert_stacking <client-id>/<window-id> <client-id>/<window-id> ...
+   Assert that the list of client windows known to Mutter is as given and in
+-  the given order, bottom to top.
++  the given order, bottom to top. The character '|' can be present in the
++  list of windows to indicate the guard window that separates hidden and
++  visible windows. If '|' isn't present, the guard window is asserted to
++  be below all client windows.
+ 
+   This function also queries the X server stack and verifies that Mutter's
+   expectation of the X server stack matches reality.
+diff --git a/src/tests/stacking/override-redirect.metatest b/src/tests/stacking/override-redirect.metatest
+index 96dde5b..b313d24 100644
+--- a/src/tests/stacking/override-redirect.metatest
++++ b/src/tests/stacking/override-redirect.metatest
+@@ -12,7 +12,7 @@ assert_stacking 1/1 1/2
+ 
+ lower 1/2
+ wait
+-assert_stacking 1/2 1/1
++assert_stacking 1/2 | 1/1
+ 
+ raise 1/2
+ wait
+diff --git a/src/tests/test-runner.c b/src/tests/test-runner.c
+index d5f723c..6996a87 100644
+--- a/src/tests/test-runner.c
++++ b/src/tests/test-runner.c
+@@ -610,6 +610,13 @@ test_case_assert_stacking (TestCase *test,
+           else
+             g_string_append_printf (stack_string, "(%s)", window->title);
+         }
++      else if (windows[i] == display->screen->guard_window)
++        {
++          if (stack_string->len > 0)
++            g_string_append_c (stack_string, ' ');
++
++          g_string_append_c (stack_string, '|');
++        }
+     }
+ 
+   for (i = 0; i < n_expected_windows; i++)
+@@ -620,6 +627,16 @@ test_case_assert_stacking (TestCase *test,
+       g_string_append (expected_string, expected_windows[i]);
+     }
+ 
++  /* Don't require '| ' as a prefix if there are no hidden windows - we
++   * remove the prefix from the actual string instead of adding it to the
++   * expected string for clarity of the error message
++   */
++  if (index (expected_string->str, '|') == NULL && stack_string->str[0] == '|')
++    {
++      g_string_erase (stack_string,
++                      0, stack_string->str[1] == ' ' ? 2 : 1);
++    }
++
+   if (strcmp (expected_string->str, stack_string->str) != 0)
+     {
+       g_set_error (error, TEST_RUNNER_ERROR, TEST_RUNNER_ERROR_ASSERTION_FAILED,
+-- 
+1.8.4
+

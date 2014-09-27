@@ -1,0 +1,31 @@
+From df90545258a5aa46f3a39f6334c6459b900ce8b2 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Florian=20M=C3=BCllner?= <fmuellner@gnome.org>
+Date: Sat, 27 Sep 2014 04:11:00 +0200
+Subject: [PATCH 22/24] window: Fix crash when mapping sticky window
+
+Since the introduction of set_workspace_state(), window->workspace
+will always be NULL when on_all_workspaces is set - passing that
+to a workspace function that does not validate its input will then
+result in a crash.
+Use the get_workspace() function instead, which will always return
+a valid workspace.
+---
+ src/core/window.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/core/window.c b/src/core/window.c
+index 5039e30..863027a 100644
+--- a/src/core/window.c
++++ b/src/core/window.c
+@@ -2095,7 +2095,7 @@ windows_overlap (const MetaWindow *w1, const MetaWindow *w2)
+ static gboolean
+ window_would_be_covered (const MetaWindow *newbie)
+ {
+-  MetaWorkspace *workspace = newbie->workspace;
++  MetaWorkspace *workspace = meta_window_get_workspace ((MetaWindow *)newbie);
+   GList *tmp, *windows;
+ 
+   windows = meta_workspace_list_windows (workspace);
+-- 
+1.8.4
+

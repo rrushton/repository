@@ -34,6 +34,32 @@
 
             <!-- Going upstream //-->
             <Patch level="1">0001-backends-Include-Xfixes-for-cursor-events-and-manipu.patch</Patch>
+
+            <!-- From git.. //-->
+            <Patch level="1">0001-window-Fix-titlebar_is_onscreen-test.patch</Patch>
+            <Patch level="1">0002-constraints-Fix-update_onscreen_requirements.patch</Patch>
+            <Patch level="1">0003-keybindings-Do-not-depend-on-linux-headers-for-above.patch</Patch>
+            <Patch level="1">0004-keybindings-Fix-indentation.patch</Patch>
+            <Patch level="1">0005-Updated-Telugu-translation.patch</Patch>
+            <Patch level="1">0006-Updated-Serbian-translation.patch</Patch>
+            <!--<Patch level="1">0007-test-runner-make-test_case_wait-wait-for-queued-work.patch</Patch>
+            <Patch level="1">0008-test-runner-represent-the-guard-window-as-for-assert.patch</Patch>
+            <Patch level="1">0009-tests-Add-minimize-unminimize-commands.patch</Patch>
+            <Patch level="1">0010-Add-a-test-for-stacking-vs.-minimization.patch</Patch>//-->
+            <Patch level="1">0011-Fix-stacking-of-the-guard-window.patch</Patch>
+            <Patch level="1">0012-keybindings-Do-a-breadth-first-search-in-our-keysym-.patch</Patch>
+            <Patch level="1">0013-wayland-Send-accurate-capabilities.patch</Patch>
+            <!--<Patch level="1">0014-Support-for-hardware-cursor-sizes-other-than-64x64-o.patch</Patch>//-->
+            <Patch level="1">0015-Updated-Bulgarian-translation.patch</Patch>
+            <Patch level="1">0016-Updated-Bengali-India-translation.patch</Patch>
+            <Patch level="1">0017-window-Be-more-careful-when-setting-initial-workspac.patch</Patch>
+            <Patch level="1">0018-window-Always-set-workspace-state-while-constructing.patch</Patch>
+            <Patch level="1">0019-monitor-manager-Make-sure-to-emit-PropertiesChanged-.patch</Patch>
+            <Patch level="1">0020-window-Fix-another-case-of-uninitialized-workspace-s.patch</Patch>
+            <Patch level="1">0021-workspace-Fix-typo-in-META_IS_WORKSPACE-macro.patch</Patch>
+            <Patch level="1">0022-window-Fix-crash-when-mapping-sticky-window.patch</Patch>
+            <Patch level="1">0023-window-Fix-corner-case-in-set_demands_attention.patch</Patch>
+            <Patch level="1">0024-window-Fix-typo.patch</Patch>
         </Patches>
     </Source>
 
@@ -85,6 +111,14 @@
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>09-27-2014</Date>
+            <Version>3.14.0</Version>
+            <Comment>Sync with git for latest fixes</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="6">
             <Date>09-26-2014</Date>
             <Version>3.14.0</Version>

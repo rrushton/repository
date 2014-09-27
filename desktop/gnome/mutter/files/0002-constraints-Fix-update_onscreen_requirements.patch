@@ -1,0 +1,35 @@
+From 90bd02ff4d698012869ee63404258b05a889975a Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Florian=20M=C3=BCllner?= <fmuellner@gnome.org>
+Date: Thu, 18 Sep 2014 16:43:06 +0100
+Subject: [PATCH 02/24] constraints: Fix update_onscreen_requirements()
+
+Another missing translation into screen coordinates ...
+
+https://bugzilla.gnome.org/show_bug.cgi?id=736915
+---
+ src/core/constraints.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+diff --git a/src/core/constraints.c b/src/core/constraints.c
+index 42204bc..d0ac4fa 100644
+--- a/src/core/constraints.c
++++ b/src/core/constraints.c
+@@ -612,9 +612,14 @@ update_onscreen_requirements (MetaWindow     *window,
+    */
+   if (window->frame && window->decorated)
+     {
+-      MetaRectangle titlebar_rect;
++      MetaRectangle titlebar_rect, frame_rect;
+ 
+       meta_window_get_titlebar_rect (window, &titlebar_rect);
++      meta_window_get_frame_rect (window, &frame_rect);
++
++      /* translate into screen coordinates */
++      titlebar_rect.x = frame_rect.x;
++      titlebar_rect.y = frame_rect.y;
+ 
+       old = window->require_titlebar_visible;
+       window->require_titlebar_visible =
+-- 
+1.8.4
+

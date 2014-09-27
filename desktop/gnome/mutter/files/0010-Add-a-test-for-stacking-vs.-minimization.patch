@@ -1,0 +1,53 @@
+From cdfb30120074fe4067ab1ec0534af3529ee3c520 Mon Sep 17 00:00:00 2001
+From: "Owen W. Taylor" <otaylor@fishsoup.net>
+Date: Wed, 24 Sep 2014 16:16:03 -0400
+Subject: [PATCH 10/24] Add a test for stacking vs. minimization
+
+Test that the guard window is in the right place.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=737233
+---
+ src/Makefile-tests.am                 |  1 +
+ src/tests/stacking/minimized.metatest | 18 ++++++++++++++++++
+ 2 files changed, 19 insertions(+)
+ create mode 100644 src/tests/stacking/minimized.metatest
+
+diff --git a/src/Makefile-tests.am b/src/Makefile-tests.am
+index ebb35fd..7204bf4 100644
+--- a/src/Makefile-tests.am
++++ b/src/Makefile-tests.am
+@@ -7,6 +7,7 @@ stackingdir = $(pkgdatadir)/tests/stacking
+ dist_stacking_DATA =				\
+ 	tests/stacking/basic-x11.metatest	\
+ 	tests/stacking/basic-wayland.metatest	\
++	tests/stacking/minimized.metatest   	\
+ 	tests/stacking/mixed-windows.metatest   \
+ 	tests/stacking/override-redirect.metatest
+ 
+diff --git a/src/tests/stacking/minimized.metatest b/src/tests/stacking/minimized.metatest
+new file mode 100644
+index 0000000..3da236d
+--- /dev/null
++++ b/src/tests/stacking/minimized.metatest
+@@ -0,0 +1,18 @@
++new_client 1 x11
++create 1/1
++show 1/1
++create 1/2
++show 1/2
++wait
++assert_stacking 1/1 1/2
++
++minimize 1/2
++wait
++assert_stacking 1/2 | 1/1
++
++# unminimize doesn't work for GTK+ currently, because GTK+ expects
++# to be able to de-iconify with MapWindow, but the window is already
++# mapped.
++activate 1/2
++wait
++assert_stacking 1/1 1/2
+-- 
+1.8.4
+

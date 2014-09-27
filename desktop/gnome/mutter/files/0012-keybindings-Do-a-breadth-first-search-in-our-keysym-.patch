@@ -1,0 +1,162 @@
+From 60c22b62366d737f7f6eabe7d46fa682c6f400d7 Mon Sep 17 00:00:00 2001
+From: Rui Matos <tiagomatos@gmail.com>
+Date: Tue, 23 Sep 2014 17:48:31 +0200
+Subject: [PATCH 12/24] keybindings: Do a breadth first search in our keysym to
+ keycode code
+
+Commit 1af00333682cda21db2d08b9fc590888d8e23e57 made a subtle change
+regarding how XKeysymToKeycode behaves. It does a depth first search
+while XKeysymToKeycode is documented to do a breadth first search:
+
+"this function looks in each column of the core keyboard mapping in
+turn and returns the lowest numbered key that matches in the lowest
+numbered group" - from the XKB library documentation
+
+Looping over all keycodes for each layout and level index makes us go
+back to the previous behavior.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=737134
+---
+ src/core/keybindings-private.h |  2 ++
+ src/core/keybindings.c         | 71 +++++++++++++++++++++++++++++-------------
+ 2 files changed, 52 insertions(+), 21 deletions(-)
+
+diff --git a/src/core/keybindings-private.h b/src/core/keybindings-private.h
+index aadb294..359aeff 100644
+--- a/src/core/keybindings-private.h
++++ b/src/core/keybindings-private.h
+@@ -101,6 +101,8 @@ typedef struct
+   MetaKeyCombo *iso_next_group_combos;
+   int n_iso_next_group_combos;
+ 
++  xkb_level_index_t keymap_num_levels;
++
+   /* Alt+click button grabs */
+   ClutterModifierType window_grab_modifiers;
+ } MetaKeyBindingManager;
+diff --git a/src/core/keybindings.c b/src/core/keybindings.c
+index 98ee717..84c6cca 100644
+--- a/src/core/keybindings.c
++++ b/src/core/keybindings.c
+@@ -240,29 +240,19 @@ reload_modmap (MetaKeyBindingManager *keys)
+ 
+ static gboolean
+ is_keycode_for_keysym (struct xkb_keymap *keymap,
++                       xkb_layout_index_t layout,
++                       xkb_level_index_t  level,
+                        xkb_keycode_t      keycode,
+                        xkb_keysym_t       keysym)
+ {
+-  xkb_layout_index_t num_layouts, i;
++  const xkb_keysym_t *syms;
++  int num_syms, k;
+ 
+-  num_layouts = xkb_keymap_num_layouts_for_key (keymap, keycode);
+-  for (i = 0; i < num_layouts; i++)
++  num_syms = xkb_keymap_key_get_syms_by_level (keymap, keycode, layout, level, &syms);
++  for (k = 0; k < num_syms; k++)
+     {
+-      xkb_level_index_t num_levels, j;
+-
+-      num_levels = xkb_keymap_num_levels_for_key (keymap, keycode, i);
+-      for (j = 0; j < num_levels; j++)
+-        {
+-          const xkb_keysym_t *syms;
+-          int num_syms, k;
+-
+-          num_syms = xkb_keymap_key_get_syms_by_level (keymap, keycode, i, j, &syms);
+-          for (k = 0; k < num_syms; k++)
+-            {
+-              if (syms[k] == keysym)
+-                return TRUE;
+-            }
+-        }
++      if (syms[k] == keysym)
++        return TRUE;
+     }
+ 
+   return FALSE;
+@@ -272,6 +262,8 @@ typedef struct
+ {
+   GArray *keycodes;
+   xkb_keysym_t keysym;
++  xkb_layout_index_t layout;
++  xkb_level_index_t level;
+ } FindKeysymData;
+ 
+ static void
+@@ -282,8 +274,10 @@ get_keycodes_for_keysym_iter (struct xkb_keymap *keymap,
+   FindKeysymData *search_data = data;
+   GArray *keycodes = search_data->keycodes;
+   xkb_keysym_t keysym = search_data->keysym;
++  xkb_layout_index_t layout = search_data->layout;
++  xkb_level_index_t level = search_data->level;
+ 
+-  if (is_keycode_for_keysym (keymap, keycode, keysym))
++  if (is_keycode_for_keysym (keymap, layout, level, keycode, keysym))
+     g_array_append_val (keycodes, keycode);
+ }
+ 
+@@ -311,8 +305,15 @@ get_keycodes_for_keysym (MetaKeyBindingManager  *keys,
+   {
+     MetaBackend *backend = meta_get_backend ();
+     struct xkb_keymap *keymap = meta_backend_get_keymap (backend);
+-    FindKeysymData search_data = { retval, keysym };
+-    xkb_keymap_key_for_each (keymap, get_keycodes_for_keysym_iter, &search_data);
++    xkb_layout_index_t i;
++    xkb_level_index_t j;
++
++    for (i = 0; i < xkb_keymap_num_layouts (keymap); i++)
++      for (j = 0; j < keys->keymap_num_levels; j++)
++        {
++          FindKeysymData search_data = { retval, keysym, i, j };
++          xkb_keymap_key_for_each (keymap, get_keycodes_for_keysym_iter, &search_data);
++        }
+   }
+ 
+  out:
+@@ -341,6 +342,32 @@ get_first_keycode_for_keysym (MetaKeyBindingManager *keys,
+ }
+ 
+ static void
++determine_keymap_num_levels_iter (struct xkb_keymap *keymap,
++                                  xkb_keycode_t      keycode,
++                                  void              *data)
++{
++  xkb_level_index_t *num_levels = data;
++  xkb_layout_index_t i;
++
++  for (i = 0; i < xkb_keymap_num_layouts_for_key (keymap, keycode); i++)
++    {
++      xkb_level_index_t level = xkb_keymap_num_levels_for_key (keymap, keycode, i);
++      if (level > *num_levels)
++        *num_levels = level;
++    }
++}
++
++static void
++determine_keymap_num_levels (MetaKeyBindingManager *keys)
++{
++  MetaBackend *backend = meta_get_backend ();
++  struct xkb_keymap *keymap = meta_backend_get_keymap (backend);
++
++  keys->keymap_num_levels = 0;
++  xkb_keymap_key_for_each (keymap, determine_keymap_num_levels_iter, &keys->keymap_num_levels);
++}
++
++static void
+ reload_iso_next_group_combos (MetaKeyBindingManager *keys)
+ {
+   const char *iso_next_group_option;
+@@ -488,6 +515,8 @@ reload_keycodes (MetaKeyBindingManager *keys)
+   meta_topic (META_DEBUG_KEYBINDINGS,
+               "Reloading keycodes for binding tables\n");
+ 
++  determine_keymap_num_levels (keys);
++
+   if (keys->overlay_key_combo.keysym != 0)
+     {
+       keys->overlay_key_combo.keycode =
+-- 
+1.8.4
+

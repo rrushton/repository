@@ -1,0 +1,25 @@
+From 482a97466d30972f4affe4b5d82c6ba488a01849 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Florian=20M=C3=BCllner?= <fmuellner@gnome.org>
+Date: Sat, 27 Sep 2014 03:58:33 +0200
+Subject: [PATCH 24/24] window: Fix typo
+
+---
+ src/core/window.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/core/window.c b/src/core/window.c
+index 06fb210..d4c1018 100644
+--- a/src/core/window.c
++++ b/src/core/window.c
+@@ -4297,7 +4297,7 @@ meta_window_focus (MetaWindow  *window,
+  *  - workspace->windows is a list of windows that is located on
+  *    that workspace.
+  *
+- *  - If the window is on_all_workspaces, then then
++ *  - If the window is on_all_workspaces, then
+  *    window->workspace == NULL, but workspace->windows contains
+  *    the window.
+  */
+-- 
+1.8.4
+

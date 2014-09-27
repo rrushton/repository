@@ -1,0 +1,36 @@
+From 6565bca210b58cfe167ca3eaea744da35c332a24 Mon Sep 17 00:00:00 2001
+From: "Jasper St. Pierre" <jstpierre@mecheye.net>
+Date: Wed, 17 Sep 2014 08:37:51 -0600
+Subject: [PATCH 13/24] wayland: Send accurate capabilities
+
+mutter now knows whether the app menu should be shown, so expose this
+properly under Wayland as well.
+---
+ src/wayland/meta-wayland-surface.c | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+diff --git a/src/wayland/meta-wayland-surface.c b/src/wayland/meta-wayland-surface.c
+index c231b41..6581f54 100644
+--- a/src/wayland/meta-wayland-surface.c
++++ b/src/wayland/meta-wayland-surface.c
+@@ -1441,12 +1441,15 @@ bind_gtk_shell (struct wl_client *client,
+                 guint32           id)
+ {
+   struct wl_resource *resource;
++  uint32_t capabilities = 0;
+ 
+   resource = wl_resource_create (client, &gtk_shell_interface, version, id);
+   wl_resource_set_implementation (resource, &meta_wayland_gtk_shell_interface, data, NULL);
+ 
+-  /* FIXME: ask the plugin */
+-  gtk_shell_send_capabilities (resource, GTK_SHELL_CAPABILITY_GLOBAL_APP_MENU);
++  if (!meta_prefs_get_show_fallback_app_menu ())
++    capabilities = GTK_SHELL_CAPABILITY_GLOBAL_APP_MENU;
++
++  gtk_shell_send_capabilities (resource, capabilities);
+ }
+ 
+ static void
+-- 
+1.8.4
+

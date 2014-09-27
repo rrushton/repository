@@ -1,0 +1,35 @@
+From 4e14bb9df3ec34874c03d45fb7842234e0c82ab7 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Florian=20M=C3=BCllner?= <fmuellner@gnome.org>
+Date: Sat, 27 Sep 2014 04:12:52 +0200
+Subject: [PATCH 23/24] window: Fix corner case in set_demands_attention()
+
+We only grant requests to set the demands-attention hint if the window
+is at least partially obscured; so for non-minimized windows on the
+active workspace, we check if any other window on the same workspace
+that is higher in the stack overlaps.
+However in the case of a sticky window, window->workspace is NULL, so
+we end up considering any non-sticky window on a different workspace.
+
+At this point we have already established that the window is showing
+on the active workspace, so use that to filter for windows that may
+overlap.
+---
+ src/core/window.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/core/window.c b/src/core/window.c
+index 863027a..06fb210 100644
+--- a/src/core/window.c
++++ b/src/core/window.c
+@@ -6731,7 +6731,7 @@ meta_window_set_demands_attention (MetaWindow *window)
+           other_window = stack->data;
+           stack = stack->next;
+ 
+-          if (meta_window_located_on_workspace (other_window, window->workspace))
++          if (meta_window_located_on_workspace (other_window, workspace))
+             {
+               meta_window_get_frame_rect (other_window, &other_rect);
+ 
+-- 
+1.8.4
+

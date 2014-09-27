@@ -1,0 +1,25 @@
+From 4a71621fbcaaa0d7992d6e86e54f872e0f737bae Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Florian=20M=C3=BCllner?= <fmuellner@gnome.org>
+Date: Mon, 22 Sep 2014 18:37:27 +0200
+Subject: [PATCH 04/24] keybindings: Fix indentation
+
+---
+ src/core/keybindings.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/core/keybindings.c b/src/core/keybindings.c
+index e1c909b..98ee717 100644
+--- a/src/core/keybindings.c
++++ b/src/core/keybindings.c
+@@ -323,7 +323,7 @@ get_keycodes_for_keysym (MetaKeyBindingManager  *keys,
+ 
+ static guint
+ get_first_keycode_for_keysym (MetaKeyBindingManager *keys,
+-                              guint                   keysym)
++                              guint                  keysym)
+ {
+   int *keycodes;
+   int n_keycodes;
+-- 
+1.8.4
+

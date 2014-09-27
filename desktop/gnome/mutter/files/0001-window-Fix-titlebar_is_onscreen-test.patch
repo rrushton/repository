@@ -1,0 +1,42 @@
+From 73ca0efaebff3f2f8a840c6aae4bf23e1fc2f577 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Florian=20M=C3=BCllner?= <fmuellner@gnome.org>
+Date: Thu, 18 Sep 2014 16:29:50 +0100
+Subject: [PATCH 01/24] window: Fix titlebar_is_onscreen() test
+
+The titlebar rect is in window coordinates, while screen regions are
+obviously not. Fix by translating into screen coordinates before
+testing for overlaps.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=736915
+---
+ src/core/window.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+diff --git a/src/core/window.c b/src/core/window.c
+index 404d05a..5c9ecfd 100644
+--- a/src/core/window.c
++++ b/src/core/window.c
+@@ -5385,7 +5385,7 @@ meta_window_shove_titlebar_onscreen (MetaWindow *window)
+ gboolean
+ meta_window_titlebar_is_onscreen (MetaWindow *window)
+ {
+-  MetaRectangle  titlebar_rect;
++  MetaRectangle  titlebar_rect, frame_rect;
+   GList         *onscreen_region;
+   gboolean       is_onscreen;
+ 
+@@ -5400,6 +5400,11 @@ meta_window_titlebar_is_onscreen (MetaWindow *window)
+   /* Get the rectangle corresponding to the titlebar */
+   meta_window_get_titlebar_rect (window, &titlebar_rect);
+ 
++  /* Translate into screen coordinates */
++  meta_window_get_frame_rect (window, &frame_rect);
++  titlebar_rect.x = frame_rect.x;
++  titlebar_rect.y = frame_rect.y;
++
+   /* Run through the spanning rectangles for the screen and see if one of
+    * them overlaps with the titlebar sufficiently to consider it onscreen.
+    */
+-- 
+1.8.4
+

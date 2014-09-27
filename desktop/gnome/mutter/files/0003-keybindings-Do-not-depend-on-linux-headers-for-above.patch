@@ -1,0 +1,37 @@
+From 565b9d73d532c7759fce432eb5c397ff535ac0ff Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Florian=20M=C3=BCllner?= <fmuellner@gnome.org>
+Date: Mon, 22 Sep 2014 15:06:22 +0200
+Subject: [PATCH 03/24] keybindings: Do not depend on linux headers for
+ above-tab key
+
+Commit 2f229c3928be3a removed the code to compute the above-tab
+keycode and replaced it with a simple constant from linux/input.h.
+We obviously cannot depend on linux headers on non-linux systems,
+so provide a fallback definition in that case (which is expected
+to work assuming the system is using the Xorg xf86-input-keyboard
+driver).
+
+https://bugzilla.gnome.org/show_bug.cgi?id=737135
+---
+ src/core/keybindings.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/src/core/keybindings.c b/src/core/keybindings.c
+index 1566460..e1c909b 100644
+--- a/src/core/keybindings.c
++++ b/src/core/keybindings.c
+@@ -40,7 +40,11 @@
+ #include <meta/prefs.h>
+ #include "meta-accel-parse.h"
+ 
++#ifdef __linux__
+ #include <linux/input.h>
++#elif !defined KEY_GRAVE
++#define KEY_GRAVE 0x29 /* assume the use of xf86-input-keyboard */
++#endif
+ 
+ #include "backends/x11/meta-backend-x11.h"
+ #include "x11/window-x11.h"
+-- 
+1.8.4
+
