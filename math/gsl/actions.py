@@ -1,7 +1,5 @@
-
 #!/usr/bin/python
 
-# Created For SolusOS
 
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
@@ -14,4 +12,3 @@ def build():
 
 def install():
     autotools.install()
-    pisitools.dodoc("AUTHORS", "COPYING", "ChangeLog", "README", "THANKS")
