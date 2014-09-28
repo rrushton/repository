@@ -22,6 +22,7 @@
             <Dependency type="pkgconfig">gl</Dependency>
             <Dependency type="pkgconfig">glu</Dependency>
             <Dependency type="pkgconfig">libnotify</Dependency>
+            <Dependency type="pkgconfig">gnutls</Dependency>
             <Dependency>libjpeg-turbo-devel</Dependency>
         </BuildDependencies>
     </Source>
