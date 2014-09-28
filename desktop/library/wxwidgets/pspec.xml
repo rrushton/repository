@@ -29,7 +29,6 @@
     <Package>
         <Name>wxwidgets</Name>
         <Files>
-            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib/lib*.so.*</Path>
             <Path fileType="library">/usr/lib/wx</Path>
             <Path fileType="data">/usr/share</Path>
@@ -39,13 +38,27 @@
 
     <Package>
         <Name>wxwidgets-devel</Name>
+        <Summary>Development files for wxwidgets</Summary>
+        <Description>Development files for wxwidgets</Description>
         <Files>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="data">/usr/include</Path>
             <Path fileType="libarary">/usr/lib/lib*.so</Path>
         </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">wxwidgets</Dependency>
+        </RuntimeDependencies>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>09-28-2014</Date>
+            <Version>3.0.1</Version>
+            <Comment>Add missing dependency</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>09-27-2014</Date>
             <Version>3.0.1</Version>
