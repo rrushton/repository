@@ -35,6 +35,15 @@ function do_die() {
 # Can't be too careful
 function do_clean()
 {
+    if [[ `grep $PKGDIR /etc/mtab` ]]; then
+        umount $GTDIR/$PKGDIR 2>/dev/null
+    fi
+    if [[ `grep $ARCHIVEDIR /etc/mtab` ]]; then
+        umount $GTDIR/$ARCHIVEDIR 2>/dev/null
+    fi
+    if [[ `grep BUILDROOT/dev /etc/mtab` ]]; then
+        umount $GTDIR/dev
+    fi
     PID=`cat $GTDIR/var/run/dbus/pid 2>/dev/null`
     if [[ $? -ne 0 ]]; then
         exit 0
@@ -43,13 +52,6 @@ function do_clean()
     sleep 1
     kill -9 $PID 2>/dev/null
     rm $GTDIR/var/run/dbus/pid
-
-    if [[ `grep $PKGDIR /etc/mtab` ]]; then
-        umount $GTDIR/$PKGDIR 2>/dev/null
-    fi
-    if [[ `grep $ARCHIVEDIR /etc/mtab` ]]; then
-        umount $GTDIR/$ARCHIVEDIR 2>/dev/null
-    fi
 }
 
 # trap keyboard interrupt (control-c)
@@ -226,7 +228,11 @@ function do_build()
     mount -o bind "$ARCHIVEDIR" "$BUILDDIR/BUILDROOT/var/cache/eopkg/archives" || do_die "Unable to mount host archives pool"
     mount -o bind "$CCACHEDIR" "$BUILDDIR/BUILDROOT/root/.ccache" || do_die "Unable to mount host ccache pool"
 
+    # Need /dev/ for things like glibc...
+    mount -o bind /dev "$BUILDDIR/BUILDROOT/dev" || do_die "Unable to bind-mount /dev"
+
     # Now attempt to build it
+    chroot "$BUILDDIR/BUILDROOT" pisi ur
     chroot "$BUILDDIR/BUILDROOT" pisi build -y /WORK/packages/pspec.xml -O /WORK
     if [[ $? -eq 0 ]]; then
         echo "Packages built successfully"
@@ -235,9 +241,11 @@ function do_build()
         echo "Package building failed"
     fi
 
+    sleep 3
     umount "$BUILDDIR/BUILDROOT/var/cache/eopkg/packages"
     umount "$BUILDDIR/BUILDROOT/var/cache/eopkg/archives"
     umount "$BUILDDIR/BUILDROOT/root/.ccache"
+    umount "$BUILDDIR/BUILDROOT/dev"
 
     # Kill dbus (sigint handler will make sure this happens too)
     PID=`cat $BUILDDIR/BUILDROOT/var/run/dbus/pid`
