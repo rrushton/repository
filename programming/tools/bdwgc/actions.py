@@ -1,12 +1,11 @@
-
 #!/usr/bin/python
 
-# Created For SolusOS
 
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
+    shelltools.system("ln -s ../libatomic_ops/libatomic_ops-7.4.0 libatomic_ops")
     autotools.configure("--disable-static")
 
 def build():
