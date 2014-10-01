@@ -27,6 +27,12 @@
             <Dependency>perl</Dependency>
             <Dependency>lz4</Dependency>
         </BuildDependencies>
+
+        <Patches>
+            <Patch level="1">security/cve-2014-3181.patch</Patch>
+            <Patch level="1">security/cve-2014-3186.patch</Patch>
+            <Patch level="1">security/cve-2014-6410.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
@@ -74,6 +80,14 @@
     </Package>
 
     <History>
+        <Update release="25" type="security">
+            <Date>10-01-2014</Date>
+            <Version>3.16.3</Version>
+            <Comment>Patch against CVE-2014-3181, CVE-2014-3186, CVE-2014-6410</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="24">
             <Date>09-19-2014</Date>
             <Version>3.16.3</Version>
