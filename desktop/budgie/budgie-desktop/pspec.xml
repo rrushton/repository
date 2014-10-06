@@ -11,7 +11,7 @@
         <Summary>Budgie Desktop</Summary>
         <Description>Budgie Desktop</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="95cc20cb0ed0b1c1623b284eeac9cb2781541bb0" type="tarxz">https://evolve-os.com/sources/budgie-desktop-7.tar.xz</Archive>
+        <Archive sha1sum="7e55f0e43d847baaab9c721b101c203f80b23533" type="tarxz">https://evolve-os.com/sources/budgie-desktop-7.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
@@ -64,6 +64,14 @@
     </Package>
 
     <History>
+        <Update release="22">
+            <Date>10-04-2014</Date>
+            <Version>7</Version>
+            <Comment>Sync with git for new "dark" setting, menubar applet, etc.</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="21">
             <Date>09-07-2014</Date>
             <Version>7</Version>
