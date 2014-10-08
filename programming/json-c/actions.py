@@ -1,12 +1,13 @@
-
 #!/usr/bin/python
 
-# Created For SolusOS
+# Created For Evolve OS
 
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
+    # make distcheck, anyone?
+    shelltools.system("sed -i s/-Werror// Makefile.in")
     autotools.configure("--disable-static")
 
 def build():
