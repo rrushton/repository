@@ -5,21 +5,20 @@
         <Name>libxml2</Name>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey.doherty@gmail.com</Email>
+            <Email>ikey@evolve-os.com</Email>
         </Packager>
         <Summary>GNOME XML Library</Summary>
         <Description>The libxml2 package contains libraries and utilities used for parsing XML files.</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="a43d7c0a8e463ac5a7846254f2a732a9af146fab" type="targz">http://xmlsoft.org/sources/libxml2-2.9.0.tar.gz</Archive>
+        <Archive sha1sum="eb3e2146c6d68aea5c2a4422ed76fe196f933c21" type="targz">http://xmlsoft.org/sources/libxml2-2.9.1.tar.gz</Archive>
     </Source>
 
     <Package>
         <Name>libxml2</Name>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib/lib*so*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
             <Path fileType="data">/usr/lib/*.sh</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="library">/usr/lib/python*</Path>
         </Files>
@@ -34,11 +33,26 @@
 
     <Package>
         <Name>libxml2-devel</Name>
+        <Summary>Development files for libxml2</Summary>
+        <Description>Development files for libxml2</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/share/aclocal</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libxml2</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>libxml2-docs</Name>
+        <Summary>Documentation for libxml2</Summary>
+        <Description>Documentation for libxml2</Description>
+        <Files>
             <Path fileType="doc">/usr/share/gtk-doc</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">libxml2</Dependency>
@@ -46,6 +60,14 @@
     </Package>
 
     <History>
+        <Update release="5" type="security">
+            <Date>10-08-2014</Date>
+            <Version>2.9.1</Version>
+            <Comment>Address CVE-2013-1969, CVE-2013-2877, CVE-2013-0338, CVE-2013-0339</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="4">
             <Date>07-02-2014</Date>
             <Version>2.9.0</Version>
@@ -78,6 +100,4 @@
             <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
-
 </PISI>
-
