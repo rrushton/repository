@@ -1,11 +1,11 @@
 #!/usr/bin/python
 
-# Created for SolusOS
+# Created for Evolve OS
 
 from pisi.actionsapi import autotools,get
 
 def setup():
-    autotools.configure()
+    autotools.configure("--disable-static")
 
 def build():
     autotools.make()
