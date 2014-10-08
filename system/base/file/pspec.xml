@@ -14,6 +14,8 @@
         <License>BSD</License>
         <Patches>
             <Patch level="0">change-dest-for-mgc-file.patch</Patch>
+
+            <Patch level="1">security/cve-2014-3587.patch</Patch>
         </Patches>
     </Source>
 
@@ -38,11 +40,19 @@
         <RuntimeDependencies>
             <Dependency release="current">file</Dependency>
         </RuntimeDependencies>
-        <!-- Transition period. //-->
-        <PartOf>system.devel</PartOf>
     </Package>
 
     <History>
+        <Update release="3" type="security">
+            <Date>10-08-2014</Date>
+            <Version>5.19</Version>
+            <Comment>CVE-2014-3587:
+Integer overflow in the cdf_read_property_info function in cdf.c in file through 5.19, as used in the Fileinfo component in PHP before 5.4.32 and 5.5.x before 5.5.16, allows remote attackers to cause a denial of service (application crash) via a crafted CDF file.  NOTE: this vulnerability exists because of an incomplete fix for CVE-2012-1571.
+</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="2" type="security">
             <Date>09-04-2014</Date>
             <Version>5.19</Version>
