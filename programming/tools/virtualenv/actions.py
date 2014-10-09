@@ -1,7 +1,6 @@
-
 #!/usr/bin/python
 
-# Created For SolusOS
+# Created for Evolve OS
 
 from pisi.actionsapi import pythonmodules
 
