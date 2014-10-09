@@ -17,10 +17,22 @@
     <Package>
         <Name>db5</Name>
         <Files>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="library">/usr/lib</Path>
         </Files>
+    </Package>
+
+    <Package>
+        <Name>db5-devel</Name>
+        <Summary>Development files for db5</Summary>
+        <Description>Development files for db5</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">db5</Dependency>
+        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -33,6 +45,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>10-10-2014</Date>
+            <Version>5.3.21</Version>
+            <Comment>Fix splitting</Comment>
+            <Name>Evolve OS Packaging</Name>
+            <Email>packaging@evolve-os.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>03-09-2013</Date>
             <Version>5.3.21</Version>
@@ -41,6 +61,5 @@
             <Email>packaging@evolve-os.com</Email>
         </Update>
     </History>
-
 </PISI>
 
