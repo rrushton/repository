@@ -5,19 +5,20 @@
         <Name>python</Name>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey@evolve-os.com</Email>
         </Packager>
         <Summary>Python</Summary>
         <Description>An interactive high-level object-oriented language (version 2.7) Version 2.7 of the high-level, interactive object oriented language, includes an extensive class library with lots of goodies for network programming, system administration, sounds and graphics.</Description>
         <License>PSF</License>
-        <Archive sha1sum="b2b0ada7ebed4a8204a855193afbdb3aa3308357" type="tarxz">http://www.python.org/ftp/python/2.7.3/Python-2.7.3.tar.xz</Archive>
+        <Archive sha1sum="9c6281eeace0c3646fa556c8087bb1b7e033c9c4" type="tarxz">http://www.python.org/ftp/python/2.7.8/Python-2.7.8.tar.xz</Archive>
         <Patches>
-            <Patch level="1">Python-2.7.1-berkeley-db-5.3.patch</Patch>
             <Patch level="1">Python-2.7.1-berkeley-db-5.3-2.patch</Patch>
-
-            <!-- Security patches //-->
-            <Patch level="1">security/cve-2013-4238.patch</Patch>
         </Patches>
+
+        <BuildDependencies>
+            <Dependency type="pkgconfig">sqlite3</Dependency>
+            <Dependency>db5-devel</Dependency>
+        </BuildDependencies>
     </Source>
 
     <Package>
@@ -35,6 +36,14 @@
     </Package>
 
     <History>
+        <Update release="4" type="security">
+            <Date>10-10-2014</Date>
+            <Version>2.7.8</Version>
+            <Comment>Address multiple CVEs: CVE-2014-1912, CVE-2014-7185</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>06-07-2014</Date>
             <Version>2.7.3</Version>
