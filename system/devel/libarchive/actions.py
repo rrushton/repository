@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# Created for SolusOS
+# Created for Evolve OS
 
 from pisi.actionsapi import autotools, get, pisitools
 import os
@@ -17,8 +17,7 @@ def build():
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    # Remove some empty directories.
-    os.removedirs("%s/usr/bin" % get.installDIR())
-    os.removedirs("%s/usr/share/man/man1" % get.installDIR())
+    pisitools.removeDir("/usr/bin")
+    pisitools.removeDir("/usr/share/man/man1")
 
     pisitools.dodoc ("README", "NEWS", "COPYING")
