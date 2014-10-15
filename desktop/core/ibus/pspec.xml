@@ -11,7 +11,7 @@
         <Summary>Intelligent Input Bus</Summary>
         <Description>IBus is an Intelligent Input Bus. It is a new input framework for Linux OS. It provides full featured and user friendly input method user interface.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="a7e1695731b4c954fa8897d091e6dda64e08b28c" type="targz">http://ibus.googlecode.com/files/ibus-1.5.2.tar.gz</Archive>
+        <Archive sha1sum="5671fe504e65aaf396c1d779032d7526c161b64b" type="targz">http://ibus.googlecode.com/files/ibus-1.5.5.tar.gz</Archive>
 
         <BuildDependencies>
             <Dependency>vala</Dependency>
@@ -19,6 +19,8 @@
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
             <!-- Nobody should be using this directly... grr... //-->
             <Dependency type="pkgconfig">dconf</Dependency>
+            <Dependency type="pkgconfig">gconf-2.0</Dependency>
+            <Dependency type="pkgconfig">libnotify</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -27,8 +29,7 @@
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="config">/etc/dconf</Path>
-            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
-            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
             <Path fileType="executable">/usr/lib/ibus</Path>
             <Path fileType="data">/usr/share/GConf</Path>
             <Path fileType="data">/usr/share/applications</Path>
@@ -43,6 +44,7 @@
             <Path fileType="library">/usr/lib/gtk-2.0</Path>
             <Path fileType="library">/usr/lib/gtk-3.0</Path>
             <Path fileType="library">/usr/lib/python*</Path>
+            <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
 
@@ -74,6 +76,16 @@
     </Package>
 
     <History>
+        <Update release="3" type="security">
+            <Date>10-15-2014</Date>
+            <Version>1.5.5</Version>
+            <Comment>Address CVE-2013-4509:
+The default configuration of IBUS 1.5.4, and possibly 1.5.2 and earlier, when IBus.InputPurpose.PASSWORD is not set and used with GNOME 3, does not obscure the entered password characters, which allows physically proximate attackers to obtain a user password by reading the lockscreen.
+</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>06-22-2014</Date>
             <Version>1.5.2</Version>
