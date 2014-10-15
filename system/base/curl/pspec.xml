@@ -14,6 +14,7 @@
         <Archive sha1sum="03eddd295d3d50d60a9dd1c130c8e110ff1aa95a" type="tarbz2">http://curl.haxx.se/download/curl-7.29.0.tar.bz2</Archive>
         <Patches>
             <Patch level="1">curl-7.29.0-upstream_fixes-1.patch</Patch>
+            <Patch level="1">security/cve-2013-1944.patch</Patch>
         </Patches>
     </Source>
 
@@ -21,7 +22,7 @@
         <Name>curl</Name>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib/libcurl*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
@@ -29,9 +30,12 @@
 
     <Package>
         <Name>curl-devel</Name>
+        <Summary>Development files for curl</Summary>
+        <Description>Development files for curl</Description>
         <Files>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">curl</Dependency>
@@ -40,6 +44,16 @@
 
 
     <History>
+        <Update release="4" type="security">
+            <Date>10-15-2014</Date>
+            <Version>7.29.0</Version>
+            <Comment>CVE-2013-1944:
+The tailMatch function in cookie.c in cURL and libcurl before 7.30.0 does not properly match the path domain when sending cookies, which allows remote attackers to steal cookies via a matching suffix in the domain of a URL.
+</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>05-26-2013</Date>
             <Version>7.29.0</Version>
