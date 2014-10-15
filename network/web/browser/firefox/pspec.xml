@@ -30,6 +30,7 @@
             <Dependency type="pkgconfig">xt</Dependency>
             <Dependency type="pkgconfig">icu-i18n</Dependency>
             <Dependency type="pkgconfig">sqlite3</Dependency>
+            <Dependency type="pkgconfig">xcomposite</Dependency>
             <!-- We have libpng15, and firefox uses its own build for now.
             <Dependency type="pkgconfig">libpng</Dependency>//-->
             <Dependency>libjpeg-turbo-devel</Dependency>
