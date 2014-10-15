@@ -100,16 +100,18 @@ class AutoPackage:
         os.chdir (self.temp_dir)
         os.system ("tar xf \"%s\"" % self.file_name_full)
 
+        known_types = list()
+
         # Check for certain files..
         for root,dirs,files in os.walk (os.getcwd ()):
             depth = root[len(path) + len(os.path.sep):].count(os.path.sep)
-            if depth == 3:
+            if depth > 3:
                 # We're currently two directories in, so all subdirs have depth 3
                 dirs[:] = [] # Don't recurse any deeper
             for file in files:
                 if file in KnownDocFiles:
                     # Append files for pisitools.dodoc ()
-                    if not file in self.doc_files:
+                    if file not in self.doc_files:
                         self.doc_files.append (file)
                         print "Added %s" % file
                 if "configure.ac" in file:
@@ -121,22 +123,30 @@ class AutoPackage:
                     print "Checking %s for use of g-ir-scanner" % fPath
 
                     if self.check_is_gnomey (fPath):
-                        self.compile_type = GNOMEY
+                        known_types.append(GNOMEY)
                     else:
-                        self.compile_type = AUTOTOOLS
+                        known_types.append(AUTOTOOLS)
                 if "CMakeLists.txt" in file:
                     # This will use the actions with cmake
-                    print "CMake files founded."
-                    self.compile_type = CMAKE
+                    known_types.append(CMAKE)
                 if "setup.py" in file:
                     # this is a python module.
-                    self.compile_type = PYTHON_MODULES
+                    known_types.append(PYTHON_MODULES)
                 if "Makefile.PL" in file:
                     # This is a perl module
-                    self.compile_type = PERL_MODULES
+                    known_types.append(PERL_MODULES)
 
-        if self.compile_type == GNOMEY:
-            print "This package utilises g-ir-scanner, a specific actions.py will be used"
+        # We may have hit several systems..
+        if CMAKE in known_types:
+            self.compile_type = CMAKE
+        elif GNOMEY in known_types:
+            self.compile_type = GNOMEY
+        elif AUTOTOOLS in known_types:
+            self.compile_type = AUTOTOOLS
+        elif PYTHON_MODULES in known_types:
+            self.compile_type = PYTHON_MODULES
+        elif PERL_MODULES in known_types:
+            self.compile_type = PERL_MODULES
 
         # Clean up on aisle 3
         os.chdir (self.current_dir)
@@ -229,7 +239,6 @@ class AutoPackage:
                     doc_str += "\"%s\", " % doc
 
             doc_str += ")"
-        print doc_str
         with open (sample_actions, "r") as sample:
             lines = sample.read ().replace ("#EXTRADOCS#", doc_str)
 
