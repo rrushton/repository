@@ -16,6 +16,7 @@
         <Patches>
             <!-- Fix permissions, man pages and add PAM entry //-->
             <Patch level="1">cups-1.6.2-blfs-1.patch</Patch>
+            <Patch level="1">security/cve-2014-2856.patch</Patch>
         </Patches>
 
         <BuildDependencies>
@@ -31,8 +32,7 @@
             <Path fileType="data">/etc/dbus-1</Path>
             <Path fileType="data">/etc/pam.d</Path>
             <Path fileType="library">/usr/lib/cups</Path>
-            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
-            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
             <Path fileType="executable">/usr/sbin</Path>
             <Path fileType="data">/usr/share/applications</Path>
             <Path fileType="data">/usr/share/cups</Path>
@@ -57,6 +57,16 @@
     </Package>
 
     <History>
+        <Update release="3" type="security">
+            <Date>10-15-2014</Date>
+            <Version>1.6.2</Version>
+            <Comment>CVE-2014-2856:
+Cross-site scripting (XSS) vulnerability in scheduler/client.c in Common Unix Printing System (CUPS) before 1.7.2 allows remote attackers to inject arbitrary web script or HTML via the URL path, related to the is_path_absolute function.
+</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>06-21-2014</Date>
             <Version>1.6.2</Version>
