@@ -16,23 +16,20 @@
             GnuTLS provides support for TLS 1.1, TLS 1.0 and SSL 3.0 protocols, TLS extensions, including server name and max record size. Additionally, the library supports authentication using the SRP protocol, X.509 certificates and OpenPGP keys, along with support for the TLS Pre-Shared-Keys (PSK) extension, the Inner Application (TLS/IA) extension and X.509 and OpenPGP certificate handling.
         </Description>
         <License>LGPLv2+</License>
-        <Archive sha1sum="f60811a3133a01970d37d4617f1a0ba3217f9819" type="tarxz">ftp://ftp.gnutls.org/gcrypt/gnutls/v3.1/gnutls-3.1.12.tar.xz</Archive>
+        <Archive sha1sum="71e48a92de61b4335215dd23692befe7135deb92" type="tarxz">ftp://ftp.gnutls.org/gcrypt/gnutls/v3.1/gnutls-3.1.27.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">p11-kit-1</Dependency>
             <Dependency type="pkgconfig">libtasn1</Dependency>
             <Dependency type="pkgconfig">nettle</Dependency>
+            <Dependency type="pkgconfig">autoopts</Dependency>
         </BuildDependencies>
-
-        <Patches>
-            <Patch level="1">security/cve-2014-3466.patch</Patch>
-        </Patches>
     </Source>
 
     <Package>
         <Name>libgnutls</Name>
         <Files>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
         </Files>
@@ -44,8 +41,9 @@
         <Description>Development files for libgnutls</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
-            <Path fileType="man">/usr/share/man/man3</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">libgnutls</Dependency>
@@ -76,6 +74,16 @@
     </Package>
 
     <History>
+        <Update release="7" type="security">
+            <Date>10-15-2014</Date>
+            <Version>3.1.27</Version>
+            <Comment>CVE-2014-1959:
+lib/x509/verify.c in GnuTLS before 3.1.21 and 3.2.x before 3.2.11 treats version 1 X.509 certificates as intermediate CAs, which allows remote attackers to bypass intended restrictions by leveraging a X.509 V1 certificate from a trusted CA to issue new certificates.
+</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="6">
             <Date>09-28-2014</Date>
             <Version>3.1.12</Version>
