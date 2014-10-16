@@ -24,11 +24,25 @@
         <Name>autogen</Name>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib/lib*.so.*</Path>
             <Path fileType="doc">/usr/share/man/man1</Path>
             <Path fileType="doc">/usr/share/info</Path>
             <Path fileType="data">/usr/share/autogen</Path>
         </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libautogen</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>libautogen</Name>
+        <Summary>Runtime library for autogen</Summary>
+        <Description>Runtime library for autogen</Description>
+        <Files>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">autogen</Dependency>
+        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -49,6 +63,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>10-16-2014</Date>
+            <Version>5.18.4</Version>
+            <Comment>Split library into subpackage</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>10-15-2014</Date>
             <Version>5.18.4</Version>
