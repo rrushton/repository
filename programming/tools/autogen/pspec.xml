@@ -40,9 +40,6 @@
         <Files>
             <Path fileType="library">/usr/lib/lib*.so.*</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency release="current">autogen</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <Package>
