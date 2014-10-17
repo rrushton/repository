@@ -1,19 +1,16 @@
 #!/usr/bin/python
 
-# Created for SolusOS
+# Created for Evolve OS
 
 from pisi.actionsapi import autotools, get, pisitools
 
 
 def setup():
-    pisitools.dosed("configure.ac", "AM_CONFIG_HEADER", "AC_CONFIG_HEADERS")
-    pisitools.system("./autogen.sh")
-    autotools.automake("--add-missing")
     autotools.configure("--with-gpg-error-prefix=/usr")
 
 
 def build():
-    autotools.automake()
+    autotools.make()
 
 
 def install():
