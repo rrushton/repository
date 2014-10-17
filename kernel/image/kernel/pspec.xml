@@ -10,7 +10,7 @@
         <Summary>Linux Kernel</Summary>
         <Description>This package contains the binary image of the Linux kernel, required to use the operating system</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="5b6f2d4f3e4857e79d4cb95bb437ca52c9b72ae5" type="targz">https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.16.3.tar.gz</Archive>
+        <Archive sha1sum="2535d369e7f73629259f551317985fcb92a70291" type="targz">https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.16.6.tar.gz</Archive>
         <AdditionalFiles>
             <AdditionalFile target="configs/kernel-i686-config">configs/kernel-i686-config</AdditionalFile>
             <AdditionalFile target="configs/kernel-x86_64-config">configs/kernel-x86_64-config</AdditionalFile>
@@ -27,12 +27,6 @@
             <Dependency>perl</Dependency>
             <Dependency>lz4</Dependency>
         </BuildDependencies>
-
-        <Patches>
-            <Patch level="1">security/cve-2014-3181.patch</Patch>
-            <Patch level="1">security/cve-2014-3186.patch</Patch>
-            <Patch level="1">security/cve-2014-6410.patch</Patch>
-        </Patches>
     </Source>
 
     <Package>
@@ -80,6 +74,14 @@
     </Package>
 
     <History>
+        <Update release="26">
+            <Date>10-17-2014</Date>
+            <Version>3.16.6</Version>
+            <Comment>Update to latest 3.16 stable</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="25" type="security">
             <Date>10-01-2014</Date>
             <Version>3.16.3</Version>
