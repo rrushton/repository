@@ -11,7 +11,7 @@
         <Summary>OpenSSH (OpenBSD Secure Shell)</Summary>
         <Description>OpenSSH is a free version of secure shell tools developed by the OpenBSD project to help facilitate secure connections and communications.</Description>
         <License>BSD</License>
-        <Archive sha1sum="b850fd1af704942d9b3c2eff7ef6b3a59b6a6b6e" type="targz">http://openbsd.mirrors.pair.com/OpenSSH/portable/openssh-6.6p1.tar.gz</Archive>
+        <Archive sha1sum="14e5fbed710ade334d65925e080d1aaeb9c85bf6" type="targz">http://openbsd.mirrors.pair.com/OpenSSH/portable/openssh-6.7p1.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -50,6 +50,14 @@
     </Package>
 
     <History>
+        <Update release="6" type="security">
+            <Date>10-13-2014</Date>
+            <Version>6.7</Version>
+            <Comment>CVE-2014-2653</Comment>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Update>
+
         <Update release="5">
             <Date>07-03-2014</Date>
             <Version>6.6</Version>
