@@ -28,6 +28,9 @@
 
         <!-- Replaced by gtkspell3-docs -->
         <Package>gtkspell-docs</Package>
+
+        <!-- Replaced by libtasn1-utils //-->
+        <Package>libtasn1-bin</Package>
 	</Obsoletes>
 	
 </PISI>
