@@ -20,5 +20,4 @@ def build():
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-    pisitools.dodoc("AUTHORS", "COPYING", "NEWS", "README", "TODO")
-    pisitools.remove("/usr/lib/perl5/5.16.3/i686-linux/perllocal.pod")
+    pisitools.dodoc("AUTHORS", "COPYING", "NEWS", "TODO")
