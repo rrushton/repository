@@ -10,7 +10,7 @@
         <Summary>X11 font rasterisation library</Summary>
         <Description>libXfont provides various services for X servers, most notably font selection and rasterisation (through external libraries).</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="687746ba7e6d6064cb2b930e2dfe744603a5f85b" type="tarbz2">mirrors://xorg/individual/lib/libXfont-1.4.8.tar.bz2</Archive>
+        <Archive sha1sum="54d0d0814679901ebf6dd2dd656c8842a4a61b6c" type="tarbz2">mirrors://xorg/individual/lib/libXfont-1.5.0.tar.bz2</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">fontsproto</Dependency>
@@ -23,8 +23,7 @@
     <Package>
         <Name>libxfont</Name>
         <Files>
-            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
-            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
         </Files>
     </Package>
 
@@ -43,6 +42,14 @@
     </Package>
 
     <History>
+        <Update release="6" type="security">
+            <Date>10-17-2014</Date>
+            <Version>1.5.0</Version>
+            <Comment>Multiple CVEs - update required</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="5" type="security">
             <Date>07-06-2014</Date>
             <Version>1.4.5</Version>
