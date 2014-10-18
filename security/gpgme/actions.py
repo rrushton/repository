@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# Created for SolusOS
+# Created for Evolve OS
 
 from pisi.actionsapi import autotools,get
 
