@@ -11,7 +11,7 @@
         <Summary>Lightweight and attractive Display Manager</Summary>
         <Description>Lightweight and attractive Display Manager</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="1349375801cf7369d12b426313c6633b6974864f" type="tarxz">https://launchpad.net/lightdm/1.7/1.7.0/+download/lightdm-1.7.0.tar.xz</Archive>
+        <Archive sha1sum="07e16044fa922db481598bdf9e6c71d6b3709304" type="tarxz">https://launchpad.net/lightdm/1.7/1.7.18/+download/lightdm-1.7.18.tar.xz</Archive>
 
         <Patches>
             <Patch level="1">disable-utmp-handling.patch</Patch>
@@ -85,6 +85,16 @@
     </Package>
 
     <History>
+        <Update release="8" type="security">
+            <Date>10-16-2014</Date>
+            <Version>1.7.18</Version>
+            <Comment>CVE-2013-4331:
+Light Display Manager (aka LightDM) 1.4.x before 1.4.3, 1.6.x before 1.6.2, and 1.7.x before 1.7.14 uses 0664 permissions for the temporary .Xauthority file, which allows local users to obtain sensitive information by reading the file.
+</Comment>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Update>
+
         <Update release="7">
             <Date>07-03-2014</Date>
             <Version>1.7.0</Version>
