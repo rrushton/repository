@@ -15,4 +15,5 @@ def build():
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    pisitools.dosym("/usr/bin/gpg2", "/usr/bin/gpg")
     pisitools.dodoc("AUTHORS", "COPYING")
