@@ -11,7 +11,7 @@
         <Summary>C++ bindings to GLib</Summary>
         <Description>C++ bindings to GLib</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="72dbf3da2742bc57bfc2ce360b4c413c4ab3698e" type="tarxz">ftp://ftp.gnome.org/pub/gnome/sources/glibmm/2.37/glibmm-2.37.4.tar.xz</Archive>
+        <Archive sha1sum="52eba9254ebf1d53c01a8afee44f4b709c35816e" type="tarxz">ftp://ftp.gnome.org/pub/gnome/sources/glibmm/2.40/glibmm-2.40.0.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">sigc++-2.0</Dependency>
@@ -57,6 +57,14 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>10-18-2014</Date>
+            <Version>2.40.0</Version>
+            <Comment>Update for gtk3mm</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>07-06-2014</Date>
             <Version>2.37.4</Version>
