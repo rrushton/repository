@@ -10,7 +10,7 @@
         <Summary>X Rendering Extension client library</Summary>
         <Description>The X Rendering Extension (Render) introduces digital image composition as the foundation of a new rendering model within the X Window System. Rendering geometric figures is accomplished by client-side tessellation into either triangles or trapezoids.  Text is drawn by loading glyphs into the server and rendering sets of them.  The Xrender library exposes this extension to X clients.</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="6e4d75d8316d5217324258f555eba3a5d383feb2" type="tarbz2">mirrors://xorg/individual/lib/libXrender-0.9.7.tar.bz2</Archive>
+        <Archive sha1sum="6fa642737be327cd7166995a626d429669e16a76" type="targz">http://xorg.freedesktop.org/releases/individual/lib/libXrender-0.9.8.tar.gz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">renderproto</Dependency>
@@ -44,6 +44,14 @@
     </Package>
 
     <History>
+        <Update release="6" type="security">
+            <Date>10-10-2014</Date>
+            <Version>0.9.8</Version>
+            <Comment>Fix CVE 2013-1987</Comment>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Update>
+
         <Update release="5">
             <Date>06-07-2014</Date>
             <Version>0.9.7</Version>
