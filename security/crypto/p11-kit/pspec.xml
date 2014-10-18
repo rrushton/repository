@@ -6,23 +6,25 @@
         <Homepage>http://p11-glue.freedesktop.org/p11-kit.html</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey@evolve-os.com</Email>
         </Packager>
         <Summary>The p11-kit package Provides a way to load and enumerate PKCS #11 (a Cryptographic Token Interface Standard) modules.</Summary>
         <Description>The p11-kit package Provides a way to load and enumerate PKCS #11 (a Cryptographic Token Interface Standard) modules.</Description>
         <License>GPLv2+</License>
         <IsA>library</IsA>
-        <Archive sha1sum="a7f038223ecbdd59f5fafb142f6aa89d4061e460" type="targz">http://p11-glue.freedesktop.org/releases/p11-kit-0.15.2.tar.gz</Archive>
+        <Archive sha1sum="560113e59eaaf041685176f94068cabc4691e062" type="targz">http://p11-glue.freedesktop.org/releases/p11-kit-0.19.1.tar.gz</Archive>
 
         <BuildDependencies>
-            <Dependency>libtasn1-devel</Dependency>
+            <Dependency type="pkgconfig">libtasn1</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libp11-kit</Name>
         <Files>
-            <Path fileType="library">/usr/lib/*.so*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
+            <Path fileType="library">/usr/lib/p11-kit*.so</Path>
+            <Path fileType="library">/usr/lib/p11-kit/p11-kit-extract-trust</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="config">/etc/pkcs11</Path>
             <Path fileType="doc">/usr/share/doc</Path>
@@ -40,6 +42,7 @@
         <Description>Development files for libp11-kit</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
         <RuntimeDependencies>
@@ -60,6 +63,14 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>10-18-2014</Date>
+            <Version>0.19.1</Version>
+            <Comment>Update for gcr</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>04-13-2013</Date>
             <Version>0.15.2</Version>
