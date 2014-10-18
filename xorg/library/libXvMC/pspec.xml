@@ -10,7 +10,7 @@
         <Summary>X11 Video extension library - MotionCompensation</Summary>
         <Description>libXvMC provides an X Window System client interface to the XVideo-MotionCompensation extension to the X protocol.</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="b8ee482514dfdf226694c830bdf292cc14e1cb91" type="tarbz2">mirrors://xorg/individual/lib/libXvMC-1.0.7.tar.bz2</Archive>
+        <Archive sha1sum="b0fa592cd615aa41290cb8d6f97e6ed53dd21bca" type="tarbz2">http://xorg.freedesktop.org/releases/individual/lib/libXvMC-1.0.8.tar.bz2</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">xv</Dependency>
@@ -23,8 +23,7 @@
     <Package>
         <Name>libxvmc</Name>
         <Files>
-            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
-            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
@@ -45,6 +44,14 @@
     </Package>
 
     <History>
+        <Update release="4" type="security">
+            <Date>10-10-2014</Date>
+            <Version>1.0.8</Version>
+            <Comment>Fix CVEs 2013-1999 2013-1990</Comment>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>06-14-2014</Date>
             <Version>1.0.7</Version>
