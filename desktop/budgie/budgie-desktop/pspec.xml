@@ -11,7 +11,7 @@
         <Summary>Budgie Desktop</Summary>
         <Description>Budgie Desktop</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="01d0443e615247c095613ab6ba9e3a11abd5461e" type="tarxz">https://github.com/evolve-os/budgie-desktop/releases/download/v8/budgie-desktop-8.tar.xz</Archive>
+        <Archive sha1sum="393c1c370d0aac91c59f858b91a22fb3d895628a" type="tarxz">https://evolve-os.com/sources/budgie-desktop-8.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
@@ -24,11 +24,6 @@
             <Dependency type="pkgconfig">libpeas-1.0</Dependency>
             <Dependency>vala</Dependency>
         </BuildDependencies>
-
-        <Patches>
-            <!-- Currently Evolve OS specific - needs upstreaming back into Budgie //-->
-            <Patch level="1">evolveos-fix.patch</Patch>
-        </Patches>
     </Source>
 
     <Package>
@@ -45,9 +40,6 @@
             <Path fileType="data">/usr/share/xsessions/budgie-desktop.desktop</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/com.evolve-os.budgie.panel.gschema.xml</Path>
         </Files>
-        <AdditionalFiles>
-            <AdditionalFile owner="root" target="/usr/bin/budgie-session-launcher" permission="0755">budgie-session-launcher</AdditionalFile>
-        </AdditionalFiles>
     </Package>
 
     <Package>
@@ -64,6 +56,14 @@
     </Package>
 
     <History>
+        <Update release="24">
+            <Date>11-25-2014</Date>
+            <Version>8</Version>
+            <Comment>Sync with git for new editor UI</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="23">
             <Date>11-16-2014</Date>
             <Version>8</Version>

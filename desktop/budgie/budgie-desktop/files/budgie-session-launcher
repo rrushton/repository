@@ -1,2 +1,0 @@
-exec dbus-launch --exit-with-session budgie-session
-
