@@ -31,6 +31,7 @@
             <Dependency type="pkgconfig">libpulse</Dependency>
             <Dependency type="pkgconfig">xi</Dependency>
             <Dependency type="pkgconfig">xcursor</Dependency>
+            <Dependency type="pkgconfig">xrandr</Dependency>
             <Dependency>cups-devel</Dependency>
 
             <Dependency type="pkgconfig">gtk+-2.0</Dependency>
