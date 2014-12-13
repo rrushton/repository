@@ -13,9 +13,9 @@ def build():
 
 def install():
     autotools.rawInstall("-f client.mk install INSTALL_SDK= DESTDIR=%s" % get.installDIR())
-    pisitools.dosym("/usr/lib/firefox-33.0/browser/icons/mozicon128.png",
+    pisitools.dosym("/usr/lib/firefox-34.0.5/browser/icons/mozicon128.png",
                      "/usr/share/pixmaps/firefox.png")
     pisitools.dodir("/usr/lib/mozilla/plugins")
     pisitools.dosym("/usr/lib/mozilla/plugins",
-                    "/usr/lib/firefox-33.0/plugins")
+                    "/usr/lib/firefox-34.0.5/plugins")
 
