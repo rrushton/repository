@@ -6,34 +6,36 @@
         <Homepage>http://qt.digia.com/</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey@evolve-os.com</Email>
         </Packager>
         <Summary>Cross platform application and UI framework</Summary>
         <Description>Cross platform application and UI development framework</Description>
         <License>LGPLv2.1-linking-exception</License>
-        <Archive sha1sum="e09a34ef5a80b98eda4e07dcf810d1ce0ef62346" type="tarxz">http://download.qt-project.org/official_releases/qt/5.1/5.1.1/single/qt-everywhere-opensource-src-5.1.1.tar.xz</Archive>
+        <Archive sha1sum="2f5558b87f8cea37c377018d9e7a7047cc800938" type="tarxz">http://download.qt-project.org/official_releases/qt/5.4/5.4.0/single/qt-everywhere-opensource-src-5.4.0.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
-            <Dependency>mesalib-devel</Dependency>
-            <Dependency>libtiff-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>libicu-devel</Dependency>
-            <Dependency>systemd-devel</Dependency>
-            <Dependency>alsa-lib-devel</Dependency>
-            <Dependency>libxv-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>libxext-devel</Dependency>
-            <Dependency>gstreamer-0.10-devel</Dependency>
-            <Dependency>libdrm-devel</Dependency>
-            <Dependency>gstreamer-0.10-plugins-base-devel</Dependency>
-            <Dependency>libxkbcommon-devel</Dependency>
+            <Dependency type="pkgconfig">gl</Dependency>
+            <Dependency type="pkgconfig">libtiff-4</Dependency>
+            <Dependency type="pkgconfig">xcb</Dependency>
+            <Dependency type="pkgconfig">icu-uc</Dependency>
+            <Dependency type="pkgconfig">alsa</Dependency>
+            <Dependency type="pkgconfig">xv</Dependency>
+            <Dependency type="pkgconfig">xext</Dependency>
+            <Dependency type="pkgconfig">gstreamer-1.0</Dependency>
+            <Dependency type="pkgconfig">gstreamer-plugins-base-1.0</Dependency>
+            <Dependency type="pkgconfig">libdrm</Dependency>
+            <Dependency type="pkgconfig">xkbcommon</Dependency>
             <Dependency>libjpeg-turbo-devel</Dependency>
-            <Dependency>libx11-devel</Dependency>
-            <Dependency>pulseaudio-devel</Dependency>
-            <Dependency>libxi-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libgtk-2</Dependency> <!-- For gtk2 theming //-->
+            <Dependency type="pkgconfig">x11</Dependency>
+            <Dependency type="pkgconfig">libpulse</Dependency>
+            <Dependency type="pkgconfig">xi</Dependency>
+            <Dependency>cups-devel</Dependency>
+
+            <Dependency type="pkgconfig">gtk+-2.0</Dependency>
+            <Dependency type="pkgconfig">cairo</Dependency>
+            <Dependency type="pkgconfig">pango</Dependency>
+            <Dependency type="pkgconfig">atk</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -47,32 +49,6 @@
             <Path fileType="library">/usr/lib/qt5/plugins</Path>
             <Path fileType="executable">/usr/lib/qt5/libexec</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>mesalib</Dependency>
-            <Dependency>libtiff</Dependency>
-            <Dependency>libstdc++</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libxcb</Dependency>
-            <Dependency>libicu</Dependency>
-            <Dependency>systemd</Dependency>
-            <Dependency>alsa-lib</Dependency>
-            <Dependency>fontconfig</Dependency>
-            <Dependency>libxv</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>libxext</Dependency>
-            <Dependency>gstreamer-0.10</Dependency>
-            <Dependency>libdrm</Dependency>
-            <Dependency>gstreamer-0.10-plugins-base</Dependency>
-            <Dependency>freetype2</Dependency>
-            <Dependency>libxkbcommon</Dependency>
-            <Dependency>libjpeg-turbo</Dependency>
-            <Dependency>libx11</Dependency>
-            <Dependency>pulseaudio</Dependency>
-            <Dependency>libxi</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libgtk-2</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -100,35 +76,6 @@
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">qt5</Dependency>
-            <Dependency>libx11</Dependency>
-            <Dependency>mesalib</Dependency>
-            <Dependency>json-c</Dependency>
-            <Dependency>pulseaudio</Dependency>
-            <Dependency>libstdc++</Dependency>
-            <Dependency>libxtst</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libxcb</Dependency>
-            <Dependency>libxau</Dependency>
-            <Dependency>libicu</Dependency>
-            <Dependency>libsndfile</Dependency>
-            <Dependency>libxdmcp</Dependency>
-            <Dependency>libflac</Dependency>
-            <Dependency>libxi</Dependency>
-            <Dependency>libice</Dependency>
-            <Dependency>libpng</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>libxext</Dependency>
-            <Dependency>libcap2</Dependency>
-            <Dependency>libdrm</Dependency>
-            <Dependency>libogg</Dependency>
-            <Dependency>util-linux</Dependency>
-            <Dependency>attr</Dependency>
-            <Dependency>dbus</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>openssl</Dependency>
-            <Dependency>libvorbis</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libsm</Dependency>
         </RuntimeDependencies>
     </Package>
 
@@ -158,6 +105,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>12-13-2014</Date>
+            <Version>5.4.0</Version>
+            <Comment>Update to 5.4.0</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>09-19-2013</Date>
             <Version>5.1.1</Version>

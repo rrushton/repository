@@ -6,6 +6,7 @@
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 def setup():
+    # TODO: Use system xkbcommon (>=0.4.1)
     autotools.rawConfigure ("-opensource \
                              -eglfs \
                              -opengl es2 \
@@ -18,7 +19,6 @@ def setup():
                              -widgets \
                              -gui \
                              -qt-xcb \
-                             -system-xkbcommon \
                              -openssl-linked \
                              -system-libjpeg \
                              -system-libpng \
