@@ -33,6 +33,8 @@
             <Dependency type="pkgconfig">xcursor</Dependency>
             <Dependency type="pkgconfig">xrandr</Dependency>
             <Dependency type="pkgconfig">xtst</Dependency>
+
+            <Dependency type="pkgconfig">nss</Dependency>
             <Dependency>cups-devel</Dependency>
 
             <Dependency type="pkgconfig">gtk+-2.0</Dependency>
