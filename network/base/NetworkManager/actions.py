@@ -13,6 +13,7 @@ def setup():
                          --localstatedir=/var\
                          --with-systemdsystemunitdir=/usr/lib/systemd/system\
                          --with-session-tracking=systemd\
+                         --enable-vala \
                          --enable-shared\
                          --disable-static\
                          --disable-ppp")
