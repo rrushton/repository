@@ -54,8 +54,8 @@
             <Path fileType="library">/usr/lib/qt5/qml</Path>
             <Path fileType="library">/usr/lib/qt5/plugins</Path>
             <Path fileType="executable">/usr/lib/qt5/libexec</Path>
-            <Path fileType="data">/usr/share/qt/*.pak</Path>
-            <Path fileType="data">/usr/share/qt/*.dat</Path>
+            <Path fileType="data">/usr/share/qt5/*.pak</Path>
+            <Path fileType="data">/usr/share/qt5/*.dat</Path>
         </Files>
     </Package>
 
