@@ -37,7 +37,7 @@ def setup():
                              -docdir /usr/share/doc/qt5 \
                              -sysconfdir /etc/xdg \
                              -nomake tests \
-                             —no-warnings-are-errors \
+                             -no-warnings-are-errors \
                              -examplesdir /usr/lib/qt5/examples")
 
 
