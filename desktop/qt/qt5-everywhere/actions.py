@@ -7,6 +7,8 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 def setup():
     # TODO: Use system xkbcommon (>=0.4.1)
+    # NOTE: —no-warnings-are-errors  is due to ld.gold warnings:
+    # sqlite3 hidden symbols
     autotools.rawConfigure ("-opensource \
                              -eglfs \
                              -opengl es2 \
@@ -35,6 +37,7 @@ def setup():
                              -docdir /usr/share/doc/qt5 \
                              -sysconfdir /etc/xdg \
                              -nomake tests \
+                             —no-warnings-are-errors \
                              -examplesdir /usr/lib/qt5/examples")
 
 
