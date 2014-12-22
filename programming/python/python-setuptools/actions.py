@@ -5,11 +5,7 @@
 
 from pisi.actionsapi import pythonmodules, pisitools
 
-def build():
-    pythonmodules.compile()
-
-def check():
-    pythonmodules.compile("test")
 
 def install():
     pythonmodules.install()
+    pythonmodules.install(pyVer="3")
