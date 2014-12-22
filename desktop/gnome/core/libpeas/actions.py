@@ -10,6 +10,7 @@ def setup():
     # TODO: Investigate build failure with GJS
     autotools.configure("--disable-static \
                          --enable-python2 \
+                         --enable-python3 \
                          --disable-gjs \
                          --enable-gtk \
                          --disable-compile-warnings")
