@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>quirky</Name>
+        <Homepage>https://github.com/evolve-os/quirky</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Packager>
+        <Summary>WIP IRC Client</Summary>
+        <Description>WIP IRC Client</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="717745f8d2e50e93098d46f1f40d20bdbb7cecc1" type="tarxz">https://github.com/evolve-os/quirky/releases/download/v1/quirky-1.tar.xz</Archive>
+
+        <BuildDependencies>
+            <Dependency>vala</Dependency>
+            <Dependency type="pkgconfig">gtk+-3.0</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>quirky</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>01-10-2015</Date>
+            <Version>1</Version>
+            <Comment>Add quirky to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+    </History>
+</PISI>
