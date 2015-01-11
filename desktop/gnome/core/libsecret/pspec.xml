@@ -17,6 +17,7 @@
 
         <BuildDependencies>
             <Dependency>libgcrypt-devel</Dependency>
+            <Dependency>vala</Dependency>
         </BuildDependencies>
 
     </Source>
@@ -64,6 +65,14 @@
 
 
     <History>
+        <Update release="7">
+            <Date>01-11-2015</Date>
+            <Version>0.16</Version>
+            <Comment>Enable vapi</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="6">
             <Date>06-22-2014</Date>
             <Version>0.16</Version>
