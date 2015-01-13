@@ -5,22 +5,23 @@
         <Name>zsh</Name>
         <Homepage>http://www.zsh.org</Homepage>
         <Packager>
-            <Name>Justin Krehel</Name>
-            <Email>justin@solusos.com</Email>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
         </Packager>
         <Summary>The Z Shell</Summary>
         <Description>Z shell (zsh) is a Unix shell that can be used as an interactive login shell and powerful command interpreter. It can be viewed as an extended Bourne shell with a number of improvements sourced from bash, tcsh, and ksh.</Description>
         <License>MIT</License>
-        <Archive sha1sum="2244a45241084b020ff0ccf3ace76524c95cc358" type="targz">http://sourceforge.net/projects/zsh/files/zsh/5.0.2/zsh-5.0.2.tar.gz</Archive>
+        <Archive sha1sum="a77519d3a6c251c69b1f4924cacdac17cc8e6a9d" type="targz">http://sourceforge.net/projects/zsh/files/zsh/5.0.7/zsh-5.0.7.tar.gz</Archive>
     </Source>
 
     <Package>
         <Name>zsh</Name>
         <Files>
             <Path fileType="executable">/bin</Path>
-            <Path fileType="library">/usr/lib/zsh/5.0.2/zsh</Path>
-            <Path fileType="data">/usr/share/zsh/5.0.2/functions</Path>
-            <Path fileType="data">/usr/share/zsh/5.0.2/scripts</Path>
+            <Path fileType="library">/usr/lib/zsh/5.0.7/zsh</Path>
+            <Path fileType="data">/usr/share/zsh/5.0.7/functions</Path>
+            <Path fileType="data">/usr/share/zsh/5.0.7/scripts</Path>
+            <Path fileType="data">/usr/share/zsh/5.0.7/help</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
@@ -30,6 +31,14 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>01-13-2015</Date>
+            <Version>5.0.7</Version>
+            <Comment>Update to latest upstream version</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+
+        </Update>
         <Update release="2">
             <Date>05-21-2013</Date>
             <Version>5.0.2</Version>
