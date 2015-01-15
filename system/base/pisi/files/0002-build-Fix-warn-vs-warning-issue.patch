@@ -1,7 +1,7 @@
 From c6d572514acde6359cd56345da5e95f1cc02d259 Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey.doherty@gmail.com>
 Date: Mon, 8 Sep 2014 21:22:33 +0100
-Subject: [PATCH 2/2] build: Fix warn() vs warning() issue
+Subject: [PATCH 2/3] build: Fix warn() vs warning() issue
 
 ---
  pisi/operations/build.py | 2 +-
