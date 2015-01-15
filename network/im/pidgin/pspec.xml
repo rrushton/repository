@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>pidgin</Name>
@@ -11,7 +11,7 @@
         <Summary>Graphical multi-protocol IM client</Summary>
         <Description>Pidgin is a graphical multi-protocol IM client that runs on Microsoft Windows and Unixes. It is written in C and uses Glib and GTK+. It also provides libpurple, a library used for developing IM programs.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="f3de8fd94dba1f4c98d5402a02430f9f323e665a" type="tarbz2">http://sourceforge.net/projects/pidgin/files/Pidgin/2.10.9/pidgin-2.10.9.tar.bz2</Archive>
+        <Archive sha1sum="5e0062b81bdb01300804e12bc0b6a04a91984631" type="tarbz2">http://sourceforge.net/projects/pidgin/files/Pidgin/2.10.11/pidgin-2.10.11.tar.bz2</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-2.0</Dependency>
@@ -98,6 +98,7 @@
             <Path fileType="data">/usr/share/icons/hicolor</Path>
             <Path fileType="data">/etc/gconf/schemas/</Path>
             <Path fileType="data">/usr/share/applications/pidgin.desktop</Path>
+            <Path fileType="data">/usr/share/appdata/pidgin.appdata.xml</Path>
             <Path fileType="man">/usr/share/man/man1/pidgin.1</Path>
         </Files>
         <RuntimeDependencies>
@@ -119,6 +120,14 @@
     </Package>
 
     <History>
+        <Update release="6">
+            <Date>01-15-2015</Date>
+            <Version>2.10.11</Version>
+            <Comment>Update to 2.10.11</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="5">
             <Date>09-18-2014</Date>
             <Version>2.10.9</Version>
