@@ -6,12 +6,16 @@
         <Homepage>http://www.gnu.org</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey@evolve-os.com</Email>
         </Packager>
         <Summary>a program to manage archives of files</Summary>
         <Description>GNU cpio -- a program to manage archives of files GNU cpio is a tool for creating and extracting archives, or copying files from one place to another.  It handles a number of cpio formats as well as reading and writing tar files.</Description>
         <License>GPLv3+</License>
         <Archive sha1sum="6f1934b0079dc1e85ddff89cabdf01adb3a74abb" type="tarbz2">http://ftp.gnu.org/pub/gnu/cpio/cpio-2.11.tar.bz2</Archive>
+
+        <Patches>
+            <Patch level="1">security/cve-2014-9112.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
@@ -29,6 +33,14 @@
     </Package>
 
     <History>
+        <Update release="3" type="security">
+            <Date>01-15-2015</Date>
+            <Version>2.11</Version>
+            <Comment>Address CVE-2014-9112</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>03-28-2013</Date>
             <Version>2.11</Version>
