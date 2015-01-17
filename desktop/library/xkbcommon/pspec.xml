@@ -10,7 +10,7 @@
         <Summary>xkbcommon is a library to handle keyboard description</Summary>
         <Description>xkbcommon is a library to handle keyboard descriptions, including loading them from disk, parsing them and handling their state. It's mainly meant for client toolkits, window systems, and other system applications; currently that includes Wayland, kmscon, GTK+, Qt, Clutter, and more. Despite the name, it isn't actually used by anything X11 (yet).</Description>
         <License>MIT</License>
-        <Archive sha1sum="2251adc7425c816ec7af4f1c3776a619a53293b6" type="tarxz">http://xkbcommon.org/download/libxkbcommon-0.4.3.tar.xz</Archive>
+        <Archive sha1sum="7127993bfb69e13cdff25fb8b3c8f26ce6be5bfa" type="tarxz">http://xkbcommon.org/download/libxkbcommon-0.5.0.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">xkeyboard-config</Dependency>
@@ -42,8 +42,8 @@
 
     <History>
         <Update release="3">
-            <Date>09-26-2014</Date>
-            <Version>0.4.3</Version>
+            <Date>01-17-2015</Date>
+            <Version>0.5.0</Version>
             <Comment>Upgrade for GNOME 3.14</Comment>
             <Name>Ikey Doherty</Name>
             <Email>ikey@evolve-os.com</Email>
