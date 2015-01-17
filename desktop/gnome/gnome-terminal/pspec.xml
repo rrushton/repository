@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>gnome-terminal</Name>
@@ -10,11 +10,11 @@
         <Summary>GNOME Terminal Emulator</Summary>
         <Description>GNOME Terminal Emulator</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="6e2b6b0a0e1239bb41cd20f161ba9c16e8c083b6" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/gnome-terminal/3.12/gnome-terminal-3.12.3.tar.xz</Archive>
+        <Archive sha1sum="e994786d88a9591ac09a6d77c99bddc1a0c6e13a" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-terminal/3.14/gnome-terminal-3.14.2.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
-            <Dependency type="pkgconfig">vte-2.90</Dependency>
+            <Dependency type="pkgconfig">vte-2.91</Dependency>
             <Dependency type="pkgconfig">gsettings-desktop-schemas</Dependency>
             <Dependency type="pkgconfig">dconf</Dependency>
             <Dependency type="pkgconfig">gconf-2.0</Dependency>
@@ -22,6 +22,7 @@
             <Dependency>appdata-tools</Dependency>
             <Dependency>desktop-file-utils</Dependency>
             <Dependency>itstool</Dependency>
+            <Dependency>vala</Dependency>
         </BuildDependencies>
 
         <Patches>
@@ -49,6 +50,14 @@
     </Package>
 
     <History>
+        <Update release="10">
+            <Date>01-17-2015</Date>
+            <Version>3.14.2</Version>
+            <Comment>Update to 3.14.2</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="9">
             <Date>11-07-2014</Date>
             <Version>3.12.3</Version>
@@ -123,4 +132,3 @@
     </History>
 
 </PISI>
-
