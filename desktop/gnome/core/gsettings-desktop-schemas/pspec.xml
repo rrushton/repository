@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>gsettings-desktop-schemas</Name>
@@ -11,12 +11,7 @@
         <Summary>The GSettings Desktop Schemas package contains a collection of GSettings schemas for settings shared by various components of a GNOME Desktop.</Summary>
         <Description>The GSettings Desktop Schemas package contains a collection of GSettings schemas for settings shared by various components of a GNOME Desktop.</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="52da72ef60eb9190c7b8000cc8c6e8f672d1dafe" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gsettings-desktop-schemas/3.12/gsettings-desktop-schemas-3.12.2.tar.xz</Archive>
-
-        <Patches>
-            <Patch level="1">0001-schemas-Apply-default-Evolve-OS-branding.patch</Patch>
-            <Patch level="1">0002-schemas-Use-Super_L-for-panel-main-menu-keybinding.patch</Patch>
-        </Patches>
+        <Archive sha1sum="dabb833520801f33f013fadfb115ec06f1bc7849" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gsettings-desktop-schemas/3.14/gsettings-desktop-schemas-3.14.1.tar.xz</Archive>
     </Source>
 
     <Package>
@@ -49,6 +44,14 @@
 
 
     <History>
+        <Update release="14">
+            <Date>01-17-2015</Date>
+            <Version>3.14.1</Version>
+            <Comment>Update to 3.14.1</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="13">
             <Date>09-07-2014</Date>
             <Version>3.12.2</Version>
@@ -155,4 +158,3 @@
     </History>
 
 </PISI>
-
