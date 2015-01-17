@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>firefox</Name>
-        <Homepage></Homepage>
+        <Homepage>https://www.mozilla.org/en-GB/firefox</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
             <Email>ikey@evolve-os.com</Email>
@@ -11,7 +11,7 @@
         <Summary>Firefox web browser</Summary>
         <Description>Firefox web browser</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="33654d38268d1d1f71105f48bbe97cf720f47be2" type="tarbz2">http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/34.0.5/source/firefox-34.0.5.source.tar.bz2</Archive>
+        <Archive sha1sum="52f310f08ab5a52cd9d9be00016f0872a5e81774" type="tarbz2">http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/35.0/source/firefox-35.0.source.tar.bz2</Archive>
 
         <AdditionalFiles>
             <AdditionalFile target="mozconfig">config</AdditionalFile>
@@ -31,8 +31,7 @@
             <Dependency type="pkgconfig">icu-i18n</Dependency>
             <Dependency type="pkgconfig">sqlite3</Dependency>
             <Dependency type="pkgconfig">xcomposite</Dependency>
-            <!-- We have libpng15, and firefox uses its own build for now.
-            <Dependency type="pkgconfig">libpng</Dependency>//-->
+
             <Dependency>libjpeg-turbo-devel</Dependency>
             <Dependency>yasm</Dependency>
         </BuildDependencies>
@@ -42,7 +41,7 @@
         <Name>firefox</Name>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib/firefox-34.0.5</Path>
+            <Path fileType="library">/usr/lib/firefox-35.0</Path>
             <Path fileType="data">/usr/share/applications</Path>
             <Path fileType="data">/usr/share/pixmaps</Path>
             <Path fileType="library">/usr/lib/mozilla/plugins</Path>
@@ -53,6 +52,14 @@
     </Package>
 
     <History>
+        <Update release="9">
+            <Date>01-17-2015</Date>
+            <Version>35.0</Version>
+            <Comment>Update to 35.0</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="8">
             <Date>12-13-2014</Date>
             <Version>34.0.5</Version>
