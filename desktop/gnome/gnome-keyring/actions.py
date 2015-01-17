@@ -8,7 +8,8 @@ shelltools.export("HOME", get.workDIR())
 
 def setup():
     autotools.configure("--disable-static \
-                          --with-pam-dir=/lib/security")
+                          --with-pam-dir=/lib/security \
+                          --disable-doc")
 
 def build():
     autotools.make()
