@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>atk</Name>
@@ -11,7 +11,7 @@
         <Summary>Accessibility toolkit</Summary>
         <Description>ATK provides the set of accessibility interfaces that are implemented by other toolkits and applications. Using the ATK interfaces, accessibility tools have full access to view and control running applications.</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="e8a9dacd22b31a6cb733ce66fb1c220cc6720970" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/atk/2.8/atk-2.8.0.tar.xz</Archive>
+        <Archive sha1sum="b803d055c8e2f786782803b7d21e413718321db7" type="tarxz">http://ftp.acc.umu.se/pub/gnome/sources/atk/2.14/atk-2.14.0.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gobject-2.0</Dependency>
@@ -21,8 +21,7 @@
     <Package>
         <Name>libatk</Name>
         <Files>
-            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
-            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
@@ -37,7 +36,7 @@
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <!-- TODO: Split into subpackage //-->
+            
             <Path fileType="doc">/usr/share/gtk-doc</Path>
         </Files>
         <RuntimeDependencies>
@@ -46,6 +45,14 @@
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>01-17-2015</Date>
+            <Version>2.14.0</Version>
+            <Comment>Update to 2.14.0</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="4">
             <Date>06-08-2014</Date>
             <Version>2.8.0</Version>
