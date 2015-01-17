@@ -11,7 +11,7 @@
 #/
 
 TARGET="/var/evobuild/base.tgz"
-REPO="http://packages.evolve-os.com/eopkg-index.xml.xz"
+REPO="http://packages.evolve-os.com/main/eopkg-index.xml.xz"
 BUILDDIR="/var/evobuild/build"
 GTDIR="$BUILDDIR"
 
