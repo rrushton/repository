@@ -10,7 +10,7 @@
         <Summary>Linux Kernel</Summary>
         <Description>This package contains the binary image of the Linux kernel, required to use the operating system</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="ec974dd5b8bfbe3b2439d3785c7dcef9cc1d1ac7" type="targz">https://kernel.org/pub/linux/kernel/v3.x/linux-3.17.7.tar.gz</Archive>
+        <Archive sha1sum="b68f7d3d9e3141a817b48659e3104a6dde249b5b" type="targz">https://kernel.org/pub/linux/kernel/v3.x/linux-3.18.3.tar.gz</Archive>
         <AdditionalFiles>
             <AdditionalFile target="configs/kernel-i686-config">configs/kernel-i686-config</AdditionalFile>
             <AdditionalFile target="configs/kernel-x86_64-config">configs/kernel-x86_64-config</AdditionalFile>
@@ -74,6 +74,14 @@
     </Package>
 
     <History>
+        <Update release="29">
+            <Date>01-17-2015</Date>
+            <Version>3.18.3</Version>
+            <Comment>Update to latest 3.18 stable</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="29">
             <Date>12-18-2014</Date>
             <Version>3.17.7</Version>
