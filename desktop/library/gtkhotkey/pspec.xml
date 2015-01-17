@@ -37,15 +37,28 @@
     
     <Package>
         <Name>gtkhotkey-devel</Name>
+        <Summary>Development files for gtkhotkey</Summary>
+        <Description>Development files for gtkhotkey</Description>
         <Files>
             <Path fileType="library">/usr/include</Path>
             <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="library">/usr/lib/pkgconfig</Path>
         </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">gtkhotkey</Dependency>
+        </RuntimeDependencies>
     </Package>
     
 
     <History>
+        <Update release="2">
+            <Date>01-18-2015</Date>
+            <Version>0.2.1</Version>
+            <Comment>Add missing info</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>01-18-2015</Date>
             <Version>0.2.1</Version>
