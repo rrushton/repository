@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>mutter</Name>
@@ -11,7 +11,7 @@
         <Summary>Gnome Shell Window Manager</Summary>
         <Description>Gnome Shell compositing window manager</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="753f315f87fdef7c9a109619bca2aaa9489e5853" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/mutter/3.10/mutter-3.10.1.tar.xz</Archive>
+        <Archive sha1sum="9d89d8dad022774b7cf4f3a553eb65cd2e738148" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/mutter/3.14/mutter-3.14.3.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">clutter-1.0</Dependency>
@@ -23,20 +23,18 @@
             <Dependency type="pkgconfig">sm</Dependency>
             <Dependency type="pkgconfig">xcursor</Dependency>
             <Dependency type="pkgconfig">libstartup-notification-1.0</Dependency>
+            <Dependency type="pkgconfig">xkbfile</Dependency>
+            <Dependency type="pkgconfig">xkeyboard-config</Dependency>
             <Dependency>zenity</Dependency>
         </BuildDependencies>
-
-        <Patches>
-            <Patch level="1">0001-schema-Do-not-use-Super_L-as-its-bound-to-Budgie.patch</Patch>
-        </Patches>
     </Source>
 
     <Package>
         <Name>mutter</Name>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
-            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
+            <Path fileType="executable">/usr/libexec/mutter-restart-helper</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
             <Path fileType="library">/usr/lib/mutter</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas</Path>
             <Path fileType="data">/usr/share/gnome-control-center</Path>
@@ -79,6 +77,14 @@
     </Package>
 
     <History>
+        <Update release="6">
+            <Date>01-17-2015</Date>
+            <Version>3.14.3</Version>
+            <Comment>Update to 3.14.3</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="5">
             <Date>08-03-2014</Date>
             <Version>3.10.1</Version>
