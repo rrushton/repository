@@ -11,7 +11,7 @@
         <Summary>Music playing application for GNOME</Summary>
         <Description>Music playing application for GNOME</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="594b87df4ba10df9fedf8b7285f02b6aa3a377aa" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/rhythmbox/3.0/rhythmbox-3.0.tar.xz</Archive>
+        <Archive sha1sum="8afdc1bcdc06df980fedb54c09fde1ed010cc59a" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/rhythmbox/3.1/rhythmbox-3.1.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
@@ -25,9 +25,11 @@
             <Dependency type="pkgconfig">gstreamer-plugins-base-1.0</Dependency>
             <Dependency type="pkgconfig">ice</Dependency>
             <Dependency type="pkgconfig">sm</Dependency>
+            <Dependency type="pkgconfig">libnotify</Dependency>
+            <Dependency type="pkgconfig">clutter-1.0</Dependency>
             <Dependency>itstool</Dependency>
             <Dependency>vala</Dependency>
-            <!-- TODO: iPod support, CD Burning, MTP, DAAP //-->
+            
         </BuildDependencies>
     </Source>
 
@@ -50,6 +52,7 @@
             <Path fileType="doc">/usr/share/help</Path>
             <Path fileType="doc">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/appdata</Path>
         </Files>
     </Package>
 
@@ -77,6 +80,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>01-17-2015</Date>
+            <Version>3.1</Version>
+            <Comment>Update to 3.1</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>09-27-2014</Date>
             <Version>3.0</Version>
