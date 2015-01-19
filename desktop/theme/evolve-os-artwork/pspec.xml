@@ -25,10 +25,19 @@
         </Files>
         <RuntimeDependencies>
             <Dependency>gtk2-engine-murrine</Dependency>
+            <Dependency>font-clear-sans-ttf</Dependency>
         </RuntimeDependencies>
     </Package>
 
     <History>
+        <Update release="9">
+            <Date>09-19-2015</Date>
+            <Version>1</Version>
+            <Comment>Add Clear Sans runtime dep</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="8">
             <Date>09-19-2015</Date>
             <Version>1</Version>
