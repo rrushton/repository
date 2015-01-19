@@ -1,16 +1,15 @@
-
 #!/usr/bin/python
-
-# Created For SolusOS
 
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
+    # TODO: Investigate NM support
     autotools.configure("--disable-static \
                          --disable-man \
                          --libexecdir=/usr/lib/gnome-settings-daemon \
                          --enable-packagekit \
+                         --disable-network-manager \
                          --enable-systemd")
 
 def build():
