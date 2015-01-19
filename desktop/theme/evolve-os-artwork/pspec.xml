@@ -10,8 +10,9 @@
         <Summary>Official Evolve OS artwork</Summary>
         <Description>Official Evolve OS artwork</Description>
         <License>GPLv2+</License>
+        <License>GPLv3+</License>
         <Archive sha1sum="6caea1470f0186b584bf753ec41f09c89e3437d0" type="tarxz">https://github.com/evolve-os/artwork/releases/download/v1/evolveos-artwork-1.tar.xz</Archive>
-        <Archive sha1sum="d5b2b44c1b276fef0c542b525d05a9ee5b461739" type="targz" target="gtk">https://evolve-os.com/sources/Evotex.tar.gz</Archive>
+        <Archive sha1sum="13c7d2436ffd904db73c42dcda3fa5aea5d636fa" type="tarxz" target="gtk">https://evolve-os.com/sources/Vertex.tar.xz</Archive>
     </Source>
 
     <Package>
@@ -20,6 +21,7 @@
             <Path fileType="data">/usr/share/backgrounds</Path>
             <Path fileType="data">/usr/share/gnome-background-properties</Path>
             <Path fileType="data">/usr/share/themes/Evotex</Path>
+            <Path fileType="data">/usr/share/themes/Vertex</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency>gtk2-engine-murrine</Dependency>
@@ -27,6 +29,14 @@
     </Package>
 
     <History>
+        <Update release="8">
+            <Date>09-19-2015</Date>
+            <Version>1</Version>
+            <Comment>Update to 3.14 Vertex</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="7">
             <Date>09-07-2014</Date>
             <Version>1</Version>

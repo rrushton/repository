@@ -10,4 +10,5 @@ def build():
 
 def install():
     autotools.install()
-    pisitools.insinto("/usr/share/themes", "../gtk/Evotex")
+    pisitools.insinto("/usr/share/themes", "../gtk/Vertex")
+    pisitools.dosym("/usr/share/themes/Vertex", "/usr/share/themes/Evotex")
