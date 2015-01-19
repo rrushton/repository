@@ -26,11 +26,16 @@
 
     <Package>
         <Name>exiv2-devel</Name>
+        <Summary>Development files for exiv2</Summary>
+        <Description>Development files for exiv2</Description>
         <Files>
             <Path fileType="data">/usr/include</Path>
             <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="library">/usr/lib/pkgconfig</Path>
         </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">exiv2</Dependency>
+        </RuntimeDependencies>
     </Package>
 
     <History>
