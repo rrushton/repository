@@ -1,0 +1,73 @@
+From accec4b2dca5f3975a4c000dfa23073deb81a929 Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <michael.i.doherty@intel.com>
+Date: Mon, 19 Jan 2015 22:51:57 +0000
+Subject: [PATCH] ui: Support non-standard-depth icon pixmaps.
+
+This is an identical issue to bug 736817 in wnck, whereby certain programs
+may use a different depth for their icon than the standard display depth,
+notably SDL applications.
+
+Bugzilla: https://bugzilla.gnome.org/show_bug.cgi?id=743215
+Signed-off-by: Ikey Doherty <michael.i.doherty@intel.com>
+---
+ src/ui/ui.c | 37 ++++++++++++++++++++++++++++++++-----
+ 1 file changed, 32 insertions(+), 5 deletions(-)
+
+diff --git a/src/ui/ui.c b/src/ui/ui.c
+index 4381880..80b9d55 100644
+--- a/src/ui/ui.c
++++ b/src/ui/ui.c
+@@ -30,7 +30,9 @@
+ #include <string.h>
+ #include <stdlib.h>
+ #include <cairo-xlib.h>
+-
++#if CAIRO_HAS_XLIB_XRENDER_SURFACE
++#include <cairo-xlib-xrender.h>
++#endif
+ struct _MetaUI
+ {
+   Display *xdisplay;
+@@ -534,10 +536,35 @@ meta_gdk_pixbuf_get_from_pixmap (Pixmap       xpixmap,
+       if (!XGetWindowAttributes (display, root_return, &attrs))
+         return NULL;
+ 
+-      surface = cairo_xlib_surface_create (display,
+-                                           xpixmap,
+-                                           attrs.visual,
+-                                           w_ret, h_ret);
++      if (attrs.depth > 0 && depth_ret == (unsigned int)attrs.depth)
++        {
++          surface = cairo_xlib_surface_create (display,
++                                               xpixmap,
++                                               attrs.visual,
++                                               w_ret, h_ret);
++       }
++      else
++        {
++#if CAIRO_HAS_XLIB_XRENDER_SURFACE
++          unsigned int std;
++
++          switch (depth_ret) {
++          case 1: std = PictStandardA1; break;
++          case 4: std = PictStandardA4; break;
++          case 8: std = PictStandardA8; break;
++          case 24: std = PictStandardARGB32; break;
++          default:
++            return NULL;
++          }
++          surface = cairo_xlib_surface_create_with_xrender_format (display,
++                                                                   xpixmap,
++                                                                   attrs.screen,
++                                                                   XRenderFindStandardFormat (display, std),
++                                                                   w_ret, h_ret);
++#else
++          return NULL;
++#endif
++        }
+     }
+ 
+   retval = gdk_pixbuf_get_from_surface (surface,
+-- 
+1.8.4
+
