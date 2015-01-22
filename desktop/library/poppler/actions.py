@@ -2,18 +2,23 @@
 
 #Created For Evolve OS
 
-from pisi.actionsapi import cmaketools, pisitools
+from pisi.actionsapi import autotools, pisitools
 
 
 def setup():
-    cmaketools.configure()
+    autotools.configure("--disable-static \
+                         --enable-xpdf-headers \
+                         --enable-libtiff \
+                         --enable-libjpeg \
+                         --enable-libpng \
+                         --enable-libcurl")
 
 
 def build():
-    cmaketools.make()
+    autotools.make()
 
 
 def install():
-    cmaketools.install()
+    autotools.install()
 
     pisitools.dodoc("COPYING", "ChangeLog", "AUTHORS")
