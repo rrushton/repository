@@ -1,0 +1,25 @@
+From b7c0f379f9e5d07dd7da3e53b680854625b69a60 Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey@evolve-os.com>
+Date: Thu, 22 Jan 2015 21:00:42 +0000
+Subject: [PATCH] Fix building with newer bdwgc
+
+---
+ configure | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configure b/configure
+index a640519..819310a 100755
+--- a/configure
++++ b/configure
+@@ -9044,7 +9044,7 @@ else
+ 			# include <gc.h>
+ 			#endif
+ 			#include <stdio.h>
+-			extern unsigned GC_version;
++unsigned GC_version = GC_get_version();
+ 			int main(void){
+ 				unsigned min = ((6 << 16) | (4 << 8) | 0);
+ 				printf("%d.%d.%d ",GC_version >> 16, (GC_version >> 8) & 0xFF, GC_version & 0xFF);
+-- 
+1.8.4
+
