@@ -6,7 +6,10 @@ shelltools.export("HOME", get.workDIR())
 
 def setup():
     autotools.configure("--disable-static \
-                         --enable-introspection")
+                         --enable-introspection \
+                         --enable-vala \
+                         --enable-grl-pls \
+                         --enable-grl-net")
 
 
 def build():

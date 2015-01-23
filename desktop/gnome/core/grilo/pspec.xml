@@ -22,6 +22,10 @@
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
+            <Dependency type="pkgconfig">totem-plparser</Dependency>
+            <Dependency type="pkgconfig">oauth</Dependency>
+            <Dependency type="pkgconfig">libsoup-2.4</Dependency>
+            <Dependency>vala</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -46,6 +50,7 @@
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/vala/vapi</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">grilo</Dependency>
@@ -53,6 +58,22 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>01-23-2015</Date>
+            <Version>0.2.10</Version>
+            <Comment>Enable net + oauth</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
+        <Update release="3">
+            <Date>01-23-2015</Date>
+            <Version>0.2.10</Version>
+            <Comment>Enable playlist</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>08-02-2014</Date>
             <Version>0.2.10</Version>
