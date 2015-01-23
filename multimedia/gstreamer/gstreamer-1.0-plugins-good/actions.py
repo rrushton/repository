@@ -6,7 +6,9 @@ from pisi.actionsapi import get, autotools, pisitools
 
 
 def setup():
-    autotools.configure("--disable-static")
+    autotools.configure("--disable-static \
+                         --with-package-name=\"GStreamer Good Plugins 1.4.5 Evolve OS\" \
+                         --with-package-origin=\"https://evolve-os.com\"")
 
 
 def build():
