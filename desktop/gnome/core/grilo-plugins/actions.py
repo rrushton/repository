@@ -1,26 +1,22 @@
 #!/usr/bin/python
 
-# Created For SolusOS
+# Created For Evolve OS
 
-from pisi.actionsapi import shelltools, get, autotools, pisitools
+from pisi.actionsapi import get, autotools, pisitools
 
 
 def setup():
-    # TODO: Totem for --enable-optical-media, --enable-youtube,
-    #                 --enable-vimeo
-    #       gssdp for --enable-upnp
-    #       gmime for --enable-podcasts
-    autotools.configure("--enable-goa \
+    # TODO:   gom-1.0: --enable-bookmarks
+    autotools.configure("--disable-static \
+                         --enable-goa \
                          --enable-filesystem \
                          --enable-jamendo \
-                         --enable-lastm-albumart \
                          --enable-flickr \
-                         --enable-bookmarks \
                          --enable-shoutcast \
                          --enable-apple-trailers \
                          --enable-magnatune \
-                         --enable-gravatar \
-                         --enable-tracker")
+                         --enable-youtube \
+                         --enable-gravatar")
 
 
 def build():
@@ -30,4 +26,4 @@ def build():
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING")
+    

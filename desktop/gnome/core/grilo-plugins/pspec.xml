@@ -1,36 +1,29 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>grilo-plugins</Name>
-        <Homepage>http://www.gnome.org</Homepage>
+        <Homepage>https://wiki.gnome.org/Projects/Grilo</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey@evolve-os.com</Email>
         </Packager>
-        <Summary>Plugins for the Grilo framework</Summary>
-        <Description>Plugins for the Grilo Media Discovery Framework</Description>
+        <Summary>Plugins for Grilo</Summary>
+        <Description>Plugins for Grilo</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="4e16f3db4273ab8029642edb83de4abb08515205" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/grilo-plugins/0.2/grilo-plugins-0.2.9.tar.xz</Archive>
+        <Archive sha1sum="abed9223fbc02a57db8d91f2b075a6c15c6a15ad" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/grilo-plugins/0.2/grilo-plugins-0.2.13.tar.xz</Archive>
 
         <BuildDependencies>
-            <Dependency>libicu-devel</Dependency>
-            <Dependency>grilo-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>glibc-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>liboauth-devel</Dependency>
-            <Dependency>libjson-glib-devel</Dependency>
-            <Dependency>openssl-devel</Dependency>
-            <Dependency>xz-devel</Dependency>
-            <Dependency>sqlite3-devel</Dependency>
-            <Dependency>tracker-devel</Dependency>
-            <Dependency>gnome-online-accounts-devel</Dependency>
-            <Dependency>libffi-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>libsoup-devel</Dependency>
-            <Dependency>curl-devel</Dependency>
+            <Dependency type="pkgconfig">goa-1.0</Dependency>
+            <Dependency type="pkgconfig">grilo-net-0.2</Dependency>
+            <Dependency type="pkgconfig">libgdata</Dependency>
+            <Dependency type="pkgconfig">gmime-2.6</Dependency>
+            <Dependency type="pkgconfig">oauth</Dependency>
+            <Dependency type="pkgconfig">libsoup-2.4</Dependency>
+            <Dependency type="pkgconfig">rest-0.7</Dependency>
+            <Dependency type="pkgconfig">totem-plparser</Dependency>
+            <Dependency type="pkgconfig">sqlite3</Dependency>
+            <Dependency>itstool</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -39,40 +32,17 @@
         <Files>
             <Path fileType="library">/usr/lib/grilo-0.2</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
-            <Path fileType="data">/usr/share/gnome/help</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/help</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>libicu</Dependency>
-            <Dependency>libstdc++</Dependency>
-            <Dependency>grilo</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libxml2</Dependency>
-            <Dependency>glibc</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>liboauth</Dependency>
-            <Dependency>libjson-glib</Dependency>
-            <Dependency>openssl</Dependency>
-            <Dependency>xz</Dependency>
-            <Dependency>sqlite3</Dependency>
-            <Dependency>util-linux</Dependency>
-            <Dependency>tracker</Dependency>
-            <Dependency>gnome-online-accounts</Dependency>
-            <Dependency>libffi</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>libsoup</Dependency>
-            <Dependency>curl</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <History>
         <Update release="1">
-            <Date>10-06-2013</Date>
-            <Version>0.2.9</Version>
+            <Date>01-23-2015</Date>
+            <Version>0.2.13</Version>
             <Comment>Add grilo-plugins to repositories</Comment>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey@evolve-os.com</Email>
         </Update>
     </History>
 </PISI>
