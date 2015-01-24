@@ -1,8 +1,8 @@
 NAME=EvolveOS
 VERSION=1
 ID=evolveos
-VERSION_ID=alpha4
-PRETTY_NAME="Evolve OS Alpha 4"
+VERSION_ID=beta1
+PRETTY_NAME="Evolve OS Beta 1"
 ANSI_COLOR="1;34"
 HOME_URL="https://evolve-os.com"
 SUPPORT_URL="https://evolve-os.com/forums/"
