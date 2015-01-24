@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>evolve-sc</Name>
+        <Homepage>https://evolve-os.com</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Packager>
+        <Summary>Evolve OS Software Center</Summary>
+        <Description>Evolve OS Software Center</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="6c5b7837093ffa5cac2a605120dda2568665adea" type="targz">https://github.com/evolve-os/evolve-sc/archive/v1.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>evolve-sc</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/evolve-sc</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>python-gobject</Dependency>
+            <Dependency>libgtk-3</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>01-24-2015</Date>
+            <Version>1</Version>
+            <Comment>Add evolve-sc to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+    </History>
+</PISI>
