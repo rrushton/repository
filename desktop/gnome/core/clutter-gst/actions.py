@@ -1,7 +1,6 @@
-
 #!/usr/bin/python
 
-# Created For SolusOS
+# Created For Evolve OS
 
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
@@ -9,8 +8,7 @@ shelltools.export("HOME", get.workDIR())
 
 
 def setup():
-    autotools.configure("--disable-static \
-                         --enable-introspection")
+    autotools.configure("--disable-static")
 
 
 def build():
@@ -20,4 +18,4 @@ def build():
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    pisitools.dodoc("AUTHORS", "COPYING")
+    pisitools.dodoc("COPYING", "AUTHORS")
