@@ -4,7 +4,7 @@
 			<Name>system.base</Name>
 			<LocalName xml:lang="en">System Base</LocalName>
 			<Summary xml:lang="en">Base Components</Summary>
-			<Description xml:lang="en">Base components of the SolusOS Distribution</Description>
+			<Description xml:lang="en">Base components of Evolve OS</Description>
 			<Group>system</Group>
 			<Maintainer>
 				<Name>Evolve OS Packaging</Name>
@@ -290,7 +290,7 @@
 
 		<Component>
 			<Name>editor</Name>
-			<LocalName xml:lang="en">Simple and advanced text editors</LocalName>
+			<LocalName xml:lang="en">Text Editors</LocalName>
 			<Summary xml:lang="en">Simple and advanced text editors</Summary>
 			<Description xml:lang="en">Simple and advanced text editors</Description>
 			<Group>editor</Group>
@@ -302,7 +302,7 @@
 
 		<Component>
 			<Name>programming</Name>
-			<LocalName xml:lang="en">Packages related to programming</LocalName>
+			<LocalName xml:lang="en">Programming</LocalName>
 			<Summary xml:lang="en">Packages related to programming</Summary>
 			<Description xml:lang="en">Packages related to programming</Description>
 			<Group>programming</Group>
@@ -386,7 +386,7 @@
 
 		<Component>
 			<Name>desktop.library</Name>
-			<LocalName xml:lang="en">Common libraries required for a desktop</LocalName>
+			<LocalName xml:lang="en">Desktop Libraries</LocalName>
 			<Summary xml:lang="en">Common libraries required for a desktop</Summary>
 			<Description xml:lang="en">Common libraries required for a desktop</Description>
 			<Group>desktop</Group>
@@ -458,7 +458,7 @@
 
 		<Component>
 			<Name>desktop.gnome.doc</Name>
-			<LocalName xml:lang="en">Documentation tools for GNOME</LocalName>
+			<LocalName xml:lang="en">GNOME Documentation Tools</LocalName>
 			<Summary xml:lang="en">Documentation tools for GNOME</Summary>
 			<Description xml:lang="en">Documentation tools for GNOME</Description>
 			<Group>desktop</Group>
@@ -470,7 +470,7 @@
 		
 		<Component>
 			<Name>desktop.core</Name>
-			<LocalName xml:lang="en">Core components for desktop systems</LocalName>
+			<LocalName xml:lang="en">Desktop Core Components</LocalName>
 			<Summary xml:lang="en">Core components for desktop systems</Summary>
 			<Description xml:lang="en">Core components for desktop systems</Description>
 			<Group>desktop</Group>
@@ -494,7 +494,7 @@
 
 		<Component>
 			<Name>security.crypto</Name>
-			<LocalName xml:lang="en">Cryptographic utilities and runtimes</LocalName>
+			<LocalName xml:lang="en">Cryptographic utilitiess</LocalName>
 			<Summary xml:lang="en">Cryptographic utilities and runtimes</Summary>
 			<Description xml:lang="en">Cryptographic utilities and runtimes</Description>
 			<Group>system</Group>
