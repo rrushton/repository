@@ -19,7 +19,7 @@ index c22d97f..15a31f5 100644
      </key>
      <key name="picture-uri" type="s">
 -      <default>'file://@datadir@/backgrounds/gnome/adwaita-timed.xml'</default>
-+      <default>'file://@datadir@/backgrounds/evolve-os/IMG_0597-evolve.JPG'</default>
++      <default>'file://@datadir@/backgrounds/evolve-os/EvolveOSFresh.png'</default>
        <_summary>Picture URI</_summary>
        <_description>
          URI to use for the background image. Note that the backend only supports
