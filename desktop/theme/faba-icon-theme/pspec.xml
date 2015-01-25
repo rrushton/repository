@@ -21,11 +21,19 @@ Faba's purpose is to serve as a base icon theme to others (such as Moka). It com
             <Path fileType="data">/usr/share/icons</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency>gnome-icon-theme</Dependency>
+            <Dependency>adwaita-icon-theme</Dependency>
         </RuntimeDependencies>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>01-25-2015</Date>
+            <Version>1.0</Version>
+            <Comment>Fix deps</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>01-25-2015</Date>
             <Version>1.0</Version>
