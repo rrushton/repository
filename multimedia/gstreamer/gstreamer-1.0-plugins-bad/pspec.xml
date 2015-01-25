@@ -40,6 +40,7 @@
             <Dependency type="pkgconfig">dvdread</Dependency>
             <Dependency type="pkgconfig">dvdnav</Dependency>
             <Dependency type="pkgconfig">vdpau</Dependency>
+            <Dependency type="pkgconfig">vo-aacenc</Dependency>
 
             <Dependency>libgcrypt-devel</Dependency>
             <Dependency>libnettle-devel</Dependency>
@@ -82,6 +83,14 @@
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>01-25-2015</Date>
+            <Version>1.4.5</Version>
+            <Comment>Enable vo-aacenc</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="4">
             <Date>01-25-2015</Date>
             <Version>1.4.5</Version>
