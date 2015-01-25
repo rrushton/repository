@@ -12,6 +12,10 @@
         <Description>Evolve OS Software Center</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="0b8c2740b4387a48833af2317dfa5402db15188d" type="targz">https://github.com/evolve-os/evolve-sc/archive/v2.tar.gz</Archive>
+        
+        <Patches>
+            <Patch level="1">0001-You-print-you-die.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
@@ -28,6 +32,14 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>01-25-2015</Date>
+            <Version>2</Version>
+            <Comment>You print you die</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>01-25-2015</Date>
             <Version>2</Version>
