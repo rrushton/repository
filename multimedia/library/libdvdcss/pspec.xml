@@ -1,37 +1,48 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>libdvdcss</Name>
-        <Homepage>http://www.videolan.org/developers/libdvdcss.html</Homepage>
+        <Homepage>http://www.videolan.org/index.htm</Homepage>
         <Packager>
-            <Name>Kim Vande Walle</Name>
-            <Email>vande.walle.k@gmail.com</Email>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
         </Packager>
-        <Summary>DVD accessing library</Summary>
-        <Description>libdvdcss is a library designed for accessing DVDs like a block device without having to bother about the decryption.</Description>
-        <License>GPLv2</License>
-        <Archive sha1sum="1a4a5e55c7529da46386c1c333340eee2c325a77" type="tarbz2">http://download.videolan.org/pub/libdvdcss/last/libdvdcss-1.2.13.tar.bz2</Archive>
+        <Summary>DVD decryption library</Summary>
+        <Description>libdvdcss is a simple library designed for accessing DVDs as a block device without having to bother about the decryption.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="b3ccd70a510aa04d644f32b398489a3122a7e11a" type="tarbz2">http://download.videolan.org/libdvdcss/1.3.0/libdvdcss-1.3.0.tar.bz2</Archive>
     </Source>
 
     <Package>
         <Name>libdvdcss</Name>
         <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="library">/usr/lib/lib*.so*</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
 
+    <Package>
+        <Name>libdvdcss-devel</Name>
+        <Summary>Development files for libdvdcss</Summary>
+        <Description>Development files for libdvdcss</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libdvdcss</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
     <History>
         <Update release="1">
-            <Date>04-22-2013</Date>
-            <Version>1.2.13</Version>
+            <Date>01-25-2015</Date>
+            <Version>1.3.0</Version>
             <Comment>Add libdvdcss to repositories</Comment>
-            <Name>Kim Vande Walle</Name>
-            <Email>vande.walle.k@gmail.com</Email>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
         </Update>
     </History>
-
 </PISI>
