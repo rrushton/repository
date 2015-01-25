@@ -12,6 +12,10 @@
         <Description>Early Testing of Evo Assist Tool</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="f38bb49ba7f7a92c930cc3f3bc289bec220b4d62" type="zip">https://github.com/evolve-os/evoassist/archive/v2.zip</Archive>
+        
+        <Patches>
+            <Patch level="1">0001-You-print-you-die.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
@@ -28,6 +32,14 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>01-25-2015</Date>
+            <Version>2</Version>
+            <Comment>Fix moar crap.</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>01-25-2015</Date>
             <Version>2</Version>
