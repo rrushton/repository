@@ -1,7 +1,7 @@
 From a04ffc9adaf16ae105ccd621e4365eb3008e3458 Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey@evolve-os.com>
 Date: Sun, 25 Jan 2015 20:21:44 +0000
-Subject: [PATCH] You print, you die.
+Subject: [PATCH 1/2] You print, you die.
 
 ---
  src/evoassist-ui.py | 9 +++++----
