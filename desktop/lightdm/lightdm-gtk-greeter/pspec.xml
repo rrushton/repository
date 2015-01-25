@@ -33,6 +33,14 @@
     </Package>
 
     <History>
+        <Update release="10">
+            <Date>01-25-2015</Date>
+            <Version>1.6.0</Version>
+            <Comment>Refresh branding for B1</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os-oc.om</Email>
+        </Update>
+
         <Update release="9">
             <Date>09-07-2014</Date>
             <Version>1.6.0</Version>
