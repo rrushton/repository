@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>faba-icon-theme</Name>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <Summary>Faba Icon Theme</Summary>
+        <Description>Faba is a Linux desktop icon theme. It has designed with simplicity and compliance to standards in mind.
+
+Faba's purpose is to serve as a base icon theme to others (such as Moka). It comprises only of a system icons –folders, mimetypes, toolbar icons, etc.</Description>
+        <Archive sha1sum="5cc29a028f6c229e4e227747decfd1068545a6ce" type="zip">https://evolve-os.com/sources/faba-icon-theme-1.0.zip</Archive>
+    </Source>
+
+    <Package>
+        <Name>faba-icon-theme</Name>
+        <Files>
+            <Path fileType="data">/usr/share/icons</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>gnome-icon-theme</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>01-25-2015</Date>
+            <Version>1.0</Version>
+            <Comment>Added faba icon theme to repository</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+    </History>
+</PISI>
