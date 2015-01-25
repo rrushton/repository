@@ -1,11 +1,12 @@
 #!/usr/bin/python
-# Created For SolusOS
 
-from pisi.actionsapi import shelltools, get, autotools, pisitools, libtools
+# Created For Evolve OS
+
+from pisi.actionsapi import get, autotools, pisitools
+
 
 def setup():
-    autotools.autoreconf("-vfi")
-    autotools.configure()
+    autotools.configure("--disable-static")
 
 
 def build():
@@ -13,6 +14,6 @@ def build():
 
 
 def install():
-    autotools.install()
-    pisitools.dodoc("AUTHORS", "COPYING", "ChangeLog",
-                    "NEWS", "README")
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+
+    

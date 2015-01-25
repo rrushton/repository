@@ -1,17 +1,17 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>libdvdread</Name>
-        <Homepage>http://dvdnav.mplayerhq.hu/</Homepage>
+        <Homepage>http://www.videolan.org/index.html</Homepage>
         <Packager>
-            <Name>Kim Vande Walle</Name>
-            <Email>vande.walle.k@gmail.com</Email>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
         </Packager>
         <Summary>DVD reading library</Summary>
-        <Description>libdvdread provides the functionality that is required to access many DVDs.</Description>
-        <License>GPLv2</License>
-        <Archive sha1sum="431bc92195f27673bfdd2be67ce0f58338da8d3b" type="tarbz2">http://dvdnav.mplayerhq.hu/releases/libdvdread-4.2.0.tar.bz2</Archive>
+        <Description>libdvdread is a library which provides a simple foundation for reading DVDs.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="f1fadbf19fd8d3a9a63ff610ec8ce9021ebc6947" type="tarbz2">http://download.videolan.org/videolan/libdvdread/5.0.0/libdvdread-5.0.0.tar.bz2</Archive>
     </Source>
 
     <Package>
@@ -21,6 +21,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
+
     <Package>
         <Name>libdvdread-devel</Name>
         <Summary>Development files for libdvdread</Summary>
@@ -30,7 +31,6 @@
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/lib*.so</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/share/aclocal</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">libdvdread</Dependency>
@@ -38,37 +38,12 @@
     </Package>
 
     <History>
-        <Update release="4">
-            <Date>07-13-2014</Date>
-            <Version>4.2.0</Version>
-            <Comment>Fix splitting</Comment>
-            <Name>Ikey Doherty</Name>
-            <Email>ikey.doherty@gmail.com</Email>
-        </Update>
-
-        <Update release="3">
-            <Date>05-05-2013</Date>
-            <Version>4.2.0</Version>
-            <Comment>Add missing doc entry</Comment>
-            <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
-        </Update>
-
-        <Update release="2">
-            <Date>04-24-2013</Date>
-            <Version>4.2.0</Version>
-            <Comment>Split -devel package</Comment>
-            <Name>Justin Krehel</Name>
-            <Email>justin@solusos.com</Email>
-        </Update>
-
         <Update release="1">
-            <Date>04-22-2013</Date>
-            <Version>4.2.0</Version>
+            <Date>01-25-2015</Date>
+            <Version>5.0.0</Version>
             <Comment>Add libdvdread to repositories</Comment>
-            <Name>Kim Vande Walle</Name>
-            <Email>vande.walle.k@gmail.com</Email>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
         </Update>
     </History>
-
 </PISI>
