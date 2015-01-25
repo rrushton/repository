@@ -37,6 +37,10 @@
             <Dependency type="pkgconfig">vpx</Dependency>
             <Dependency type="pkgconfig">orc-0.4</Dependency>
 
+            <Dependency type="pkgconfig">dvdread</Dependency>
+            <Dependency type="pkgconfig">dvdnav</Dependency>
+            <Dependency type="pkgconfig">vdpau</Dependency>
+
             <Dependency>libgcrypt-devel</Dependency>
             <Dependency>libnettle-devel</Dependency>
         </BuildDependencies>
@@ -78,6 +82,14 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>01-25-2015</Date>
+            <Version>1.4.5</Version>
+            <Comment>Enable DVD and vdpau</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>01-23-2015</Date>
             <Version>1.4.5</Version>
