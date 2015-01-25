@@ -23,6 +23,7 @@
 
             <Dependency type="pkgconfig">dvdread</Dependency>
             <Dependency type="pkgconfig">dvdnav</Dependency>
+            <Dependency>liba52dec-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -46,6 +47,14 @@
     </Package>
 
     <History>
+        <Update release="6">
+            <Date>01-25-2015</Date>
+            <Version>1.4.5</Version>
+            <Comment>Enable AC3 audio</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="5">
             <Date>01-25-2015</Date>
             <Version>1.4.5</Version>
