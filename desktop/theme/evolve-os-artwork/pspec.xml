@@ -10,8 +10,8 @@
         <Summary>Official Evolve OS artwork</Summary>
         <Description>Official Evolve OS artwork</Description>
         <License>GPLv2+</License>
-        <License>GPLv3+</License>
-        <Archive sha1sum="269f077d3253756417090d72338f5f29338cc60b" type="tarxz">https://evolve-os.com/sources/evolveos-artwork-2.tar.xz</Archive>
+        <License>CCPL-Attribution-3.0</License>
+        <Archive sha1sum="bb1cd1fe43968802fc7d91a37097d2442d6cb20e" type="tarxz">https://github.com/evolve-os/artwork/releases/download/v3/evolveos-artwork-3.tar.xz</Archive>
         <Archive sha1sum="cad9cf77ec8d296bf65738d624804f71516ba726" type="tarxz" target="gtk">https://evolve-os.com/sources/Vertex.tar.xz</Archive>
     </Source>
 
@@ -30,6 +30,14 @@
     </Package>
 
     <History>
+        <Update release="11">
+            <Date>01-25-2015</Date>
+            <Version>3</Version>
+            <Comment>Update artwork to newest version</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="10">
             <Date>01-24-2015</Date>
             <Version>2</Version>
