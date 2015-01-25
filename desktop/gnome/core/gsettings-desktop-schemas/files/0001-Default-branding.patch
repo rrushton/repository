@@ -32,7 +32,7 @@ index 82c7984..82c1a99 100644
      </key>
      <key name="icon-theme" type="s">
 -      <default>'Adwaita'</default>
-+      <default>'Numix-Circle'</default>
++      <default>'Moka'</default>
        <_summary>Icon Theme</_summary>
        <_description>
          Icon theme to use for the panel, nautilus etc.

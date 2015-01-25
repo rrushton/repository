@@ -48,6 +48,14 @@
 
 
     <History>
+        <Update release="17">
+            <Date>01-25-2015</Date>
+            <Version>3.14.1</Version>
+            <Comment>Switch to Moka for b1</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="16">
             <Date>01-25-2015</Date>
             <Version>3.14.1</Version>
