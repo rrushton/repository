@@ -39,6 +39,8 @@
 
     <Package>
         <Name>firefox</Name>
+        <Icon>firefox</Icon>
+        <IsA>app:gui</IsA>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib/firefox-35.0.1</Path>
