@@ -9,8 +9,7 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 def setup():
     autotools.configure("--with-default-accel=sna \
                          --enable-uxa \
-                         --disable-dri3 \
-                         --enable-glamor")
+                         --disable-dri3 ")
 
 def build():
     autotools.make()

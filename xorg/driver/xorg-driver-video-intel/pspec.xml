@@ -10,7 +10,7 @@
         <Summary>Intel Video Driver</Summary>
         <Description>The Xorg Intel Driver package contains the X.Org Video Driver for Intel integrated video cards including 8xx, 9xx, Gxx, Qxx and HD graphics processors (SandyBridge, IvyBridge and Haswell).</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="a2d8415dd4be514720b8470399d5d22d9fb4caa8" type="tarbz2">http://xorg.freedesktop.org/releases/individual/driver/xf86-video-intel-2.99.914.tar.bz2</Archive>
+        <Archive sha1sum="7a2a6039e0a7c6b2a4b8e685fb1288a2bbd69d06" type="targz">http://xorg.freedesktop.org/releases/individual/driver/xf86-video-intel-2.99.917.tar.gz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">xorg-server</Dependency>
@@ -35,6 +35,14 @@
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>01-25-2015</Date>
+            <Version>2.99.917</Version>
+            <Comment>Update to latest</Comment>
+            <Name>Peter Cornelis</Name>
+            <Email>poltertec@gmail.com</Email>
+        </Update>
+
         <Update release="4">
             <Date>08-13-2014</Date>
             <Version>2.99.914</Version>
