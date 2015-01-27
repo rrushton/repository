@@ -385,6 +385,18 @@
 		</Component>
 
 		<Component>
+			<Name>desktop.multimedia</Name>
+			<LocalName xml:lang="en">Multimedia</LocalName>
+			<Summary xml:lang="en">Multimedia</Summary>
+			<Description xml:lang="en">Multimedia</Description>
+			<Group>desktop</Group>
+			<Maintainer>
+				<Name>Evolve OS Packaging</Name>
+				<Email>packaging@evolve-os.com</Email>
+			</Maintainer>
+		</Component>
+
+		<Component>
 			<Name>desktop.library</Name>
 			<LocalName xml:lang="en">Desktop Libraries</LocalName>
 			<Summary xml:lang="en">Common libraries required for a desktop</Summary>
