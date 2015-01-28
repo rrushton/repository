@@ -16,6 +16,7 @@
         <Patches>
             <Patch level="1">0001-Use-usr-not-usr-local.patch</Patch>
             <Patch level="1">shared-library.patch</Patch>
+            <Patch level="1">security/cve-2014-5461.patch</Patch>
         </Patches>
     </Source>
 
@@ -57,6 +58,15 @@
     </Package>
 
     <History>
+        <Update release="2" type="security">
+            <Date>01-28-2015</Date>
+            <Version>5.1.5</Version>
+            <Comment>CVE-2014-5461:
+Buffer overflow in the vararg functions in ldo.c in Lua 5.1 through 5.2.x before 5.2.3 allows context-dependent attackers to cause a denial of service (crash) via a small number of arguments to a function with a large number of fixed arguments.</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>01-24-2015</Date>
             <Version>5.1.5</Version>
