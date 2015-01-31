@@ -15,5 +15,3 @@ def build():
 
 def install():
     perlmodules.install()
-
-    pisitools.dodoc("LICENSE")
