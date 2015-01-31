@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>perl-net-smtp-ssl</Name>
+        <Homepage>http://search.cpan.org/~cwest/Net-SMTP-SSL-1.01/lib/Net/SMTP/SSL.pm</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Packager>
+        <Summary>Net::SMTP::SSL - SSL support for Net::SMTP</Summary>
+        <Description>Net::SMTP::SSL - SSL support for Net::SMTP</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="2acccf803a6b0b5f71bd3ebed41434afb99d5e16" type="targz">http://search.cpan.org/CPAN/authors/id/C/CW/CWEST/Net-SMTP-SSL-1.01.tar.gz</Archive>
+
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-libnet</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-net-smtp-ssl</Name>
+       <Files>
+            <Path fileType="library">/usr/lib/perl5</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-libnet</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>01-31-2015</Date>
+            <Version>1.01</Version>
+            <Comment>Add perl-net-smtp-ssl to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+    </History>
+</PISI>
