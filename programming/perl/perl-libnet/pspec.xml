@@ -15,6 +15,7 @@
 
         <BuildDependencies>
             <Dependency>perl</Dependency>
+            <Dependency>perl-io</Dependency>
             <Dependency>perl-extutils-makemaker</Dependency>
         </BuildDependencies>
     </Source>
@@ -28,10 +29,19 @@
         </Files>
         <RuntimeDependencies>
             <Dependency>perl</Dependency>
+            <Dependency>perl-io</Dependency>
         </RuntimeDependencies>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>01-31-2015</Date>
+            <Version>3.05</Version>
+            <Comment>Rebuild against newer Perl</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>01-31-2015</Date>
             <Version>3.05</Version>
