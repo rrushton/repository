@@ -34,6 +34,8 @@ class DepObject:
 
 class AutoPackage:
 
+    package_prefix = ""
+
     def __init__(self, uri):
         self.package_uri = uri
         homeDir = os.environ ["HOME"]
@@ -96,7 +98,6 @@ class AutoPackage:
         os.mkdir (self.temp_dir)
         self.current_dir = os.getcwd ()
 
-        # Extract this shit
         os.chdir (self.temp_dir)
         os.system ("tar xf \"%s\"" % self.file_name_full)
 
@@ -105,7 +106,8 @@ class AutoPackage:
         # Check for certain files..
         for root,dirs,files in os.walk (os.getcwd ()):
             depth = root[len(path) + len(os.path.sep):].count(os.path.sep)
-            if depth > 3:
+            if depth == 3:
+                print "bailing"
                 # We're currently two directories in, so all subdirs have depth 3
                 dirs[:] = [] # Don't recurse any deeper
             for file in files:
@@ -138,15 +140,24 @@ class AutoPackage:
 
         # We may have hit several systems..
         if CMAKE in known_types:
+            print "cmake"
             self.compile_type = CMAKE
         elif GNOMEY in known_types:
+            print "gnomey"
             self.compile_type = GNOMEY
         elif AUTOTOOLS in known_types:
+            print "autotools"
             self.compile_type = AUTOTOOLS
         elif PYTHON_MODULES in known_types:
+            print "python"
             self.compile_type = PYTHON_MODULES
+            self.package_prefix = "python"
         elif PERL_MODULES in known_types:
+            print "perl"
             self.compile_type = PERL_MODULES
+            self.package_prefix = "perl"
+        else:
+            print "unknown"
 
         # Clean up on aisle 3
         os.chdir (self.current_dir)
@@ -185,6 +196,9 @@ class AutoPackage:
     def create_pspec (self):
         ''' Now the interesting stuff happens. We'll create a pspec.xml automagically :) '''
         sample_pspec = os.path.join (self.template_dir, "pspec.sample.xml")
+
+        self.package_name = self.package_name if self.package_prefix == "" else "%s-%s" % (self.package_prefix, self.package_name)
+        self.package_name = self.package_name.lower()
 
         date = datetime.datetime.now().strftime ("%m-%d-%Y")
         deps = ""
