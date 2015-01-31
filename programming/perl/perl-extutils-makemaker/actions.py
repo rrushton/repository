@@ -15,5 +15,7 @@ def build():
 
 def install():
     perlmodules.install()
-
+    pisitools.remove("/usr/bin/instmodsh")
+    pisitools.removeDir("/usr/bin")
+    pisitools.remove("/usr/share/man/man1/instmodsh.1")
     
