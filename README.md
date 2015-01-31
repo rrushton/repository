@@ -1,14 +1,15 @@
 Evolve OS Package Repo
 ----------------------
 
-Packages provided in source form only.
+Licensing:
 
-* [ ] Split off fat packages (docs,locale*)
-* [x] Address rampant CVEs
-* [x] Incorporate Budgie Desktop
-* [x] Purge cruft from repos
-* [ ] Go on a license hunt, validate all packages
-* [ ] Integrate LSM
-* [ ] Integrate Buxton for configurables (determine scope here)
-* [x] Update minimum amount of packages (.1 gnome releases)
-* [x] Clean up all (wanted) specs and actions.py files
+Unless stated otherwise, the packaging is available under the terms of the
+GNU General Public License, Version 2. Please see LICENSE for details.
+
+Patches
+------
+
+Please send patches via our mailing list, and not via pull requests.
+New pull requests will no longer be merged.
+
+https://evolve-os.com/mailman/listinfo/packaging
