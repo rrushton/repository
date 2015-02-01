@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libreoffice</Name>
+        <Homepage>http://www.libreoffice.org/</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Packager>
+        <Summary>LibreOffice Office Suite</Summary>
+        <Description>LibreOffice Office Suite</Description>
+        <License>BSD</License>
+        <License>GPLv2+</License>
+        <License>LGPLv2+</License>
+        <License>MPL-1.1</License>
+        <License>CDDL</License>
+        <License>Netscape</License>
+        <License>Public-Domain</License>
+        <Archive sha1sum="5a5b64a9b24c12b4a7820b9a625f4310266fd427" type="tarxz">http://download.documentfoundation.org/libreoffice/src/4.4.0/libreoffice-4.4.0.3.tar.xz</Archive>
+        <Archive sha1sum="2b0fcdbf9ed7d08f443b15c08c1263ab8d3f9f73" type="binary">http://download.documentfoundation.org/libreoffice/src/4.4.0/libreoffice-dictionaries-4.4.0.3.tar.xz</Archive>
+        <Archive sha1sum="ea13df61c70cb5a9314dc9d4f0ccfbcc9714405b" type="binary">http://download.documentfoundation.org/libreoffice/src/4.4.0/libreoffice-help-4.4.0.3.tar.xz</Archive>
+        <Archive sha1sum="52f5c37256e7037339694b20537561e9bea66ca3" type="binary">http://download.documentfoundation.org/libreoffice/src/4.4.0/libreoffice-translations-4.4.0.3.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency type="pkgconfig">gtk+-2.0</Dependency>
+            <Dependency type="pkgconfig">gtk+-3.0</Dependency>
+            <Dependency type="pkgconfig">glu</Dependency>
+            <Dependency type="pkgconfig">gstreamer-plugins-base-1.0</Dependency>
+            <Dependency type="pkgconfig">libxslt</Dependency>
+            <Dependency type="pkgconfig">librsvg-2.0</Dependency>
+            <Dependency type="pkgconfig">harfbuzz</Dependency>
+            <Dependency type="pkgconfig">poppler</Dependency>
+            <Dependency type="pkgconfig">lcms2</Dependency>
+            <Dependency type="pkgconfig">nss</Dependency>
+            <Dependency type="pkgconfig">libcurl</Dependency>
+            <Dependency type="pkgconfig">python3</Dependency>
+            <Dependency type="pkgconfig">libpng</Dependency>
+            <Dependency>perl-archive-zip</Dependency>
+            <Dependency>gperf</Dependency>
+            
+            <Dependency>libboost-devel</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>cups-devel</Dependency>
+
+            <Dependency>python3</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libreoffice</Name>
+        <Files>
+            <Path fileType="*">/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>02-01-2015</Date>
+            <Version>4.4.0.3</Version>
+            <Comment>Add libreoffice to repositories</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+    </History>
+</PISI>
