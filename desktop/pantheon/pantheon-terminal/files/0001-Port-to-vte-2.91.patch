@@ -1,0 +1,182 @@
+From 62b2e65b7bf0a7ce22c3e9ebba502ad34be9869c Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey@evolve-os.com>
+Date: Sun, 1 Feb 2015 17:07:57 +0000
+Subject: [PATCH] Port to vte-2.91
+
+Signed-off-by: Ikey Doherty <ikey@evolve-os.com>
+---
+ CMakeLists.txt          |  4 ++--
+ src/Settings.vala       |  4 ++--
+ src/TerminalWidget.vala | 56 ++++++++++++++++++++++++-------------------------
+ 3 files changed, 32 insertions(+), 32 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 512421b..bff624c 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -42,7 +42,7 @@ pkg_check_modules (DEPS REQUIRED
+   gthread-2.0
+   gtk+-3.0>=3.9.10
+   granite>=0.3.0
+-  vte-2.90
++  vte-2.91
+   libnotify
+   gdk-3.0)
+ 
+@@ -64,7 +64,7 @@ vala_precompile (VALA_C
+     src/ForegroundProcessDialog.vala
+     src/Constants.vala
+ PACKAGES
+-    vte-2.90
++    vte-2.91
+     granite
+     gtk+-3.0
+     libnotify
+diff --git a/src/Settings.vala b/src/Settings.vala
+index 51e821e..eb1fdf7 100644
+--- a/src/Settings.vala
++++ b/src/Settings.vala
+@@ -63,7 +63,7 @@ namespace PantheonTerminal {
+         public string foreground { get; set; }
+         public string background { get; set; }
+         public string cursor_color { get; set; }
+-        public Vte.TerminalCursorShape cursor_shape { get; set; }
++        public Vte.CursorShape cursor_shape { get; set; }
+         public string palette { get; set; }
+ 
+         public string shell { get; set; }
+@@ -77,4 +77,4 @@ namespace PantheonTerminal {
+             base ("org.pantheon.terminal.settings");
+         }
+     }
+-}
+\ No newline at end of file
++}
+diff --git a/src/TerminalWidget.vala b/src/TerminalWidget.vala
+index 72d03e5..e70cc7d 100644
+--- a/src/TerminalWidget.vala
++++ b/src/TerminalWidget.vala
+@@ -88,10 +88,6 @@ namespace PantheonTerminal {
+         }
+ 
+         public TerminalWidget (PantheonTerminalWindow parent_window) {
+-
+-            /* Sets characters that define word for double click selection */
+-            set_word_chars ("-A-Za-z0-9/.,_~#%?:=+@");
+-
+             restore_settings ();
+             settings.changed.connect (restore_settings);
+ 
+@@ -161,15 +157,14 @@ namespace PantheonTerminal {
+ 
+         public void restore_settings () {
+             /* Load configuration */
+-            int opacity = settings.opacity * 65535;
+-            set_background_image (null);
+-            set_opacity ((uint16) (opacity / 100));
++            double opacity = settings.opacity / 100.0;
+ 
+-            Gdk.Color background_color;
+-            Gdk.Color.parse (settings.background, out background_color);
++            Gdk.RGBA background_color = {};
++            background_color.parse (settings.background);
++            background_color.alpha = opacity;
+ 
+-            Gdk.Color foreground_color;
+-            Gdk.Color.parse (settings.foreground, out foreground_color);
++            Gdk.RGBA foreground_color = {};
++            foreground_color.parse (settings.foreground);
+ 
+             string[] hex_palette = {"#000000", "#FF6C60", "#A8FF60", "#FFFFCC", "#96CBFE",
+                                     "#FF73FE", "#C6C5FE", "#EEEEEE", "#000000", "#FF6C60",
+@@ -188,27 +183,32 @@ namespace PantheonTerminal {
+                 }
+             }
+ 
+-            Gdk.Color[] palette = new Gdk.Color[16];
++            Gdk.RGBA[] palette = new Gdk.RGBA[16];
+ 
+             for (int i = 0; i < hex_palette.length; i++) {
+-                Gdk.Color new_color;
+-                Gdk.Color.parse (hex_palette[i], out new_color);
++                Gdk.RGBA new_color = {};
++                new_color.parse (hex_palette[i]);
+ 
+                 palette[i] = new_color;
+             }
+ 
+             set_colors (foreground_color, background_color, palette);
+ 
+-            Gdk.Color cursor_color;
+-            Gdk.Color.parse (settings.cursor_color, out cursor_color);
++            Gdk.RGBA cursor_color = {};
++            cursor_color.parse (settings.cursor_color);
+             set_color_cursor (cursor_color);
+ 
+             /* Bold font */
+             this.allow_bold = settings.allow_bold;
+ 
+             /* Load encoding */
+-            if (settings.encoding != "")
+-                set_encoding (settings.encoding);
++            if (settings.encoding != "") {
++                try {
++                    set_encoding (settings.encoding);
++                } catch (Error e) {
++                    warning ("Unable to set encoding: %s", e.message);
++                }
++            }
+ 
+             /* Disable bell if necessary */
+             audible_bell = settings.audible_bell;
+@@ -241,11 +241,11 @@ namespace PantheonTerminal {
+         public void active_shell (string dir = GLib.Environment.get_current_dir ()) {
+             try {
+                 if (settings.shell == "")
+-                    this.fork_command_full (Vte.PtyFlags.DEFAULT, dir, { Vte.get_user_shell () },
+-                                            null, SpawnFlags.SEARCH_PATH, null, out this.child_pid);
++                    this.spawn_sync (Vte.PtyFlags.DEFAULT, dir, { Vte.get_user_shell () },
++                                      null, SpawnFlags.SEARCH_PATH, null, out this.child_pid);
+                 else
+-                    this.fork_command_full (Vte.PtyFlags.DEFAULT, dir, { settings.shell }, null,
+-                                            SpawnFlags.SEARCH_PATH, null, out this.child_pid);
++                    this.spawn_sync (Vte.PtyFlags.DEFAULT, dir, { settings.shell }, null,
++                                      SpawnFlags.SEARCH_PATH, null, out this.child_pid);
+             } catch (Error e) {
+                 warning (e.message);
+             }
+@@ -257,11 +257,11 @@ namespace PantheonTerminal {
+ 
+             try {
+                 if (program_with_args != null)
+-                    this.fork_command_full (Vte.PtyFlags.DEFAULT, dir, program_with_args,
+-                                            null, SpawnFlags.SEARCH_PATH, null, out this.child_pid);
++                    this.spawn_sync (Vte.PtyFlags.DEFAULT, dir, program_with_args,
++                                      null, SpawnFlags.SEARCH_PATH, null, out this.child_pid);
+                 else
+-                    this.fork_command_full (Vte.PtyFlags.DEFAULT, dir, ("bash -c " + program).split (" "),
+-                                            null, SpawnFlags.SEARCH_PATH, null, out this.child_pid);
++                    this.spawn_sync (Vte.PtyFlags.DEFAULT, dir, ("bash -c " + program).split (" "),
++                                      null, SpawnFlags.SEARCH_PATH, null, out this.child_pid);
+             } catch (Error e) {
+                 warning (e.message);
+             }
+@@ -273,7 +273,7 @@ namespace PantheonTerminal {
+                 return false;
+             }
+ 
+-            int pty = this.pty_object.fd;
++            int pty = this.pty.fd;
+             int fgpid = Posix.tcgetpgrp (pty);
+ 
+             if (fgpid != this.child_pid && fgpid != -1) {
+@@ -410,4 +410,4 @@ namespace PantheonTerminal {
+             }
+         }
+     }
+-}
+\ No newline at end of file
++}
+-- 
+1.8.4
+

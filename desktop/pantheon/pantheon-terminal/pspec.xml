@@ -18,10 +18,15 @@ Designed for elementary OS.</Description>
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
             <Dependency type="pkgconfig">granite</Dependency>
-            <Dependency type="pkgconfig">vte-2.90</Dependency>
+            <Dependency type="pkgconfig">vte-2.91</Dependency>
             <Dependency type="pkgconfig">libnotify</Dependency>
             <Dependency>vala</Dependency>
         </BuildDependencies>
+
+        <Patches>
+            <!-- Sent upstream //-->
+            <Patch level="1">0001-Port-to-vte-2.91.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
@@ -36,6 +41,22 @@ Designed for elementary OS.</Description>
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>02-01-2015</Date>
+            <Version>0.3.0</Version>
+            <Comment>Port to vte-2.91 (patch upstream)</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
+        <Update release="2">
+            <Date>01-30-2014</Date>
+            <Version>0.3.0</Version>
+            <Comment>Rebuild against vte</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>12-07-2014</Date>
             <Version>0.3.0</Version>
