@@ -36,6 +36,7 @@
             <Dependency type="pkgconfig">python3</Dependency>
             <Dependency type="pkgconfig">libpng</Dependency>
             <Dependency>perl-archive-zip</Dependency>
+            <Dependency>libgcrypt-devel</Dependency>
             <Dependency>gperf</Dependency>
             
             <Dependency>libboost-devel</Dependency>
