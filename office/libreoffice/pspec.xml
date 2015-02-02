@@ -71,6 +71,18 @@
     </Package>
 
     <Package>
+        <Name>libreoffice-common-help</Name>
+        <Summary>LibreOffice Common Help Files</Summary>
+        <Description>LibreOffice Common Help Files</Description>
+        <Files>
+            <Path fileType="doc">/usr/lib/libreoffice/help/*/*schart*</Path>
+            <Path fileType="doc">/usr/lib/libreoffice/help/*/default*</Path>
+            <Path fileType="doc">/usr/lib/libreoffice/help/*/*sbasic*</Path>
+            <Path fileType="doc">/usr/lib/libreoffice/help/*/*highconstrast*</Path>
+        </Files>
+    </Package>
+
+    <Package>
         <Name>libreoffice-writer</Name>
         <IsA>app:gui</IsA>
         <Icon>libreoffice-writer</Icon>
@@ -98,6 +110,9 @@
         <Files>
             <Path fileType="doc">/usr/lib/libreoffice/help/*/*writer*</Path>
         </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libreoffice-common-help</Dependency>
+        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -126,6 +141,9 @@
         <Files>
             <Path fileType="doc">/usr/lib/libreoffice/help/*/*calc*</Path>
         </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libreoffice-common-help</Dependency>
+        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -154,6 +172,9 @@
         <Files>
             <Path fileType="doc">/usr/lib/libreoffice/help/*/*impress*</Path>
         </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libreoffice-common-help</Dependency>
+        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -182,6 +203,9 @@
         <Files>
             <Path fileType="doc">/usr/lib/libreoffice/help/*/*math*</Path>
         </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libreoffice-common-help</Dependency>
+        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -210,6 +234,9 @@
         <Files>
             <Path fileType="doc">/usr/lib/libreoffice/help/*/*draw*</Path>
         </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libreoffice-common-help</Dependency>
+        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -238,6 +265,9 @@
         <Files>
             <Path fileType="doc">/usr/lib/libreoffice/help/*/*base*</Path>
         </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libreoffice-common-help</Dependency>
+        </RuntimeDependencies>
     </Package>
 
     <History>
