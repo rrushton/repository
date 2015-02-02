@@ -9,6 +9,8 @@ LoVersion = "4.4.0.3"
 OurWorkDir = "%s/libreoffice-%s" % (get.workDIR(), LoVersion)
 
 def presetup():
+    # Because fucking *dash*
+    shelltools.export("CONFIG_SHELL", "/bin/bash")
     ballpath = "%s/external/tarballs" % OurWorkDir
     if not shelltools.can_access_directory(ballpath):
         shelltools.makedirs(ballpath)
