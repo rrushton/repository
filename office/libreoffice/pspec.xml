@@ -53,7 +53,7 @@
         <IsA>app:gui</IsA>
         <Icon>libreoffice-writer</Icon>
         <Summary>LibreOffice Word Processor</Summary>
-        <Description>LibreOffice Word Processor<Description>
+        <Description>LibreOffice Word Processor</Description>
         <Files>
             <Path fileType="executable">/usr/bin/loweb</Path>
             <Path fileType="executable">/usr/bin/lowriter</Path>
@@ -63,7 +63,7 @@
             <Path fileType="data">/usr/lib/mime/packages/libreoffice-writer</Path>
             <Path fileType="data">/usr/share/applications/libreoffice-writer.desktop</Path>
             <Path fileType="man">/usr/share/man/man1/loweb.1.gz</Path>
-            <Path fileTypr="man">/usr/share/man/man1/lowriter.1.gz</Path>
+            <Path fileType="man">/usr/share/man/man1/lowriter.1.gz</Path>
         </Files>
     </Package>
 
@@ -72,7 +72,7 @@
         <IsA>app:gui</IsA>
         <Icon>libreoffice-calc</Icon>
         <Summary>LibreOffice Spreadsheet Application</Summary>
-        <Description>LibreOffice Spreadsheet Application<Description>
+        <Description>LibreOffice Spreadsheet Application</Description>
         <Files>
             <Path fileType="executable">/usr/bin/localc</Path>
             <Path fileType="executable">/usr/lib/libreoffice/program/scalc</Path>
@@ -80,7 +80,7 @@
             <Path fileType="data">/usr/lib/libreoffice/share/xdg/calc.desktop</Path>
             <Path fileType="data">/usr/lib/mime/packages/libreoffice-calc</Path>
             <Path fileType="data">/usr/share/applications/libreoffice-calc.desktop</Path>
-            <Path fileTypr="man">/usr/share/man/man1/localc.1.gz</Path>
+            <Path fileType="man">/usr/share/man/man1/localc.1.gz</Path>
         </Files>
     </Package>
 
@@ -89,7 +89,7 @@
         <IsA>app:gui</IsA>
         <Icon>libreoffice-impress</Icon>
         <Summary>LibreOffice Slideshow Application</Summary>
-        <Description>LibreOffice Slideshow Application<Description>
+        <Description>LibreOffice Slideshow Application</Description>
         <Files>
             <Path fileType="executable">/usr/bin/loimpress</Path>
             <Path fileType="executable">/usr/lib/libreoffice/program/simpress</Path>
@@ -97,7 +97,7 @@
             <Path fileType="data">/usr/lib/libreoffice/share/xdg/impress.desktop</Path>
             <Path fileType="data">/usr/lib/mime/packages/libreoffice-impress</Path>
             <Path fileType="data">/usr/share/applications/libreoffice-impress.desktop</Path>
-            <Path fileTypr="man">/usr/share/man/man1/loimpress.1.gz</Path>
+            <Path fileType="man">/usr/share/man/man1/loimpress.1.gz</Path>
         </Files>
     </Package>
 
@@ -106,7 +106,7 @@
         <IsA>app:gui</IsA>
         <Icon>libreoffice-math</Icon>
         <Summary>LibreOffice Equation Editor</Summary>
-        <Description>LibreOffice Equation Editor<Description>
+        <Description>LibreOffice Equation Editor</Description>
         <Files>
             <Path fileType="executable">/usr/bin/lomath</Path>
             <Path fileType="executable">/usr/lib/libreoffice/program/smath</Path>
@@ -114,7 +114,7 @@
             <Path fileType="data">/usr/lib/libreoffice/share/xdg/math.desktop</Path>
             <Path fileType="data">/usr/lib/mime/packages/libreoffice-math</Path>
             <Path fileType="data">/usr/share/applications/libreoffice-math.desktop</Path>
-            <Path fileTypr="man">/usr/share/man/man1/lomath.1.gz</Path>
+            <Path fileType="man">/usr/share/man/man1/lomath.1.gz</Path>
         </Files>
     </Package>
 
@@ -123,7 +123,7 @@
         <IsA>app:gui</IsA>
         <Icon>libreoffice-draw</Icon>
         <Summary>LibreOffice Drawing Application</Summary>
-        <Description>LibreOffice Drawing Application<Description>
+        <Description>LibreOffice Drawing Application</Description>
         <Files>
             <Path fileType="executable">/usr/bin/lodraw</Path>
             <Path fileType="executable">/usr/lib/libreoffice/program/sdraw</Path>
@@ -131,7 +131,7 @@
             <Path fileType="data">/usr/lib/libreoffice/share/xdg/draw.desktop</Path>
             <Path fileType="data">/usr/lib/mime/packages/libreoffice-draw</Path>
             <Path fileType="data">/usr/share/applications/libreoffice-draw.desktop</Path>
-            <Path fileTypr="man">/usr/share/man/man1/lodraw.1.gz</Path>
+            <Path fileType="man">/usr/share/man/man1/lodraw.1.gz</Path>
         </Files>
     </Package>
 
@@ -140,7 +140,7 @@
         <IsA>app:gui</IsA>
         <Icon>libreoffice-base</Icon>
         <Summary>LibreOffice Database Application</Summary>
-        <Description>LibreOffice Database Application<Description>
+        <Description>LibreOffice Database Application</Description>
         <Files>
             <Path fileType="executable">/usr/bin/lobase</Path>
             <Path fileType="executable">/usr/lib/libreoffice/program/sbase</Path>
@@ -148,7 +148,7 @@
             <Path fileType="data">/usr/lib/libreoffice/share/xdg/base.desktop</Path>
             <Path fileType="data">/usr/lib/mime/packages/libreoffice-base</Path>
             <Path fileType="data">/usr/share/applications/libreoffice-base.desktop</Path>
-            <Path fileTypr="man">/usr/share/man/man1/lobase.1.gz</Path>
+            <Path fileType="man">/usr/share/man/man1/lobase.1.gz</Path>
         </Files>
     </Package>
 
