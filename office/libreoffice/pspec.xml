@@ -49,6 +49,28 @@
     </Source>
 
     <Package>
+        <Name>libreoffice-common</Name>
+        <Summary>LibreOffice Common Files</Summary>
+        <Description>LibreOffice Common Files</Description>
+        <Files>
+            <Path fileType="library">/usr/lib/libreoffice/ure</Path>
+            <Path fileType="executable">/usr/lib/libreoffice/program/opengl</Path>
+            <Path fileType="executable">/usr/lib/libreoffice/program/shell</Path>
+            <Path fileType="executable">/usr/lib/libreoffice/program/services</Path>
+            <Path fileType="executable">/usr/lib/libreoffice/program/types</Path>
+            <Path fileType="executable">/usr/lib/libreoffice/program/resource</Path>
+            <Path fileType="executable">/usr/lib/libreoffice/program/wizards</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/gallery</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/uno_packages</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/template</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/fingerprint</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config</Path>
+            <!-- fix. //-->
+            <Path fileType="executable">/usr/lib/libreoffice/program/*.so</Path>
+        </Files>
+    </Package>
+
+    <Package>
         <Name>libreoffice-writer</Name>
         <IsA>app:gui</IsA>
         <Icon>libreoffice-writer</Icon>
@@ -64,6 +86,17 @@
             <Path fileType="data">/usr/share/applications/libreoffice-writer.desktop</Path>
             <Path fileType="man">/usr/share/man/man1/loweb.1.gz</Path>
             <Path fileType="man">/usr/share/man/man1/lowriter.1.gz</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libreoffice-common</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <Package>
+        <Name>libreoffice-writer-help</Name>
+        <Summary>LibreOffice Word Processor Help</Summary>
+        <Description>LibreOffice Word Processor Help</Description>
+        <Files>
+            <Path fileType="doc">/usr/lib/libreoffice/help/*/*writer*</Path>
         </Files>
     </Package>
 
@@ -82,6 +115,17 @@
             <Path fileType="data">/usr/share/applications/libreoffice-calc.desktop</Path>
             <Path fileType="man">/usr/share/man/man1/localc.1.gz</Path>
         </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libreoffice-common</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <Package>
+        <Name>libreoffice-calc-help</Name>
+        <Summary>LibreOffice Calc Help</Summary>
+        <Description>LibreOffice Calc Help</Description>
+        <Files>
+            <Path fileType="doc">/usr/lib/libreoffice/help/*/*calc*</Path>
+        </Files>
     </Package>
 
     <Package>
@@ -98,6 +142,17 @@
             <Path fileType="data">/usr/lib/mime/packages/libreoffice-impress</Path>
             <Path fileType="data">/usr/share/applications/libreoffice-impress.desktop</Path>
             <Path fileType="man">/usr/share/man/man1/loimpress.1.gz</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libreoffice-common</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <Package>
+        <Name>libreoffice-impress-help</Name>
+        <Summary>LibreOffice Impress Help</Summary>
+        <Description>LibreOffice Impress Help</Description>
+        <Files>
+            <Path fileType="doc">/usr/lib/libreoffice/help/*/*impress*</Path>
         </Files>
     </Package>
 
@@ -116,6 +171,17 @@
             <Path fileType="data">/usr/share/applications/libreoffice-math.desktop</Path>
             <Path fileType="man">/usr/share/man/man1/lomath.1.gz</Path>
         </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libreoffice-common</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <Package>
+        <Name>libreoffice-math-help</Name>
+        <Summary>LibreOffice Math Help</Summary>
+        <Description>LibreOffice Math Help</Description>
+        <Files>
+            <Path fileType="doc">/usr/lib/libreoffice/help/*/*math*</Path>
+        </Files>
     </Package>
 
     <Package>
@@ -133,6 +199,17 @@
             <Path fileType="data">/usr/share/applications/libreoffice-draw.desktop</Path>
             <Path fileType="man">/usr/share/man/man1/lodraw.1.gz</Path>
         </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libreoffice-common</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <Package>
+        <Name>libreoffice-draw-help</Name>
+        <Summary>LibreOffice Draw Help</Summary>
+        <Description>LibreOffice Draw Help</Description>
+        <Files>
+            <Path fileType="doc">/usr/lib/libreoffice/help/*/*draw*</Path>
+        </Files>
     </Package>
 
     <Package>
@@ -149,6 +226,17 @@
             <Path fileType="data">/usr/lib/mime/packages/libreoffice-base</Path>
             <Path fileType="data">/usr/share/applications/libreoffice-base.desktop</Path>
             <Path fileType="man">/usr/share/man/man1/lobase.1.gz</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libreoffice-common</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <Package>
+        <Name>libreoffice-base-help</Name>
+        <Summary>LibreOffice Base Help</Summary>
+        <Description>LibreOffice Bae Help</Description>
+        <Files>
+            <Path fileType="doc">/usr/lib/libreoffice/help/*/*base*</Path>
         </Files>
     </Package>
 
