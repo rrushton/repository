@@ -39,6 +39,7 @@ def setup():
         --disable-postgresql-sdbc   \
         --enable-release-build=yes  \
         --enable-python=system      \
+        --with-system-boost         \
         --with-system-cairo         \
         --with-system-curl          \
         --with-system-expat         \
@@ -60,7 +61,7 @@ def setup():
 
 def build():
     presetup()
-    autotools.make()
+    autotools.make("build-nocheck")
 
 
 def install():
