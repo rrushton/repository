@@ -22,6 +22,7 @@
         <Archive sha1sum="ea13df61c70cb5a9314dc9d4f0ccfbcc9714405b" type="binary">http://download.documentfoundation.org/libreoffice/src/4.4.0/libreoffice-help-4.4.0.3.tar.xz</Archive>
         <Archive sha1sum="52f5c37256e7037339694b20537561e9bea66ca3" type="binary">http://download.documentfoundation.org/libreoffice/src/4.4.0/libreoffice-translations-4.4.0.3.tar.xz</Archive>
         <BuildDependencies>
+            <!--
             <Dependency type="pkgconfig">gtk+-2.0</Dependency>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
             <Dependency type="pkgconfig">glu</Dependency>
@@ -43,7 +44,7 @@
             <Dependency>libjpeg-turbo-devel</Dependency>
             <Dependency>cups-devel</Dependency>
 
-            <Dependency>python3</Dependency>
+            <Dependency>python3</Dependency>//-->
         </BuildDependencies>
     </Source>
 
