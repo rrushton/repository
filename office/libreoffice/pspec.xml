@@ -78,6 +78,13 @@
             <Path fileType="data">/usr/lib/libreoffice/share/glade</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/wordbook</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/liblangtag</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/Scripts</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/xdg/xsltfilter.desktop</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/xdg/qstart.desktop</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/xdg/startcenter.desktop</Path>
+            <Path fileType="data">/usr/share/mimelnk/application</Path>
+            <Path fileType="data">/usr/share/mime/packages/libreoffice.xml</Path>
+            <Path fileType="data">/usr/share/appdata</Path>
 
             <Path fileType="data">/usr/lib/libreoffice/share/basic</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/autotext</Path>
@@ -88,16 +95,38 @@
             <Path fileType="data">/usr/lib/libreoffice/share/extensions</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/dtd</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/psprint</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/registry/res</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/registry/Langpack*</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/registry/ctl*</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/registry/cjk*</Path>
+
+            <Path fileType="data">/usr/lib/libreoffice/share/xpdfimport/xpdfimport_err.pdf</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/registry/oo-ldap.xcd.sample</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/registry/pyuno.xcd</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/registry/main.xcd</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/registry/gnome.xcd</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/registry/graphicfilter.xcd</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/registry/librelogo.xcd</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/registry/pdfimport.xcd</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/registry/xsltfilter.xcd</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/registry/oo-ad-ldap.xcd.sample</Path>
+
             <!-- fix. //-->
-            <Path fileType="executable">/usr/lib/libreoffice/program/*.so</Path>
+            <Path fileType="executable">/usr/lib/libreoffice/program/*.so*</Path>
 
             <Path fileType="man">/usr/share/man/man1/lofromtemplate.1.gz</Path>
             <Path fileType="man">/usr/share/man/man1/loffice.1.gz</Path>
             <Path fileType="man">/usr/share/man/man1/unopkg.1.gz</Path>
             <Path fileType="man">/usr/share/man/man1/libreoffice.1.gz</Path>
+            <Path fileType="doc">/usr/lib/libreoffice/LICENSE*</Path>
+            <Path fileType="doc">/usr/lib/libreoffice/CREDIT*</Path>
+            <Path fileType="doc">/usr/lib/libreoffice/NOTICE</Path>
+
+    
 
             <Path fileType="data">/usr/share/applications/libreoffice-xsltfilter.desktop</Path>
             <Path fileType="data">/usr/share/applications/libreoffice-startcenter.desktop</Path>
+            <Path fileType="config">/etc/bash_completion.d/libreoffice.sh</Path>
 
             <!-- room for splitting.. //-->
             <Path fileType="data">/usr/share/icons</Path>
