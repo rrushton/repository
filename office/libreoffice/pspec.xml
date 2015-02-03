@@ -78,7 +78,9 @@
             <Path fileType="doc">/usr/lib/libreoffice/help/*/*schart*</Path>
             <Path fileType="doc">/usr/lib/libreoffice/help/*/default*</Path>
             <Path fileType="doc">/usr/lib/libreoffice/help/*/*sbasic*</Path>
-            <Path fileType="doc">/usr/lib/libreoffice/help/*/*highconstrast*</Path>
+            <Path fileType="doc">/usr/lib/libreoffice/help/*/*highcontrast*</Path>
+            <Path fileType="doc">/usr/lib/libreoffice/help/*/err*</Path>
+            <Path fileType="doc">/usr/lib/libreoffice/help/*/shared*</Path>
         </Files>
     </Package>
 
