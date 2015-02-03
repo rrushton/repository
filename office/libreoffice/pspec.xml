@@ -89,6 +89,7 @@
             <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/swform</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/swreport</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/swxform</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/xmlsec</Path>
 
             <Path fileType="data">/usr/lib/libreoffice/share/config/webcast</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/config/wizard</Path>
