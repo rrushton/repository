@@ -105,7 +105,6 @@
             <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/svx</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/uui</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/vcl</Path>
-            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/xmlsec</Path>
             <Path fileType="data">/usr/lib/libreoffice/readmes</Path>
             <Path fileType="data">/usr/lib/libreoffice/presets</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/labels</Path>
