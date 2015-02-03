@@ -53,6 +53,11 @@
         <Summary>LibreOffice Common Files</Summary>
         <Description>LibreOffice Common Files</Description>
         <Files>
+            <Path fileType="executable">/usr/bin/lofromtemplate</Path>
+            <Path fileType="executable">/usr/bin/loffice</Path>
+            <Path fileType="executable">/usr/bin/soffice</Path>
+            <Path fileType="executable">/usr/bin/unopkg</Path>
+            <Path fileType="executable">/usr/bin/libreoffice</Path>
             <Path fileType="library">/usr/lib/libreoffice/ure</Path>
             <Path fileType="executable">/usr/lib/libreoffice/program/opengl</Path>
             <Path fileType="executable">/usr/lib/libreoffice/program/shell</Path>
@@ -65,8 +70,37 @@
             <Path fileType="data">/usr/lib/libreoffice/share/template</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/fingerprint</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/config</Path>
+            <Path fileType="data">/usr/lib/libreoffice/readmes</Path>
+            <Path fileType="data">/usr/lib/libreoffice/presets</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/labels</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/firebird</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/fonts</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/glade</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/wordbook</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/liblangtag</Path>
+
+            <Path fileType="data">/usr/lib/libreoffice/share/basic</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/autotext</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/xslt</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/filter</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/autocorr</Path>
+        
+            <Path fileType="data">/usr/lib/libreoffice/share/extensions</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/dtd</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/psprint</Path>
             <!-- fix. //-->
             <Path fileType="executable">/usr/lib/libreoffice/program/*.so</Path>
+
+            <Path fileType="man">/usr/share/man/man1/lofromtemplate.1.gz</Path>
+            <Path fileType="man">/usr/share/man/man1/loffice.1.gz</Path>
+            <Path fileType="man">/usr/share/man/man1/unopkg.1.gz</Path>
+            <Path fileType="man">/usr/share/man/man1/libreoffice.1.gz</Path>
+
+            <Path fileType="data">/usr/share/applications/libreoffice-xsltfilter.desktop</Path>
+            <Path fileType="data">/usr/share/applications/libreoffice-startcenter.desktop</Path>
+
+            <!-- room for splitting.. //-->
+            <Path fileType="data">/usr/share/icons</Path>
         </Files>
     </Package>
 
@@ -81,6 +115,7 @@
             <Path fileType="doc">/usr/lib/libreoffice/help/*/*highcontrast*</Path>
             <Path fileType="doc">/usr/lib/libreoffice/help/*/err*</Path>
             <Path fileType="doc">/usr/lib/libreoffice/help/*/shared*</Path>
+            <Path fileType="data">/usr/lib/libreoffice/help/*.xsl</Path>
         </Files>
     </Package>
 
