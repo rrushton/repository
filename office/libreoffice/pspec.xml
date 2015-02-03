@@ -22,7 +22,6 @@
         <Archive sha1sum="ea13df61c70cb5a9314dc9d4f0ccfbcc9714405b" type="binary">http://download.documentfoundation.org/libreoffice/src/4.4.0/libreoffice-help-4.4.0.3.tar.xz</Archive>
         <Archive sha1sum="52f5c37256e7037339694b20537561e9bea66ca3" type="binary">http://download.documentfoundation.org/libreoffice/src/4.4.0/libreoffice-translations-4.4.0.3.tar.xz</Archive>
         <BuildDependencies>
-            <!--
             <Dependency type="pkgconfig">gtk+-2.0</Dependency>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
             <Dependency type="pkgconfig">glu</Dependency>
@@ -44,7 +43,7 @@
             <Dependency>libjpeg-turbo-devel</Dependency>
             <Dependency>cups-devel</Dependency>
 
-            <Dependency>python3</Dependency>//-->
+            <Dependency>python3</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -111,6 +110,53 @@
             <Path fileType="data">/usr/lib/libreoffice/share/registry/xsltfilter.xcd</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/registry/oo-ad-ldap.xcd.sample</Path>
 
+            <Path fileType="data">/usr/share/mime-info/libreoffice.mime</Path>
+            <Path fileType="data">/usr/share/mime-info/libreoffice.keys</Path>
+            <Path fileType="data">/usr/share/application-registry/libreoffice.applications</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/registry/ogltrans.xcd</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/registry/lingucomponent.xcd</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/bootstraprc</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/sofficerc</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/java-set-classpath</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/kde-open-url</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/officehelper.py</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/lounorc</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/pagein-writer</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/mailmerge.py</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/senddoc</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/unohelper.py</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/oosplash</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/xpdfimport</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/pagein-draw</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/xid-fullscreen-on-all-monitors</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/pluginapp.bin</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/uri-encode</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/flat_logo.svg</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/pagein-common</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/msgbox.py</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/soffice</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/gengal</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/unopkg</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/redirectrc</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/intro.png</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/pythonloader.unorc</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/uno.py</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/pagein-calc</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/unoinfo</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/gnome-open-url</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/soffice.bin</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/pythonscript.py</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/open-url</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/pythonloader.py</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/fundamentalrc</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/gdbtrace</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/setuprc</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/ui-previewer</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/unopkg.bin</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/versionrc</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/gengal.bin</Path>
+            <Path fileType="data">/usr/lib/libreoffice/program/pagein-impress</Path>
+
             <!-- fix. //-->
             <Path fileType="executable">/usr/lib/libreoffice/program/*.so*</Path>
 
@@ -122,7 +168,6 @@
             <Path fileType="doc">/usr/lib/libreoffice/CREDIT*</Path>
             <Path fileType="doc">/usr/lib/libreoffice/NOTICE</Path>
 
-    
 
             <Path fileType="data">/usr/share/applications/libreoffice-xsltfilter.desktop</Path>
             <Path fileType="data">/usr/share/applications/libreoffice-startcenter.desktop</Path>

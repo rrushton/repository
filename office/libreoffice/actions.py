@@ -8,8 +8,6 @@ LoVersion = "4.4.0.3"
 
 OurWorkDir = "%s/libreoffice-%s" % (get.workDIR(), LoVersion)
 
-IgnoreAutodep = True
-
 def presetup():
     # Because fucking *dash*
     shelltools.export("CONFIG_SHELL", "/bin/bash")
