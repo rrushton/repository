@@ -80,7 +80,6 @@
             <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/dbtdata</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/sabpilot</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/sbibliography</Path>
-            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/scalc</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/scanner</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/schart</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/sglobal</Path>
