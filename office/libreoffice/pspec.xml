@@ -100,13 +100,12 @@
             <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/filter</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/formula</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/fps</Path>
-            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/sfx</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/svt</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/svx</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/uui</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/vcl</Path>
-            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/mlsec</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/xmlsec</Path>
             <Path fileType="data">/usr/lib/libreoffice/readmes</Path>
             <Path fileType="data">/usr/lib/libreoffice/presets</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/labels</Path>
