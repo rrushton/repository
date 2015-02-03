@@ -58,6 +58,7 @@
             <Path fileType="executable">/usr/bin/unopkg</Path>
             <Path fileType="executable">/usr/bin/libreoffice</Path>
             <Path fileType="library">/usr/lib/libreoffice/ure</Path>
+            <Path fileType="library">/usr/lib/libreoffice/ure-link</Path>
             <Path fileType="executable">/usr/lib/libreoffice/program/opengl</Path>
             <Path fileType="executable">/usr/lib/libreoffice/program/shell</Path>
             <Path fileType="executable">/usr/lib/libreoffice/program/services</Path>

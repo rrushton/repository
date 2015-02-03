@@ -70,4 +70,8 @@ def install():
     presetup()
     autotools.rawInstall("distro-pack-install DESTDIR=%s" % get.installDIR())
 
+    # Sometimes we have a missing ure-link. LibreOffice kinda gets annoyed.
+    if not shelltools.can_access_file("%s/usr/lib/libreoffice/ure-link" % get.installDIR()):
+        pisitools.dosym("/usr/lib/libreoffice/ure", "/usr/lib/libreoffice/ure-link")
+
     
