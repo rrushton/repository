@@ -68,7 +68,45 @@
             <Path fileType="data">/usr/lib/libreoffice/share/uno_packages</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/template</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/fingerprint</Path>
-            <Path fileType="data">/usr/lib/libreoffice/share/config</Path>
+            
+
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/BasicIDE</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/dbapp</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/dbbrowser</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/dbquery</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/dbrelation</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/dbreport</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/dbtable</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/dbtdata</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/sabpilot</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/sbibliography</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/scalc</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/scanner</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/schart</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/sglobal</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/spropctrlr</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/StartModule</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/sweb</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/swform</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/swreport</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/swxform</Path>
+
+            <Path fileType="data">/usr/lib/libreoffice/share/config/webcast</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/wizard</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/*.zip</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/cui</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/dbaccess</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/desktop</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/filter</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/formula</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/fps</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/sfx</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/svt</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/svx</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/uui</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/vcl</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/mlsec</Path>
             <Path fileType="data">/usr/lib/libreoffice/readmes</Path>
             <Path fileType="data">/usr/lib/libreoffice/presets</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/labels</Path>
@@ -91,7 +129,6 @@
             <Path fileType="data">/usr/lib/libreoffice/share/filter</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/autocorr</Path>
         
-            <Path fileType="data">/usr/lib/libreoffice/share/extensions</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/dtd</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/psprint</Path>
             <Path fileType="data">/usr/lib/libreoffice/share/registry/res</Path>
@@ -194,6 +231,18 @@
     </Package>
 
     <Package>
+        <Name>libreoffice-common-dictionaries</Name>
+        <Summary>LibreOffice additional dictionaries</Summary>
+        <Description>LibreOffice additional dictionaries</Description>
+        <Files>
+            <Path fileType="data">/usr/lib/libreoffice/share/extensions</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libreoffice-common</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
         <Name>libreoffice-writer</Name>
         <IsA>app:gui</IsA>
         <Icon>libreoffice-writer</Icon>
@@ -207,6 +256,7 @@
             <Path fileType="data">/usr/lib/libreoffice/share/xdg/writer.desktop</Path>
             <Path fileType="data">/usr/lib/mime/packages/libreoffice-writer</Path>
             <Path fileType="data">/usr/share/applications/libreoffice-writer.desktop</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/swriter</Path>
             <Path fileType="man">/usr/share/man/man1/loweb.1.gz</Path>
             <Path fileType="man">/usr/share/man/man1/lowriter.1.gz</Path>
         </Files>
@@ -239,6 +289,7 @@
             <Path fileType="data">/usr/lib/libreoffice/share/xdg/calc.desktop</Path>
             <Path fileType="data">/usr/lib/mime/packages/libreoffice-calc</Path>
             <Path fileType="data">/usr/share/applications/libreoffice-calc.desktop</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/scalc</Path>
             <Path fileType="man">/usr/share/man/man1/localc.1.gz</Path>
         </Files>
         <RuntimeDependencies>
@@ -270,6 +321,8 @@
             <Path fileType="data">/usr/lib/libreoffice/share/xdg/impress.desktop</Path>
             <Path fileType="data">/usr/lib/mime/packages/libreoffice-impress</Path>
             <Path fileType="data">/usr/share/applications/libreoffice-impress.desktop</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/simpress</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/simpress</Path>
             <Path fileType="man">/usr/share/man/man1/loimpress.1.gz</Path>
         </Files>
         <RuntimeDependencies>
@@ -301,6 +354,7 @@
             <Path fileType="data">/usr/lib/libreoffice/share/xdg/math.desktop</Path>
             <Path fileType="data">/usr/lib/mime/packages/libreoffice-math</Path>
             <Path fileType="data">/usr/share/applications/libreoffice-math.desktop</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/smath</Path>
             <Path fileType="man">/usr/share/man/man1/lomath.1.gz</Path>
         </Files>
         <RuntimeDependencies>
@@ -332,6 +386,7 @@
             <Path fileType="data">/usr/lib/libreoffice/share/xdg/draw.desktop</Path>
             <Path fileType="data">/usr/lib/mime/packages/libreoffice-draw</Path>
             <Path fileType="data">/usr/share/applications/libreoffice-draw.desktop</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/sdraw</Path>
             <Path fileType="man">/usr/share/man/man1/lodraw.1.gz</Path>
         </Files>
         <RuntimeDependencies>
@@ -363,6 +418,7 @@
             <Path fileType="data">/usr/lib/libreoffice/share/xdg/base.desktop</Path>
             <Path fileType="data">/usr/lib/mime/packages/libreoffice-base</Path>
             <Path fileType="data">/usr/share/applications/libreoffice-base.desktop</Path>
+            <Path fileType="data">/usr/lib/libreoffice/share/config/soffice.cfg/modules/sbase</Path>
             <Path fileType="man">/usr/share/man/man1/lobase.1.gz</Path>
         </Files>
         <RuntimeDependencies>
