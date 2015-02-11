@@ -58,6 +58,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>02-11-2015</Date>
+            <Version>0.6.31</Version>
+            <Comment>Add dns_sd.h symlink</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>02-11-2015</Date>
             <Version>0.6.31</Version>

@@ -32,3 +32,4 @@ def install():
     pisitools.removeDir("/var/run")
     pisitools.removeDir("/var")
     pisitools.removeDir("/usr/share/applications")
+    pisitools.dosym("/usr/include/avahi-compat-libdns_sd/dns_sd.h", "/usr/include/dns_sd.h")
