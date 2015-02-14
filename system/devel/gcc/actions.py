@@ -5,7 +5,7 @@
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 BuildDir = "%s/%s" % ( get.workDIR(), "gcc-build")
-GccDir = "../gcc-4.8.1"
+GccDir = "../gcc-%s" % get.srcVERSION()
 
 IgnoreAutodep = True
 
