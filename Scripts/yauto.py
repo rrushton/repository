@@ -47,6 +47,9 @@ class AutoPackage:
 
     package_prefix = ""
 
+    buildpl = False
+    makefile = False
+
     def __init__(self, uri):
         self.package_uri = uri
         homeDir = os.environ ["HOME"]
@@ -77,7 +80,7 @@ class AutoPackage:
         print self.file_name
         try:
             dloader.download_file (self.package_uri)
-            self.sha1sum = dloader.get_sha1sum (self.file_name)
+            self.sha256sum = dloader.get_sha256sum(self.file_name)
         except Exception, e:
             print e
             return False
@@ -102,7 +105,6 @@ class AutoPackage:
         self.compile_type = None
 
         print "Package: %s\nVersion: %s" % (self.package_name, self.version_string)
-        print "SHA1 Sum: %s" % self.sha1sum
 
         # Set up temporary
         self.temp_dir = os.path.abspath ("./TEMP")
@@ -127,6 +129,8 @@ class AutoPackage:
                     if file not in self.doc_files:
                         self.doc_files.append (file)
                         print "Added %s" % file
+                if file == "Makefile":
+                    self.makefile = True
                 if "configure.ac" in file:
                     # Examine this fella for build deps
                     self.build_deps = self.check_build_deps(os.path.join(root, file))
@@ -145,9 +149,11 @@ class AutoPackage:
                 if "setup.py" in file:
                     # this is a python module.
                     known_types.append(PYTHON_MODULES)
-                if "Makefile.PL" in file:
+                if "Makefile.PL" in file or "Build.PL" in file:
                     # This is a perl module
                     known_types.append(PERL_MODULES)
+                if "BUILD.PL" in file:
+                    self.buildpl = True
 
         # We may have hit several systems..
         if CMAKE in known_types:
@@ -162,11 +168,9 @@ class AutoPackage:
         elif PYTHON_MODULES in known_types:
             print "python"
             self.compile_type = PYTHON_MODULES
-            self.package_prefix = "python"
         elif PERL_MODULES in known_types:
             print "perl"
             self.compile_type = PERL_MODULES
-            self.package_prefix = "perl"
         else:
             print "unknown"
 
@@ -204,73 +208,73 @@ class AutoPackage:
 
         return deps
 
-    def create_pspec (self):
-        ''' Now the interesting stuff happens. We'll create a pspec.xml automagically :) '''
-        sample_pspec = os.path.join (self.template_dir, "pspec.sample.xml")
+    def create_yaml(self):
+        ''' Attempt creation of a package.yaml... '''
+        with open('package.yml', 'w') as yml:
+            mapping = { "NAME" : self.package_name,
+                        "VERSION" : self.version_string,
+                        "SOURCE": self.package_uri,
+                        "SHA256SUM": self.sha256sum }
+            
+            tmp = """name       : %(NAME)s
+version    : %(VERSION)s
+release    : 1
+source     :
+    - %(SOURCE)s : %(SHA256SUM)s
+license    : GPL-2.0 # CHECK ME
+summary    : PLEASE FILL ME IN
 
-        self.package_name = self.package_name if self.package_prefix == "" else "%s-%s" % (self.package_prefix, self.package_name)
-        self.package_name = self.package_name.lower()
+description: |
+    PLEASE FILL ME IN""" % mapping
 
-        date = datetime.datetime.now().strftime ("%m-%d-%Y")
-        deps = ""
-        for dep in self.build_deps:
-            depStr = ""
-            if dep.version is not None:
-                depStr = "<Dependency type=\"pkgconfig\" versionFrom=\"%s\">%s</Dependency>" % (dep.version, dep.name)
-            else:
-                depStr = "<Dependency type=\"pkgconfig\">%s</Dependency>" % dep.name
-            deps += "            %s\n" % depStr
-        deps = deps.replace("\n\n","\n")
-        with open (sample_pspec, "r") as sample:
-            mapping =  { 'PackagerName' : self.packager_name, \
-                         'PackagerEmail' : self.email, \
-                         'PackageName' : self.package_name, \
-                         'Summary': 'Add summary', \
-                         'Description': 'Add description', \
-                         'License': 'GPLv2+', \
-                         'HashSum': self.sha1sum, \
-                         'ArchiveType': self.file_type, \
-                         'ArchiveURI': self.package_uri, \
-                         'Date': date, \
-                         'Version': self.version_string, \
-                         'BuildDeps': deps}
-            lines = sample.read () % mapping
+            totalStr = tmp
+            setup = None
+            build = None
+            install = None
 
-            with open ("pspec.xml", "w") as pspec:
-                pspec.write (lines)
-                pspec.flush ()
-
-    def create_actions (self):
-        ''' Create actions.py '''
-        if self.compile_type == GNOMEY:
-            sample_actions = os.path.join (self.template_dir, "actions.gnome.sample.py")
-        elif self.compile_type == AUTOTOOLS:
-            sample_actions = os.path.join (self.template_dir, "actions.sample.py")
-        elif self.compile_type == CMAKE:
-            sample_actions = os.path.join (self.template_dir, "actions.cmake.sample.py")
-        elif self.compile_type == PYTHON_MODULES:
-            sample_actions = os.path.join (self.template_dir, "actions.pythonmodules.sample.py")
-        elif self.compile_type == PERL_MODULES:
-            sample_actions = os.path.join (self.template_dir, "actions.perlmodules.sample.py")
-        elif self.compile_type == None:
-            sample_actions = os.path.join (self.template_dir, "actions.sample.py")
-        doc_str = ""
-        if len(self.doc_files) > 0:
-            doc_str = "pisitools.dodoc("
-            for doc in self.doc_files:
-                if doc == self.doc_files[-1]:
-                    doc_str += "\"%s\"" % doc
+            if self.build_deps is not None and len(self.build_deps) > 0:
+                totalStr += "\nbuilddeps  :\n"
+                for dep in self.build_deps:
+                    if len(dep.name.strip()) == 0:
+                        continue
+                    totalStr += "    - pkgconfig(%s)\n" % dep.name
+            if self.compile_type == GNOMEY:
+                setup = "%configure --disable-static"
+            elif self.compile_type == CMAKE:
+                setup = "%cmake ."
+            elif self.compile_type == PYTHON_MODULES:
+                setup = "python setup.py configure"
+                build = "python setup.py build"
+                install = "python setup.py install --root=%installroot% --no-compile -O0"
+            elif self.compile_type == PERL_MODULES:
+                if self.buildpl:
+                    setup = "perl Build.PL installdirs=vendor destdir=%installroot%"
                 else:
-                    doc_str += "\"%s\", " % doc
+                    setup = "perl Makefile.PL PREFIX=/usr INSTALLDIRS=vendor DESTDIR=%installroot%"
+                if not self.makefile:
+                    build = "perl Build"
+                    install = "perl Build install"
+                sample_actions = os.path.join (self.template_dir, "actions.perlmodules.sample.py")
 
-            doc_str += ")"
-        with open (sample_actions, "r") as sample:
-            lines = sample.read ().replace ("#EXTRADOCS#", doc_str)
+            if setup is None:
+                setup = "%configure"
+            if build is None:
+                build = "%make"
+            if install is None:
+                install = "%make_install"
 
-            # Write out the actions.py
-            with open ("actions.py", "w") as actions:
-                actions.write (lines)
-                actions.flush ()
+            mapping = { "SETUP": setup, "BUILD" : build, "INSTALL" : install }
+            tmpl = """setup      : |
+    %(SETUP)s
+build      : |
+    %(BUILD)s
+install    : |
+    %(INSTALL)s
+""" % mapping
+            totalStr += "\n" + tmpl
+
+            yml.writelines(totalStr.replace("\n\n", "\n"))
+            yml.flush()
 
     def check_is_gnomey (self, path):
         with open (path, "r") as makefile:
@@ -290,5 +294,4 @@ if __name__ == "__main__":
     else:
         print "Completed verification"
         p.examine_source ()
-        p.create_pspec ()
-        p.create_actions ()
+        p.create_yaml ()

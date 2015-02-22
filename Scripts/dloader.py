@@ -1,3 +1,16 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+#  yauto.py
+#  
+#  Copyright 2013 Ikey Doherty <ikey@solusos.com>
+#  Copyright 2015 Ikey Doherty <ikey@evolve-os.com>
+#  
+#  This program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 2 of the License, or
+#  (at your option) any later version.
+#
 import urllib2
 import hashlib
 
@@ -39,8 +52,8 @@ def sizeof_fmt(num):
                 num /= 1024.0
         return "%3.1f%s" % (num, 'TB')
 
-def get_sha1sum (filename):
-		sh = hashlib.sha1 ()
+def get_sha256sum (filename):
+		sh = hashlib.sha256 ()
 		f = open (filename, "r")
 		sh.update (f.read())
 		ret = sh.hexdigest ()
