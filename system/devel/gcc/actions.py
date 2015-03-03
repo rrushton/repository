@@ -60,6 +60,6 @@ def install():
     pisitools.dosym ("/usr/bin/cpp", "/lib/cpp")
     pisitools.dosym ("/usr/bin/gcc", "/usr/bin/cc")
 
-    crtfiles = ["crtbegin.o", "crtend.o", "crtbeginS.o", "crtendS.o"]
+    crtfiles = ["libgcc.a", "crtbegin.o", "crtend.o", "crtbeginS.o", "crtendS.o"]
     for crt in crtfiles:
         pisitools.dosym("/usr/lib64/gcc/%s/%s/%s" % (get.HOST(), get.srcVERSION(), crt), "/usr/lib64/%s" % crt)
