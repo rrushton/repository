@@ -19,6 +19,7 @@ def setup():
                           --with-firmware-path=/lib/firmware \
                           --disable-networkd \
                           --disable-selinux \
+                          --enable-compat-libs \
                           --with-pamlibdir=/lib/security")
 
 def build():

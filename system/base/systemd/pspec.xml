@@ -93,6 +93,14 @@
     </Package>
 
     <History>
+        <Update release="15">
+            <Date>03-07-2015</Date>
+            <Version>218</Version>
+            <Comment>Enable compat libs</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="14">
             <Date>03-07-2015</Date>
             <Version>218</Version>
