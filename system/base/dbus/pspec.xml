@@ -15,6 +15,7 @@
         <BuildDependencies>
             <Dependency releaseFrom="3">systemd-devel</Dependency>
             <Dependency releaseFrom="7">baselayout</Dependency>
+            <Dependency type="pkgconfig">x11</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -58,6 +59,14 @@
 
 
     <History>
+        <Update release="6">
+            <Date>03-07-2015</Date>
+            <Version>1.8.16</Version>
+            <Comment>Enable X11 launching</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="5">
             <Date>03-07-2015</Date>
             <Version>1.8.16</Version>
