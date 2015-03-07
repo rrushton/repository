@@ -7,6 +7,8 @@ IgnoreAutodep = True
 
 def setup():
     autotools.configure("--disable-login \
+                         --disable-nologin \
+                         --disable-chfn-chsh \
                          --disable-su \
                          --disable-static")
 
