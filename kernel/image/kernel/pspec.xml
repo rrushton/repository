@@ -5,12 +5,12 @@
         <Name>kernel</Name>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey.doherty@gmail.com</Email>
+            <Email>ikey@evolve-os.com</Email>
         </Packager>
         <Summary>Linux Kernel</Summary>
         <Description>This package contains the binary image of the Linux kernel, required to use the operating system</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="5e7c78faee9e8ffb4b0361b9ff459fdc066baca7" type="targz">https://kernel.org/pub/linux/kernel/v3.x/linux-3.19.tar.gz</Archive>
+        <Archive sha1sum="6ae976605aa6dc04bcadcd8f50dbca52342af0a6" type="targz">https://kernel.org/pub/linux/kernel/v3.x/linux-3.19.1.tar.gz</Archive>
         <AdditionalFiles>
             <AdditionalFile target="configs/kernel-i686-config">configs/kernel-i686-config</AdditionalFile>
             <AdditionalFile target="configs/kernel-x86_64-config">configs/kernel-x86_64-config</AdditionalFile>
@@ -74,6 +74,14 @@
     </Package>
 
     <History>
+        <Update release="34">
+            <Date>03-07-2015</Date>
+            <Version>3.19.1</Version>
+            <Comment>Update to latest 3.19 stable</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="33">
             <Date>03-03-2015</Date>
             <Version>3.19.0</Version>
