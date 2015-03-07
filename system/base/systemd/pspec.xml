@@ -5,7 +5,7 @@
         <Name>systemd</Name>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey@evolve-os.com</Email>
         </Packager>
         <Summary>System and Service Manager</Summary>
         <Description>systemd is a system and service manager for Linux, compatible with SysV and LSB init scripts. systemd provides aggressive parallelization capabilities, uses socket and D-Bus activation for starting services, offers on-demand starting of daemons, keeps track of processes using Linux control groups, supports snapshotting and restoring of the system state, maintains mount and automount points and implements an elaborate transactional dependency-based service control logic. It can work as a drop-in replacement for sysvinit. </Description>
@@ -20,6 +20,8 @@
 
         <Patches>
             <Patch level="1">0001-login-Match-multiple-sessions-reboot-policy-with-pow.patch</Patch>
+            <!-- Prevent it looking for nsswitch.conf until we set a policy on resolved //-->
+            <Patch level="1">no-nsswitch.patch</Patch>
         </Patches>
     </Source>
 
@@ -93,6 +95,14 @@
     </Package>
 
     <History>
+        <Update release="16">
+            <Date>03-07-2015</Date>
+            <Version>218</Version>
+            <Comment>Drop nsswitch requirement</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="15">
             <Date>03-07-2015</Date>
             <Version>218</Version>
