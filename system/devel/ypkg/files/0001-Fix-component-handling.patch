@@ -1,0 +1,93 @@
+From 4bb59a3a9c20a42457114399476d3ad63a72b701 Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey@evolve-os.com>
+Date: Sun, 8 Mar 2015 00:04:09 +0000
+Subject: [PATCH] Fix component handling
+
+---
+ packageit.py |  9 +++++++--
+ ypkg.py      | 20 ++++++++++++++++++++
+ 2 files changed, 27 insertions(+), 2 deletions(-)
+
+diff --git a/packageit.py b/packageit.py
+index a69c963..ee984ea 100644
+--- a/packageit.py
++++ b/packageit.py
+@@ -11,7 +11,6 @@
+ #  (at your option) any later version.
+ #
+ from pisi.package import Package
+-import pisi.metadata
+ import pisi.specfile
+ import os
+ import re
+@@ -23,6 +22,8 @@ import sanity
+ 
+ conf = pisi.config.Config()
+ 
++component = None
++
+ def packageit(ymlFile, installDIR, outputXML):
+     wdir = installDIR
+ 
+@@ -35,7 +36,6 @@ def packageit(ymlFile, installDIR, outputXML):
+         canSplitLibs = bool(d['libsplit'])
+ 
+     spec = pisi.specfile.SpecFile()
+-    meta = pisi.metadata.MetaData()
+     source = pisi.specfile.Source()
+     source.name = d['name']
+     name = source.name
+@@ -259,7 +259,12 @@ def packageit(ymlFile, installDIR, outputXML):
+             if fq.endswith("-devel"):
+                 if "devel" in d and bool(d['devel']) == True:
+                     package.partOf = "system.devel"
++                else:
++                    package.partOf = "programming.devel"
+             package.packageDependencies.append(dep)
++        else:
++            if component:
++                package.partOf = component
+         package.description = source.description
+         if fq != name:
+             package.summary['en'] = summaries[pkg]
+diff --git a/ypkg.py b/ypkg.py
+index 465bd64..74d166d 100755
+--- a/ypkg.py
++++ b/ypkg.py
+@@ -22,6 +22,17 @@ import sanity
+ from sanity import sane
+ import os
+ import shutil
++import xml.etree.ElementTree as ET
++
++def load_component(fname):
++    try:
++        tree = ET.parse(fname)
++        root = tree.getroot()
++
++        name = root.findall("Name")[0].text
++        return name
++    except Exception, e:
++       return None
+ 
+ def main():
+     if len(sys.argv) < 2:
+@@ -38,6 +49,15 @@ def main():
+     if not sane(fpath): # then y made for linoox
+         return 1
+ 
++    comp = os.path.join(os.path.dirname(os.path.abspath(fpath)), "..", "component.xml")
++    if os.path.exists(comp):
++        packageit.component = load_component(comp)
++    else:
++        comp = os.path.join(os.path.dirname(os.path.abspath(fpath)), "..", "..", "component.xml")
++        if os.path.exists(comp):
++            packageit.component = load_component(comp)
++
++
+     pspec = build.BuildPrefix + "/%s.xml" % sanity.name
+     actions = build.BuildPrefix + "/actions.py"
+ 
+-- 
+1.8.4
+

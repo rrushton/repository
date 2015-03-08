@@ -12,6 +12,10 @@
         <Description>ypkg build tool</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="5c7dc7555b77108ee09d49d852d4894f8a9dc637" type="tarxz">https://evolve-os.com/sources/ypkg-1.tar.xz</Archive>
+
+        <Patches>
+            <Patch level="1">0001-Fix-component-handling.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
@@ -27,6 +31,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>03-08-2015</Date>
+            <Version>1</Version>
+            <Comment>Fix component handling</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>03-06-2015</Date>
             <Version>1</Version>
