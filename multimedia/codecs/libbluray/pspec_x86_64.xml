@@ -33,13 +33,12 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>
-            <Path fileType="library">/usr/lib64/lib*.a</Path>
             <Path fileType="library">/usr/lib64/lib*.so</Path>
             <Path fileType="data">/usr/lib64/pkgconfig</Path>
         </Files>
     </Package>
     <History>
-        <Update release="1">
+        <Update release="2">
             <Date>2015-03-08</Date>
             <Version>0.7.0</Version>
             <Comment>Packaging update</Comment>
