@@ -37,6 +37,7 @@ def setup():
                              -docdir /usr/share/doc/qt5 \
                              -sysconfdir /etc/xdg \
                              -nomake tests \
+                             -xkb-config-root /usr/share/X11/xkb \
                              -no-warnings-are-errors \
                              -examplesdir /usr/lib/qt5/examples")
 
