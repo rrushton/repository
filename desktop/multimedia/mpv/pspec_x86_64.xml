@@ -1,0 +1,52 @@
+<PISI>
+    <Source>
+        <Name>mpv</Name>
+        <Homepage>http://mpv.io/</Homepage>
+        <Packager>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Packager>
+        <License>GPL-2.0</License>
+        <Summary xml:lang="en">mpv is a fork of mplayer2 and MPlayer. It shares some features with the former projects while introducing many more.</Summary>
+        <Description xml:lang="en">mpv is a fork of mplayer2 and MPlayer. It shares some features with the former projects while introducing many more.
+
+MPlayer&apos;s options parser was improved to behave more like other CLI programs, and many option names and semantics were reworked to make them more intuitive and memorable.
+
+mpv has a OpenGL based video output that is capable of many features loved by videophiles, such as video scaling with popular high quality algorithms, color management, and more.
+While mpv has no official GUI, it has a small controller that is triggered by mouse movement.
+
+mpv leverages the FFmpeg hwaccel APIs to support VDPAU, VAAPI and VDA video decode acceleration.
+</Description>
+        <Archive type="binary" sha1sum="083029a13c0c475bf42a4232c68a9caa6dbc763e">https://evolve-os.com/sources/README</Archive>
+    </Source>
+    <Package>
+        <Name>mpv</Name>
+        <Summary xml:lang="en">mpv is a fork of mplayer2 and MPlayer. It shares some features with the former projects while introducing many more.</Summary>
+        <Description xml:lang="en">mpv is a fork of mplayer2 and MPlayer. It shares some features with the former projects while introducing many more.
+
+MPlayer&apos;s options parser was improved to behave more like other CLI programs, and many option names and semantics were reworked to make them more intuitive and memorable.
+
+mpv has a OpenGL based video output that is capable of many features loved by videophiles, such as video scaling with popular high quality algorithms, color management, and more.
+While mpv has no official GUI, it has a small controller that is triggered by mouse movement.
+
+mpv leverages the FFmpeg hwaccel APIs to support VDPAU, VAAPI and VDA video decode acceleration.
+</Description>
+        <PartOf>desktop.multimedia</PartOf>
+        <Files>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/applications/mpv.desktop</Path>
+            <Path fileType="doc">/usr/share/doc/mpv</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="config">/etc/mpv/encoding-profiles.conf</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2015-03-08</Date>
+            <Version>0.8.2</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+    </History>
+</PISI>
