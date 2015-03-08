@@ -24,6 +24,10 @@
             <Dependency type="pkgconfig">libpeas-1.0</Dependency>
             <Dependency>vala</Dependency>
         </BuildDependencies>
+
+        <Patches>
+            <Patch level="1">0001-session-Force-gnome-as-XDG_CURRENT_DESKTOP-when-abse.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
@@ -56,6 +60,14 @@
     </Package>
 
     <History>
+        <Update release="37">
+            <Date>03-08-2015</Date>
+            <Version>8.1</Version>
+            <Comment>Sync with git</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="36">
             <Date>03-08-2015</Date>
             <Version>8.1</Version>
