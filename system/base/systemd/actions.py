@@ -49,11 +49,3 @@ def install():
 
     # We do not use nsswitch.conf - so don't break our networking.
     pisitools.remove("/usr/share/factory/etc/nsswitch.conf")
-
-    # Set defaults (enable readahead)
-    pisitools.dosym("/usr/lib/systemd/system/systemd-readahead-collect.service",
-                    "/usr/lib/systemd/system/default.target.wants/systemd-readahead-collect.service")
-
-    # Set defaults (enable readahead)
-    pisitools.dosym("/usr/lib/systemd/system/systemd-readahead-replay.service",
-                    "/usr/lib/systemd/system/default.target.wants/systemd-readahead-replay.service")
