@@ -1,7 +1,7 @@
 From 4bb59a3a9c20a42457114399476d3ad63a72b701 Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey@evolve-os.com>
 Date: Sun, 8 Mar 2015 00:04:09 +0000
-Subject: [PATCH] Fix component handling
+Subject: [PATCH 1/2] Fix component handling
 
 ---
  packageit.py |  9 +++++++--
