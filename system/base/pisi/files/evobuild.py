@@ -402,7 +402,7 @@ def main():
             cmd = "eopkg build -y /WORK/packages/pspec.xml -O /WORK" if what.endswith("pspec.xml") else "/bin/sh -c 'cd /WORK/; ypkg /WORK/packages/%s --force'" % os.path.basename(what)
             if run_chroot(cmd):
                 print "Build successful"
-                extract_build()
+                extract_build(what.endswith(".yml"))
             else:
                 print "Build failed"
     elif command == "update":
@@ -470,11 +470,15 @@ def create_support_dirs():
             clean_exit(1)
 
 
-def extract_build():
+def extract_build(yml=False):
     try:
         fs = glob.glob(os.path.join(union_dir(), "WORK", "*.eopkg"))
         for f in fs:
             shutil.copy2(f, os.path.join(os.getcwd(), os.path.basename(f)))
+        if yml:
+            fs = glob.glob(os.path.join(union_dir(), "WORK", "pspec_*.xml"))
+            for f in fs:
+                shutil.copy2(f, os.path.join(os.getcwd(), os.path.basename(f)))
     except Exception, e:
         print "Unable to extract file from build: %s" % e
 
