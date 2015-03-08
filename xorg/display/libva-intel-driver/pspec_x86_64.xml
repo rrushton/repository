@@ -7,14 +7,14 @@
         </Packager>
         <License>MIT</License>
         <Summary xml:lang="en">Intel HD graphics VA-API implementation</Summary>
-        <Description xml:lang="en">PLEASE FILL ME IN
+        <Description xml:lang="en">Intel HD graphics VA-API implementation
 </Description>
         <Archive type="binary" sha1sum="083029a13c0c475bf42a4232c68a9caa6dbc763e">https://evolve-os.com/sources/README</Archive>
     </Source>
     <Package>
         <Name>libva-intel-driver</Name>
         <Summary xml:lang="en">Intel HD graphics VA-API implementation</Summary>
-        <Description xml:lang="en">PLEASE FILL ME IN
+        <Description xml:lang="en">Intel HD graphics VA-API implementation
 </Description>
         <PartOf>xorg.display</PartOf>
         <Files>
