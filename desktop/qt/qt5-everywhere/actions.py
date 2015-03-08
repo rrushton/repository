@@ -39,6 +39,7 @@ def setup():
                              -nomake tests \
                              -xkb-config-root /usr/share/X11/xkb \
                              -no-warnings-are-errors \
+                             -no-use-gold-linker \
                              -examplesdir /usr/lib/qt5/examples")
 
 
