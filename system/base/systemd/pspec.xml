@@ -95,6 +95,14 @@
     </Package>
 
     <History>
+        <Update release="18">
+            <Date>03-09-2015</Date>
+            <Version>218</Version>
+            <Comment>Disable userspace firmware loading options</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="17">
             <Date>03-08-2015</Date>
             <Version>218</Version>

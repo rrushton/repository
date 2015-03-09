@@ -16,7 +16,6 @@ def setup():
                           --disable-manpages \
                           --sysconfdir=/etc \
                           --with-sysvinit-path=/etc/init.d \
-                          --with-firmware-path=/lib/firmware \
                           --disable-networkd \
                           --disable-selinux \
                           --enable-compat-libs \
