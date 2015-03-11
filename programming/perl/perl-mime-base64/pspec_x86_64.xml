@@ -1,6 +1,6 @@
 <PISI>
     <Source>
-        <Name>perl-mine-base64</Name>
+        <Name>perl-mime-base64</Name>
         <Packager>
             <Name>Ikey Doherty</Name>
             <Email>ikey@evolve-os.com</Email>
@@ -12,7 +12,7 @@
         <Archive type="binary" sha1sum="083029a13c0c475bf42a4232c68a9caa6dbc763e">https://evolve-os.com/sources/README</Archive>
     </Source>
     <Package>
-        <Name>perl-mine-base64</Name>
+        <Name>perl-mime-base64</Name>
         <Summary xml:lang="en">MIME::Base64 - Encoding and decoding of base64 strings</Summary>
         <Description xml:lang="en">MIME::Base64 - Encoding and decoding of base64 strings
 </Description>
