@@ -15,4 +15,4 @@ build      : |
     %make
 install    : |
     %make_install
-    rm /usr/lib/perl5/5.20.1/x86_64-linux/perllocal.pod
+    rm -rf %installroot%/usr/lib/perl5/5.20.1/
