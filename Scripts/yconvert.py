@@ -43,8 +43,7 @@ if __name__ == "__main__":
 
     hist = root.findall("History")
     last_update = hist[0].findall("Update")[0]
-    #rel = int(last_update.attrib['release'])
-    rel = 1
+    rel = int(last_update.attrib['release']) + 1
     version = str(last_update.findall("Version")[0].text)
 
     description = root.findall("Source/Description")[0].text
