@@ -1,7 +1,7 @@
 name       : mpv
 homepage   : http://mpv.io/
 version    : 0.8.2
-release    : 1
+release    : 2
 source     :
     - https://github.com/mpv-player/mpv/archive/v0.8.2.tar.gz : a565934bf668b24a946f192f06981664415bd991fd204454b85bb8f7978074a7
 license    : GPL-2.0
@@ -36,7 +36,7 @@ builddeps:
     - pkgconfig(xrandr)
 setup      : |
     ./bootstrap.py
-    ./waf configure --prefix=/usr --confdir=/etc/mpv
+    ./waf configure --prefix=/usr --confdir=/etc/mpv --enable-libmpv-shared
 build      : |
     ./waf build
 install    : |
