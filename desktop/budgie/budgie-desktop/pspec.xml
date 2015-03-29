@@ -11,7 +11,7 @@
         <Summary>Budgie Desktop</Summary>
         <Description>Budgie Desktop</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="03e703e003f7b22ffdfa5cc05b1480b38466cec5" type="tarxz">https://evolve-os.com/sources/budgie-desktop-8.1.tar.xz</Archive>
+        <Archive sha1sum="ae68e101eac293d592083c5093d0f461cd0e3541" type="tarxz">https://evolve-os.com/sources/budgie-desktop-8.1.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
@@ -62,6 +62,14 @@
     </Package>
 
     <History>
+        <Update release="40">
+            <Date>03-29-2015</Date>
+            <Version>8.1</Version>
+            <Comment>Update to 8.1</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="39">
             <Date>03-09-2015</Date>
             <Version>8.1</Version>
