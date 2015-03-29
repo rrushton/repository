@@ -52,25 +52,25 @@ def config_path():
     homeDir = os.path.expanduser("~")
     if "SUDO_UID" in os.environ:
         homeDir = pwd.getpwuid(int(os.environ['SUDO_UID'])).pw_dir
-    return os.path.join(homeDir, ".evolveos", "packager")
+    return os.path.realpath(os.path.join(homeDir, ".evolveos", "packager"))
 
 
 def work_dir():
     ''' Return workdir for overlayfs '''
-    return os.path.join(BASEDIR, "work")
+    return os.path.realpath(os.path.join(BASEDIR, "work"))
 
 
 def upper_dir():
     ''' Return upper_dir for overlayfs '''
-    return os.path.join(BASEDIR, "transient")
+    return os.path.realpath(os.path.join(BASEDIR, "transient"))
 
 
 def lower_dir():
     ''' Return profiles lowerdir for overlayfs '''
     if update_mode:
-        return os.path.join(INSTDIR, PROFILE)
+        return os.path.realpath(os.path.join(INSTDIR, PROFILE))
     else:
-        return os.path.join(BASEDIR, PROFILE)
+        return os.path.realpath(os.path.join(BASEDIR, PROFILE))
 
 
 def union_dir():
@@ -78,35 +78,35 @@ def union_dir():
     if update_mode:
         return lower_dir()
     else:
-        return os.path.join(BASEDIR, "union")
+        return os.path.realpath(os.path.join(BASEDIR, "union"))
 
 
 def archive_dir():
     ''' Return the archive mount point '''
-    return os.path.join(union_dir(), ARCHIVEDIR_TGT[1:])
+    return os.path.realpath(os.path.join(union_dir(), ARCHIVEDIR_TGT[1:]))
 
 
 def ccache_dir():
     ''' Return the ccache mount point '''
-    return os.path.join(union_dir(), CCACHE_TGT[1:])
+    return os.path.realpath(os.path.join(union_dir(), CCACHE_TGT[1:]))
 
 
 def package_dir():
     ''' Return the package mount point '''
-    return os.path.join(union_dir(), PACKAGE_TGT[1:])
+    return os.path.realpath(os.path.join(union_dir(), PACKAGE_TGT[1:]))
 
 
 def image_path(dl=False):
     ''' Return path for the profile image '''
-    return os.path.join(DLDIR, "%s%s" % (PROFILE, IMG_SUFFIX if not dl else IMG_DL_SUFFIX))
+    return os.path.realpath(os.path.join(DLDIR, "%s%s" % (PROFILE, IMG_SUFFIX if not dl else IMG_DL_SUFFIX)))
 
 
 def lock_file():
     ''' Current lock file '''
     if update_mode:
-        return os.path.join(INSTDIR, "%s.lock" % PROFILE)
+        return os.path.realpath(os.path.join(INSTDIR, "%s.lock" % PROFILE))
     else:
-        return os.path.join(BASEDIR, "lock")
+        return os.path.realpath(os.path.join(BASEDIR, "lock"))
 
 
 def lock_root():
