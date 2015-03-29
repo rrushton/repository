@@ -390,6 +390,9 @@ def main():
     up_root()
     did_mount = True
 
+    if not os.path.exists(os.path.join(union_dir(), "etc/localtime")):
+        run_chroot("ln -sv /usr/share/zoneinfo/UTC /etc/localtime")
+
     # Attempt le dbus.
     if not run_chroot("dbus-daemon --system"):
         print "Warning: DBUS is not running!"
