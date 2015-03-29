@@ -1,0 +1,16 @@
+name       : evopop-gtk-theme
+version    : 0.20
+release    : 1
+source     :
+    - https://evolve-os.com/sources/evopop-gtk-theme-0.20.tar.xz : 00e8163a13170a6218f69ceb82f7e299585a8104341868350a0d2ccba31ed9f9
+license    : GPL-3.0
+summary    : A simple, flat and bold Gtk theme for Evolve OS & Budgie Desktop
+description: |
+    A simple, flat and bold Gtk theme for Evolve OS & Budgie Desktop. Iris Dark was used as base.
+builddeps  :
+setup      : |
+    %configure
+build      : |
+    %make
+install    : |
+    %make_install
