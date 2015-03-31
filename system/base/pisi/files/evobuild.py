@@ -408,6 +408,8 @@ def main():
                 extract_build(what.endswith(".yml"))
             else:
                 print "Build failed"
+                clean_exit(-1)
+
     elif command == "update":
         do_update()
 
