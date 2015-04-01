@@ -28,6 +28,7 @@ def setup():
                             --disable-debug-runtime    \
                             --host=%s \
                             --build=%s \
+                            --with-gcc-toolchain=/usr \
                             --disable-expensive-checks" % (get.HOST(), get.HOST()))
 
 def build():
