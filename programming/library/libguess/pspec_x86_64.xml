@@ -5,7 +5,7 @@
             <Name>Justin Zobel</Name>
             <Email>justin.zobel@gmail.com</Email>
         </Packager>
-        <License>custom</License>
+        <License>BSD-3-Clause</License>
         <Summary xml:lang="en">libguess - a high-speed character set detection library</Summary>
         <Description xml:lang="en">libguess - a high-speed character set detection library
 </Description>
@@ -37,7 +37,7 @@
         </Files>
     </Package>
     <History>
-        <Update release="1">
+        <Update release="2">
             <Date>2015-04-01</Date>
             <Version>1.2</Version>
             <Comment>Packaging update</Comment>
