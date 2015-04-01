@@ -10,7 +10,7 @@ summary     : Cue sheet parser library
 description : |
     libcue is intended for parsing a so-called cue sheet from a char string or a file pointer.
 setup      : |
-    %configure
+    %configure --disable-static
 build      : |
     %make
 install    : |

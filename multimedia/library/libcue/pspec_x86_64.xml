@@ -17,6 +17,7 @@
         <Summary xml:lang="en">Cue sheet parser library</Summary>
         <Description xml:lang="en">libcue is intended for parsing a so-called cue sheet from a char string or a file pointer.
 </Description>
+        <PartOf>library</PartOf>
         <Files>
             <Path fileType="library">/usr/lib64/lib*.so.*</Path>
         </Files>
@@ -31,15 +32,14 @@
             <Dependency release="current">libcue</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib64/lib*.so</Path>
-            <Path fileType="library">/usr/lib64/lib*.a</Path>
-            <Path fileType="data">/usr/lib64/pkgconfig</Path>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib64/lib*.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig</Path>
         </Files>
     </Package>
     <History>
         <Update release="3">
-            <Date>2015-03-31</Date>
+            <Date>2015-04-01</Date>
             <Version>1.4.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Justin Zobel</Name>
