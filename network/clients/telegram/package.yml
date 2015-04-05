@@ -1,0 +1,27 @@
+name       : telegram
+version    : 0.8
+release    : 1
+source     :
+    - https://tdesktop.com/linux : dad90a74671d858a34c23886c119f1adde3571c02023f3794d8eb8e9ee5ef643
+license    : GPL-3.0
+summary    : Telegram is a messaging app with a focus on speed and security, it’s super fast, simple and free. 
+description  : |
+    Telegram is a messaging app with a focus on speed and security, it’s super fast, simple and free. 
+builddeps    : wget
+install      : |
+    mkdir -p %installroot%/usr/share/applications/
+    mkdir -p %installroot%/opt/telegram/
+    cp * %installroot%/opt/telegram/
+    wget https://raw.githubusercontent.com/telegramdesktop/tdesktop/master/Telegram/Telegram/Images.xcassets/Icon.iconset/icon_512x512.png
+    mv icon_512x512.png %installroot%/opt/telegram/icon.png
+    
+    # Desktop File
+    DESKTOPFILE=%installroot%/usr/share/applications/telegram.desktop
+    echo '[Desktop Entry]
+    Encoding=UTF-8
+    Version=1.0
+    Type=Application
+    Icon=/opt/telegram/icon.png
+    Exec=/opt/telegram/Telegram
+    Name=Telegram
+    Comment=Telegram Client' >> $DESKTOPFILE
