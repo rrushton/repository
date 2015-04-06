@@ -18,38 +18,38 @@
 </Description>
         <PartOf>desktop.theme</PartOf>
         <Files>
-            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/index.theme</Path>
-            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-3.0</Path>
-            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-3.0/widgets</Path>
-            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-3.0/assets</Path>
-            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-3.0/apps</Path>
-            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-3.16</Path>
-            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-3.16/widgets</Path>
-            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-3.16/assets</Path>
-            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-3.16/apps</Path>
-            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-2.0/gtkrc</Path>
-            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/unity</Path>
-            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/unity/modes</Path>
-            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/metacity-1</Path>
             <Path fileType="data">/usr/share/themes/evopop-gtk-theme/index.theme</Path>
-            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/gtk-3.0</Path>
-            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/gtk-3.0/widgets</Path>
-            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/gtk-3.0/assets</Path>
-            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/gtk-3.0/apps</Path>
+            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/gtk-2.0/gtkrc</Path>
+            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/metacity-1</Path>
             <Path fileType="data">/usr/share/themes/evopop-gtk-theme/gtk-3.16</Path>
             <Path fileType="data">/usr/share/themes/evopop-gtk-theme/gtk-3.16/widgets</Path>
-            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/gtk-3.16/assets</Path>
             <Path fileType="data">/usr/share/themes/evopop-gtk-theme/gtk-3.16/apps</Path>
-            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/gtk-2.0/gtkrc</Path>
+            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/gtk-3.16/assets</Path>
+            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/gtk-3.0</Path>
+            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/gtk-3.0/widgets</Path>
+            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/gtk-3.0/apps</Path>
+            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/gtk-3.0/assets</Path>
             <Path fileType="data">/usr/share/themes/evopop-gtk-theme/unity</Path>
             <Path fileType="data">/usr/share/themes/evopop-gtk-theme/unity/modes</Path>
-            <Path fileType="data">/usr/share/themes/evopop-gtk-theme/metacity-1</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/index.theme</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-2.0/gtkrc</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/metacity-1</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-3.16</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-3.16/widgets</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-3.16/apps</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-3.16/assets</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-3.0</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-3.0/widgets</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-3.0/apps</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/gtk-3.0/assets</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/unity</Path>
+            <Path fileType="data">/usr/share/themes/evopop-light-gtk-theme/unity/modes</Path>
         </Files>
     </Package>
     <History>
-        <Update release="2">
-            <Date>2015-04-04</Date>
-            <Version>0.22</Version>
+        <Update release="3">
+            <Date>2015-04-06</Date>
+            <Version>0.23</Version>
             <Comment>Packaging update</Comment>
             <Name>Justin Zobel</Name>
             <Email>justin.zobel@gmail.com</Email>

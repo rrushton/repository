@@ -1,8 +1,8 @@
 name       : evopop-gtk-theme
-version    : 0.22
-release    : 2
+version    : 0.23
+release    : 3
 source     :
-    - https://github.com/poltertec/evopop-gtk-theme/releases/download/0.22/evopop-gtk-theme-0.22.tar.xz : afb26f4b74689e6cfc36c19cc5424fa88a93ec1b669adeb164ce80b4729c52b5
+    - https://github.com/poltertec/evopop-gtk-theme/releases/download/0.23/evopop-gtk-theme-0.23.tar.xz : 7f5d6b458be80e5e3634172b674b836b6f912e07c1b230faf94728320122ded1
 license    : GPL-3.0
 summary    : A simple, flat and bold Gtk theme for Evolve OS & Budgie Desktop
 description: |
