@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>xorg-driver-video-radeon</Name>
@@ -10,7 +10,7 @@
         <Summary>Open source Radeon Video Driver</Summary>
         <Description>The Xorg ATI Driver package contains the X.Org Video Driver for ATI Radeon video cards including all chipsets ranging from R100 to R900 and the newer RAxx chipsets.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="65ebadef558608beba878d64fc3d10c5a3c706e7" type="tarbz2">http://xorg.freedesktop.org/archive/individual/driver/xf86-video-ati-7.4.0.tar.bz2</Archive>
+        <Archive sha1sum="7c57bebb7fe0d999342db38e857de7e3b412b9a5" type="targz">http://xorg.freedesktop.org/releases/individual/driver/xf86-video-ati-7.5.0.tar.gz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">xorg-server</Dependency>
@@ -32,6 +32,14 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>04-06-2015</Date>
+            <Version>7.5.0</Version>
+            <Comment>Update to 7.5.0</Comment>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>07-26-2014</Date>
             <Version>7.4.0</Version>
