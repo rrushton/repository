@@ -1,0 +1,16 @@
+name       : evopop-icon-theme
+version    : 0.2
+release    : 1
+source     :
+    - https://github.com/solus-project/evopop-icon-theme/releases/download/0.2/EvoPop-0.2.tar.xz : b41500c6b02131f51e24124ea647abac4b8f30d687a2c3651283501f2a6ca771
+license    : CC-BY-4.0
+summary    : EvoPop Icon Theme
+description: |
+    EvoPop Icon Theme
+builddeps  :
+setup      : |
+    %configure
+build      : |
+    %make
+install    : |
+    %make_install
