@@ -11,7 +11,7 @@
         <Summary>Firefox web browser</Summary>
         <Description>Firefox web browser</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="c23a3d36603edd9d2fbac51afe7a4825c0ac15d8" type="tarbz2">http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/37.0/source/firefox-37.0.source.tar.bz2</Archive>
+        <Archive sha1sum="8bbffaa3cb81916bb44e11773d3f05fc4f2b9f36" type="tarbz2">http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/37.0.1/source/firefox-37.0.1.source.tar.bz2</Archive>
 
         <AdditionalFiles>
             <AdditionalFile target="mozconfig">config</AdditionalFile>
@@ -43,7 +43,7 @@
         <IsA>app:gui</IsA>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib/firefox-37.0</Path>
+            <Path fileType="library">/usr/lib/firefox-37.0.1</Path>
             <Path fileType="data">/usr/share/applications</Path>
             <Path fileType="data">/usr/share/pixmaps</Path>
             <Path fileType="library">/usr/lib/mozilla/plugins</Path>
@@ -54,6 +54,14 @@
     </Package>
 
     <History>
+        <Update release="15">
+            <Date>04-08-2015</Date>
+            <Version>37.0.1</Version>
+            <Comment>Update to 37.0.1</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey.doherty@gmail.com</Email>
+        </Update>
+
         <Update release="14">
             <Date>03-31-2015</Date>
             <Version>37.0</Version>
