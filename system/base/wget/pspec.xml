@@ -11,7 +11,7 @@
         <Summary>retrieves files from the web</Summary>
         <Description>GNU Wget is a free software package for retrieving files using HTTP, HTTPS and FTP, the most widely-used Internet protocols. It is a non-interactive commandline tool, so it may easily be called from scripts, cron jobs, terminals without X-Windows support, etc.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="21cd7eee08ab5e5a14fccde22a7aec55b5fcd6fc" type="tarxz">http://ftp.gnu.org/gnu/wget/wget-1.16.1.tar.xz</Archive>
+        <Archive sha1sum="a7d24a8512720893b0a8c5c436f324e9ed43874d" type="tarxz">http://ftp.gnu.org/gnu/wget/wget-1.16.3.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
@@ -39,6 +39,13 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>04-08-2015</Date>
+            <Version>1.16.3</Version>
+            <Comment>Update to 1.16.3 - Changes to some wget verbosity</Comment>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua.strobl@outlook.com</Email>
+        </Update>
         <Update release="2">
             <Date>01-15-2015</Date>
             <Version>1.16.1</Version>
@@ -46,7 +53,6 @@
             <Name>Ikey Doherty</Name>
             <Email>ikey@evolve-os.com</Email>
         </Update>
-
         <Update release="1">
             <Date>06-02-2013</Date>
             <Version>1.14</Version>
