@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>youtube-dl</Name>
@@ -11,7 +11,7 @@
         <License>GPLv2</License>
         <Summary>Small command-line program to download videos form youtube</Summary>
         <Description>youtube-dl is a small command-line program to download videos from YouTube.com and a few more sites</Description>
-        <Archive sha1sum="e3e58c036f80730918cb0a1e2b52291581faef08" type="binary">http://youtube-dl.org/downloads/2013.04.11/youtube-dl</Archive>
+        <Archive sha1sum="a9fe590b785f321e16901e8661442ebaa2909e36" type="binary">https://yt-dl.org/downloads/2015.04.09/youtube-dl</Archive>
     </Source>
 
     <Package>
@@ -22,7 +22,15 @@
     </Package>
 
     <History>
-        <Update release="2" >
+        <Update release="3">
+            <Date>04-09-2015</Date>
+            <Version>2015.04.09</Version>
+            <Comment>Update to 2015.04.09</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
+        <Update release="2">
             <Date>05-24-2013</Date>
             <Version>20130411</Version>
             <Comment>Fix date for pisi</Comment>
@@ -30,7 +38,7 @@
             <Email>matiaslina@gmail.com</Email>
         </Update>
 
-        <Update release="1" >
+        <Update release="1">
             <Date>2013-04-13</Date>
             <Version>20130411</Version>
             <Comment>First release.</Comment>
