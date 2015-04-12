@@ -1,21 +1,21 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://solus-project.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>grub2</Name>
         <Homepage>http://www.gnu.org/software/grub/</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@solusos.com</Email>
+            <Email>ikey@solus-project.com</Email>
         </Packager>
         <Summary>GRUB Boot Loader</Summary>
         <Description>GRUB Boot Loader</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="274d91e96b56a5b9dd0a07accff69dbb6dfb596b" type="tarxz">ftp://ftp.gnu.org/gnu/grub/grub-2.00.tar.xz</Archive>
+        <Archive sha1sum="274d91e96b56a5b9dd0a07accff69dbb6dfb596b" type="tarxz">http://ftp.gnu.org/gnu/grub/grub-2.00.tar.xz</Archive>
         <Patches>
             <Patch level="1">grub2-fix-build-error-on-flex.patch</Patch>
-            <!-- Purely for branding (and so the user isn't confused //-->
-            <Patch level="1">evolveos-brand.patch</Patch>
+            
+            <Patch level="1">brand.patch</Patch>
         </Patches>
     </Source>
 
@@ -34,11 +34,11 @@
             <Path fileType="data">/etc/default/grub</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile target="/usr/sbin/update-grub" permission="0755">update-grub</AdditionalFile>
-            <AdditionalFile target="/usr/sbin/update-grub2" permission="0755">update-grub2</AdditionalFile>
+            <AdditionalFile permission="0755" target="/usr/sbin/update-grub">update-grub</AdditionalFile>
+            <AdditionalFile permission="0755" target="/usr/sbin/update-grub2">update-grub2</AdditionalFile>
 
-            <!-- Configuration + branding //-->
-            <AdditionalFile target="/etc/default/grub" permission="0644">conf/grub</AdditionalFile>
+            
+            <AdditionalFile permission="0644" target="/etc/default/grub">conf/grub</AdditionalFile>
         </AdditionalFiles>
         <RuntimeDependencies>
             <Dependency>os-prober</Dependency>
@@ -46,6 +46,14 @@
     </Package>
 
     <History>
+        <Update release="8">
+            <Date>04-12-2015</Date>
+            <Version>2.00</Version>
+            <Comment>Fix branding</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="7">
             <Date>07-13-2014</Date>
             <Version>2.0</Version>
@@ -108,4 +116,3 @@
     </History>
 
 </PISI>
-
