@@ -12,3 +12,5 @@ def install():
     autotools.install()
     pisitools.insinto("/usr/share/themes", "../gtk/Vertex")
     pisitools.dosym("/usr/share/themes/Vertex", "/usr/share/themes/Evotex")
+    # Compatibility symlink..
+    pisitools.dosym("/usr/share/backgrounds/solus", "/usr/share/backgrounds/evolve-os")

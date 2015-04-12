@@ -34,6 +34,9 @@
         <!-- Replaced by adwaita-icon-theme -->
         <Package>gnome-icon-theme</Package>
         <Package>gnome-icon-theme-symbolic</Package>
+
+        <!-- Replaced by solus-artwork //-->
+        <Package>evolve-os-artwork</Package>
 	</Obsoletes>
 
 </PISI>
