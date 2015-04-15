@@ -18,11 +18,18 @@
 </Description>
         <PartOf>network.clients</PartOf>
         <Files>
-            <Path fileType="data">/usr/share/applications/telegram.desktop</Path>
             <Path fileType="data">/opt/telegram</Path>
+            <Path fileType="data">/usr/share/applications/telegram.desktop</Path>
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2015-04-15</Date>
+            <Version>0.8.4</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua.strobl@outlook.com</Email>
+        </Update>
         <Update release="1">
             <Date>2015-04-07</Date>
             <Version>0.8</Version>
