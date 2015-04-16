@@ -19,9 +19,3 @@ def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
     pisitools.dodoc("COPYING")
-
-    # Cleanup
-    for item in ["XMLnamespaces", "mime.cache", "icons", "aliases", \
-                 "types", "magic", "generic-icons", "subclasses", "globs", \
-                 "version", "globs2", "treemagic"]:
-        pisitools.remove("/usr/share/mime/%s" % item)
