@@ -40,6 +40,15 @@
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>04-17-2015</Date>
+            <Version>3.16.1</Version>
+            <Comment>Bump to fix git</Comment>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Update>
+
+    <History>
         <Update release="4">
             <Date>04-17-2015</Date>
             <Version>3.16.1</Version>
