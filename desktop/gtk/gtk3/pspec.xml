@@ -11,7 +11,7 @@
         <Summary>The GTK+ 3 package contains the libraries used for creating graphical user interfaces for applications.</Summary>
         <Description>The GTK+ 3 package contains the libraries used for creating graphical user interfaces for applications. </Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="f4b74d62a5e4c29bf7e35be462d7de3460884f2a" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gtk+/3.16/gtk+-3.16.0.tar.xz</Archive>
+        <Archive sha1sum="b8fba872c9b3f727ca981683dc6626c60362763a" type="tarxz">http://ftp.acc.umu.se/pub/gnome/sources/gtk+/3.16/gtk+-3.16.2.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gdk-pixbuf-2.0</Dependency>
@@ -132,6 +132,14 @@
     </Package>
 
     <History>
+        <Update release="22">
+            <Date>04-16-2015</Date>
+            <Version>3.16.2</Version>
+            <Comment>Update to 3.16.2</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@evolve-os.com</Email>
+        </Update>
+
         <Update release="21">
             <Date>03-24-2015</Date>
             <Version>3.16.0</Version>
