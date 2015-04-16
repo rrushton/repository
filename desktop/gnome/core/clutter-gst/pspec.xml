@@ -11,7 +11,7 @@
         <Summary>Clutter GStreamer API</Summary>
         <Description>Clutter GStreamer API</Description>
         <License>LGPLv2+</License>
-        <Archive sha1sum="da6249c6ce686ba74e459402774831f19672379f" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/clutter-gst/2.0/clutter-gst-2.0.12.tar.xz</Archive>
+        <Archive sha1sum="6afee9f200ac042b20df3f5e8d8288ab262c92fb" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/clutter-gst/3.0/clutter-gst-3.0.4.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">clutter-1.0</Dependency>
@@ -61,6 +61,14 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>04-16-2015</Date>
+            <Version>3.0.4</Version>
+            <Comment>Update to 3.0.4</Comment>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>01-23-2015</Date>
             <Version>2.0.12</Version>
