@@ -6,12 +6,12 @@
         <Homepage>http://www.freedesktop.org/wiki/Software/libinput/</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@evolve-os.com</Email>
+            <Email>ikey@solus-project.com</Email>
         </Packager>
         <Summary>Generic input library</Summary>
         <Description>libinput is a library to handle input devices in Wayland compositors and to provide a generic X.Org input driver. It provides device detection, device handling, input device event processing and abstraction so minimize the amount of custom input code compositors need to provide the common set of functionality that users expect.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="6a756368578805218174521434e02b208dc591ea" type="tarxz">http://www.freedesktop.org/software/libinput/libinput-0.5.0.tar.xz</Archive>
+        <Archive sha1sum="e09c51bbce1e810be69c79b633dee83bb1d5d8e5" type="tarxz">http://www.freedesktop.org/software/libinput/libinput-0.13.0.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig" versionFrom="1.1.0">mtdev</Dependency>
@@ -26,6 +26,7 @@
         <Name>libinput</Name>
         <Files>
             <Path fileType="library">/usr/lib/lib*.so.*</Path>
+            <Path fileType="library">/usr/lib/udev</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
@@ -45,6 +46,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>04-16-2015</Date>
+            <Version>0.13.0</Version>
+            <Comment>Update to 0.13.0</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>09-26-2014</Date>
             <Version>0.5.0</Version>
