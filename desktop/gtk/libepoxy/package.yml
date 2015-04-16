@@ -10,7 +10,7 @@ description: |
 builddeps  :
     - pkgconfig(x11)
     - pkgconfig(gl)
-    - xorg-util-macros
+    - util-macros
 setup      : |
     ./autogen.sh --prefix=/usr
 build      : |
