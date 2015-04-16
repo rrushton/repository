@@ -12,5 +12,6 @@ def build():
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    pisitools.domove("/usr/locale", "/usr/share") # latest release is special.
 
     pisitools.dodoc("AUTHORS", "COPYING")
