@@ -11,7 +11,7 @@
         <Summary>OpenGL UI toolkit</Summary>
         <Description>Clutter is an open source (LGPL 2.1) software library for creating fast, compelling, portable, and dynamic graphical user interfaces. It is a core part of Gnome3, it is used by the GnomeShell, and is supported by the open source community.</Description>
         <License>LGPLv2+</License>
-        <Archive sha1sum="9939b90268e44c5500f44f3b11665eafabe8193e" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/clutter/1.20/clutter-1.20.0.tar.xz</Archive>
+        <Archive sha1sum="06ac8bd3c376698794d4d4a186e0e4aa8cae8871" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/clutter/1.22/clutter-1.22.0.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">cogl-1.0</Dependency>
@@ -62,6 +62,14 @@
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>04-16-2015</Date>
+            <Version>1.22.0</Version>
+            <Comment>Update to 1.22.0</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="4">
             <Date>04-08-2015</Date>
             <Version>1.20.0</Version>
