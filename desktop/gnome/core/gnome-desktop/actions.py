@@ -10,7 +10,7 @@ shelltools.export("HOME", get.workDIR())
 def setup():
     autotools.configure("--disable-static \
                          --libexecdir=/usr/lib/GnomeDesktop \
-                         --with-gnome-distributor=\"Evolve OS\"")
+                         --with-gnome-distributor=\"Solus Project\"")
 
 def build():
     autotools.make()
