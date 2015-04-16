@@ -11,7 +11,7 @@
         <Summary>GNOME Chess Game</Summary>
         <Description>Play chess in either 3D or 2D, against the computer or a friend</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="2bfbc7ba9848eeac9f72c305d419dfe49608b227" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-chess/3.14/gnome-chess-3.14.2.tar.xz</Archive>
+        <Archive sha1sum="376535b96c4e7173d61389e6faf22dd03a762fe1" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-chess/3.16/gnome-chess-3.16.1.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
@@ -40,6 +40,14 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>04-17-2015</Date>
+            <Version>3.16.1</Version>
+            <Comment>Update to 3.16.1</Comment>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>01-17-2015</Date>
             <Version>3.14.2</Version>
