@@ -1,0 +1,50 @@
+<PISI>
+    <Source>
+        <Name>libsamplerate</Name>
+        <Packager>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Packager>
+        <License>GPL-2.0</License>
+        <Summary xml:lang="en">PLEASE FILL ME IN</Summary>
+        <Description xml:lang="en">PLEASE FILL ME IN
+</Description>
+        <Archive type="binary" sha1sum="083029a13c0c475bf42a4232c68a9caa6dbc763e">https://evolve-os.com/sources/README</Archive>
+    </Source>
+    <Package>
+        <Name>libsamplerate</Name>
+        <Summary xml:lang="en">PLEASE FILL ME IN</Summary>
+        <Description xml:lang="en">PLEASE FILL ME IN
+</Description>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib64/lib*.so.*</Path>
+            <Path fileType="doc">/usr/share/doc/libsamplerate0-dev/html</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libsamplerate-devel</Name>
+        <Summary xml:lang="en">Development files for libsamplerate</Summary>
+        <Description xml:lang="en">PLEASE FILL ME IN
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="current">libsamplerate</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib64/lib*.a</Path>
+            <Path fileType="library">/usr/lib64/lib*.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2015-04-14</Date>
+            <Version>0.1.8</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
