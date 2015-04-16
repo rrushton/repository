@@ -1,0 +1,16 @@
+name       : lame
+version    : 3.99.5
+release    : 1
+source     :
+    - http://downloads.sourceforge.net/lame/lame-3.99.5.tar.gz : 24346b4158e4af3bd9f2e194bb23eb473c75fb7377011523353196b19b9a23ff
+license    : GPL-2.0 # CHECK ME
+summary    : PLEASE FILL ME IN
+description: |
+    PLEASE FILL ME IN
+builddeps  :
+setup      : |
+    %configure
+build      : |
+    %make
+install    : |
+    %make_install
