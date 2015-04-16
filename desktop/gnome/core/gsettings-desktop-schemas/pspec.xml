@@ -11,10 +11,10 @@
         <Summary>The GSettings Desktop Schemas package contains a collection of GSettings schemas for settings shared by various components of a GNOME Desktop.</Summary>
         <Description>The GSettings Desktop Schemas package contains a collection of GSettings schemas for settings shared by various components of a GNOME Desktop.</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="dabb833520801f33f013fadfb115ec06f1bc7849" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gsettings-desktop-schemas/3.14/gsettings-desktop-schemas-3.14.1.tar.xz</Archive>
+        <Archive sha1sum="b7b0cd597f41410b92c2b4c8fbb9a3b3c0ba2749" type="tarxz">http://ftp.acc.umu.se/pub/gnome/sources/gsettings-desktop-schemas/3.16/gsettings-desktop-schemas-3.16.1.tar.xz</Archive>
 
         <Patches>
-            <Patch level="1">0001-Default-branding.patch</Patch>
+            <!--<Patch level="1">0001-Default-branding.patch</Patch>//-->
         </Patches>
     </Source>
 
@@ -48,6 +48,14 @@
 
 
     <History>
+        <Update release="18">
+            <Date>04-16-2015</Date>
+            <Version>3.16.1</Version>
+            <Comment>Update to 3.16.1</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="17">
             <Date>01-25-2015</Date>
             <Version>3.14.1</Version>
