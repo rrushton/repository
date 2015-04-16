@@ -11,7 +11,7 @@
         <Summary>The official text editor of the GNOME desktop</Summary>
         <Description>While aiming at simplicity and ease of use, gedit is a powerful general purpose text editor.</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="ba483e435ceae91c31f759413298d3ebe1350b0e" type="tarxz">http://ftp.acc.umu.se/pub/gnome/sources/gedit/3.14/gedit-3.14.3.tar.xz</Archive>
+        <Archive sha1sum="540b1ef526668b8881ed8269f5c68a6bfa02979b" type="tarxz">http://ftp.acc.umu.se/pub/gnome/sources/gedit/3.16/gedit-3.16.1.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtksourceview-3.0</Dependency>
@@ -73,6 +73,14 @@
     </Package>
 
     <History>
+        <Update release="9">
+            <Date>04-16-2015</Date>
+            <Version>3.16.1</Version>
+            <Comment>Update to 3.16.1</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="8">
             <Date>03-15-2015</Date>
             <Version>3.14.3</Version>
