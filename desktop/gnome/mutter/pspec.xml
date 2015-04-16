@@ -11,7 +11,7 @@
         <Summary>Gnome Shell Window Manager</Summary>
         <Description>Gnome Shell compositing window manager</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="9d89d8dad022774b7cf4f3a553eb65cd2e738148" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/mutter/3.14/mutter-3.14.3.tar.xz</Archive>
+        <Archive sha1sum="8bf26e45ba3a38b272769c18338bcfaa74f2bfab" type="tarxz">http://ftp.acc.umu.se/pub/GNOME/sources/mutter/3.16/mutter-3.16.1.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">clutter-1.0</Dependency>
@@ -27,12 +27,6 @@
             <Dependency type="pkgconfig">xkeyboard-config</Dependency>
             <Dependency>zenity</Dependency>
         </BuildDependencies>
-        
-        <Patches>
-            <Patch level="1">0001-schema-Do-not-use-Super_L-as-its-bound-to-Budgie.patch</Patch>
-            <!-- Sent upstream //-->
-            <Patch level="1">0001-ui-Support-non-standard-depth-icon-pixmaps.patch</Patch>
-        </Patches>
     </Source>
 
     <Package>
@@ -83,6 +77,14 @@
     </Package>
 
     <History>
+        <Update release="9">
+            <Date>04-16-2015</Date>
+            <Version>3.16.1</Version>
+            <Comment>Update to 3.16.1</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="8">
             <Date>01-19-2015</Date>
             <Version>3.14.3</Version>
