@@ -16,3 +16,4 @@ def build():
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    pisitools.rename("/usr/bin/gtk-update-icon-cache", "gtk-update-icon-cache-2.0")
