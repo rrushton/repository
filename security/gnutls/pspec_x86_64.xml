@@ -1,0 +1,51 @@
+<PISI>
+    <Source>
+        <Name>gnutls</Name>
+        <Packager>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Packager>
+        <License>LGPL-2.0+</License>
+        <Summary xml:lang="en">The GnuTLS package contains libraries and userspace tools which provide a secure layer over a reliable transport layer.</Summary>
+        <Description xml:lang="en">The GnuTLS package contains libraries and userspace tools which provide a secure layer over a reliable transport layer.
+</Description>
+        <Archive type="binary" sha1sum="083029a13c0c475bf42a4232c68a9caa6dbc763e">https://evolve-os.com/sources/README</Archive>
+    </Source>
+    <Package>
+        <Name>gnutls</Name>
+        <Summary xml:lang="en">The GnuTLS package contains libraries and userspace tools which provide a secure layer over a reliable transport layer.</Summary>
+        <Description xml:lang="en">The GnuTLS package contains libraries and userspace tools which provide a secure layer over a reliable transport layer.
+</Description>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib64/lib*.so.*</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>gnutls-devel</Name>
+        <Summary xml:lang="en">Development files for gnutls</Summary>
+        <Description xml:lang="en">The GnuTLS package contains libraries and userspace tools which provide a secure layer over a reliable transport layer.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="current">gnutls</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib64/lib*.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2015-04-16</Date>
+            <Version>3.3.14</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
