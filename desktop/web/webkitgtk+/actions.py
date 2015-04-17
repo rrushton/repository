@@ -1,7 +1,4 @@
-
 #!/usr/bin/python
-
-# Created For SolusOS
 
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
@@ -15,16 +12,13 @@ def build_config():
 
 
 def setup():
-    shelltools.system("sed -i '/gtkdoc --rebase/s:^:# :' GNUmakefile.*")
     if not get.canClang(): build_config()
     autotools.configure("--disable-static \
                          --libexecdir=/usr/lib/WebKitGTK \
                          --with-gstreamer=1.0 \
-                         --with-gnu-ld \
                          --enable-introspection \
                          --disable-geolocation \
                          --disable-gtk-doc-html")
-    shelltools.system("sed -i '/gtkdoc --rebase/s:^:# :' GNUmakefile.*")
 
 def build():
     if not get.canClang(): build_config()
