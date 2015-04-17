@@ -24,7 +24,7 @@ def setup():
     # Configure GCC
     shelltools.system ("%s/configure \
                         --prefix=/usr \
-                        --with-pkgversion='Evolve OS' \
+                        --with-pkgversion='Solus Project' \
                         --libdir=/usr/lib64 \
                         --libexecdir=/usr/lib64 \
                         --with-system-zlib \
@@ -38,7 +38,7 @@ def setup():
                         --enable-clocale=gnu \
                         --disable-multilib \
                         --enable-lto \
-                        --with-bugurl='https://evolve-os.com/project' \
+                        --with-bugurl='https://solus-project.com/project' \
                         --with-arch_32=i686 \
                         --enable-linker-build-id  \
                         --build=%s \
