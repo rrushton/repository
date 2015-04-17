@@ -18,7 +18,7 @@
             A flexible API that allows plugin developers to write plugins of various kinds.
         </Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="d8d4211f5e4aadd7ff39a4c48adff67db0ebcd61" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/grilo/0.2/grilo-0.2.11.tar.xz</Archive>
+        <Archive sha1sum="d84e58363c1b64d4b8fcd0d901ec74f07dfba951" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/grilo/0.2/grilo-0.2.12.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
@@ -58,6 +58,14 @@
     </Package>
 
     <History>
+        <Update release="6">
+            <Date>04-17-2015</Date>
+            <Version>0.2.12</Version>
+            <Comment>Update to 0.2.12</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="5">
             <Date>01-23-2015</Date>
             <Version>0.2.11</Version>
