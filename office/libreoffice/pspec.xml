@@ -17,10 +17,10 @@
         <License>CDDL</License>
         <License>Netscape</License>
         <License>Public-Domain</License>
-        <Archive sha1sum="555e29a154bc6552cc3a3138c8ea88d715fbf75f" type="tarxz">http://download.documentfoundation.org/libreoffice/src/4.4.2/libreoffice-4.4.2.1.tar.xz</Archive>
-        <Archive sha1sum="d640208e42ba46cfb1918f147ab97b8c57d6bbbb" type="binary">http://download.documentfoundation.org/libreoffice/src/4.4.2/libreoffice-dictionaries-4.4.2.1.tar.xz</Archive>
-        <Archive sha1sum="3ee6c54749e8523debeda1e140aa3d3defd32af0" type="binary">http://download.documentfoundation.org/libreoffice/src/4.4.2/libreoffice-help-4.4.2.1.tar.xz</Archive>
-        <Archive sha1sum="0b4adb0e5f85ed93b38d8d7afc049b4f68d99572" type="binary">http://download.documentfoundation.org/libreoffice/src/4.4.2/libreoffice-translations-4.4.2.1.tar.xz</Archive>
+        <Archive sha1sum="7d908ae2fda554f449fe227d15c6b44cd86010ce" type="tarxz">http://download.documentfoundation.org/libreoffice/src/4.4.2/libreoffice-4.4.2.2.tar.xz</Archive>
+        <Archive sha1sum="c655cdefdf116f35423177df8b18bc148ee79b3b" type="binary">http://download.documentfoundation.org/libreoffice/src/4.4.2/libreoffice-dictionaries-4.4.2.2.tar.xz</Archive>
+        <Archive sha1sum="9d2bb1116616b89799e3e0164469659bbdbd91f3" type="binary">http://download.documentfoundation.org/libreoffice/src/4.4.2/libreoffice-help-4.4.2.2.tar.xz</Archive>
+        <Archive sha1sum="289cb0e6644cadec9e32d5ce265ad43f7917163a" type="binary">http://download.documentfoundation.org/libreoffice/src/4.4.2/libreoffice-translations-4.4.2.2.tar.xz</Archive>
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-2.0</Dependency>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
@@ -437,6 +437,15 @@
             <Dependency release="current">libreoffice-common-help</Dependency>
         </RuntimeDependencies>
     </Package>
+    <History>
+        <Update release="2">
+            <Date>04-17-2015</Date>
+            <Version>4.4.2.2</Version>
+            <Comment>Update to 4.4.2.2</Comment>
+            <Name>Solus Packaging Team</Name>
+            <Email>packaging@solus-project.com</Email>
+        </Update>
+    </History>
 
     <History>
         <Update release="1">
