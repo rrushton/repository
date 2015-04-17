@@ -15,6 +15,7 @@
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
+            <Dependency type="pkgconfig">gnutls</Dependency>
             <Dependency>vala</Dependency>
         </BuildDependencies>
     </Source>
