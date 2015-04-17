@@ -17,10 +17,10 @@
         <License>CDDL</License>
         <License>Netscape</License>
         <License>Public-Domain</License>
-        <Archive sha1sum="5a5b64a9b24c12b4a7820b9a625f4310266fd427" type="tarxz">http://download.documentfoundation.org/libreoffice/src/4.4.0/libreoffice-4.4.0.3.tar.xz</Archive>
-        <Archive sha1sum="2b0fcdbf9ed7d08f443b15c08c1263ab8d3f9f73" type="binary">http://download.documentfoundation.org/libreoffice/src/4.4.0/libreoffice-dictionaries-4.4.0.3.tar.xz</Archive>
-        <Archive sha1sum="ea13df61c70cb5a9314dc9d4f0ccfbcc9714405b" type="binary">http://download.documentfoundation.org/libreoffice/src/4.4.0/libreoffice-help-4.4.0.3.tar.xz</Archive>
-        <Archive sha1sum="52f5c37256e7037339694b20537561e9bea66ca3" type="binary">http://download.documentfoundation.org/libreoffice/src/4.4.0/libreoffice-translations-4.4.0.3.tar.xz</Archive>
+        <Archive sha1sum="555e29a154bc6552cc3a3138c8ea88d715fbf75f" type="tarxz">http://download.documentfoundation.org/libreoffice/src/4.4.2/libreoffice-4.4.2.1.tar.xz</Archive>
+        <Archive sha1sum="d640208e42ba46cfb1918f147ab97b8c57d6bbbb" type="binary">http://download.documentfoundation.org/libreoffice/src/4.4.2/libreoffice-dictionaries-4.4.2.1.tar.xz</Archive>
+        <Archive sha1sum="3ee6c54749e8523debeda1e140aa3d3defd32af0" type="binary">http://download.documentfoundation.org/libreoffice/src/4.4.2/libreoffice-help-4.4.2.1.tar.xz</Archive>
+        <Archive sha1sum="0b4adb0e5f85ed93b38d8d7afc049b4f68d99572" type="binary">http://download.documentfoundation.org/libreoffice/src/4.4.2/libreoffice-translations-4.4.2.1.tar.xz</Archive>
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-2.0</Dependency>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
@@ -35,8 +35,10 @@
             <Dependency type="pkgconfig">libcurl</Dependency>
             <Dependency type="pkgconfig">python3</Dependency>
             <Dependency type="pkgconfig">libpng</Dependency>
+            <Dependency type="pkgconfig">icu-i18n</Dependency>
             <Dependency>perl-archive-zip</Dependency>
             <Dependency>libgcrypt-devel</Dependency>
+            <Dependency>libxt-devel</Dependency>
             <Dependency>gperf</Dependency>
             
             <Dependency>libboost-devel</Dependency>
