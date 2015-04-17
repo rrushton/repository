@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://solus-project.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>accountsservice</Name>
@@ -11,7 +11,7 @@
         <Summary>D-Bus service for accessing user accounts and information</Summary>
         <Description>AccountsService is a D-Bus service for accessing the list of user accounts and information attached to those accounts.</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="5ab5e4719b555c83fc643b9e150ed87fec3e43d2" type="tarxz">http://www.freedesktop.org/software/accountsservice/accountsservice-0.6.34.tar.xz</Archive>
+        <Archive sha1sum="2afbcddf6e1d1a97b4cc5c4c7897201f06378ec3" type="tarxz">http://www.freedesktop.org/software/accountsservice/accountsservice-0.6.40.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency>vala</Dependency>
@@ -22,8 +22,7 @@
         <Name>accountsservice</Name>
         <Files>
             <Path fileType="executable">/usr/lib/accountsservice/accounts-daemon</Path>
-            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
-            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
@@ -66,6 +65,14 @@
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>04-17-2015</Date>
+            <Version>0.6.40</Version>
+            <Comment>Update to 0.6.40</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="6">
             <Date>06-22-2014</Date>
             <Version>0.6.34</Version>
@@ -116,4 +123,3 @@
     </History>
 
 </PISI>
-
