@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://solus-project.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>gnome-control-center</Name>
@@ -10,7 +10,7 @@
         <Summary>The GNOME Control Center</Summary>
         <Description>The GNOME Control Center</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="d0ff0aba461fdc67e7f962c721af2c375c7d977e" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-control-center/3.14/gnome-control-center-3.14.2.tar.xz</Archive>
+        <Archive sha1sum="86480a0cfe7537efec802d10f4f92c39dae0e03c" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-control-center/3.16/gnome-control-center-3.16.1.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
@@ -36,10 +36,7 @@
             <Dependency type="pkgconfig">libwacom</Dependency>
             <Dependency type="pkgconfig">clutter-1.0</Dependency>
             <Dependency type="pkgconfig">clutter-gtk-1.0</Dependency>
-            <Dependency>kerberos-devel</Dependency>
-
-            
-            
+            <Dependency>kerberos-devel</Dependency>           
         </BuildDependencies>
 
         <Patches>
@@ -67,6 +64,7 @@
             <Path fileType="data">/etc/xdg/menus</Path>
             <Path fileType="data">/usr/share/gnome-shell</Path>
             <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/appdata/gnome-control-center.appdata.xml</Path>
             <Path fileType="data">/usr/share/bash-completion</Path>
         </Files>
         <RuntimeDependencies>
@@ -75,6 +73,14 @@
     </Package>
 
     <History>
+        <Update release="10">
+            <Date>04-17-2015</Date>
+            <Version>3.16.1</Version>
+            <Comment>Update to 3.16.1</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="9">
             <Date>01-17-2015</Date>
             <Version>3.14.2</Version>

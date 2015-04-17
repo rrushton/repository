@@ -7,6 +7,9 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 shelltools.export("HOME", get.workDIR())
 
 def setup():
+    # bashisms
+    shelltools.export("CONF_SHELL", "/bin/bash")
+    shelltools.export("CONFIG_SHELL", "/bin/bash")
     autotools.configure("--disable-static \
                           --enable-systemd \
                           --disable-documentation \
