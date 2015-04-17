@@ -16,8 +16,8 @@ def setup():
                          --enable-rubyinterp \
                          --disable-netbeans \
                          --disable-perlinterp \
-                         --with-compiledby=\'Evolve OS\' \
-                         --with-modified-by=\'Evolve OS\'')
+                         --with-compiledby=\'Solus\' \
+                         --with-modified-by=\'Solus\'')
 def build():
     autotools.make()
 
