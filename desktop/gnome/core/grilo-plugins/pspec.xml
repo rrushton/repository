@@ -11,7 +11,7 @@
         <Summary>Plugins for Grilo</Summary>
         <Description>Plugins for Grilo</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="abed9223fbc02a57db8d91f2b075a6c15c6a15ad" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/grilo-plugins/0.2/grilo-plugins-0.2.13.tar.xz</Archive>
+        <Archive sha1sum="1b21cae4d5a9cf727548feec9d13911bdb36867c" type="tarxz">http://ftp.acc.umu.se/pub/gnome/sources/grilo-plugins/0.2/grilo-plugins-0.2.14.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">goa-1.0</Dependency>
@@ -38,6 +38,14 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>04-17-2015</Date>
+            <Version>0.2.14</Version>
+            <Comment>Update to 0.2.14</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>01-25-2015</Date>
             <Version>0.2.13</Version>
