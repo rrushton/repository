@@ -31,6 +31,8 @@
             <Dependency type="pkgconfig">gstreamer-video-1.0</Dependency>
             <Dependency type="pkgconfig">icu-uc</Dependency>
             <Dependency type="pkgconfig">enchant</Dependency>
+            <Dependency type="pkgconfig">libnotify</Dependency>
+            <Dependency type="pkgconfig">gnutls</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -38,12 +40,12 @@
         <Name>libwebkit-gtk</Name>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="executable">/usr/lib/WebKitGTK</Path>
-            <Path fileType="library">/usr/lib/lib*.so.*</Path>
+            <Path fileType="executable">/usr/libexec/webkit2gtk-4.0/</Path>
+            <Path fileType="library">/usr/lib64/lib*.so.*</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
-            <Path fileType="data">/usr/lib/girepository-1.0</Path>
+            <Path fileType="data">/usr/lib64/girepository-1.0</Path>
             <Path fileType="localedata">/usr/share/locale</Path>.
-            <Path fileType="data">/usr/share/webkitgtk-3.0</Path>
+            <Path fileType="library">/usr/lib64/webkit2gtk-4.0</Path>
         </Files>
         <Replaces>
             <Package>webkitgtk</Package>
@@ -56,8 +58,8 @@
         <Description>Development files for libwebkitgtk</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
-            <Path fileType="library">/usr/lib/lib*.so</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="library">/usr/lib64/lib*.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">libwebkit-gtk</Dependency>
