@@ -1,29 +1,18 @@
 #!/usr/bin/python
 
-from pisi.actionsapi import shelltools, get, autotools, pisitools
+from pisi.actionsapi import shelltools, get, autotools, pisitools, cmaketools
 
 shelltools.export("HOME", get.workDIR())
 
-def build_config():
-    cflags = get.CFLAGS().replace("-ggdb3","")
-    cxxflags = get.CXXFLAGS().replace("-gddb3", "")
-    shelltools.export("CFLAGS", cflags)
-    shelltools.export("CXXFLAGS", cxxflags)
-
-
 def setup():
-    if not get.canClang(): build_config()
-    autotools.configure("--disable-static \
-                         --libexecdir=/usr/lib/WebKitGTK \
-                         --with-gstreamer=1.0 \
-                         --enable-introspection \
-                         --disable-geolocation \
-                         --disable-gtk-doc-html")
+    shelltools.makedirs("build-web")
+    shelltools.cd("build-web")
+    cmaketools.configure("-DPORT=GTK")
 
 def build():
-    if not get.canClang(): build_config()
+    shelltools.cd("build-web")
     autotools.make()
 
 def install():
-    if not get.canClang(): build_config()
+    shelltools.cd("build-web")
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())

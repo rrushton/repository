@@ -43,7 +43,6 @@
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
             <Path fileType="localedata">/usr/share/locale</Path>.
             <Path fileType="data">/usr/share/webkitgtk-3.0</Path>
-            <Path fileType="library">/usr/lib/webkit2gtk-3.0</Path>
         </Files>
         <Replaces>
             <Package>webkitgtk</Package>
