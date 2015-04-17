@@ -30,6 +30,7 @@
             <Dependency type="pkgconfig">sqlite3</Dependency>
             <Dependency type="pkgconfig">gstreamer-video-1.0</Dependency>
             <Dependency type="pkgconfig">icu-uc</Dependency>
+            <Dependency type="pkgconfig">enchant</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -43,7 +44,7 @@
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
             <Path fileType="localedata">/usr/share/locale</Path>.
             <Path fileType="data">/usr/share/webkitgtk-3.0</Path>
-        </Files> 
+        </Files>
         <Replaces>
             <Package>webkitgtk</Package>
         </Replaces>
