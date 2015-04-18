@@ -2,8 +2,8 @@
     <Source>
         <Name>evopop-icon-theme</Name>
         <Packager>
-            <Name>Ikey Doherty</Name>
-            <Email>ikey@evolve-os.com</Email>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
         </Packager>
         <License>CC-BY-4.0</License>
         <Summary xml:lang="en">EvoPop Icon Theme</Summary>
@@ -22,12 +22,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="2">
-            <Date>2015-04-12</Date>
-            <Version>0.3</Version>
+        <Update release="3">
+            <Date>2015-04-18</Date>
+            <Version>0.4</Version>
             <Comment>Packaging update</Comment>
-            <Name>Ikey Doherty</Name>
-            <Email>ikey@evolve-os.com</Email>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
         </Update>
     </History>
 </PISI>
