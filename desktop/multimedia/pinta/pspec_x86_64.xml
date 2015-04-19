@@ -1,0 +1,38 @@
+<PISI>
+    <Source>
+        <Name>pinta</Name>
+        <Packager>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Packager>
+        <License>GPL-2.0</License>
+        <Summary xml:lang="en">Pinta Painting Made Simple</Summary>
+        <Description xml:lang="en">Pinta is a free, open source drawing/editing program modeled after Paint.NET. Its goal is to provide users with a simple yet powerful way to draw and manipulate images on Linux, Mac, Windows, and *BSD. 
+</Description>
+        <Archive type="binary" sha1sum="083029a13c0c475bf42a4232c68a9caa6dbc763e">https://evolve-os.com/sources/README</Archive>
+    </Source>
+    <Package>
+        <Name>pinta</Name>
+        <Summary xml:lang="en">Pinta Painting Made Simple</Summary>
+        <Description xml:lang="en">Pinta is a free, open source drawing/editing program modeled after Paint.NET. Its goal is to provide users with a simple yet powerful way to draw and manipulate images on Linux, Mac, Windows, and *BSD. 
+</Description>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib64/pinta</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2015-04-19</Date>
+            <Version>1.6</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
