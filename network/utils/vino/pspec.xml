@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://solus-project.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>vino</Name>
@@ -11,7 +11,7 @@
         <Summary>a VNC server for the GNOME desktop</Summary>
         <Description>a VNC server for the GNOME desktop</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="ef2af9ef964ccefe8d2ccd2d60e3c15f7347bdd3" type="tarxz">https://download.gnome.org/sources/vino/3.12/vino-3.12.0.tar.xz</Archive>
+        <Archive sha1sum="e821c5a91085c482a35901434468a826cabbc063" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/vino/3.16/vino-3.16.0.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
@@ -30,6 +30,7 @@
             <Path fileType="data">/etc/xdg/autostart</Path>
             <Path fileType="executable">/usr/libexec</Path>
             <Path fileType="data">/usr/share/GConf</Path>
+            <Path fileType="data">/usr/share/applications</Path>
             <Path fileType="data">/usr/share/dbus-1/services</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/glib-2.0</Path>
@@ -38,6 +39,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>04-19-2015</Date>
+            <Version>3.16.0</Version>
+            <Comment>Update to 3.16.0</Comment>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>07-29-2014</Date>
             <Version>3.12.0</Version>
