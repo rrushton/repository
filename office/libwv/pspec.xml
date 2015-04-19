@@ -11,6 +11,9 @@
         <Description>wv is a library that allows access for programs to read and parse Microsoft Word documents.</Description>
         <License>GPLv2</License>
         <Archive sha1sum="db4717a151742dbdb492318f104504a92075543a" type="targz">http://www.abisource.com/downloads/wv/1.2.9/wv-1.2.9.tar.gz</Archive>
+    <BuildDependencies>
+        <Dependency>libgsf-devel</Dependency>
+    </BuildDependencies>
     </Source>
 
     <Package>
