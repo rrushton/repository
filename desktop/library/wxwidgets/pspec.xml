@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://solus-project.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>wxwidgets</Name>
@@ -11,11 +11,11 @@
         <Summary>Cross-platform UI toolkit library</Summary>
         <Description>wxWidgets gives you a single, easy-to-use API for writing GUI applications on multiple platforms that still utilize the native platform's controls and utilities. Link with the appropriate library for your platform and compiler, and your application will adopt the look and feel appropriate to that platform. On top of great GUI functionality, wxWidgets gives you: online help, network programming, streams, clipboard and drag and drop, multithreading, image loading and saving in a variety of popular formats, database support, HTML viewing and printing, and much more.</Description>
         <License>wxWinFDL-3</License>
-        <Archive sha1sum="73e58521d6871c9f4d1e7974c6e3a81629fddcf8" type="tarbz2">http://downloads.sourceforge.net/wxwindows/wxWidgets-3.0.1.tar.bz2</Archive>
+        <Archive sha1sum="6461eab4428c0a8b9e41781b8787510484dea800" type="tarbz2">http://softlayer-sng.dl.sourceforge.net/project/wxwindows/3.0.2/wxWidgets-3.0.2.tar.bz2</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-2.0</Dependency>
-            <!-- One day. One day.. //-->
+            
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
             <Dependency type="pkgconfig">sm</Dependency>
             <Dependency type="pkgconfig">ice</Dependency>
@@ -52,6 +52,14 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>04-19-2015</Date>
+            <Version>3.0.2</Version>
+            <Comment>Update to 3.0.2</Comment>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>09-28-2014</Date>
             <Version>3.0.1</Version>
