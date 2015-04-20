@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://solus-project.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>mesalib</Name>
@@ -11,12 +11,10 @@
         <Summary>Mesa is an OpenGL compatible 3D graphics library.</Summary>
         <Description>Mesa is an OpenGL compatible 3D graphics library.</Description>
         <License>MIT</License>
-        <Archive sha1sum="b1d2b397581e807bc59be5065a8c73c3fda29dd6" type="tarbz2">ftp://ftp.freedesktop.org/pub/mesa/10.2.4/MesaLib-10.2.4.tar.bz2</Archive>
+        <Archive sha1sum="16ae80abe85b29fa118e1910a224c883964ae6c0" type="tarxz">ftp://ftp.freedesktop.org/pub/mesa/10.5.3/mesa-10.5.3.tar.xz</Archive>
 
         <Patches>
-            <!-- Add the official demos -->
-            <Patch level="1">MesaLib-10.2.4-add_xdemos-1.patch</Patch>
-            <Patch level="1">llvm_3_5.patch</Patch>
+            <Patch level="1">mesa-10.5.3-add_xdemos-1.patch</Patch>
         </Patches>
 
         <BuildDependencies>
@@ -34,6 +32,7 @@
             <Dependency type="pkgconfig">xcb-dri3</Dependency>
             <Dependency type="pkgconfig">xshmfence</Dependency>
             <Dependency type="pkgconfig">vdpau</Dependency>
+            <Dependency type="pkgconfig">libva</Dependency>
             <Dependency>llvm-devel</Dependency>
             <Dependency>libelf-devel</Dependency>
         </BuildDependencies>
@@ -42,8 +41,7 @@
     <Package>
         <Name>mesalib</Name>
         <Files>
-            <Path fileType="library">/usr/lib/lib*.so.[0-9]</Path>
-            <Path fileType="library">/usr/lib/lib*.so.*.*.*</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
             <Path fileType="library">/usr/lib/dri/*.so*</Path>
             <Path fileType="library">/usr/lib/egl/*.so*</Path>
             <Path fileType="library">/usr/lib/gallium-pipe/*.so*</Path>
@@ -81,6 +79,14 @@
     </Package>
 
     <History>
+        <Update release="9">
+            <Date>04-20-2015</Date>
+            <Version>10.5.3</Version>
+            <Comment>Update to 10.5.3</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="8">
             <Date>02-02-2015</Date>
             <Version>10.2.4</Version>
@@ -147,4 +153,3 @@
     </History>
 
 </PISI>
-
