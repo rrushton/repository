@@ -65,6 +65,7 @@
         </Files>
         <Replaces>
             <Package>xorg-driver-video-modesetting</Package>
+            <Package>glamor-egl</Package>
         </Replaces>
     </Package>
 
@@ -80,9 +81,20 @@
         <RuntimeDependencies>
             <Dependency release="current">xorg-server</Dependency>
         </RuntimeDependencies>
+        <Replaces>
+            <Package>glamor-egl-devel</Package>
+        </Replaces>
     </Package>
 
     <History>
+        <Update release="11">
+            <Date>04-20-2015</Date>
+            <Version>1.17.1</Version>
+            <Comment>Replace old glamor package</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="10">
             <Date>04-20-2015</Date>
             <Version>1.17.1</Version>
