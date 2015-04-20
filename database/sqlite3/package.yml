@@ -1,8 +1,8 @@
 name        : sqlite3
-version     : 3.8.8.3
-release     : 5
+version     : 3.8.9.0
+release     : 6
 source      :
-    - http://www.sqlite.org/2015/sqlite-autoconf-3080803.tar.gz : 74576964cd9db44c13bf95d6a7c36b06cfdfb2fe4e3e26c9ce1ae0b2e328b411
+    - http://www.sqlite.org/2015/sqlite-autoconf-3080900.tar.gz : 76ebb6392cd2289fbff903af7ff67f3e49bd01ff30544b8028ecededd60269a2
 homepage    : http://www.sqlite.org/
 license     :
     - Public-Domain
