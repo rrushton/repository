@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://solus-project.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>libfontenc</Name>
@@ -10,7 +10,10 @@
         <Summary>X font encoding library</Summary>
         <Description>libfontenc is a library which helps font libraries portably determine and deal with different encodings of fonts.</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="90bdd53d75585dd0f06ad7bc23faccd8a01bb733" type="tarbz2">mirrors://xorg/individual/lib/libfontenc-1.1.1.tar.bz2</Archive>
+        <Archive sha1sum="2beffa0e9260c479b49f90f789318c7f9db2d41d" type="tarbz2">http://xorg.freedesktop.org/releases/individual/lib/libfontenc-1.1.2.tar.bz2</Archive>
+    <BuildDependencies>
+        <Dependency>xproto</Dependency>
+    </BuildDependencies>
     </Source>
 
     <Package>
@@ -36,6 +39,14 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>04-20-2015</Date>
+            <Version>1.1.2</Version>
+            <Comment>Update to 1.1.2</Comment>
+            <Name>Solus Packaging Team</Name>
+            <Email>packaging@solus-project.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>06-14-2014</Date>
             <Version>1.1.1</Version>
