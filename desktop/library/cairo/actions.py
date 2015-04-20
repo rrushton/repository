@@ -7,9 +7,9 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 def setup():
     # We need to --enable-cogl in the future for cogl surface support
-    # Also want libdrm once we update it and mesa
+    # Disable xlib-xcb - its evil in cairo.
     autotools.configure("--disable-static \
-                         --enable-xlib-xcb \
+                         --disable-xlib-xcb \
                          --enable-tee \
                          --enable-gl")
 
