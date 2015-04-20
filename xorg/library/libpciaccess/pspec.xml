@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://solus-project.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>libpciaccess</Name>
@@ -10,7 +10,7 @@
         <Summary>Generic PCI access library for X</Summary>
         <Description>Provides functionality for X to access the PCI bus and devices in a platform-independant way</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="ae4dcf27a1b52c6a1fd90b21165fbaecae34e8ac" type="tarbz2">mirrors://xorg/individual/lib/libpciaccess-0.13.1.tar.bz2</Archive>
+        <Archive sha1sum="74e16b6d9a1d9d28279754010d2c4c4636b72e35" type="tarbz2">http://xorg.freedesktop.org/releases/individual/lib/libpciaccess-0.13.3.tar.bz2</Archive>
     </Source>
 
     <Package>
@@ -35,6 +35,14 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>04-20-2015</Date>
+            <Version>0.13.3</Version>
+            <Comment>Update to 0.13.3</Comment>
+            <Name>Solus Packaging Team</Name>
+            <Email>packaging@solus-project.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>06-14-2014</Date>
             <Version>0.13.1</Version>
