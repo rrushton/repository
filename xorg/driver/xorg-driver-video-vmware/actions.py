@@ -13,6 +13,4 @@ def build():
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-    # Stoopid.
-    pisitools.removeDir("/usr/bin")
     pisitools.dodoc("COPYING")
