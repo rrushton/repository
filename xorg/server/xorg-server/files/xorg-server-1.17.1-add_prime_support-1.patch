@@ -5,9 +5,9 @@ Upstream Status:         Not submitted.
 Origin:                  Upstream mailing list.
 Description:             Adds PRIME support to Xorg Server to make GPU offloading work.
 
---- xorg-server.orig/hw/xfree86/common/xf86Init.c	2012-10-14 01:38:50.000000000 +0200
-+++ xorg-server/hw/xfree86/common/xf86Init.c	2012-12-01 19:51:53.249922134 +0100
-@@ -361,6 +361,16 @@
+--- a/hw/xfree86/common/xf86Init.c	2014-06-04 12:49:11.000000000 +0200
++++ b/hw/xfree86/common/xf86Init.c	2014-06-04 14:00:29.539324458 +0200
+@@ -363,6 +363,16 @@
      return ret;
  }
  
@@ -24,7 +24,7 @@ Description:             Adds PRIME support to Xorg Server to make GPU offloadin
  static void
  InstallSignalHandlers(void)
  {
-@@ -927,6 +937,8 @@
+@@ -952,6 +962,8 @@
      for (i = 0; i < xf86NumGPUScreens; i++)
          AttachUnboundGPU(xf86Screens[0]->pScreen, xf86GPUScreens[i]->pScreen);
  
@@ -33,9 +33,9 @@ Description:             Adds PRIME support to Xorg Server to make GPU offloadin
      xf86VGAarbiterWrapFunctions();
      if (sigio_blocked)
          OsReleaseSIGIO();
---- xorg-server.orig/hw/xfree86/common/xf86platformBus.c	2012-11-02 05:17:59.000000000 +0100
-+++ xorg-server/hw/xfree86/common/xf86platformBus.c	2012-12-01 19:51:53.249922134 +0100
-@@ -387,6 +387,8 @@
+--- a/hw/xfree86/common/xf86platformBus.c	2014-06-04 12:49:11.000000000 +0200
++++ b/hw/xfree86/common/xf86platformBus.c	2014-06-04 14:00:29.539324458 +0200
+@@ -426,6 +426,8 @@
      return foundScreen;
  }
  
@@ -44,17 +44,17 @@ Description:             Adds PRIME support to Xorg Server to make GPU offloadin
  int
  xf86platformAddDevice(int index)
  {
-@@ -446,6 +448,7 @@
- 
+@@ -494,6 +496,7 @@
+    }
     /* attach unbound to 0 protocol screen */
     AttachUnboundGPU(xf86Screens[0]->pScreen, xf86GPUScreens[i]->pScreen);
 +   xf86AutoConfigOutputDevice(xf86GPUScreens[i], xf86Screens[0]);
  
-    return 0;
- }
---- xorg-server.orig/hw/xfree86/modes/xf86Crtc.c	2012-10-14 01:38:50.000000000 +0200
-+++ xorg-server/hw/xfree86/modes/xf86Crtc.c	2012-12-01 19:51:53.250922153 +0100
-@@ -3258,3 +3258,31 @@
+    RRResourcesChanged(xf86Screens[0]->pScreen);
+    RRTellChanged(xf86Screens[0]->pScreen);
+--- a/hw/xfree86/modes/xf86Crtc.c	2014-06-04 12:49:11.000000000 +0200
++++ b/hw/xfree86/modes/xf86Crtc.c	2014-06-04 14:00:29.540324474 +0200
+@@ -3387,3 +3387,35 @@
              crtc->x = crtc->y = 0;
          }
  }
@@ -65,6 +65,7 @@ Description:             Adds PRIME support to Xorg Server to make GPU offloadin
 +    RRProviderPtr master_provider;
 +    xf86CrtcConfigPtr config = XF86_CRTC_CONFIG_PTR(master);
 +    xf86CrtcConfigPtr slave_config = XF86_CRTC_CONFIG_PTR(pScrn);
++    Bool unbound = FALSE;
 +
 +    if (!config || !slave_config)
 +        return;
@@ -76,12 +77,15 @@ Description:             Adds PRIME support to Xorg Server to make GPU offloadin
 +            /* source offload */
 +            
 +        DetachUnboundGPU(pScrn->pScreen);
++        unbound = TRUE;
 +        AttachOffloadGPU(master->pScreen, pScrn->pScreen);
 +        slave_config->randr_provider->offload_sink = master_provider;
-+    } else if ((master->capabilities & RR_Capability_SourceOutput) &&
++    }
++    if ((master->capabilities & RR_Capability_SourceOutput) &&
 +               pScrn->capabilities & RR_Capability_SinkOutput) {
 +        /* sink offload */
-+        DetachUnboundGPU(pScrn->pScreen);
++        if (!unbound)
++            DetachUnboundGPU(pScrn->pScreen);
 +        AttachOutputGPU(master->pScreen, pScrn->pScreen);
 +        slave_config->randr_provider->output_source = master_provider;
 +    }

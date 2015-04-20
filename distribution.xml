@@ -37,6 +37,9 @@
 
         <!-- Replaced by solus-artwork //-->
         <Package>evolve-os-artwork</Package>
+
+        <!-- Replaced by xorg-server //-->
+        <Package>xorg-driver-video-modesetting</Package>
 	</Obsoletes>
 
 </PISI>
