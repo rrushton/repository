@@ -1,12 +1,10 @@
 #!/usr/bin/python
 
-# Created For SolusOS
-
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
-    autotools.configure("--enable-glamor")
+    autotools.configure()
 
 def build():
     autotools.make()
