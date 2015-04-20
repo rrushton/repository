@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://solus-project.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>gdk-pixbuf</Name>
@@ -11,7 +11,7 @@
         <Summary>GNOME toolkit for image loading and pixel buffer manipulation</Summary>
         <Description>The Gdk Pixbuf is a toolkit for image loading and pixel buffer manipulation. It is used by GTK+ 2 and GTK+ 3 to load and manipulate images.</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="6277b4e5b5e334b3669f15ae0376e184be9e8cd8" type="tarxz">http://ftp.acc.umu.se/pub/gnome/sources/gdk-pixbuf/2.30/gdk-pixbuf-2.30.8.tar.xz</Archive>
+        <Archive sha1sum="78621344eb8b0a960d475f37a8dd1232cc0322b2" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/gdk-pixbuf/2.31/gdk-pixbuf-2.31.3.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">libtiff-4</Dependency>
@@ -70,6 +70,14 @@
 
 
     <History>
+        <Update release="9">
+            <Date>04-20-2015</Date>
+            <Version>2.31.3</Version>
+            <Comment>Update to 2.31.3</Comment>
+            <Name>Justin Zobel</Name>
+            <Email>justin.zobel@gmail.com</Email>
+        </Update>
+
         <Update release="8">
             <Date>01-17-2015</Date>
             <Version>2.30.8</Version>
