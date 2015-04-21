@@ -6,6 +6,7 @@ from pisi.actionsapi import get, autotools, pisitools
 
 
 def setup():
+    autotools.autoreconf("-vfi")
     autotools.configure("--disable-scrollkeeper \
                          --disable-doc")
 
