@@ -1,18 +1,18 @@
-From cf7e801345141f362a91451074bcfd4a5462b637 Mon Sep 17 00:00:00 2001
+From 1e559d9bd21fad129c1ea923f98cb32ccfc8c5ce Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey@solus-project.com>
 Date: Tue, 21 Apr 2015 20:39:16 +0100
 Subject: [PATCH] Use small icon by default, at 32px size
 
 Signed-off-by: Ikey Doherty <ikey@solus-project.com>
 ---
- libnautilus-private/org.gnome.nautilus.gschema.xml.in | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+ libnautilus-private/org.gnome.nautilus.gschema.xml.in | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/libnautilus-private/org.gnome.nautilus.gschema.xml.in b/libnautilus-private/org.gnome.nautilus.gschema.xml.in
-index eaa349d..f91e4b5 100644
+index eaa349d..595b555 100644
 --- a/libnautilus-private/org.gnome.nautilus.gschema.xml.in
 +++ b/libnautilus-private/org.gnome.nautilus.gschema.xml.in
-@@ -179,12 +179,12 @@
+@@ -179,7 +179,7 @@
        "group", "permissions", and "mime_type".</_description>
      </key>
      <key name="default-zoom-level" enum="org.gnome.nautilus.CanvasZoomLevel">
@@ -20,12 +20,6 @@ index eaa349d..f91e4b5 100644
 +      <default>'small'</default>
        <_summary>Default icon zoom level</_summary>
        <_description>Default zoom level used by the icon view.</_description>
-     </key>
-     <key name="thumbnail-size" type="i">
--      <default>64</default>
-+      <default>32</default>
-       <_summary>Default Thumbnail Icon Size</_summary>
-       <_description>The default size of an icon for a thumbnail in the icon view when using NAUTILUS_ICON_SIZE_SMALL size.</_description>
      </key>
 -- 
 2.3.2

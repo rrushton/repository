@@ -80,6 +80,14 @@
     </Package>
 
     <History>
+        <Update release="11">
+            <Date>04-21-2015</Date>
+            <Version>3.16.1</Version>
+            <Comment>Undo thumbnail size change</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="10">
             <Date>04-21-2015</Date>
             <Version>3.16.1</Version>
