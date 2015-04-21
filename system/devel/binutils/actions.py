@@ -20,7 +20,7 @@ def setup():
         --prefix=/usr \
         --enable-lto \
         --enable-multilib \
-        --enable-gold \
+        --disable-gold \
         --enable-plugins \
         --target=x86_64-evolveos-linux \
         --build=x86_64-evolveos-linux")
