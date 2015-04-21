@@ -33,6 +33,14 @@
     </Package>
 
     <History>
+        <Update release="11">
+            <Date>04-21-2015</Date>
+            <Version>1.6.0</Version>
+            <Comment>Fix wallpaper path</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@esolus-project.com</Email>
+        </Update>
+
         <Update release="10">
             <Date>01-25-2015</Date>
             <Version>1.6.0</Version>
