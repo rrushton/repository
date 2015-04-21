@@ -16,8 +16,9 @@
         <Summary xml:lang="en">Six is a Python 2 and 3 compatibility library</Summary>
         <Description xml:lang="en">Six is a Python 2 and 3 compatibility library
 </Description>
+        <PartOf>programming.python</PartOf>
         <Files>
-            <Path fileType="library">/usr/lib/python2.7</Path>
+            <Path fileType="library">/usr/lib/python3.3</Path>
         </Files>
     </Package>
     <History>

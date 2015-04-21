@@ -8,8 +8,9 @@ summary    : Six is a Python 2 and 3 compatibility library
 description: |
     Six is a Python 2 and 3 compatibility library
 builddeps  :
+    - python3-devel
 setup      : |
 build      : |
-    python setup.py build
+    python3 setup.py build
 install    : |
-    python setup.py install --root=%installroot% --no-compile -O0
+    python3 setup.py install --root=%installroot% --no-compile -O0
