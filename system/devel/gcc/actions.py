@@ -32,9 +32,8 @@ def setup():
                         --enable-threads=posix \
                         --enable-__cxa_atexit \
                         --enable-plugin \
-                        --enable-gold \
+                        --disable-gold \
                         --enable-ld=default \
-                        --with-plugin-ld=ld.gold \
                         --enable-clocale=gnu \
                         --disable-multilib \
                         --enable-lto \
