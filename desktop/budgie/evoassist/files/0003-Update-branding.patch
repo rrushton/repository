@@ -1,7 +1,7 @@
 From 0b859784006a8eff5c101f099bc20c98bb8a0cf9 Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey@solus-project.com>
 Date: Tue, 21 Apr 2015 06:15:17 +0100
-Subject: [PATCH 3/3] Update branding
+Subject: [PATCH 3/4] Update branding
 
 ---
  src/evoassist-ui.py | 8 ++++----
