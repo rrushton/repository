@@ -22,6 +22,7 @@
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="header">/usr/include/gnumake.h</Path>
         </Files>
     </Package>
 
