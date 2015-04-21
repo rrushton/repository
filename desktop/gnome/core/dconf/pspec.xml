@@ -12,12 +12,6 @@
         <Description>The dconf package contains a configuration database system used by many GNOME applications.</Description>
         <License>GPLv3+</License>
         <Archive sha1sum="81fa57987b8ca92ec4b11225358356ea7e2d5391" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/dconf/0.24/dconf-0.24.0.tar.xz</Archive>
-
-        <BuildDependencies>
-            
-            <Dependency type="pkgconfig">gtk+-3.0</Dependency>
-            <Dependency>vala</Dependency>
-        </BuildDependencies>
     </Source>
 
     <Package>
@@ -33,23 +27,6 @@
             <Path fileType="data">/usr/share/glib-2.0</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
         </Files>
-    </Package>
-
-    <Package>
-        <Name>dconf-editor</Name>
-        <Summary>DConf Database Editor</Summary>
-        <Description>DConf database editor</Description>
-        <IsA>app:gui</IsA>
-        <Icon>dconf-editor</Icon>
-        <Files>
-            <Path fileType="executable">/usr/bin/dconf-editor</Path>
-            <Path fileType="data">/usr/share/applications</Path>
-            <Path fileType="data">/usr/share/icons</Path>
-            <Path fileType="data">/usr/share/dconf-editor</Path>
-        </Files>
-        <RuntimeDependencies>
-            <Dependency release="current">dconf</Dependency>
-        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -82,6 +59,14 @@
     </Package>
 
     <History>
+        <Update release="9">
+            <Date>04-21-2015</Date>
+            <Version>0.24.0</Version>
+            <Comment>Drop dconf-editor subpackage, split</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="8">
             <Date>04-16-2015</Date>
             <Version>0.24.0</Version>
