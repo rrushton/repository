@@ -21,6 +21,7 @@ def setup():
         --enable-lto \
         --enable-multilib \
         --disable-gold \
+        --disable-werror \
         --enable-plugins \
         --target=x86_64-evolveos-linux \
         --build=x86_64-evolveos-linux")
