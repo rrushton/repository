@@ -54,6 +54,9 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/appdata</Path>
         </Files>
+        <RuntimeDependencies>
+            <Dependency>python3-gobject</Dependency>
+        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -80,6 +83,14 @@
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>04-21-2015</Date>
+            <Version>3.2</Version>
+            <Comment>Add mising runtime dep</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="4">
             <Date>04-19-2015</Date>
             <Version>3.2</Version>
