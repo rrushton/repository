@@ -35,7 +35,7 @@
         <Update release="8">
             <Date>04-21-2015</Date>
             <Version>2.23.2</Version>
-            <Comment>Disable gold linker</Comment>
+            <Comment>Disable the gold linker</Comment>
             <Name>Ikey Doherty</Name>
             <Email>ikey@solus-project.com</Email>
         </Update>
