@@ -23,6 +23,10 @@
             <Dependency type="pkgconfig">gnome-desktop-3.0</Dependency>
             <Dependency type="pkgconfig">shared-mime-info</Dependency>
         </BuildDependencies>
+
+        <Patches>
+            <Patch level="1">0001-Use-small-icon-by-default-at-32px-size.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
@@ -76,6 +80,14 @@
     </Package>
 
     <History>
+        <Update release="10">
+            <Date>04-21-2015</Date>
+            <Version>3.16.1</Version>
+            <Comment>Deal with novelty sized icons</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="9">
             <Date>04-16-2015</Date>
             <Version>3.16.1</Version>
