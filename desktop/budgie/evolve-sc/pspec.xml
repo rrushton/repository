@@ -3,18 +3,20 @@
 <PISI>
     <Source>
         <Name>evolve-sc</Name>
-        <Homepage>https://evolve-os.com</Homepage>
+        <Homepage>https://solus-project.com</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
             <Email>ikey@evolve-os.com</Email>
         </Packager>
-        <Summary>Evolve OS Software Center</Summary>
-        <Description>Evolve OS Software Center</Description>
+        <Summary>Solus Software Center</Summary>
+        <Description>SOlus Software Center</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="0b8c2740b4387a48833af2317dfa5402db15188d" type="targz">https://github.com/evolve-os/evolve-sc/archive/v2.tar.gz</Archive>
         
         <Patches>
             <Patch level="1">0001-You-print-you-die.patch</Patch>
+            <Patch level="1">0003-Add-Select-All-button.patch</Patch>
+            <Patch level="1">0004-Remove-revealer.patch</Patch>
         </Patches>
     </Source>
 
@@ -32,6 +34,14 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>04-41-2015</Date>
+            <Version>2</Version>
+            <Comment>Add "Select All"</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="3">
             <Date>01-25-2015</Date>
             <Version>2</Version>
