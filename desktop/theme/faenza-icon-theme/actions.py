@@ -1,7 +1,6 @@
 
 #!/usr/bin/python
 
-# Created for solusos
 
 from pisi.actionsapi import shelltools, pisitools
 

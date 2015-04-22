@@ -1,6 +1,5 @@
 #!/usr/bin/python
 
-# Created For Solus
 
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 

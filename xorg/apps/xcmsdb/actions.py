@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# Created For SolusOS
 
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 

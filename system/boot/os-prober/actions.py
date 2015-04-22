@@ -1,6 +1,5 @@
 #!/usr/bin/python
 
-# Created For SolusOS
 
 # Inspired by Arch Linux's build for os-prober
 # https://projects.archlinux.org/svntogit/community.git/tree/trunk/PKGBUILD?h=packages/os-prober

@@ -1,6 +1,5 @@
 #!/usr/bin/python
 
-# Created For SolusOS
 
 IgnoreAutodep = True
 

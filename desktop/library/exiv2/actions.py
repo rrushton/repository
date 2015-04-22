@@ -1,7 +1,6 @@
 
 #!/usr/bin/python
 
-# Created For Evolve OS
 
 from pisi.actionsapi import shelltools, get, autotools, pisitools
 

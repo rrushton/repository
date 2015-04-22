@@ -1,6 +1,5 @@
 #!/usr/bin/python
 
-# Created for SolusOS
 # Based on original package in Pardus
 
 from pisi.actionsapi import cmaketools

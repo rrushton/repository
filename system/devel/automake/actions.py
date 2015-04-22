@@ -1,5 +1,4 @@
 #!/usr/bin/python
-# Created for SolusOS
 
 from pisi.actionsapi import pisitools, autotools,get
 
