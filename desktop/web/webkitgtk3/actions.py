@@ -21,6 +21,7 @@ def setup():
                          --with-gnu-ld \
                          --enable-introspection \
                          --disable-geolocation \
+                         --disable-webkit2 \
                          --disable-gtk-doc-html")
     shelltools.system("sed -i '/gtkdoc --rebase/s:^:# :' GNUmakefile.*")
 
