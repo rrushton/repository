@@ -189,7 +189,8 @@ class AutoPackage:
                 line = line.replace("\n","").replace("\r","").strip()
                 # Currently only handles configure.ac
                 if "PKG_CHECK_MODULES" in line:
-                    part = line.split(",")[1]
+                    splits = line.split(",")
+                    part = splits[1] if len(splits) > 1 else splits[0]
                     part = part.replace("[","").replace(")","").replace("]","")
                     splits = part.split(">=")
                     pkg = splits[0].strip()
