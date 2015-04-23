@@ -36,7 +36,7 @@ CCACHE_TGT = "/root/.ccache"
 PACKAGE_DIR = "/var/lib/evobuild/packages"
 PACKAGE_TGT = "/var/cache/eopkg/packages"
 
-IMG_URI = "https://evolve-os.com/image_root/"
+IMG_URI = "https://www.solus-project.com/image_root/"
 known_profiles = ["main-x86_64", "unstable-x86_64"]
 IMG_SUFFIX = ".img"
 IMG_DL_SUFFIX = ".img.xz"
