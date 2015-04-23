@@ -11,7 +11,7 @@
         <Summary>Budgie Desktop</Summary>
         <Description>Budgie Desktop</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="ac0ad02463db617e1f2bf1846dcefb8739442627" type="tarxz">https://solus-project.com/sources/budgie-desktop-8.1.tar.xz</Archive>
+        <Archive sha1sum="d30dc1eb5e3c8086d4ca5e8a08cf0a3c3ea55198" type="tarxz">https://solus-project.com/sources/budgie-desktop-8.1.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
@@ -64,6 +64,14 @@
     </Package>
 
     <History>
+        <Update release="45">
+            <Date>04-23-2015</Date>
+            <Version>8.1</Version>
+            <Comment>Update to 8.1</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="44">
             <Date>04-23-2015</Date>
             <Version>8.1</Version>
