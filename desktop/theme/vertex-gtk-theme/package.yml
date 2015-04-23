@@ -1,0 +1,22 @@
+name       : vertex-gtk-theme
+version    : 20150418
+release    : 1
+source     :
+    - https://github.com/horst3180/Vertex-theme/archive/20150418.tar.gz : 033f1f009a6305a0128a564e0d0e63b639e6e4b6907d9a5a6a2e57b06eabcb4a
+license    : GPL-3.0
+summary    : Vertex Theme
+description: |
+    Vertex is a theme for GTK 3, GTK 2, Gnome-Shell and Cinnamon. It supports GTK 3 and GTK 2 based desktop environments like Gnome, Cinnamon, Mate, XFCE, Budgie, Pantheon, etc. Themes for the Browsers Chrome/Chromium and Firefox are included, too.
+setup      : |
+    CONFIG_SHELL=/bin/bash \
+                 ./autogen.sh --prefix=/usr \
+                 --disable-cinnamon \
+                 --disable-gnome-shell \
+                 --disable-metacity \
+                 --disable-unity \
+                 --disable-xfwm \
+                 --with-gnome=3.16
+build      : |
+    %make
+install    : |
+    %make_install
