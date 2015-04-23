@@ -2,14 +2,14 @@
     <Source>
         <Name>cyrus-sasl</Name>
         <Packager>
-            <Name>Justin Zobel</Name>
-            <Email>justin.zobel@gmail.com</Email>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
         </Packager>
         <License>custom</License>
         <Summary xml:lang="en">Cyrus Simple Authentication Service Layer (SASL) Library</Summary>
         <Description xml:lang="en">Cyrus Simple Authentication Service Layer (SASL) Library
 </Description>
-        <Archive type="binary" sha1sum="083029a13c0c475bf42a4232c68a9caa6dbc763e">https://evolve-os.com/sources/README</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
     </Source>
     <Package>
         <Name>cyrus-sasl-devel</Name>
@@ -21,10 +21,10 @@
             <Dependency release="current">cyrus-sasl</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib64/lib*.so</Path>
-            <Path fileType="data">/usr/lib64/pkgconfig</Path>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="man">/usr/share/man/man3</Path>
+            <Path fileType="library">/usr/lib64/lib*.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig</Path>
         </Files>
     </Package>
     <Package>
@@ -32,20 +32,21 @@
         <Summary xml:lang="en">Cyrus Simple Authentication Service Layer (SASL) Library</Summary>
         <Description xml:lang="en">Cyrus Simple Authentication Service Layer (SASL) Library
 </Description>
+        <PartOf>security</PartOf>
         <Files>
-            <Path fileType="library">/usr/lib64/lib*.so.*</Path>
-            <Path fileType="executable">/usr/sbin</Path>
             <Path fileType="library">/usr/lib/sasl2</Path>
             <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="library">/usr/lib64/lib*.so.*</Path>
         </Files>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2015-04-19</Date>
+        <Update release="2">
+            <Date>2015-04-23</Date>
             <Version>2.1.26</Version>
             <Comment>Packaging update</Comment>
-            <Name>Justin Zobel</Name>
-            <Email>justin.zobel@gmail.com</Email>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
         </Update>
     </History>
 </PISI>
