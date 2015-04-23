@@ -1,0 +1,202 @@
+From 2d711e56ff7b5190fc9f5e5f1db3a47245e06e6c Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey@solus-project.com>
+Date: Thu, 23 Apr 2015 23:18:34 +0100
+Subject: [PATCH 2/3] Add patch support
+
+---
+ build.py                                           | 31 ++++++++++++--
+ ...0001-Sample-patch-merely-for-ypkg-testing.patch | 47 ++++++++++++++++++++++
+ examples/files/0002-Sample-commit-2.patch          | 25 ++++++++++++
+ examples/nano.yml                                  |  3 ++
+ 4 files changed, 103 insertions(+), 3 deletions(-)
+ create mode 100644 examples/files/0001-Sample-patch-merely-for-ypkg-testing.patch
+ create mode 100644 examples/files/0002-Sample-commit-2.patch
+
+diff --git a/build.py b/build.py
+index 641d8b1..4ba3d84 100644
+--- a/build.py
++++ b/build.py
+@@ -58,6 +58,8 @@ Clang = which("clang")
+ global emul32
+ emul32 = False
+ 
++global pkgfile
++
+ def get_path():
+     path = "/usr/bin:/bin"
+     if ccache:
+@@ -128,6 +130,7 @@ def escape(inp, wdir, name):
+     macros["%CXX%"] = "%s-g++" % host
+     macros["%JOBS%"] = conf.values.build.jobs
+     macros["%make"] = "make %JOBS%"
++    macros["%patch"] = "patch -t --remove-empty-files --no-backup-if-mismatch"
+ 
+     # We like clang
+     if Clang:
+@@ -146,6 +149,7 @@ def escape(inp, wdir, name):
+ #!/bin/bash
+ set -e
+ set -x
++export TERM=dumb
+ cd %%workdir%%;
+ export CFLAGS="%%CFLAGS%%"
+ export CXXFLAGS="%%CXXFLAGS%%"
+@@ -153,17 +157,27 @@ export LDFLAGS="%%LDFLAGS%%"
+ export CC="%%CC%%"
+ export CXX="%%CXX%%"
+ export PATH="%s"
++export srcdir="%%workdir%%"
++export installdir="%%installroot%%"
+ """ % get_path()
+     if emul32:
+         header += "\nexport EMUL32BUILD=1\n"
+ 
+-    header += inp
+-    inp = header
+     if LeRoot:
+         header += """
+ export CCACHE_DIR=/root/.ccache
+ """
+ 
++    pkgfiles = get_pkgfiles_dir()
++    if pkgfiles is not None:
++        header += """
++export pkgfiles="%s"
++""" % pkgfiles
++
++    header += inp
++    inp = header
++
++    print "Pkgfiles: %s" % pkgfiles
+     if emul32:
+         inp += """
+ if [ -e "%installroot%/emul32" ]; then
+@@ -207,7 +221,6 @@ def fetch_source(sources):
+     for source_item in sources:
+         source = source_item.uri
+         endName = os.path.basename(source)
+-        # TODO: Add sha256 checks!!
+         fname = os.path.join(BallDir, endName)
+         if not os.path.exists(fname):
+             try:
+@@ -249,7 +262,19 @@ def get_work_dir():
+     else:
+         return os.path.join(BuildDir, kids[0])
+ 
++def get_pkgfiles_dir():
++    dirn = os.path.dirname(pkgfile)
++    fpath = os.path.abspath(dirn)
++    fdir = os.path.join(fpath, "files")
++    if os.path.exists(fdir):
++        return fdir
++    return None
++
+ def build(fpath):
++    global pkgfile
++
++    pkgfile = fpath
++
+     with open(fpath, "r") as pkg:
+         d = yaml.load(pkg)
+         print "building %s" % d['name']
+diff --git a/examples/files/0001-Sample-patch-merely-for-ypkg-testing.patch b/examples/files/0001-Sample-patch-merely-for-ypkg-testing.patch
+new file mode 100644
+index 0000000..ec0e4cd
+--- /dev/null
++++ b/examples/files/0001-Sample-patch-merely-for-ypkg-testing.patch
+@@ -0,0 +1,47 @@
++From 4a280db84b17fdb64d890808015942027fe93776 Mon Sep 17 00:00:00 2001
++From: Ikey Doherty <ikey@solus-project.com>
++Date: Thu, 23 Apr 2015 22:52:49 +0100
++Subject: [PATCH 1/2] Sample patch merely for ypkg testing
++
++---
++ doc/nanorc.sample.in | 8 ++++----
++ 1 file changed, 4 insertions(+), 4 deletions(-)
++
++diff --git a/doc/nanorc.sample.in b/doc/nanorc.sample.in
++index 192f9b4..83f9c4e 100644
++--- a/doc/nanorc.sample.in
+++++ b/doc/nanorc.sample.in
++@@ -242,10 +242,10 @@
++ # include "@PKGDATADIR@/nanorc.nanorc"
++ 
++ ## C/C++
++-# include "@PKGDATADIR@/c.nanorc"
+++include "@PKGDATADIR@/c.nanorc"
++ 
++ ## Makefiles
++-# include "@PKGDATADIR@/makefile.nanorc"
+++include "@PKGDATADIR@/makefile.nanorc"
++ 
++ ## Cascading Style Sheets
++ # include "@PKGDATADIR@/css.nanorc"
++@@ -284,7 +284,7 @@
++ # include "@PKGDATADIR@/perl.nanorc"
++ 
++ ## Python
++-# include "@PKGDATADIR@/python.nanorc"
+++include "@PKGDATADIR@/python.nanorc"
++ 
++ ## Ruby
++ # include "@PKGDATADIR@/ruby.nanorc"
++@@ -308,7 +308,7 @@
++ # include "@PKGDATADIR@/asm.nanorc"
++ 
++ ## Bourne shell scripts
++-# include "@PKGDATADIR@/sh.nanorc"
+++include "@PKGDATADIR@/sh.nanorc"
++ 
++ ## POV-Ray
++ # include "@PKGDATADIR@/pov.nanorc"
++-- 
++2.3.2
++
+diff --git a/examples/files/0002-Sample-commit-2.patch b/examples/files/0002-Sample-commit-2.patch
+new file mode 100644
+index 0000000..278a079
+--- /dev/null
++++ b/examples/files/0002-Sample-commit-2.patch
+@@ -0,0 +1,25 @@
++From d13cefb9538e7f30568f5a8f363257b90f578e5e Mon Sep 17 00:00:00 2001
++From: Ikey Doherty <ikey@solus-project.com>
++Date: Thu, 23 Apr 2015 22:53:22 +0100
++Subject: [PATCH 2/2] Sample commit 2
++
++---
++ doc/nanorc.sample.in | 2 +-
++ 1 file changed, 1 insertion(+), 1 deletion(-)
++
++diff --git a/doc/nanorc.sample.in b/doc/nanorc.sample.in
++index 83f9c4e..fa0cf57 100644
++--- a/doc/nanorc.sample.in
+++++ b/doc/nanorc.sample.in
++@@ -302,7 +302,7 @@ include "@PKGDATADIR@/python.nanorc"
++ # include "@PKGDATADIR@/ocaml.nanorc"
++ 
++ ## AWK
++-# include "@PKGDATADIR@/awk.nanorc"
+++include "@PKGDATADIR@/awk.nanorc"
++ 
++ ## Assembler
++ # include "@PKGDATADIR@/asm.nanorc"
++-- 
++2.3.2
++
+diff --git a/examples/nano.yml b/examples/nano.yml
+index 053b737..b00d9b4 100644
+--- a/examples/nano.yml
++++ b/examples/nano.yml
+@@ -13,6 +13,9 @@ description: |
+     as a replacement for Pico, the ncurses-based editor from the non-free mailer
+     package Pine (itself now available under the Apache License as Alpine).
+ setup      : |
++    %patch -p1 < $pkgfiles/0001-Sample-patch-merely-for-ypkg-testing.patch
++    %patch -p1 < $pkgfiles/0002-Sample-commit-2.patch
++    
+     %configure --enable-utf8
+ build      : |
+     %make
+-- 
+2.3.2
+
