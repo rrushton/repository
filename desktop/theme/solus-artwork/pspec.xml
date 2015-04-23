@@ -12,7 +12,6 @@
         <License>GPLv2+</License>
         <License>CCPL-Attribution-3.0</License>
         <Archive sha1sum="8a767ce36ee577ac0a859b8cf1b87e33c45d734e" type="tarxz">https://solus-project.com/sources/solus-artwork-4.tar.xz</Archive>
-        <Archive sha1sum="cad9cf77ec8d296bf65738d624804f71516ba726" target="gtk" type="tarxz">https://evolve-os.com/sources/Vertex.tar.xz</Archive>
     </Source>
 
     <Package>
@@ -21,11 +20,11 @@
             <Path fileType="data">/usr/share/backgrounds</Path>
             <Path fileType="data">/usr/share/gnome-background-properties</Path>
             <Path fileType="data">/usr/share/themes/Evotex</Path>
-            <Path fileType="data">/usr/share/themes/Vertex</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency>gtk2-engine-murrine</Dependency>
             <Dependency>font-clear-sans-ttf</Dependency>
+            <Dependency>vertex-gtk-theme</Dependency>
         </RuntimeDependencies>
         <Replaces>
             <Package>evolve-os-artwork</Package>
@@ -33,6 +32,14 @@
     </Package>
 
     <History>
+        <Update release="13">
+            <Date>04-23-2015</Date>
+            <Version>4</Version>
+            <Comment>Use upstream Vertex now</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="12">
             <Date>04-12-2015</Date>
             <Version>4</Version>
