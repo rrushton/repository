@@ -1,0 +1,36 @@
+<PISI>
+    <Source>
+        <Name>atom</Name>
+        <Packager>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua.strobl@outlook.com</Email>
+        </Packager>
+        <License>GitHub Copyright</License>
+        <Summary xml:lang="en">Atom is a hackable text editor for the 21st century.</Summary>
+        <Description xml:lang="en">Atom is a hackable text editor for the 21st century.
+</Description>
+        <Archive type="binary" sha1sum="083029a13c0c475bf42a4232c68a9caa6dbc763e">https://evolve-os.com/sources/README</Archive>
+    </Source>
+    <Package>
+        <Name>atom</Name>
+        <Summary xml:lang="en">Atom is a hackable text editor for the 21st century.</Summary>
+        <Description xml:lang="en">Atom is a hackable text editor for the 21st century.
+</Description>
+        <PartOf>editor</PartOf>
+        <Files>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/atom</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2015-04-23</Date>
+            <Version>0.194.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua.strobl@outlook.com</Email>
+        </Update>
+    </History>
+</PISI>
