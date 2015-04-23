@@ -1,0 +1,53 @@
+diff --git a/panel/Editor.vala b/panel/Editor.vala
+index 239f42f..237beab 100644
+--- a/panel/Editor.vala
++++ b/panel/Editor.vala
+@@ -15,7 +15,6 @@ namespace Budgie
+ public enum ThemeType {
+     ICON_THEME,
+     GTK_THEME,
+-    WM_THEME,
+     CURSOR_THEME
+ }
+ 
+@@ -81,7 +80,6 @@ public class PanelEditor : Gtk.Window
+ 
+     protected Settings settings;
+     protected Settings ui_settings;
+-    protected Settings wm_settings;
+ 
+     ulong is_status_id;
+     ulong pack_type_id;
+@@ -104,7 +102,6 @@ public class PanelEditor : Gtk.Window
+ 
+         settings = new Settings("com.evolve-os.budgie.panel");
+         ui_settings = new Settings("org.gnome.desktop.interface");
+-        wm_settings = new Settings("org.gnome.desktop.wm.preferences");
+ 
+         book = new Gtk.Stack();
+         book.border_width = 30;
+@@ -748,13 +745,6 @@ public class PanelEditor : Gtk.Window
+ 
+         combo = new Gtk.ComboBoxText();
+         group.add_widget(combo);
+-        populate(ref combo, ThemeType.WM_THEME);
+-        wm_settings.bind("theme", combo, "active-id", SettingsBindFlags.DEFAULT);
+-        item = create_action_item(_("Window theme"), null, combo);
+-        layout.pack_start(item, false, false, 0);
+-
+-        combo = new Gtk.ComboBoxText();
+-        group.add_widget(combo);
+         populate(ref combo, ThemeType.ICON_THEME);
+         ui_settings.bind("icon-theme", combo, "active-id", SettingsBindFlags.DEFAULT);
+         item = create_action_item(_("Icon theme"), null, combo);
+@@ -805,10 +795,6 @@ public class PanelEditor : Gtk.Window
+                 item = "themes";
+                 suffix = "gtk-3.0";
+                 break;
+-            case ThemeType.WM_THEME:
+-                item = "themes";
+-                suffix = "metacity-1";
+-                break;
+             case ThemeType.ICON_THEME:
+                 item = "icons";
+                 suffix = "index.theme";
