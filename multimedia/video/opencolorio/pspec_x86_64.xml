@@ -5,7 +5,9 @@
             <Name>Solus Packaging Team</Name>
             <Email>packaging@solus-project.com</Email>
         </Packager>
-        <License>custom</License>
+        <License>BSD-3-Clause</License>
+        <License>ZLib</License>
+        <License>BSD-4-Clause</License>
         <Summary xml:lang="en">A color management framework for visual effects and animation.</Summary>
         <Description xml:lang="en">A color management framework for visual effects and animation.
 </Description>
@@ -32,6 +34,7 @@
         <Summary xml:lang="en">A color management framework for visual effects and animation.</Summary>
         <Description xml:lang="en">A color management framework for visual effects and animation.
 </Description>
+        <PartOf>multimedia.video</PartOf>
         <Files>
             <Path fileType="data">/usr/share/ocio</Path>
             <Path fileType="executable">/usr/bin</Path>
