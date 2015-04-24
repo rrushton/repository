@@ -2,8 +2,8 @@
     <Source>
         <Name>geoclue</Name>
         <Packager>
-            <Name>Solus Packaging Team</Name>
-            <Email>packaging@solus-project.com</Email>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
         </Packager>
         <License>GPL-2.0+</License>
         <Summary xml:lang="en">GeoInformation service</Summary>
@@ -23,6 +23,9 @@
         <Files>
             <Path fileType="data">/usr/lib64/pkgconfig</Path>
         </Files>
+        <Replaces>
+            <Package>libgeoclue-devel</Package>
+        </Replaces>
     </Package>
     <Package>
         <Name>geoclue</Name>
@@ -31,21 +34,24 @@
 </Description>
         <PartOf>desktop.web</PartOf>
         <Files>
-            <Path fileType="data">/usr/share/dbus-1</Path>
-            <Path fileType="data">/usr/share/applications</Path>
-            <Path fileType="library">/usr/lib/geoclue</Path>
-            <Path fileType="library">/usr/lib/systemd</Path>
             <Path fileType="config">/etc/dbus-1/system.d</Path>
             <Path fileType="config">/etc/geoclue/geoclue.conf</Path>
+            <Path fileType="library">/usr/lib/systemd</Path>
+            <Path fileType="library">/usr/lib/geoclue</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/applications</Path>
         </Files>
+        <Replaces>
+            <Package>libgeoclue</Package>
+        </Replaces>
     </Package>
     <History>
         <Update release="5">
             <Date>2015-04-24</Date>
             <Version>2.1.9</Version>
             <Comment>Packaging update</Comment>
-            <Name>Solus Packaging Team</Name>
-            <Email>packaging@solus-project.com</Email>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
         </Update>
     </History>
 </PISI>

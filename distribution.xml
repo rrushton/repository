@@ -42,6 +42,10 @@
         <Package>xorg-driver-video-modesetting</Package>
         <Package>glamor-egl</Package>
         <Package>glamor-egl-devel</Package>
+
+        <!-- geoclue rename //-->
+        <Package>libgeoclue</Package>
+        <Package>libgeoclue-devel</Package>
 	</Obsoletes>
 
 </PISI>

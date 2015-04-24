@@ -10,6 +10,9 @@ builddeps   :
     - pkgconfig(json-glib-1.0)
     - pkgconfig(libsoup-2.4)
     - pkgconfig(mm-glib)
+replaces:
+    - devel: libgeoclue-devel
+    - libgeoclue
 description : |
     GeoClue is a modular geoinformation service built on top of the D-Bus messaging system. The goal of the GeoClue project is to make creating location-aware applications as simple as possible.
 setup      : |
