@@ -52,6 +52,9 @@ def config_path():
     homeDir = os.path.expanduser("~")
     if "SUDO_UID" in os.environ:
         homeDir = pwd.getpwuid(int(os.environ['SUDO_UID'])).pw_dir
+    confpath = os.path.join(homeDir, ".solus", "packager")
+    if os.path.exists(confpath):
+        return confpath
     return os.path.realpath(os.path.join(homeDir, ".evolveos", "packager"))
 
 
@@ -530,7 +533,7 @@ def copy_aux(fname):
             return False
 
     try:
-        tgtPath = os.path.join(union_dir(), "root", ".evolveos", "packager")
+        tgtPath = os.path.join(union_dir(), "root", ".solus", "packager")
         tgtDir = os.path.dirname(tgtPath)
         if not os.path.exists(tgtDir):
             os.makedirs(tgtDir)
