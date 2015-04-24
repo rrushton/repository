@@ -1,0 +1,25 @@
+name        : pantheon-terminal
+version     : 0.3.0
+release     : 4
+source      :
+    - https://launchpad.net/pantheon-terminal/0.3.x/0.3.0.1/+download/pantheon-terminal-0.3.0.1.tgz : ea9718b409baa3ebdc175b5d51ed7825f0199e3c3de467a5f7bea6733bbe9a93
+license     :
+    - GPLv3+
+summary     : A super lightweight, beautiful, and simple terminal.
+builddeps   :
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(granite)
+    - pkgconfig(vte-2.91)
+    - pkgconfig(libnotify)
+    - vala
+description : |
+    A super lightweight, beautiful, and simple terminal. It's designed to be setup with sane defaults and little to no configuration. It's just a terminal, nothing more, nothing less.
+    
+    Designed for elementary OS.
+setup      : |
+    %patch -p1 < $pkgfiles/0001-Port-to-vte-2.91.patch
+    %cmake .
+build      : |
+    %make
+install    : |
+    %make_install
