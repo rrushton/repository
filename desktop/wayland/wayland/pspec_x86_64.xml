@@ -19,7 +19,6 @@
         <Files>
             <Path fileType="data">/usr/share/wayland</Path>
             <Path fileType="data">/usr/share/aclocal</Path>
-            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib64/lib*.so.*</Path>
         </Files>
     </Package>
@@ -33,13 +32,14 @@
             <Dependency release="current">wayland</Dependency>
         </RuntimeDependencies>
         <Files>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib64/lib*.so</Path>
             <Path fileType="data">/usr/lib64/pkgconfig</Path>
         </Files>
     </Package>
     <History>
-        <Update release="7">
+        <Update release="9">
             <Date>2015-04-24</Date>
             <Version>1.7.0</Version>
             <Comment>Packaging update</Comment>
