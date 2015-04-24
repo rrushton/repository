@@ -1,7 +1,7 @@
 From 364d25fa2595928ebddf81fd969ba381ff9aff64 Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey@solus-project.com>
 Date: Thu, 23 Apr 2015 23:22:11 +0100
-Subject: [PATCH 3/3] Rebrand/fix URIs
+Subject: [PATCH 3/7] Rebrand/fix URIs
 
 ---
  build.py     | 2 +-

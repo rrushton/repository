@@ -1,7 +1,7 @@
 From 2d711e56ff7b5190fc9f5e5f1db3a47245e06e6c Mon Sep 17 00:00:00 2001
 From: Ikey Doherty <ikey@solus-project.com>
 Date: Thu, 23 Apr 2015 23:18:34 +0100
-Subject: [PATCH 2/3] Add patch support
+Subject: [PATCH 2/7] Add patch support
 
 ---
  build.py                                           | 31 ++++++++++++--

@@ -1,0 +1,24 @@
+From 042edc48e0676e29353cc080ef064de6e3a64f0c Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey@solus-project.com>
+Date: Fri, 24 Apr 2015 00:42:04 +0100
+Subject: [PATCH 5/7] Fix silly print in build
+
+---
+ build.py | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/build.py b/build.py
+index 12bcefa..ed74cb0 100644
+--- a/build.py
++++ b/build.py
+@@ -177,7 +177,6 @@ export pkgfiles="%s"
+     header += inp
+     inp = header
+ 
+-    print "Pkgfiles: %s" % pkgfiles
+     if emul32:
+         inp += """
+ if [ -e "%installroot%/emul32" ]; then
+-- 
+2.3.2
+

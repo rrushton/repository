@@ -17,6 +17,10 @@
             <Patch level="1">0001-packageit-Fix-collapse-issues-and-directory-matching.patch</Patch>
             <Patch level="1">0002-Add-patch-support.patch</Patch>
             <Patch level="1">0003-Rebrand-fix-URIs.patch</Patch>
+            <Patch level="1">0004-Add-rundeps-support.patch</Patch>
+            <Patch level="1">0005-Fix-silly-print-in-build.patch</Patch>
+            <Patch level="1">0006-Add-replaces-support.patch</Patch>
+            <Patch level="1">0007-Enable-custom-patterns-where-required.patch</Patch>
         </Patches>
     </Source>
 
@@ -33,6 +37,14 @@
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>04-23-2015</Date>
+            <Version>2</Version>
+            <Comment>Sync for patterns, rundeps and replace support</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="6">
             <Date>04-23-2015</Date>
             <Version>2</Version>

@@ -1,0 +1,96 @@
+From 8217de481d233292541310c5a41d3bfd9c2bd5a0 Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey@solus-project.com>
+Date: Fri, 24 Apr 2015 01:01:25 +0100
+Subject: [PATCH 6/7] Add replaces support
+
+---
+ packageit.py | 10 ++++++++++
+ sanity.py    | 30 ++++++++++++++++++++++++++++++
+ 2 files changed, 40 insertions(+)
+
+diff --git a/packageit.py b/packageit.py
+index d2832e0..1a4337f 100644
+--- a/packageit.py
++++ b/packageit.py
+@@ -297,6 +297,7 @@ def packageit(ymlFile, installDIR, outputXML):
+         else:
+             package.summary['en'] = d['summary']
+ 
++        # Runtime deps
+         if sanity.rundeps is not None and package.name in sanity.rundeps:
+             for dep in sanity.rundeps[package.name]:
+                 pkgdep = pisi.dependency.Dependency()
+@@ -305,6 +306,15 @@ def packageit(ymlFile, installDIR, outputXML):
+                 pkgdep.package = dep
+                 package.packageDependencies.append(pkgdep)
+ 
++        # Package replacement
++        if sanity.pkg_replaces is not None and package.name in sanity.pkg_replaces:
++            for rpl in sanity.pkg_replaces[package.name]:
++                replace = pisi.replace.Replace()
++                if not package.replaces:
++                    package.replaces = list()
++                replace.package = rpl
++                package.replaces.append(replace)
++
+         spec.packages.append(package)
+ 
+     spec.write(outputXML)
+diff --git a/sanity.py b/sanity.py
+index 48fd960..ff9e715 100644
+--- a/sanity.py
++++ b/sanity.py
+@@ -34,6 +34,9 @@ autodep = True
+ global rundeps
+ rundeps = None
+ 
++global pkg_replaces
++pkg_replaces = None
++
+ global mutations
+ mutations = None
+ 
+@@ -70,6 +73,30 @@ def add_runtime_dep(pkg, dep):
+     if dep not in rundeps[pkgname]:
+         rundeps[pkgname].append(dep)
+ 
++def add_replaces(pkg, pkg2):
++    ''' Explicitly replace one package with another '''
++    global mutations
++    global pkg_replaces
++
++    if not pkg or not pkg2:
++        print "Required values missing for add_replaces"
++        sys.exit(1)
++
++    init_mutations()
++
++    pkgname = pkg
++    if pkgname in mutations:
++        pkgname = mutations[pkgname]
++
++    if not pkg_replaces:
++        pkg_replaces = dict()
++
++    if pkgname not in pkg_replaces:
++        pkg_replaces[pkgname] = list()
++
++    if pkg2 not in pkg_replaces[pkgname]:
++        pkg_replaces[pkgname].append(pkg2)
++
+ def assertGetString(y, n):
+     ''' Ensure string value exists '''
+     if n not in y:
+@@ -312,6 +339,9 @@ def sane(fpath):
+     if "rundeps" in y:
+         rdeps = y["rundeps"]
+         do_multimap(rdeps, "rundeps", add_runtime_dep)
++    if "replaces" in y:
++        rpl = y["replaces"]
++        do_multimap(rpl, "replaces", add_replaces)
+ 
+     # Fuzzy.
+     assertIsString(y, "setup")
+-- 
+2.3.2
+
