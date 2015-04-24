@@ -1,0 +1,40 @@
+From 8915de5de46d2fdecbb975e97dd8f8121d76ea51 Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey@solus-project.com>
+Date: Sat, 25 Apr 2015 00:36:09 +0100
+Subject: [PATCH] sanity: Safely support new path
+
+---
+ sanity.py | 16 ++++++++++------
+ 1 file changed, 10 insertions(+), 6 deletions(-)
+
+diff --git a/sanity.py b/sanity.py
+index 9e83157..9eda854 100644
+--- a/sanity.py
++++ b/sanity.py
+@@ -324,13 +324,17 @@ def sane(fpath):
+         sys.exit(1)
+ 
+     # Determine packager...
+-    confPath = "%s/.evolveos/packager" % os.path.expanduser("~")
++    confPathOld = "%s/.evolveos/packager" % os.path.expanduser("~")
++    confPath = "%s/.solus/packager" % os.path.expanduser("~")
+     if not os.path.exists(confPath):
+-        print "Ensure %s exists!" % confPath
+-        print "[Packager]"
+-        print "Name=Your Name Here"
+-        print "Email=yourAwesome@email.address"
+-        sys.exit(1)
++        if os.path.exists(confPathOld):
++            confPath = confPathOld
++        else:
++            print "Ensure %s exists!" % confPath
++            print "[Packager]"
++            print "Name=Your Name Here"
++            print "Email=yourAwesome@email.address"
++            sys.exit(1)
+ 
+     confObj = ConfigObj(confPath)
+     global pkger_name
+-- 
+2.3.2
+
