@@ -1,8 +1,8 @@
 name       : evopop-icon-theme
-version    : 0.4
-release    : 3
+version    : 0.5
+release    : 4
 source     :
-    - https://github.com/solus-project/evopop-icon-theme/releases/download/0.4/EvoPop-0.4.tar.xz : f2849ba6218ae2bb7651968b917c785ba1486deeb05bdc8074c8f8e7c392963e
+    - https://github.com/solus-project/evopop-icon-theme/releases/download/0.5/EvoPop-0.5.tar.xz : 1735ad3aefec89ab4c39a83ed6595c2a4baa8bdb773d5b61a235f9f102fbdee6
 license    : CC-BY-4.0
 summary    : EvoPop Icon Theme
 description: |
