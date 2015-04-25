@@ -2,8 +2,8 @@
     <Source>
         <Name>telegram</Name>
         <Packager>
-            <Name>Joshua Strobl</Name>
-            <Email>joshua.strobl@outlook.com</Email>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
         </Packager>
         <License>GPL-3.0</License>
         <Summary xml:lang="en">Telegram is a messaging app with a focus on speed and security, it’s super fast, simple and free.</Summary>
@@ -18,9 +18,9 @@
 </Description>
         <PartOf>network.clients</PartOf>
         <Files>
+            <Path fileType="data">/opt/telegram/icon.png</Path>
             <Path fileType="data">/opt/telegram/Telegram</Path>
             <Path fileType="data">/opt/telegram/Updater</Path>
-            <Path fileType="data">/opt/telegram/icon.png</Path>
             <Path fileType="data">/usr/share/applications</Path>
         </Files>
     </Package>
@@ -28,23 +28,9 @@
         <Update release="3">
             <Date>2015-04-25</Date>
             <Version>0.8.7</Version>
-            <Comment>Packaging update - New photo viewer design, group notification improvements, new default chat background, and more.</Comment>
-            <Name>Joshua Strobl</Name>
-            <Email>joshua.strobl@outlook.com</Email>
-        </Update>
-        <Update release="2">
-            <Date>2015-04-15</Date>
-            <Version>0.8.4</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joshua Strobl</Name>
-            <Email>joshua.strobl@outlook.com</Email>
-        </Update>
-        <Update release="1">
-            <Date>2015-04-07</Date>
-            <Version>0.8</Version>
-            <Comment>Packaging update</Comment>
-            <Name>Joshua Strobl</Name>
-            <Email>joshua.strobl@outlook.com</Email>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
         </Update>
     </History>
 </PISI>
