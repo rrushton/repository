@@ -9,7 +9,7 @@
         <Summary xml:lang="en">Telegram is a messaging app with a focus on speed and security, it’s super fast, simple and free.</Summary>
         <Description xml:lang="en">Telegram is a messaging app with a focus on speed and security, it’s super fast, simple and free. 
 </Description>
-        <Archive type="binary" sha1sum="083029a13c0c475bf42a4232c68a9caa6dbc763e">https://evolve-os.com/sources/README</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
     </Source>
     <Package>
         <Name>telegram</Name>
@@ -18,11 +18,20 @@
 </Description>
         <PartOf>network.clients</PartOf>
         <Files>
-            <Path fileType="data">/opt/telegram</Path>
-            <Path fileType="data">/usr/share/applications/telegram.desktop</Path>
+            <Path fileType="data">/opt/telegram/Telegram</Path>
+            <Path fileType="data">/opt/telegram/Updater</Path>
+            <Path fileType="data">/opt/telegram/icon.png</Path>
+            <Path fileType="data">/usr/share/applications</Path>
         </Files>
     </Package>
     <History>
+        <Update release="3">
+            <Date>2015-04-25</Date>
+            <Version>0.8.7</Version>
+            <Comment>Packaging update - New photo viewer design, group notification improvements, new default chat background, and more.</Comment>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua.strobl@outlook.com</Email>
+        </Update>
         <Update release="2">
             <Date>2015-04-15</Date>
             <Version>0.8.4</Version>
