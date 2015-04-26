@@ -3,7 +3,7 @@
 #  ep-update.py: Update a package using a tarball
 #
 #  USAGE: ep-update.py VERSION UPSTREAM_URL
-#  Copyright 2015 Ikey Doherty <ikey@evolve-os.com>
+#  Copyright 2015 Ikey Doherty <iikey@solus-project.com>
 #
 #  WARNING: Not well tested, strips comments, and reorders attributes. Crap error handling
 #
