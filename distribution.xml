@@ -1,9 +1,9 @@
 <PISI>
-	<SourceName>Evolve OS</SourceName>
+	<SourceName>Solus</SourceName>
 	<Version>1</Version>
-	<Description xml:lang="en">Evolve OS Repository</Description>
+	<Description xml:lang="en">Solus Repository</Description>
 	<Type>main</Type>
-	<BinaryName>Evolve OS</BinaryName>
+	<BinaryName>Solus</BinaryName>
 	
 	<Obsoletes>
 		<!-- Replaced by libpcre -->
