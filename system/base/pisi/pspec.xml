@@ -27,6 +27,9 @@
             <Patch level="1">0002-build-Fix-warn-vs-warning-issue.patch</Patch>
             <Patch level="1">0003-build-Ensure-installdb-is-used-not-packagedb.patch</Patch>
             <Patch level="1">magic-fail.patch</Patch>
+            <Patch level="1">0001-branding-update.patch</Patch>
+            <Patch level="1">0003-Branding-update-round-3.patch</Patch>
+            <Patch level="1">0004-configfile-Use-correct-short-distro-prefix.patch</Patch>
         </Patches>
     </Source>
 
@@ -38,7 +41,7 @@
             <Path fileType="library">/usr/lib/python*</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-            <Path fileType="config">/etc/eopkg</Path>
+            <Path fileType="data">/etc/eopkg</Path>
             <Path fileType="config">/etc/pisi/pisi.conf</Path>
             <Path fileType="config">/etc/mudur/locale</Path>
             <Path fileType="data">/usr/share/mime/packages</Path>
@@ -63,6 +66,14 @@
     </Package>
 
     <History>
+        <Update release="38">
+            <Date>04-27-2015</Date>
+            <Version>3.2</Version>
+            <Comment>Distro update</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="37">
             <Date>04-24-2015</Date>
             <Version>3.2</Version>
