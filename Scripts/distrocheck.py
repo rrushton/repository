@@ -26,6 +26,7 @@ if __name__ == "__main__":
         binCount += len(bads[src])
         print "%s -  %s packages" % (src, len(bads[src]))
     print
-    print "%s source packages have an incorrect distribution string (%s binary)" % (len(bads.keys()), binCount)
+    top = len(bads.keys()) + len(goods.keys())
+    print "%s of %s source packages have an incorrect distribution string (%s binary)" % (len(bads.keys()), top, binCount)
     print "%s have the correct distribution string" % len(goods.keys())
-    print "Progress: %0.2f%%" % ((float(len(goods.keys())) / float(len(bads.keys())))*100)
+    print "Progress: %0.2f%%" % ((float(len(goods.keys())) / float(top))*100)
