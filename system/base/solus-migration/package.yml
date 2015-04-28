@@ -1,0 +1,15 @@
+name        : solus-migrate
+version     : 1
+release     : 1
+source      :
+    - https://solus-project.com/sources/solus-migrate-1.tar.xz : 7215488fe639a0bca19ea97f92f6a5cb755fa6f833e416be315624cf9b324ec8
+license     :
+    - GPLv2+
+summary     : Solus Migration Assistant - Reboot Required
+description : |
+    Solus Migration Assistant - Fixes "Evolve OS" strings, and repository.
+install    : |
+    mkdir -p $installdir/usr/lib/systemd/system/multi-user.target.wants
+    install -D -m 0644 solus-migrate.service $installdir/usr/lib/systemd/system/solus-migrate.service
+    install -D -m 0755 solus-migrate $installdir/usr/sbin/solus-migrate
+    ln -sv /usr/lib/systemd/solus-migrate.service $installdir/usr/lib/systemd/system/multi-user.target.wants/.
