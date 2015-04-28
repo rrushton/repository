@@ -1,8 +1,8 @@
 name        : solus-migrate
-version     : 1
-release     : 1
-source      :
-    - https://solus-project.com/sources/solus-migrate-1.tar.xz : 7215488fe639a0bca19ea97f92f6a5cb755fa6f833e416be315624cf9b324ec8
+version     : 2
+release     : 2
+source     :
+    - https://solus-project.com/sources/solus-migrate-2.tar.xz : 360676c8bcfb44fbe09a37db1ac3b1cb4224031fcd8dbfe0c386b679d90020f6
 license     :
     - GPLv2+
 summary     : Solus Migration Assistant - Reboot Required
