@@ -46,6 +46,9 @@
         <!-- geoclue rename //-->
         <Package>libgeoclue</Package>
         <Package>libgeoclue-devel</Package>
+
+        <!-- Removed after rename //-->
+        <Package>solus-migration</Package>
 	</Obsoletes>
 
 </PISI>
