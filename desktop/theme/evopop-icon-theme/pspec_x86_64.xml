@@ -22,9 +22,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="4">
-            <Date>2015-04-25</Date>
-            <Version>0.5</Version>
+        <Update release="5">
+            <Date>2015-05-01</Date>
+            <Version>0.6</Version>
             <Comment>Packaging update</Comment>
             <Name>Ikey Doherty</Name>
             <Email>ikey@solus-project.com</Email>
