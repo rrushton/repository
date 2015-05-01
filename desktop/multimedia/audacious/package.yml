@@ -1,0 +1,19 @@
+name       : audacious-3.6.1
+version    : 3.6.1
+release    : 1
+source     :
+    - http://distfiles.audacious-media-player.org/audacious-3.6.1-gtk3.tar.bz2 : b815a236c898931d8c678c770801b3a355dc0527be0749a8e4928b5f9e819c54
+license    : GPL-3.0 
+summary    : Audacious is an open source audio player.
+description: |
+    Audacious is an open source audio player. A descendant of XMMS, Audacious plays your music how you want it, without stealing away your computer’s resources from other tasks.
+clang      : no
+builddeps  :
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(libguess)
+setup      : |
+    %configure --prefix=/usr
+build      : |
+    %make
+install    : |
+    %make_install
