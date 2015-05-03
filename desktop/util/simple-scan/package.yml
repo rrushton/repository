@@ -12,12 +12,13 @@ builddeps  :
     - pkgconfig(cairo)
     - pkgconfig(gdk-pixbuf-2.0)
     - pkgconfig(sane-backends)
+    - pkgconfig(colord)
     - libjpeg-turbo-devel
     - itstool
     - vala
 setup      : |
     %configure
 build      : |
-    %make
+    make -j1
 install    : |
     %make_install
