@@ -1,9 +1,9 @@
 name       : mpv
 homepage   : http://mpv.io/
-version    : 0.8.2
-release    : 2
+version    : 0.9.1
+release    : 3
 source     :
-    - https://github.com/mpv-player/mpv/archive/v0.8.2.tar.gz : a565934bf668b24a946f192f06981664415bd991fd204454b85bb8f7978074a7
+    - https://github.com/mpv-player/mpv/archive/v0.9.1.tar.gz : 5d23688575d2cc4484f7feef628c690f68016e385622201894d02cb238ea179e
 license    : GPL-2.0
 summary    : mpv is a fork of mplayer2 and MPlayer. It shares some features with the former projects while introducing many more.
 description: |
