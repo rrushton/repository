@@ -1,8 +1,8 @@
 name       : plank
-version    : 0.9.0
-release    : 2
+version    : 0.9.1
+release    : 3
 source     :
-    - https://launchpad.net/plank/1.0/0.9.0/+download/plank-0.9.0.tar.xz : 3a878a393a1e274d44ee88e80e879d30132af1cb1e76c4274dde16666a01a0d4
+    - https://launchpad.net/plank/1.0/0.9.1/+download/plank-0.9.1.tar.xz : 884cd57a0fcc78cf82cf01072dedc46c34b6f766871d5f773b68ee498fded9a2
 license    : GPL-3.0
 clang      : no
 summary    : Simple application dock
