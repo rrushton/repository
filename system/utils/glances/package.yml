@@ -1,0 +1,18 @@
+name       : glances
+version    : 2.3
+release    : 2
+source     :
+    - https://github.com/nicolargo/glances/archive/v2.3.tar.gz : 0c75359001b54f9419499739a3f43ab176f48ddf9cf219e5b9fc4ad5c1bc7482
+license    : LGPL-3.0
+summary    : CLI curses-based monitoring tool
+description: |
+    CLI curses-based monitoring tool
+builddeps  :
+    - python-setuptools
+    - python-psutil
+rundeps    :
+    - python-psutil
+setup      : |
+build      : |
+install    : |
+    python setup.py install --root=%installroot% --no-compile -O0
