@@ -1,9 +1,8 @@
 name        : rhythmbox
-version     : 3.2
-release     : 6
-source      :
-    - http://ftp.gnome.org/pub/GNOME/sources/rhythmbox/3.2/rhythmbox-3.2.tar.xz : 9c8adf79e4b2bb76cee391c73ba7a1e699e7684e5f45507e7d6849957ac54f81
-homepage    : https://wiki.gnome.org/Apps/Rhythmbox
+version     : 3.2.1
+release     : 7
+source     :
+    - http://ftp.gnome.org/pub/gnome/sources/rhythmbox/3.2/rhythmbox-3.2.1.tar.xz : bf43ca4f5b7531751241f5e67eaba7da6d9748dd827a600eedf9444961537938
 license     :
     - GPL-2.0
 summary     : Music playing application for GNOME
@@ -15,7 +14,6 @@ builddeps   :
     - pkgconfig(totem-plparser)
     - pkgconfig(json-glib-1.0)
     - pkgconfig(gstreamer-audio-1.0)
-    - pkgconfig(gstreamer-plugins-base-1.0)
     - pkgconfig(ice)
     - pkgconfig(sm)
     - pkgconfig(libnotify)
