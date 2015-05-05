@@ -1,8 +1,8 @@
 name       : gtk-sharp
-version    : 2.12.25
-release    : 1
+version    : 2.12.29
+release    : 2
 source     :
-    - https://github.com/mono/gtk-sharp/archive/2.12.25.tar.gz : c23275968b699f968cd8c7038218a050add18608cfaed01282606428f4ae6b72
+    - https://github.com/mono/gtk-sharp/archive/2.12.29.tar.gz : 516188633df6eb0093143cff4da974807f8a3febe4046170911e6583e109cd22
 license    : GPL-2.0 
 summary    : GTKSharp
 description: |
@@ -11,7 +11,8 @@ builddeps  :
     - pkgconfig(gtk+-2.0)
     - pkgconfig(atk)
     - pkgconfig(cairo)
-    - mono-devel
+    - pkgconfig(gladeui-2.0)
+    - pkgconfig(mono)
 setup      : |
     ./bootstrap-2.12
     %configure
