@@ -1,0 +1,18 @@
+name        : numix-icon-theme
+version     : 0.3.369
+release     : 4
+source      :
+    - http://ppa.launchpad.net/numix/ppa/ubuntu/pool/main/n/numix-icon-theme/numix-icon-theme_0.3+369~201505042247~ubuntu15.04.1.tar.xz : 808daeb2c1cd44b4aef21d02b3c8e33a95a877d4575b49757840ef2f365a3d69
+homepage    : http://numixproject.org/
+license     : GPL-3.0+
+summary     : The Numix Icon Theme
+description : |
+    Designed to look fresh, swishy and modern using white symbols on vividly
+    coloured background for applications and simplistic devices, toolbars
+    and status icons.
+setup      : |
+build      : |
+install    : |
+    mkdir -p %installroot%/usr/share/icons/
+    mv Numix %installroot%/usr/share/icons/
+    mv Numix-Light %installroot%/usr/share/icons/
