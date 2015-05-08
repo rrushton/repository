@@ -11,7 +11,7 @@
         <Summary>Budgie Desktop</Summary>
         <Description>Budgie Desktop</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="eb1f224ce2a9335e70ddc074f787151b0ecdcfe4" type="tarxz">https://solus-project.com/sources/budgie-desktop-8.1.tar.xz</Archive>
+        <Archive sha1sum="7981c5081fb66412e661cdac5c34106085b57a78" type="tarxz">https://github.com/solus-project/budgie-desktop/releases/download/v8.2/budgie-desktop-8.2.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
@@ -29,7 +29,6 @@
             <Patch level="1">0001-session-Force-gnome-as-XDG_CURRENT_DESKTOP-when-abse.patch</Patch>
             <Patch level="1">0002-session-Make-Java-Google-Chrome-and-XDG-happy-by-lyi.patch</Patch>
             <Patch level="1">0003-session-XDG_CURRENT_DESKTOP-is-case-sensitive.-Whoda.patch</Patch>
-            <Patch level="1">no_wm_settings.patch</Patch>
         </Patches>
     </Source>
 
@@ -41,6 +40,7 @@
             <Path fileType="library">/usr/lib/girepository-1.0</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/applications/budgie-settings.desktop</Path>
             <Path fileType="data">/usr/share/budgie-desktop</Path>
             <Path fileType="library">/usr/lib/budgie-desktop/Gvc-1.0.typelib</Path>
             <Path fileType="library">/usr/lib/budgie-desktop/lib*.so</Path>
@@ -64,6 +64,14 @@
     </Package>
 
     <History>
+        <Update release="47">
+            <Date>05-08-2015</Date>
+            <Version>8.2</Version>
+            <Comment>Update to 8.2</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="46">
             <Date>05-04-2015</Date>
             <Version>8.1</Version>
