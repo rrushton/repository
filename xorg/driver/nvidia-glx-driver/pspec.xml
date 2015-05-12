@@ -42,10 +42,19 @@
         </Provides>
         <RuntimeDependencies>
             <Dependency>gl-driver-switch</Dependency>
+            <Dependency>kernel-modules</Dependency>
         </RuntimeDependencies>
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>05-12-2015</Date>
+            <Version>346.59</Version>
+            <Comment>Fix update behaviour</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>05-12-2015</Date>
             <Version>346.59</Version>
