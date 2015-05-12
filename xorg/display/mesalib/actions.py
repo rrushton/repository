@@ -37,3 +37,28 @@ def install():
     autotools.rawInstall ("-C xdemos DEMOS_PREFIX=/usr DESTDIR=%s" % get.installDIR())
 
     # Add docs at some stage
+
+    #/usr/lib/libEGL.so.1
+    #/usr/lib/libEGL.so.1.0.0
+    #/usr/lib/libGL.so.1
+    #/usr/lib/libGL.so.1.2.0
+    #/usr/lib/libGLESv1_CM.so.1
+    #/usr/lib/libGLESv1_CM.so.1.1.0
+    #/usr/lib/libGLESv2.so.2
+    #/usr/lib/libGLESv2.so.2.0.0
+    pisitools.dodir("/usr/lib/glx-provider/default")
+
+    def redo_lib(name, version, short_version):
+        ''' Move full version and short version '''
+        pisitools.domove("/usr/lib/%s.so.%s" % (name, version), "/usr/lib/glx-provider/default/")
+        pisitools.remove("/usr/lib/%s.so.%s" % (name, short_version))
+        pisitools.remove("/usr/lib/%s.so" % name)
+        # Reset non-versioned to short versioned - which is controlled by gl-driver-switch.
+        pisitools.dosym("/usr/lib/%s.so.%s" % (name, short_version), "/usr/lib/%s.so" % name)
+        pisitools.dosym("/usr/lib/glx-provider/default/%s.so.%s" % (name,version), "/usr/lib/glx-provider/default/%s.so.%s" % (name, short_version))
+        pisitools.dosym("/usr/lib/glx-provider/default/%s.so.%s" % (name, version), "/usr/lib/glx-provider/default/%s.so" % name)
+
+    redo_lib("libEGL", "1.0.0", "1")
+    redo_lib("libGL", "1.2.0", "1")
+    redo_lib("libGLESv1_CM", "1.1.0", "1")
+    redo_lib("libGLESv2", "2.0.0", "2")

@@ -42,6 +42,7 @@
         <Name>mesalib</Name>
         <Files>
             <Path fileType="library">/usr/lib/lib*.so.*</Path>
+            <Path fileType="library">/usr/lib/glx-provider/default</Path>
             <Path fileType="library">/usr/lib/dri/*.so*</Path>
             <Path fileType="library">/usr/lib/egl/*.so*</Path>
             <Path fileType="library">/usr/lib/gallium-pipe/*.so*</Path>
@@ -49,6 +50,12 @@
             <Path fileType="library">/usr/lib/vdpau/*.so*</Path>
             <Path fileType="config">/etc</Path>
         </Files>
+        <Provides>
+            <COMAR script="package.py">System.Package</COMAR>
+        </Provides>
+        <RuntimeDependencies>
+            <Dependency>gl-driver-switch</Dependency>
+        </RuntimeDependencies>
     </Package>
 
     <Package>
@@ -79,6 +86,14 @@
     </Package>
 
     <History>
+        <Update release="10">
+            <Date>05-12-2015</Date>
+            <Version>10.5.3</Version>
+            <Comment>Switch to gl-driver-switch system</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="9">
             <Date>04-20-2015</Date>
             <Version>10.5.3</Version>
