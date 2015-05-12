@@ -19,3 +19,8 @@ def build():
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+
+    # Integrate with gl-driver-switch
+    pisitools.dodir("/usr/lib/glx-provider/default")
+    pisitools.domove("/usr/lib/xorg/modules/extensions/libglx.so", "/usr/lib/glx-provider/default/")
+    pisitools.dosym("/usr/lib/glx-provider/default/libglx.so", "/usr/lib/glx-provider/default/libglx.so.1")
