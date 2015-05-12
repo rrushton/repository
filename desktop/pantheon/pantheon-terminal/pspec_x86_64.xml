@@ -21,6 +21,7 @@ Designed for elementary OS.
 Designed for elementary OS.
 </Description>
         <Files>
+            <Path fileType="data">/usr/share/pantheon-terminal</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="data">/usr/share/glib-2.0</Path>
             <Path fileType="data">/usr/share/applications</Path>
@@ -28,9 +29,9 @@ Designed for elementary OS.
         </Files>
     </Package>
     <History>
-        <Update release="4">
-            <Date>2015-04-24</Date>
-            <Version>0.3.0</Version>
+        <Update release="5">
+            <Date>2015-05-12</Date>
+            <Version>0.3.1.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Ikey Doherty</Name>
             <Email>ikey@solus-project.com</Email>

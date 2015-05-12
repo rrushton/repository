@@ -1,8 +1,8 @@
 name        : pantheon-terminal
-version     : 0.3.0
-release     : 4
-source      :
-    - https://launchpad.net/pantheon-terminal/0.3.x/0.3.0.1/+download/pantheon-terminal-0.3.0.1.tgz : ea9718b409baa3ebdc175b5d51ed7825f0199e3c3de467a5f7bea6733bbe9a93
+version     : 0.3.1.1
+release     : 5
+source     :
+    - https://launchpad.net/pantheon-terminal/0.3.x/0.3.1.1/+download/pantheon-terminal-0.3.1.1.tgz : 928f705376a4da5ed6f9319333d9af3e87a24c7feab21107715191e00c6abc96
 license     :
     - GPLv3+
 summary     : A super lightweight, beautiful, and simple terminal.
