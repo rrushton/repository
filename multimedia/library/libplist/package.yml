@@ -7,10 +7,10 @@ license    : GPL-2.0
 summary    : A small portable C library to handle Apple Property List files in binary or XML.
 description: |
     A small portable C library to handle Apple Property List files in binary or XML.
-clang  :  no
+clang      :  no
 builddeps  : make automake autoconf libtool pkg-config gcc libxml2-devel
 setup      : |
-    %configure
+    %configure --disable-static
 build      : |
     %make
 install    : |
