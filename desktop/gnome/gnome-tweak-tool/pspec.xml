@@ -25,6 +25,7 @@
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib/python2.7</Path>
+            <Path fileType="library">/usr/libexec/gnome-tweak-tool-lid-inhibitor</Path>
             <Path fileType="data">/usr/share/gnome-tweak-tool</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="data">/usr/share/applications</Path>
