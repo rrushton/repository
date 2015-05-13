@@ -10,7 +10,7 @@
         <Summary>Linux Kernel</Summary>
         <Description>This package contains the binary image of the Linux kernel, required to use the operating system</Description>
         <License>GPLv3+</License>
-        <Archive sha1sum="7cbf866af2497778b8c82f37e7643dd3401049d3" type="targz">https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.19.7.tar.gz</Archive>
+        <Archive sha1sum="fe1fe80b6f4950e2beedcfd14cff6a907c4b013b" type="targz">https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.0.2.tar.gz</Archive>
         <AdditionalFiles>
             <AdditionalFile target="configs/kernel-i686-config">configs/kernel-i686-config</AdditionalFile>
             <AdditionalFile target="configs/kernel-x86_64-config">configs/kernel-x86_64-config</AdditionalFile>
@@ -74,6 +74,14 @@
     </Package>
 
     <History>
+        <Update release="41">
+            <Date>05-13-2015</Date>
+            <Version>4.0.2</Version>
+            <Comment>Update to latest 4.0.x kernel</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="40">
             <Date>05-09-2015</Date>
             <Version>3.19.7</Version>
