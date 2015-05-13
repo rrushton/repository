@@ -7,14 +7,17 @@ from pisi.actionsapi import get, shelltools, pisitools, autotools, kerneltools
 
 wdir = "NVIDIA-Linux-x86_64-%s" % get.srcVERSION()
 
+# Required... built in tandem with kernel update
+kversion = "4.0.2"
+
 def setup():
     shelltools.system("sh NVIDIA-Linux-x86_64-%s.run --extract-only" % get.srcVERSION())
 
 def build():
     shelltools.cd(wdir + "/kernel")
-    autotools.make("module")
+    autotools.make("\"SYSSRC=/lib64/modules/%s/build\" module" % kversion)
     shelltools.cd("uvm")
-    autotools.make("module")
+    autotools.make("\"SYSSRC=/lib64/modules/%s/build\" module" % kversion)
 
 def link_install(lib, libdir='/usr/lib', abi='1'):
     ''' Install a library with necessary links '''
@@ -27,7 +30,7 @@ def install():
     shelltools.cd(wdir)
     pisitools.dolib("nvidia_drv.so", "/usr/lib/xorg/modules/drivers")
 
-    kdir = "/lib64/modules/%s/kernel/drivers/video" % kerneltools.getKernelVersion()
+    kdir = "/lib64/modules/%s/kernel/drivers/video" % kversion
 
     # libGL replacement - conflicts
     libs = ["libGL", "libEGL", "libGLESv1_CM", "libGLESv2", "libglx"]
