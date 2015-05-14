@@ -1,6 +1,6 @@
 name       : libzip
 version    : 1.0.1
-release    : 1
+release    : 2
 source     :
     - http://www.nih.at/libzip/libzip-1.0.1.tar.xz : f948d597afbb471de8d528d0e35ed977de85b2f4d76fdd74abbb985550e5d840
 license    : BSD
@@ -9,7 +9,7 @@ description: |
     libzip is a C library for reading, creating, and modifying zip archives.
 builddeps  : zlib
 setup      : |
-    %cmake .
+    %configure --disable-static
 build      : |
     %make
 install    : |

@@ -22,7 +22,9 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>
-            <Path fileType="library">/usr/lib/lib*.so</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+            <Path fileType="library">/usr/lib64/lib*.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig</Path>
         </Files>
     </Package>
     <Package>
@@ -32,15 +34,14 @@
 </Description>
         <PartOf>library</PartOf>
         <Files>
-            <Path fileType="data">/usr/man/man3</Path>
-            <Path fileType="data">/usr/man/man1</Path>
-            <Path fileType="library">/usr/lib/lib*.so.*</Path>
-            <Path fileType="library">/usr/lib/libzip</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="library">/usr/lib64/lib*.so.*</Path>
+            <Path fileType="library">/usr/lib64/libzip</Path>
             <Path fileType="executable">/usr/bin</Path>
         </Files>
     </Package>
     <History>
-        <Update release="1">
+        <Update release="2">
             <Date>2015-05-14</Date>
             <Version>1.0.1</Version>
             <Comment>Packaging update</Comment>
