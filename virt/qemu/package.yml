@@ -1,7 +1,7 @@
 name       : qemu
 version    : 2.3.0
 homepage   : http://wiki.qemu.org/Main_Page
-release    : 2
+release    : 3
 clang      : no
 source     :
     - http://wiki.qemu-project.org/download/qemu-2.3.0.tar.bz2 : b6bab7f763d5be73e7cb5ee7d4c8365b7a8df2972c52fa5ded18893bd8281588
@@ -29,6 +29,7 @@ builddeps  :
     - pkgconfig(alsa)
     - libjpeg-turbo-devel
 setup      : |
+    %patch -p1 < $pkgfiles/security/cve-2015-3456.patch
     ./configure --prefix=/usr \
                 --libdir=%libdir% \
                 --sysconfdir=/etc \
