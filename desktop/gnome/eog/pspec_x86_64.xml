@@ -1,16 +1,15 @@
 <PISI>
     <Source>
         <Name>eog</Name>
-        <Homepage>http://projects.gnome.org/eog/</Homepage>
         <Packager>
-            <Name>Justin Zobel</Name>
-            <Email>justin.zobel@gmail.com</Email>
+            <Name>Solus Packaging Team</Name>
+            <Email>packaging@solus-project.com</Email>
         </Packager>
         <License>GPL-2.0+</License>
         <Summary xml:lang="en">The Eye of GNOME image viewer is the official image viewer for the GNOME Desktop environment. With it, you can view single image files, as well as large image collections.</Summary>
         <Description xml:lang="en">The Eye of GNOME image viewer is the official image viewer for the GNOME Desktop environment. With it, you can view single image files, as well as large image collections. The Eye of GNOME supports a variety of image file formats. The GdkPixbuf library determines which file formats Eye of GNOME can load and save.
 </Description>
-        <Archive type="binary" sha1sum="083029a13c0c475bf42a4232c68a9caa6dbc763e">https://evolve-os.com/sources/README</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
     </Source>
     <Package>
         <Name>eog-devel</Name>
@@ -22,8 +21,8 @@
             <Dependency release="current">eog</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="data">/usr/lib64/pkgconfig</Path>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig</Path>
         </Files>
     </Package>
     <Package>
@@ -31,25 +30,18 @@
         <Summary xml:lang="en">The Eye of GNOME image viewer is the official image viewer for the GNOME Desktop environment. With it, you can view single image files, as well as large image collections.</Summary>
         <Description xml:lang="en">The Eye of GNOME image viewer is the official image viewer for the GNOME Desktop environment. With it, you can view single image files, as well as large image collections. The Eye of GNOME supports a variety of image file formats. The GdkPixbuf library determines which file formats Eye of GNOME can load and save.
 </Description>
+        <PartOf>desktop.gnome</PartOf>
         <Files>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/GConf</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/eog</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/appdata</Path>
+            <Path fileType="data">/usr/share/help</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib64/eog</Path>
-            <Path fileType="library">/usr/lib64/eog/plugins</Path>
-            <Path fileType="library">/usr/lib64/eog/girepository-1.0/Eog-3.0.typelib</Path>
-            <Path fileType="data">/usr/share/help</Path>
-            <Path fileType="data">/usr/share/applications/eog.desktop</Path>
-            <Path fileType="data">/usr/share/eog/gir-1.0/Eog-3.0.gir</Path>
-            <Path fileType="data">/usr/share/eog/icons/hicolor/22x22/actions</Path>
-            <Path fileType="data">/usr/share/eog/icons/hicolor/32x32/actions</Path>
-            <Path fileType="data">/usr/share/eog/icons/hicolor/24x24/actions</Path>
-            <Path fileType="data">/usr/share/eog/icons/hicolor/48x48/actions/slideshow-play.png</Path>
-            <Path fileType="data">/usr/share/eog/icons/hicolor/16x16/actions</Path>
-            <Path fileType="data">/usr/share/eog/icons/hicolor/scalable/actions</Path>
-            <Path fileType="localedata">/usr/share/locale</Path>
-            <Path fileType="data">/usr/share/appdata/eog.appdata.xml</Path>
-            <Path fileType="data">/usr/share/icons</Path>
-            <Path fileType="data">/usr/share/glib-2.0/schemas</Path>
-            <Path fileType="data">/usr/share/GConf/gsettings/eog.convert</Path>
         </Files>
     </Package>
     <Package>
@@ -57,6 +49,7 @@
         <Summary xml:lang="en">Documentation for eog</Summary>
         <Description xml:lang="en">The Eye of GNOME image viewer is the official image viewer for the GNOME Desktop environment. With it, you can view single image files, as well as large image collections. The Eye of GNOME supports a variety of image file formats. The GdkPixbuf library determines which file formats Eye of GNOME can load and save.
 </Description>
+        <PartOf>programming.docs</PartOf>
         <RuntimeDependencies>
             <Dependency release="current">eog</Dependency>
         </RuntimeDependencies>
@@ -65,12 +58,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="10">
-            <Date>2015-04-16</Date>
-            <Version>3.16.1</Version>
+        <Update release="11">
+            <Date>2015-05-14</Date>
+            <Version>3.16.2</Version>
             <Comment>Packaging update</Comment>
-            <Name>Justin Zobel</Name>
-            <Email>justin.zobel@gmail.com</Email>
+            <Name>Solus Packaging Team</Name>
+            <Email>packaging@solus-project.com</Email>
         </Update>
     </History>
 </PISI>

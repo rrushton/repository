@@ -1,9 +1,8 @@
 name        : eog
-version     : 3.16.1
-release     : 10
-source      :
-    - http://ftp.gnome.org/pub/gnome/sources/eog/3.16/eog-3.16.1.tar.xz : 2979d1852397310ad4e04bfa4eb1fa4d9fb342071f0797c9de077fd13607c1e7
-homepage    : http://projects.gnome.org/eog/
+version     : 3.16.2
+release     : 11
+source     :
+    - http://ftp.gnome.org/pub/gnome/sources/eog/3.16/eog-3.16.2.tar.xz : 802f68572d86bbb1e5969a385a76462aa42ea53aba6c65bf7337f528cb0a3c3b
 license     : GPL-2.0+
 summary     : The Eye of GNOME image viewer is the official image viewer for the GNOME Desktop environment. With it, you can view single image files, as well as large image collections.
 builddeps   :
