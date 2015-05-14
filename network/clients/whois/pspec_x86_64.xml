@@ -16,7 +16,7 @@
         <Summary xml:lang="en">whois client</Summary>
         <Description xml:lang="en">whois client
 </Description>
-        <PartOf>system.base</PartOf>
+        <PartOf>network.clients</PartOf>
         <Files>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
@@ -24,7 +24,7 @@
         </Files>
     </Package>
     <History>
-        <Update release="1">
+        <Update release="2">
             <Date>2015-05-14</Date>
             <Version>5.2.7</Version>
             <Comment>Packaging update</Comment>
