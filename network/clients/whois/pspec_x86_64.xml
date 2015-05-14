@@ -14,7 +14,7 @@
     <Package>
         <Name>whois</Name>
         <Summary xml:lang="en">whois client</Summary>
-        <Description xml:lang="en">whois client
+        <Description xml:lang="en">whois client - perform DNS lookups on remote hosts
 </Description>
         <PartOf>network.clients</PartOf>
         <Files>
