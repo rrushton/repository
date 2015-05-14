@@ -12,6 +12,11 @@ def setup():
                          --with-fontrootdir=/usr/share/fonts \
                          --enable-glamor \
                          --enable-xwayland \
+                         --enable-kdrive \
+                         --enable-kdrive-kbd \
+                         --enable-kdrive-evdev \
+                         --enable-kdrive-mouse \
+                         --enable-xephyr \
                          --disable-static")
 
 def build():
@@ -24,3 +29,4 @@ def install():
     pisitools.dodir("/usr/lib/glx-provider/default")
     pisitools.domove("/usr/lib/xorg/modules/extensions/libglx.so", "/usr/lib/glx-provider/default/")
     pisitools.dosym("/usr/lib/glx-provider/default/libglx.so", "/usr/lib/glx-provider/default/libglx.so.1")
+    pisitools.removeDir("/var/log")
