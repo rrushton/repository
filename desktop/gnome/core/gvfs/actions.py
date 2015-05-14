@@ -7,6 +7,7 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 def setup():
     autotools.configure("--disable-gphoto2 \
                          --disable-documentation \
+                         --enable-afc \
                          --libexecdir=/usr/lib/gvfs")
 
 def build():
