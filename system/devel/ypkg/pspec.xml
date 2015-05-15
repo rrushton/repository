@@ -12,6 +12,10 @@
         <Description>ypkg build tool</Description>
         <License>GPLv2+</License>
         <Archive sha1sum="1e2a531620087240629d9d1b455530fa3d8c7d7f" type="tarxz">https://solus-project.com/sources/ypkg-3.tar.xz</Archive>
+
+        <Patches>
+            <Patch level="1">0001-ypkg-Preserve-file-permissions-times-by-using-move-n.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
@@ -27,6 +31,14 @@
     </Package>
 
     <History>
+        <Update release="10">
+            <Date>05-15-2015</Date>
+            <Version>3</Version>
+            <Comment>Package bump</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="9">
             <Date>05-15-2015</Date>
             <Version>3</Version>
