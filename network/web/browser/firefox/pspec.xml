@@ -6,12 +6,13 @@
         <Homepage>https://www.mozilla.org/en-GB/firefox</Homepage>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@evolve-os.com</Email>
+            <Email>ikey@solus-project.com</Email>
         </Packager>
         <Summary>Firefox web browser</Summary>
         <Description>Firefox web browser</Description>
-        <License>GPLv2+</License>
-        <Archive sha1sum="3812a31287d3a8d9ebb1326e131a944fd27f0f2d" type="tarbz2">http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/38.0/source/firefox-38.0.source.tar.bz2</Archive>
+        <License>GPL-2.0+</License>
+        <License>MPL-2.0</License>
+        <Archive sha1sum="20f52c37e099cb2b21f3a76c6e39fe698e1e79e8" type="tarbz2">http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/38.0.1/source/firefox-38.0.1.source.tar.bz2</Archive>
 
         <AdditionalFiles>
             <AdditionalFile target="mozconfig">config</AdditionalFile>
@@ -19,7 +20,7 @@
 
         <BuildDependencies>
             <Dependency type="pkgconfig">libevent</Dependency>
-            <Dependency type="pkgconfig">gtk+-2.0</Dependency>
+            <Dependency type="pkgconfig">gtk+-3.0</Dependency>
             <Dependency type="pkgconfig">cairo</Dependency>
             <Dependency type="pkgconfig">atk</Dependency>
             <Dependency type="pkgconfig">libstartup-notification-1.0</Dependency>
@@ -31,10 +32,21 @@
             <Dependency type="pkgconfig">icu-i18n</Dependency>
             <Dependency type="pkgconfig">sqlite3</Dependency>
             <Dependency type="pkgconfig">xcomposite</Dependency>
-
             <Dependency>libjpeg-turbo-devel</Dependency>
             <Dependency>yasm</Dependency>
         </BuildDependencies>
+
+        <Patches>
+            <Patch level="1">gtk3/mozilla-1073117-button-focus.patch</Patch>
+            <Patch level="1">gtk3/mozilla-1073117-focus.patch</Patch>
+            <Patch level="1">gtk3/mozilla-1073117-no-gap-tab.patch</Patch>
+            <Patch level="1">gtk3/mozilla-1143686.patch</Patch>
+            <Patch level="1">gtk3/mozilla-1144643.patch</Patch>
+            <Patch level="1">gtk3/mozilla-1161056.patch</Patch>
+            <Patch level="1">gtk3/mozilla-1144745-1.patch</Patch>
+            <Patch level="1">gtk3/mozilla-1144745-2.patch</Patch>
+            <Patch level="1">gtk3/mozilla-1144745-3.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
@@ -54,6 +66,14 @@
     </Package>
 
     <History>
+        <Update release="18">
+            <Date>05-15-2015</Date>
+            <Version>38.0.1</Version>
+            <Comment>Update to 38.0.1</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="17">
             <Date>05-12-2015</Date>
             <Version>38.0</Version>
