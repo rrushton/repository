@@ -17,10 +17,10 @@
         <AdditionalFiles>
             <AdditionalFile target="mozconfig">config</AdditionalFile>
         </AdditionalFiles>
-
         <BuildDependencies>
             <Dependency type="pkgconfig">libevent</Dependency>
             <Dependency type="pkgconfig">gtk+-3.0</Dependency>
+            <Dependency type="pkgconfig">gtk+-2.0</Dependency>
             <Dependency type="pkgconfig">cairo</Dependency>
             <Dependency type="pkgconfig">atk</Dependency>
             <Dependency type="pkgconfig">libstartup-notification-1.0</Dependency>
