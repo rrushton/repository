@@ -22,9 +22,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="8">
-            <Date>2015-05-10</Date>
-            <Version>0.27</Version>
+        <Update release="9">
+            <Date>2015-05-15</Date>
+            <Version>0.28</Version>
             <Comment>Packaging update</Comment>
             <Name>Solus Packaging Team</Name>
             <Email>packaging@solus-project.com</Email>
