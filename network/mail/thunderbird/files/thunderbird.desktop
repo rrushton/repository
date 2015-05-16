@@ -10,7 +10,6 @@ Type=Application
 Icon=thunderbird
 Categories=Application;Network;Email;
 MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/vnd.mozilla.xul+xml;application/rss+xml;application/rdf+xml;
-StartupWMClass=Thunderbird-bin
 StartupNotify=true
 Name[es]=Cliente de correo y noticias Thunderbird
 Name[cs]=Poštovní klient Thunderbird
