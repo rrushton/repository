@@ -5,7 +5,7 @@
         <Name>kernel</Name>
         <Packager>
             <Name>Ikey Doherty</Name>
-            <Email>ikey@evolve-os.com</Email>
+            <Email>ikey@solus-project.com</Email>
         </Packager>
         <Summary>Linux Kernel</Summary>
         <Description>This package contains the binary image of the Linux kernel, required to use the operating system</Description>
@@ -74,6 +74,14 @@
     </Package>
 
     <History>
+        <Update release="44">
+            <Date>05-16-2015</Date>
+            <Version>4.0.3</Version>
+            <Comment>Use correct hostname</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="43">
             <Date>05-16-2015</Date>
             <Version>4.0.3</Version>
