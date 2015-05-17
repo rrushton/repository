@@ -21,18 +21,19 @@
             <Dependency>gstreamer-1.0-plugins-bad</Dependency>
             <Dependency>gstreamer-1.0-plugins-good</Dependency>
             <Dependency>gstreamer-1.0-plugins-ugly</Dependency>
+            <Dependency>python3-setuptools</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="data">/usr/share/icons</Path>
-            <Path fileType="data">/usr/share/applications</Path>
             <Path fileType="data">/usr/share/appdata</Path>
-            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/icons</Path>
             <Path fileType="library">/usr/lib/python3.3</Path>
+            <Path fileType="executable">/usr/bin</Path>
         </Files>
     </Package>
     <History>
-        <Update release="2">
-            <Date>2015-05-13</Date>
+        <Update release="3">
+            <Date>2015-05-17</Date>
             <Version>1.1.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Solus Packaging Team</Name>
