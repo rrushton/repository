@@ -2,10 +2,10 @@
     <Source>
         <Name>moka-icon-theme</Name>
         <Packager>
-            <Name>Solus Packaging Team</Name>
-            <Email>packaging@solus-project.com</Email>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
         </Packager>
-        <License>GPL-2.0+</License>
+        <License>GPL-3.0</License>
         <Summary xml:lang="en">Moka Icon Theme</Summary>
         <Description xml:lang="en">Moka is an icon theme designed with a minimal, flat style, using simple geometry &amp; colours.
 
@@ -21,17 +21,20 @@ Each icon has been pixel-perfectly-designed and provides several sizes for the b
 Each icon has been pixel-perfectly-designed and provides several sizes for the best experience throughout your desktop.
 </Description>
         <PartOf>desktop.theme</PartOf>
+        <RuntimeDependencies>
+            <Dependency>faba-icon-theme</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/share/icons</Path>
         </Files>
     </Package>
     <History>
-        <Update release="2">
-            <Date>2015-05-06</Date>
+        <Update release="3">
+            <Date>2015-05-17</Date>
             <Version>5.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Solus Packaging Team</Name>
-            <Email>packaging@solus-project.com</Email>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
         </Update>
     </History>
 </PISI>
