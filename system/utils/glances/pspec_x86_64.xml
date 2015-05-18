@@ -19,19 +19,20 @@
         <PartOf>system.utils</PartOf>
         <RuntimeDependencies>
             <Dependency>python-psutil</Dependency>
+            <Dependency>python-setuptools</Dependency>
         </RuntimeDependencies>
         <Files>
+            <Path fileType="config">/etc/glances/glances.conf</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
-            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib/python2.7</Path>
-            <Path fileType="config">/etc/glances/glances.conf</Path>
+            <Path fileType="executable">/usr/bin</Path>
         </Files>
     </Package>
     <History>
-        <Update release="2">
-            <Date>2015-05-04</Date>
+        <Update release="3">
+            <Date>2015-05-18</Date>
             <Version>2.3</Version>
             <Comment>Packaging update</Comment>
             <Name>Solus Packaging Team</Name>
