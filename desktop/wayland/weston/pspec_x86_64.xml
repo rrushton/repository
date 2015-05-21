@@ -2,14 +2,14 @@
     <Source>
         <Name>weston</Name>
         <Packager>
-            <Name>Ikey Doherty</Name>
-            <Email>ikey@solus-project.com</Email>
+            <Name>Solus Packaging Team</Name>
+            <Email>packaging@solus-project.com</Email>
         </Packager>
         <License>MIT</License>
         <Summary xml:lang="en">Weston SDK</Summary>
         <Description xml:lang="en">Weston SDK
 </Description>
-        <Archive type="binary" sha1sum="083029a13c0c475bf42a4232c68a9caa6dbc763e">https://evolve-os.com/sources/README</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
     </Source>
     <Package>
         <Name>weston</Name>
@@ -17,11 +17,11 @@
         <Description xml:lang="en">Weston SDK
 </Description>
         <Files>
-            <Path fileType="man">/usr/share/man</Path>
-            <Path fileType="data">/usr/share/wayland-sessions</Path>
-            <Path fileType="data">/usr/share/weston</Path>
             <Path fileType="library">/usr/lib64/weston</Path>
             <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/wayland-sessions</Path>
+            <Path fileType="data">/usr/share/weston</Path>
+            <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
     <Package>
@@ -34,17 +34,17 @@
             <Dependency release="current">weston</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib64/pkgconfig</Path>
+            <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>
     <History>
-        <Update release="4">
-            <Date>2015-04-20</Date>
+        <Update release="5">
+            <Date>2015-05-21</Date>
             <Version>1.7.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Ikey Doherty</Name>
-            <Email>ikey@solus-project.com</Email>
+            <Name>Solus Packaging Team</Name>
+            <Email>packaging@solus-project.com</Email>
         </Update>
     </History>
 </PISI>
