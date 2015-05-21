@@ -5,6 +5,7 @@ from pisi.actionsapi import shelltools, get, autotools, pisitools
 
 
 def setup():
+    shelltools.system("make configure")
     autotools.configure ("--prefix=/usr --libexecdir=/usr/lib")
 
 def build():
