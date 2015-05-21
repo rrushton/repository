@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://solus-project.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>openssh</Name>
@@ -11,7 +11,7 @@
         <Summary>OpenSSH (OpenBSD Secure Shell)</Summary>
         <Description>OpenSSH is a free version of secure shell tools developed by the OpenBSD project to help facilitate secure connections and communications.</Description>
         <License>BSD</License>
-        <Archive sha1sum="14e5fbed710ade334d65925e080d1aaeb9c85bf6" type="targz">http://openbsd.mirrors.pair.com/OpenSSH/portable/openssh-6.7p1.tar.gz</Archive>
+        <Archive sha1sum="cdbc51e46a902b30d263b05fdc71340920e91c92" type="targz">http://openbsd.mirrors.pair.com/OpenSSH/portable/openssh-6.8p1.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -50,6 +50,14 @@
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>05-21-2015</Date>
+            <Version>6.8</Version>
+            <Comment>Update to 6.8</Comment>
+            <Name>Solus Packaging Team</Name>
+            <Email>packaging@solus-project.com</Email>
+        </Update>
+
         <Update release="6" type="security">
             <Date>10-13-2014</Date>
             <Version>6.7</Version>
