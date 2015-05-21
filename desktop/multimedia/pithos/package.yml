@@ -1,8 +1,8 @@
 name       : pithos
-version    : 1.1.0
-release    : 3
+version    : 1.1.1
+release    : 4
 source     :
-    - https://github.com/pithos/pithos/archive/1.1.0.tar.gz : ee71248b77bc91ca92f200b4f9ab5d1858447695869e52a1371583524bbeb484
+    - https://github.com/pithos/pithos/archive/1.1.1.tar.gz : 4424534bbf7ab3d3d6c51764d689606fd0df214422eb79ccc91a8981f95d7dce
 license    : GPL-3.0
 summary    : Pandora music streaming client
 rundeps    :
@@ -10,6 +10,7 @@ rundeps    :
     - gstreamer-1.0-plugins-good
     - gstreamer-1.0-plugins-ugly
     - python3-setuptools
+    - python3-cairo
 description: |
     Pandora music streaming client
 builddeps  :
