@@ -25,9 +25,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="5">
-            <Date>2015-05-13</Date>
-            <Version>0.8.13</Version>
+        <Update release="6">
+            <Date>2015-05-21</Date>
+            <Version>0.8.16</Version>
             <Comment>Packaging update</Comment>
             <Name>Joshua Strobl</Name>
             <Email>joshua.strobl@outlook.com</Email>
