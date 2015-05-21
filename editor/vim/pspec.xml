@@ -31,12 +31,20 @@
             <Path fileType="config">/etc/vim</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0640" target="/etc/vim/vimrc">vimrc</AdditionalFile>
-            <AdditionalFile owner="root" permission="0640" target="/etc/vim/vimrc.tiny">vimrc.tiny</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/vim/vimrc">vimrc</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/vim/vimrc.tiny">vimrc.tiny</AdditionalFile>
         </AdditionalFiles>
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>05-21-2015</Date>
+            <Version>7.4</Version>
+            <Comment>Package bump</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="4">
             <Date>04-17-2015</Date>
             <Version>7.4</Version>
