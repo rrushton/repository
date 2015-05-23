@@ -1,0 +1,15 @@
+name        : youtube-dl
+version     : 2015.05.20
+release     : 4
+source     :
+    - https://yt-dl.org/downloads/2015.05.20/youtube-dl-2015.05.20.tar.gz : 94de6dfdca5fd2c2cf83961b204970cc98aa9c3620736100116de07d54532eb3
+license     : GPL-2.0
+summary     : Small command-line program to download videos form youtube
+description : |
+    youtube-dl is a small command-line program to download videos from YouTube.com and a few more sites
+builddeps  :
+    - python3-devel
+setup      : |
+build      : |
+install    : |
+    python3 setup.py install --root=%installroot%
