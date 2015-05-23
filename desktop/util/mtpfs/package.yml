@@ -1,0 +1,19 @@
+name       : mtpfs
+version    : 1.1
+release    : 1
+source     :
+    - http://www.adebenham.com/files/mtp/mtpfs-1.1.tar.gz : 1baf357de16995a5f0b5bc1b6833517a77456481d861cdba70f1ce1316ce4c1d
+license    : GPL-2.0 # CHECK ME
+summary    : PLEASE FILL ME IN
+description: |
+    PLEASE FILL ME IN
+builddeps  :
+    - pkgconfig(fuse)
+    - pkgconfig(libmtp)
+    - pkgconfig(glib-2.0)
+setup      : |
+    %configure --disable-mad
+build      : |
+    %make
+install    : |
+    %make_install
