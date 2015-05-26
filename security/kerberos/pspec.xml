@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.solusos.com/standard/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://solus-project.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>kerberos</Name>
@@ -11,7 +11,7 @@
         <Summary>Kerberos 5 network authentication protocol</Summary>
         <Description>MIT Kerberos V5 is a free implementation of Kerberos 5. Kerberos is a network authentication protocol. It centralizes the authentication database and uses kerberized applications to work with servers or services that support Kerberos allowing single logins and encrypted communication over internal networks or the Internet.</Description>
         <License>MIT</License>
-        <Archive sha1sum="dcdc305bd2b63cf8b8cb698cb9ea28f0a6282136" type="tar">http://web.mit.edu/kerberos/www/dist/krb5/1.11/krb5-1.11-signed.tar</Archive>
+        <Archive sha1sum="ea824badb2d600745dcbbdfe58ccb84cba8509f0" type="tar">http://web.mit.edu/kerberos/www/dist/krb5/1.13/krb5-1.13.2-signed.tar</Archive>
     </Source>
 
     <Package>
@@ -25,6 +25,7 @@
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="config">/var/krb5kdc</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/var/run/krb5kdc</Path>
         </Files>
     </Package>
 
@@ -34,6 +35,7 @@
         <Description>Development files for kerberos</Description>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="data">/usr/share/examples</Path>
             <Path fileType="data">/usr/share/gnats</Path>
         </Files>
@@ -43,6 +45,14 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>05-26-2015</Date>
+            <Version>5.1.13.2</Version>
+            <Comment>Update to 5.1.13.2</Comment>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
+        </Update>
+
         <Update release="2">
             <Date>07-05-2014</Date>
             <Version>5.1.1</Version>
