@@ -1,6 +1,6 @@
 name       : lame
 version    : 3.99.5
-release    : 2
+release    : 3
 source     :
     - http://downloads.sourceforge.net/lame/lame-3.99.5.tar.gz : 24346b4158e4af3bd9f2e194bb23eb473c75fb7377011523353196b19b9a23ff
 license    : GPL-2.0

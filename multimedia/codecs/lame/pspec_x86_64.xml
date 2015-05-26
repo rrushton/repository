@@ -2,19 +2,19 @@
     <Source>
         <Name>lame</Name>
         <Packager>
-            <Name>Justin Zobel</Name>
-            <Email>justin.zobel@gmail.com</Email>
+            <Name>Solus Packaging Team</Name>
+            <Email>packaging@solus-project.com</Email>
         </Packager>
         <License>GPL-2.0</License>
-        <Summary xml:lang="en">PLEASE FILL ME IN</Summary>
-        <Description xml:lang="en">PLEASE FILL ME IN
+        <Summary xml:lang="en">LAME is a high quality MPEG Audio Layer III (MP3) encoder.</Summary>
+        <Description xml:lang="en">LAME is a high quality MPEG Audio Layer III (MP3) encoder.
 </Description>
-        <Archive type="binary" sha1sum="083029a13c0c475bf42a4232c68a9caa6dbc763e">https://evolve-os.com/sources/README</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
     </Source>
     <Package>
         <Name>lame-devel</Name>
         <Summary xml:lang="en">Development files for lame</Summary>
-        <Description xml:lang="en">PLEASE FILL ME IN
+        <Description xml:lang="en">LAME is a high quality MPEG Audio Layer III (MP3) encoder.
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
@@ -28,23 +28,24 @@
     </Package>
     <Package>
         <Name>lame</Name>
-        <Summary xml:lang="en">PLEASE FILL ME IN</Summary>
-        <Description xml:lang="en">PLEASE FILL ME IN
+        <Summary xml:lang="en">LAME is a high quality MPEG Audio Layer III (MP3) encoder.</Summary>
+        <Description xml:lang="en">LAME is a high quality MPEG Audio Layer III (MP3) encoder.
 </Description>
+        <PartOf>multimedia.codecs</PartOf>
         <Files>
-            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib64/lib*.so.*</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
-            <Path fileType="doc">/usr/share/doc/lame/html</Path>
         </Files>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2015-04-14</Date>
+        <Update release="3">
+            <Date>2015-05-26</Date>
             <Version>3.99.5</Version>
             <Comment>Packaging update</Comment>
-            <Name>Justin Zobel</Name>
-            <Email>justin.zobel@gmail.com</Email>
+            <Name>Solus Packaging Team</Name>
+            <Email>packaging@solus-project.com</Email>
         </Update>
     </History>
 </PISI>
