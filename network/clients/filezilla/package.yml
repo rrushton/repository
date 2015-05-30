@@ -1,11 +1,10 @@
 name        : filezilla
-version     : 3.11.0
-release     : 5
+version     : 3.11.0.1
+release     : 6
 source     :
-    - http://internode.dl.sourceforge.net/project/filezilla/FileZilla_Client/3.11.0/FileZilla_3.11.0_src.tar.bz2 : 2568a249556c87188bef47e7b8a1247d035785a005c6ad61f31e2fb212228db6
+    - http://internode.dl.sourceforge.net/project/filezilla/FileZilla_Client/3.11.0.1/FileZilla_3.11.0.1_src.tar.bz2 : 0309d5fbb12988a615b7e57eaf5a1b3ffad23ea4cc0e932d9ddea185fdd44c72
 clang       : no
-license     :
-    - GPLv2+
+license     : GPL-2.0+
 summary     : The Free FTP Solution
 builddeps   :
     - pkgconfig(dbus-1)
@@ -14,7 +13,6 @@ builddeps   :
     - pkgconfig(atk)
     - pkgconfig(libidn)
     - pkgconfig(sqlite3)
-    - pkgconfig(libidn)
     - pkgconfig(gnutls)
     - wxwidgets-devel
     - xdg-utils
