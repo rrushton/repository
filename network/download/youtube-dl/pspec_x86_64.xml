@@ -27,9 +27,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="4">
-            <Date>2015-05-23</Date>
-            <Version>2015.05.20</Version>
+        <Update release="5">
+            <Date>2015-05-30</Date>
+            <Version>2015.05.29</Version>
             <Comment>Packaging update</Comment>
             <Name>Solus Packaging Team</Name>
             <Email>packaging@solus-project.com</Email>
