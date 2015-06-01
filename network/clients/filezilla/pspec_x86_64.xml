@@ -29,8 +29,8 @@
         </Files>
     </Package>
     <History>
-        <Update release="6">
-            <Date>2015-05-30</Date>
+        <Update release="7">
+            <Date>2015-06-01</Date>
             <Version>3.11.0.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Solus Packaging Team</Name>

@@ -1,6 +1,6 @@
 name        : filezilla
 version     : 3.11.0.1
-release     : 6
+release     : 7
 source     :
     - http://internode.dl.sourceforge.net/project/filezilla/FileZilla_Client/3.11.0.1/FileZilla_3.11.0.1_src.tar.bz2 : 0309d5fbb12988a615b7e57eaf5a1b3ffad23ea4cc0e932d9ddea185fdd44c72
 clang       : no
