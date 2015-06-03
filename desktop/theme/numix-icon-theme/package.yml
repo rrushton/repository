@@ -1,6 +1,6 @@
 name        : numix-icon-theme
 version     : 0.3.391.20150530
-release     : 7
+release     : 8
 source     :
     - http://ppa.launchpad.net/numix/ppa/ubuntu/pool/main/n/numix-icon-theme/numix-icon-theme_0.3+391~201505300037~ubuntu15.04.1.tar.xz : 2bd629de4384e7dc5e756609944d73acdb2d97fe4e97c9d0ba5f631b0d12d11c
 license     : GPL-3.0+
