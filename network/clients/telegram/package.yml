@@ -1,8 +1,8 @@
 name       : telegram
-version    : 0.8.17
-release    : 7
+version    : 0.8.21
+release    : 8
 source     :
-    - https://updates.tdesktop.com/tlinux/tsetup.0.8.17.tar.xz : f9c278954b8c85d22e4d3e158e43b3d643623f218ddbce26635edaffed30c673
+    - https://updates.tdesktop.com/tlinux/tsetup.0.8.21.tar.xz : 48f91593d4872cb5ec94815d1de5cb80933110090f56c2947fae1e2b157e132b
 license    : GPL-3.0
 summary    : Telegram is a messaging app with a focus on speed and security, it’s super fast, simple and free. 
 description  : |
