@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://evolve-os.com/standard/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://solus-project.com/standard/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>gnome-screenshot</Name>
@@ -11,7 +11,7 @@
         <Summary>GNOME Screenshot Utility</Summary>
         <Description>Take screenshots with the GNOME Screenshot Utility</Description>
         <License>GPLv2+</License>
-        <Archive sha1sum="d1362a8c51e44ef30e21aea91e992fd72a99407b" type="tarxz">http://ftp.acc.umu.se/pub/gnome/sources/gnome-screenshot/3.16/gnome-screenshot-3.16.0.tar.xz</Archive>
+        <Archive sha1sum="3d9d19a2df2d83fc0bf70b74ab015af757988542" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-screenshot/3.16/gnome-screenshot-3.16.2.tar.xz</Archive>
 
         <BuildDependencies>
             <Dependency type="pkgconfig">xext</Dependency>
@@ -41,6 +41,14 @@
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>06-04-2015</Date>
+            <Version>3.16.2</Version>
+            <Comment>Update to 3.16.2</Comment>
+            <Name>Solus Packaging Team</Name>
+            <Email>packaging@solus-project.com</Email>
+        </Update>
+
         <Update release="6">
             <Date>04-21-2015</Date>
             <Version>3.16.0</Version>
