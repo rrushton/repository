@@ -19,7 +19,7 @@ rundeps :
     - git
     - nodejs
 build      : |
-    export DESCRIPTION="Atom is a hackable text editor for the 21st century."
+    export DESCRIPTION="Atom is a hackable text editor for the 21st century"
 
     mkdir -p %installroot%/usr/bin/
     script/build --build-dir %installroot%/atom-build
