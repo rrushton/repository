@@ -1,8 +1,8 @@
 name       : atom
-version    : 0.205.0
-release    : 3
+version    : 0.207.0
+release    : 4
 source     :
-    - https://github.com/atom/atom/archive/v0.205.0.tar.gz : b03b17b76baf16c95a05a536cf3751a898c6207ae396a998931800c71c956998
+    - https://github.com/atom/atom/archive/v0.207.0.tar.gz : c26eed09042242cbb4c362a1ecf28ad4e6387b5baa79a62fddaf3ac837d6942a
 license    : MIT
 summary    : Atom is a hackable text editor for the 21st century.
 description: |
@@ -19,7 +19,7 @@ rundeps :
     - git
     - nodejs
 build      : |
-    export DESCRIPTION="Atom is a hackable text editor for the 21st century"
+    export DESCRIPTION="Atom is a hackable text editor for the 21st century."
 
     mkdir -p %installroot%/usr/bin/
     script/build --build-dir %installroot%/atom-build
