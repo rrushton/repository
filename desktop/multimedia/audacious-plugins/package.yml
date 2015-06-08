@@ -1,8 +1,8 @@
 name       : audacious-plugins
-version    : 3.6.1
-release    : 1
+version    : 3.6.2
+release    : 2
 source     :
-    - http://distfiles.audacious-media-player.org/audacious-plugins-3.6.1-gtk3.tar.bz2 : 0160782fc4d5de19ada13a68e622d982c1e4f5147fcf0fd43f051a06174c99fe
+    - http://distfiles.audacious-media-player.org/audacious-plugins-3.6.2-gtk3.tar.bz2 : 943d94c1ea09817caba627b6abbf0de301c3cd19f2c8c0afae1ebc4dbe31fc95
 license    : GPL-3.0 
 summary    : Plugins for Audacious music player.
 description: |
