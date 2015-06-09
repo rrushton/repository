@@ -27,3 +27,4 @@ def install():
     # Should be needed
     pisitools.dosym('/etc/vim/vimrc','/usr/share/vim/vimrc')
     pisitools.dosym('/etc/vim/vimrc.tiny','/usr/share/vim/vimrc.tiny')
+    pisitools.dosym('/usr/bin/vim','/usr/bin/vi')
