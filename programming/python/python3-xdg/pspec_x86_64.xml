@@ -1,0 +1,32 @@
+<PISI>
+    <Source>
+        <Name>python3-xdg</Name>
+        <Packager>
+            <Name>Ryan Rushton</Name>
+            <Email>rrushton@gmail.com</Email>
+        </Packager>
+        <License>GPL-2.0</License>
+        <Summary xml:lang="en">Python XDG Module</Summary>
+        <Description xml:lang="en">Python XDG Module
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>python3-xdg</Name>
+        <Summary xml:lang="en">Python XDG Module</Summary>
+        <Description xml:lang="en">Python XDG Module
+</Description>
+        <Files>
+            <Path fileType="library">/usr/lib/python3.4</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2015-08-06</Date>
+            <Version>0.25</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Ryan Rushton</Name>
+            <Email>rrushton@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

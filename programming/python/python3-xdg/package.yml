@@ -1,0 +1,17 @@
+name       : python3-xdg
+version    : 0.25
+release    : 1
+source     :
+    - https://pypi.python.org/packages/source/p/pyxdg/pyxdg-0.25.tar.gz : 81e883e0b9517d624e8b0499eb267b82a815c0b7146d5269f364988ae031279d
+license    : GPL-2.0
+summary    : Python XDG Module
+description: |
+    Python XDG Module
+builddeps  :
+    - python3-devel
+    - python3-setuptools
+setup      : |
+build      : |
+    python3 setup.py build
+install    : |
+    python3 setup.py install --root=%installroot% --optimize=1
