@@ -1,0 +1,31 @@
+name       : Redshift
+version    : 1.1.0
+release    : 1
+homepage   : http://jonls.dk/redshift/
+source     :
+    - https://github.com/jonls/redshift/releases/download/v1.10/redshift-1.10.tar.xz : 5bc2e70aa414f42dafb45c6e06ea90157d7d4b298af48877144ff442639aeea6
+license    : GPL-3.0
+summary    : Redshift adjusts the color temperature of your screen according to your surroundings.
+builddeps  :
+    - ncurses-devel
+description: |
+    Redshift adjusts the color temperature of your screen according to your surroundings. This may help your eyes hurt less if you are working in front of the screen at night.
+setup      : |
+    %configure --enable-drm --enable-vidmode --enable-randr --enable-geoclue2 --enable-gui
+builddeps  :
+    - pkgconfig(glib-2.0)
+    - intltool
+    - libdrm-devel
+    - libxcb-devel
+    - libxrandr-devel
+    - libxxf86vm-devel
+    - libx11-devel
+    - geoclue-devel
+    - python3
+rundeps:
+    - python3-xdg
+    - geoclue
+build      : |
+    %make
+install    : |
+    %make_install
