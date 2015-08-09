@@ -11,6 +11,7 @@ builddeps   :
 description : |
     AccountsService is a D-Bus service for accessing the list of user accounts and information attached to those accounts.
 setup      : |
+    %patch -p1 < $pkgfiles/0001-add-lightdm-support.patch
     %configure --prefix=/usr \
                          --sysconfdir=/etc \
                          --localstatedir=/var \
